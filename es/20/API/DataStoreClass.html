@@ -1,4 +1,4 @@
-<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/DataStoreClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>DataStore | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/20/API/DataStoreClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="DataStore | 4D Docs"/><meta data-rh=true name=description content="Un Datastore es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos Datastore son devueltos por los siguientes comandos:"/><meta data-rh=true property=og:description content="Un Datastore es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos Datastore son devueltos por los siguientes comandos:"/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/20/API/DataStoreClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/DataStoreClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/DataStoreClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/DataStoreClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/DataStoreClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/core-development","name":"Desarrollo","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/API/DataStoreClass","name":"DataStore","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.c4b88155.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/DataStoreClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>DataStore | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/20/API/DataStoreClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="DataStore | 4D Docs"/><meta data-rh=true name=description content="Un Datastore es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos Datastore son devueltos por los siguientes comandos:"/><meta data-rh=true property=og:description content="Un Datastore es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos Datastore son devueltos por los siguientes comandos:"/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/20/API/DataStoreClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/DataStoreClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/DataStoreClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/DataStoreClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/DataStoreClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/DataStoreClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/core-development","name":"Desarrollo","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/API/DataStoreClass","name":"DataStore","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.850d0374.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/es/img/logohome.png /><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar la barra de navegación" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/es/><div class=navbar__logo><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentación 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/es/20/API/DataStoreClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/es/API/DataStoreClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/es/21-R4/API/DataStoreClass>21 R4</a><li><a class=dropdown__link href=/docs/es/21/API/DataStoreClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/es/20/API/DataStoreClass>20</a><li><a class=dropdown__link href=/docs/es/19/API/DataStoreClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="La página no está disponible en esta versión
@@ -8,121 +8,13 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <li class=""><a href=#open-datastore class="">Open datastore</a>: para abrir cualquier datastore remoto</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=resumen>Resumen<a href=#resumen class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#canceltransaction class=""><strong>.cancelTransaction()</strong></a>    cancela la transacción<tr><td><a href=#clearallremotecontexts class=""><strong>.clearAllRemoteContexts()</strong></a>    borra todos los atributos de todos los contextos activos en el datastore<tr><td><a href=#dataclassname class=""><em><strong>.dataclassName</strong></em> : 4D.DataClass</a>    contiene una descripción de la clase de datos<tr><td><a href=#encryptionstatus class=""><strong>.encryptionStatus()</strong>: Object</a>    devuelve un objeto que suministra el estado de cifrado del archivo de datos actual<tr><td><a href=#flushandlock class=""><strong>.flushAndLock()</strong></a>    vacía la caché del datastore local e impide que otros procesos realicen operaciones de escritura en la base de datos<tr><td><a href=#getallremotecontexts class=""><strong>.getAllRemoteContexts()</strong> : Collection</a>    devuelve una colección de objetos que contienen información sobre todos los contextos de optimización activos en el datastore<tr><td><a href=#getinfo class=""><strong>.getInfo()</strong>: Object</a>    devuelve un objeto que proporciona información sobre el datastore<tr><td><a href=#getremotecontextinfo class=""><strong>.getRemoteContextInfo</strong>(<em>contextName</em> : Text) : Object </a>     devuelve un objeto que contiene información sobre el contexto de optimización <em>contextName</em> en el datastore<tr><td><a href=#getrequestlog class=""><strong>.getRequestLog()</strong> : Collection</a>    devuelve las peticiones ORDA registradas en memoria del lado del cliente<tr><td><a href=#locked class=""><strong>.locked()</strong> : Boolean</a>    devuelve True si el datastore local está bloqueado actualmente<tr><td><a href=#makeselectionsalterable class=""><strong>.makeSelectionsAlterable()</strong></a>    define todas las selecciones de entidades como alterables por defecto en los datastores de la aplicación actual<tr><td><a href=#providedatakey class=""><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br/><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a>    permite suministrar una llave de cifrado de datos para el archivo de datos actual del datastore y detecta si la llave coincide con los datos cifrados<tr><td>[<tr><td><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )](#setadminprotection)    permite deshabilitar cualquier acceso a datos en el <a class="" href=/docs/es/20/Admin/webAdmin#http-port>puerto web admin</a>, incluso para el <a class="" href=/docs/es/20/Admin/dataExplorer>Explorador de datos</a> en sesiones <code>WebAdmin</code><tr><td><a href=#setremotecontextinfo class=""><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer}})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )</a>    vincula los atributos de la dataclass especificada al contexto de optimización <em>contextName</em><tr><td><a href=#startrequestlog class=""><strong>.startRequestLog</strong>()<br/><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br/><strong>.startRequestLog</strong>( <em>file</em> : 4D.File ; <em>options</em> : Integer )<br/><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a>    inicia el registro de peticiones ORDA del lado del cliente o del lado del servidor<tr><td><a href=#starttransaction class=""><strong>.startTransaction()</strong></a>    inicia una transacción en el proceso actual en la base de datos que coincide con el datastore al que se aplica<tr><td><a href=#stoprequestlog class=""><strong>.stopRequestLog()</strong>  </a>    detiene cualquier registro de las peticiones ORDA en la máquina en la que se llama (cliente o servidor)<tr><td><a href=#unlock class=""><strong>.unlock()</strong></a>    elimina el bloqueo actual de las operaciones de escritura en el datastore, si se ha definido en el mismo proceso<tr><td><a href=#validatetransaction class=""><strong>.validateTransaction()</strong>  </a>    acepta la transacción</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ds>ds<a href=#ds class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18<td>Soporte del parámetro localID<tr><td>17<td>Añadidos</table>
 </div></div></details>
 <p><strong>ds</strong> { ( <em>localID</em> : Text ) } : cs.DataStore</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>localID<td>Text<td>-><td>ID local del almacén de datos remoto a devolver<tr><td>Resultado<td>cs.DataStore<td>&lt;-<td>Referencia al almacén de datos</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción>Descripción<a href=#descripción class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -142,56 +34,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  //método getFirst</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //getFirst(localID;dataclass) -> entidad</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $0:=ds($localId)[$dataClassName].all().first()</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=open-datastore>Open datastore<a href=#open-datastore class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20.3<td>Nueva propiedad <em>passwordAlgorithm</em><tr><td>18<td>Añadidos</table>
 </div></div></details>
 <p><strong>Open datastore</strong>( <em>connectionInfo</em> : Object ; <em>localID</em> : Text ) : 4D.DataStoreImplementation</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>connectionInfo<td>Object<td>-><td>Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto<tr><td>localID<td>Text<td>-><td>Id para asignar al almacén de datos abierto en la aplicación local (obligatorio)<tr><td>Resultado<td>4D.DataStoreImplementation<td>&lt;-<td>Objeto del almacén de datos</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-1>Descripción<a href=#descripción-1 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -208,51 +54,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelven una referencia sobre el mismo objeto datastore:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myds:=Open datastore(connectionInfo;"myLocalId")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $myds2:=ds("myLocalId")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$myds y $myds2 son equivalentes</span><br/></div></code></pre></div></div>
 <p>Pase en <em>connectionInfo</em> un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto <em>hostname</em>):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propiedad<th>Tipo<th>Descripción<tbody><tr><td>hostname<td>Text<td>Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)<tr><td>user<td>Text<td>Nombre de usuario<tr><td>contraseña<td>Text<td>Contraseña del usuario. Por defecto, la contraseña se envía en claro, por lo que es <strong>fuertemente recomendable</strong> utilizar comunicaciones cifradas pasando <code>true</code> en la propiedad <code>tls</code>.<tr><td>idleTimeout<td>Integer<td>Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser &lt; 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte <strong>Cierre de sesiones</strong>.<tr><td>tls<td>Boolean<td>Utilice una conexión segura(*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.<tr><td>passwordAlgorithm<td>Text<td>Pasa "4d-rest-digest" si el servidor valida la contraseña utilizando el comando <a href=https://doc.4d.com/4dv20/help/command/en/page638.html target=_blank rel="noopener noreferrer" class=""><code>Validate password</code></a> con el parámetro <em>digest</em> definido en <code>true</code>.<tr><td>type<td>Text<td>Debe ser "4D Server"</table>
 <p>(*) Si tls es true, se utiliza el protocolo HTTPS si:</p>
 <ul>
@@ -273,19 +74,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>En caso de error, el comando devuelve <strong>Null</strong>. Si no se puede acceder al almacén de datos remoto (dirección incorrecta, servidor web no iniciado, http y https no habilitados...), se produce el error 1610 "Ha fallado una petición remota al host XXX". Puede interceptar este error con un método instalado por <code>ON ERR CALL</code>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dataclassname><em>.dataclassName</em><a href=#dataclassname class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17<td>Añadidos</table>
 </div></div></details>
 <p><em><strong>.dataclassName</strong></em> : 4D.DataClass</p>
@@ -295,40 +83,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $emp : cs.Employee</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $sel : cs.EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $emp:=ds.Employee //$emp contiene la dataclass Employee </span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=$emp.all() //obtiene una selección de entidades de todos los empleados</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //también puede escribir directamente:</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=ds.Employee.all()</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=canceltransaction>.cancelTransaction()<a href=#canceltransaction class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18<td>Añadidos</table>
 </div></div></details>
 <p><strong>.cancelTransaction()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td><td><td style=text-align:center><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-3>Descripción<a href=#descripción-3 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -339,40 +97,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Ver el ejemplo de la función <a href=#starttransaction class=""><code>.startTransaction() </code></a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=clearallremotecontexts>.clearAllRemoteContexts()<a href=#clearallremotecontexts class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.clearAllRemoteContexts()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td><td><td style=text-align:center><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-4>Descripción<a href=#descripción-4 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -383,40 +111,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#getremotecontextinfo class="">.getRemoteContextInfo()</a><br/><a href=#getallremotecontexts class="">.getAllRemoteContexts()</a><br/><a href=#setremotecontextinfo class="">.setRemoteContextInfo()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=encryptionstatus>.encryptionStatus()<a href=#encryptionstatus class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.encryptionStatus()</strong>: Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>Resultado<td>Object<td style=text-align:center>&lt;-<td>Información sobre el cifrado del almacén de datos actual y de cada tabla</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-5>Descripción<a href=#descripción-5 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -426,74 +124,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 </blockquote>
 <p><strong>Valor devuelto</strong></p>
 <p>El objeto devuelto contiene las siguientes propiedades:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propiedad<th><th><th>Tipo<th>Descripción<tbody><tr><td>isEncrypted<td><td><td>Boolean<td>True si el archivo de datos está encriptado<tr><td>keyProvided<td><td><td>Boolean<td>True si se proporciona la llave de encriptación que coincide con el archivo de datos encriptados(*).<tr><td>tablas<td><td><td>Object<td>Objeto que contiene tantas propiedades como tablas encriptadas o codificadas.<tr><td><td><em>tableName</em><td><td>Object<td>Tabla encriptada o cifrada<tr><td><td><td>name<td>Text<td>Nombre de la tabla<tr><td><td><td>num<td>Number<td>Número de tabla<tr><td><td><td>isEncryptable<td>Boolean<td>Verdadero si la tabla está declarada como encriptada en el archivo de estructura<tr><td><td><td>isEncrypted<td>Boolean<td>True si los registros de la tabla están encriptados en el archivo de datos</table>
 <p>(*) Se puede suministrar la llave de encriptación:</p>
 <ul>
@@ -506,40 +136,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $status : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $status:=ds.encryptionStatus()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($status.isEncrypted) //the database is encrypted</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    C_LONGINT($vcount)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    C_TEXT($tabName)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    For each($tabName;$status.tables)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       If($status.tables[$tabName].isEncrypted)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">          $vcount:=$vcount+1</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End for each</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT(String($vcount)+" encrypted table(s) in this datastore.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("This database is not encrypted.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=flushandlock>.flushAndLock()<a href=#flushandlock class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20<td>Añadidos</table>
 </div></div></details>
 <p><strong>.flushAndLock()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td><td><td><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-6>Descripción<a href=#descripción-6 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -565,40 +165,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#locked class="">.locked()</a><br/><a href=#unlock class="">.unlock()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getallremotecontexts>.getAllRemoteContexts()<a href=#getallremotecontexts class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getAllRemoteContexts()</strong> : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Resultado<td>Collection<td>&lt;-<td>Colección de objetos contextos de optimización</table>
 </div>
 <blockquote>
@@ -620,75 +190,15 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#getremotecontextinfo class="">.getRemoteContextInfo()</a><br/><a href=#setremotecontextinfo class="">.setRemoteContextInfo()</a><br/><a href=#clearallremotecontexts class="">.clearAllRemoteContexts()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getinfo>.getInfo()<a href=#getinfo class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getInfo()</strong>: Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>Resultado<td>Object<td style=text-align:center>&lt;-<td>Propiedades del almacén de datos</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-8>Descripción<a href=#descripción-8 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>La función <code>.getInfo()</code> devuelve un objeto que proporciona información sobre el datastore. Esta función es útil para configurar el código genérico.</p>
 <p><strong>Objeto devuelto</strong></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propiedad<th>Tipo<th>Descripción<tbody><tr><td>type<td>string<td><li class="">"4D": datastore principal, disponible a través de ds </li><li class="">"4D Server": datastore remoto, abrir con Open datastore</li><tr><td>networked<td>boolean<td><li class="">True: el almacén de datos se alcanza a través de una conexión de red.</li><li class="">False: no se llega al almacén de datos a través de una conexión de red (base de datos local)</li><tr><td>localID<td>text<td>ID del almacén de datos en la máquina. ID del almacén de datos en la máquina. Cadena vacía ("") para el almacén de datos principal.<tr><td>connection<td>object<td>Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades
 disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de host<td>texto<td>Dirección IP o nombre del datastore remoto + ":" + número de puerto<tr><td>tls<td>booleano<td>True si se utiliza una conexión segura con el datastore remoto<tr><td>idleTimeout<td>número<td>Tiempo de inactividad de la sesión (en minutos)<tr><td>usuario<td>texto<td>Usuario autenticado en el almacén de datos remoto</table></table>
 <ul>
@@ -702,46 +212,10 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  var $remoteDS : 4D.DataStoreImplementation</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  var $info; $connectTo : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $remoteDS:=Open datastore($connectTo;"students")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $info:=$remoteDS.getInfo()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //{"type":"4D Server",</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //"localID":"students",</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //"networked":true,</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //"connection":{hostname:"111.222.33.44:8044","tls":false,"idleTimeout":2880,"user":"marie"}}</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getremotecontextinfo>.getRemoteContextInfo()<a href=#getremotecontextinfo class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getRemoteContextInfo</strong>(<em>contextName</em> : Text) : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>contextName<td>Text<td>-><td>Nombre del contexto<tr><td>Resultado<td>Object<td>&lt;-<td>Descripción del contexto</table>
 </div>
 <blockquote>
@@ -752,36 +226,6 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <p>Para obtener más información sobre cómo se pueden crear contextos de optimización, consulte <a class="" href=/docs/es/20/ORDA/datastores#clientserver-optimization>optimización cliente/servidor</a>.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-devuelto>Objeto devuelto<a href=#objeto-devuelto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>El objeto devuelto tiene las siguientes propiedades:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propiedad<th>Tipo<th>Descripción<tbody><tr><td>name<td>Text<td>Nombre del contexto<tr><td>main<td>Text<td>Atributo(s) asociado(s) al contexto (los nombres de atributos están separados por comas)<tr><td>dataclass<td>Text<td>Nombre de la clase de datos<tr><td>currentItem (opcional)<td>Text<td>Los atributos del [modo página](../ORDA/remoteDatastores.md#list-box-basado-en-una-selección-de entidades) si el contexto está vinculado a un list box. Se devuelve como <code>Null</code> o elemento de texto vacío si el nombre del contexto no se utiliza para un list box, o si no hay contexto para el elemento actual (currentItem)</table>
 <p>Como los contextos se comportan como filtros de atributos, si <em>main</em> se devuelve vacío, significa que no se aplica ningún filtro, y que el servidor devuelve todos los atributos de la dataclass.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ejemplo-8>Ejemplo<a href=#ejemplo-8 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -790,40 +234,10 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <p><a href=#setremotecontextinfo class="">.setRemoteContextInfo()</a><br/><a href=#getallremotecontexts class="">.getAllRemoteContexts()</a><br/><a href=#clearallremotecontexts class="">.clearAllRemoteContexts()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getrequestlog>.getRequestLog()<a href=#getrequestlog class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getRequestLog()</strong> : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>Resultado<td>Collection<td style=text-align:center>&lt;-<td>Colección de objetos, donde cada objeto describe una solicitud</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-10>Descripción<a href=#descripción-10 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -836,40 +250,10 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <p>Vea el ejemplo 2 de <a href=#startrequestlog class=""><code>.startRequestLog()</code></a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isadminprotected>.isAdminProtected()<a href=#isadminprotected class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>.isAdminProtected()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>Resultado<td>Boolean<td style=text-align:center>&lt;-<td>True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-11>Descripción<a href=#descripción-11 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -879,40 +263,10 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <p><a href=#setadminprotection class=""><code>.setAdminProtection()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=locked>.locked()<a href=#locked class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20<td>Añadidos</table>
 </div></div></details>
 <p><strong>.locked()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Resultado<td>Boolean<td>&lt;-<td>True si bloqueado</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-12>Descripción<a href=#descripción-12 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -923,40 +277,10 @@ disponibles:<table><tr><th>Propiedad<th>Tipo<th>Descripción<tr><td>nombre de ho
 <p><a href=#flushandlock class="">.flushAndLock()</a><br/><a href=#unlock class="">.unlock()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=makeselectionsalterable>.makeSelectionsAlterable()<a href=#makeselectionsalterable class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.makeSelectionsAlterable()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td><td><td style=text-align:center><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-13>Descripción<a href=#descripción-13 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -971,52 +295,10 @@ Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y 
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=providedatakey>.provideDataKey()<a href=#providedatakey class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br/><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>curPassPhrase<td>Text<td>-><td>Frase de cifrado actual<tr><td>curDataKey<td>Object<td>-><td>Llave de encriptación de datos actual<tr><td>Resultado<td>Object<td>&lt;-<td>Resultado de la coincidencia de la llave de encriptación</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-14>Descripción<a href=#descripción-14 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1036,105 +318,16 @@ Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y 
 </ul>
 <p><strong>Resultado</strong></p>
 <p>El resultado de la orden se describe en el objeto devuelto:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propiedad<th><th>Tipo<th>Descripción<tbody><tr><td>success<td><td>Boolean<td>True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario<tr><td><td><td><td>Las siguientes propiedades se devuelven sólo si success es <em>FALSE</em><tr><td>status<td><td>Number<td>Código de error (4 si la llave de encriptación suministrada es errónea)<tr><td>statusText<td><td>Text<td>Mensaje de error<tr><td>errors<td><td>Collection<td>Pila de errores. El primer error tiene el índice más alto<tr><td><td>[ ].componentSignature<td>Text<td>Nombre del componente interno<tr><td><td>[ ].errCode<td>Number<td>Número de error<tr><td><td>[ ].message<td>Text<td>Mensaje de error</table>
 <p>Si no se proporciona <em>curPassphrase</em> o <em>curDataKey</em>, <code>.provideDataKey()</code> devuelve <strong>null</strong> (no se genera ningún error).</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ejemplo-10>Ejemplo<a href=#ejemplo-10 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $keyStatus : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $passphrase : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $passphrase:=Request("Enter the passphrase")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If(OK=1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $keyStatus:=ds.provideDataKey($passphrase)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    If($keyStatus.success)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       ALERT("You have provided a valid encryption key")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       ALERT("You have provided an invalid encryption key, you will not be able to work with encrypted data")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setadminprotection>.setAdminProtection()<a href=#setadminprotection class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>status<td>Boolean<td>-><td>True para desactivar el acceso Data Explorer a los datos del puerto <code>webAdmin</code>, False (por defecto) para otorgar el acceso</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-15>Descripción<a href=#descripción-15 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1148,76 +341,10 @@ Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y 
 <p><a href=#isadminprotected class=""><code>.isAdminProtected()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setremotecontextinfo>.setRemoteContextInfo()<a href=#setremotecontextinfo class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer}})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>contextName<td>Text<td>-><td>Nombre del contexto<tr><td>dataClassName<td>Text<td>-><td>Nombre de la dataclass<tr><td>dataClassObject<td>4D.DataClass<td>-><td>dataclass object (e.g datastore. Employee)<tr><td>attributes<td>Text<td>-><td>Lista de atributos separados por comas<tr><td>attributesColl<td>Collection<td>-><td>Colección de nombres de atributos (text)<tr><td>contextType<td>Text<td>-><td>Si se suministra, el valor debe ser "main" o "currentItem"<tr><td>pageLength<td>Integer<td>-><td>Longitud de la página de la selección de entidades asociada al contexto (por defecto es 80)</table>
 </div>
 <blockquote>
@@ -1259,56 +386,10 @@ Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y 
 <p><a href=#getremotecontextinfo class="">.getRemoteContextInfo()</a><br/><a href=#getallremotecontexts class="">.getAllRemoteContexts()</a><br/><a href=#clearallremotecontexts class="">.clearAllRemoteContexts()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=startrequestlog>.startRequestLog()<a href=#startrequestlog class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20<td>Soporte del lado del servidor, nuevo parámetro <code>options</code><tr><td>17 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>.startRequestLog</strong>()<br/><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br/><strong>.startRequestLog</strong>( <em>file</em> : 4D.File ; <em>options</em> : Integer )<br/><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>file<td>4D.File<td>-><td>Objeto File<tr><td>options<td>Integer<td>-><td>Opción de registro de respuesta (servidor únicamente)<tr><td>reqNum<td>Integer<td>-><td>Número de peticiones a mantener en memoria (cliente únicamente)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-17>Descripción<a href=#descripción-17 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1338,27 +419,6 @@ Si se llama a <code>.startRequestLog()</code> con un archivo mientras se inició
 <li class="">Si ha pasado el parámetro <em>file</em>, los datos de registro se escriben en este archivo, en la ubicación solicitada. - Si omite el parámetro <em>file</em> o si es null, los datos del registro se escriben en un archivo llamado <em>ordaRequests.jsonl</em> y se almacenan en la carpeta "/LOGS".</li>
 <li class="">El parámetro <em>options</em> puede utilizarse para especificar si la respuesta del servidor debe registrarse y si debe incluir el cuerpo. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Descripción<tbody><tr><td>srl log all<td>Registrar la respuesta por completo (valor por defecto)<tr><td>srl log no response<td>Desactivar el registro de la respuesta<tr><td>srl log response without body<td>Registrar la respuesta sin el cuerpo</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ejemplo-1-4>Ejemplo 1<a href=#ejemplo-1-4 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>Desea registrar las solicitudes de los clientes ORDA en un archivo y utilizar el número de secuencia del registro:</p>
@@ -1371,40 +431,10 @@ Si se llama a <code>.startRequestLog()</code> con un archivo mientras se inició
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(4D Server Log Recording;1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$file:=Folder(fk logs folder).file("myOrdaLog.jsonl")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ds.startRequestLog($file)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ds.stopRequestLog()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(4D Server Log Recording;0)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=starttransaction>.startTransaction()<a href=#starttransaction class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18<td>Añadidos</table>
 </div></div></details>
 <p><strong>.startTransaction()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td><td><td style=text-align:center><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-18>Descripción<a href=#descripción-18 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1417,44 +447,10 @@ Si se llama a <code>.startRequestLog()</code> con un archivo mientras se inició
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $connect; $status : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $person : cs.PersonsEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $ds : 4D.DataStoreImplementation</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $choice : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $error : Boolean</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Case of</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    :($choice="local")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       $ds:=ds</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    :($choice="remote")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       $connect:=New object("hostname";"111.222.3.4:8044")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       $ds:=Open datastore($connect;"myRemoteDS")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End case</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $ds.startTransaction()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $person:=$ds.Persons.query("lastname=:1";"Peters").first()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($person#Null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $person.lastname:="Smith"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $status:=$person.save()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($error)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $ds.cancelTransaction()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $ds.validateTransaction()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=stoprequestlog>.stopRequestLog()<a href=#stoprequestlog class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20<td>Soporte del lado del servidor<tr><td>17 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>.stopRequestLog()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td><td><td><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-19>Descripción<a href=#descripción-19 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1465,40 +461,10 @@ Si se llama a <code>.startRequestLog()</code> con un archivo mientras se inició
 <p>Ver ejemplos para <a href=#startrequestlog class=""><code>.startRequestLog()</code></a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=unlock>.unlock()<a href=#unlock class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>20<td>Añadidos</table>
 </div></div></details>
 <p><strong>.unlock()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td><td><td><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-20>Descripción<a href=#descripción-20 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1510,40 +476,10 @@ Si se llama a <code>.startRequestLog()</code> con un archivo mientras se inició
 <p><a href=#flushandlock class="">.flushAndLock()</a><br/><a href=#locked class="">.locked()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=validatetransaction>.validateTransaction()<a href=#validatetransaction class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18<td>Añadidos</table>
 </div></div></details>
 <p><strong>.validateTransaction()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td><td><td><td>No requiere ningún parámetro</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-21>Descripción<a href=#descripción-21 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>

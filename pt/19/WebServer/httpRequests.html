@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/httpRequests" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Processamento de pedidos HTTP | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/19/WebServer/httpRequests /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Processamento de pedidos HTTP | 4D Docs"/><meta data-rh=true name=description content="O servidor da web 4D oferece várias funcionalidades para lidar com solicitações HTTP:"/><meta data-rh=true property=og:description content="O servidor da web 4D oferece várias funcionalidades para lidar com solicitações HTTP:"/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/19/WebServer/httpRequests /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/httpRequests hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/httpRequests hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/httpRequests hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/httpRequests hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/httpRequests hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/httpRequests hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/19/WebServer/httpRequests","name":"Processamento de pedidos HTTP","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/httpRequests" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Processamento de pedidos HTTP | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/19/WebServer/httpRequests /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Processamento de pedidos HTTP | 4D Docs"/><meta data-rh=true name=description content="O servidor da web 4D oferece várias funcionalidades para lidar com solicitações HTTP:"/><meta data-rh=true property=og:description content="O servidor da web 4D oferece várias funcionalidades para lidar com solicitações HTTP:"/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/19/WebServer/httpRequests /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/httpRequests hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/httpRequests hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/httpRequests hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/httpRequests hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/httpRequests hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/httpRequests hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/19/WebServer/httpRequests","name":"Processamento de pedidos HTTP","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/19/WebServer/httpRequests>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/WebServer/httpRequests>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/WebServer/httpRequests>21 R4 BETA</a><li><a class=dropdown__link href=/docs/pt/21/WebServer/httpRequests>21</a><li><a class=dropdown__link href=/docs/pt/20/WebServer/httpRequests>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/19/WebServer/httpRequests>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -20,53 +20,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=sintaxe>Sintaxe<a href=#sintaxe class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p><strong>On Web Connection</strong>( <em>$1</em> : Text ; <em>$2</em> : Text ; <em>$3</em> : Text ; <em>$4</em> : Text ; <em>$5</em> : Text ; <em>$6</em> : Text )</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>$1<td>Text<td style=text-align:center>&lt;-<td>URL<tr><td>$2<td>Text<td style=text-align:center>&lt;-<td>Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb)<tr><td>$3<td>Text<td style=text-align:center>&lt;-<td>Endereço IP do cliente Web (browser)<tr><td>$4<td>Text<td style=text-align:center>&lt;-<td>Endereço IP do servidor<tr><td>$5<td>Text<td style=text-align:center>&lt;-<td>Nome de usuario<tr><td>$6<td>Text<td style=text-align:center>&lt;-<td>Senha</table>
 <p>Estes parâmetros devem ser declarados como se indica a seguir:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">//Método base On Web Authentication</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> C_TEXT($1;$2;$3;$4;$5;$6)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//Código do método</span><br/></div></code></pre></div></div>
@@ -78,35 +31,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=1---dados-extra-do-url>$1 - Dados extra do URL<a href=#1---dados-extra-do-url class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p>O primeiro parâmetro ($1) é a URL inserida pelos usuários na área de endereço de seu navegador da web, sem o endereço host.</p>
 <p>Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. A tabela a seguir mostra os valores de $1 dependendo do URL inserida no navegador da Web:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>URL introduzido no navegador Web<th>Valor do parâmetro $1<tbody><tr><td>123.4.567.89<td>/<tr><td><a href=http://123.45.67.89 target=_blank rel="noopener noreferrer" class="">http://123.45.67.89</a><td>/<tr><td>123.4.567.89/Customers<td>/Customers<tr><td><a href=http://123.45.67.89/Customers/Add target=_blank rel="noopener noreferrer" class="">http://123.45.67.89/Customers/Add</a><td>/Customers/Add<tr><td>123.4.567.89/Do_This/If_OK/Do_That<td>/Do_This/If_OK/Do_That</table>
 <p>Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. Por exemplo, você pode estabelecer uma convenção onde o valor "<em>/Customers/Add</em>" significa "vá diretamente para adicionar um novo registro na tabela <code>[Customers]</code>." Fornecendo aos usuários web uma lista de valores possíveis e/ou favoritos padrão, você pode fornecer atalhos para diferentes partes de sua aplicação. Desta forma, os usuários da web podem acessar rapidamente os recursos do seu site sem percorrer todo o caminho de navegação toda vez que fizerem uma nova conexão.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=2---cabeçalho-e-corpo-do-pedido-http>$2 - Cabeçalho e corpo do pedido HTTP<a href=#2---cabeçalho-e-corpo-do-pedido-http class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
@@ -129,29 +53,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4daction>/4DACTION<a href=#4daction class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><em>/4DACTION/MethodName</em><br/> <em>/4DACTION/MethodName/Param</em></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>MethodName<td>Text<td style=text-align:center>-><td>Nome do método de projeto 4D a ser executado<tr><td>Param<td>Text<td style=text-align:center>-><td>Parâmetro texto a ser passado para o método projeto</table>
 <p><strong>Utilização:</strong> URL ou ação de formulário.</p>
 <p>Este URL permite que você chame o método projeto <em>MethodName</em> 4D com um parâmetro de texto opcional <em>Param</em>. O método receberá este parâmetro em <em>$1</em>.</p>

@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/VectorClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Vector | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/VectorClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Vector | 4D Docs"/><meta data-rh=true name=description content="Vector クラスを使用すると、ベクトル を扱うことができるようになり、それらの距離や類似性を計算することができます。このクラスは 4D クラスストアより提供されます。"/><meta data-rh=true property=og:description content="Vector クラスを使用すると、ベクトル を扱うことができるようになり、それらの距離や類似性を計算することができます。このクラスは 4D クラスストアより提供されます。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/VectorClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/VectorClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/VectorClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/VectorClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/VectorClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/VectorClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/VectorClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/VectorClass","name":"Vector","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/VectorClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Vector | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/VectorClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Vector | 4D Docs"/><meta data-rh=true name=description content="Vector クラスを使用すると、ベクトル を扱うことができるようになり、それらの距離や類似性を計算することができます。このクラスは 4D クラスストアより提供されます。"/><meta data-rh=true property=og:description content="Vector クラスを使用すると、ベクトル を扱うことができるようになり、それらの距離や類似性を計算することができます。このクラスは 4D クラスストアより提供されます。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/VectorClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/VectorClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/VectorClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/VectorClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/VectorClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/VectorClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/VectorClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/VectorClass","name":"Vector","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/API/VectorClass>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/API/VectorClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/API/VectorClass>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/API/VectorClass>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -9,144 +9,23 @@
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>info</div><div class=admonitionContent_BuS1><p>このクラスは、バイナリーで<a class="" href=/docs/ja/Concepts/object#binary-streaming-variable-to-blob><strong>ストリーム可能</strong></a> です。</div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=様々なベクトル計算を理解する>様々なベクトル計算を理解する<a href=#様々なベクトル計算を理解する class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p><code>4D.Vector</code> クラスは、3種類のベクター計算を提供します。以下の表はそれぞれの計算の主な特徴をまとめたものです:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><th>cosineSimilarity<th>dotSimilarity<th>euclideanDistance<tbody><tr><td>定義<td>ベクトルとして表現された2つのテキストの向きを比較します。 2つが指している方向が同じであればあるほど、その2つは近いことを意味します。<td>それぞれのベクトル次元の積の合計。加重互換性スコアのようなものと考えることができます。<td>定規で測ったかのような2つのベクトル感の実際の距離。<tr><td>単純な例え<td>私たちは同じ話題について話していますか？<td>あなたは同じ主題について何度も何度も話をしていますか？<td>あなたは私の言っている事から本当にそんなに離れていますか？<tr><td>例題<td>例えば、あなたが動画オンデマンドストリーミングサービス上で次に見る映画を探している場合を考えます。コサイン類似性は、あなたの嗜好(例えば、若干のコメディが入ったアクション映画が好きである、など)とデータベース内にある映画の説明とを比較するために使用されます。ここではあなたが映画の"ライトな"ファンである(映画を月一回見る)か、あるいは"大"ファンである(映画を週に10本見る)かは関係ありません。大事なのは、映画の特徴があなたの好み(例:アクション+コメディ)と類似しているかどうかです。ストリーミングサービスはこのコサイン類似性を使用して、あなたの嗜好と"同じ方向を向いている"映画を推奨します。<td>検索エンジを考えてみてください。あなたが"チョコレートケーキのレシピ"と入力すると、アルゴリズムはあなたのクエリをWebページと比較します。ドット積は、あるページがチョコレートケーキについて説明しているかどうか(あなたの検索と似た方向かどうか)をチェックするために使用されるだけではなく、より関連性のあるページにより重みをつけるために使用されます(例えば、チョコレートケーキについてのより詳細なコンテンツがたくさんあるページはより大きな"長さ"を与えられ、結果としてより高いスコアがつけられます)。検索した内容について1行しか触れていないようなページは、低いスコアがつけられます。<td>マッチングアプリを想像してみてください。アルゴリズムはユークリッド距離を使用して、あなたのプロフィール(趣味、年齢、居住地など)と他のユーザーのプロフィールを比較します。もし二人のプロフィールがとても似通っている(例えば二人ともハイキングが趣味で、ポップミュージックが好き、そして住んでいるところが5kmしか離れていない)のであれば、二人のプロフィールのユークリッド距離は低くなり、アプリはこの人物をより"マッチしている"とサジェストしてきます。ここでは、二人の嗜好の一般的な方向だけでなく、すべての違いも(どれだけ小さくても)考慮されます。</table>
 <p>いずれの場合においても、さまざまなベクトルをテストしてどれがあなたの用途とデータに合致するか判断するのが良いと言えるでしょう。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ベクトルオブジェクト>ベクトルオブジェクト<a href=#ベクトルオブジェクト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>ベクターオブジェクトは、変更不可で、ストリーム可能な共有オブジェクトです。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#cosinesimilarity class=""><strong>.cosineSimilarity</strong>( <em>vector</em> : 4D.Vector ) : Real</a><br/>現在の4D ベクトルと<em>vector</em> 引数に渡したベクトルとの間のコサイン類似度を計算します<tr><td><a href=#dotsimilarity class=""><strong>.dotSimilarity</strong>( <em>vector</em> : 4D.Vector ) : Real</a><br/>現在の4D ベクトルと<em>vector</em> 引数に渡したベクトルとの間のドット積を計算します<tr><td><a href=#euclideandistance class=""><strong>.euclideanDistance</strong>( <em>vector</em> : 4D.Vector ) : Real</a><br/>現在の4D ベクトルと<em>vector</em> 引数に渡したベクトルとの間のユークリッド距離を計算します<tr><td><a href=#length class=""><strong>length</strong> : Integer</a><br/>ベクトル成分の数<tr><td><a href=#precision class=""><strong>precision</strong> : Integer</a><br/>ベクトルを構築するのに使用された精度の値<tr><td><a href=#tocollection class=""><strong>.toCollection</strong>() : Collection</a><br/>ベクトル成分を実数値のコレクションとして返します</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dvectornew>4D.Vector.new()<a href=#4dvectornew class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R5<td>新しい <em>precision</em> 引数<tr><td>20 R10<td>追加</table>
 </div></div></details>
 <p><strong>4D.Vector.new</strong> ( <em>parameter</em> : Collection {; precision : Integer} ) : 4D.Vector</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>引数<td>Collection<td>-><td>ベクトルを表せる実数値のコレクション<tr><td>precision<td>Integer<td>-><td>ベクトル精度: <code>mk single precision</code> (デフォルト) または <code>mk double precision</code><tr><td>戻り値<td>4D.Vector<td>&lt;-<td>新規ベクトルオブジェクト</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明>説明<a href=#説明 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>4D.Vector.new()</code> 関数は、新しい<code>4D.Vector</code>型のオブジェクト作成して返します。</p>
 <p><em>parameter</em> 引数には、作成したベクトルを表す実数値のコレクションを渡します。これらの値は人工知能によって提供されるものであり、単語やデータなどのオブジェクトを数学的に表します。</p>
 <p>オプションの<em>precision</em> 引数には、ベクトル作成に適用したい数値の精度を渡すことができます。次の定数が利用できます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td><code>mk single precision</code><td>32<td>単精度(32-bit) 浮動小数点(デフォルト)<tr><td><code>mk double precision</code><td>64<td>倍精度(64-bit) 浮動小数点</table>
 <p>デフォルトで<em>precision</em> 引数を省略した場合、ベクトルは32-bit の浮動小数点の精度で作成されます。 32-bit 浮動小数点精度は、64-bit ベクトルと比較してメモリ使用量を半分に抑えつつ、類似度と距離の計算に必要な精度を十分確保しているため、ほとんどのユースケースにおいて推奨されるデフォルト設定となっています。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-1>例題 1<a href=#例題-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -160,29 +39,6 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cosinesimilarity>.cosineSimilarity()<a href=#cosinesimilarity class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><strong>.cosineSimilarity</strong>( <em>vector</em> : 4D.Vector ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>vector<td>4D.Vector<td>-><td>比較するベクトル<tr><td>戻り値<td>Real<td>&lt;-<td>ベクトル感の距離</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-1>説明<a href=#説明-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -198,33 +54,10 @@
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-2-1>例題 2<a href=#例題-2-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>info</div><div class=admonitionContent_BuS1><p>以下の例題では埋め込みを生成するのに<a class="" href=/docs/ja/aikit/overview>4D AIKit 拡張機能</a>
 を使用します.</div></div>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $model:="text-embedding-ada-002"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $people:=ds.People.get(1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$prompt:=String($people.Firstname)+" "+String($people.Lastname)+" was born on "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.Birthday)+" and lives in "+String($people.Address)+", "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.ZipCode)+", "+String($people.City)+", "+String($people.Country)+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">". Contact: "+String($people.email)+", "+String($people.Cell)+", "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">", Mother : "+String($people.MotherID)+", Partner: "+String($people.PartnerID)+"."</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D AIKit でベクトル計算をする</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $result:=$clientAI.embeddings.create($prompt; $model)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D.vector オブジェクト作成</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $vector:=$result.vector</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $question:="I'm looking for John who lives in USA"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D AIKit コンポーネントを使用してベクトル計算をする</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $questionVector:=$clientAI.embeddings.create($question; $model).vector</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// コサイン類似度の計算</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">If ($vector.cosineSimilarity($questionVector)>0.9)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  ALERT("Interesting result")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//実際の結果: 0,7360136465949</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $model:="text-embedding-ada-002"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $people:=ds.People.get(1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$prompt:=String($people.Firstname)+" "+String($people.Lastname)+" was born on "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.Birthday)+" and lives in "+String($people.Address)+", "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.ZipCode)+", "+String($people.City)+", "+String($people.Country)+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">". Contact: "+String($people.email)+", "+String($people.Cell)+", "+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">", Mother : "+String($people.MotherID)+", Partner: "+String($people.PartnerID)+"."</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D AIKit でベクトル計算をする</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $result:=$clientAI.embeddings.create($prompt; $model)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D.vector オブジェクト作成</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $vector:=$result.vector</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $question:="I'm looking for John who lives in USA"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// 4D AIKit コンポーネントを使用してベクトル計算をする</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $questionVector:=$clientAI.embeddings.create($question; $model).vector</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// コサイン類似度の計算</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">If ($vector.cosineSimilarity($questionVector)>0.9)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  ALERT("Interesting result")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//実際の結果: 0,7360136465949</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dotsimilarity>.dotSimilarity()<a href=#dotsimilarity class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><strong>.dotSimilarity</strong>( <em>vector</em> : 4D.Vector ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>vector<td>4D.Vector<td>-><td>比較するベクトル<tr><td>戻り値<td>Real<td>&lt;-<td>ベクトル感の距離</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-2>説明<a href=#説明-2 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -244,29 +77,6 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=euclideandistance>.euclideanDistance()<a href=#euclideandistance class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><strong>.euclideanDistance</strong>( <em>vector</em> : 4D.Vector ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>vector<td>4D.Vector<td>-><td>比較するベクトル<tr><td>戻り値<td>Real<td>&lt;-<td>ベクトル感の距離</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-3>説明<a href=#説明-3 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -287,19 +97,6 @@
 <p><code>.length</code> プロパティにはベクトル成分の数が格納されています。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=precision>.precision<a href=#precision class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R5<td>追加</table>
 </div></div></details>
 <p><strong>precision</strong> : Integer</p>
@@ -308,23 +105,6 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=tocollection>.toCollection()<a href=#tocollection class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><strong>.toCollection</strong>() : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Collection<td>&lt;-<td>ベクトル成分を表す実数値のコレクション</table>
 </div>
 <p><code>.toCollection()</code> 関数は、ベクトル成分を実数値のコレクションとして返します。</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/4d/docs/issues/new?title=Comment%20on%20API%2FVectorClass.md%20(21-R5)&body=Please%20enter%20your%20comment%3A" target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>このページへコメントする</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントのナビゲーション><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/API/UDPSocketClass><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>UDPSocket</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/API/WebFormClass><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>WebForm</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#様々なベクトル計算を理解する class="table-of-contents__link toc-highlight">様々なベクトル計算を理解する</a><li><a href=#ベクトルオブジェクト class="table-of-contents__link toc-highlight">ベクトルオブジェクト</a><li><a href=#4dvectornew class="table-of-contents__link toc-highlight">4D.Vector.new()</a><li><a href=#cosinesimilarity class="table-of-contents__link toc-highlight">.cosineSimilarity()</a><li><a href=#dotsimilarity class="table-of-contents__link toc-highlight">.dotSimilarity()</a><li><a href=#euclideandistance class="table-of-contents__link toc-highlight">.euclideanDistance()</a><li><a href=#length class="table-of-contents__link toc-highlight">.length</a><li><a href=#precision class="table-of-contents__link toc-highlight">.precision</a><li><a href=#tocollection class="table-of-contents__link toc-highlight">.toCollection()</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>コミュニティ</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://blog.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Blog</a><li class=footer__item><a href=https://discuss.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Forum</a><li class=footer__item><a href=https://facebook.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook</a><li class=footer__item><a href=https://x.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>X</a><li class=footer__item><a href=https://youtube.com/user/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Youtube</a><li class=footer__item><a href=https://github.com/4D target=_blank rel="noopener noreferrer" class=footer__link-item>Github</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>サポート</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/4d/docs/releases/tag/latest target=_blank rel="noopener noreferrer" class=footer__link-item>ドキュメントのダウンロード</a><li class=footer__item><a href=https://learn.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Learn 4D</a><li class=footer__item><a href=https://doc.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Doc Center (旧ドキュメントサイト)</a><li class=footer__item><a href=https://kb.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>ナレッジベース</a><li class=footer__item><a href=https://us.4d.com/product-download target=_blank rel="noopener noreferrer" class=footer__link-item>ダウンロード</a><li class=footer__item><a href=https://us.4d.com/resources target=_blank rel="noopener noreferrer" class=footer__link-item>リソース</a><li class=footer__item><a href=https://us.4d.com/4d-technical-support target=_blank rel="noopener noreferrer" class=footer__link-item>サポートを受ける</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>会社概要</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://us.4d.com/about-us target=_blank rel="noopener noreferrer" class=footer__link-item>4D社について</a><li class=footer__item><a href=https://us.4d.com/contact-us target=_blank rel="noopener noreferrer" class=footer__link-item>コンタクト</a><li class=footer__item><a href=https://us.4d.com/4d-around-the-world target=_blank rel="noopener noreferrer" class=footer__link-item>世界中の4D</a><li class=footer__item><a href=https://us.4d.com/Careers target=_blank rel="noopener noreferrer" class=footer__link-item>Careers</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>© 2026 4D SAS - All rights reserved <div style=margin-top:8px><i>Some content is written with the help of AI</i></div></div></div></div></footer></div></body>

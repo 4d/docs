@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-ORDA/ordaClasses" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Classes du modèle de données | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Classes du modèle de données | 4D Docs"/><meta data-rh=true name=description content="ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions."/><meta data-rh=true property=og:description content="ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/ORDA/ordaClasses hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/ORDA/ordaClasses hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/ORDA/ordaClasses hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/ORDA/ordaClasses hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/ORDA/ordaClasses hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/core-development","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/ORDA/overview","name":"ORDA","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/ORDA/ordaClasses","name":"Classes du modèle de données","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-ORDA/ordaClasses" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Classes du modèle de données | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Classes du modèle de données | 4D Docs"/><meta data-rh=true name=description content="ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions."/><meta data-rh=true property=og:description content="ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/ORDA/ordaClasses hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/ORDA/ordaClasses hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/ORDA/ordaClasses hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/ORDA/ordaClasses hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/ORDA/ordaClasses hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/ORDA/ordaClasses hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/core-development","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/ORDA/overview","name":"ORDA","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/ORDA/ordaClasses","name":"Classes du modèle de données","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/20/ORDA/ordaClasses>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/ORDA/ordaClasses>21 R5 BETA</a><li><a class=dropdown__link href=/docs/fr/21-R4/ORDA/ordaClasses>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/ORDA/ordaClasses>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/20/ORDA/ordaClasses>20</a><li><a class=dropdown__link href=/docs/fr/19/ORDA/ordaClasses>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -25,36 +25,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>ORDA fournit des <strong>classes génériques</strong> exposées via le <a class="" href=/docs/fr/20/Concepts/classes#class-stores>class store</a> <strong><code>4D</code></strong>, ainsi que des <strong>classes utilisateurs</strong> (étendant les classes génériques) exposées dans le <a class="" href=/docs/fr/20/Concepts/classes#class-stores>class store</a> **\\`</p>
 <p><img decoding=async loading=lazy src=/docs/fr/assets/images/ClassDiagramImage-6cbf13bbf1dca5f0656fbdfad146e86f.png width=769 height=567 class=img_ev3q /></p>
 <p>Toutes les classes de modèle de données ORDA sont exposées en tant que propriétés du class store <strong><code>cs</code></strong>. Les classes ORDA suivantes sont disponibles :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Class<th>Nom de l'exemple<th>Instanciée par<tbody><tr><td>cs.DataStore<td>cs.DataStore<td>Commande <a class="" href=/docs/fr/20/API/DataStoreClass#ds><code>ds</code></a><tr><td>cs.<em>DataClassName</em><td>cs.Employee<td><a class="" href=/docs/fr/20/API/DataStoreClass#dataclassname><code>dataStore.DataClassName</code></a>, <code>dataStore["DataClassName"]</code><tr><td>cs._DataClassName_Entity<td>cs.EmployeeEntity<td><a class="" href=/docs/fr/20/API/DataClassClass#get><code>dataClass.get()</code></a>, <a class="" href=/docs/fr/20/API/DataClassClass#new><code>dataClass.new()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#first><code>entitySelection.first()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#last><code>entitySelection.last()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#previous><code>entity.previous()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#next><code>entity.next()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#first><code>entity.first()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#last><code>entity.last()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#clone><code>entity.clone()</code></a><tr><td>cs._DataClassName_Selection<td>cs.EmployeeSelection<td><a class="" href=/docs/fr/20/API/DataClassClass#query><code>dataClass.query()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#query><code>entitySelection.query()</code></a>, <a class="" href=/docs/fr/20/API/DataClassClass#all><code>dataClass.all()</code></a>, <a class="" href=/docs/fr/20/API/DataClassClass#fromcollection><code>dataClass.fromCollection()</code></a>, <a class="" href=/docs/fr/20/API/DataClassClass#newselection><code>dataClass.newSelection()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#drop><code>entitySelection.drop()</code></a>, <a class="" href=/docs/fr/20/API/EntityClass#getselection><code>entity.getSelection()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#and><code>entitySelection.and()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#minus><code>entitySelection.minus()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#or><code>entitySelection.or()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#or><code>entitySelection.orderBy()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#orderbyformula><code>entitySelection.orderByFormula()</code></a>, <a class="" href=/docs/fr/20/API/EntitySelectionClass#slice><code>entitySelection.slice()</code></a>, <code>Create entity selection</code></table>
 <blockquote>
 <p>Les classes utilisateur ORDA sont stockées sous forme de fichiers de classe standard (.4dm) dans le sous-dossier Classes du projet <a href=#class-files class="">(voir ci-dessous)</a>.</p>
@@ -68,27 +38,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-de-la-classe>Description de la classe<a href=#description-de-la-classe class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>19 R4<td>Attributs alias dans la classe Entity<tr><td>19 R3<td>Attributs calculés dans la classe Entity<tr><td>18 R5<td>Les fonctions des classes du modèle de données ne sont pas exposées par défaut en REST. Nouveaux mots-clés <code>exposed</code> et <code>local</code>.</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=classe-datastore>Classe DataStore<a href=#classe-datastore class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
@@ -221,36 +170,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <li class="">**Exemple ** : cs.EmployeeSelection</li>
 </ul>
 <p>Les propriétés du paramètre <em>$event</em> sont les suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>attributeName<td>Text<td>Nom de l'attribut calculé<tr><td>dataClassName<td>Text<td>Nom de la dataclass<tr><td>kind<td>Text<td>"get"<tr><td>Résultat<td>Variant<td>Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemples>Exemples<a href=#exemples class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <ul>
@@ -267,40 +186,10 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    If (This.manager.manager=Null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        $result:=ds.Employee.newSelection()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    Else </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        $result:=This.manager.directReports.minus(this)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End if</span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=function-set-attributename><code>Function set &lt;attributeName></code><a href=#function-set-attributename class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=syntaxe-1>Syntaxe<a href=#syntaxe-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">{local} Function set &lt;attributeName>($value : type {; $event : Object})</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// code</span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">{local} Function set &lt;attributeName>($value : type {; $event : Object})</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// code</span><br/></div></code></pre></div></div>
 <p>La fonction <em>setter</em> s'exécute chaque fois qu'une valeur est attribuée à l'attribut. Cette fonction traite généralement la ou les valeurs d'entrée et le résultat est réparti entre un ou plusieurs autres attributs.</p>
 <p>Le paramètre <em>$value</em> reçoit la valeur attribuée à l'attribut.</p>
 <p>Les propriétés du paramètre <em>$event</em> sont les suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>attributeName<td>Text<td>Nom de l'attribut calculé<tr><td>dataClassName<td>Text<td>Nom de la dataclass<tr><td>kind<td>Text<td>"set"<tr><td>value<td>Variant<td>Valeur à gérer par l'attribut calculé</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-4>Exemple<a href=#exemple-4 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Function set fullName($value : Text; $event : Object)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	var $p : Integer</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $p:=Position(" "; $value) 		</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	This.firstname:=Substring($value; 1; $p-1)  // "" if $p&lt;0</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	This.lastname:=Substring($value; $p+1)</span><br/></div></code></pre></div></div>
@@ -318,26 +207,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <li class="">Si <em>$result</em> est Text, il doit s'agir d'une chaîne de requête valide</li>
 <li class="">Si <em>$result</em> est Object, il doit contenir deux propriétés :</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>$result.query<td>Text<td>Chaîne de requête valide avec placeholders (:1, :2, etc.)<tr><td>$result.parameters<td>Collection<td>valeurs pour placeholders</table>
 </li>
 </ul>
@@ -350,46 +219,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </ul>
 </blockquote>
 <p>Les propriétés du paramètre <em>$event</em> sont les suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>attributeName<td>Text<td>Nom de l'attribut calculé<tr><td>dataClassName<td>Text<td>Nom de la dataclass<tr><td>kind<td>Text<td>"query"<tr><td>value<td>Variant<td>Valeur à gérer par l'attribut calculé<tr><td>operator<td>Text<td>Opérateur de recherche (voir également la <a class="" href=/docs/fr/20/API/DataClassClass#query>fonction de classe <code>query</code></a>). Valeurs possibles:<li class="">== (égal à, @ est un joker)</li><li class="">=== (égal à, @ n'est pas un joker)</li><li class="">!= (différent de, @ est un joker)</li><li class="">!== (différent de, @ n'est pas un joker)</li><li class="">&lt; (inférieur à)</li><li class="">&lt;= (inférieur ou égal à)</li><li class="">> (supérieur à)</li><li class="">>= (supérieur ou égal à)</li><li class="">IN (inclus dans)</li><li class="">% (contient le mot-clé)</li><tr><td>Résultat<td>Variant<td>Valeur devant être gérée par le champ calculé. Passez <code>Null</code> dans cette propriété si vous voulez laisser 4D exécuter la recherche par défaut (toujours séquentielle pour les attributs calculés).</table>
 <blockquote>
 <p>Si la fonction retourne une valeur dans <em>$result</em> et qu'une autre valeur est attribuée à la propriété <code>$event.result</code>, la priorité est donnée à <code>$event.result</code>.</p>
@@ -419,51 +248,6 @@ Lorsque la fonction <code>orderBy</code> n'est pas implémentée pour un attribu
 <p>L'appel d'une fonction <code>orderBy</code> sur des attributs calculés de type Entity class ou Entity selection class <strong>n'est pas pris en charge</strong>.</p>
 </blockquote>
 <p>Les propriétés du paramètre <em>$event</em> sont les suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>attributeName<td>Text<td>Nom de l'attribut calculé<tr><td>dataClassName<td>Text<td>Nom de la dataclass<tr><td>kind<td>Text<td>"orderBy"<tr><td>value<td>Variant<td>Valeur à gérer par l'attribut calculé<tr><td>operator<td>Text<td>"desc" or "asc" (default)<tr><td>descending<td>Boolean<td><code>true</code> pour l'ordre décroissant, <code>false</code> pour l'ordre croissant<tr><td>Résultat<td>Variant<td>Valeur devant être gérée par le champ calculé. Passez <code>Null</code> si vous voulez laisser 4D exécuter le tri par défaut.</table>
 <blockquote>
 <p>Vous pouvez utiliser soit <code>l'opérateur</code>, soit la propriété <code>descending</code>. C'est essentiellement une question de style de programmation (voir les exemples).</p>
@@ -494,56 +278,6 @@ Lorsque la fonction <code>orderBy</code> n'est pas implémentée pour un attribu
 </blockquote>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=utiliser-les-attributs-alias>Utiliser les attributs alias<a href=#utiliser-les-attributs-alias class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <p>Les attributs alias sont en lecture seule (sauf lorsqu'ils sont basés sur un attribut scalaire de la même dataclass, voir le dernier exemple ci-dessous). Ils peuvent être utilisés à la place de leur chemin d'attribut cible dans les fonctions ORDA telles que :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Function<tbody><tr><td><code>dataClass.query()</code>, <code>entitySelection.query()</code><tr><td><code>entity.toObject()</code><tr><td><code>entitySelection.toCollection()</code><tr><td><code>entitySelection.extract()</code><tr><td><code>entitySelection.orderBy()</code><tr><td><code>entitySelection.orderByFormula()</code><tr><td><code>entitySelection.average()</code><tr><td><code>entitySelection.count()</code><tr><td><code>entitySelection.distinct()</code><tr><td><code>entitySelection.sum()</code><tr><td><code>entitySelection.min()</code><tr><td><code>entitySelection.max()</code><tr><td><code>entity.diff()</code><tr><td><code>entity.touchedAttributes()</code></table>
 <blockquote>
 <p>Gardez à l'esprit que les attributs alias sont calculés sur le serveur. Dans les configurations à distance, la mise à jour des attributs d'alias dans les entités nécessite que les entités soient rechargées à partir du serveur.</p>

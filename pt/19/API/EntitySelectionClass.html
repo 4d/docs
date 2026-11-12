@@ -1,141 +1,14 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-API/EntitySelectionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>EntitySelection | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="EntitySelection | 4D Docs"/><meta data-rh=true name=description content="Uma seleção de entidades é um objeto que contém uma ou mais referencias a entidades pertencentes à mesma Dataclass. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass."/><meta data-rh=true property=og:description content="Uma seleção de entidades é um objeto que contém uma ou mais referencias a entidades pertencentes à mesma Dataclass. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/EntitySelectionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/API/EntitySelectionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/API/EntitySelectionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/API/EntitySelectionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/EntitySelectionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/19/API/EntitySelectionClass","name":"EntitySelection","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-API/EntitySelectionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>EntitySelection | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="EntitySelection | 4D Docs"/><meta data-rh=true name=description content="Uma seleção de entidades é um objeto que contém uma ou mais referencias a entidades pertencentes à mesma Dataclass. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass."/><meta data-rh=true property=og:description content="Uma seleção de entidades é um objeto que contém uma ou mais referencias a entidades pertencentes à mesma Dataclass. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/EntitySelectionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/API/EntitySelectionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/API/EntitySelectionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/API/EntitySelectionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/API/EntitySelectionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/API/EntitySelectionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/19/API/EntitySelectionClass","name":"EntitySelection","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/19/API/EntitySelectionClass>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/API/EntitySelectionClass>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/API/EntitySelectionClass>21 R4 BETA</a><li><a class=dropdown__link href=/docs/pt/21/API/EntitySelectionClass>21</a><li><a class=dropdown__link href=/docs/pt/20/API/EntitySelectionClass>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/19/API/EntitySelectionClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
 Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Português</a><ul class=dropdown__menu><li><a href=/docs/19/API/EntitySelectionClass target=_self rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/19/API/EntitySelectionClass target=_self rel="noopener noreferrer" class=dropdown__link lang=fr>Français</a><li><a href=/docs/es/19/API/EntitySelectionClass target=_self rel="noopener noreferrer" class=dropdown__link lang=es>Español</a><li><a href=/docs/ja/19/API/EntitySelectionClass target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/19/API/EntitySelectionClass target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Alternar entre os modos escuro e claro (atualmente system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Pesquisa (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Pesquisa</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Voltar ao topo" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/pt/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>Documentação 4D</b></a><nav aria-label="Barra lateral de documentos" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/GettingStarted/installation><span class=categoryLinkLabel_W154>Começando</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Project/overview><span class=categoryLinkLabel_W154>Gestão de projectos</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Concepts/about><span class=categoryLinkLabel_W154>Conceitos da linguagem 4D</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/ORDA/overview><span class=categoryLinkLabel_W154>ORDA</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/pt/19/API/overview><span class=categoryLinkLabel_W154>Referência da API de classe</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/overview><span class=linkLabel_WmDU>Funções de classe e comandos</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/ClassClass><span class=linkLabel_WmDU>Class</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/CollectionClass><span class=linkLabel_WmDU>Collection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/CryptoKeyClass><span class=linkLabel_WmDU>CryptoKey</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/DataClassClass><span class=linkLabel_WmDU>DataClass</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/DataStoreClass><span class=linkLabel_WmDU>DataStore</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/EmailObjectClass><span class=linkLabel_WmDU>Email</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/EntityClass><span class=linkLabel_WmDU>Entity</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/pt/19/API/EntitySelectionClass><span class=linkLabel_WmDU>EntitySelection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/FileClass><span class=linkLabel_WmDU>File</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/FolderClass><span class=linkLabel_WmDU>Folder</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/FunctionClass><span class=linkLabel_WmDU>Function</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/IMAPTransporterClass><span class=linkLabel_WmDU>IMAPTransporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/MailAttachmentClass><span class=linkLabel_WmDU>MailAttachment</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/POP3TransporterClass><span class=linkLabel_WmDU>POP3Transporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/SessionClass><span class=linkLabel_WmDU>Session</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/SignalClass><span class=linkLabel_WmDU>Signal</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/SMTPTransporterClass><span class=linkLabel_WmDU>SMTPTransporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/WebServerClass><span class=linkLabel_WmDU>WebServer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/ZipArchiveClass><span class=linkLabel_WmDU>ZIPArchive</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/ZipFileClass><span class=linkLabel_WmDU>ZIPFile</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/pt/19/API/ZipFolderClass><span class=linkLabel_WmDU>ZIPFolder</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Preferences/overview><span class=categoryLinkLabel_W154>Preferências</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Admin/webAdmin><span class=categoryLinkLabel_W154>Administração</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Users/overview><span class=categoryLinkLabel_W154>Direitos de acesso</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/MSC/overview><span class=categoryLinkLabel_W154>CSM</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Backup/overview><span class=categoryLinkLabel_W154>Cópia de segurança e restauração</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/WebServer/overview><span class=categoryLinkLabel_W154>Servidor Web</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/WebServer/gettingStarted><span class=categoryLinkLabel_W154>Desenvolvimento Web</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/REST/gettingStarted><span class=categoryLinkLabel_W154>Servidor REST</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Desktop/clientServer><span class=categoryLinkLabel_W154>Cliente/Servidor</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/FormEditor/forms><span class=categoryLinkLabel_W154>Formulários</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/FormEditor/jsonReference><span class=categoryLinkLabel_W154>Propriedades do formulário</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/FormObjects/formObjectsOverview><span class=categoryLinkLabel_W154>Objectos formulário</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/FormObjects/propertiesReference><span class=categoryLinkLabel_W154>Propriedades dos objectos formulário</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Events/overview><span class=categoryLinkLabel_W154>Eventos formulário</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Menus/overview><span class=categoryLinkLabel_W154>Menus</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/pt/19/Desktop/building><span class=categoryLinkLabel_W154>Criar aplicação</span></a></div></ul></nav><button type=button title="Recolher a barra lateral" aria-label="Recolher a barra lateral" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Trilha de navegação"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Página inicial" class=breadcrumbs__link href=/docs/pt/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Referência da API de classe</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>EntitySelection</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Versão: 19</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">Nesta página</button></div><div class="theme-doc-markdown markdown"><header><h1>EntitySelection</h1></header><p>Uma seleção de entidades é um objeto que contém uma ou mais referencias a <a class="" href=/docs/pt/19/ORDA/dsmapping#entity>entidades</a> pertencentes à mesma <a class="" href=/docs/pt/19/ORDA/dsmapping#dataclass>Dataclass</a>. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.</p>
 <p>As seleções de entidades podem ser criadas a partir de seleções existentes utilizando varias funções da classe <a class="" href=/docs/pt/19/API/DataClassClass><code>DataClass</code> class</a> tais como <a class="" href=/docs/pt/19/API/DataClassClass#all><code>.all()</code></a> ou <a class="" href=/docs/pt/19/API/DataClassClass#query><code>.query()</code></a>, ou da classe <code>EntityClass</code> mesma, tal como <a href=#and class=""><code>.and()</code></a> ou <a href=#orderby class=""><code>orderBy()</code></a>. Você também pode criar seleções em branco das entidades usando a função <a class="" href=/docs/pt/19/API/DataClassClass#newselection><code>dataClass.newSelection()</code></a> ou o comando <a href=#create-entity-selection class=""><code>Create entity selection</code></a>.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=resumo>Resumo<a href=#resumo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#index class=""><em><strong>[index]</strong></em> : 4D. Entity</a>    permite acessar entidades sem a seleção de entidade usando a sintaxe coleção padrão<tr><td>[Atributos de Dataclass com <a class="" href=/docs/pt/19/API/DataClassAttributeClass.md#kind>.kind</a> = "relatedEntity" extraídos como uma coleção de entidades (duplicações são mantidas).](#attributename)    uma "projeção" de valores para o atributo na seleção de entidades<tr><td><a href=#add class=""><strong>.add</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection</a>    adiciona a <em>entidade</em> especificada à seleção de entidade e retorna a seleção de entidade modificada<tr><td><a href=#and class=""><strong>.and</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.and</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</a>    combina a seleção da entidade com um parâmetro <em>entity</em> ou <em>entitySelection</em> utilizando o operador lógico AND<tr><td><a href=#average class=""><strong>.average</strong>( {<em>propertyPath</em> : Text } ) : Real</a>    A função <code>.average()</code><tr><td><a href=#contains class=""><strong>.contains</strong>( <em>entity</em> : 4D. Entity ) : Boolean</a>    retorna true se a referência de entidade pertencer à seleção de entidade<tr><td><a href=#contains class=""><strong>.copy</strong>( { <em>option</em> : Integer } ) : 4D. EntitySelection</a>    A função <code>.copy()</code><tr><td><a href=#count class=""><strong>.count</strong>( <em>attributePath</em> : Text ) : Real</a>    A função <code>.count()</code><tr><td><a href=#distinct class=""><strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</a>    A função <code>.distinct()</code><tr><td><a href=#drop class=""><strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D. EntitySelection</a>    remove as entidades pertencendo à seleção de entidade da tabela relacionada a dataclasse dentro da datastore<tr><td><a href=#extract class=""><strong>.extract</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br/><strong>.extract</strong>( <em>...attributePath</em> : Text ; <em>...targetPath</em> : Text ) : Collection</a>    A função <code>.extract()</code><tr><td><a href=#first class=""><strong>.first()</strong> : 4D. Entity</a>    devolve uma referência à entidade na primeira posição da selecção de entidades<tr><td><a href=#getdataclass class=""><strong>.getDataClass()</strong> : 4D. DataClass</a>    A função <code>.getDataClass()</code><tr><td><a href=#isalterable class=""><strong>.isAlterable()</strong> : Boolean</a>    retorna True se a seleção de entidade for alterável<tr><td><a href=#isordered class=""><strong>.isOrdered()</strong> : Boolean</a>    devolve True se a entity selection estiver ordenada<tr><td><a href=#last class="">Parâmetros</a>    retorna uma referência à entidade na últim aposição da seleção de entidade<tr><td><a href=#length class=""><strong>.length</strong> : Integer</a>    retorna o número de entidades na seleção de entidade<tr><td><a href=#max class=""><strong>.max</strong>( <em>attributePath</em> : Text ) : any</a>    retorna o valor mais alto (ou máximo) entre todos os valores de <em>attributePath</em> na seleção de entidade<tr><td><a href=#min class=""><strong>.min</strong>( <em>attributePath</em> : Text ) : any</a>     retorna o menor valor (mínimo) entre todos os valores de attributePath na seleção de entidade<tr><td><a href=#minus class=""><strong>.minus</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.minus</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</a>    exclui da seleção de entidade que é aplicada a <em>entity</em> ou as entidaddes de <em>entitySelection</em> e retorna a seleção de entidade resultante<tr><td><a href=#or class=""><strong>.or</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.or</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</a>    combina a seleção de entidade com <em>entity</em> ou parâmetro<em>entitySelection</em> usando o operador lógico (não exclusivo) OR<tr><td><a href=#orderby class=""><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D. EntitySelection<br/><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D. EntitySelection</a>    A função <code>.orderBy()</code><tr><td><a href=#orderbyformula class=""><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D. EntitySelection<br/><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.</a>    devolve uma nova entity selection ordenada<tr><td><a href=#query class="">Parâmetros</a>    pesquisa por entidades que satisfazem o critério de pesquisa especificado em <em>queryString</em> ou <em>formula</em> e (opcionalmente) <em>value</em>(s) entre todas as entidades na seleção de entidade<tr><td><a href=#querypath class=""><strong>.queryPath</strong> : Text</a>    contém uma descrição detalhada da pesquisa como foi realizada em 4D<tr><td><a href=#queryplan class=""><strong>.queryPlan</strong> : Text</a>     contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<tr><td><a href=#refresh class=""><strong>.refresh()</strong></a>    imediatamente "invalida" os dados da seleção de entidade na cache local ORDA<tr><td><a href=#slice class=""><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D. EntitySelection</a>    retorna uma porção da seleção de entidade em uma nova seleção de entidade<tr><td><a href=#sum class=""><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a>    retorna a soma de todos os valores <em>attributePath</em> na seleção de entidade<tr><td><a href=#tocollection class=""><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } } ) : Collection<br/><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : Collection<br/><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : Collection</a>    cria e devolve uma colecção onde cada elemento é um objecto que contém um conjunto de propriedades e valores</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=criar-uma-seleção-de-entidades-entity-selection>Criar uma seleção de entidades (entity selection)<a href=#criar-uma-seleção-de-entidades-entity-selection class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>Create entity selection</strong> ( <em>dsTable</em> : Table { ; <em>settings</em> : Object } ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>dsTable<td>Table<td style=text-align:center>-><td>Table in the 4D database whose current selection will be used to build the entity selection<tr><td>settings<td>Object<td style=text-align:center>-><td>Build option: context<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>Entity selection matching the dataclass related to the given table</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição>Descrição<a href=#descrição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -143,21 +16,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Se a seleção atual for ordenada, é criada uma seleção de entidades <a class="" href=/docs/pt/19/ORDA/dsmapping#ordered-or-unordered-entity-selection>ordenada</a> (se mantém a ordem da seleção atual). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.</p>
 <p>Se a tabela <em>dsTable</em> não estiver exposta em <a class="" href=/docs/pt/19/API/DataStoreClass#ds><code>ds</code></a>, se devolve um erro. Esse comando não pode usado com uma datastore remota.</p>
 <p>No parâmetro opcional<em>settings</em> pode passar um objeto contendo as propriedades abaixo:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<tbody><tr><td>context<td>Text<td>Rótulo do contexto de otimização <a class="" href=/docs/pt/19/ORDA/entities#clientserver-optimization></a> aplicado à seleção de entidades.</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemplo>Exemplo<a href=#exemplo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $employees : cs. EmployeeSelection ALL RECORDS([Employee])</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$employees:=Create entity selection([Employee]) </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// A entity selection $employees agora contém um conjunto de referências</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// em todas as entidades relacionadas com a classe de dados Employee</span><br/></div></code></pre></div></div>
@@ -165,19 +23,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a class="" href=/docs/pt/19/API/DataClassClass#newselection><code>dataClass.newSelection()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=index>[<em>index</em>]<a href=#index class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><em><strong>[index]</strong></em> : 4D. Entity</p>
@@ -199,19 +44,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $employees : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $employee : cs. EmployeeEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employees:=ds. Employee.query("lastName = :1";"H@")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employee:=$employees[2]  // A terceira entidade da seleção de entidades $employees se recarrega do banco de dados</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=attributename>.<em>attributeName</em><a href=#attributename class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p>Atributos de Dataclass com <a class="" href=/docs/pt/19/API/DataClassAttributeClass.md#kind>.kind</a> = "relatedEntity" extraídos como uma coleção de entidades (duplicações são mantidas).</p>
@@ -239,50 +71,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem duplicatas (se houver).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=add>.add()<a href=#add class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R5<td>Compatível apenas com seleções de entidade alteráveis<tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.add</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entity<td>4D. Entity<td style=text-align:center>-><td>Entity to be added to the entity selection<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>Entity selection including the added <em>entity</em></table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-3>Descrição<a href=#descrição-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -307,52 +99,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel : cs. ProductSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $p1;$p2;$p3 : cs. ProductEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $p1:=ds. Product.get(10)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $p2:=ds. Product.get(11)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $p3:=ds. Product.get(12)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=ds. Product.query("ID > 50")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=$sel.add($p1).add($p2).add($p3)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=and>.and()<a href=#and class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.and</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.and</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entity<td>4D. Entity<td style=text-align:center>-><td>Entity to intersect with<tr><td>entitySelection<td>4D. EntitySelection<td style=text-align:center>-><td>Entity selection to intersect with<tr><td>Result<td>4D.&lt;-<td style=text-align:center>New entity selection with the result of intersection with logical AND operator<td></table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-4>Descrição<a href=#descrição-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -379,50 +129,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel1; $sel2; $sel3 : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel1:=ds. Employee.query("name =:1";"Jones")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel2:=ds. Employee.query("city=:1";"New York")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel3:=$sel1.and($sel2)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=average>.average()<a href=#average class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Retorna indefinido se uma seleção de entidade for vazia<tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.average</strong>( {<em>propertyPath</em> : Text } ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Attribute path to be used for calculation<tr><td>Result<td>Real<td style=text-align:center>&lt;-<td>Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-5>Descrição<a href=#descrição-5 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -443,46 +153,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $averageSalary : Real</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $moreThanAv : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $averageSalary:=ds. Employee.all().average("salary")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $moreThanAv:=ds. Employee.query("salary > :1";$averageSalary)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contains>.contains()<a href=#contains class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.contains</strong>( <em>entity</em> : 4D. Entity ) : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entity<td>4D. Entity<td style=text-align:center>-><td>Entity to evaluate<tr><td>Result<td>Boolean<td style=text-align:center>&lt;-<td>True if the entity belongs to the entity selection, else False</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-6>Descrição<a href=#descrição-6 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -493,46 +167,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $employees : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $employee : cs. EmployeeEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employees:=ds.Employee.query("lastName=:1";"H@")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employee:=ds. Employee.get(610)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($employees.contains($employee))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("A entidade com chave primaria 610 tem um sobrenome começando com H")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("A entidade com chave primária 610 não tem um sobrenome começando com H")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=count>.count()<a href=#count class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.count</strong>( <em>attributePath</em> : Text ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Path of the attribute to be used for calculation<tr><td>Result<td>Real<td style=text-align:center>&lt;-<td>Number of non null <em>attributePath</em> values in the entity selection</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-7>Descrição<a href=#descrição-7 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -550,46 +188,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $count : Real</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=ds. Employee.query("employer = :1";"Acme, Inc")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $count:=$sel.count("jobtitle")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=copy>.copy()<a href=#copy class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.copy</strong>( { <em>option</em> : Integer } ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>option<td>Integer<td style=text-align:center>-><td><code>ck shared</code>: return a shareable entity selection<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>Copy of the entity selection</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-8>Descrição<a href=#descrição-8 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -608,52 +210,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> ...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // A seleção de entidades de Form.products se atualiza</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Form.products.add(Form.selectedProduct)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Use(Storage)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    If(Storage.products=Null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       Storage.products:=New shared object()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    Use(Storage.products)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       Storage.products:=Form.products.copy(ck shared)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End use</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End use</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=distinct>.distinct()<a href=#distinct class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Path of attribute whose distinct values you want to get<tr><td>option<td>Integer<td style=text-align:center>-><td><code>dk diacritical</code>: diacritical evaluation ("A" # "a" for example)<tr><td>Result<td>Collection<td style=text-align:center>&lt;-<td>Collection with only distinct values</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-9>Descrição<a href=#descrição-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -680,52 +240,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$values:=ds. Employee.all().distinct("extra.nicknames[].first")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=drop>.drop()<a href=#drop class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mode<td>Integer<td style=text-align:center>-><td><code>dk stop dropping on first error</code>: stops method execution on first non-droppable entity<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>Empty entity selection if successful, else entity selection containing non-droppable entity(ies)<tr><td><td><td style=text-align:center><td></table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-10>Descrição<a href=#descrição-10 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -741,58 +259,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employees:=ds.Employee.query("firstName=:1";"S@")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("Problem during drop, try later")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if var $employees; $notDropped : cs.</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=extract>.extract()<a href=#extract class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R3<td>Adicionado</table>
 </div></div></details>
 <p><strong>.extract</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br/><strong>.extract</strong>( <em>...attributePath</em> : Text ; <em>...targetPath</em> : Text ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Attribute path whose values must be extracted to the new collection<tr><td>targetPath<td>Text<td style=text-align:center>-><td>Target attribute path or attribute name<tr><td>option<td>Integer<td style=text-align:center>-><td><code>ck keep null</code>: include null attributes in the returned collection (ignored by default)<tr><td>Result<td>Collection<td style=text-align:center>&lt;-<td>Collection containing extracted values</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-11>Descrição<a href=#descrição-11 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -828,40 +298,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $firstnames; $addresses; $mailing; $teachers : Collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$firstnames é uma coleção de Strings</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $firstnames:=ds. Teachers.all().extract("firstname")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$addresses é uma coleção de entities relacionadas ao dataclass Address</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //Valores Null para o endereço são extraídos</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $addresses:=ds. Teachers.all().extract("address";ck keep null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$mailing é uma coleção de objetos com propriedades "who" e "to"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteúdo propriedade "who" é do tipo String</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteudo propriedade "to" é do tipo entity (Address dataclass)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $mailing:=ds. Teachers.all().extract("lastname";"who";"address";"to")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$mailing é uma coleção de objetos com propriedades "who" e "city"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteúdo propriedade "who" é tipo String</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteúdo propriedade "city" é tipo String</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $mailing:=ds. Teachers.all().extract("lastname";"who";"address.city";"city")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$teachers é uma coleção de objetos com propriedades "where" e "who"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteúdo propriedade "where" é String</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //conteúdo propriedade "who" é uma entity selection (Teachers dataclass)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $teachers:=ds. Address.all().extract("city";"where";"teachers";"who")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //$teachers é uma coleção de entity selections</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $teachers:=ds. Address.all().extract("teachers")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=first>.first()<a href=#first class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.first()</strong> : 4D. Entity</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>4D. Entity<td style=text-align:center>&lt;-<td>Reference to the first entity of the entity selection (Null if selection is empty)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-12>Descrição<a href=#descrição-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -874,40 +314,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $entitySelection : cs. EmpSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $entity : cs. EmpEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $entitySelection:=ds. Emp.query("salary > :1";100000)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($entitySelection.length#0)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $entity:=$entitySelection.first()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getdataclass>.getDataClass()<a href=#getdataclass class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getDataClass()</strong> : 4D. DataClass</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>4D. DataClass<td style=text-align:center>&lt;-<td>Dataclass object to which the entity selection belongs</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-13>Descrição<a href=#descrição-13 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -918,40 +328,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  //duplicate_entities method</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //duplicate_entities($entity_selection)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> #DECLARE ( $entitySelection : 4D. EntitySelection )  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $dataClass : 4D. DataClass</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $entity; $duplicate : 4D. Entity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $status : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $dataClass:=$entitySelection.getDataClass()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> For each($entity;$entitySelection)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $duplicate:=$dataClass.new()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $duplicate.fromObject($entity.toObject())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $duplicate[$dataClass.getInfo().primaryKey]:=Null //reset the primary key</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $status:=$duplicate.save()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End for each</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isalterable>.isAlterable()<a href=#isalterable class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isAlterable()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>Boolean<td style=text-align:center>&lt;-<td>True if the entity selection is alterable, False otherwise</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-14>Descrição<a href=#descrição-14 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -962,40 +342,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">If (Not(Form.products.isAlterable()))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    Form.products:=Form.products.copy()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Form.products.add(Form.product)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isordered>.isOrdered()<a href=#isordered class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isOrdered()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>Boolean<td style=text-align:center>&lt;-<td>True if the entity selection is ordered, False otherwise</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-15>Descrição<a href=#descrição-15 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1008,40 +358,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employees:=ds.Employee.query("firstName=:1";"S@")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("Problem during drop, try later")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if var $employees; $notDropped : cs.</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=last>.last()<a href=#last class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p>Parâmetros</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Result<td>4D.Entity<td style=text-align:center>&lt;-<td>Reference to the last entity of the entity selection (Null if empty entity selection)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-16>Descrição<a href=#descrição-16 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1053,19 +373,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $entitySelection : cs. EmpSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $entity : cs. EmpEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $entitySelection:=ds. Emp.query("salary &lt; :1";50000)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($entitySelection.length#0)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $entity:=$entitySelection.last()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=length>.length<a href=#length class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.length</strong> : Integer</p>
@@ -1076,50 +383,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $vSize : Integer</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $vSize:=ds. Employee.query("gender = :1";"male").length</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ALERT(String(vSize)+" male employees found.")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=max>.max()<a href=#max class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado<tr><td>18 R6<td>Retorna indefinido se uma seleção de entidade for vazia</table>
 </div></div></details>
 <p><strong>.max</strong>( <em>attributePath</em> : Text ) : any</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Path of the attribute to be used for calculation<tr><td>Result<td>any<td style=text-align:center>&lt;-<td>Highest value of attribute</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-18>Descrição<a href=#descrição-18 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1136,50 +403,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel : cs. EmpSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $maxSalary : Real</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=ds. Employee.query("gender = :1";"female")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $maxSalary:=$sel.max("salary")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=min>.min()<a href=#min class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado<tr><td>18 R6<td>Retorna indefinido se uma seleção de entidade for vazia</table>
 </div></div></details>
 <p><strong>.min</strong>( <em>attributePath</em> : Text ) : any</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Path of the attribute to be used for calculation<tr><td>Result<td>any<td style=text-align:center>&lt;-<td>Lowest value of attribute</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-19>Descrição<a href=#descrição-19 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1196,52 +423,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel : cs. EmpSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $minSalary : Real</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel:=ds. Employee.query("gender = :1";"female")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $minSalary:=$sel.min("salary")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=minus>.minus()<a href=#minus class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.minus</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.minus</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entity<td>4D. Entity<td style=text-align:center>-><td>Entity to substract<tr><td>entitySelection<td>4D. EntitySelection<td style=text-align:center>-><td>Entity selection to substract<tr><td>Result<td>4D.&lt;-<td style=text-align:center>New entity selection or a new reference on the existing entity selection<td></table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-20>Descrição<a href=#descrição-20 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1269,52 +454,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $sel1; $sel2; $sel3 : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel1:=ds. Employee.query("name =:1";"Jones")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel2:=ds. Employee.query("city=:1";"New York")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sel3:=$sel1.and($sel2).minus(ds. Employee.query("gender='male'"))</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=or>.or()<a href=#or class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.or</strong>( <em>entity</em> : 4D. Entity ) : 4D. EntitySelection<br/><strong>.or</strong>( <em>entitySelection</em> : 4D. EntitySelection ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entity<td>4D.Entity<td style=text-align:center>-><td>Entity to intersect with<tr><td>entitySelection<td>4D.EntitySelection<td style=text-align:center>-><td>Entity selection to intersect with<tr><td>Result<td>4D.EntitySelection<td style=text-align:center>&lt;-<td>New entity selection or new reference to the original entity selection</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-21>Descrição<a href=#descrição-21 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1341,52 +484,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $employees; $result : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $employee : cs. EmployeeEntity</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employees:=ds. Employee.query("lastName = :1";"H@") // Devuelve "Colin Hetrick","Grady Harness", "Sherlock Holmes"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $employee:=ds. Employee.get(686) //a entidade com chave primária 686 não pertence a entity selection $employees </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //Coincide com a funcionária "Mary Smith"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $result:=$employees.or($employee) //$result contém "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=orderby>.orderBy()<a href=#orderby class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D. EntitySelection<br/><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>pathString<td>Text<td style=text-align:center>-><td>Attribute path(s) and sorting instruction(s) for the entity selection<tr><td>pathObjects<td>Collection<td style=text-align:center>-><td>Collection of criteria objects<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>New entity selection in the specified order</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-22>Descrição<a href=#descrição-22 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1419,64 +520,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">// ordenar por fórmula</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sortedEntitySelection:=$entitySelection.orderBy("firstName")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // ordenar por colecção com ou sem ordenação</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl:=New collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl.push(New object("propertyPath";"firstName";"descending";False))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl.push(New object("propertyPath";"salary";"descending";True))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sortedEntitySelection:=$entitySelection.orderBy($orderColl)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl:=New collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl.push(New object("propertyPath";"manager.lastName"))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $orderColl.push(New object("propertyPath";"salary"))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sortedEntitySelection:=$entitySelection.orderBy($orderColl)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=orderbyformula>.orderByFormula()<a href=#orderbyformula class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D. EntitySelection<br/><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>formulaString<td>Text<td style=text-align:center>-><td>Formula string<tr><td>formulaObj<td>Object<td style=text-align:center>-><td>Formula object<tr><td>sortOrder<td>Integer<td style=text-align:center>-><td><code>dk ascending</code> (default) or <code>dk descending</code><tr><td>settings<td>Object<td style=text-align:center>-><td>Parameter(s) for the formula<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>New ordered entity selection</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-23>Descrição<a href=#descrição-23 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1494,26 +541,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Um resultado nullé sempre o menor valor.</p>
 </blockquote>
 <p>Como padrão, se omitir o parâmetro <em>keepOrder</em>, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente pode passar um dos valores abaixo no parâmetro <em>sortOrder</em>:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td>dk ascending<td>0<td>Ordem ascendente (padrão)<tr><td>dk descending<td>1<td>Ordem descendente</table>
 <p>Dentro de <em>formulaString</em> ou <em>formulaObj</em>, a entidade processada e seus atributos estão disponíveis através do comando <code>This</code> (por exemplo, <code>This.lastName</code>).</p>
 <p>Pode passar parâmetro(s) à fórmula usando a propriedade (objecto) <code>args</code> do parâmetro <code>settings</code>: a fórmula recebe o objecto <code>settings.args</code> em $1.</p>
@@ -1529,72 +556,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // método computeAverage</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // -----------------------------</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> #DECLARE ($coefList : Object) -> $result : Integer</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $subject : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $average; $sum : Integer</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $average:=0</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $sum:=0</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> For each($subject;$coefList)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $sum:=$sum+$coefList[$subject]</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End for each</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> For each($subject;This.marks)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $average:=$average+(This.marks[$subject]*$coefList[$subject])</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End for each</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $result:=$average/$sum</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=query>.query()<a href=#query class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R6<td>Soporte dos Parâmetros Formula<tr><td>17 R5<td>Suporte dos marcadores para os valores<tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p>Parâmetros</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>queryString<td>Text<td style=text-align:center>-><td>Search criteria as string<tr><td>formula<td>Object<td style=text-align:center>-><td>Search criteria as formula object<tr><td>value<td>any<td style=text-align:center>-><td>Value(s) to use for indexed placeholder(s)<tr><td>querySettings<td>Object<td style=text-align:center>-><td>Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>New entity selection made up of entities from entity selection meeting the search criteria specified in <em>queryString</em> or <em>formula</em></table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-24>Descrição<a href=#descrição-24 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1615,19 +580,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a class="" href=/docs/pt/19/API/DataClassClass#query><code>.query()</code></a> para dataclass</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=querypath>.queryPath<a href=#querypath class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.queryPath</strong> : Text</p>
@@ -1636,19 +588,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Para saber mais veja o parágrafo <strong>querySettings parameter</strong> na página Dataclass<a class="" href=/docs/pt/19/API/DataClassClass.html#query><code>.query()</code></a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=queryplan>.queryPlan<a href=#queryplan class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.queryPlan</strong> : Text</p>
@@ -1657,40 +596,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Para saber mais veja o parágrafo <strong>querySettings parameter</strong> na página Dataclass<a class="" href=/docs/pt/19/API/DataClassClass.html#query><code>.query()</code></a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=refresh>.refresh()<a href=#refresh class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R3<td>Adicionado</table>
 </div></div></details>
 <p><strong>.refresh()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td><td><td style=text-align:center><td>Does not require any parameters</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-27>Descrição<a href=#descrição-27 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1707,52 +616,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">// Método de formulário:</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Case of</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    :(Form event code=On Load)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">       Form.students:=ds. Students.all()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End case</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // Em client #1, o usuário carrega atualiza e salva a primeira entidade</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // Em client #2, o usuário carrega atualiza e salva a mesma entidade</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // Em client #1:</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Form.students.refresh() // Invalida a cache ORDA para a seleção de entidade Form.students</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // O conteúdo list box é atualizado na database com atuaização feita pelo  client #2</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=slice>.slice()<a href=#slice class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D. EntitySelection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>startFrom<td>Integer<td style=text-align:center>-><td>Index to start the operation at (included)<tr><td>end<td>Integer<td style=text-align:center>-><td>End index (not included)<tr><td>Result<td>4D. EntitySelection<td style=text-align:center>&lt;-<td>New entity selection containing sliced entities (shallow copy)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-28>Descrição<a href=#descrição-28 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1776,46 +643,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $slice : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$slice:=ds. Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a 8, mas como 9 > 8, devolve uma selecção de entidades vazia</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=sum>.sum()<a href=#sum class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>attributePath<td>Text<td style=text-align:center>-><td>Path of the attribute to be used for calculation<tr><td>Result<td>Real<td style=text-align:center>&lt;-<td>Sum of entity selection values</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-29>Descrição<a href=#descrição-29 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1832,70 +663,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $sel : cs. EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $sum : Real</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$sel:=ds. Employee.query("salary &lt; :1";20000)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$sum:=$sel.sum("salary")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=tocollection>.toCollection()<a href=#tocollection class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17<td>Adicionado</table>
 </div></div></details>
 <p><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } } ) : Collection<br/><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : Collection<br/><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>filterString<td>Text<td style=text-align:center>-><td>String with entity attribute path(s) to extract<tr><td>filterCol<td>Collection<td style=text-align:center>-><td>Collection of entity attribute path(s) to extract<tr><td>options<td>Integer<td style=text-align:center>-><td><code>dk with primary key</code>: adds the primary key<br/><code>dk with stamp</code>: adds the stamp<tr><td>begin<td>Integer<td style=text-align:center>-><td>Designates the starting index<tr><td>howMany<td>Integer<td style=text-align:center>-><td>Number of entities to extract<tr><td>Result<td>Collection<td style=text-align:center>&lt;-<td>Collection of objects containing attributes and values of entity selection</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-30>Descrição<a href=#descrição-30 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>

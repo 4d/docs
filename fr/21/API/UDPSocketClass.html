@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/UDPSocketClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>UDPSocket | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21/API/UDPSocketClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="UDPSocket | 4D Docs"/><meta data-rh=true name=description content="La classe UDPSocket vous permet d'envoyer et de recevoir des paquets UDP. UDP (User Datagram Protocol) est un protocole facile à implémenter pour l'envoi de données. Il est plus rapide et plus simple que TCP (seulement 8 octets d'en-tête par opposition à au moins 20 octets dans TCP), mais il n'offre pas le même niveau de fiabilité. Il est utile pour les applications où les données doivent arriver rapidement à leur destination. Cependant, elle ne permet pas de vérifier la livraison, ni de contrôler les erreurs ou de récupérer les données qui n'ont pas été livrées correctement."/><meta data-rh=true property=og:description content="La classe UDPSocket vous permet d'envoyer et de recevoir des paquets UDP. UDP (User Datagram Protocol) est un protocole facile à implémenter pour l'envoi de données. Il est plus rapide et plus simple que TCP (seulement 8 octets d'en-tête par opposition à au moins 20 octets dans TCP), mais il n'offre pas le même niveau de fiabilité. Il est utile pour les applications où les données doivent arriver rapidement à leur destination. Cependant, elle ne permet pas de vérifier la livraison, ni de contrôler les erreurs ou de récupérer les données qui n'ont pas été livrées correctement."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21/API/UDPSocketClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/UDPSocketClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/UDPSocketClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/UDPSocketClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/UDPSocketClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/UDPSocketClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/UDPSocketClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/API/UDPSocketClass","name":"UDPSocket","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/UDPSocketClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>UDPSocket | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21/API/UDPSocketClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="UDPSocket | 4D Docs"/><meta data-rh=true name=description content="La classe UDPSocket vous permet d'envoyer et de recevoir des paquets UDP. UDP (User Datagram Protocol) est un protocole facile à implémenter pour l'envoi de données. Il est plus rapide et plus simple que TCP (seulement 8 octets d'en-tête par opposition à au moins 20 octets dans TCP), mais il n'offre pas le même niveau de fiabilité. Il est utile pour les applications où les données doivent arriver rapidement à leur destination. Cependant, elle ne permet pas de vérifier la livraison, ni de contrôler les erreurs ou de récupérer les données qui n'ont pas été livrées correctement."/><meta data-rh=true property=og:description content="La classe UDPSocket vous permet d'envoyer et de recevoir des paquets UDP. UDP (User Datagram Protocol) est un protocole facile à implémenter pour l'envoi de données. Il est plus rapide et plus simple que TCP (seulement 8 octets d'en-tête par opposition à au moins 20 octets dans TCP), mais il n'offre pas le même niveau de fiabilité. Il est utile pour les applications où les données doivent arriver rapidement à leur destination. Cependant, elle ne permet pas de vérifier la livraison, ni de contrôler les erreurs ou de récupérer les données qui n'ont pas été livrées correctement."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21/API/UDPSocketClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/UDPSocketClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/UDPSocketClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/UDPSocketClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/UDPSocketClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/UDPSocketClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/UDPSocketClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/API/UDPSocketClass","name":"UDPSocket","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/21/API/UDPSocketClass>21</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/API/UDPSocketClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/fr/21-R4/API/UDPSocketClass>21 R4</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/21/API/UDPSocketClass>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -9,131 +9,23 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Grâce au <em>refcounting</em> des objets 4D standard, un socket UDPSocket est automatiquement libéré lorsqu'il n'est plus référencé, c'est-à-dire lorsqu'il n'y a plus de références vers lui en mémoire. Cela se produit généralement, par exemple, à la fin de l'exécution d'une méthode pour les variables locales. Par conséquent, les ressources associées sont correctement refermées sans qu'il soit nécessaire de procéder à une clôture explicite. Cependant, si vous voulez "forcer" la fermeture d'un socket à tout moment, <a class="" href=/docs/fr/21/Concepts/object#resources><strong>nullifiez</strong> ses références en les mettant à <strong>Null</strong></a>.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>Fichier 4DTCPUDPLog.txt</div><div class=admonitionContent_BuS1><p>Pour le débogage et la surveillance, vous pouvez utiliser le fichier journal <a class="" href=/docs/fr/21/Debugging/debugLogFiles#4dtcpudplogtxt>4DTCPUDPLog.txt</a> qui enregistre les événements liés aux sockets UDP. Ces événements comprennent la transmission de données, les erreurs et les informations sur le cycle de vie de la connexion.</div></div>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>20 R10<td>Classe ajoutée</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple>Exemple<a href=#exemple class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objet-udpsocket>Objet UDPSocket<a href=#objet-udpsocket class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <p>Un objet UDPSocket est non-modifiable (<em>immutable</em>) et non <em>streamable</em>.</p>
 <p>Les objets UDPSocket offrent les propriétés et fonctions suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#errors class=""><strong>errors</strong> : Collection</a><br/>une collection d'objets d'erreur associés au socket<tr><td><a href=#port class=""><strong>port</strong> : Number</a><br/>le numéro du port à écouter<tr><td><a href=#send class=""><strong>.send</strong>( <em>data</em> : Blob ; <em>hostName</em> : Text ; <em>remotePort</em> : Integer )</a><br/>envoie des <em>data</em> au serveur distant <em>hostName</em> sur le <em>remotePort</em> spécifié</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dudpsocketnew>4D.UDPSocket.new()<a href=#4dudpsocketnew class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>4D.UDPSocket.new</strong>() : 4D.UDPSocket<br/><strong>4D.UDPSocket.new</strong>( <em>options</em> : Object ) : 4D.UDPSocket<br/><strong>4D.UDPSocket.new</strong>( <em>port</em> : Integer ) : 4D.UDPSocket<br/><strong>4D.UDPSocket.new</strong>( <em>port</em> : Integer ; <em>options</em> : Object ) : 4D.UDPSocket</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th><th>Description<tbody><tr><td>port<td>Integer<td>-><td>Port local utilisé pour le socket UDP (0 ou omis = trouver un port inutilisé à utiliser)<tr><td>options<td>Object<td>-><td>Configuration <a href=#options-parameter class="">options</a> pour le socket<tr><td>Résultat<td>UDPSocket<td>&lt;-<td>Nouvel objet UDPSocket</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description>Description<a href=#description class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>4D.UDPSocket.new()</code> crée un nouveau socket UDP en utilisant les <em>options</em> définies (le cas échéant) sur le <em>port</em> spécifié (le cas échéant) ou sur un port aléatoire inutilisé, et renvoie un objet <code>4D.UDPSocket</code>.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=paramètre-options>Paramètre <code>options</code><a href=#paramètre-options class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Dans le paramètre <em>options</em>, vous pouvez passer un objet qui contient les propriétés suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<th>Par défaut<tbody><tr><td>onData<td>Formula<td>Callback déclenchée lors de la réception de données<td>Undefined<tr><td>onError<td>Formula<td>Callback déclenchée en cas d'erreur<td>Undefined<tr><td>onTerminate<td>Formula<td>Callback déclenchée lorsque le port est libéré<td>Undefined</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=fonctions-de-callback>Fonctions de callback<a href=#fonctions-de-callback class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Toutes les fonctions de callback reçoivent deux paramètres :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th>Description<tbody><tr><td>$socket<td><a href=#udpsocket-object class="">Objet <code>UDPSocket</code></a><td>L'instance UDPSocket courante.<tr><td>$event<td><a href=#udpevent-object class="">Objet <code>UDPEvent</code></a><td>Contient des informations sur l'événement.</table>
 <p><strong>Séquence des appels de callbacks :</strong></p>
 <ol>
@@ -147,41 +39,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p><strong>errors</strong> : Collection</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-1>Description<a href=#description-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La propriété <code>.errors</code> contient une collection d'objets d'erreur associés au socket. Chaque objet erreur comprend le code d'erreur, une description et la signature du composant qui a provoqué l'erreur.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th><th>Type<th>Description<tbody><tr><td>errors<td><td>Collection<td>Pile d'erreurs 4D en cas d'erreur<tr><td><td>[].errCode<td>Number<td>Code d'erreur 4D<tr><td><td>[].message<td>Text<td>Description de l'erreur 4D<tr><td><td>[].componentSignature<td>Text<td>Signature du composant interne qui a retourné l'erreur</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=port>.port<a href=#port class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>port</strong> : Number</p>
@@ -189,35 +46,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>La propriété <code>.port</code> contient le numéro du port à écouter. Cette propriété est en <strong>lecture seule</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=send>.send()<a href=#send class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>.send</strong>( <em>data</em> : Blob ; <em>hostName</em> : Text ; <em>remotePort</em> : Integer )</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th><th>Description<tbody><tr><td>data<td>Blob<td>-><td>Données à envoyer<tr><td>hostName<td>Text<td>-><td>Nom ou adresse IP du serveur<tr><td>remotePort<td>Integer<td>-><td>Port distant auquel se connecter (0=n'importe lequel)</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-3>Description<a href=#description-3 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>send()</code> envoie des <em>data</em> au serveur distant <em>hostName</em> sur le <em>remotePort</em> spécifié.</p>

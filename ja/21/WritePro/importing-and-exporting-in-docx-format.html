@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-WritePro/user-legacy/importing-and-exporting-in-docx-format" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Importing and Exporting in docx format | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="Importing and Exporting in docx format | 4D Docs"/><meta data-rh=true name=description content="4D Write Pro は.docx フォーマットでの読み込みと書き出しの両方ができます。このフォーマットはMicrosof Word などのワープロアプリケーションでサポートされているものです。"/><meta data-rh=true property=og:description content="4D Write Pro は.docx フォーマットでの読み込みと書き出しの両方ができます。このフォーマットはMicrosof Word などのワープロアプリケーションでサポートされているものです。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/WritePro/importing-and-exporting-in-docx-format hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/WritePro/importing-and-exporting-in-docx-format hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/WritePro/importing-and-exporting-in-docx-format hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/WritePro/importing-and-exporting-in-docx-format hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/WritePro/importing-and-exporting-in-docx-format hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/extensions","name":"拡張機能","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/4d-write-pro","name":"4D Write Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/import-and-export","name":"インポート＆エクスポート","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format","name":"Importing and Exporting in docx format","position":4}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-WritePro/user-legacy/importing-and-exporting-in-docx-format" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Importing and Exporting in docx format | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="Importing and Exporting in docx format | 4D Docs"/><meta data-rh=true name=description content="4D Write Pro は.docx フォーマットでの読み込みと書き出しの両方ができます。このフォーマットはMicrosof Word などのワープロアプリケーションでサポートされているものです。"/><meta data-rh=true property=og:description content="4D Write Pro は.docx フォーマットでの読み込みと書き出しの両方ができます。このフォーマットはMicrosof Word などのワープロアプリケーションでサポートされているものです。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/WritePro/importing-and-exporting-in-docx-format hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/WritePro/importing-and-exporting-in-docx-format hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/WritePro/importing-and-exporting-in-docx-format hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/WritePro/importing-and-exporting-in-docx-format hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/WritePro/importing-and-exporting-in-docx-format hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/extensions","name":"拡張機能","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/4d-write-pro","name":"4D Write Pro","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/category/import-and-export","name":"インポート＆エクスポート","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/21/WritePro/importing-and-exporting-in-docx-format","name":"Importing and Exporting in docx format","position":4}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/21/WritePro/importing-and-exporting-in-docx-format>21</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/WritePro/importing-and-exporting-in-docx-format>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/WritePro/importing-and-exporting-in-docx-format>21 R4</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/21/WritePro/importing-and-exporting-in-docx-format>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -11,194 +11,28 @@
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=振る舞いの変化>振る舞いの変化<a href=#振る舞いの変化 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>大部分の.docx のパラメーターは保存される一方、一部のパラメーターは4D Write Pro ではサポートされないか振る舞いが異なることが知られています。これらのパラメーターは以下にまとめてあります:</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=揃え--レイアウト>揃え / レイアウト<a href=#揃え--レイアウト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>アンカーされたテキストエリア<td>アンカーされたテキストエリアはデフォルトではテキストボックスとして読み込まれます(あるいはそれらを無視するか、インラインテキストとして読み込むこともできます。詳細は<a class="" href=/docs/ja/21/commands/wp-import-document>WP Import document</a> のオプションを参照してください)。シンプルなテキストエリアのみが読み込まれます。インラインテキストエリアは前面レイヤーにアンカーされたテキストとして読み込まれます。テキストの周りにアンカーされたテキストエリアはそれぞれの折り返しプロパティで読み込まれます(例外: .docx の"tight" 折り返しオプションはスクェア折り返しとして読み込まれます)。<tr><td>段落レイアウト<td>西欧テキストレイアウトのみがサポートされます。均等段落スタイル、タイ/アジア段落スタイルはサポートされません。<tr><td>ページサイズ<td>セクションごとの異なるページサイズはサポートされません。最初のセクションのページサイズのみが読み込まれます。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=背景>背景<a href=#背景 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>透かし画像<td>サポートされません。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=式>式<a href=#式 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>MS Word 演算式<td>サポートされません。データは読み込まれません。<tr><td>MS Word チャート<td>サポートされません。データは読み込まれません。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=リスト>リスト<a href=#リスト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>階層リスト<td>複数階層のリストはサポートされません。これらは単一階層のリストへと変換されるので、リストの見た目/ナンバリングは変化する可能性があります。<tr><td>読み込みオペレーション<td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ピクチャー画像>ピクチャー/画像<a href=#ピクチャー画像 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>DrawingML シェイプ<td>単純なDrawingML 画像(インラインまたはアンカーされた画像)のみが読み込まれます。複雑なDrawingML シェイプはサポートされません。<tr><td>VML シェイプまたは画像<td>サポートされません。VML はMS Word では廃止予定となっており、MS Word 2010 以降で作成されたドキュメント内では使用してはいけません。<tr><td>3D モデル<td>サポートされませんが、3D モデルをレンダーした最後の2D 画像は、.docx ファイル内に存在すれば読み込まれます。<tr><td>SmartArt<td>サポートされません。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=参照--レビュー>参照 / レビュー<a href=#参照--レビュー class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>コメント<td>サポートされません。コンテンツは読み込まれません。<tr><td>脚注<td>サポートされません。コンテンツは読み込まれません。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=行間隔>行間隔<a href=#行間隔 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>"最低限" 行間隔<td>サポートされません。"最低限"行間隔は固定された(単一の)行間隔へと変換されます。<tr><td>テキストをフィットさせる<td>サポートされません。通常の4D Write Pro スタイルがしようされます。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=表>表<a href=#表 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>詳細</strong><tbody><tr><td>表<td>隣接している表は自動的には結合されません。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=テキスト>テキスト<a href=#テキスト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>Paramètre</strong><th><strong>Description</strong><tbody><tr><td>テーマ<td>テキストテーマは読み込まれません。カラーまたはフォントの定義がテーマのカラーやフォントを参照している場合、最後に計算されたカラーまたはフォントが使用されます。そうでない場合、テーマで定義されたカラーやフォントが使用されます。</table>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=読み込みログ>読み込みログ<a href=#読み込みログ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>.docx フォーマットを4D Write Pro へと読み込む際、ログオブジェクトが作成され、読み込まれたドキュメントオブジェクトに含まれます。このオブジェクトは、"importLog" カスタム属性(あるいは wk import log 定数)を通して取得することができます:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myDoc:=WP Import document("test.docx")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> if($myDoc#Null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    var $log : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $log:=$myDoc[wk import log]</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <p>読み込みログオブジェクトには、以下のプロパティが格納されています :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>定数<th>コメント<tbody><tr><td>wk import log<td>ログオブジェクトには.docx 読み込みオペレーションについての情報が格納されています。プロパティは読み出し専用で設定することはできません:                                                           <table><tr><td><strong>プロパティ</strong><td> <td><strong>型</strong><td><strong>詳細</strong><tr><td>status<td> <td>テキスト<td>読み込みステータス:<br/> successful - ドキュメントは4D Write Proへと読み込まれました。 failed - 空の4D Write Proドキュメントが返されます。  <tr><td>developer<td> <td>コレクション<td>4D Write Pro デベロッパーのためのメッセージオブジェクトのコレクション<tr><td> <td>[ ].type<td>テキスト<td>記録されたメッセージの種類:<br/> info warning error  <tr><td> <td>[ ].message<td>テキスト<td>読み込みオペレーションについてのメッセージ<tr><td>user<td> <td>コレクション<td>4D Write Pro ユーザーのためのメッセージオブジェクトのコレクション<tr><td> <td>[ ].type<td>テキスト<td>記録されたメッセージの種類:<br/> info warning  <tr><td> <td>[ ].messageShort<td>テキスト<td>読み込みオペレーションについての短いメッセージ<tr><td> <td>[ ].messageLong<td>テキスト<td>読み込みオペレーションについての詳細なメッセージ</table> <strong>警告:</strong> <em>importLog</em> はカスタムの属性であるため、 wk import log 定数を<a class="" href=/docs/ja/21/commands/wp-set-attributes>WP SET ATTRIBUTES</a>、<a class="" href=/docs/ja/21/commands/wp-get-attributes>WP GET ATTRIBUTES</a> または <a class="" href=/docs/ja/21/commands/wp-reset-attributes>WP RESET ATTRIBUTES</a> コマンドで使用することはできません(詳細な情報については<em>カスタムの属性を使用</em> を参照してください)。</table>
+<table><thead><tr><th>定数<th>コメント<tbody><tr><td>wk import log<td>ログオブジェクトには.docx 読み込みオペレーションについての情報が格納されています。プロパティは読み出し専用で設定することはできません:  <table> <tbody> <tr> <td><strong>プロパティ</strong></td> <td> </td> <td><strong>型</strong></td> <td><strong>詳細</strong></td> </tr> <tr> <td>status</td> <td> </td> <td>テキスト</td> <td>読み込みステータス:<br/> successful - ドキュメントは4D Write Proへと読み込まれました。 failed - 空の4D Write Proドキュメントが返されます。  </td> </tr> <tr> <td>developer</td> <td> </td> <td>コレクション</td> <td>4D Write Pro デベロッパーのためのメッセージオブジェクトのコレクション</td> </tr> <tr> <td> </td> <td>[ ].type</td> <td>テキスト</td> <td>記録されたメッセージの種類:<br/> info warning error  </td> </tr> <tr> <td> </td> <td>[ ].message</td> <td>テキスト</td> <td>読み込みオペレーションについてのメッセージ</td> </tr> <tr> <td>user</td> <td> </td> <td>コレクション</td> <td>4D Write Pro ユーザーのためのメッセージオブジェクトのコレクション</td> </tr> <tr> <td> </td> <td>[ ].type</td> <td>テキスト</td> <td>記録されたメッセージの種類:<br/> info warning  </td> </tr> <tr> <td> </td> <td>[ ].messageShort</td> <td>テキスト</td> <td>読み込みオペレーションについての短いメッセージ</td> </tr> <tr> <td> </td> <td>[ ].messageLong</td> <td>テキスト</td> <td>読み込みオペレーションについての詳細なメッセージ</td> </tr> </tbody> </table> <strong>警告:</strong> <em>importLog</em> はカスタムの属性であるため、 wk import log 定数を<a class="" href=/docs/ja/21/commands/wp-set-attributes>WP SET ATTRIBUTES</a>、<a class="" href=/docs/ja/21/commands/wp-get-attributes>WP GET ATTRIBUTES</a> または <a class="" href=/docs/ja/21/commands/wp-reset-attributes>WP RESET ATTRIBUTES</a> コマンドで使用することはできません(詳細な情報については<em>カスタムの属性を使用</em> を参照してください)。</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=docx-フォーマットへの書き出し方>.docx フォーマットへの書き出し方<a href=#docx-フォーマットへの書き出し方 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p>4D Write Pro オブジェクトでは、4D Write Pro ドキュメントを.docx フォーマットで書き出しするために、2つの方法を提供しています:</p>
 <ul>
@@ -209,291 +43,24 @@
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=振る舞いの変化-1>振る舞いの変化<a href=#振る舞いの変化-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>4D Write Pro の大部分の設定は保たれますが、いくつかの設定についてはMicrosoft Word ではサポートされないか、振る舞いが変化することがすでに知られています。具体的には以下の設定が関連します:</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=揃え--レイアウト-1>揃え / レイアウト<a href=#揃え--レイアウト-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>アンカー<td>Microsoft Word では、アンカーされた画像は、ページおよび最初の段落の左上の原点に対して相対的に配置されます。このため、4D Write Pro とMicrosoft Word とのテキストのレイアウトの差異によって画像が想定と異なる位置に表示される可能性があります。<td><td><tr><td>埋め込みエリアにアンカーされたテキストボックスは書き出されません。Microsoft Word でのレンダリングが異なる可能性があります。<td><td><td><tr><td>垂直方向揃え<td>Microsoft Word ではサポートされていません(全ての項目は上揃えになります)<td>インライン画像に対してはサポートされません(全てのインライン画像はベースライン揃えになります)<td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=背景-1>背景<a href=#背景-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>背景の切り落とし<td>Microsoft Word ではサポートされていません(背景色は背景全体を塗りますが、境界線とマージンは含まれません)<td>Microsoft Word ではサポートされていません(背景の切り落としはパッディングボックスと同じになります)<td><tr><td>背景画像<td>Microsoft Word ではサポートされていません<td>異なる背景画像/背景色はMicrosoft Word ではサポートされていません(アンカーされた画像あるいは図形へと変換されます)<td>Microsoft Word では背景色か背景画像のどちらかを設定できます。背景画像が定義されている場合、背景色は "transparent" に設定されます。<tr><td>背景画像の繰り返し<td>水平あるいは垂直タイルはMiscrosoft Word では完全なタイルへと変換されます<td>水平あるいは垂直タイルはMiscrosoft Word では完全なタイルへと変換されます<td><tr><td>背景の原点<td>原点のボックスは、背景切り落としボックスと同じ値へと変換されます。<td>Microsoft ではサポートされていません。<td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=境界線>境界線<a href=#境界線 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>境界線カラー<td>各境界線ごとに異なる境界線カラーを設定することはMicrosoft Word ではサポートされていません。最初に定義された4D Write Pro 画像境界線(優先順位: 上、右、下、左)が全ての画像境界線に対して使用されます。<td><td><tr><td>境界線半径(丸い境界線)<td>Microsoft Word ではサポートされていません<td><td><tr><td>境界線幅<td>Microsoft Word での幅の最大値は12pt で、これを超えるサイズは縮小されます。<td>Microsoft Word での幅の最大値は12pt で、これを超えるサイズは縮小されます。<td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=式-1>式<a href=#式-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>式<td>"Current date" や"Current time" のようなシンプルな4D 式、あるいは4D Write Pro によって予約されているローカル変数($wp_title、 $wp_pageNumber、等) のみがMicrosfot Word フィールドへと変換されます。他の4D 式は値が計算され、書き出しプロセスの途中でテキストあるいは画像へと変換されます。<td><td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=リスト-1>リスト<a href=#リスト-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>インデント<td>リスト項目については0へと変換されます(リスト項目のインデントは、Microsoft Word ではぶら下げインデントへと変換されます)<td><td><tr><td>順番付きリスト型<td>Microsoft Word ではギリシャ風、アルメニアン風、ジョージア風の記号は全て点記号へと変換され、またひらがなはカタカナへと変換されます。<td><td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ピクチャー>ピクチャー<a href=#ピクチャー class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>SVG<td>Microsoft Word ではサポートされません(SVG フォーマットの画像はPNG フォーマットへと変換されます)<td><td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=サイズ>サイズ<a href=#サイズ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>最小高さ<td>Microsoft Word ではサポートされていません(高さは自動的に管理されます)<td><td><tr><td>幅 / 最小幅<td>Microsoft Word ではサポートされていません(段落の幅は自動的に管理されます)<td><td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=間隔>間隔<a href=#間隔 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>パッディング<td>Microsoft Word での最大間隔は31pt で、これをパッディングは縮小されます。<td>Microsoft Word での最大間隔は31pt で、これをパッディングは縮小されます。<td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=表-1>表<a href=#表-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>機能</strong><th><strong>詳細</strong><tbody><tr><td>下部キャリーオーバー行<td>書き出されません</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=タブ>タブ<a href=#タブ class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>デフォルトタブストップ<td>Microsoft Word ではサポートされていません(絶対的タブストップに変換されます)<td><td><tr><td>タブリーディング文字<td>Microsoft Word では"ドット" (....)、"ダッシュ" (----)、および"アンダースコア" (____) リーディング文字をサポートしています。他は全て"なし"に変換されます。<td><td></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=テキスト-1>テキスト<a href=#テキスト-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><strong>設定</strong><th><strong>段落</strong><th><strong>セクション</strong><th><strong>画像</strong><tbody><tr><td>打ち消し線<td>テキストカラーと異なる色の線カラーはMicrosoft Word ではサポートされていません。またスタイルでは通常の線と二重線のみがサポートされます。<td><td><tr><td>スタイルシート<td>段落のスタイルシートは、段落スタイルへと変換されます。<td><td><tr><td>テキストの揃え<td>Microsoft Word はスペースを圧縮するので、両端揃えのテキストレイアウトは再構成される可能性があります。<td>Microsoft Word はスペースを圧縮するので、両端揃えのテキストレイアウトは再構成される可能性があります。<td><tr><td>テキストシャドウ<td>4D Write Pro シャドウは、Microsoft Word のデフォルトのカラーを使用したぼかしまたはオフセットへと変換されます。<td><td><tr><td>下線<td>半透明の下線は通常の下線へと変換されます。<td><td></table></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/4d/docs/issues/new?title=Comment%20on%20WritePro%2Fuser-legacy%2Fimporting-and-exporting-in-docx-format.md%20(21)&body=Please%20enter%20your%20comment%3A" target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>このページへコメントする</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=ドキュメントのナビゲーション><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/ja/21/WritePro/importing-4d-write-documents><div class=pagination-nav__sublabel>前へ</div><div class=pagination-nav__label>Importing 4D Write documents</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/ja/21/WritePro/exporting-to-html-and-mime-html-formats><div class=pagination-nav__sublabel>次へ</div><div class=pagination-nav__label>Exporting to HTML and MIME HTML formats</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#docx-フォーマットのファイルの読み込み方 class="table-of-contents__link toc-highlight">.docx フォーマットのファイルの読み込み方</a><ul><li><a href=#振る舞いの変化 class="table-of-contents__link toc-highlight">振る舞いの変化</a><li><a href=#読み込みログ class="table-of-contents__link toc-highlight">読み込みログ</a></ul><li><a href=#docx-フォーマットへの書き出し方 class="table-of-contents__link toc-highlight">.docx フォーマットへの書き出し方</a><ul><li><a href=#振る舞いの変化-1 class="table-of-contents__link toc-highlight">振る舞いの変化</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>コミュニティ</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://blog.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Blog</a><li class=footer__item><a href=https://discuss.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Forum</a><li class=footer__item><a href=https://facebook.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook</a><li class=footer__item><a href=https://x.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>X</a><li class=footer__item><a href=https://youtube.com/user/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Youtube</a><li class=footer__item><a href=https://github.com/4D target=_blank rel="noopener noreferrer" class=footer__link-item>Github</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>サポート</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/4d/docs/releases/tag/latest target=_blank rel="noopener noreferrer" class=footer__link-item>ドキュメントのダウンロード</a><li class=footer__item><a href=https://learn.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Learn 4D</a><li class=footer__item><a href=https://doc.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Doc Center (旧ドキュメントサイト)</a><li class=footer__item><a href=https://kb.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>ナレッジベース</a><li class=footer__item><a href=https://us.4d.com/product-download target=_blank rel="noopener noreferrer" class=footer__link-item>ダウンロード</a><li class=footer__item><a href=https://us.4d.com/resources target=_blank rel="noopener noreferrer" class=footer__link-item>リソース</a><li class=footer__item><a href=https://us.4d.com/4d-technical-support target=_blank rel="noopener noreferrer" class=footer__link-item>サポートを受ける</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>会社概要</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://us.4d.com/about-us target=_blank rel="noopener noreferrer" class=footer__link-item>4D社について</a><li class=footer__item><a href=https://us.4d.com/contact-us target=_blank rel="noopener noreferrer" class=footer__link-item>コンタクト</a><li class=footer__item><a href=https://us.4d.com/4d-around-the-world target=_blank rel="noopener noreferrer" class=footer__link-item>世界中の4D</a><li class=footer__item><a href=https://us.4d.com/Careers target=_blank rel="noopener noreferrer" class=footer__link-item>Careers</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>© 2026 4D SAS - All rights reserved <div style=margin-top:8px><i>Some content is written with the help of AI</i></div></div></div></div></footer></div></body>

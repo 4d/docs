@@ -1,4 +1,4 @@
-<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/FileHandleClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>FileHandle | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="FileHandle | 4D Docs"/><meta data-rh=true name=description content="La clase FileHandle tiene funciones que permiten leer secuencialmente o añadir contenido a un objeto File abierto. Un manejador de archivo puede acceder a cualquier parte de un documento."/><meta data-rh=true property=og:description content="La clase FileHandle tiene funciones que permiten leer secuencialmente o añadir contenido a un objeto File abierto. Un manejador de archivo puede acceder a cualquier parte de un documento."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FileHandleClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/FileHandleClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/FileHandleClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/FileHandleClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FileHandleClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/4d-language","name":"Lenguaje 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/API/FileHandleClass","name":"FileHandle","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.c4b88155.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/FileHandleClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>FileHandle | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="FileHandle | 4D Docs"/><meta data-rh=true name=description content="La clase FileHandle tiene funciones que permiten leer secuencialmente o añadir contenido a un objeto File abierto. Un manejador de archivo puede acceder a cualquier parte de un documento."/><meta data-rh=true property=og:description content="La clase FileHandle tiene funciones que permiten leer secuencialmente o añadir contenido a un objeto File abierto. Un manejador de archivo puede acceder a cualquier parte de un documento."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FileHandleClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/FileHandleClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/FileHandleClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/FileHandleClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/FileHandleClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FileHandleClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/4d-language","name":"Lenguaje 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/API/FileHandleClass","name":"FileHandle","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.850d0374.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/es/img/logohome.png /><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar la barra de navegación" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/es/><div class=navbar__logo><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentación 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/es/21-R4/API/FileHandleClass>21 R4</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/es/API/FileHandleClass>21 R5 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/es/21-R4/API/FileHandleClass>21 R4</a><li><a class=dropdown__link href=/docs/es/21/API/FileHandleClass>21</a><li><a class=dropdown__link href=/docs/es/20/API/FileHandleClass>20</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="La página no está disponible en esta versión
@@ -14,75 +14,9 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $f : 4D.File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $fhandle : 4D.FileHandle</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$f:=Folder(Database folder).file("example.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//Escribiendo línea a línea desde el principio</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open("write")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$text:="Hello World"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">For ($line; 1; 4)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $fhandle.writeLine($text+String($line))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End for</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//Escribir línea a línea desde el final</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open("append")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$text:="Hello World"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">For ($line; 1; 4)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $fhandle.writeLine($text+String($line))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End for</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//Lectura utilizando un carácter de parada y un parámetro objeto</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$o:=New object()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$o.mode:="read"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$o.charset:="UTF-8"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$o.breakModeRead:=Document with CRLF</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$stopChar:="!"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open($o)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$text:=$fhandle.readText($stopChar)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//Lectura línea a línea</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$lines:=New collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open("read")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">While (Not($fhandle.eof))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	$lines.push($fhandle.readLine())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End while</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-filehandle>Objeto FileHandle<a href=#objeto-filehandle class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h3>
 <p>Los objetos manejadores de archivos no pueden ser compartidos.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#breakmoderead class=""><strong>.breakModeRead</strong> : Text</a><br/>el modo de procesamiento de los saltos de línea utilizado al leer el archivo<tr><td><a href=#breakmodewrite class=""><strong>.breakModeWrite</strong> : Text</a><br/>el modo de procesamiento de los saltos de línea utilizado al escribir en el archivo<tr><td><a href=#charset class=""><strong>.charset</strong> : Text</a><br/>el conjunto de caracteres utilizado al leer o escribir en el archivo<tr><td><a href=#eof class=""><strong>.eof</strong> : Boolean</a><br/>True si el <code>offset</code> ha llegado al final del archivo, y False en caso contrario<tr><td><a href=#file class=""><strong>.file</strong> : 4D.File</a><br/>el objeto <a class="" href=/docs/es/21-R4/API/FileClass>4D.File</a> sobre el que se ha creado el manejador<tr><td><a href=#getsize class=""><strong>.getSize()</strong> : Real </a><br/>devuelve el tamaño actual del documento, expresado en bytes<tr><td><a href=#mode class=""><strong>.mode</strong> : Text</a><br/>el modo en que se creó el manejador de fichero: "read", "write", o "append"<tr><td><a href=#offset class=""><strong>.offset</strong> : Real</a><br/>el desplazamiento actual del flujo de datos (posición dentro del documento)<tr><td><a href=#readblob class=""><strong>.readBlob</strong>( <em>bytes</em> : Real ) : 4D.Blob</a><br/>devuelve un blob de un tamaño de <em>bytes</em> del archivo, empezando por la posición actual<tr><td><a href=#readline class=""><strong>.readLine()</strong> : Text </a><br/>devuelve una línea de texto desde la posición actual hasta que se encuentra un delimitador de fin de línea o se alcanza el final del documento<tr><td><a href=#readtext class=""><strong>.readText</strong>( { <em>stopChar</em> : Text } ) : Text </a><br/>devuelve el texto del archivo, comenzando desde la posición actual hasta que se encuentre la primera cadena <em>stopChar</em> (si se ha pasado) o se llegue al final del archivo<tr><td><a href=#setsize class=""><strong>.setSize</strong>( <em>size</em> : Real )</a><br/>define un nuevo tamaño de <em>size</em> en bytes para el documento<tr><td><a href=#writeblob class=""><strong>.writeBlob</strong>( <em>blob</em> : 4D.Blob ) </a><br/>escribe <em>blob</em> en el archivo, comenzando desde la posición actual<tr><td><a href=#writeline class=""><strong>.writeLine</strong>( <em>lineOfText</em> : Text ) </a><br/>escribe contenido <em>lineOfText</em> en la posición actual e inserta un delimitador de fin de línea<tr><td><a href=#writetext class=""><strong>.writeText</strong>( <em>textToWrite</em> : Text )</a><br/>escribe el contenido de <em>textToWrite</em> en la posición actual y no inserta un delimitador de fin de línea</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=breakmoderead>.breakModeRead<a href=#breakmoderead class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.breakModeRead</strong> : Text</p>
@@ -95,19 +29,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=breakmodewrite>.breakModeWrite<a href=#breakmodewrite class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.breakModeWrite</strong> : Text</p>
@@ -120,19 +41,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=charset>.charset<a href=#charset class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.charset</strong> : Text</p>
@@ -142,19 +50,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=eof>.eof<a href=#eof class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.eof</strong> : Boolean</p>
@@ -168,40 +63,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getsize>.getSize()<a href=#getsize class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getSize()</strong> : Real</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Resultado<td>Real<td>&lt;-<td>Tamaño del documento en bytes</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-5>Descripción<a href=#descripción-5 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -213,19 +78,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#setsize class="">.setSize()</a>, <a class="" href=/docs/es/21-R4/API/FileClass#size>file.size</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=mode>.mode<a href=#mode class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.mode</strong> : Text</p>
@@ -235,19 +87,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=offset>.offset<a href=#offset class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.offset</strong> : Real</p>
@@ -262,46 +101,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>caution</div><div class=admonitionContent_BuS1><p>Cuando se crea un file handle, el valor <code>.offset</code> es un número de bytes. Sin embargo, la unidad de medida del offset difiere según la función de lectura: con <a href=#readblob class=""><code>readBlob()</code></a>, <code>.offset</code> es un número de bytes, mientras que con <a href=#readtext class=""><code>readText()</code></a>/<a href=#readline class=""><code>readLine()</code></a> es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con <code>readBlob()</code> y luego llama a <code>readText()</code>, la lectura de texto comenzará en una posición inconsistente. Por eso, es esencial que establezca usted mismo la propiedad <code>.offset</code> si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  // Abrir un fichero de texto europeo con codificación utf-16 (dos bytes por caracter)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // Queremos leer los 10 primeros caracteres como bytes, y luego el resto como texto.</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fh:=File("/RESOURCES/sample_utf_16.txt").open()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // leer los 20 primeros bytes (es decir, 10 caracteres)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$b:=$fh.readBlob(20) // $fh.offset=20</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // luego lee todo el texto saltando los 10 primeros caracteres que acabamos de leer en el blob anterior</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // como ahora estamos leyendo texto en lugar de bytes, el significado de 'offset' no es el mismo.</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  // Necesitamos traducirlo de bytes a caracteres.</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fh.offset:=10 // pedimos saltar 10 caracteres utf-16 (20 bytes)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$s:=$fh.readText()</span><br/></div></code></pre></div></div></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=readblob>.readBlob()<a href=#readblob class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.readBlob</strong>( <em>bytes</em> : Real ) : 4D.Blob</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>bytes<td>Real<td>-><td>Número de bytes a leer<tr><td>Resultado<td><a class="" href=/docs/es/21-R4/API/BlobClass>4D.Blob</a><td>&lt;-<td>Bytes leídos del archivo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-8>Descripción<a href=#descripción-8 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -311,40 +114,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#writeblob class="">.writeBlob()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=readline>.readLine()<a href=#readline class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.readLine()</strong> : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Resultado<td>Text<td>&lt;-<td>Línea de texto</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-9>Descripción<a href=#descripción-9 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -358,46 +131,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#readtext class="">.readText()</a>, <a href=#writeline class="">.writeLine()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=readtext>.readText()<a href=#readtext class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.readText</strong>( { <em>stopChar</em> : Text } ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>stopChar<td>Text<td>-><td>Caracter(es) en los que dejar de leer<tr><td>Resultado<td>Text<td>&lt;-<td>Texto del archivo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-10>Descripción<a href=#descripción-10 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -413,40 +150,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#readline class="">.readLine()</a>, <a href=#writetext class="">.writeText()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setsize>.setSize()<a href=#setsize class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.setSize</strong>( <em>size</em> : Real )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>size<td>Real<td>-><td>Nuevo tamaño del documento en bytes</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-11>Descripción<a href=#descripción-11 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -456,40 +163,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#getsize class="">.getSize()</a>, <a class="" href=/docs/es/21-R4/API/FileClass#size>file.size</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=writeblob>.writeBlob()<a href=#writeblob class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.writeBlob</strong>( <em>blob</em> : 4D.Blob )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>blob<td><a class="" href=/docs/es/21-R4/API/BlobClass>4D.Blob</a><td>-><td>Blob a escribir en el archivo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-12>Descripción<a href=#descripción-12 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -499,40 +176,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#readblob class="">.readBlob()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=writeline>.writeLine()<a href=#writeline class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.writeLine</strong>( <em>lineOfText</em> : Text )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>lineOfText<td>Text<td>-><td>Texto a escribir</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-13>Descripción<a href=#descripción-13 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -542,40 +189,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a href=#breakmodewrite class="">.breakModeWrite</a>, <a href=#readline class="">.readLine()</a>, <a href=#writetext class="">.writeText()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=writetext>.writeText()<a href=#writetext class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R7<td>Añadidos</table>
 </div></div></details>
 <p><strong>.writeText</strong>( <em>textToWrite</em> : Text )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>textToWrite<td>Text<td>-><td>Texto a escribir</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-14>Descripción<a href=#descripción-14 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>

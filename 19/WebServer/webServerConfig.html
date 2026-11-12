@@ -1,60 +1,15 @@
-<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuration | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/19/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Configuration | 4D Docs"/><meta data-rh=true name=description content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."/><meta data-rh=true property=og:description content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/19/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/19/WebServer/webServerConfig","name":"Configuration","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.5b6e6d51.js defer></script><script src=/docs/assets/js/main.0783b5ac.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuration | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/19/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Configuration | 4D Docs"/><meta data-rh=true name=description content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."/><meta data-rh=true property=og:description content="The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings."/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/19/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/19/WebServer/webServerConfig","name":"Configuration","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.51a757fe.js defer></script><script src=/docs/assets/js/main.0dec8d36.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/img/logohome.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/19/WebServer/webServerConfig>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/WebServer/webServerConfig>21 R5 BETA</a><li><a class=dropdown__link href=/docs/21-R4/WebServer/webServerConfig>21 R4</a><li><a class=dropdown__link href=/docs/21/WebServer/webServerConfig>21</a><li><a class=dropdown__link href=/docs/20/WebServer/webServerConfig>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/19/WebServer/webServerConfig>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
 Opening the default page instead" href=/docs/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>English</a><ul class=dropdown__menu><li><a href=/docs/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=en>English</a><li><a href=/docs/fr/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=fr>Français</a><li><a href=/docs/es/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=es>Español</a><li><a href=/docs/ja/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Search</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>4D Documentation</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/GettingStarted/installation><span class=categoryLinkLabel_W154>Getting Started</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Project/overview><span class=categoryLinkLabel_W154>Project Management</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Concepts/about><span class=categoryLinkLabel_W154>4D Language Concepts</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/ORDA/overview><span class=categoryLinkLabel_W154>ORDA</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/API/overview><span class=categoryLinkLabel_W154>Class API Reference</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Preferences/overview><span class=categoryLinkLabel_W154>Preferences</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Admin/webAdmin><span class=categoryLinkLabel_W154>Administration</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Users/overview><span class=categoryLinkLabel_W154>Access Rights</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/MSC/overview><span class=categoryLinkLabel_W154>MSC</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Backup/overview><span class=categoryLinkLabel_W154>Backup and Restore</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/19/WebServer/overview><span class=categoryLinkLabel_W154>Web Server</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/19/WebServer/overview><span class=linkLabel_WmDU>Overview</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/19/WebServer/webServerConfig><span class=linkLabel_WmDU>Configuration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/19/WebServer/webServerAdmin><span class=linkLabel_WmDU>Administration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/19/WebServer/webServerObject><span class=linkLabel_WmDU>Web Server object</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/WebServer/gettingStarted><span class=categoryLinkLabel_W154>Web Development</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/REST/gettingStarted><span class=categoryLinkLabel_W154>REST Server</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Desktop/clientServer><span class=categoryLinkLabel_W154>Client/Server</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/FormEditor/forms><span class=categoryLinkLabel_W154>Forms</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/FormEditor/jsonReference><span class=categoryLinkLabel_W154>Form Properties</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/FormObjects/formObjectsOverview><span class=categoryLinkLabel_W154>Form Objects</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/FormObjects/propertiesReference><span class=categoryLinkLabel_W154>Form Object Properties</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Events/overview><span class=categoryLinkLabel_W154>Form Events</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Menus/overview><span class=categoryLinkLabel_W154>Menus</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/19/Desktop/building><span class=categoryLinkLabel_W154>Build application</span></a></div></ul></nav><button type=button title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Web Server</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Configuration</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Version: 19</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Configuration</h1></header><p>The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=where-to-configure-settings>Where to configure settings?<a href=#where-to-configure-settings class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Setting location<th>Scope<th>Involved web server<tbody><tr><td><a class="" href=/docs/19/WebServer/webServerObject>webServer object</a><td>Temporary (current session)<td>Any web server, including component web servers<tr><td><code>WEB SET OPTION</code> or a <code>WEB XXX</code> command<td>Temporary (current session)<td>Main server<tr><td><strong>Settings</strong> dialog box (<strong>Web</strong> pages)<td>Permanent (all sessions, stored on disk)<td>Main server</table>
 <blockquote>
 <p>Some settings are not available from all locations.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cache>Cache<a href=#cache class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>Settings dialog box<td>Configuration page/Use the 4D Web cache<td><tr><td>Settings dialog box<td>Configuration page/Page Cache Size<td></table>
 <p>Enables and configures the web page cache.</p>
 <p>The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (&lt;512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes.</p>
@@ -63,21 +18,6 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <p>While using your web database, you can check the performance of the cache by using the <code>WEB GET STATISTICS</code> command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=certificate-folder>Certificate folder<a href=#certificate-folder class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><code>certificateFolder</code><td>Text property but can be a <a class="" href=/docs/19/API/FolderClass><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function.</table>
 <p>Folder where the TLS certificate files for the web server are located.</p>
 <p>By default with 4D or 4D Server, these files must be placed next to the <a class="" href=/docs/19/Project/architecture#project-folder>project folder</a>.</p>
@@ -86,83 +26,18 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <p>TLS certificate files are <em>key.pem</em> (document containing the private encryption key) and <em>cert.pem</em> (document containing the certificate).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=character-set>Character Set<a href=#character-set class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><code>characterSet</code><td>MIBEnum integer or Name string<tr><td><code>WEB SET OPTION</code><td><code>Web character set</code><td>MIBEnum integer or Name string<tr><td>Settings dialog box<td>Options (II) page/Standard Set<td>Pop up menu</table>
 <p>Defines the set of characters to be used by the 4D web server. The default value actually depends on the language of the OS.</p>
 <blockquote>
 <p>This setting is also used for generating Quick Reports in HTML format .</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cipher-list>Cipher list<a href=#cipher-list class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#ciphersuite><code>cipherSuite</code></a><td>Text</table>
 <p>Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the <a href=https://www.openssl.org/docs/manmaster/man1/ciphers.html target=_blank rel="noopener noreferrer" class="">ciphers page</a> on the OpenSSL site.</p>
 <blockquote>
 <p>The default cipher list used by 4D can be modified for the session using the <code>SET DATABASE PARAMETER</code> command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cors-settings>CORS Settings<a href=#cors-settings class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#corssettings><code>CORSSettings</code></a><td>Collection of objects (List of allowed hosts and methods for the CORS service)<tr><td><code>WEB SET OPTION</code><td><code>Web CORS settings</code><td>Collection of objects (List of allowed hosts and methods for the CORS service)<tr><td>Settings dialog box<td>Options (II) page/Domain names and HTTP methods allowed<td>Click on the [+] button to add an allowed domain name and its method(s)</table>
 <p>List of allowed hosts and methods for the CORS service.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=domain-names-host-property>Domain names (host property)<a href=#domain-names-host-property class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
@@ -195,74 +70,14 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=see-also>See also<a href=#see-also class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
 <p><a href=#enable-cors-service class="">Enable CORS Service</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=debug-log>Debug log<a href=#debug-log class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><code>debugLog</code><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web debug log</code><td>number</table>
 <p>Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Value<th>Constant<th>Description<tbody><tr><td>0<td>wdl disable<td>Web HTTP debug log is disabled</table>
 <p>|1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
 |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=defaut-home-page>Defaut Home page<a href=#defaut-home-page class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#defaulthomepage><code>defaultHomepage</code></a><td>Text<tr><td><code>WEB SET HOME PAGE</code><td><td>Can be different for each web process<tr><td>Settings dialog box<td>Configuration page/Default Home Page<td></table>
 <p>Designate a default home page for the web server. This page can be static or [semi-dynamic].</p>
 <p>By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:</p>
@@ -276,31 +91,6 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <p>For example, if you want the default home page to be "MyHome.htm", and it is located in the "Web" folder (itself located in the default HTML root folder), use "Web/MyHome.htm".</p>
 <p>If you do not specify any default home page, the <code>On Web Connection</code> database method is called. It is up to you to process the request procedurally.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=enable-cors-service>Enable CORS Service<a href=#enable-cors-service class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#corsenabled><code>CORSEnabled</code></a><td>Boolean, true to enable the CORS (false by default)<tr><td><code>WEB SET OPTION</code><td><code>Web CORS enabled</code><td>0 (disabled, default) or 1 (enabled)<tr><td>Settings dialog box<td>Options (II) page/Enable CORS<td>Unchecked by default</table>
 <p>The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.</p>
 <p>When disabled (default), all cross site requests sent with CORS are ignored.</p>
@@ -308,82 +98,12 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=see-also-1>See also<a href=#see-also-1 class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
 <p><a href=#cors-settings class="">CORS Settings</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=enable-http>Enable HTTP<a href=#enable-http class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpenabled><code>HTTPEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP enabled</code><td><tr><td>Settings dialog box<td>Configuration page/Enable HTTP<td></table>
 <p>Indicates whether or not the web server will accept non-secure connections.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=enable-https>Enable HTTPS<a href=#enable-https class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpsenabled><code>HTTPSEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS enabled</code><td><tr><td>Settings dialog box<td>Configuration page/Enable HTTPS<td></table>
 <p>Status for communication over HTTPS. This option is described in <a class="" href=/docs/19/Admin/tls>this section</a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=enable-hsts>Enable HSTS<a href=#enable-hsts class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#hstsenabled><code>HSTSEnabled</code></a><td>Boolean, true to enable HSTS (default is false)<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS enabled</code><td>0 (disabled, default) or 1 (enabled)</table>
 <p>HTTP Strict Transport Security (HSTS) status.</p>
 <p>When <a href=#enable-https class="">HTTPS is enabled</a>, keep in mind that if <a href=#enable-http class="">HTTP is also enabled</a>, the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can <a href=#enable-http class="">disable HTTP</a>, however in this case an error message is displayed to client HTTP requests.</p>
@@ -395,26 +115,6 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <p>You can get the current connection mode using the <code>WEB Is secured connection</code> command.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hsts-max-age>HSTS Max Age<a href=#hsts-max-age class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#hstsmaxage><code>HSTSMaxAge</code></a><td>number in seconds<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS max age</code><td>number in seconds</table>
 <p>Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration.
 Default value is 63072000 (2 years)</p>
@@ -422,79 +122,14 @@ Default value is 63072000 (2 years)</p>
 <p><strong>Warning:</strong> Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-compression-level>HTTP Compression Level<a href=#http-compression-level class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpcompressionlevel><code>HTTPCompressionLevel</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression level</code><td>Applies to Web and Web Service</table>
 <p>Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.</p>
 <p>Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-compression-threshold>HTTP Compression Threshold<a href=#http-compression-threshold class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpcompressionthreshold><code>HTTPCompressionThreshold</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression threshold</code><td></table>
 <p>In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.</p>
 <p>Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-port>HTTP Port<a href=#http-port class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpport><code>HTTPPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web port ID</code><td><tr><td>Settings dialog box<td>Configuration page/HTTP Port<td></table>
 <p>Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.</p>
 <blockquote>
@@ -506,135 +141,20 @@ Default value is 63072000 (2 years)</p>
 </blockquote>
 <p>If you specify 0, 4D will use the default HTTP port number 80.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-trace>HTTP Trace<a href=#http-trace class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httptrace><code>HTTPTrace</code></a><td>Boolean, default = false<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP TRACE</code><td>Integer, default = 0 (disabled)</table>
 <p>HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=https-port>HTTPS Port<a href=#https-port class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#httpsport><code>HTTPSPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS port ID</code><td><tr><td>Settings dialog box<td>Configuration page/HTTPS Port<td></table>
 <p>Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also <a href=#http-port class="">HTTP Port</a> for information on port numbers.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=inactive-process-timeout>Inactive Process Timeout<a href=#inactive-process-timeout class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#inactiveprocesstimeout><code>inactiveProcessTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive process timeout</code><td><tr><td>Settings dialog box<td>Options (I) page/Inactive Process Timeout<td>Slider</table>
 <p>Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the <code>On Web Close Process</code> database method is called, then the session context is destroyed.</p>
 <p>Default: 480 minutes (pass 0 to restore the default value)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=inactive-session-timeout>Inactive Session Timeout<a href=#inactive-session-timeout class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#inactivesessiontimeout><code>inactiveSessionTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive session timeout</code><td></table>
 <p>Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.</p>
 <p>Default: 480 minutes (pass 0 to restore the default value)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ip-address-to-listen>IP Address to listen<a href=#ip-address-to-listen class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#ipaddresstolisten><code>IPAddressToListen</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web IP address to listen</code><td><tr><td>Settings dialog box<td>Configuration page/IP Address<td>Pop up menu</table>
 <p>IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).</p>
 <p>By default, no specific address is defined (<strong>Any</strong> value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.</p>
@@ -659,31 +179,6 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <p>To avoid this confusion, we recommend using the [ ] notation whenever you combine an IPv6 address with a port number, for instance:</p>
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> [2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=keep-session>Keep Session<a href=#keep-session class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#keepsession><code>keepSession</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web keep session</code><td><tr><td>Settings dialog box<td>Options (I) page/Automatic Session Management<td></table>
 <p>Session management enabling status for the 4D web server. Session mechanism is described in the <a class="" href=/docs/19/WebServer/sessions>Session Management</a> section.</p>
 <p>Default is true (enabled).</p>
@@ -691,167 +186,27 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <p>When this option is checked, the "Reuse Temporary Contexts" option is automatically checked (and locked).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=log-recording>Log Recording<a href=#log-recording class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#logrecording><code>logRecording</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web log recording</code><td><tr><td>Settings dialog box<td>Log (type) page/Log Format<td>Pop up menu</table>
 <p>Starts or stops the recording of requests received by the 4D web server in the <em>logweb.txt</em> file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the <em>logweb.txt</em> file is automatically placed in the Logs folder.</p>
 <p>This setting allows you to select the format of this file. Available values are:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Value<th>Format name<th>Description<tbody><tr><td>0<td>No Log File<td>Default<tr><td>1<td>Record in CLF format<td>Common Log Format - Each line of the file represents a request, such as: <code>host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length</code> - Each field is separated by a space and each line ends by the CR/LF sequence.<tr><td>2<td>Record in DLF format<td>Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.<tr><td>3<td>Record in ELF format<td>Extended Log Format - To be customized in the Settings dialog box<tr><td>4<td>Record in WLF format<td>WebStar Log Format - To be customized in the Settings dialog box</table>
 <blockquote>
 <p>Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=maximum-concurrent-web-processes>Maximum Concurrent Web Processes<a href=#maximum-concurrent-web-processes class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#maxconcurrentprocesses><code>maxConcurrentProcesses</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max concurrent processes</code><td><tr><td>Settings dialog box<td>Options (I) page/Maximum Concurrent Web Processes<td></table>
 <p>Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status <code>503 - Service Unavailable</code> to all new requests.</p>
 <p>By default, the value is 100. You can set the number anywhere between 10 and 32000.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=maximum-request-size>Maximum Request Size<a href=#maximum-request-size class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#maxrequestsize><code>maxRequestSize</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web maximum requests size</code><td></table>
 <p>Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.</p>
 <p>This limit is used to avoid web server saturation due to incoming requests that are too large. When a request reaches this limit, the 4D web server rejects it.</p>
 <p>Possible values: 500 000 to 2 147 483 648.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=maximum-session-number>Maximum Session Number<a href=#maximum-session-number class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#maxsessions><code>maxSessions</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max sessions</code><td></table>
 <p>Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the <a href=#maximum-concurrent-web-processes class="">maximum number of Web processes</a> (100 by default).</p>
 <p>Default value: 100 (pass 0 to restore the default value).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=minimum-tls-version>Minimum TLS Version<a href=#minimum-tls-version class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#mintlsversion><code>minTLSVersion</code></a><td>number</table>
 <p>Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.</p>
 <p>Possible values:</p>
@@ -866,57 +221,12 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <p>The minimum TLS version used by 4D can be modified for the session using the <code>SET DATABASE PARAMETER</code> command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=name>Name<a href=#name class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#name><code>name</code></a><td></table>
 <p>Name of the web server application. Useful when component web servers are started.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=openssl-version>OpenSSL Version<a href=#openssl-version class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#opensslversion><code>openSSLVersion</code></a><td>Read-only</table>
 <p>Version of the OpenSSL library used.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=perfect-forward-secrecy>Perfect Forward Secrecy<a href=#perfect-forward-secrecy class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#perfectforwardsecrecy><code>perfectForwardSecrecy</code></a><td>Boolean, read-only</table>
 <p>True if PFS is available on the web server (see <a class="" href=/docs/19/Admin/tls#perfect-forward-secrecy-pfs>TLS</a> section).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=robotstxt>Robots.txt<a href=#robotstxt class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
@@ -935,31 +245,6 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">   User-Agent: *</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   Disallow: /</span><br/></div></code></pre></div></div>
 <p>In this case, robots are not allowed to access the entire site.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=root-folder>Root Folder<a href=#root-folder class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#rootfolder><code>rootFolder</code></a><td>Text property but can be a <a class="" href=/docs/19/API/FolderClass><code>4D.Folder</code></a> object when used with the <em>settings</em> parameter of the <code>start()</code> function<tr><td><code>WEB SET ROOT FOLDER</code><td><td><tr><td>Settings dialog box<td>Configuration page/Default HTML Root<td></table>
 <p>Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.</p>
 <p>Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.</p>
@@ -980,90 +265,15 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <p>When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-domain>Session Cookie Domain<a href=#session-cookie-domain class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#sessioncookiedomain><code>sessionCookieDomain</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie domain</code><td></table>
 <p>Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-name>Session Cookie Name<a href=#session-cookie-name class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#sessioncookiename><code>sessionCookieName</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie name</code><td></table>
 <p>Name of the cookie used for saving the session ID. Default = "4DSID".</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-path>Session Cookie Path<a href=#session-cookie-path class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#sessioncookiepath><code>sessionCookiePath</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie path</code><td></table>
 <p>"path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-samesite>Session Cookie SameSite<a href=#session-cookie-samesite class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>webServer object<td><a class="" href=/docs/19/API/WebServerClass#sessioncookiesamesite><code>sessionCookieSameSite</code></a><td></table>
 <p>Value of the <code>SameSite</code> attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery (<a href=https://developer.mozilla.org/en-US/docs/Glossary/CSRF target=_blank rel="noopener noreferrer" class="">CSRF</a>) attacks.</p>
 <blockquote>
@@ -1080,21 +290,6 @@ Since IPv6 notation uses colons (:), adding port numbers may lead to some confus
 <p>It is not recommended to set <code>SameSite=None</code> on a HTTP server since the <code>Secure</code> attribute will be missing (used in HTTPS only) and cookies will be blocked.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=use-preemptive-processes>Use preemptive processes<a href=#use-preemptive-processes class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Can be set with<th>Name<th>Comments<tbody><tr><td>Settings dialog box<td>Options (I) page/Maximum Concurrent Web Processes<td></table>
 <p>This option enables the preemptive mode for your application's web server code when <strong>No sessions</strong> option is selected (the preemptive mode is always enabled with <strong>scalable sessions</strong>). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of <a class="" href=/docs/19/WebServer/preemptiveWeb#thread-safety-of-4d-web-code>web-related code</a> and return errors in case of incompatibility.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=deprecated-settings>Deprecated Settings<a href=#deprecated-settings class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>

@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/WebServerClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>WebServer | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/WebServerClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="WebServer | 4D Docs"/><meta data-rh=true name=description content="WebServer クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます (Webサーバーオブジェクト 参照)。このクラスは 4D クラスストアより提供されます。"/><meta data-rh=true property=og:description content="WebServer クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます (Webサーバーオブジェクト 参照)。このクラスは 4D クラスストアより提供されます。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/WebServerClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/WebServerClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/WebServerClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/WebServerClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/WebServerClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/WebServerClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/WebServerClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/WebServerClass","name":"WebServer","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/WebServerClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>WebServer | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/WebServerClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="WebServer | 4D Docs"/><meta data-rh=true name=description content="WebServer クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます (Webサーバーオブジェクト 参照)。このクラスは 4D クラスストアより提供されます。"/><meta data-rh=true property=og:description content="WebServer クラス API を使って、メイン (ホスト) アプリケーションおよび、各コンポーネントの Webサーバーを開始・モニターすることができます (Webサーバーオブジェクト 参照)。このクラスは 4D クラスストアより提供されます。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/WebServerClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/WebServerClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/WebServerClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/WebServerClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/WebServerClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/WebServerClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/WebServerClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/WebServerClass","name":"WebServer","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/API/WebServerClass>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/API/WebServerClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/API/WebServerClass>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/API/WebServerClass>21</a><li><a class=dropdown__link href=/docs/ja/20/API/WebServerClass>20</a><li><a class=dropdown__link href=/docs/ja/19/API/WebServerClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -11,140 +11,6 @@
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=webサーバーオブジェクト>Webサーバーオブジェクト<a href=#webサーバーオブジェクト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>Webサーバーオブジェクトは <a class="" href=/docs/ja/commands/web-server><code>WEB Server</code></a> コマンドによってインスタンス化されます。</p>
 <p>これらは、次のプロパティや関数を持ちます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#accesskeydefined class=""><strong>.accessKeyDefined</strong> : Boolean</a><br/>Webサーバーの設定にアクセスキーが定義されていれば true<tr><td><a href=#certificatefolder class=""><strong>.certificateFolder</strong> : Text</a><br/>証明書ファイルが保存されているフォルダー<tr><td><a href=#characterset class=""><strong>.characterSet</strong> : Number<br/><strong>.characterSet</strong> : Text</a><br/>アプリケーションに接続してくるブラウザーとの通信に 4D Webサーバーが使用すべき文字セット<tr><td><a href=#ciphersuite class=""><strong>.cipherSuite</strong> : Text</a><br/>保護されたプロトコルのために使用される暗号スイートリスト<tr><td><a href=#corsenabled class=""><strong>.CORSEnabled</strong> : Boolean</a><br/>Web サーバーの CORS (<em>Cross-origin resource sharing</em>、オリジン間リソース共有) サービス状態<tr><td><a href=#corssettings class=""><strong>.CORSSettings</strong> : Collection</a><br/>CORSサービスに許可されたホストとメソッドの一覧<tr><td><a href=#debuglog class=""><strong>.debugLog</strong> : Integer</a><br/>HTTPリクエストログファイルの状態<tr><td><a href=#defaulthomepage class=""><strong>.defaultHomepage</strong> : Text</a><br/>デフォルトのホームページの名称<tr><td><a href=#handlers class=""><strong>.handlers</strong> : Collection</a><br/>カスタム HTTPハンドラーオブジェクトのコレクション<tr><td><a href=#hstsenabled class=""><strong>.HSTSEnabled</strong> : Boolean</a><br/>HTTP Strict Transport Security (HSTS) 状態<tr><td><a href=#hstsmaxage class=""><strong>.HSTSMaxAge</strong> : Integer</a><br/>新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位)<tr><td><a href=#httpcompressionlevel class=""><strong>.HTTPCompressionLevel</strong> : Integer</a><br/>4D HTTPサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル<tr><td><a href=#httpcompressionthreshold class=""><strong>.HTTPCompressionThreshold</strong> : Integer</a><br/>HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません<tr><td><a href=#httpenabled class=""><strong>.HTTPEnabled</strong> : Boolean</a><br/>HTTPプロトコル状態<tr><td><a href=#httpport class=""><strong>.HTTPPort</strong> : Integer</a><br/>HTTP のリッスンIPポート番号<tr><td><a href=#httptrace class=""><strong>.HTTPTrace</strong> : Boolean</a><br/><code>HTTP TRACE</code> の有効化状態<tr><td><a href=#httpsenabled class=""><strong>.HTTPSEnabled</strong> : Boolean</a><br/>HTTPSプロトコル状態<tr><td><a href=#httpsport class=""><strong>.HTTPSPort</strong> : Integer</a><br/>HTTPS のリッスンIPポート番号<tr><td><a href=#inactiveprocesstimeout class=""><strong>.inactiveProcessTimeout</strong> : Integer</a><br/>旧式セッションプロセスの非アクティブタイムアウト時間 (分単位)<tr><td><a href=#inactivesessiontimeout class=""><strong>.inactiveSessionTimeout</strong> : Integer</a><br/>旧式セッションの非アクティブタイムアウト時間 (分単位; cookie にて設定)<tr><td><a href=#ipaddresstolisten class=""><strong>.IPAddressToListen</strong> : Text</a><br/>4D Webサーバーが HTTPリクエストを受信する IPアドレス<tr><td><a href=#isrunning class=""><strong>.isRunning</strong> : Boolean</a><br/>Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<tr><td><a href=#keepsession class=""><strong>.keepSession</strong> : Boolean</a><br/>Webサーバーで旧式セッションが有効されている場合に <code>true</code>、それ以外は <code>false</code><tr><td><a href=#logrecording class=""><strong>.logRecording</strong> : Integer</a><br/>リクエストログ (logweb.txt) の記録オプション値<tr><td><a href=#maxconcurrentprocesses class=""><strong>.maxConcurrentProcesses</strong> : Integer</a><br/>Webサーバーにてサポートする最大同時Webプロセス数<tr><td><a href=#maxrequestsize class=""><strong>.maxRequestSize</strong> : Integer</a><br/>Webサーバーが処理してよい HTTPリクエスト (POST) の最大サイズ (バイト単位)<tr><td><a href=#maxsessions class=""><strong>.maxSessions</strong> : Integer</a><br/>旧式セッションにおける同時セッションの最大数<tr><td><a href=#mintlsversion class=""><strong>.minTLSVersion</strong> : Integer</a><br/>接続に必要な最低TLSバージョン<tr><td><a href=#name class=""><strong>.name</strong> : Text</a><br/>Webサーバーアプリケーションの名称<tr><td><a href=#opensslversion class=""><strong>.openSSLVersion</strong> : Text</a><br/>使用されている OpenSSLライブラリのバージョン<tr><td><a href=#perfectforwardsecrecy class=""><strong>.perfectForwardSecrecy</strong> : Boolean</a><br/>サーバーの PFS利用可否状況<tr><td><a href=#quotas class=""><strong>.quotas</strong> : 4D.QuotaManager</a><br/>Web サーバーに対してクォータを設定し監視することを可能にする <code>4D.QuotaManager</code> オブジェクト<tr><td><a href=#rootfolder class=""><strong>.rootFolder</strong> : Text</a><br/>Webサーバーのルートフォルダーのパス<tr><td><a href=#rules class=""><strong>.rules</strong> : Collection</a><br/>HTTP ヘッダーをカスタマイズするために現在管理されているルールオブジェクトのコレクション<tr><td><a href=#scalablesession class=""><strong>.scalableSession</strong> : Boolean</a><br/>Webサーバーがスケーラブルセッションを使用している場合に <code>true</code>、それ以外は <code>false</code><tr><td><a href=#sessioncookiedomain class=""><strong>.sessionCookieDomain</strong> : Text</a><br/>セッションcookie の "path" フィールド<tr><td><a href=#sessioncookiename class=""><strong>.sessionCookieName</strong> : Text</a><br/>セッションID の保存に使用されるセッションcookie の名称<tr><td><a href=#sessioncookiepath class=""><strong>.sessionCookiePath</strong> : Text</a><br/>セッションcookie の "path" フィールド<tr><td><a href=#sessioncookiesamesite class=""><strong>.sessionCookieSameSite</strong> : Text</a><br/>セッションcookie の "SameSite" 属性の値<tr><td><a href=#sessionipaddressvalidation class=""><strong>.sessionIPAddressValidation</strong> : Boolean</a><br/>セッションcookie の IP アドレス検証<tr><td><a href=#start class=""><strong>.start</strong>() : Object<br/><strong>.start</strong>( <em>settings</em> : Object ) : Object</a><br/>対象の Webサーバーを開始させます<tr><td><a href=#stop class=""><strong>.stop()</strong></a><br/>対象の Webサーバーを停止します</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=accesskeydefined>.accessKeyDefined<a href=#accesskeydefined class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <p><strong>.accessKeyDefined</strong> : Boolean</p>
@@ -216,19 +82,6 @@
 <p>デフォルトのホームページの名称 または、カスタムのホームページを送信しない場合は ""。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=handlers>.handlers<a href=#handlers class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21<td>追加</table>
 </div></div></details>
 <p><strong>.handlers</strong> : Collection</p>
@@ -347,19 +200,6 @@
 <p>サーバーの PFS利用可否状況。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=quotas>.quotas<a href=#quotas class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R5<td>追加</table>
 </div></div></details>
 <p><strong>.quotas</strong> : 4D.QuotaManager</p>
@@ -378,151 +218,6 @@
 <p>クォータの値は、Web サーバーの実行中にも変更することが可能です。サーバーグローバルクォータに対する変更は、それ以降のWeb サーバーのアクティビティに対して適用されます。セッションデフォルトのクォータに対する変更は、クォータの値が変更されたあとに新規に作成されたセッションに対して適用されます。 Web サーバーを再起動する必要はありません。</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p>また<a class="" href=/docs/ja/API/SessionClass#quotas><code>Session.quotas</code></a> プロパティを使用することでカレントのREST セッションに対してクォータを設定することもできます。</div></div>
 <p>Web サーバーに対しては<code>4D.QuotaManager</code> オブジェクトの以下のプロパティが利用可能です:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th><th>型<th>書込可能<th>説明<tbody><tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#currentvalues>currentValues</a><td><td>Object<td>×<td>Web サーバーによって報告されるカレントの使用量の値。<tr><td><td>nbEntitySets<td>Integer<td>×<td>メモリ内のエンティティセットのカレントの数。<tr><td><td>nbGuestSessions<td>Integer<td>×<td>Web サーバ上のアクティブなゲストセッションの数。<tr><td><td>nbSessions<td>Integer<td>×<td>Web サーバー上のアクティブなセッションの数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#inbytesperhour>inBytesPerHour</a><td><td>Integer<td>◯<td>Web サーバーが1時間に受信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#inbytesperhourpersession>inBytesPerHourPerSession</a><td><td>Integer<td>◯<td>Web サーバーがセッションに対して1時間に受信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#inbytespermin>inBytesPerMin</a><td><td>Integer<td>◯<td>Web サーバーが1分間に受信できる総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#inbytesperminpersession>inBytesPerMinPerSession</a><td><td>Integer<td>◯<td>Web サーバーがセッションに対して1分間に受信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbentitysetspersession>nbEntitySetsPerSession</a><td><td>Integer<td>◯<td>各REST セッションに対してメモリ内に保持できるエンティティセットの最大数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbguestsessions>nbGuestSessions</a><td><td>Integer<td>◯<td>Web サーバー上のアクティブなゲストセッションの最大総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbrequestsperhour>nbRequestsPerHour</a><td><td>Integer<td>◯<td>Web サーバーが1時間に受け入れることのできる最大のリクエスト総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbrequestsperhourpersession>nbRequestsPerHourPerSession</a><td><td>Integer<td>◯<td>セッションが1時間に受け入れることのできる最大のリクエスト総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbrequestspermin>nbRequestsPerMin</a><td><td>Integer<td>◯<td>Web サーバーが1分間に受け入れることのできる最大のリクエスト総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbrequestsperminpersession>nbRequestsPerMinPerSession</a><td><td>Integer<td>◯<td>セッションが1分間に受け入れることのできる最大のリクエスト総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#nbsessions>nbSessions</a><td><td>Integer<td>◯<td>Web サーバー上のアクティブなセッションの最大総数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#outbytesperhour>outBytesPerHour</a><td><td>Integer<td>◯<td>Web サーバーが1時間に送信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#outbytesperhourpersession>outBytesPerHourPerSession</a><td><td>Integer<td>◯<td>Web サーバーがセッションに対して1時間に送信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#outbytespermin>outBytesPerMin</a><td><td>Integer<td>◯<td>Web サーバーが1分間に送信できる最大の総バイト数。<tr><td><a class="" href=/docs/ja/API/QuotaManagerClass#outbytesperminpersession>outBytesPerMinPerSession</a><td><td>Integer<td>◯<td>Web サーバーがセッションに対して1分間に送信できる最大の総バイト数。</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題>例題<a href=#例題 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>クォータを、サーバーグローバルとセッションデフォルトのレベルで設定します:</p>
@@ -535,19 +230,6 @@
 <p>Webサーバーのルートフォルダーのパス。パスは、ファイルシステムを使用した POSIXフルパスの形式です。 <code>settings</code> 引数内でこのプロパティを使用する場合、<code>Folder</code> オブジェクトも使用可能です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rules>.rules<a href=#rules class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21<td>追加</table>
 </div></div></details>
 <p><strong>.rules</strong> : Collection</p>
@@ -570,48 +252,10 @@
 <p>セッションcookie の "path" フィールド。セッションcookie のスコープを制御するのに使用されます。たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=sessioncookiesamesite>.sessionCookieSameSite<a href=#sessioncookiesamesite class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>19<td>追加</table>
 </div></div></details>
 <p><strong>.sessionCookieSameSite</strong> : Text</p>
 <p>セッションcookie の "SameSite" 属性の値。とりうる値 (定数使用):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td>Web SameSite Strict<td>"Strict"<td><em>デフォルト値</em> - ファーストパーティのコンテキストでのみ cookie が送信されます。<tr><td>Web SameSite Lax<td>"Lax"<td>サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。<tr><td>Web SameSite None<td>"None"<td>ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。</table>
 <p>詳細については <a class="" href=/docs/ja/WebServer/webServerConfig#session-cookie-samesite>Session Cookie SameSite</a> の説明を参照ください。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=sessionipaddressvalidation>.sessionIPAddressValidation<a href=#sessionipaddressvalidation class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
@@ -622,50 +266,10 @@
 <p>セッションcookie の IP アドレス検証。セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して Webサーバーはデフォルトで IPアドレスを検証します。アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。たとえば、モバイルデバイスが WiFi と 3G/4G ネットワークを切り替えた場合、IPアドレスが変更されます。このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可できます (アプリケーションのセキュリティレベルは下がります)。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=start>.start()<a href=#start class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R5<td><code>settings</code> 引数内でのクォータのサポート<tr><td>18 R3<td>追加</table>
 </div></div></details>
 <p><strong>.start</strong>() : Object<br/><strong>.start</strong>( <em>settings</em> : Object ) : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>settings<td>Object<td>-><td>開始時の Webサーバー設定<tr><td>戻り値<td>Object<td>&lt;-<td>Webサーバー開始のステータス</table>
 </div>
 <p><code>.start()</code> 関数は、任意の <em>settings</em> オブジェクト引数に設定したプロパティを使用して、対象の Webサーバーを開始させます。</p>
@@ -675,47 +279,6 @@
 <p>カスタマイズされた設定は <a href=#stop class=""><code>.stop()</code></a> が呼び出されたときにリセットされます。</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=返されるオブジェクト>返されるオブジェクト<a href=#返されるオブジェクト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p>関数は Webサーバーの開始ステータスを表すオブジェクトを返します。このオブジェクトには、次のプロパティが格納されることがあります:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th><th>型<th>説明<tbody><tr><td>success<td><td>Boolean<td>Webサーバーが正常に開始された場合には true、それ以外は false<tr><td>errors<td><td>Collection<td>エラースタック (Webサーバーが正常に開始された場合には返されません)<tr><td><td>[].errCode<td>Number<td>4Dエラーコード<tr><td><td>[].message<td>Text<td>4Dエラーの詳細<tr><td><td>[].componentSignature<td>Text<td>エラーを返した内部コンポーネントの署名</table>
 <blockquote>
 <p>Webサーバーが既に起動していた場合、エラーが返されます。</p>
@@ -725,40 +288,10 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $result : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $quotas:={}</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $quotas.inBytesPerMin:=20000000</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $quotas.outBytesPerMinPerSession:=10000000</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $settings:={HTTPPort:8080;defaultHomepage:"myAdminHomepage.html"; quotas: $quotas }</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> var $webServer:=WEB Server</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $result:=$webServer.start($settings)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($result.success)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  //...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=stop>.stop()<a href=#stop class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>18 R3<td>追加</table>
 </div></div></details>
 <p><strong>.stop()</strong></p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td><td><td><td>引数を必要としません</table>
 </div>
 <p><code>.stop()</code> 関数は、対象の Webサーバーを停止します。</p>

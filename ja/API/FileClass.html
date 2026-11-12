@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/FileClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="File オブジェクトは File コマンドによって作成されます。これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><meta data-rh=true property=og:description content="File オブジェクトは File コマンドによって作成されます。これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/API/FileClass /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="File オブジェクトは File コマンドによって作成されます。これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><meta data-rh=true property=og:description content="File オブジェクトは File コマンドによって作成されます。これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。たとえば、新規ファイルを作成するために File コマンドを実行した場合、有効な File オブジェクトが作成されますが、file.create() 関数を呼び出すまで、ディスク上にはなにも保存されていません。"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/4d-language","name":"4Dランゲージ","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/class-API-reference","name":"クラス","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/API/FileClass>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/API/FileClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/API/FileClass>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/API/FileClass>21</a><li><a class=dropdown__link href=/docs/ja/20/API/FileClass>20</a><li><a class=dropdown__link href=/docs/ja/19/API/FileClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -10,126 +10,9 @@
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=パス名>パス名<a href=#パス名 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p><code>File</code> オブジェクトは、<code>filesystems</code> や <code>posix</code> シンタックスを含む、いくつかのパス名をサポートしています。使用できるパス名についての詳細は <a class="" href=/docs/ja/Concepts/paths><strong>パス名</strong></a> ページを参照ください。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=file-オブジェクト>File オブジェクト<a href=#file-オブジェクト class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#copyto class=""><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><br/><code>File</code> オブジェクトを、<em>destinationFolder</em> 引数で指定したフォルダーへとコピーします<tr><td><a href=#create class=""><strong>.create()</strong> : Boolean </a><br/><code>File</code> オブジェクトのプロパティに基づいてディスク上にファイルを作成します<tr><td><a href=#createalias class=""><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><br/>エイリアス (macOS) またはショートカット (Windows) を作成します<tr><td><a href=#creationdate class=""><strong>.creationDate</strong> : Date</a><br/>ファイルの作成日<tr><td><a href=#creationtime class=""><strong>.creationTime</strong> : Time</a><br/>ファイルの作成時刻<tr><td><a href=#delete class=""><strong>.delete</strong>()</a><br/>ファイルを削除します<tr><td><a href=#exists class=""><strong>.exists</strong> : Boolean</a><br/>ディスク上にファイルが存在する場合は true を返します<tr><td><a href=#extension class=""><strong>.extension</strong> : Text</a><br/>ファイル名の拡張子<tr><td><a href=#fullname class=""><strong>.fullName</strong> : Text</a><br/>拡張子 (あれば) を含めたファイルの完全な名称<tr><td><a href=#getappinfo class=""><strong>.getAppInfo</strong>() : Object</a><br/>アプリケーションファイル情報のコンテンツをオブジェクトとして返します<tr><td><a href=#getcontent class=""><strong>.getContent( )</strong> : 4D.Blob</a>ファイルの全コンテンツを格納した <code>4D.Blob</code> オブジェクトを返します<tr><td><a href=#geticon class=""><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><br/>ファイルのアイコンを返します<tr><td><a href=#gettext class=""><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br/><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a><br/>ファイルのコンテンツをテキストとして返します<tr><td><a href=#hidden class=""><strong>.hidden</strong> : Boolean</a><br/>ファイルがシステムレベルで "非表示" に設定されていれば true<tr><td><a href=#isalias class=""><strong>.isAlias</strong> : Boolean</a><br/>ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には true<tr><td><a href=#isfile class=""><strong>.isFile</strong> : Boolean</a><br/>ファイルに対しては常に true<tr><td><a href=#isfolder class=""><strong>.isFolder</strong> : Boolean</a><br/>ファイルに対しては常に false<tr><td><a href=#iswritable class=""><strong>.isWritable</strong> : Boolean</a><br/>ファイルがディスク上に存在し、書き込み可能な場合に true<tr><td><a href=#modificationdate class=""><strong>.modificationDate</strong> : Date</a><br/>ファイルの最終変更日<tr><td><a href=#modificationtime class=""><strong>.modificationTime</strong> : Time</a><br/>ファイルの最終変更時刻<tr><td><a href=#moveto class=""><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><br/><code>File</code> オブジェクトを <em>destinationFolder</em> が指定する移行先へと移動すると同時に、<em x-id=3>newName</em> を指定した場合は名称も変更します<tr><td><a href=#name class=""><strong>.name</strong> : Text</a><br/>拡張子 (あれば) を含まないファイル名<tr><td><a href=#open class=""><strong>.open</strong>( { <em>mode</em> : Text } ) : 4D.FileHandle<br/><strong>.open</strong>( { <em>options</em> : Object } ) : 4D.FileHandle</a><br/>対象のファイルについて、指定のモード (<em>mode</em>) またはオプション (<em>options</em>) で新規の <a class="" href=/docs/ja/API/FileHandleClass><code>4D.FileHandle</code></a> オブジェクトを作成し、返します<tr><td><a href=#original class=""><strong>.original</strong> : 4D.File<br/><strong>.original</strong> : 4D.Folder</a><br/>エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素<tr><td><a href=#parent class=""><strong>.parent</strong> : 4D.Folder</a><br/>対象ファイルの親フォルダーオブジェクト<tr><td><a href=#path class=""><strong>.path</strong> : Text</a><br/>ファイルの POSIXパス<tr><td><a href=#platformpath class=""><strong>.platformPath</strong> : Text</a><br/>カレントプラットフォームのシンタックスで表現されたファイルのパス<tr><td><a href=#rename class=""><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><br/>ファイル名を <em>newName</em> に指定した名称に変更し、名称変更後の <code>File</code> オブジェクトを返します<tr><td><a href=#setappinfo class=""><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><br/> <em>info</em> に渡したプロパティをアプリケーションファイルの情報として書き込みます<tr><td><a href=#setcontent class=""><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><br/><em>content</em> 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<tr><td><a href=#settext class=""><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br/><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } )</a><br/><em>text</em> に渡されたテキストをファイルの新しいコンテンツとして書き込みます<tr><td><a href=#size class=""><strong>.size</strong> : Real</a><br/>ファイルのサイズ (バイト単位)</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dfilenew>4D.File.new()<a href=#4dfilenew class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>18 R6<td>追加</table>
 </div></div></details>
 <p><strong>4D.File.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer } ) : 4D.File<br/><strong>4D.File.new</strong> ( <em>fileConstant</em> : Integer ) : 4D.File</p>
@@ -140,58 +23,10 @@
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=copyto>.copyTo()<a href=#copyto class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td style=text-align:center>-><td>宛先フォルダー<tr><td>newName<td>Text<td style=text-align:center>-><td>コピー先フォルダーの名前<tr><td>overwrite<td>Integer<td style=text-align:center>-><td>既存要素を上書きするには <code>fk overwrite</code> を渡します<tr><td>戻り値<td>4D.File<td style=text-align:center>&lt;-<td>コピーされたファイル</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-1>説明<a href=#説明-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -199,21 +34,6 @@
 <p><em>destinationFolder</em> 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。</p>
 <p>デフォルトで、ファイルは元の名前を維持したままコピーされます。コピーの際に名称を変更したい場合、新しい名前を <em>newName</em> に渡します。新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。</p>
 <p><em>destinationFolder</em> 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 <em>overwrite</em> に <code>fk overwrite</code> 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td><code>fk overwrite</code><td>4<td>既存要素があれば、それを上書きします</table>
 <p><strong>戻り値</strong></p>
 <p>コピーされた <code>File</code> オブジェクト。</p>
@@ -222,41 +42,11 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $source; $copy : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$source:=Folder(fk documents folder).file("Pictures/photo.png")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=create>.create()<a href=#create class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>ZIPアーカイブには利用できません</strong></p>
 <p><strong>.create()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Boolean<td>&lt;-<td>ファイルが正常に作成された場合に true、それ以外の場合は false</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-2>説明<a href=#説明-2 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -272,84 +62,16 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $created : Boolean</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=createalias>.createAlias()<a href=#createalias class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>エイリアスまたはショートカットの作成先フォルダー<tr><td>aliasName<td>Text<td>-><td>エイリアスまたはショートカットの名称<tr><td>aliasType<td>Integer<td>-><td>エイリアスリンクのタイプ<tr><td>戻り値<td>4D.File<td>&lt;-<td>エイリアスまたはショートカットのファイル参照</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-3>説明<a href=#説明-3 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.createAlias()</code> 関数は、<em>destinationFolder</em> オブジェクトで指定されたフォルダー内に、<em>aliasName</em> が指定する名称で、対象ファイルへのエイリアス (macOS) またはショートカット (Windows) を作成します。</p>
 <p><em>aliasName</em> には、作成するエイリアスまたはショートカットの名前を渡します。</p>
 <p>macOS 上では、この関数はデフォルトで標準エイリアスを作成します。 <em>aliasType</em> 引数を渡すことで、シンボリックリンクを作成することもできます。以下の定数を使用することができます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td><code>fk alias link</code><td>0<td>エイリアスリンク (デフォルト)<tr><td><code>fk symbolic link</code><td>1<td>シンボリックリンク (macOSのみ)</table>
 <p>Windows 上では、常にショートカット (.lnk ファイル) が作成されます (<em>aliasType</em> 引数は無視されます)。</p>
 <p><strong>返されるオブジェクト</strong></p>
@@ -359,19 +81,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationdate>.creationDate<a href=#creationdate class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.creationDate</strong> : Date</p>
@@ -380,19 +89,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationtime>.creationTime<a href=#creationtime class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.creationTime</strong> : Time</p>
@@ -401,40 +97,10 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=delete>.delete()<a href=#delete class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.delete</strong>()</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th style=text-align:center><th>説明<tbody><tr><td><td><td style=text-align:center><td>引数を必要としません</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-6>説明<a href=#説明-6 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -451,19 +117,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($tempo.exists)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $tempo.delete()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("ユーザーのプリファレンスファイルが削除されました。")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exists>.exists<a href=#exists class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.exists</strong> : Boolean</p>
@@ -472,19 +125,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=extension>.extension<a href=#extension class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.extension</strong> : Text</p>
@@ -493,19 +133,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=fullname>.fullName<a href=#fullname class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.fullName</strong> : Text</p>
@@ -514,44 +141,10 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getappinfo>.getAppInfo()<a href=#getappinfo class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>20 R9<td>macOS 実行ファイル内のUUID を読む<tr><td>19<td>追加</table>
 </div></div></details>
 <p><strong>.getAppInfo</strong>() : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>Object<td>&lt;-<td>アプリケーションファイル情報</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-10>説明<a href=#説明-10 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -562,76 +155,10 @@
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p>この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。バイナリー形式の .plist ファイルを対象に使用した場合、エラーが返されます。</div></div>
 <p><strong>.exe または .dll ファイルの場合に返されるオブジェクト(Windows のみ)</strong></p>
 <p>プロパティ値はすべてテキストです。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<tbody><tr><td>InternalName<td>Text<tr><td>ProductName<td>Text<tr><td>CompanyName<td>Text<tr><td>LegalCopyright<td>Text<tr><td>ProductVersion<td>Text<tr><td>FileDescription<td>Text<tr><td>FileVersion<td>Text<tr><td>OriginalFilename<td>Text</table>
 <p><strong>macOS 実行可能ファイルの場合に返されるオブジェクト(macOS のみ)</strong></p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p>macOS実行可能ファイルはパッケージ内部にあります(例: myApp.app/Contents/MacOS/myApp)。</div></div>
 <p>この関数は、実行ファイル内で見つかったそれぞれのアーキテクチャーを表すオブジェクトのコレクションを格納した、 <code>archs</code> オブジェクトを返します(ファットな実行ファイルには複数のアーキテクチャーを埋め込むことができます)。コレクション内のそれぞれのオブジェクトは以下のプロパティを格納しています:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>name<td>Text<td>アーキテクチャー名("arm64" あるいは "x86_64")<tr><td>type<td>Number<td>アーキテクチャーの数値識別子<tr><td>uuid<td>Text<td>実行ファイルUUIDのテキスト表現</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-1-1>例題 1<a href=#例題-1-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  // info.plist の著作権情報を表示する(あらゆるプラットフォームで可能)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $infoPlistFile : 4D.File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $info : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$infoPlistFile:=File("/RESOURCES/info.plist")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info:=$infoPlistFile.getAppInfo()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ALERT($info.Copyright)</span><br/></div></code></pre></div></div>
@@ -645,44 +172,10 @@
 <p><a href=#setappinfo class="">.setAppInfo()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getcontent>.getContent()<a href=#getcontent class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>19 R2<td>4D.Blob を返します<tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.getContent( )</strong> : 4D.Blob</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>戻り値<td>4D.Blob<td>&lt;-<td>ファイルのコンテンツ</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-11>説明<a href=#説明-11 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -694,46 +187,10 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $vPath : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $vPath:=Select document("";"*";"Select a document";0)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If(OK=1) // ドキュメントが選択されていれば</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    [aTable]aBlobField:=File($vPath;fk platform path).getContent()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=geticon>.getIcon()<a href=#geticon class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>size<td>Integer<td>-><td>取得するピクチャーの一辺の長さ (ピクセル単位)<tr><td>戻り値<td>Picture<td>&lt;-<td>アイコン</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-12>説明<a href=#説明-12 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -744,58 +201,10 @@
 <p>ファイルアイコンの <a class="" href=/docs/ja/Concepts/picture.html>ピクチャー</a>。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=gettext>.getText()<a href=#gettext class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br/><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>charSetName<td>Text<td>-><td>文字セットの名前<tr><td>charSetNum<td>Integer<td>-><td>文字セットの番号<tr><td>breakMode<td>Integer<td>-><td>改行の処理モード<tr><td>戻り値<td>Text<td>&lt;-<td>ドキュメントから取得したテキスト</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-13>説明<a href=#説明-13 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -810,41 +219,6 @@
 </blockquote>
 <p>ドキュメントにバイトオーダーマーク (BOM) が含まれている場合、4D は <em>charSetName</em> または <em>charSetNum</em> 引数で設定されている文字セットではなく、BOM で指定されたものを使用します (結果として引数は無視されます)。ドキュメントに BOM が含まれておらず、また <em>charSetName</em> および <em>charSetNum</em> 引数が渡されなかった場合、4D はデフォルトで "UTF-8" を文字セットとして使用します。</p>
 <p><em>breakMode</em> には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td><code>Document unchanged</code><td>0<td>何も処理をしません。<tr><td><code>Document with native format</code><td>1<td>(デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。<tr><td><code>Document with CRLF</code><td>2<td>改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。<tr><td><code>Document with CR</code><td>3<td>改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。<tr><td><code>Document with LF</code><td>4<td>改行は Unixフォーマット (LF、ラインフィード) へと変換されます。</table>
 <p><em>breakMode</em> 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。</p>
 <p><strong>戻り値</strong></p>
@@ -864,19 +238,6 @@
 <p>このとき、改行コードは <code>\n</code> (LF) です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hidden>.hidden<a href=#hidden class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.hidden</strong> : Boolean</p>
@@ -885,19 +246,6 @@
 <p><strong>読み書き可能</strong> プロパティです。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isalias>.isAlias<a href=#isalias class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.isAlias</strong> : Boolean</p>
@@ -906,19 +254,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfile>.isFile<a href=#isfile class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.isFile</strong> : Boolean</p>
@@ -927,19 +262,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfolder>.isFolder<a href=#isfolder class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.isFolder</strong> : Boolean</p>
@@ -948,19 +270,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=iswritable>.isWritable<a href=#iswritable class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.isWritable</strong> : Boolean</p>
@@ -974,19 +283,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($myFile.isWritable)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $myNewFile:=$myFile.setText("Added text")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationdate>.modificationDate<a href=#modificationdate class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.modificationDate</strong> : Date</p>
@@ -995,19 +291,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationtime>.modificationTime<a href=#modificationtime class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.modificationTime</strong> : Time</p>
@@ -1016,52 +299,10 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=moveto>.moveTo()<a href=#moveto class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>宛先フォルダー<tr><td>newName<td>Text<td>-><td>移動先でのファイルの完全な名称<tr><td>戻り値<td>4D.File<td>&lt;-<td>移動したファイル</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-21>説明<a href=#説明-21 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -1074,19 +315,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$DocFolder:=Folder(fk documents folder)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile:=$DocFolder.file("Current/Infos.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=name>.name<a href=#name class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.name</strong> : Text</p>
@@ -1095,150 +323,22 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=open>.open()<a href=#open class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>19 R7<td>追加</table>
 </div></div></details>
 <p><strong>.open</strong>( { <em>mode</em> : Text } ) : 4D.FileHandle<br/><strong>.open</strong>( { <em>options</em> : Object } ) : 4D.FileHandle</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>mode<td>Text<td>-><td>開くモード: "read", "write", "append"<tr><td>options<td>Object<td>-><td>開くオプション<tr><td>戻り値<td><a class="" href=/docs/ja/API/FileHandleClass>4D.FileHandle</a><td>&lt;-<td>新規の FileHandle オブジェクト</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-23>説明<a href=#説明-23 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <p><code>.open()</code> 関数は、対象のファイルについて、指定のモード (<em>mode</em>) またはオプション (<em>options</em>) で新規の <a class="" href=/docs/ja/API/FileHandleClass><code>4D.FileHandle</code></a> オブジェクトを作成し、返します。 <a class="" href=/docs/ja/API/FileHandleClass>4D.FileHandle</a> クラスの関数とプロパティを使用して、ファイルにコンテンツを書き込んだり読み取ったり、追加したりすることができます。</p>
 <p><em>mode</em> (text) 引数として、どのモードで FileHandle を開くかを指定します。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><em>mode</em><th>説明<tbody><tr><td>"read"<td>(デフォルト) ファイルから値を読み取るための FileHandle を作成します。ディスク上にファイルが存在しない場合は、エラーが返されます。 "read" モードの FileHandle は、同じ File オブジェクトに対していくつでも開くことができます。<tr><td>"write"<td>ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの先頭から)。ディスク上にファイルが存在しない場合は、作成されます。 "write" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。<tr><td>"append"<td>ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの最後から)。ディスク上にファイルが存在しない場合は、作成されます。 "append" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。</table>
 <blockquote>
 <p><em>mode</em> の値は、文字の大小を区別します。</p>
 </blockquote>
 <p><em>option</em> (object) 引数を使って、以下のプロパティを通じて FileHandle にさらなるオプションを渡すことができます (これらのプロパティはその後、開かれた <a class="" href=/docs/ja/API/FileHandleClass>FileHandle オブジェクト</a> から取得できます)。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><em>options</em><th>型<th>説明<th>デフォルト<tbody><tr><td><code>.mode</code><td>Text<td>開くモード (上記の <em>mode</em> 参照)<td>"read"<tr><td><code>.charset</code><td>Text<td>ファイルの読み取りや書き込みに使用される文字セット。セットの標準名を使用します (たとえば、"ISO-8859-1" や "UTF-8")<td>"UTF-8"<tr><td><code>.breakModeRead</code><td>Text または Number<td>ファイルの読み取り時に使用される改行の処理モード (下記参照)<td>"native" または 1<tr><td><code>.breakModeWrite</code><td>Text または Number<td>ファイルの書き込み時に使用される改行の処理モード (下記参照)<td>"native" または 1</table>
 <p>この関数は、元の改行文字をすべて置き換えます。デフォルトではネイティブの区切り文字が使われますが、別の区切り文字を定義することも可能です。 <code>.breakModeRead</code> と <code>.breakModeWrite</code> は、改行文字に適用する処理を指定します。以下のいずれかの値を使用できます (テキストまたは数値):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>改行モードの値 (テキスト)<th>改行モードの値 (数値/定数)<th>説明<tbody><tr><td>"native"<td>1 (<code>Document with native format</code>)<td>(デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。<tr><td>"crlf"<td>2 (<code>Document with CRLF</code>)<td>改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。<tr><td>"cr"<td>3 (<code>Document with CR</code>)<td>改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。<tr><td>"lf"<td>4 (<code>Document with LF</code>)<td>改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。</table>
 <blockquote>
 <p><em>break mode as text</em> の値は、文字の大小を区別します。</p>
@@ -1248,19 +348,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $f : 4D.File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $fhandle : 4D.FileHandle</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open("read")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=original>.original<a href=#original class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.original</strong> : 4D.File<br/><strong>.original</strong> : 4D.Folder</p>
@@ -1274,19 +361,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parent>.parent<a href=#parent class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.parent</strong> : 4D.Folder</p>
@@ -1295,19 +369,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=path>.path<a href=#path class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.path</strong> : Text</p>
@@ -1316,19 +377,6 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=platformpath>.platformPath<a href=#platformpath class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.platformPath</strong> : Text</p>
@@ -1337,46 +385,10 @@
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rename>.rename()<a href=#rename class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>newName<td>Text<td>-><td>ファイルの新しい完全な名称<tr><td>戻り値<td>4D.File<td>&lt;-<td>名称変更されたファイル</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-28>説明<a href=#説明-28 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -1390,52 +402,10 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setappinfo>.setAppInfo()<a href=#setappinfo class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R2<td>removeFluentUI のサポート<tr><td>20 R9<td>macOS 実行ファイル内のUUID を読む<tr><td>20<td>WinIcon をサポート<tr><td>19<td>追加</table>
 </div></div></details>
 <p><strong>.setAppInfo</strong>( <em>info</em> : Object )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>info<td>Object<td>-><td>アプリケーションファイル情報内に書き込むプロパティ</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-29>説明<a href=#説明-29 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -1449,92 +419,12 @@
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p>日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。</div></div>
 <p><strong>.exe または .dll ファイル用の<em>info</em> オブジェクト(Windows のみ)</strong></p>
 <p><em>info</em> オブジェクト引数内に設定されているそれぞれの有効なプロパティは、.exe あるいは .dll ファイルのバージョンリソースに書き込まれます。以下のプロパティが使用できます (それ以外のプロパティは無視されます):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>CompanyName<td>Text<td><tr><td>FileDescription<td>Text<td><tr><td>FileVersion<td>Text<td><tr><td>InternalName<td>Text<td><tr><td>LegalCopyright<td>Text<td><tr><td>OriginalFilename<td>Text<td><tr><td>ProductName<td>Text<td><tr><td>ProductVersion<td>Text<td><tr><td>removeFluentUI<td>Boolean<td>これは組み込み4D アプリケーション(.exe ファイル) でのみ使用可能です。ここにTrue を渡すと、組み込みWindows App SDK (<a class="" href=/docs/ja/FormEditor/forms#fluent-ui-%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0>Fluent UI レンダリング</a> を使用するには必須) を参照している <em>manifest</em> と <em>.pri</em> ファイルを、OS にインストールされているWindows App SDK の使用を許可するバージョンに置き換えます。ローカルのSDK を使用することで、生成されるアプリケーションのサイズを減らすことができます(ただしデフォルトの埋め込みファイルを削除する必要もあります)。 False を渡す、あるいはこのプロパティを省略した場合には、何も起こりません。<tr><td>WinIcon<td>Text<td>.icoファイルの Posixパス。このプロパティは、4D が生成した実行ファイルにのみ適用されます。</table>
 <p><code>WinIcon</code> を除き全てのプロパティにおいて、値としてnull または空の文字列を渡した場合、プロパティには空の文字列が書き込まれます。テキストでない型の値を渡した場合には、文字列に変換されます。</p>
 <p><code>WinIcon</code> プロパティにおいては、ファイルが存在しない、または不正なフォーマットだった場合にはエラーが生成されます。</p>
 <p><strong>macOS 実行ファイル用の <em>info</em> パラメーター(macOSのみ)</strong></p>
 <p><em>info</em> オブジェクトは単一の<code>archs</code> という名前のプロパティを持ち、そのコレクションの中に<a href=#getappinfo class=""><code>getAppInfo()</code></a> から返されるフォーマットのオブジェクトを格納していなければなりません。それぞれのオブジェクトには、少なくとも<code>type</code> および <code>uuid</code> プロパティが格納されている必要があります(<code>name</code> は使用されません)。</p>
 <p><em>info</em>.archs コレクション内のそれぞれのオブジェクトは、以下のプロパティを格納していなければなりません:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>type<td>Number<td>編集したいアーキテクチャーの数値識別子<tr><td>uuid<td>Text<td>新しい実行ファイルUUIDのテキスト表現</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-1-2>例題 1<a href=#例題-1-2 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">  // info.plist ファイル内のキーを一部設定する(全プラットフォーム用)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $infoPlistFile : 4D.File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $info : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$infoPlistFile:=File("/RESOURCES/info.plist")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info:=New object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info.Copyright:="Copyright 4D 2023" //テキスト</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info.ProductVersion:=12 //整数</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info.ShipmentDate:="2023-04-22T06:00:00Z" //タイムスタンプ</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$info.CFBundleIconFile:="myApp.icns" //macOS用</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$infoPlistFile.setAppInfo($info)</span><br/></div></code></pre></div></div>
@@ -1546,40 +436,10 @@
 <p><a href=#getappinfo class="">.getAppInfo()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setcontent>.setContent()<a href=#setcontent class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.setContent</strong> ( <em>content</em> : Blob )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>content<td>BLOB<td>-><td>ファイルの新しいコンテンツ</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-30>説明<a href=#説明-30 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -1588,62 +448,10 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=Folder(fk documents folder).file("Archives/data.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $myFile.setContent([aTable]aBlobField)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=settext>.setText()<a href=#settext class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>19 R3<td>新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用<tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br/><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>型<th><th>説明<tbody><tr><td>text<td>Text<td>-><td>ファイルに保存するテキスト<tr><td>charSetName<td>Text<td>-><td>文字セットの名前<tr><td>charSetNum<td>Integer<td>-><td>文字セットの番号<tr><td>breakMode<td>Integer<td>-><td>改行の処理モード</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=説明-31>説明<a href=#説明-31 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -1660,41 +468,6 @@
 </blockquote>
 <p>文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに "-no-bom" 接尾辞 (例: "UTF-8-no-bom") が含まれていない場合、4D は BOM をファイルに挿入します。文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットを BOMなしで使用します。</p>
 <p><em>breakMode</em> には、ファイルを保存する前に改行文字に対して行う処理を指定する整数を渡します。 <strong>System Documents</strong> テーマ内にある、以下の定数を使用することができます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>定数<th>値<th>説明<tbody><tr><td><code>Document unchanged</code><td>0<td>何も処理をしません。<tr><td><code>Document with native format</code><td>1<td>(デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。<tr><td><code>Document with CRLF</code><td>2<td>改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。<tr><td><code>Document with CR</code><td>3<td>改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。<tr><td><code>Document with LF</code><td>4<td>改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。</table>
 <p><em>breakMode</em> 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。</p>
 <blockquote>
@@ -1704,19 +477,6 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$myFile:=File("C:\\Documents\\Hello.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile.setText("Hello world")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=size>.size<a href=#size class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>17 R5<td>追加</table>
 </div></div></details>
 <p><strong>.size</strong> : Real</p>

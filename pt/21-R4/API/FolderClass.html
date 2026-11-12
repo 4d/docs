@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/FolderClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Folder | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21-R4/API/FolderClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Folder | 4D Docs"/><meta data-rh=true name=description content="Os objetos Folder são criados com o comando Folder. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folderpara criar uma pasta, é criado um objeto válidoFolder mas nada é realmente armazenado no disco até chamar a função folder.create()\\\\`."/><meta data-rh=true property=og:description content="Os objetos Folder são criados com o comando Folder. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folderpara criar uma pasta, é criado um objeto válidoFolder mas nada é realmente armazenado no disco até chamar a função folder.create()\\\\`."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21-R4/API/FolderClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FolderClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/FolderClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/FolderClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/FolderClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/FolderClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FolderClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/API/FolderClass","name":"Folder","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/FolderClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Folder | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21-R4/API/FolderClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Folder | 4D Docs"/><meta data-rh=true name=description content="Os objetos Folder são criados com o comando Folder. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folderpara criar uma pasta, é criado um objeto válidoFolder mas nada é realmente armazenado no disco até chamar a função folder.create()\\\\`."/><meta data-rh=true property=og:description content="Os objetos Folder são criados com o comando Folder. Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folderpara criar uma pasta, é criado um objeto válidoFolder mas nada é realmente armazenado no disco até chamar a função folder.create()\\\\`."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21-R4/API/FolderClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FolderClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/FolderClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/FolderClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/FolderClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/FolderClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/FolderClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21-R4/API/FolderClass","name":"Folder","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/21-R4/API/FolderClass>21 R4 BETA</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/API/FolderClass>Próximo</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/21-R4/API/FolderClass>21 R4 BETA</a><li><a class=dropdown__link href=/docs/pt/21/API/FolderClass>21</a><li><a class=dropdown__link href=/docs/pt/20/API/FolderClass>20</a><li><a class=dropdown__link href=/docs/pt/19/API/FolderClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -10,114 +10,9 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=pathnames>Pathnames<a href=#pathnames class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p>Os objetos <code>Folder</code> suportam vários pathnames, incluindo a sintaxe <code>filesystems</code> ou <code>posix</code>. Os nomes de caminho compatíveis são detalhados na página <a class="" href=/docs/pt/21-R4/Concepts/paths><strong>Rotas de acesso</strong></a>.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objecto-folder>Objecto Folder<a href=#objecto-folder class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#copyto class=""><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.Folder</a><br/>copia o objeto <code>Folder</code> para a <em>destinationFolder</em> especificada<tr><td><a href=#create class=""><strong>.create()</strong> : Boolean</a><br/>cria uma pasta no disco de acordo com as propriedades do objeto <code>Folder</code><tr><td><a href=#createalias class=""><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><br/>cria um alias (macOS) ou um atalho (Windows)<tr><td><a href=#creationdate class=""><strong>.creationDate</strong> : Date</a><br/>a data de criação da pasta<tr><td><a href=#creationtime class=""><strong>.creationTime</strong> : Time</a><br/>o horário de criação da pasta<tr><td><a href=#delete class=""><strong>.delete</strong>( { <em>option</em> : Integer } )</a><br/>exclui a pasta<tr><td><a href=#exists class=""><strong>.exists</strong> : Boolean</a><br/>true se a pasta existe no disco<tr><td><a href=#extension class=""><strong>.extension</strong> : Text</a><br/>retorna a extensão do nome da pasta (se houver)<tr><td><a href=#file class=""><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</a><br/>um objeto <code>File</code> dentro do objeto <code>Folder</code> e retorna sua referência<tr><td><a href=#files class=""><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</a><br/>uma coleção de objetos <code>File</code> contidos na pasta<tr><td><a href=#folder class=""><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</a><br/>cria um objeto <code>Folder</code> dentro do objeto <code>Folder</code> pai e retorna sua referência<tr><td><a href=#folders class=""><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</a><br/>retorna uma coleção de objetos <code>Folder</code> contidos na pasta principal<tr><td><a href=#fullname class=""><strong>.fullName</strong> : Text</a><br/>retorna o nome completo da pasta, incluindo sua extensão (se houver)<tr><td><a href=#geticon class=""><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><br/>retorna o ícone da pasta<tr><td><a href=#hidden class=""><strong>.hidden</strong> : Boolean</a><br/>true se o arquivo estiver definido como "hidden" no nível do sistema<tr><td><a href=#eof class=""><strong>.eof</strong> : Boolean</a><br/>True é o <code>offset</code> chegou ao fim do arquivo, e False caso contrário<tr><td><a href=#isfile class=""><strong>.isFile</strong> : Boolean</a><br/>sempre <strong>false</strong> para uma pasta<tr><td><a href=#isfolder class=""><strong>.isFolder</strong> : Boolean</a><br/>sempre <strong>true</strong> para uma pasta<tr><td><a href=#ispackage class=""><strong>.isPackage</strong> : Boolean</a><br/>true se a pasta é um pacote no macOS (e existe no disco)<tr><td><a href=#modificationdate class=""><strong>.modificationDate</strong> : Date</a><br/> a data da última modificação da pasta<tr><td><a href=#modificationtime class=""><strong>.modificationTime</strong> : Time</a><br/>a hora da última modificação da pasta<tr><td><a href=#name class=""><strong>.name</strong> : Text</a><br/> o nome da pasta, sem extensão (se houver)<tr><td><a href=#original class=""><strong>.original</strong> : 4D.Folder</a><br/>o mesmo objeto Pasta da pasta<tr><td><a href=#parent class=""><strong>.parent</strong> : 4D.Folder</a><br/> o objeto pasta pai da pasta<tr><td><a href=#path class=""><strong>.path</strong> : Text</a><br/> o caminho POSIX da pasta<tr><td><a href=#platformpath class=""><strong>.platformPath</strong> : Text</a><br/>o caminho da pasta expresso com a sintaxe da plataforma atual<tr><td><a href=#moveto class=""><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a><br/>move ou renomeia o objeto <code>Folder</code> (pasta de origem) para a <em>destinationFolder</em> especificada<tr><td><a href=#rename class=""><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a><br/>renomeia a pasta com o nome que você passou em <em>newName</em> e retorna o objeto <code>Folder</code> renomeado</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4d-foldernew>4D. Folder.new()<a href=#4d-foldernew class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>4D.Folder.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer }{ ; * } ) : 4D.Folder<br/><strong>4D.Folder.new</strong> ( <em>folderConstant</em> : Integer { ; * } ) : 4D.Folder</p>
@@ -128,58 +23,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=copyto>.copyTo()<a href=#copyto class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>destinationFolder<td>4D. Folder<td>-><td>Pasta de destino<tr><td>newName<td>Text<td>-><td>Nome para a copia<tr><td>overwrite<td>Integer<td>-><td><code>fk overwrite</code> para substituir os elementos existentes<tr><td>Resultados<td>4D. Folder<td>&lt;-<td>Pasta ou arquivo copiado</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-1>Descrição<a href=#descrição-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -187,21 +34,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>A <em>destinationFolder</em> deve existir em disco, senão um erro é gerado.</p>
 <p>Como padrão, a pasta é copiada com o nome da pasta original. Como padrão, a pasta é copiada com o nome da pasta original. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.</p>
 <p>Se já existir uma pasta com o mesmo nome em <em>destinationFolder</em>, por padrão 4D gera um erro. Pode passar a constante <code>fk overwrite</code> no parâmetro <em>overwrite</em> para ignorar e sobrescriber o arquivo existente</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk overwrite</code><td>4<td>Sobrescrever os elementos existentes, se houver</table>
 <p><strong>Valor retornado</strong></p>
 <p>O objeto <code>Folder</code> copiado.</p>
@@ -210,40 +42,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $userImages; $copiedImages : 4D. Folder</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$userImages:=Folder(fk documents folder).folder("Pictures")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=create>.create()<a href=#create class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.create()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>Resultados<td>Parâmetros<td>&lt;-<td>True se a pasta foi criada com sucesso, false caso contrário</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-2>Descrição<a href=#descrição-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -262,84 +64,16 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$newFolder:=Folder("/PACKAGE/Archives2019/January")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">If($newFolder.create())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ALERT("The "+$newFolder.name+" folder was created.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ALERT("Impossible to create a "+$newFolder.name+" folder.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=createalias>.createAlias()<a href=#createalias class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>destinationFolder<td>4D. Folder<td>-><td>Pasta de destino para o pseudónimo ou atalho<tr><td>aliasName<td>Text<td>-><td>Nome do pseudónimo ou atalho<tr><td>aliasType<td>Integer<td>-><td>Tipo de ligação do pseudónimo<tr><td>Resultados<td>4D. File<td>&lt;-<td>Alias ou referência de atalho</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-3>Descrição<a href=#descrição-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>.createAlias()</code> cria um alias (macOS) ou um atalho (Windows) para a pasta com o nome <em>aliasName</em> especificado na pasta designada pelo objeto <em>destinationFolder</em>.</p>
 <p>Passar o nome do alias ou atalho para criar no parâmetro <em>aliasName</em>.</p>
 <p>Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro <em>aliasType</em>. Estão disponíveis as seguintes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk alias link</code><td>0<td>Alias link (padrão)<tr><td><code>fk symbolic link</code><td>1<td>Link simbólico (só em macOS)</table>
 <p>No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro <em>aliasType</em> é ignorado).</p>
 <p><strong>Objeto devolvido</strong></p>
@@ -349,19 +83,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationdate>.creationDate<a href=#creationdate class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.creationDate</strong> : Date</p>
@@ -370,19 +91,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationtime>.creationTime<a href=#creationtime class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.creationTime</strong> : Time</p>
@@ -391,65 +99,15 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=delete>.delete()<a href=#delete class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.delete</strong>( { <em>option</em> : Integer } )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>option<td>Integer<td>-><td>Opção de eliminação de pasta</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-6>Descrição<a href=#descrição-6 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>.delete()</code> exclui a pasta.</p>
 <p>Por padrão, por razões de segurança, se omitir o parâmetro de opção, <code>.delete( )</code> só permite a eliminação de pastas vazias. Se quiser que o comando possa apagar pastas que não estejam vazias, deve utilizar o parâmetro de opção com uma das seguintes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>Delete only if empty</code><td>0<td>Elimina a pasta apenas quando está vazia<tr><td><code>Delete with contents</code><td>1<td>Apaga a pasta juntamente com tudo o que a mesma contém</table>
 <p>Quando <code>Delete only if empty</code> for passado ou se você omitir o parâmetro de opção:</p>
 <ul>
@@ -466,19 +124,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exists>.exists<a href=#exists class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.exists</strong> : Boolean</p>
@@ -487,19 +132,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=extension>.extension<a href=#extension class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.extension</strong> : Text</p>
@@ -508,46 +140,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=file>.file()<a href=#file class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>path<td>Text<td>-><td>Rota POSIX relativa<tr><td>Resultados<td>4D. File<td>&lt;-<td>Objeto 'File' (null se caminho inválido)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-9>Descrição<a href=#descrição-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -559,46 +155,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $myPDF : 4D. File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=files>.files()<a href=#files class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>options<td>Integer<td>-><td>Opções da lista de arquivos<tr><td>Resultados<td>Collection<td>&lt;-<td>Coleção de objetos de arquivo filho</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-10>Descrição<a href=#descrição-10 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -607,26 +167,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Os apelidos ou links simbolicos não são resolvidos.</p>
 </blockquote>
 <p>By default, if you omit the <em>options</em> parameter, only the files at the first level of the folder are returned in the collection, including invisible files. Pode modificar isso passando, no parâmetro <em>options</em>, uma ou várias das constantes abaixo:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk recursive</code><td>1<td>A coleção contém arquivos da pasta especificada e suas subpastas<tr><td><code>fk ignore invisible</code><td>8<td>Arquivos invisíveis não estão listados</table>
 <p><strong>Valor retornado</strong></p>
 <p>Coleção de objetos <code>File</code>.</p>
@@ -638,46 +178,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $recursive : Collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $recursive:=Folder(fk documents folder).files(fk recursive+fk ignore invisible)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=folder>.folder()<a href=#folder class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>path<td>Text<td>-><td>Rota POSIX relativa<tr><td>Resultados<td>4D. Folder<td>&lt;-<td>Objeto pasta criado (null se <em>path</em> for inválida*)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-11>Descrição<a href=#descrição-11 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -689,71 +193,15 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $mypicts : 4D. Folder</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $mypicts:=Folder(fk documents folder).folder("Pictures")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=folders>.folders()<a href=#folders class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>options<td>Integer<td>-><td>Opções da lista de pasta<tr><td>Resultados<td>Collection<td>&lt;-<td>Coleção de objetos de pasta filho</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-12>Descrição<a href=#descrição-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>.folders()</code> retorna uma coleção de objetos <code>Folder</code> contidos na pasta principal.</p>
 <p>Como padrão, se omitir o parâmetro <em>options</em>, só se devolvem as pastas no primeiro nível da pasta. Pode modificar isso passando, no parâmetro <em>options</em>, uma ou várias das constantes abaixo:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk recursive</code><td>1<td>A coleção contém pastas da pasta especificada e suas subpastas<tr><td><code>fk ignore invisible</code><td>8<td>Pastas invisíveis não estão listados</table>
 <p><strong>Valor retornado</strong></p>
 <p>Coleção de objetos <code>Folder</code>.</p>
@@ -762,19 +210,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $allFolders : Collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $allFolders:=Folder("/PACKAGE").folders(fk recursive)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=fullname>.fullName<a href=#fullname class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.fullName</strong> : Text</p>
@@ -783,46 +218,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=geticon>.getIcon()<a href=#geticon class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>size<td>Integer<td>-><td>Longitude de lado da imagem devolvida (píxeles)<tr><td>Resultados<td>Imagem<td>&lt;-<td>Ícone</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-14>Descrição<a href=#descrição-14 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -833,19 +232,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a class="" href=/docs/pt/21-R4/Concepts/picture>Imagem</a> do ícone da pasta.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hidden>.hidden<a href=#hidden class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.hidden</strong> : Boolean</p>
@@ -854,19 +240,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isalias>.isAlias<a href=#isalias class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isAlias</strong> : Boolean</p>
@@ -875,19 +248,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfile>.isFile<a href=#isfile class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isFile</strong> : Boolean</p>
@@ -896,19 +256,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfolder>.isFolder<a href=#isfolder class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isFolder</strong> : Boolean</p>
@@ -917,19 +264,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ispackage>.isPackage<a href=#ispackage class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isPackage</strong> : Boolean</p>
@@ -939,19 +273,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationdate>.modificationDate<a href=#modificationdate class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.modificationDate</strong> : Date</p>
@@ -960,19 +281,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationtime>.modificationTime<a href=#modificationtime class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.modificationTime</strong> : Time</p>
@@ -981,52 +289,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=moveto>.moveTo()<a href=#moveto class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>destinationFolder<td>4D. Folder<td>-><td>Pasta de destino<tr><td>newName<td>Text<td>-><td>Nome completo para a pasta movida<tr><td>Resultados<td>4D. Folder<td>&lt;-<td>Pasta movida</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-22>Descrição<a href=#descrição-22 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1040,19 +306,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $tomove; $moved : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $docs:=Folder(fk documents folder)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $tomove:=$docs.folder("Pictures")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=name>.name<a href=#name class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.name</strong> : Text</p>
@@ -1061,19 +314,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=original>.original<a href=#original class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.original</strong> : 4D.Folder</p>
@@ -1085,19 +325,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parent>.parent<a href=#parent class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.parent</strong> : 4D.Folder</p>
@@ -1107,19 +334,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=path>.path<a href=#path class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.path</strong> : Text</p>
@@ -1128,19 +342,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=platformpath>.platformPath<a href=#platformpath class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.platformPath</strong> : Text</p>
@@ -1149,46 +350,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rename>.rename()<a href=#rename class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>newName<td>Text<td>-><td>Novo nome completo para a pasta<tr><td>Resultados<td>4D. Folder<td>&lt;-<td>Renomeado arquivo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-28>Descrição<a href=#descrição-28 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>

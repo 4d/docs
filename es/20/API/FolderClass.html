@@ -1,4 +1,4 @@
-<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FolderClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Folder | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/20/API/FolderClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Folder | 4D Docs"/><meta data-rh=true name=description content="Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando Folder para crear una nueva carpeta, se crea un objeto Folder válido, pero en realidad no se almacena nada en el disco hasta que llame a la función folder.create()."/><meta data-rh=true property=og:description content="Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando Folder para crear una nueva carpeta, se crea un objeto Folder válido, pero en realidad no se almacena nada en el disco hasta que llame a la función folder.create()."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/20/API/FolderClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FolderClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FolderClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FolderClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FolderClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FolderClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FolderClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/core-development","name":"Desarrollo","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/API/FolderClass","name":"Folder","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.c4b88155.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FolderClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Folder | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/20/API/FolderClass /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Folder | 4D Docs"/><meta data-rh=true name=description content="Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando Folder para crear una nueva carpeta, se crea un objeto Folder válido, pero en realidad no se almacena nada en el disco hasta que llame a la función folder.create()."/><meta data-rh=true property=og:description content="Comentario Contienen referencias a carpetas que pueden o no existir realmente en el disco. Por ejemplo, cuando ejecuta el comando Folder para crear una nueva carpeta, se crea un objeto Folder válido, pero en realidad no se almacena nada en el disco hasta que llame a la función folder.create()."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/20/API/FolderClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FolderClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FolderClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FolderClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FolderClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FolderClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FolderClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/core-development","name":"Desarrollo","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/category/class-API-reference","name":"Clases","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/20/API/FolderClass","name":"Folder","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.850d0374.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/es/img/logohome.png /><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar la barra de navegación" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/es/><div class=navbar__logo><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentación 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/es/20/API/FolderClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/es/API/FolderClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/es/21-R4/API/FolderClass>21 R4</a><li><a class=dropdown__link href=/docs/es/21/API/FolderClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/es/20/API/FolderClass>20</a><li><a class=dropdown__link href=/docs/es/19/API/FolderClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="La página no está disponible en esta versión
@@ -9,163 +9,13 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rutas-de-acceso>Rutas de acceso<a href=#rutas-de-acceso class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h3>
 <p>Los objetos <code>Folder</code> admiten varios nombres de ruta, incluida la sintaxis <code>filesystems</code> o <code>posix</code>. Los nombres de ruta soportados se detallan en la página <a class="" href=/docs/es/20/Concepts/paths><strong>Rutas de acceso</strong></a>.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-folder>Objeto Folder<a href=#objeto-folder class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#copyto class=""><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.Folder</a>    copia el objeto <code>Folder</code> en la <em>destinationFolder</em> especificada<tr><td><a href=#create class=""><strong>.create()</strong> : Boolean</a>    crea una carpeta en el disco según las propiedades del objeto <code>Folder</code><tr><td><a href=#createalias class=""><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a>    crea un alias (macOS) o un acceso directo (Windows)<tr><td><a href=#creationdate class=""><strong>.creationDate</strong> : Date</a>    la fecha de creación de la carpeta<tr><td><a href=#creationtime class=""><strong>.creationTime</strong> : Time</a>    la hora de creación de la carpeta<tr><td><a href=#delete class=""><strong>.delete</strong>( { <em>option</em> : Integer } )</a>    borra la carpeta<tr><td><a href=#exists class=""><strong>.exists</strong> : Boolean</a>    true si la carpeta existe en disco<tr><td><a href=#extension class=""><strong>.extension</strong> : Text</a>    devuelve la extensión del nombre de la carpeta (si la hay)<tr><td><a href=#file class=""><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</a>    un objeto <code>File</code> dentro del objeto <code>Folder</code> y devuelve su referencia<tr><td><a href=#files class=""><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</a>    una colección de objetos <code>File</code> contenidos en la carpeta<tr><td><a href=#folder class=""><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</a>    crea un objeto <code>Folder</code> dentro del objeto <code>Folder</code> padre y devuelve su referencia<tr><td><a href=#folders class=""><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</a>    devuelve una colección de objetos <code>Folder</code> contenidos en la carpeta padre<tr><td><a href=#fullname class=""><strong>.fullName</strong> : Text</a>    devuelve el nombre completo de la carpeta, incluyendo su extensión (si la hay)<tr><td><a href=#geticon class=""><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a>    devuelve el icono de la carpeta<tr><td><a href=#hidden class=""><strong>.hidden</strong> : Boolean</a>     true si la carpeta está configurada como "oculta" a nivel de sistema<tr><td><a href=#isalias class=""><strong>.isAlias</strong> : Boolean</a>    siempre <strong>false</strong> para un objeto <code>Folder</code><tr><td><a href=#isfile class=""><strong>.isFile</strong> : Boolean</a>    siempre <strong>false</strong> para una carpeta<tr><td><a href=#isfolder class=""><strong>.isFolder</strong> : Boolean</a>    siempre <strong>true</strong> para una carpeta<tr><td><a href=#ispackage class=""><strong>.isPackage</strong> : Boolean</a>    true si la carpeta es un paquete en macOS (y existe en el disco)<tr><td><a href=#modificationdate class=""><strong>.modificationDate</strong> : Date</a>     la fecha de la última modificación de la carpeta<tr><td><a href=#modificationtime class=""><strong>.modificationTime</strong> : Time</a>    la hora de la última modificación de la carpeta<tr><td><a href=#name class=""><strong>.name</strong> : Text</a>     el nombre de la carpeta, sin extensión (si la hay)<tr><td><a href=#original class=""><strong>.original</strong> : 4D.Folder</a>    el mismo objeto de la carpeta<tr><td><a href=#parent class=""><strong>.parent</strong> : 4D.Folder</a>    el objeto carpeta padre de la carpeta<tr><td><a href=#path class=""><strong>.path</strong> : Text</a>    la ruta POSIX de la carpeta<tr><td><a href=#platformpath class=""><strong>.platformPath</strong> : Text</a>    la ruta del archivo expresada con la sintaxis de la plataforma actual<tr><td><a href=#moveto class=""><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a>    mueve o renombra el objeto <code>Folder</code> (carpeta de origen) a la <em>carpeta de destino</em> especificada<tr><td><a href=#rename class=""><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a>    renombra la carpeta con el nombre introducido en <em>newName</em> y devuelve el objeto <code>Folder</code> renombrado</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=folder>Folder<a href=#folder class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>19 R8<td>Soporte de <code>fk home folder</code><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>Folder</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer }{ ; * } ) : 4D.Folder<br/><strong>Folder</strong> ( <em>folderConstant</em> : Integer { ; * } ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>path<td>Text<td style=text-align:center>-><td>Ruta de la carpeta<tr><td>folderConstant<td>Integer<td style=text-align:center>-><td>Constante de la carpeta 4D<tr><td>pathType<td>Integer<td style=text-align:center>-><td><code>fk posix path</code> (por defecto) o <code>fk platform path</code><tr><td>*<td><td style=text-align:center>-><td>* para devolver la carpeta de la base local<tr><td>Resultado<td>4D.Folder<td style=text-align:center>&lt;-<td>Nuevo objeto de carpeta</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción>Descripción<a href=#descripción class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -176,109 +26,9 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Sólo se soportan los nombres de ruta absolutos con el comando <code>Folder</code>.</p>
 </blockquote>
 <p>Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro <em>pathType</em>. Las siguientes constantes están disponibles:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td>fk platform path<td>1<td>Ruta expresada con una sintaxis específica de la plataforma (obligatoria en caso de nombre de ruta de plataforma)<tr><td>fk posix path<td>0<td>Ruta expresada con sintaxis POSIX (por defecto)</table>
 <p><strong>Folder ( folderConstant { ; * } )</strong></p>
 <p>En el parámetro <em>folderConstant</em>, pase una carpeta 4D interna o sistema, utilizando una de las siguientes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td>fk applications folder<td>116<td><tr><td>fk data folder<td>9<td>Filesystem asociado: "/DATA"<tr><td>fk database folder<td>4<td>Filesystem asociado: "/PACKAGE"<tr><td>fk desktop folder<td>115<td><tr><td>fk documents folder<td>117<td>Carpeta Documentos del usuario<tr><td>fk home folder<td>118<td>Carpeta personal actual del usuario (generalmente <code>/Users/&lt;username>/</code>)<tr><td>fk licenses folder<td>1<td>Carpeta que contiene los archivos de licencia 4D de la máquina<tr><td>fk logs folder<td>7<td>Filesystem asociado: "/LOGS"<tr><td>fk mobileApps folder<td>10<td><tr><td>fk remote database folder<td>3<td>Carpeta de la base de datos 4D creada en cada máquina 4D remota<tr><td>fk resources folder<td>6<td>Filesystem asociado: "/RESOURCES"<tr><td>fk system folder<td>100<td><tr><td>fk user preferences folder<td>0<td>Carpeta 4D que almacena los archivos de preferencias del usuario en la carpeta personal del usuario<tr><td>fk web root folder<td>8<td>Carpeta raíz web actual de la base de datos: si está dentro del paquete "/PACKAGE/path", si no ruta completa</table>
 <p>Si el comando se llama desde un componente, pase el parámetro opcional * para obtener la ruta de la base local. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.</p>
 <blockquote>
@@ -286,19 +36,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dfoldernew>4D.Folder.new()<a href=#4dfoldernew class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>18 R6<td>Añadidos</table>
 </div></div></details>
 <p><strong>4D.Folder.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer } ) : 4D.Folder<br/><strong>4D.Folder.new</strong> ( <em>folderConstant</em> : Integer ) : 4D.Folder</p>
@@ -309,58 +46,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=copyto>.copyTo()<a href=#copyto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th style=text-align:center><th>Descripción<tbody><tr><td>destinationFolder<td>4D.Folder<td style=text-align:center>-><td>Carpeta de destino<tr><td>newName<td>Text<td style=text-align:center>-><td>Nombre para la copia<tr><td>overwrite<td>Integer<td style=text-align:center>-><td><code>fk overwrite</code> para sustituir los elementos existentes<tr><td>Resultado<td>4D.Folder<td style=text-align:center>&lt;-<td>Carpeta o archivo copiado</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-2>Descripción<a href=#descripción-2 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -368,21 +57,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
 <p>Por defecto, la carpeta se copia con el nombre de la carpeta original. Por defecto, la carpeta se copia con el nombre de la carpeta original. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.</p>
 <p>Si ya existe una carpeta con el mismo nombre en la <em>destinationFolder</em>, por defecto 4D genera un error. Puede pasar la constante <code>fk overwrite</code> en el parámetro <em>overwrite</em> para ignorar y sobrescribir el archivo existente</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>fk overwrite</code><td>4<td>Sobrescribir los elementos existentes, si los hay</table>
 <p><strong>Valor devuelto</strong></p>
 <p>El objeto <code>Folder</code> copiado.</p>
@@ -391,40 +65,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $userImages; $copiedImages : 4D.Folder</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$userImages:=Folder(fk documents folder).folder("Pictures")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=create>.create()<a href=#create class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.create()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>Resultado<td>Boolean<td>&lt;-<td>True si la carpeta se ha creado con éxito, false en caso contrario</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-3>Descripción<a href=#descripción-3 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -443,84 +87,16 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$newFolder:=Folder("/PACKAGE/Archives2019/January")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">If($newFolder.create())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ALERT("La carpeta "+$newFolder.name+" fue creada.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> ALERT("Imposible crear la carpeta "+$newFolder.name+".")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=createalias>.createAlias()<a href=#createalias class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>Carpeta de destino para el alias o el acceso directo<tr><td>aliasName<td>Text<td>-><td>Nombre del alias o del atajo<tr><td>aliasType<td>Integer<td>-><td>Tipo de enlace del alias<tr><td>Resultado<td>4D.File<td>&lt;-<td>Referencia de alias o de acceso directo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-4>Descripción<a href=#descripción-4 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>La función <code>.createAlias()</code> crea un alias (macOS) o un acceso directo (Windows) a la carpeta con el nombre <em>aliasName</em> especificado en la carpeta designada por el objeto <em>destinationFolder</em>.</p>
 <p>Pase el nombre del alias o del acceso directo a crear en el parámetro <em>aliasName</em>.</p>
 <p>Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro <em>aliasType</em>. Las siguientes constantes están disponibles:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>fk alias link</code><td>0<td>Enlace de alias (por defecto)<tr><td><code>fk symbolic link</code><td>1<td>Enlace simbólico (sólo para macOS)</table>
 <p>En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro <em>aliasType</em> es ignorado).</p>
 <p><strong>Objeto devuelto</strong></p>
@@ -530,19 +106,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationdate>.creationDate<a href=#creationdate class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.creationDate</strong> : Date</p>
@@ -551,19 +114,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationtime>.creationTime<a href=#creationtime class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.creationTime</strong> : Time</p>
@@ -572,65 +122,15 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=delete>.delete()<a href=#delete class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.delete</strong>( { <em>option</em> : Integer } )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>option<td>Integer<td>-><td>Opción de eliminación de carpeta</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-7>Descripción<a href=#descripción-7 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>La función <code>.delete()</code> borra la carpeta.</p>
 <p>Por defecto, por razones de seguridad, si omite el parámetro de opción, <code>.delete( )</code> sólo permite borrar carpetas vacías. Si desea que el comando pueda eliminar carpetas que no están vacías, debe utilizar el parámetro option con una de las siguientes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>Delete only if empty</code><td>0<td>Elimina la carpeta sólo cuando está vacía<tr><td><code>Delete with contents</code><td>1<td>Elimina la carpeta junto con todo lo que contiene</table>
 <p>Cuando se pasa <code>Delete only if empty</code> o si se omite el parámetro de opción:</p>
 <ul>
@@ -647,19 +147,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 </ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exists>.exists<a href=#exists class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.exists</strong> : Boolean</p>
@@ -668,19 +155,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=extension>.extension<a href=#extension class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.extension</strong> : Text</p>
@@ -689,46 +163,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=file>.file()<a href=#file class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>path<td>Text<td>-><td>Ruta POSIX relativa<tr><td>Resultado<td>4D.File<td>&lt;-<td>Objeto <code>File</code> (null si la ruta es inválida)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-10>Descripción<a href=#descripción-10 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -740,46 +178,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $myPDF : 4D.File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=files>.files()<a href=#files class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>options<td>Integer<td>-><td>Opciones de la lista de archivos<tr><td>Resultado<td>Collection<td>&lt;-<td>Colección de objetos de archivo hijo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-11>Descripción<a href=#descripción-11 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -788,26 +190,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Los alias o enlaces simbólicos no se resuelven.</p>
 </blockquote>
 <p>Por defecto, si omite el parámetro <em>options</em>, solo los archivos del primer nivel de la carpeta se devuelven en la colección, incluyendo archivos invisibles. Puede modificar esto pasando, en el parámetro <em>options</em>, una o varias de las siguientes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>fk recursive</code><td>1<td>La colección contiene los archivos de la carpeta especificada y sus subcarpetas<tr><td><code>fk ignore invisible</code><td>8<td>Los archivos invisibles no aparecen en la lista</table>
 <p><strong>Valor devuelto</strong></p>
 <p>Colección de objetos<code>File</code>.</p>
@@ -819,46 +201,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $recursive : Collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $recursive:=Folder(fk documents folder).files(fk recursive+fk ignore invisible)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=folder-1>.folder()<a href=#folder-1 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>path<td>Text<td>-><td>Ruta POSIX relativa<tr><td>Resultado<td>4D.Folder<td>&lt;-<td>Objeto carpeta creado (null si <em>path</em> es inválido)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-12>Descripción<a href=#descripción-12 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -870,71 +216,15 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $mypicts : 4D.Folder</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $mypicts:=Folder(fk documents folder).folder("Pictures")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=folders>.folders()<a href=#folders class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>options<td>Integer<td>-><td>Opciones de la lista de carpetas<tr><td>Resultado<td>Collection<td>&lt;-<td>Colección de objetos de carpeta hijo</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-13>Descripción<a href=#descripción-13 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p>La función <code>.folders()</code> devuelve una colección de objetos <code>Folder</code> contenidos en la carpeta padre.</p>
 <p>Por defecto, si se omite el parámetro <em>options</em>, sólo se devuelven en la colección las carpetas del primer nivel de la carpeta. Puede modificar esto pasando, en el parámetro <em>options</em>, una o varias de las siguientes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Valor<th>Comentario<tbody><tr><td><code>fk recursive</code><td>1<td>La colección contiene las carpetas de la carpeta especificada y sus subcarpetas<tr><td><code>fk ignore invisible</code><td>8<td>Los archivos invisibles no aparecen en la lista</table>
 <p><strong>Valor devuelto</strong></p>
 <p>Colección de objetos <code>Folder</code>.</p>
@@ -943,19 +233,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $allFolders : Collection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $allFolders:=Folder("/PACKAGE").folders(fk recursive)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=fullname>.fullName<a href=#fullname class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.fullName</strong> : Text</p>
@@ -964,46 +241,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=geticon>.getIcon()<a href=#geticon class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>size<td>Integer<td>-><td>Longitud del lado de la imagen devuelta (píxeles)<tr><td>Resultado<td>Picture<td>&lt;-<td>Icono</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-15>Descripción<a href=#descripción-15 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1014,19 +255,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p><a class="" href=/docs/es/20/Concepts/picture>Imagen</a> del icono de la carpeta.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hidden>.hidden<a href=#hidden class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.hidden</strong> : Boolean</p>
@@ -1035,19 +263,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isalias>.isAlias<a href=#isalias class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.isAlias</strong> : Boolean</p>
@@ -1056,19 +271,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfile>.isFile<a href=#isfile class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.isFile</strong> : Boolean</p>
@@ -1077,19 +279,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfolder>.isFolder<a href=#isfolder class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.isFolder</strong> : Boolean</p>
@@ -1098,19 +287,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ispackage>.isPackage<a href=#ispackage class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.isPackage</strong> : Boolean</p>
@@ -1120,19 +296,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationdate>.modificationDate<a href=#modificationdate class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.modificationDate</strong> : Date</p>
@@ -1141,19 +304,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationtime>.modificationTime<a href=#modificationtime class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.modificationTime</strong> : Time</p>
@@ -1162,52 +312,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=moveto>.moveTo()<a href=#moveto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>destinationFolder<td>4D.Folder<td>-><td>Carpeta de destino<tr><td>newName<td>Text<td>-><td>Nombre completo de la carpeta trasladada<tr><td>Resultado<td>4D.Folder<td>&lt;-<td>Carpeta movida</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-23>Descripción<a href=#descripción-23 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -1221,19 +329,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $tomove; $moved : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $docs:=Folder(fk documents folder)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $tomove:=$docs.folder("Pictures")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=name>.name<a href=#name class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.name</strong> : Text</p>
@@ -1242,19 +337,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=original>.original<a href=#original class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.original</strong> : 4D.Folder</p>
@@ -1266,19 +348,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parent>.parent<a href=#parent class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.parent</strong> : 4D.Folder</p>
@@ -1288,19 +357,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=path>.path<a href=#path class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.path</strong> : Text</p>
@@ -1309,19 +365,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=platformpath>.platformPath<a href=#platformpath class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.platformPath</strong> : Text</p>
@@ -1330,46 +373,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Esta propiedad es de <strong>solo lectura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rename>.rename()<a href=#rename class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historia</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Lanzamiento<th>Modificaciones<tbody><tr><td>17 R5<td>Añadidos</table>
 </div></div></details>
 <p><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parámetros<th>Tipo<th><th>Descripción<tbody><tr><td>newName<td>Text<td>-><td>Nuevo nombre completo para la carpeta<tr><td>Resultado<td>4D.Folder<td>&lt;-<td>Carpeta renombrada</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descripción-29>Descripción<a href=#descripción-29 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>

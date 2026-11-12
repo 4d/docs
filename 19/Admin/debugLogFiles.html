@@ -1,4 +1,4 @@
-<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-Admin/debugLogFiles" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Description of log files | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/19/Admin/debugLogFiles /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Description of log files | 4D Docs"/><meta data-rh=true name=description content="4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the SET DATABASE PARAMETER or WEB SET OPTION commands and are stored in the Logs folder of the project."/><meta data-rh=true property=og:description content="4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the SET DATABASE PARAMETER or WEB SET OPTION commands and are stored in the Logs folder of the project."/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/19/Admin/debugLogFiles /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/debugLogFiles hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/Admin/debugLogFiles hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/Admin/debugLogFiles hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/Admin/debugLogFiles hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/Admin/debugLogFiles hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/debugLogFiles hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/19/Admin/debugLogFiles","name":"Description of log files","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.5b6e6d51.js defer></script><script src=/docs/assets/js/main.0783b5ac.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-Admin/debugLogFiles" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Description of log files | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/19/Admin/debugLogFiles /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Description of log files | 4D Docs"/><meta data-rh=true name=description content="4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the SET DATABASE PARAMETER or WEB SET OPTION commands and are stored in the Logs folder of the project."/><meta data-rh=true property=og:description content="4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the SET DATABASE PARAMETER or WEB SET OPTION commands and are stored in the Logs folder of the project."/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/19/Admin/debugLogFiles /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/debugLogFiles hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/Admin/debugLogFiles hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/Admin/debugLogFiles hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/Admin/debugLogFiles hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/Admin/debugLogFiles hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/debugLogFiles hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/19/Admin/debugLogFiles","name":"Description of log files","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.51a757fe.js defer></script><script src=/docs/assets/js/main.0dec8d36.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/img/logohome.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/19/Admin/debugLogFiles>19</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/19/Admin/debugLogFiles>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -48,63 +48,6 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contents>Contents<a href=#contents class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
 <p>For each request, the following fields are logged:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Field name<th>Description<tbody><tr><td>sequence_number<td>Unique and sequential operation number in the logging session<tr><td>time<td>Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.mmm'<tr><td>systemid<td>System ID<tr><td>component<td>Component signature (e.g., '4SQLS' or 'dbmg')<tr><td>process_info_<td>index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.<tr><td>request<td>Request ID in C/S or message string for SQL requests or <code>LOG EVENT</code> messages<tr><td>bytes_in<td>Number of bytes received<tr><td>bytes_out<td>Number of bytes sent<tr><td>server_duration | exec_duration<td>Depends on where the log is generated:<li class=""><em>server_duration</em> when generated on the client --Time taken in microseconds for the server to process the request and return a response. B to F in image below, OR</li><li class=""><em>exec_duration</em> when generated on the server --Time taken in microseconds for the server to process the request. B to E in image below.</li><tr><td>write_duration<td>Time taken in microseconds for sending the:<li class="">Request (when run on the client). A to B in image below.</li><li class="">Response (when run on the server). E to F in image below.</li><tr><td>task_kind<td>Preemptive or cooperative (respectively 'p' or 'c')<tr><td>rtt<td>Time estimate in microseconds for the client to send the request and the server to acknowledge it. A to D and E to H in image below.<li class="">Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.</li><li class="">For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0.</li></table>
 <p>Request flow:</p>
 <p><img decoding=async loading=lazy src=/docs/assets/images/logRequestFlow-4d1667b5e86f1ae2bb483f71b5ee3414.PNG width=535 height=378 class=img_ev3q /></p>
@@ -131,263 +74,30 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contents-1>Contents<a href=#contents-1 class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
 <p>For each process, the following fields are logged:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Field name<th>Description<tbody><tr><td>sequence_number<td>Unique and sequential operation number in the logging session<tr><td>time<td>Date and time using ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm"<tr><td>process_info_index<td>Unique and sequential process number<tr><td>CDB4DBaseContext<td>DB4D component database context UUID<tr><td>systemid<td>System ID<tr><td>server_process_id<td>Process ID on Server<tr><td>remote_process_id<td>Process ID on Client<tr><td>process_name<td>Process name<tr><td>cID<td>Identifier of 4D Connection<tr><td>uID<td>Identifier of 4D Client<tr><td>IP Client<td>IPv4/IPv6 address<tr><td>host_name<td>Client hostname<tr><td>user_name<td>User Login Name on client<tr><td>connection_uuid<td>UUID identifier of process connection<tr><td>server_process_unique_id<td>Unique process ID on Server</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=httpdebuglogtxt>HTTPDebugLog.txt<a href=#httpdebuglogtxt class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.</p>
 <p>How to start this log:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">WEB SET OPTION(Web debug log;wdl enable without body)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//other values are available</span><br/></div></code></pre></div></div>
 <p>The following fields are logged for both Request and Response:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Field name<th>Description<tbody><tr><td>SocketID<td>ID of socket used for communication<tr><td>PeerIP<td>IPv4 address of host (client)<tr><td>PeerPort<td>Port used by host (client)<tr><td>TimeStamp<td>Timestamp in milliseconds (since system startup)<tr><td>ConnectionID<td>Connection UUID (UUID of VTCPSocket used for communication)<tr><td>SequenceNumber<td>Unique and sequential operation number in the logging session</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4ddebuglogtxt-standard>4DDebugLog.txt (standard)<a href=#4ddebuglogtxt-standard class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.</p>
 <p>How to start this log:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Debug Log Recording;2)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//standard, all processes</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Current process debug log recording;2)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//standard, current process only</span><br/></div></code></pre></div></div>
 <p>The following fields are logged for each event:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Column #<th>Description<tbody><tr><td>1<td>Unique and sequential operation number in the logging session<tr><td>2<td>Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>3<td>Process ID (p=xx) and unique process ID (puid=xx)<tr><td>4<td>Stack level<tr><td>5<td>Can be Command Name/ Method Name/Message/ Task Start Stop info/Plugin Name, event or Callback/Connection UUID<tr><td>6<td>Time taken for logging operation in milliseconds</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4ddebuglogtxt-tabular>4DDebugLog.txt (tabular)<a href=#4ddebuglogtxt-tabular class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).</p>
 <p>How to start this log:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Debug Log Recording;2+4)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//extended tabbed format, all processes</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Current process debug log recording;2+4)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//extended, current process only</span><br/></div></code></pre></div></div>
 <p>The following fields are logged for each event:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Column #<th>Field name<th>Description<tbody><tr><td>1<td>sequence_number<td>Unique and sequential operation number in the logging session<tr><td>2<td>time<td>Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>3<td>ProcessID<td>Process ID<tr><td>4<td>unique_processID<td>Unique process ID<tr><td>5<td>stack_level<td>Stack level<tr><td>6<td>operation_type<td>Log operation type. This value may be an absolute value:<ol><li class="">Command<li class="">Method (project method, database method, etc.)<li class="">Message (sent by <a href=https://doc.4d.com/4dv19/help/command/en/page667.html target=_blank rel="noopener noreferrer" class="">LOG EVENT</a> command only)<li class="">PluginMessage<li class="">PluginEvent<li class="">PluginCommand<li class="">PluginCallback<li class="">Task<li class="">Member method (method attached to a collection or an object)</ol>When closing a stack level, the <code>operation_type</code>, <code>operation</code> and <code>operation_parameters</code> columns have the same value as the opening stack level logged in the <code>stack_opening_sequence_number</code> column. For example:<ol><li class="">121  15:16:50:777  5  8  1  2 CallMethod Parameters 0<li class="">122  15:16:50:777  5  8  2  1 283  0<li class="">123  15:16:50:777  5  8  2  1 283  0 122 3<li class="">124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</ol>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.<tr><td>7<td>operation<td>May represent (depending on operation type):<li class="">a Language Command ID (when type=1)</li><li class="">a Method Name (when type=2)</li><li class="">a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li class="">a Task Connection UUID (when type=8)</li><tr><td>8<td>operation_parameters<td>Parameters passed to commands, methods, or plugins<tr><td>9<td>form_event<td>Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)<tr><td>10<td>stack_opening_sequence_number<td>Only for the closing stack levels: Sequence number of the corresponding opening stack level<tr><td>11<td>stack_level_execution_time<td>Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4ddiagnosticlogtxt>4DDiagnosticLog.txt<a href=#4ddiagnosticlogtxt class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the <a href=https://doc.4d.com/4dv19/help/command/en/page667.html target=_blank rel="noopener noreferrer" class="">LOG EVENT</a> command.</p>
 <p>How to start this log:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> SET DATABASE PARAMETER(Diagnostic log recording;1) //start recording</span><br/></div></code></pre></div></div>
 <p>The following fields are logged for each event:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Field Name<th>Description<tbody><tr><td>sequenceNumber<td>Unique and sequential operation number in the logging session<tr><td>timestamp<td>Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>loggerID<td>Optional<tr><td>componentSignature<td>Optional - internal component signature<tr><td>messageLevel<td>Info, Warning, Error<tr><td>message<td>Description of the log entry</table>
 <p>Depending on the event, various other fields can also be logged, such as task, socket, etc.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt>4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt<a href=#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
@@ -426,35 +136,6 @@ no automatic recycling</li>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$server:=New object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//SMTP</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MySMTPAuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=SMTP New transporter($server)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// POP3</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MyPOP3AuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=POP3 New transporter($server)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//IMAP</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MyIMAPAuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=IMAP New transporter($server)</span><br/></div></code></pre></div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contents-2>Contents<a href=#contents-2 class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h4>
 <p>For each request, the following fields are logged:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Column #<th>Description<tbody><tr><td>1<td>Unique and sequential operation number in the logging session<tr><td>2<td>Date and time in RFC3339 format (yyyy-mm-ddThh:mm:ss.ms)<tr><td>3<td>4D Process ID<tr><td>4<td>Unique process ID<tr><td>5<td><ul><li class="">SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or<li class="">data exchanged between server and client, starting with "S &lt;" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or<li class="">SMTP,POP3, or IMAP session closing information.</ul></table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=orda-client-requests>ORDA client requests<a href=#orda-client-requests class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h2>
 <p>This log records each ORDA request sent from a remote machine. You can direct log information to memory or to a file on disk. The name and location of this log file are your choice.</p>
@@ -463,44 +144,4 @@ no automatic recycling</li>
 <p>If you want to use the unique sequence number in ORDA request log, you need to trigger it:</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">//to be executed on a remote machine</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Client Log Recording;1)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//to enable log sequence number</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//can be also sent to memory</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Client Log Recording;0)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//disabling sequence number</span><br/></div></code></pre></div></div>
 <p>The following fields are logged for each request:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Field name<th>Description<th>Example<tbody><tr><td>sequenceNumber<td>Unique and sequential operation number in the logging session<td>104<tr><td>url<td>Client ORDA request URL<td>"rest/Persons(30001)"<tr><td>startTime<td>Starting date and time using ISO 8601 format<td>"2019-05-28T08:25:12.346Z"<tr><td>endTime<td>Ending date and time using ISO 8601 format<td>"2019-05-28T08:25:12.371Z"<tr><td>duration<td>Client processing duration (ms)<td>25<tr><td>response<td>Server response object<td>{"status":200,"body":{"__entityModel":"Persons",[...]</table></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/4d/docs/issues/new?title=Comment%20on%20Admin%2FdebugLogFiles.md%20(19)&body=Please%20enter%20your%20comment%3A" target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Comment on this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages navigation"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/19/Admin/cli><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>Command Line Interface</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/19/Users/overview><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>Overview</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#4drequestslogtxt class="table-of-contents__link toc-highlight">4DRequestsLog.txt</a><li><a href=#4drequestslog_processinfotxt class="table-of-contents__link toc-highlight">4DRequestsLog_ProcessInfo.txt</a><li><a href=#httpdebuglogtxt class="table-of-contents__link toc-highlight">HTTPDebugLog.txt</a><li><a href=#4ddebuglogtxt-standard class="table-of-contents__link toc-highlight">4DDebugLog.txt (standard)</a><li><a href=#4ddebuglogtxt-tabular class="table-of-contents__link toc-highlight">4DDebugLog.txt (tabular)</a><li><a href=#4ddiagnosticlogtxt class="table-of-contents__link toc-highlight">4DDiagnosticLog.txt</a><li><a href=#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt class="table-of-contents__link toc-highlight">4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt</a><li><a href=#orda-client-requests class="table-of-contents__link toc-highlight">ORDA client requests</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Community</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://blog.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Blog</a><li class=footer__item><a href=https://discuss.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Forum</a><li class=footer__item><a href=https://facebook.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Facebook</a><li class=footer__item><a href=https://x.com/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>X</a><li class=footer__item><a href=https://youtube.com/user/4Dsoftware target=_blank rel="noopener noreferrer" class=footer__link-item>Youtube</a><li class=footer__item><a href=https://github.com/4D target=_blank rel="noopener noreferrer" class=footer__link-item>Github</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Support</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://github.com/4d/docs/releases/tag/latest target=_blank rel="noopener noreferrer" class=footer__link-item>Documentation download</a><li class=footer__item><a href=https://learn.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Learn 4D</a><li class=footer__item><a href=https://doc.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>4D Doc Center (legacy documentation web site) </a><li class=footer__item><a href=https://kb.4d.com target=_blank rel="noopener noreferrer" class=footer__link-item>Knowledgebase</a><li class=footer__item><a href=https://us.4d.com/product-download target=_blank rel="noopener noreferrer" class=footer__link-item>Downloads</a><li class=footer__item><a href=https://us.4d.com/resources target=_blank rel="noopener noreferrer" class=footer__link-item>Resources</a><li class=footer__item><a href=https://us.4d.com/4d-technical-support target=_blank rel="noopener noreferrer" class=footer__link-item>Get Support</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Company</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://us.4d.com/about-us target=_blank rel="noopener noreferrer" class=footer__link-item>About 4D</a><li class=footer__item><a href=https://us.4d.com/contact-us target=_blank rel="noopener noreferrer" class=footer__link-item>Contact us</a><li class=footer__item><a href=https://us.4d.com/4d-around-the-world target=_blank rel="noopener noreferrer" class=footer__link-item>4D around the world</a><li class=footer__item><a href=https://us.4d.com/Careers target=_blank rel="noopener noreferrer" class=footer__link-item>Careers</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>© 2026 4D SAS - All rights reserved <div style=margin-top:8px><i>Some content is written with the help of AI</i></div></div></div></div></footer></div></body>

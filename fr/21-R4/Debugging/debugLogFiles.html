@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-Debugging/debugLogFiles" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Fichiers journaux | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Fichiers journaux | 4D Docs"/><meta data-rh=true name=description content="Les applications 4D peuvent générer divers fichiers journaux (ou &quot;logs&quot;) qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement lancés ou arrêtés à l'aide des sélecteurs des commandes SET DATABASE PARAMETER, WEB SET OPTION, ou HTTP SET OPTION et sont stockés dans le dossier Logs du projet."/><meta data-rh=true property=og:description content="Les applications 4D peuvent générer divers fichiers journaux (ou &quot;logs&quot;) qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement lancés ou arrêtés à l'aide des sélecteurs des commandes SET DATABASE PARAMETER, WEB SET OPTION, ou HTTP SET OPTION et sont stockés dans le dossier Logs du projet."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/Debugging/debugLogFiles hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/Debugging/debugLogFiles hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/Debugging/debugLogFiles hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/Debugging/debugLogFiles hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/Debugging/debugLogFiles hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/server--admin","name":"Serveur & Admin","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles","name":"Fichiers journaux","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-Debugging/debugLogFiles" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Fichiers journaux | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Fichiers journaux | 4D Docs"/><meta data-rh=true name=description content="Les applications 4D peuvent générer divers fichiers journaux (ou &quot;logs&quot;) qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement lancés ou arrêtés à l'aide des sélecteurs des commandes SET DATABASE PARAMETER, WEB SET OPTION, ou HTTP SET OPTION et sont stockés dans le dossier Logs du projet."/><meta data-rh=true property=og:description content="Les applications 4D peuvent générer divers fichiers journaux (ou &quot;logs&quot;) qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement lancés ou arrêtés à l'aide des sélecteurs des commandes SET DATABASE PARAMETER, WEB SET OPTION, ou HTTP SET OPTION et sont stockés dans le dossier Logs du projet."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/Debugging/debugLogFiles hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/Debugging/debugLogFiles hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/Debugging/debugLogFiles hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/Debugging/debugLogFiles hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/Debugging/debugLogFiles hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/server--admin","name":"Serveur & Admin","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/Debugging/debugLogFiles","name":"Fichiers journaux","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/21-R4/Debugging/debugLogFiles>21 R4</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/Debugging/debugLogFiles>21 R5 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/21-R4/Debugging/debugLogFiles>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/Debugging/debugLogFiles>21</a><li><a class=dropdown__link href=/docs/fr/20/Debugging/debugLogFiles>20</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -49,67 +49,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contenu>Contenu<a href=#contenu class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Pour chaque requête, les champs suivants sont enregistrés :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<tbody><tr><td>sequence_number<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>time<td>Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'<tr><td>systemid<td>ID système<tr><td>component<td>Signature du composant (par exemple '4SQLS' ou 'dbmg')<tr><td>process_info_index<td>Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.<tr><td>request<td><a href=https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt target=_blank rel="noopener noreferrer" class="">ID de la requête C/S ou ORDA</a> ou message pour les requêtes SQL ou messages <code>LOG EVENT</code><tr><td>bytes_in<td>Nombre d'octets reçus<tr><td>bytes_out<td>Nombre d'octets envoyés<tr><td>server_duration | exec_duration<td>Dépend de l'endroit où le journal est généré :<li class="">_server*duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li class="">_exec*duration* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li><tr><td>write_duration<td>Temps pris en microsecondes pour l'envoi de la :<li class="">Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li class="">Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li><tr><td>task_kind<td>Préemptif ou coopératif (respectivement 'p' ou 'c')<tr><td>rtt<td>Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. A à D et E à H dans l'image ci-dessous.<li class="">Uniquement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lors de l'utilisation de la couche réseau legacy.</li><li class="">Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renvoie 0.</li><tr><td>extra<td>Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA</table>
 <p>Acheminement de la requête :</p>
 <p><img decoding=async loading=lazy src=/docs/fr/assets/images/logRequestFlow-4d1667b5e86f1ae2bb483f71b5ee3414.PNG width=535 height=378 class=img_ev3q /></p>
@@ -136,153 +75,18 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contenu-1>Contenu<a href=#contenu-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Pour chaque process, les champs suivants sont enregistrés :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<tbody><tr><td>sequence_number<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>time<td>Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"<tr><td>process_info_index<td>Numéro de process séquentiel et unique<tr><td>CDB4DBaseContext<td>UUID du contexte de base du composant DB4D<tr><td>systemid<td>ID système<tr><td>server_process_id<td>ID du process sur le serveur<tr><td>remote_process_id<td>ID du process sur le client<tr><td>process_name<td>Nom du process<tr><td>cID<td>Identifiant de la connexion 4D<tr><td>uID<td>Identifiant du client 4D<tr><td>IP Client<td>Addresse IPv4/IPv6 du client<tr><td>host_name<td>Nom d'hôte du client<tr><td>user_name<td>Nom de connexion utilisateur sur le client<tr><td>connection_uuid<td>Identifiant UUID de process de connexion<tr><td>server_process_unique_id<td>ID unique du process sur le serveur</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=httpdebuglogtxt>HTTPDebugLog.txt<a href=#httpdebuglogtxt class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Ce fichier journal enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.</p>
 <p>Pour lancer ce journal :</p>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">WEB SET OPTION(Web debug log;wdl enable without body)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//d'autres valeurs sont disponibles</span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">WEB SET OPTION(Web debug log;wdl enable without body)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//d'autres valeurs sont disponibles</span><br/></div></code></pre></div></div>
 <p>Les champs suivants sont enregistrés pour Requête et Réponse :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<tbody><tr><td>SocketID<td>ID du socket utilisé pour la communication<tr><td>PeerIP<td>Adresse IPv4 de l'hôte (client)<tr><td>PeerPort<td>Port utilisé par l'hôte (client)<tr><td>TimeStamp<td>Horodatage en millisecondes (depuis le démarrage du système)<tr><td>ConnectionID<td>Connexion UUID (UUID du VTCPSocket utilisé pour la communication)<tr><td>SequenceNumber<td>Numéro d'opération séquentiel et unique dans la session de log</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dhttpclientlogtxt>4DHTTPClientLog.txt<a href=#4dhttpclientlogtxt class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Ce fichier journal enregistre le trafic HTTP qui passe par le client HTTP 4D. Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent optionnellement être enregistrées.</p>
 <p>Pour lancer ce journal :</p>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//d'autres valeurs sont disponibles</span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//d'autres valeurs sont disponibles</span><br/></div></code></pre></div></div>
 <p>Les champs suivants sont enregistrés pour Requête et Réponse :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<tbody><tr><td>SequenceID<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>ConnectionID<td>Identifiant UUID de process de connexion<tr><td>LocalIP<td>Adresse IP du Client<tr><td>PeerIP<td>Adresse IP du serveur<tr><td>TimeStamp<td>Horodatage (ms) de l'envoi de la requête ou de la réception entière de la réponse<tr><td>ElapsedTimeInMs<td>(réponse uniquement) Différence avec l'horodatage de la requête</table>
 <p>En fonction des options de journalisation, d'autres champs peuvent également être enregistrés.</p>
 <ul>
@@ -294,189 +98,23 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Pour lancer ce journal :</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Debug Log Recording;2)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//standard, tous les process</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Current process debug log recording;2)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//standard, process courant uniquement</span><br/></div></code></pre></div></div>
 <p>Les champs suivants sont enregistrés pour chaque évènement :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Colonne #<th>Description<tbody><tr><td>1<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>2<td>Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>3<td>ID process (p=xx) et ID unique process (puid=xx)<tr><td>4<td>Niveau de stack (pile)<tr><td>5<td>Peut être Nom de commande / Nom de méthode / Message / Info Start Stop task / Nom, événement ou callback plugin / UUID connexion<tr><td>6<td>Durée de l'opération de connexion en millisecondes (différent 2e colonne)</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4ddebuglogtxt-tabulé>4DDebugLog.txt (tabulé)<a href=#4ddebuglogtxt-tabulé class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Ce fichier de logs enregistre chaque évènement au niveau de la programmation 4D sous un format compact avec des tabulations, qui inclut des informations supplémentaires par rapport au format standard.</p>
 <p>Pour lancer ce journal :</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Debug Log Recording;2+4)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//format tabulé étendu, tous les process</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Current process debug log recording;2+4)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//étendu, process courant uniquement</span><br/></div></code></pre></div></div>
 <p>Les champs suivants sont enregistrés pour chaque évènement :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Colonne #<th>Noms des champs<th>Description<tbody><tr><td>1<td>sequence_number<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>2<td>time<td>Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>3<td>ProcessID<td>ID du process<tr><td>4<td>unique_processID<td>ID unique du process<tr><td>5<td>stack_level<td>Niveau de stack (pile)<tr><td>6<td>operation_type<td>Type d'opération enregistrée. Cette valeur peut être une valeur absolue:<p><ol><li class="">Commande<li class="">Méthode (méthode projet, méthode base, etc.)<li class="">Message (envoyé uniquement par la commande <a class="" href=/docs/fr/21-R4/commands/log-event>LOG EVENT</a>)<li class="">PluginMessage<li class="">PluginEvent<li class="">PluginCommand<li class="">PluginCallback<li class="">Task<li class="">Méthode membre (méthode attachée à une collection ou à un objet)</ol><p></p>Lors de la fermeture d'un niveau de pile, les colonnes <code>operation_type</code>, <code>operation</code> et <code>operation_parameters</code> ont la même valeur que le niveau d'ouverture de pile enregistré dans la colonne <code>stack_opening_sequence_number</code>. Type d'opération enregistrée. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e.<tr><td>7<td>operation<td>Peut représenter (selon le type d'opération) :<li class="">un ID de commande de langue (lorsque type=1)</li><li class="">un nom de méthode (lorsque type=2)</li><li class="">une combinaison de pluginIndex;pluginCommand (lorsque type=4, 5, 6 ou 7). Peut contenir quelque chose comme '3;2'</li><li class="">un UUID de task de connexion (lorsque type=8)</li><tr><td>8<td>operation_parameters<td>Paramètres passés aux commandes, méthodes ou aux plugins<tr><td>9<td>form_event<td>Evénement formulaire, le cas échéant ; vide dans les autres cas (par conséquent cette colonne est utilisée lorsque le code est exécuté dans une méthode formulaire ou méthode objet)<tr><td>10<td>stack_opening_sequence_number<td>Niveaux de fermeture de stacks uniquement : numéro de séquence du niveau d'ouverture de stack correspondant<tr><td>11<td>stack_level_execution_time<td>Niveaux de fermeture de stacks uniquement : Durée en micro secondes de l'action enregistrée courante (cf. 10e colonne des lignes 123 et 124 dans l'historique ci-dessus)</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4ddiagnosticlogtxt>4DDiagnosticLog.txt<a href=#4ddiagnosticlogtxt class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier en utilisant la commande <a class="" href=/docs/fr/21-R4/commands/log-event>LOG EVENT</a>.</p>
 <p>Pour lancer ce journal :</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> SET DATABASE PARAMETER(Diagnostic log recording;1) //lancer l'enregistrement</span><br/></div></code></pre></div></div>
 <p>Les champs suivants sont enregistrés pour chaque évènement :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Nom des champs<th>Description<tbody><tr><td>sequenceNumber<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>timestamp<td>Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)<tr><td>loggerID<td>Optionnel<tr><td>componentSignature<td>Optionnel - signature de composant interne<tr><td>messageLevel<td>Trace, Debug, Info, Warning, Error, Fatal<tr><td>message<td>Description de la saisie de journal</table>
 <p>En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=niveaux-du-journal-de-diagnostic>Niveaux du journal de diagnostic<a href=#niveaux-du-journal-de-diagnostic class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <p>Le fichier <em>4DDiagnosticLog.txt</em> peut enregistrer différents niveaux de messages, de <code>ERROR</code> (le plus important) à <code>TRACE</code> (le moins important). Par défaut, le niveau <code>INFO</code> est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).</p>
 <p>Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur <code>Diagnostic log level</code> de la commande <a class="" href=/docs/fr/21-R4/commands/set-database-parameter>SET DATABASE PARAMETER</a>, en fonction de vos besoins. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Constante<th>Description<th>Lorsque sélectionné, inclut<tbody><tr><td><code>Log error</code><td>Numéro d'opération séquentiel et unique dans la session d'historique<td><code>Log error</code><tr><td><code>Log warn</code><td>Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)<td><code>Log error</code>, <code>Log warn</code><tr><td><code>Log info</code><td>ID du Process 4D<td><code>Log error</code>, <code>Log warn</code>, <code>Log info</code><tr><td><code>Log debug</code><td>ID unique du process<td><code>Log error</code>, <code>Log warn</code>, <code>Log info</code>, <code>Log debug</code><tr><td><code>Log trace</code><td>Autres informations internes (pour les services techniques de 4D)<td><code>Log error</code>, <code>Log warn</code>, <code>Log info</code>, <code>Log debug</code>, <code>Log trace</code></table>
 <p>Exemple :</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER (Diagnostic log recording; 1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER (Diagnostic log level; Log trace)</span><br/></div></code></pre></div></div>
@@ -517,35 +155,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$server:=New object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">...</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//SMTP</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MySMTPAuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=SMTP New transporter($server)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// POP3</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MyPOP3AuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=POP3 New transporter($server)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">//IMAP</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.logFile:="MyIMAPAuthLog.txt"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=IMAP New transporter($server)</span><br/></div></code></pre></div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=contenu-2>Contenu<a href=#contenu-2 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Pour chaque requête, les champs suivants sont enregistrés :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Colonne #<th>Description<tbody><tr><td>1<td>Numéro d'opération séquentiel et unique dans la session de log<tr><td>2<td>Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)<tr><td>3<td>ID du Process 4D<tr><td>4<td>ID unique du process<tr><td>5<td><ul><li class="">Information de démarrage de session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et statut TLS, ou<li class="">données échangées entre le serveur et le client, commençant par "S &lt;" (données reçues du serveur SMTP, POP3, ou IMAP) ou "C >" (données envoyées par le client SMTP, POP3 ou IMAP) : liste du mode d'authentification envoyée par le serveur et le mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3, ou IMAP, information d'en-tête du mail envoyé (version standard seulement) et si le mail est sauvegardé sur le serveur, ou<li class="">information de clôture de session SMTP, POP3, ou IMAP</ul></table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=requêtes-orda>Requêtes ORDA<a href=#requêtes-orda class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Les journaux des requêtes ORDA peuvent enregistrer chaque requête ORDA et chaque réponse du serveur. Deux journaux de requêtes ORDA sont disponibles :</p>
@@ -559,46 +168,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">	//sur une machine distante</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Client Log Recording;1)  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	//peut également être envoyé à la mémoire</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(Client Log Recording;0)  </span><br/></div></code></pre></div></div>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Il n'est pas obligatoire de démarrer le fichier <a href=#4drequestslogtxt class="">4DRequestsLog.txt</a> côté client à l'aide de <code>SET DATABASE PARAMETER</code>. Il est toutefois nécessaire si vous souhaitez enregistrer le champ unique <code>sequenceNumber</code>.</div></div>
 <p>Les champs suivants sont enregistrés pour chaque requête :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<th>Exemple<tbody><tr><td>sequenceNumber<td>Numéro d'opération séquentiel et unique dans la session de log<td>104<tr><td>url<td>URI de la requête<td>"rest/Persons(30001)"<tr><td>startTime<td>Date et heure de début au format ISO 8601<td>"2019-05-28T08:25:12.346Z"<tr><td>endTime<td>Date et heure de fin au format ISO 8601<td>"2019-05-28T08:25:12.371Z"<tr><td>duration<td>Durée du traitement du client en millisecondes (ms)<td>25<tr><td>response<td>Objet réponse du serveur<td>{"status":200,"body":{"__entityModel":"Persons",[...]}}</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple>Exemple<a href=#exemple class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :</p>
@@ -609,61 +178,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">//sur le serveur</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(4D Server log recording;1)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) </span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> //le paramètre srl... est optionnel </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">SET DATABASE PARAMETER(4D Server log recording;0)</span><br/></div></code></pre></div></div>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Il n'est pas obligatoire de démarrer le fichier <a href=#4drequestslogtxt class="">4DRequestsLog.txt</a> côté serveur à l'aide de <code>SET DATABASE PARAMETER</code>. Toutefois, il est nécessaire si vous souhaitez enregistrer les champs uniques <code>sequenceNumber</code> et <code>duration</code>.</div></div>
 <p>Les champs suivants sont enregistrés pour chaque requête :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Description<th>Exemple<tbody><tr><td>sequenceNumber<td>Numéro d'opération séquentiel et unique dans la session de log<td>104<tr><td>url<td>URI de la requête<td>"rest/Persons(30001)"<tr><td>startTime<td>Date et heure de début au format ISO 8601<td>"2019-05-28T08:25:12.346Z"<tr><td>duration<td>Durée de traitement du serveur en microsecondes (µ)<td>2500<tr><td>response<td>Objet réponse du serveur, peut être configuré dans <a class="" href=/docs/fr/21-R4/API/DataStoreClass#startrequestlog><code>.startRequestLog()</code></a><td>{"status":200,"body":{"__entityModel":"Persons",[...]}}<tr><td>ipAddress<td>Adresse IP utilisateur<td>"192.168.1.5"<tr><td>userName<td>Nom de l'utilisateur 4D<td>"henry"<tr><td>systemUserName<td>Login de l'utilisateur sur la machine<td>"hsmith"<tr><td>machineName<td>Nom de la machine de l'utilisateur<td>"PC de Henry Smith</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-1>Exemple<a href=#exemple-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Voici un exemple d'enregistrement ORDA côté serveur :</p>
@@ -682,66 +196,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </li>
 </ul>
 <p>Les champs suivants sont enregistrés pour chaque évènement :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Noms des champs<th>Type<th>Description<tbody><tr><td>time<td>Date/Time<td>Date et heure de l'événement au format ISO 8601<tr><td>localPort<td>Number<td>Port local utilisé pour la connexion<tr><td>peerAddress<td>Text<td>Adresse IP de la machine distante<tr><td>peerPort<td>Number<td>Port de la machine distante<tr><td>protocol<td>Text<td>"TCP" ou "UDP"<tr><td>event<td>Text<td>Le type d'événement: <code>open</code>, <code>close</code>, <code>error</code>, <code>send</code>, <code>receive</code>, <code>listen</code><tr><td>size<td>Number<td>Quantité de données envoyées ou reçues (en octets), 0 si non applicable<tr><td>excerpt<td>Number<td>Les 10 premiers octets des données au format hexadécimal<tr><td>textExcerpt<td>Text<td>Les 10 premiers octets des données en format texte<tr><td>comment<td>Text<td>Informations supplémentaires sur l'événement, telles que les détails de l'erreur ou l'état du chiffrement</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=utilisation-dun-fichier-de-configuration-de-log>Utilisation d'un fichier de configuration de log<a href=#utilisation-dun-fichier-de-configuration-de-log class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Vous pouvez utiliser un <strong>fichier de configuration de log</strong> pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.</p>

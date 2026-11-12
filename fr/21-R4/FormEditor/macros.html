@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-FormEditor/macros" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Macros de l'éditeur de formulaires | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Macros de l'éditeur de formulaires | 4D Docs"/><meta data-rh=true name=description content="L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions."/><meta data-rh=true property=og:description content="L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/FormEditor/macros hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/FormEditor/macros hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/FormEditor/macros hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/FormEditor/macros hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/FormEditor/macros hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/desktop-applications","name":"Applications Desktop","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/forms","name":"Formulaires","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/overview","name":"Éditeur de formulaires","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/macros","name":"Macros de l'éditeur de formulaires","position":4}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-FormEditor/macros" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Macros de l'éditeur de formulaires | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Macros de l'éditeur de formulaires | 4D Docs"/><meta data-rh=true name=description content="L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions."/><meta data-rh=true property=og:description content="L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemble d'instructions permettant de réaliser une action ou une séquence d'actions. Lorsqu'elle est appelée, la macro exécutera ses instructions et, automatiquement, les actions."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/FormEditor/macros hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/FormEditor/macros hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/FormEditor/macros hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/FormEditor/macros hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/FormEditor/macros hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/FormEditor/macros hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/desktop-applications","name":"Applications Desktop","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/forms","name":"Formulaires","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/overview","name":"Éditeur de formulaires","position":3},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/FormEditor/macros","name":"Macros de l'éditeur de formulaires","position":4}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/21-R4/FormEditor/macros>21 R4</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/FormEditor/macros>21 R5 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/21-R4/FormEditor/macros>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/FormEditor/macros>21</a><li><a class=dropdown__link href=/docs/fr/20/FormEditor/macros>20</a><li><a class=dropdown__link href=/docs/fr/19/FormEditor/macros>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -46,46 +46,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>La structure du fichier <code>formMacros.json</code> est la suivante :</p>
 <div class="language-js codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-js codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    </span><span class="token string-property property" style=color:#36acaa>"macros"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">            </span><span class="token operator" style=color:#393A34>&lt;</span><span class="token plain">macroName</span><span class="token operator" style=color:#393A34>></span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                </span><span class="token string-property property" style=color:#36acaa>"class"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>&lt;</span><span class="token plain">className</span><span class="token operator" style=color:#393A34>></span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">                </span><span class="token operator" style=color:#393A34>&lt;</span><span class="token plain">customProperty</span><span class="token operator" style=color:#393A34>></span><span class="token plain"> </span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token operator" style=color:#393A34>&lt;</span><span class="token plain">value</span><span class="token operator" style=color:#393A34>></span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    </span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><br/></div></code></pre></div></div>
 <p>Voici la description du contenu du fichier JSON :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Attribut<th><th><th>Type<th>Description<tbody><tr><td>macros<td><td><td>object<td>liste des macros définis<tr><td><td><code>&lt;macroName></code><td><td>object<td>définition de la macro<tr><td><td><td>class<td>string<td>nom de classe de la macro<tr><td><td><td><code>&lt;customProperty></code><td>any<td>(optionnel) valeur personnalisée à récupérer dans le constructeur</table>
 <p>Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à la fonction <a href=#class-constructor class="">constructeur</a> de la macro.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple>Exemple<a href=#exemple class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
@@ -98,21 +58,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Chaque classe de macro peut contenir un <code>Class constructor</code> (constructeur de classe) et deux fonctions : <code>onInvoke()</code> et <code>onError()</code>.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=class-constructor>Class constructor<a href=#class-constructor class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=class-constructormacro--object>Class constructor($macro : Object)<a href=#class-constructormacro--object class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th>Description<tbody><tr><td>$macro<td>Object<td>Objet de déclaration de macro (dans le fichier <code>formMacros.json</code>)</table>
 <p>Les macros sont instanciées à l'aide d'une fonction <a class="" href=/docs/fr/21-R4/Concepts/classes#class-constructor>class constructor</a>, le cas échéant.</p>
 <p>Le class constructor est appelé une fois lors de l'instanciation de classe, qui se produit au démarrage de l'application.</p>
@@ -124,128 +69,13 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">// Class "AlignOnTarget"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Class constructor($macro : Object)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    This.myParameter:=$macro.myParam //gauche</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ...</span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=oninvoke>onInvoke()<a href=#oninvoke class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=oninvokeeditor--object---result--object>onInvoke($editor : Object) -> $result : Object<a href=#oninvokeeditor--object---result--object class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th>Description<tbody><tr><td>$editor<td>Object<td>Objet Form Editor Macro Proxy contenant les propriétés du formulaire<tr><td>$result<td>Object<td>Objet Form Editor Macro Proxy retournant des propriétés modifiées par la macro (facultatif)</table>
 <p>La fonction <code>onInvoke</code> est automatiquement exécutée à chaque fois que la macro est appelée.</p>
 <p>Lorsque la fonction est appelée, elle reçoit dans la propriété <code>$editor.editor</code> une copie de tous les éléments du formulaire avec leurs valeurs courantes. Vous pouvez ensuite exécuter n'importe quelle opération sur ces propriétés.</p>
 <p>Une fois les opérations terminées, si la macro entraîne la modification, l'ajout ou la suppression d'objets, vous pouvez transmettre les propriétés modifiées résultantes dans <code>$result</code>. Le processeur de macros analysera les propriétés retournées et appliquera les opérations nécessaires dans le formulaire. Évidemment, moins vous retournez de propriétés, moins le traitement prendra du temps.</p>
 <p>Voici les propriétés retournées dans le paramètre <em>$editor</em> :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>$editor.editor.form<td>Object<td>L'ensemble du formulaire<tr><td>$editor.editor.file<td>File<td>Objet fichier du formulaire<tr><td>$editor.editor.name<td>Text<td>Nom du formulaire<tr><td>$editor.editor.table<td>number<td>Numéro de table du formulaire, 0 pour un formulaire projet<tr><td>$editor.editor.currentPageNumber<td>number<td>Numéro de la page courante<tr><td>$editor.editor.currentPage<td>Object<td>Page courante, contenant tous les objets du formulaire et l'ordre de saisie de la page<tr><td>$editor.editor.currentSelection<td>Collection<td>Collection de noms d'objets sélectionnés<tr><td>$editor.editor.formProperties<td>Object<td>Propriétés du formulaire courant<tr><td>$editor.editor.target<td>string<td>Nom de l'objet sous la souris lorsque vous cliquez sur une macro</table>
 <p>Voici les propriétés que vous pouvez passer dans l'objet <code>$result</code> si vous voulez que le processeur de macro exécute une modification. Toutes les propriétés sont optionnelles:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>currentPage<td>Object<td>Page courante incluant les objets modifiés par la macro, le cas échéant<tr><td>currentSelection<td>Collection<td>Sélection courante si modifiée par la macro<tr><td>formProperties<td>Object<td>Propriétés du formulaire si modifiées par la macro<tr><td>editor.groups<td>Object<td>informations du groupe, si les groupes sont modifiés par la macro<tr><td>editor.views<td>Object<td>informations sur les vues, si les vues sont modifiées par la macro<tr><td>editor.activeView<td>Text<td>Nom de la vue active</table>
 <p>Par exemple, si des objets de la page courante et des groupes ont été modifiés, vous pouvez écrire ce qui suit :</p>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">	$result:=New object("currentPage"; $editor.editor.currentPage ; \ </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">			"editor"; New object("groups"; $editor.editor.form.editor.groups))</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
@@ -259,21 +89,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>En utilisant un objet avec la structure suivante :</p>
 </li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>source<td>Text<td>code de la méthode</table>
 <p>4D créera un fichier en utilisant le nom de l'objet dans le dossier "objectMethods" avec le contenu de l'attribut <code>source</code>. Cette fonctionnalité n'est disponible que pour le code macro.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=propriété-4did-dans-currentpageobjects>Propriété <code>$4dId</code> dans <code>currentPage.objects</code><a href=#propriété-4did-dans-currentpageobjects class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -288,53 +103,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Function onInvoke($editor : Object)->$result : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	var $name : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	If ($editor.editor.currentSelection.length>0)		</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		//  Définir le contour en rouge et le style en italique pour chaque objet sélectionné</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		For each ($name; $editor.editor.currentSelection)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">			$editor.editor.currentPage.objects[$name].stroke:="red"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">			$editor.editor.currentPage.objects[$name].fontStyle:="italic"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		End for each </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	Else </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		ALERT("Please select a form object.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	End if </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	// Notifier 4D de la modification</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	$result:=New object("currentPage"; $editor.editor.currentPage)</span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=onerror>onError()<a href=#onerror class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=onerroreditor--object-resultmacro--object--error--collection>onError($editor : Object; $resultMacro : Object ; $error : Collection)<a href=#onerroreditor--object-resultmacro--object--error--collection class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th><th>Type<th>Description<tbody><tr><td>$editor<td><td>Object<td>Objet envoyé à <a href=#oninvoke class="">onInvoke</a><tr><td>$resultMacro<td><td>Object<td>Objet retourné par <a href=#oninvoke class="">onInvoke</a><tr><td>$error<td><td>Collection<td>Pile d'erreurs<tr><td><td>[].errCode<td>Number<td>Code d'erreur<tr><td><td>[].message<td>Text<td>Description de l'erreur<tr><td><td>[].componentSignature<td>Text<td>Signature du composant interne</table>
 <p>La fonction <code>onError</code> est exécutée lorsque le processeur de macros rencontre une erreur.</p>
 <p>Lors de l'exécution d'une macro, si 4D rencontre une erreur qui empêche l'annulation de la macro, il n'exécute pas la macro. C'est le cas par exemple si l'exécution d'une macro se traduirait par :</p>

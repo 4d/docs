@@ -1,60 +1,15 @@
-<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuración | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Configuración | 4D Docs"/><meta data-rh=true name=description content="Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros."/><meta data-rh=true property=og:description content="Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/web-applications","name":"Aplicaciones web","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/WebServer/overview","name":"Servidor Web","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig","name":"Configuración","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.c4b88155.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=es dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuración | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=es /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=es /><meta data-rh=true name=docsearch:language content=es /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="Configuración | 4D Docs"/><meta data-rh=true name=description content="Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros."/><meta data-rh=true property=og:description content="Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros."/><link data-rh=true rel=icon href=/docs/es/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/category/web-applications","name":"Aplicaciones web","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/WebServer/overview","name":"Servidor Web","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/es/21-R4/WebServer/webServerConfig","name":"Configuración","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/es/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/es/assets/css/styles.4cf13e15.css /><script src=/docs/es/assets/js/runtime~main.850d0374.js defer></script><script src=/docs/es/assets/js/main.0f9800e2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/es/img/logohome.png /><div role=region aria-label="Saltar al contenido principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar al contenido principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar la barra de navegación" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/es/><div class=navbar__logo><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentación 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/es/21-R4/WebServer/webServerConfig>21 R4</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/es/WebServer/webServerConfig>21 R5 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/es/21-R4/WebServer/webServerConfig>21 R4</a><li><a class=dropdown__link href=/docs/es/21/WebServer/webServerConfig>21</a><li><a class=dropdown__link href=/docs/es/20/WebServer/webServerConfig>20</a><li><a class=dropdown__link href=/docs/es/19/WebServer/webServerConfig>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="La página no está disponible en esta versión
 En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Español</a><ul class=dropdown__menu><li><a href=/docs/21-R4/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/21-R4/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=fr>Français</a><li><a href=/docs/es/21-R4/WebServer/webServerConfig target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=es>Español</a><li><a href=/docs/ja/21-R4/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/21-R4/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="modo sistema" aria-label="Alternar entre modo oscuro y claro (actualmente modo sistema)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Buscar (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Buscar</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Volver arriba" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/es/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/es/img/logohome.png alt="Logo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>Documentación 4D</b></a><nav aria-label="Barra lateral de Documentos" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/getting-started><span class=categoryLinkLabel_W154>Comencemos</span></a><button aria-label="Ampliar la categoría 'Comencemos' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/project-ide><span class=categoryLinkLabel_W154>Project & IDE</span></a><button aria-label="Ampliar la categoría 'Project & IDE' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/4d-language><span class=categoryLinkLabel_W154>Lenguaje 4D</span></a><button aria-label="Ampliar la categoría 'Lenguaje 4D' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/core><span class=categoryLinkLabel_W154>Desarrollo</span></a><button aria-label="Ampliar la categoría 'Desarrollo' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/docs/es/21-R4/category/web-applications><span class=categoryLinkLabel_W154>Aplicaciones web</span></a><button aria-label="Contraer categoría de la barra lateral 'Aplicaciones web'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a href=https://developer.4d.com/qodly/ target=_blank rel="noopener noreferrer" class="menu__link menuExternalLink_NmtK" tabindex=0><span class=linkLabel_WmDU>4D Qodly Pro</span><svg width=13.5 height=13.5 aria-label="(se abre en una nueva pestaña)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/es/21-R4/WebServer/overview><span class=categoryLinkLabel_W154>Servidor Web</span></a><button aria-label="Contraer categoría de la barra lateral 'Servidor Web'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/gettingStarted><span class=linkLabel_WmDU>Comencemos</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/es/21-R4/WebServer/webServerConfig><span class=linkLabel_WmDU>Configuración</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/webServerAdmin><span class=linkLabel_WmDU>Administración</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/webServerObject><span class=linkLabel_WmDU>Instancias del servidor web</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/templates><span class=linkLabel_WmDU>Páginas de plantillas</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/httpRequests><span class=linkLabel_WmDU>Procesamiento de peticiones HTTP</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/http-request-handler><span class=linkLabel_WmDU>HTTP Request handler</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/http-rules><span class=linkLabel_WmDU>Reglas HTTP</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/allowProject><span class=linkLabel_WmDU>Permitir métodos proyecto</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/errorPages><span class=linkLabel_WmDU>Páginas de error HTTP personalizadas</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/authentication><span class=linkLabel_WmDU>Autenticación</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/sessions><span class=linkLabel_WmDU>Sesiones web</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/es/21-R4/WebServer/preemptiveWeb><span class=linkLabel_WmDU>Uso de procesos web apropiativos</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/es/21-R4/category/rest-api><span class=categoryLinkLabel_W154>API REST</span></a><button aria-label="Ampliar la categoría 'API REST' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/desktop-applications><span class=categoryLinkLabel_W154>Aplicaciones de escritorio</span></a><button aria-label="Ampliar la categoría 'Aplicaciones de escritorio' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/server--admin><span class=categoryLinkLabel_W154>Servidor y administrador</span></a><button aria-label="Ampliar la categoría 'Servidor y administrador' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/es/21-R4/category/extensions><span class=categoryLinkLabel_W154>Extensiones</span></a><button aria-label="Ampliar la categoría 'Extensiones' de la barra lateral" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav><button type=button title="Contraer la barra lateral" aria-label="Contraer la barra lateral" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Camino de navegación"><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Página de inicio" class=breadcrumbs__link href=/docs/es/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/docs/es/21-R4/category/web-applications><span>Aplicaciones web</span></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/docs/es/21-R4/WebServer/overview><span>Servidor Web</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Configuración</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Versión: 21 R4</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">En esta página</button></div><div class="theme-doc-markdown markdown"><header><h1>Configuración</h1></header><p>Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dónde-configurar-los-parámetros>¿Dónde configurar los parámetros?<a href=#dónde-configurar-los-parámetros class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
 <p>Hay diferentes maneras de configurar los parámetros del servidor web 4D, en función del alcance y del servidor que se quiera configurar:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Ubicación del parámetro<th>Alcance<th>Servidor web a utilizar<tbody><tr><td><a class="" href=/docs/es/21-R4/WebServer/webServerObject>objeto webServer</a><td>Temporal (sesión actual)<td>Todos los servidores web, incluidos los servidores web de componentes<tr><td><code>WEB SET OPTION</code> o comando <code>WEB XXX</code><td>Temporal (sesión actual)<td>Servidor principal<tr><td>Caja de diálogo <a class="" href=/docs/es/21-R4/settings/web><strong>Propiedades</strong></a> (<strong>Páginas web</strong>)<td>Permanente (todas las sesiones, almacenadas en el disco)<td>Servidor principal</table>
 <blockquote>
 <p>Algunos parámetros no están disponibles desde todos los lugares.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=caché>Caché<a href=#caché class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#use-the-4d-web-cache>Página Opciones (I)/Utilizar la caché 4D Web</a><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#pages-cache-size>Página Opciones (I) /Tamaño de la caché de las páginas</a><td></table>
 <p>Activa y configura la caché de las páginas web.</p>
 <p>El servidor web 4D dispone de una caché que permite cargar las páginas estáticas, las imágenes GIF, las imágenes JPEG (&lt;512 kb) y las hojas de estilo (archivos.css) en memoria, a medida que se solicitan. El uso de la caché permite aumentar considerablemente el rendimiento del servidor web cuando se envían páginas estáticas. El caché se comparte entre todos los procesos web. Cuando la caché está activada, el servidor web de 4D busca primero en la caché toda página estática solicitada por el navegador. Si encuentra la página, la envía inmediatamente. Si no, 4D carga la página desde el disco y la coloca en la caché.</p>
@@ -63,21 +18,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Mientras utiliza su base de datos web, puede verificar el rendimiento de la caché utilizando el comando <code>WEB GET STATISTICS</code>. Si, por ejemplo, observa que la tasa de uso de la caché se acerca al 100%, puede considerar aumentar el tamaño que se le ha asignado. Los URL [/4DSTATS] y [/4DHTMLSTATS] también permiten obtener información sobre el estado de la caché.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=carpeta-de-certificados>Carpeta de certificados<a href=#carpeta-de-certificados class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><code>certificateFolder</code><td>Propiedad texto pero puede ser un objeto <a class="" href=/docs/es/21-R4/API/FolderClass><code>4D.Folder</code></a> cuando se usa con el parámetro <em>settings</em> de la función <code>start()</code>.</table>
 <p>Carpeta donde se encuentran los archivos del certificado TLS para el servidor web.</p>
 <p>Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la <a class="" href=/docs/es/21-R4/Project/architecture#project-folder>carpeta Project</a>.</p>
@@ -86,83 +26,18 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Los archivos de certificados TLS son <em>key.pem</em> (documento que contiene la llave de cifrado privada) y <em>cert.pem</em> (documento que contiene el certificado).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=conjunto-de-caracteres>Conjunto de caracteres<a href=#conjunto-de-caracteres class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><code>characterSet</code><td>Entero MIBEnum o cadena Name<tr><td><code>WEB SET OPTION</code><td><code>Web character set</code><td>Entero MIBEnum o cadena Name<tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#standard-set>Página Opciones (II)/Conjunto estándar</a><td>Menú popup</table>
 <p>Define el conjunto de caracteres que utilizará el servidor web de 4D. El valor por defecto depende del lenguaje del sistema operativo.</p>
 <blockquote>
 <p>Esta configuración también se utiliza para generar informes rápidos en formato HTML.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=lista-de-cifrado>Lista de cifrado<a href=#lista-de-cifrado class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#ciphersuite><code>cipherSuite</code></a><td>Text</table>
 <p>Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de los algoritmos de cifrado implementados por el servidor web. Puede ser una secuencia de cadenas separadas por dos puntos (por ejemplo "ECDHE-RSA-AES128-..."). Ver la <a href=https://www.openssl.org/docs/manmaster/man1/ciphers.html target=_blank rel="noopener noreferrer" class="">página de cifrados</a> en el sitio OpenSSL.</p>
 <blockquote>
 <p>La lista de cifrado por defecto utilizada por 4D puede ser modificada para la sesión utilizando el comando <code>SET DATABASE PARAMETER</code>, en cuyo caso la modificación se aplica a toda la aplicación 4D, incluyendo el servidor web, el servidor SQL, las conexiones cliente/servidor, así como el cliente HTTP y todos los comandos de 4D que hacen uso del protocolo seguro.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parámetros-cors>Parámetros CORS<a href=#parámetros-cors class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#corssettings><code>CORSSettings</code></a><td>Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)<tr><td><code>WEB SET OPTION</code><td><code>Web CORS settings</code><td>Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)<tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#domain-nameshttp-methods-allowed>Página Opciones (II)/Nombres de dominio y métodos HTTP autorizados</a><td>Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s)</table>
 <p>Lista de hosts y métodos permitidos para el servicio CORS.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nombres-de-dominio-propiedad-local>Nombres de dominio (propiedad local)<a href=#nombres-de-dominio-propiedad-local class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
@@ -195,90 +70,10 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ver-también>Ver también<a href=#ver-también class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p><a href=#enable-cors-service class="">Activar el servicio CORS</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=debug-log>Debug log<a href=#debug-log class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><code>debugLog</code><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web debug log</code><td>number</table>
 <p>Estado del archivo de registro de peticiones HTTP del servidor web (<a class="" href=/docs/es/21-R4/Debugging/debugLogFiles#httpdebuglogtxt><em>HTTPDebugLog_nn.txt</em></a>, almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Valor<th>Constante<th>Descripción<tbody><tr><td>0<td>wdl disable<td>Web HTTP debug log desactivado<tr><td>1<td>wdl enable without body<td>Web HTTP debug log activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo)<tr><td>3<td>wdl enable with response body<td>Web HTTP debug log activado con la partes del cuerpo únicamente<tr><td>5<td>wdl enable with request body<td>Web HTTP debug log activado con la partes del cuerpo en la petición únicamente<tr><td>7<td>wdl enable with all body parts<td>Web HTTP debug log activado con las partes del cuerpo en respuesta y petición</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=página-de-inicio-por-defecto>Página de inicio por defecto<a href=#página-de-inicio-por-defecto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#defaulthomepage><code>defaultHomepage</code></a><td>Text<tr><td><code>WEB SET HOME PAGE</code><td><td>Puede ser diferente para cada proceso web<tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#default-home-page>Página Configuración/Página de inicio por defecto</a><td></table>
 <p>Designa una página de inicio por defecto para el servidor web. Esta página puede ser estática o [semi-dynamic].</p>
 <p>Por defecto, cuando el servidor web se lanza por primera vez, 4D crea una página de inicio llamada "index.html" y la coloca en la carpeta raíz HTML. Si no modifica esta configuración, todo navegador que se conecte al servidor web obtendrá la siguiente página:</p>
@@ -292,31 +87,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Por ejemplo, si quiere que la página de inicio por defecto sea "MyHome.htm", y se encuentra en la carpeta "Web" (situada a su vez en la carpeta raíz HTML por defecto), utilice "Web/MyHome.htm".</p>
 <p>Si no se especifica ninguna página de inicio por defecto, se llama al método base <code>On Web Connection</code>. Le corresponde a usted gestionar la petición de manera procesal.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activar-cors>Activar CORS<a href=#activar-cors class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#corsenabled><code>CORSEnabled</code></a><td>Booleano, true para activar CORS (False por defecto)<tr><td><code>WEB SET OPTION</code><td><code>Web CORS enabled</code><td>0 (desactivado, por defecto) o 1 (activado)<tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#enable-cors>Página Opciones (II) /Activar CORS</a><td>Sin marcar por defecto</table>
 <p>El servidor web 4D implementa el cross-origin resource sharing (CORS) para permitir que páginas web específicas servidas desde otro dominio accedan a los recursos de la aplicación web actual a través de llamadas XHR, por ejemplo, utilizando REST. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado, las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver Parámetros CORS más adelante).</p>
 <p>Cuando se desactiva (por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS.</p>
@@ -324,82 +94,12 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ver-también-1>Ver también<a href=#ver-también-1 class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h4>
 <p><a href=#cors-settings class="">Configuración CORS</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activar-http>Activar HTTP<a href=#activar-http class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpenabled><code>HTTPEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP enabled</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#enable-http>Página Configuración/Activar HTTP</a><td></table>
 <p>Indica si el servidor web acepta o no conexiones no seguras.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activar-https>Activar HTTPS<a href=#activar-https class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpsenabled><code>HTTPSEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS enabled</code><td><tr><td>Caja de diálogo de parámetros<td>Página configuración/Activar HTTPS<td></table>
 <p>Estado de la comunicación a través de HTTPS. Esta opción se describe en <a class="" href=/docs/es/21-R4/Admin/tls>esta sección</a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activar-hsts>Activar HSTS<a href=#activar-hsts class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#hstsenabled><code>HSTSEnabled</code></a><td>Booleano, true para activar HSTS (por defecto es false)<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS enabled</code><td>0 (desactivado, por defecto) o 1 (activado)</table>
 <p>Estado de HTTP Strict Transport Security (HSTS).</p>
 <p>Cuando <a href=#enable-https class="">HTTPS está activado</a>, recuerde que si <a href=#enable-http class="">HTTP está también activado</a>, el navegador puede cambiar entre HTTPS y HTTP (por ejemplo, en la zona de la URL del navegador, el usuario puede sustituir "https" por "http"). Para prohibir las redirecciones http, puede <a href=#enable-http class="">desactivar el HTTP</a>, sin embargo en este caso se muestra un mensaje de error a las peticiones HTTP del cliente.</p>
@@ -411,26 +111,6 @@ En su lugar, se abrirá la página predeterminada." href=/docs/es/18/GettingStar
 <p>Puede obtener el modo de conexión actual utilizando el comando <code>WEB Is secured connection</code>.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hsts-max-age>HSTS Max Age<a href=#hsts-max-age class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#hstsmaxage><code>HSTSMaxAge</code></a><td>número en segundos<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS max age</code><td>número en segundos</table>
 <p>Especifica el tiempo máximo (en segundos) de activación de HSTS para cada nueva conexión cliente. Esta información se almacena del lado del cliente durante el tiempo especificado.
 El valor por defecto es 63072000 (2 años)</p>
@@ -438,79 +118,14 @@ El valor por defecto es 63072000 (2 años)</p>
 <p><strong>Atención:</strong> una vez activado HSTS, las conexiones de los clientes seguirán utilizando este mecanismo durante el tiempo especificado. Cuando esté probando sus aplicaciones, se recomienda definir una duración corta para poder cambiar entre los modos de conexión segura y no segura si es necesario.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nivel-de-compresión>Nivel de compresión<a href=#nivel-de-compresión class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpcompressionlevel><code>HTTPCompressionLevel</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression level</code><td>Se aplica a la Web y al servicio Web</table>
 <p>Nivel de compresión para todos los intercambios HTTP comprimidos para el servidor web 4D (peticiones clientes o respuestas servidor). Esta opción permite optimizar los intercambios privilegiando la velocidad de ejecución (menos compresión) o la cantidad de compresión (menos velocidad). La elección de un valor depende del tamaño y del tipo de datos intercambiados.</p>
 <p>Pase un valor de 1 a 9 donde 1 es la compresión más rápida y 9 la más alta. También puede pasar -1 para un compromiso entre velocidad y tasa de compresión. Por defecto, el nivel de compresión es 1 (compresión más rápida).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=umbral-de-compresión-http>Umbral de compresión HTTP<a href=#umbral-de-compresión-http class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpcompressionthreshold><code>HTTPCompressionThreshold</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression threshold</code><td></table>
 <p>En el contexto de los intercambios HTTP optimizados, un umbral de tamaño de peticiones por debajo del cual los intercambios no deben comprimirse. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.</p>
 <p>Pasa el tamaño expresado en bytes como valor. Por defecto, el umbral de compresión está en 1024 bytes.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=puerto-http>Puerto HTTP<a href=#puerto-http class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpport><code>HTTPPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web port ID</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#http-port>Página Configuración/Puerto HTTP</a><td></table>
 <p>Número de puerto IP (TCP) de escucha para HTTP. Por defecto, 4D publica una aplicación web en el puerto web HTTP normal (puerto TCP), que es el puerto 80. Si ese puerto ya es utilizado por otro servicio web, debe cambiar el puerto HTTP utilizado por 4D para esta base de datos.</p>
 <blockquote>
@@ -522,135 +137,20 @@ El valor por defecto es 63072000 (2 años)</p>
 </blockquote>
 <p>Si especifica 0, 4D utilizará el número de puerto HTTP 80 por defecto.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-trace>HTTP Trace<a href=#http-trace class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httptrace><code>HTTPTrace</code></a><td>Booleano, falso por defecto<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP TRACE</code><td>Integer, 0 por defecto (desactivado)</table>
 <p>Activación del método HTTP TRACE en el servidor web 4D. Por razones de seguridad, por defecto el servidor web 4D rechaza las peticiones HTTP TRACE con un error 405. Si es necesario, puede activar el método HTTP TRACE, en cuyo caso el servidor web 4D responde a las peticiones HTTP TRACE con la línea de petición, el encabezado y el cuerpo.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=puerto-https>Puerto HTTPS<a href=#puerto-https class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#httpsport><code>HTTPSPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS port ID</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#https-port>Página Configuración/Puerto HTTP</a><td></table>
 <p>Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto, el valor es 443 (valor estándar). Ver también <a href=#http-port class="">HTTP Port</a> para obtener información sobre los números de puerto.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=tiempo-de-espera-del-proceso-inactivo>Tiempo de espera del proceso inactivo<a href=#tiempo-de-espera-del-proceso-inactivo class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#inactiveprocesstimeout><code>inactiveProcessTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive process timeout</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#inactive-process-timeout>Página Opciones (I)/Tiempo de espera de proceso inactivo</a><td>Cursor</table>
 <p>Duración de vida (en minutos) de los procesos inactivos asociados con sesiones heredadas. Al final del tiempo de espera, el proceso se mata en el servidor, se llama al método base <code>On Web Legacy Close Session</code>, luego se destruye el contexto de sesión.</p>
 <p>Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=tiempo-de-espera-de-las-sesiones-inactivas>Tiempo de espera de las sesiones inactivas<a href=#tiempo-de-espera-de-las-sesiones-inactivas class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#inactivesessiontimeout><code>inactiveSessionTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive session timeout</code><td></table>
 <p>Duración de vida (en minutos) de las sesiones inactivas (duración definida en la cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.</p>
 <p>Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dirección-ip-de-escucha>Dirección IP de escucha<a href=#dirección-ip-de-escucha class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#ipaddresstolisten><code>IPAddressToListen</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web IP address to listen</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#ip-address>Página Configuración/Dirección IP</a><td>Menú popup</table>
 <p>Dirección IP (cadenas) en la que el servidor web 4D recibirá las peticiones HTTP (4D local y 4D Server).</p>
 <p>Por defecto, no se define ninguna dirección específica (<strong>valor ninguno</strong> en la caja de diálogo Parámetros), lo que significa que el servidor responde a todas las direcciones IP. Cuando designa una dirección específica, el servidor sólo responde a las solicitudes enviadas a esta dirección. Esta función está diseñada para servidores web 4D ubicados en máquinas con múltiples direcciones TCP/IP. Es por ejemplo, el caso frecuente de la mayoría de los proveedores de hosting.</p>
@@ -672,198 +172,33 @@ El valor por defecto es 63072000 (2 años)</p>
 <p>Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que se combine una dirección IPv6 con un número de puerto, por ejemplo:</p>
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">[2001:0DB8::85a3:0:ac1f:8001]:8081 //Dirección IPv6 con puerto 8081</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=keep-session>Keep Session<a href=#keep-session class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#keepsession><code>keepSession</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web keep session</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#legacy-sessions-single-process-sessions>Página Opciones (I)/Sesiones heredadas (sesiones de un solo proceso)</a><td>sólo en los proyectos convertidos</table>
 <p>Estado de activación de la gestión de sesiones heredada para el servidor web 4D (obsoleto).</p>
 <blockquote>
 <p>Cuando esta opción está marcada, la opción "Reutilización de los contextos temporales" se marca automáticamente (y se bloquea).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=registro-de-los-logs>Registro de los logs<a href=#registro-de-los-logs class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#logrecording><code>logRecording</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web log recording</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#log-format>Página Historial(tipo)</a><td>Menú popup</table>
 <p>Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo <em>logweb.txt</em> y define su formato. Por defecto, las peticiones no se registran (0/Sin archivo de registro). Cuando se activa, el archivo <em>logweb.txt</em> se coloca automáticamente en la carpeta Logs.</p>
 <p>Este parámetro permite seleccionar el formato de este archivo. Valores disponibles:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Valor<th>Nombre del formato<th>Descripción<tbody><tr><td>0<td>No hay archivo de historial<td>Por defecto<tr><td>1<td>Registro en formato CLF<td>Formato de historial común - Cada línea del archivo representa una petición, como:<code>host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length</code> - Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF.<tr><td>2<td>Registro en formato DLF<td>Combined Log Format - Similar al formato CLF, pero añade dos campos HTTP adicionales al final de cada solicitud: Referer y User-agent.<tr><td>3<td>Registro en formato ELF<td>Extended Log Format - A personalizar en la caja de diálogo de las Propiedades<tr><td>4<td>Registro en formato WLF<td>WebStar Log Format - A personalizar en la caja de diálogo de las Propiedades</table>
 <blockquote>
 <p>Los formatos 3 y 4 son formatos personalizados cuyo contenido debe establecerse previamente en la <a class="" href=/docs/es/21-R4/settings/web#log-format>caja de diálogo Parámetros</a>. Si utiliza uno de estos formatos sin haber seleccionado ninguno de sus campos en esta página, el archivo de registro no se generará.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=procesos-web-simultáneos-maximos>Procesos Web simultáneos maximos<a href=#procesos-web-simultáneos-maximos class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#maxconcurrentprocesses><code>maxConcurrentProcesses</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max concurrent processes</code><td><tr><td>Caja de diálogo de parámetros<td>Página <a class="" href=/docs/es/21-R4/settings/web#maximum-concurrent-web-processes>Opciones (I)/Máximo de procesos web simultáneos</a><td></table>
 <p>Límite superior de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor cuando se utilizan <strong>sin sesiones</strong> o <strong>sesiones heredadas</strong> (las <strong>sesiones escalables</strong> admiten un <a class="" href=/docs/es/21-R4/WebServer/sessions>número ilimitado</a> de procesos apropiativos). Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP <code>503 - Servicio no disponible</code> a todas las nuevas peticiones.</p>
 <p>Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=tamaño-máximo-de-la-petición>Tamaño máximo de la petición<a href=#tamaño-máximo-de-la-petición class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#maxrequestsize><code>maxRequestSize</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web maximum requests size</code><td></table>
 <p>Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web está autorizado a procesar. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Pasar el valor máximo (2 147 483 648) significa que, en la práctica, no se define ningún límite.</p>
 <p>Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes.</p>
 <p>Valores posibles: 500 000 a 2 147 483 648.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=número-máximo-de-sesiones>Número máximo de sesiones<a href=#número-máximo-de-sesiones class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#maxsessions><code>maxSessions</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max sessions</code><td></table>
 <p>Número máximo de sesiones heredadas simultáneas. Cuando alcanza el límite establecido, la sesión antigua se cierra (y se llama al método base <code>On Web Legacy Close Session</code>) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el <a href=#maximum-concurrent-web-processes class="">número máximo de procesos web</a> (100 por defecto).</p>
 <p>Valor por defecto: 100 (pase 0 para restaurar el valor por defecto).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=versión-tls-mínima>Versión TLS mínima<a href=#versión-tls-mínima class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#mintlsversion><code>minTLSVersion</code></a><td>number</table>
 <p>Versión mínima de TLS aceptada para las conexiones. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.</p>
 <p>Valores posibles:</p>
@@ -878,75 +213,15 @@ El valor por defecto es 63072000 (2 años)</p>
 <p>La versión TLS mínima utilizada por 4D puede ser modificada para la sesión utilizando el comando <code>SET DATABASE PARAMETER</code>, en cuyo caso la modificación se aplica a toda la aplicación 4D, incluyendo el servidor web, el servidor SQL y las conexiones cliente</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nombre>Nombre<a href=#nombre class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#name><code>name</code></a><td></table>
 <p>Nombre de la aplicación del servidor web. Útil cuando se inician los servidores web de los componentes.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=versión-openssl>Versión OpenSSL<a href=#versión-openssl class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#opensslversion><code>openSSLVersion</code></a><td>Sólo lectura</table>
 <p>Versión de la librería OpenSSL utilizada.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=perfect-forward-secrecy>Perfect Forward Secrecy<a href=#perfect-forward-secrecy class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#perfectforwardsecrecy><code>perfectForwardSecrecy</code></a><td>Booleano, de sólo lectura</table>
 <p>Verdadero si PFS está disponible en el servidor web (ver la sección <a class="" href=/docs/es/21-R4/Admin/tls#perfect-forward-secrecy-pfs>TLS</a>).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=reutilizar-los-contextos-temporales-en-modo-remoto>Reutilizar los contextos temporales (en modo remoto)<a href=#reutilizar-los-contextos-temporales-en-modo-remoto class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#reuse-temporary-contexts>Página Opciones (I)/Reutilizar contextos temporales</a><td></table>
 <blockquote>
 <p>Esta opción sólo está disponible cuando la opción <strong>Sin sesiones</strong> está marcada.</p>
@@ -973,31 +248,6 @@ El valor por defecto es 63072000 (2 años)</p>
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">   User-Agent: *</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   Disallow: /</span><br/></div></code></pre></div></div>
 <p>En este caso, los robots no pueden acceder a todo el sitio.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=carpeta-raíz>Carpeta raíz<a href=#carpeta-raíz class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#rootfolder><code>rootFolder</code></a><td>Propiedad texto pero puede ser un objeto <a class="" href=/docs/es/21-R4/API/FolderClass><code>4D.Folder</code></a> cuando se usa con el parámetro <em>settings</em> de la función <code>start()</code><tr><td><code>WEB SET ROOT FOLDER</code><td><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#default-html-root>Página Configuración/Raíz HTML por defecto</a><td></table>
 <p>Ruta de la carpeta raíz del servidor web, es decir, la carpeta en la que 4D buscará las páginas HTML estáticas y semidinámicas, imágenes, etc., para enviarlas a los navegadores. La ruta de acceso está en formato POSIX (ruta completa). Será necesario reiniciar el servidor web para que se tenga en cuenta la nueva carpeta raíz.</p>
 <p>Además, la carpeta raíz HTML define, en el disco duro del servidor web, el nivel jerárquico por encima del cual los archivos no serán accesibles. Si una URL solicitada o un comando 4D intenta acceder a un archivo situado por encima de la carpeta raíz de HTML, se devuelve un error indicando que el archivo no se ha encontrado.</p>
@@ -1018,118 +268,18 @@ El valor por defecto es 63072000 (2 años)</p>
 <p>Cuando se modifica la carpeta raíz HTML, la caché se borra para no almacenar archivos cuyo acceso está restringido.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=sesiones-escalables>Sesiones escalables<a href=#sesiones-escalables class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#scalablesession><code>scalableSession</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Sesión escalable web</code><td><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#scalable-sessions-multi-process-sessions>Página Opciones (I)/Sesiones extensible (sesiones multi-proceso)</a><td></table>
 <p>Estado de activación de la gestión de sesiones escalable para el servidor web 4D. Las sesiones del servidor web se detallan en la página <a class="" href=/docs/es/21-R4/WebServer/sessions>Sesiones Web</a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dominio-de-la-cookie-de-sesión>Dominio de la cookie de sesión<a href=#dominio-de-la-cookie-de-sesión class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#sessioncookiedomain><code>sessionCookieDomain</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie domain</code><td></table>
 <p>Campo "path" de la cookie de sesión. Utilizado para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nombre-de-la-cookie-de-sesión>Nombre de la cookie de sesión<a href=#nombre-de-la-cookie-de-sesión class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#sessioncookiename><code>sessionCookieName</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie name</code><td></table>
 <p>Nombre de la cookie utilizada para guardar el ID de sesión. Por defecto = "4DSID".</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=ruta-de-la-cookie-de-sesión>Ruta de la cookie de sesión<a href=#ruta-de-la-cookie-de-sesión class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#sessioncookiepath><code>sessionCookiePath</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie path</code><td></table>
 <p>Campo "path" de la cookie de sesión. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-samesite>Session Cookie SameSite<a href=#session-cookie-samesite class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>objeto webServer<td><a class="" href=/docs/es/21-R4/API/WebServerClass#sessioncookiesamesite><code>sessionCookieSameSite</code></a><td></table>
 <p>Valor del atributo <code>SameSite</code> de la cookie de sesión. Este atributo le permite declarar si su cookie debe estar restringida a un contexto de primera parte o del mismo sitio, como una protección contra ciertos ataques CSRF (<a href=https://developer.mozilla.org/en-US/docs/Glossary/CSRF target=_blank rel="noopener noreferrer" class="">cross-site request forgery</a>).</p>
 <blockquote>
@@ -1146,21 +296,6 @@ El valor por defecto es 63072000 (2 años)</p>
 <p>No se recomienda definir <code>SameSite=None</code> en un servidor HTTP ya que faltará el atributo <code>Secure</code> (utilizado sólo en HTTPS) y se bloquearán las cookies.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=utilizar-procesos-apropiativos>Utilizar procesos apropiativos<a href=#utilizar-procesos-apropiativos class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Puede ajustarse con<th>Nombre<th>Comentarios<tbody><tr><td>Caja de diálogo de parámetros<td><a class="" href=/docs/es/21-R4/settings/web#use-preemptive-processes>Página Opciones (I)/Usar procesos apropiativos</a><td></table>
 <p>Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción <strong>Sin sesiones</strong> (el modo apropiativo siempre está activado con <strong>sesiones escalables</strong>). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de <a class="" href=/docs/es/21-R4/WebServer/preemptiveWeb#thread-safety-of-4d-web-code>código relacionado con la web</a> y devolverá errores en caso de incompatibi</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parámetros-obsoletos>Parámetros obsoletos<a href=#parámetros-obsoletos class=hash-link aria-label="Enlace directo al encabezado" title="Enlace directo al encabezado" translate=no>​</a></h2>

@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-ORDA/ordaClasses" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>データモデルクラス | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/ORDA/ordaClasses /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="データモデルクラス | 4D Docs"/><meta data-rh=true name=description content='ORDAでは、データモデルの上に高レベルクラス関数を作成することができます。これによってビジネス指向のコードを書き、APIのように "公開" することができます。データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。'/><meta data-rh=true property=og:description content='ORDAでは、データモデルの上に高レベルクラス関数を作成することができます。これによってビジネス指向のコードを書き、APIのように "公開" することができます。データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。'/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/ORDA/ordaClasses /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ORDA/ordaClasses hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/ORDA/ordaClasses hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/ORDA/ordaClasses hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/ORDA/ordaClasses hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/ORDA/ordaClasses hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ORDA/ordaClasses hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/core","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/ORDA/overview","name":"ORDA","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/ORDA/ordaClasses","name":"データモデルクラス","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-ORDA/ordaClasses" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>データモデルクラス | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/ORDA/ordaClasses /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="データモデルクラス | 4D Docs"/><meta data-rh=true name=description content='ORDAでは、データモデルの上に高レベルクラス関数を作成することができます。これによってビジネス指向のコードを書き、APIのように "公開" することができます。データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。'/><meta data-rh=true property=og:description content='ORDAでは、データモデルの上に高レベルクラス関数を作成することができます。これによってビジネス指向のコードを書き、APIのように "公開" することができます。データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。'/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/ORDA/ordaClasses /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ORDA/ordaClasses hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/ORDA/ordaClasses hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/ORDA/ordaClasses hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/ORDA/ordaClasses hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/ORDA/ordaClasses hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ORDA/ordaClasses hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/category/core","name":"コア開発","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/ORDA/overview","name":"ORDA","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/ORDA/ordaClasses","name":"データモデルクラス","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/ORDA/ordaClasses>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/ORDA/ordaClasses>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/ORDA/ordaClasses>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/ORDA/ordaClasses>21</a><li><a class=dropdown__link href=/docs/ja/20/ORDA/ordaClasses>20</a><li><a class=dropdown__link href=/docs/ja/19/ORDA/ordaClasses>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -25,36 +25,6 @@
 <p>ORDA では、<strong><code>4D</code></strong> <a class="" href=/docs/ja/Concepts/classes#%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%B9%E3%83%88%E3%82%A2>クラスストア</a> を介して公開される <strong>汎用クラス</strong> と、<strong><code>cs</code></strong> <a class="" href=/docs/ja/Concepts/classes#%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%B9%E3%83%88%E3%82%A2>クラスストア</a> で公開される <strong>ユーザークラス</strong> が提供されています:</p>
 <p><img decoding=async loading=lazy src=/docs/ja/assets/images/ClassDiagramImage-6cbf13bbf1dca5f0656fbdfad146e86f.png width=769 height=567 class=img_ev3q /></p>
 <p>ORDA データモデルクラスはすべて <strong><code>cs</code></strong> クラスストアのプロパティとして公開されます。次の ORDA クラスが提供されています:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Class<th>例<th>次によってインスタンス化されます<tbody><tr><td>cs.DataStore<td>cs.DataStore<td><a class="" href=/docs/ja/commands/ds><code>ds</code></a> コマンド<tr><td>cs.<em>DataClassName</em><td>cs.Employee<td><a class="" href=/docs/ja/API/DataStoreClass#dataclassname><code>dataStore.DataClassName</code></a>, <code>dataStore["DataClassName"]</code><tr><td>cs.<em>DataClassName</em>Entity<td>cs.EmployeeEntity<td><a class="" href=/docs/ja/API/DataClassClass#get><code>dataClass.get()</code></a>, <a class="" href=/docs/ja/API/DataClassClass#new><code>dataClass.new()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#first><code>entitySelection.first()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#last><code>entitySelection.last()</code></a>, <a class="" href=/docs/ja/API/EntityClass#previous><code>entity.previous()</code></a>, <a class="" href=/docs/ja/API/EntityClass#next><code>entity.next()</code></a>, <a class="" href=/docs/ja/API/EntityClass#first><code>entity.first()</code></a>, <a class="" href=/docs/ja/API/EntityClass#last><code>entity.last()</code></a>, <a class="" href=/docs/ja/API/EntityClass#clone><code>entity.clone()</code></a><tr><td>cs.<em>DataClassName</em>Selection<td>cs.EmployeeSelection<td><a class="" href=/docs/ja/API/DataClassClass#query><code>dataClass.query()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#query><code>entitySelection.query()</code></a>, <a class="" href=/docs/ja/API/DataClassClass#all><code>dataClass.all()</code></a>, <a class="" href=/docs/ja/API/DataClassClass#fromcollection><code>dataClass.fromCollection()</code></a>, <a class="" href=/docs/ja/API/DataClassClass#newselection><code>dataClass.newSelection()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#drop><code>entitySelection.drop()</code></a>, <a class="" href=/docs/ja/API/EntityClass#getselection><code>entity.getSelection()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#and><code>entitySelection.and()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#minus><code>entitySelection.minus()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#or><code>entitySelection.or()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#or><code>entitySelection.orderBy()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#orderbyformula><code>entitySelection.orderByFormula()</code></a>, <a class="" href=/docs/ja/API/EntitySelectionClass#slice><code>entitySelection.slice()</code></a>, <code>Create entity selection</code></table>
 <blockquote>
 <p>ORDA ユーザークラスは通常のクラスファイル (.4dm) としてプロジェクトの Classes サブフォルダーに保存されます。</p>
@@ -68,31 +38,6 @@
 </ul>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=クラスの説明>クラスの説明<a href=#クラスの説明 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>21 R3<td><code>server</code> キーワードのサポート。<tr><td>19 R4<td>Entity クラスのエイリアス属性<tr><td>19 R3<td>Entity クラスの計算属性<tr><td>18 R5<td>データモデルクラス関数は、デフォルトでは REST に公開されません。新しい <code>exposed</code> および <code>local</code> キーワード。</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=datastore-クラス>DataStore クラス<a href=#datastore-クラス class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
@@ -195,19 +140,6 @@
 <p>クライアント/サーバーで動作するように設計されているプロジェクトでは、データモデルクラス関数のコードがスレッドセーフであることを確認してください。スレッドセーフでないコードが呼び出された場合、実行時にエラーが発生します (シングルユーザーアプリケーションではコオペラティブ実行がサポートされているため、コンパイル時にはエラーが発生しません)。</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=class-constructor-1><code>Class constructor</code><a href=#class-constructor-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>履歴</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>リリース<th>内容<tbody><tr><td>20 R10<td>追加</table>
 </div></div></details>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=シンタックス>シンタックス<a href=#シンタックス class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -238,7 +170,7 @@
 <p>リモート設定を使用する場合、以下の原則に注意する必要があります: <strong>クライアント/サーバー</strong> では、呼び出しコードの実行場所においては、クライアントまたはサーバーのどちらからでも関数を呼び出すことが可能です。クライアント上で呼び出された場合、クライアントが新規エンティティを保存しようとして、サーバーのメモリ上に作成するために更新リクエストを送信したときにはもう一度トリガーされることはありません。</p>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>警告</div><div class=admonitionContent_BuS1><p><a class="" href=/docs/ja/API/DataClassClass#fromcollection><code>dataClass.fromCollection()</code></a> のような関数は大量のエンティティを一度を作成し、結果としてエンティティクラスコンストラクターをトリガーしうるため、パフォーマンス上の理由から、コンストラクターコードに過度に時間を消費するような処理を実行しないように注意する必要があります。リモート設定においては(以下参照)、コードはサーバーに対して複数のリクエストをトリガーしてはいけません。</div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-1-1>例題 1<a href=#例題-1-1 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> //cs.BookingEntity class</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Class constructor() </span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    This.departureDate:=Current date</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    This.arrivalDate:=Add to date(Current date; 0; 0; 2)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> //cs.BookingEntity class</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Class constructor() </span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    This.departureDate:=Current date</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    This.arrivalDate:=Add to date(Current date; 0; 0; 2)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-2-図-クライアントサーバー>例題 2 (図): クライアント/サーバー<a href=#例題-2-図-クライアントサーバー class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
 <!-- -->
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-3-図-qodly---標準アクション>例題 3 (図): Qodly - 標準アクション<a href=#例題-3-図-qodly---標準アクション class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -281,36 +213,6 @@
 <li class="">エンティティセレクション (例: cs.EmployeeSelection)</li>
 </ul>
 <p><em>$event</em> パラメーターは、以下のプロパティが含みます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>attributeName<td>Text<td>計算属性の名称<tr><td>dataClassName<td>Text<td>データクラスの名称<tr><td>kind<td>Text<td>"get"<tr><td>戻り値<td>Variant<td>任意。スカラー属性が Null を返すようにするには、このプロパティを Null値で追加します。</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p><code>local</code> および <code>server</code> キーワードのより詳細な情報については、<a class="" href=/docs/ja/Concepts/classes#local-%E3%81%8A%E3%82%88%E3%81%B3-server>local and server</a> の章を参照してください。</div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-4>例題<a href=#例題-4 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -328,40 +230,10 @@
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    If (This.manager.manager=Null)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        $result:=ds.Employee.newSelection()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">        $result:=This.manager.directReports.minus(this)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    End if</span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=function-set-attributename><code>Function set &lt;attributeName></code><a href=#function-set-attributename class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=シンタックス-2>シンタックス<a href=#シンタックス-2 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
-<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">{local | server} Function set &lt;attributeName>($value : type {; $event : Object})</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// コード</span><br/></div></code></pre></div></div>
+<div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">{local | server} Function set &lt;attributeName>($value : type {; $event : Object})</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// コード</span><br/></div></code></pre></div></div>
 <p><em>セッター</em> 関数は、属性に値が割り当てられたときに実行されます。この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。</p>
 <p><em>$value</em> パラメーターは、属性に割り当てられた値を受け取ります。</p>
 <p><em>$event</em> パラメーターは、以下のプロパティが含みます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>attributeName<td>Text<td>計算属性の名称<tr><td>dataClassName<td>Text<td>データクラスの名称<tr><td>kind<td>Text<td>"set"<tr><td>value<td>Variant<td>計算属性によって処理されるべき値</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>注</div><div class=admonitionContent_BuS1><p><code>local</code> および <code>server</code> キーワードのより詳細な情報については、<a class="" href=/docs/ja/Concepts/classes#local-%E3%81%8A%E3%82%88%E3%81%B3-server>local and server</a> の章を参照してください。</div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題-5>例題<a href=#例題-5 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h4>
@@ -380,26 +252,6 @@
 <li class=""><em>$result</em> がテキストの場合、それは有効なクエリ文字列でなければなりません。</li>
 <li class=""><em>$result</em> がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>$result.query<td>Text<td>プレースホルダー (:1, :2, など) を使った有効なクエリ文字列<tr><td>$result.parameters<td>Collection<td>プレースホルダーに渡す値</table>
 </li>
 </ul>
@@ -412,46 +264,6 @@
 </ul>
 </blockquote>
 <p><em>$event</em> パラメーターは、以下のプロパティが含みます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>attributeName<td>Text<td>計算属性の名称<tr><td>dataClassName<td>Text<td>データクラスの名称<tr><td>kind<td>Text<td>"query"<tr><td>value<td>Variant<td>計算属性によって処理されるべき値<tr><td>operator<td>Text<td>クエリ演算子 (<a class="" href=/docs/ja/API/DataClassClass#query><code>query</code> クラス関数も参照ください</a>)。とりうる値:<li class="">== (と等しい; @ はワイルドカード)</li><li class="">=== (と等しい; @ はワイルドカードでない)</li><li class="">!= (と等しくない; @ はワイルドカード)</li><li class="">!== (と等しくない; @ はワイルドカードでない)</li><li class="">&lt; (小さい)</li><li class="">&lt;= (less than or equal to)</li><li class="">> (大きい)</li><li class="">>= (以上)</li><li class="">IN (含まれる)</li><li class="">% (キーワードを含む)</li><tr><td>戻り値<td>Variant<td>計算属性によって処理されるべき値。 4D がデフォルトクエリ (計算属性では常にシーケンシャル) を実行するようにしたい場合は、このプロパティに <code>Null</code> を渡します。</table>
 <blockquote>
 <p>関数が <em>$result</em> に値を返し、<code>$event.result</code> プロパティにも別の値が割り当てられている場合、<code>$event.result</code> が優先されます。</p>
@@ -480,51 +292,6 @@
 <p>Entity クラス、または EntitySelection クラス型の計算属性に対する <code>orderBy</code> 関数の呼び出しは <strong>サポートされていません</strong>。</p>
 </blockquote>
 <p><em>$event</em> パラメーターは、以下のプロパティが含みます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>プロパティ<th>型<th>説明<tbody><tr><td>attributeName<td>Text<td>計算属性の名称<tr><td>dataClassName<td>Text<td>データクラスの名称<tr><td>kind<td>Text<td>"orderBy"<tr><td>value<td>Variant<td>計算属性によって処理されるべき値<tr><td>operator<td>Text<td>"desc" または "asc" (デフォルト)<tr><td>descending<td>Boolean<td>降順の場合は <code>true</code>, 昇順の場合は <code>false</code><tr><td>戻り値<td>Variant<td>計算属性によって処理されるべき値。 4D にデフォルトソートを実行させるには、<code>Null</code> を渡します。</table>
 <blockquote>
 <p><code>operator</code> と <code>descending</code> プロパティのどちらを使っても構いません。これは、基本的にプログラミングのスタイルの問題です (例題参照)。</p>
@@ -555,56 +322,6 @@
 </blockquote>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=エイリアス属性の使用>エイリアス属性の使用<a href=#エイリアス属性の使用 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>
 <p>エイリアス属性は読み取り専用です (同じデータクラスのスカラー属性に基づく場合は例外です; 最後の例題参照)。エイリアス属性は、次のようなクラス関数において、ターゲット属性パスの代わりに使用することができます:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Function<tbody><tr><td><code>dataClass.query()</code>, <code>entitySelection.query()</code><tr><td><code>entity.toObject()</code><tr><td><code>entitySelection.toCollection()</code><tr><td><code>entitySelection.extract()</code><tr><td><code>entitySelection.orderBy()</code><tr><td><code>entitySelection.orderByFormula()</code><tr><td><code>entitySelection.average()</code><tr><td><code>entitySelection.count()</code><tr><td><code>entitySelection.distinct()</code><tr><td><code>entitySelection.sum()</code><tr><td><code>entitySelection.min()</code><tr><td><code>entitySelection.max()</code><tr><td><code>entity.diff()</code><tr><td><code>entity.touchedAttributes()</code></table>
 <blockquote>
 <p>エイリアス属性はサーバー上で計算されることに留意してください。リモート環境において、エンティティのエイリアス属性を更新するには、エンティティをサーバーから再ロードする必要があります。</p>

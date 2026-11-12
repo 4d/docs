@@ -1,4 +1,4 @@
-<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-Admin/cli" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>コマンドライン・インターフェース | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/19/Admin/cli /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="コマンドライン・インターフェース | 4D Docs"/><meta data-rh=true name=description content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta data-rh=true property=og:description content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/19/Admin/cli /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/cli hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/Admin/cli hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/Admin/cli hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/Admin/cli hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/Admin/cli hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/cli hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/19/Admin/cli","name":"コマンドライン・インターフェース","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.36c5addb.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=ja dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-Admin/cli" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>コマンドライン・インターフェース | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/ja/19/Admin/cli /><meta data-rh=true property=og:locale content=ja /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=ja /><meta data-rh=true name=docsearch:language content=ja /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="コマンドライン・インターフェース | 4D Docs"/><meta data-rh=true name=description content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta data-rh=true property=og:description content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><link data-rh=true rel=icon href=/docs/ja/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/ja/19/Admin/cli /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/cli hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/Admin/cli hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/Admin/cli hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/Admin/cli hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/Admin/cli hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/Admin/cli hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/ja/19/Admin/cli","name":"コマンドライン・インターフェース","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/ja/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/ja/assets/css/styles.4cf13e15.css /><script src=/docs/ja/assets/js/runtime~main.1d919be6.js defer></script><script src=/docs/ja/assets/js/main.7972ef28.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/ja/img/logohome.png /><div role=region aria-label=メインコンテンツまでスキップ><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>メインコンテンツまでスキップ</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=ナビゲーションバーの切り替え aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/ja/><div class=navbar__logo><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/ja/img/logohome.png alt="4D ロゴ" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D ドキュメンテーション</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/ja/19/Admin/cli>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/ja/Admin/cli>21 R5 BETA</a><li><a class=dropdown__link href=/docs/ja/21-R4/Admin/cli>21 R4</a><li><a class=dropdown__link href=/docs/ja/21/Admin/cli>21</a><li><a class=dropdown__link href=/docs/ja/20/Admin/cli>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/ja/19/Admin/cli>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="このバージョンでは、このページは利用できません
@@ -20,86 +20,6 @@
 <p>ここでは、4Dアプリケーションを起動するためのコマンドラインとサポートされている引数について説明します。</p>
 <p>シンタックス:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">&lt;applicationPath> [--version] [--help] [--project] [&lt;projectPath | packagePath | 4dlinkPath> [--data &lt;dataPath>]]</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">[--opening-mode interpreted | compiled] [--create-data] [--user-param &lt;user string>] [--headless] [--dataless]</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]</span><br/></div></code></pre></div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>引数<th>値<th>説明<tbody><tr><td><code>applicationPath</code><td>4D、4D Server、または組み込みアプリケーションへのパス。<td>アプリケーションを起動します。 4Dアプリケーションをダブルクリックするのと同じ動作をします。 ストラクチャーファイルを指定する引数なしで呼び出された場合、アプリケーションが実行され、データベースを選択するためのダイアログボックスが表示されます。<tr><td><code>--version</code><td><td>アプリケーションのバージョンを表示して終了します。<tr><td><code>--help</code><td><td>ヘルプを表示して終了します。 代替引数: -?, -h<tr><td><code>--project</code><td>projectPath | packagePath | 4dlinkPath<td>カレントデータファイルを開くプロジェクトファイル。 ダイアログボックスは表示されません。<tr><td><code>--data</code><td>dataPath<td>指定されたプロジェクトファイルで開くデータファイル。 指定しない場合、4D は最後に開いたデータファイルを使用します。<tr><td><code>--opening-mode</code><td>interpreted | compiled<td>データベースをインタープリタモードまたはコンパイルモードで開くように指示します。 指定のモードが利用できない場合でも、エラーは発生しません。<tr><td><code>--create-data</code><td><td>有効なデータファイルが見つからない場合、新しいデータファイルを自動的に作成します。 ダイアログボックスは表示されません。 "-data" 引数で渡されたファイルがあれば、4D はそれを使用します (同じ名前のファイルが既に存在する場合にはエラーが生成されます)。<tr><td><code>--user-param</code><td>カスタムのユーザー文字列<td>Get database parameter コマンドを通して 4Dアプリケーションで利用可能な任意の文字列 (ただし文字列は予約文字である "-" から始まってはいけません)。<tr><td><code>--headless</code><td><td>4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li class=""> デザインモードは使えません。 データベースはアプリケーションモードで起動します。</li><li class=""> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li class="">Dock またはタスクバーにはアイコンは表示されません。</li><li class="">開かれたデータベースは、"最近使用したデータベース" メニューに登録されません。</li><li class="">4D診断ファイルの記録が自動的に開始されます (<a href=https://doc.4d.com/4dv19/help/command/ja/page642.html target=_blank rel="noopener noreferrer" class="">SET DATABASE PARAMETER</a>、値79 参照)</li><li class="">ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: <a href=https://doc.4d.com/4dv19/help/command/ja/page41.html target=_blank rel="noopener noreferrer" class="">ALERT</a> コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、<a href=https://doc.4d.com/4dv19/help/command/ja/page667.html target=_blank rel="noopener noreferrer" class="">LOG EVENT</a> コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、<a href=https://doc.4d.com/4dv19/help/command/ja/page291.html target=_blank rel="noopener noreferrer" class="">QUIT 4D</a> を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。<tr><td><code>--dataless</code><td><td>4D、4D Server、または組み込みアプリケーションをデータレスモードで起動します。 データレスモードは、4D がデータを必要としないタスク (プロジェクトのコンパイルなど) を実行する場合に便利です。 このモードでは: <li class="">コマンドラインや <code>.4DLink</code> ファイルで指定されていても、また <code>CREATE DATA FILE</code> や <code>OPEN DATA FILE</code> コマンドを使用していても、データを含むファイルは開かれません。</li><li class="">データを操作するコマンドはエラーを生成します。 たとえば、<code>CREATE RECORD</code> は "このコマンドの対象となるテーブルがありません" というエラーを生成します。</li><br/><strong>注記</strong>:<li class="">コマンドラインで引数が渡された場合、アプリケーションを終了しない限り、4D で開かれているすべてのデータベースにデータレスモードが適用されます。</li><li class=""><code>.4DLink</code> ファイルを使って引数が渡された場合には、データレスモードは <code>.4DLink</code> ファイルで指定されたデータベースにのみ適用されます。 <code>.4DLink</code> ファイルの詳細については、<a class="" href=/docs/ja/19/Project/creating#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E9%96%8B%E3%81%8F-%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%96%B9%E6%B3%95>プロジェクトを開く (その他の方法)</a> を参照ください。</li><tr><td><code>--webadmin-settings-file</code><td>ファイルパス<td><a class="" href=/docs/ja/19/Admin/webAdmin>WebAdmin Webサーバー</a> 用のカスタム WebAdmin <code>.4DSettings</code> ファイルのパス<tr><td><code>--webadmin-access-key</code><td>Text<td><a class="" href=/docs/ja/19/Admin/webAdmin>WebAdmin Webサーバー</a> 用のアクセスキー<tr><td><code>--webadmin-auto-start</code><td>Boolean<td><a class="" href=/docs/ja/19/Admin/webAdmin>WebAdmin Webサーバー</a> 用の自動スタートアップ設定の状態<tr><td><code>--webadmin-store-settings</code><td><td>アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの <a class="" href=/docs/ja/19/Admin/webAdmin#webadmin-%E8%A8%AD%E5%AE%9A><code>WebAdmin.4DSettings</code></a> ファイル、または <code>--webadmin-settings-path</code> パラメーターで指定されたカスタムファイル) に保存します。 必要に応じて <code>--webadmin-store-settings</code> 引数を使用して、これらの設定を保存します。</table>
 <p><a class="" href=/docs/ja/19/Admin/debugLogFiles#4ddiagnosticlogtxt>Diagnostic log file</a> (license alert, conversion dialog, database selection, data file selection). このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=例題>例題<a href=#例題 class=hash-link aria-label=見出しへの直接リンク title=見出しへの直接リンク translate=no>​</a></h3>

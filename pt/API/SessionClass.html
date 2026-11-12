@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/SessionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Session | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/API/SessionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Session | 4D Docs"/><meta data-rh=true name=description content="Os objetos de sessão são retornados pelo comando Session. These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage privileges."/><meta data-rh=true property=og:description content="Os objetos de sessão são retornados pelo comando Session. These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage privileges."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/API/SessionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/SessionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/SessionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/SessionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/SessionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/SessionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/SessionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/API/SessionClass","name":"Session","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-API/SessionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Session | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/API/SessionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Session | 4D Docs"/><meta data-rh=true name=description content="Os objetos de sessão são retornados pelo comando Session. These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage privileges."/><meta data-rh=true property=og:description content="Os objetos de sessão são retornados pelo comando Session. These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage privileges."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/API/SessionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/SessionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/API/SessionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/API/SessionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/API/SessionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/API/SessionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/API/SessionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/API/SessionClass","name":"Session","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/API/SessionClass>Próximo</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/API/SessionClass>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/API/SessionClass>21 R4 BETA</a><li><a class=dropdown__link href=/docs/pt/21/API/SessionClass>21</a><li><a class=dropdown__link href=/docs/pt/20/API/SessionClass>20</a><li><a class=dropdown__link href=/docs/pt/19/API/SessionClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -19,103 +19,13 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </ul>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 16 16"><path fill-rule=evenodd d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></span>About session privileges</div><div class=admonitionContent_BuS1><p>All session types can handle privileges, but only the code executed in a <strong>web context</strong> is actually controlled by session's privileges.</div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=resumo>Resumo<a href=#resumo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#clearprivileges class=""><strong>.clearPrivileges()</strong> : Boolean</a><br/>removes all the privileges associated to the session (excluding promoted privileges) and returns <strong>True</strong> if the execution was successful<tr><td><a href=#createotp class=""><strong>.createOTP</strong> ( { <em>lifespan</em> : Integer } ) : Text </a><br/>cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<tr><td><a href=#demote class=""><strong>.demote</strong>( <em>promoteId</em> : Integer )</a><br/>removes the promoted privilege whose id you passed in <em>promoteId</em> from the web process, if it was previously added by the <a href=#promote class=""><code>.promote()</code></a> function<tr><td><a href=#expirationdate class=""><strong>.expirationDate</strong> : Text</a><br/>a data e a hora de expiração do cookie de sessão<tr><td><a href=#getprivileges class=""><strong>.getPrivileges</strong>() : Collection</a><br/>retorna uma coleção de todos os nomes de privilégios associados à sessão<tr><td><a href=#hasprivilege class=""><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</a><br/>retorna True se o <em>privilege</em> estiver associado à sessão e False caso contrário<tr><td><a href=#id class=""><strong>.id</strong> : Text</a><br/> o identificador único (UUID) da sessão do usuário<tr><td><a href=#idletimeout class=""><strong>.idleTimeout</strong> : Integer</a><br/>o tempo limite da sessão de inatividade (em minutos), após o qual a sessão é automaticamente encerrada pelo 4D<tr><td><a href=#info class=""><strong>.info</strong> : Object</a><br/>describes the session<tr><td><a href=#isguest class=""><strong>.isGuest()</strong> : Boolean</a><br/>returns True as long as <code>setPrivileges()</code> is not called in the session or after a <a href=https://developer.4d.com/qodly/4DQodlyPro/force-login#logout target=_blank rel="noopener noreferrer" class="">Qodly logout</a> has been executed in the session<tr><td><a href=#promote class=""><strong>.promote</strong>( <em>privilege</em> : Text ) : Integer</a><br/>adds the privilege defined in the <em>privilege</em> parameter to the current process during the execution of the calling function and returns the id of the promoted privilege<tr><td><a href=#quotas class=""><strong>.quotas</strong> : 4D.QuotaManager</a><br/>a <code>4D.QuotaManager</code> object with current values and set values for server thresholds regarding REST requests in the current session<tr><td><a href=#restore class=""><strong>.restore</strong> ( <em>token</em> : Text ) : Boolean </a><br/>substitui a sessão do usuário da web pela sua sessão original correspondente ao <em>token</em> UUID<tr><td><a href=#setprivileges class=""><strong>.setPrivileges</strong>( <em>privilege</em> : Text ) : Boolean<br/><strong>.setPrivileges</strong>( <em>privileges</em> : Collection ) : Boolean<br/><strong>.setPrivileges</strong>( <em>settings</em> : Object ) : Boolean</a><br/>associa os privilégios e/ou papéis definidos no parâmetro para a sessão e retorna <strong>True</strong> se a execução foi bem sucedida<tr><td><a href=#storage class=""><strong>.storage</strong> : Object</a><br/> um objeto compartilhado que pode ser usado para armazenar informações disponíveis para todos os processos da sessão<tr><td><a href=#username class=""><strong>.userName</strong> : Text</a><br/>o nome de usuário associado à sessão</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=clearprivileges>.clearPrivileges()<a href=#clearprivileges class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21<td>Support of remote and standalone sessions<tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.clearPrivileges()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>Resultados<td>Parâmetros<td style=text-align:center>&lt;-<td>True se a execução for bem-sucedida</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição>Descrição<a href=#descrição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -129,50 +39,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">//Invalidate a web user session</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $isOK : Boolean</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$isOK:=Session.clearPrivileges()</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=createotp>.createOTP()<a href=#createotp class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21<td>Support of remote and standalone sessions<tr><td>20 R9<td>Adicionado</table>
 </div></div></details>
 <p><strong>.createOTP</strong> ( { <em>lifespan</em> : Integer } ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>lifespan<td>Integer<td style=text-align:center>-><td>Duração do token de sessão em segundos<tr><td>Resultados<td>Text<td style=text-align:center>&lt;-<td>UUID of the token</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-1>Descrição<a href=#descrição-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -190,40 +60,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $token : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$token := Session.createOTP( 60 ) //o token é válido por 1 mn</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=demote>.demote()<a href=#demote class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R10<td>Adicionado</table>
 </div></div></details>
 <p><strong>.demote</strong>( <em>promoteId</em> : Integer )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>promoteId<td>Integer<td style=text-align:center>-><td>Id returned by the <code>promote()</code> function</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-2>Descrição<a href=#descrição-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -240,19 +80,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#promote class=""><code>.promote()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=expirationdate>.expirationDate<a href=#expirationdate class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.expirationDate</strong> : Text</p>
@@ -264,44 +91,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $expiration : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getprivileges>.getPrivileges()<a href=#getprivileges class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21<td>Support of remote and standalone sessions<tr><td>20 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getPrivileges</strong>() : Collection</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>Resultados<td>Collection<td style=text-align:center>&lt;-<td>Coleção de nomes de privilégios (strings)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-4>Descrição<a href=#descrição-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -320,50 +113,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <a href=https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging target=_blank rel="noopener noreferrer" class=""><em>Permissions – Inspect the privileges in the session for an easy debugging</em> (blog post)</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hasprivilege>.hasPrivilege()<a href=#hasprivilege class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21<td>Returns True for promoted privileges, Support of remote and standalone sessions<tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.hasPrivilege</strong>( <em>privilege</em> : Text ) : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>privilege<td>Text<td style=text-align:center>-><td>Nome do privilegio a verificar<tr><td>Resultados<td>Parâmetros<td style=text-align:center>&lt;-<td>True se a sessão tiver <em>privilege</em>, False caso contrário</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-5>Descrição<a href=#descrição-5 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -377,19 +130,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href="https://blog.4d.com/?s=hasPrivilege" target=_blank rel="noopener noreferrer" class=""><em>Restrict data according to privileges or information saved in session storage</em> (blog post)</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=id>.id<a href=#id class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.id</strong> : Text</p>
@@ -399,19 +139,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>Você pode usar essa propriedade para obter o objeto <a href=#storage class=""><code>.storage</code></a> de uma sessão graças ao comando <a class="" href=/docs/pt/commands/session-storage><code>storage</code></a>.</div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=idletimeout>.idleTimeout<a href=#idletimeout class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.idleTimeout</strong> : Integer</p>
@@ -428,23 +155,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">If (Session.isGuest())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		// Uma sessão de convidado será fechada após 60 minutos de inatividade</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	Session.idleTimeout:=60</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">Else</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">		// Outras sessões serão fechadas após 120 minutos de inatividade</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	Session.idleTimeout:=120</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=info>.info<a href=#info class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21 R4<td>New <em>unreachableSince</em> property<tr><td>20 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.info</strong> : Object</p>
@@ -456,110 +166,15 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <li class=""><strong>Web user sessions</strong>: The <code>.info</code> object contains properties available for web user sessions.</li>
 </ul>
 <p>O objeto <code>.info</code> contém as seguintes propriedades:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<tbody><tr><td>type<td>Text<td>Session type: "remote", "storedProcedure", "standalone", "rest", "web"<tr><td>userName<td>Text<td>Nome de usuário 4D (o mesmo valor que <a href=#username class=""><code>.userName</code></a>)<tr><td>machineName<td>Text<td><ul><li class="">Remote sessions: name of the remote machine.<li class="">Client sessions: name of the local machine.<li class="">Stored procedures session: name of the server machine.<li class=""> Standalone session: name of the machine</ul><tr><td>systemUserName<td>Text<td><ul><li class="">Remote sessions: name of the system session opened on the remote machine.<li class="">Client sessions: name of the local system session</li><ul></ul></ul><tr><td>IPAddress<td>Text<td><ul><li class="">Remote sessions: IP address of the remote machine.<li class="">Client sessions: IP address of the local machine.<li class="">Standalone session: "localhost"</ul><tr><td>hostType<td>Text<td>Host type: "windows", "mac", or "browser"<tr><td>creationDateTime<td>Date ISO 8601<td>Date and time of session creation (standalone session: date and time of application startup)<tr><td>state<td>Text<td>Estado da sessão: "ativa", "adiada", "em espera"<tr><td>ID<td>Text<td>UUID da sessão (mesmo valor que <a href=#id class=""><code>.id</code></a>)<tr><td>persistentID<td>Text<td>Remote/client sessions: Session's persistent ID<tr><td>unreachableSince<td>Integer<td>Remote sessions: Number of seconds since the peer is unreachable. On 4D Server, this attribute is readable in the <a class="" href=/docs/pt/commands/process-activity><code>Process activity.sessions</code></a> property.</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>nota</div><div class=admonitionContent_BuS1><p>Desde <code>. nfo</code> é uma propriedade computada, é recomendável chamá-lo uma vez e então armazená-lo em uma variável local se você quiser fazer algum processamento em suas propriedades.</div></div>
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isguest>.isGuest()<a href=#isguest class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isGuest()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>Resultados<td>Parâmetros<td style=text-align:center>&lt;-<td>True if session is a Guest one, False otherwise (web sessions only)</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-9>Descrição<a href=#descrição-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -571,46 +186,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">If (Session.isGuest())</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">	//Fazer algo para o usuário convidado</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=promote>.promote()<a href=#promote class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R10<td>Adicionado</table>
 </div></div></details>
 <p><strong>.promote</strong>( <em>privilege</em> : Text ) : Integer</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>privilege<td>Text<td style=text-align:center>-><td>Nome do privilégio<tr><td>Resultados<td>Integer<td style=text-align:center>&lt;-<td>id to use when calling the <a href=#demote class=""><code>demote()</code></a> function</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-10>Descrição<a href=#descrição-10 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -636,19 +215,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#demote class=""><code>.demote()</code></a><br/><a href=#hasprivilege class=""><code>hasPrivilege()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=quotas>.quotas<a href=#quotas class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21 R4<td>Adicionado</table>
 </div></div></details>
 <p><strong>.quotas</strong> : 4D.QuotaManager</p>
@@ -656,53 +222,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>The <code>.quotas</code> property contains a <code>4D.QuotaManager</code> object with current values and set values for server thresholds regarding REST requests in the current session. Server thresholds are used to control the requests to the server and help preventing excessive use of resources (see <a class="" href=/docs/pt/API/QuotaManagerClass><code>4D.QuotaManager</code> class</a>).</p>
 <p>Essa propriedade é <strong>somente leitura</strong>.</p>
 <p>The following properties of the <code>4D.QuotaManager</code> object are available for the session:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th><th>Tipo<th>Writable<th>Descrição<tbody><tr><td><a class="" href=/docs/pt/API/QuotaManagerClass#nbentitysets>nbEntitySets</a><td><td>Integer<td>sim<td>Maximum allowed number of entity sets in server memory. <em>Undefined</em> = no quotas applied<tr><td><a class="" href=/docs/pt/API/QuotaManagerClass#defaultentitysettimeout>defaultEntitySetTimeout</a><td><td>Integer<td>sim<td>Default inactivity timeout for entity sets in memory (seconds)<tr><td><a class="" href=/docs/pt/API/QuotaManagerClass#maxentitysettimeout>maxEntitySetTimeout</a><td><td>Integer<td>sim<td>Maximum inactivity timeout for entity sets in memory (seconds)<tr><td><a class="" href=/docs/pt/API/QuotaManagerClass#currentvalues>currentValues</a><td><td>Object<td>não<td>Current usage values reported for the session.<tr><td><td>nbEntitySets<td>Integer<td>não<td>Number of entity sets currently in memory. <em>Undefined</em> = no entity set in memory</table>
 <p>When you modify a value, it is immediately taken into account by the server (no need to restart) and will be applied to further REST requests.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>Related blog post</div><div class=admonitionContent_BuS1><p><a href=https://blog.4d.com/keep-your-rest-server-performing-at-its-best target=_blank rel="noopener noreferrer" class="">Keep your rest server performing at its best</a>.</div></div>
@@ -713,46 +232,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <a class="" href=/docs/pt/WebServer/quotas>Web server quotas</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=restore>.restore()<a href=#restore class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R9<td>Adicionado</table>
 </div></div></details>
 <p><strong>.restore</strong> ( <em>token</em> : Text ) : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>token<td>Text<td style=text-align:center>-><td>UUID do token de sessão<tr><td>Resultados<td>Parâmetros<td style=text-align:center>&lt;-<td>True se a sessão atual tiver sido substituída com êxito pela sessão no token</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-12>Descrição<a href=#descrição-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -777,66 +260,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#createotp class=""><code>.createOTP()</code></a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setprivileges>.setPrivileges()<a href=#setprivileges class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>21<td>Support of remote and standalone sessions<tr><td>19 R8<td>Suporte da propriedade "roles" das Settings<tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.setPrivileges</strong>( <em>privilege</em> : Text ) : Boolean<br/><strong>.setPrivileges</strong>( <em>privileges</em> : Collection ) : Boolean<br/><strong>.setPrivileges</strong>( <em>settings</em> : Object ) : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>privilege<td>Text<td style=text-align:center>-><td>Nome do privilégio<tr><td>privileges<td>Collection<td style=text-align:center>-><td>Collection de nomes de privilégios<tr><td>settings<td>Object<td style=text-align:center>-><td>Objetos com as propriedades "privilégios" (string ou collection)<tr><td>Resultados<td>Parâmetros<td style=text-align:center>&lt;-<td>True se a execução for bem-sucedida</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-13>Descrição<a href=#descrição-13 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -846,31 +273,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <li class="">No parâmetro <em>privileges</em>, passe uma coleção de cadeias de caracteres contendo nomes de privilégios.</li>
 <li class="">No parâmetro <em>settings</em>, passe um objeto que contenha as seguintes propriedades:</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<tbody><tr><td>privileges<td>Text ou Collection<td><li class="">String contendo um nome de privilégio, ou</li><li class="">Coleção de cadeias de caracteres contendo nomes de privilégios</li><tr><td>roles<td>Text ou Collection<td><li class="">String que contém uma função, ou</li><li class="">Coleção de cadeias de caracteres contendo funções</li><tr><td>userName<td>Text<td>User name to associate to the session (optional, web sessions only). Not available in remote client sessions (ignored).</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>nota</div><div class=admonitionContent_BuS1><p>Os privilégios e as funções são definidos no arquivo <a class="" href=/docs/pt/ORDA/privileges#rolesjson-file><code>roles.json</code></a> do projeto. Para obter mais informações, consulte a seção <a class="" href=/docs/pt/ORDA/privileges><strong>Privilégios</strong></a>.</div></div>
 <p>Se a propriedade <code>privileges</code> ou <code>roles</code> tiverem um nome que não seja declarado no arquivo <a class="" href=/docs/pt/ORDA/privileges#rolesjson-file><code>roles.json</code></a>, ele será ignorado.</p>
@@ -887,23 +289,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#getprivileges class="">.getPrivileges()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=storage>.storage<a href=#storage class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R5<td>Support of desktop sessions<tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.storage</strong> : Object</p>
@@ -925,23 +310,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Use (Session.storage)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> Session.storage.settings:=New shared object("property"; $value; "property2"; $value2)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">End use</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=username>.userName<a href=#username class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R5<td>Support of desktop sessions<tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>.userName</strong> : Text</p>

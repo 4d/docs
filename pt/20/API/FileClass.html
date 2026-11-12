@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/20/API/FileClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="Os objectos do ficheiro são criados com o comando Arquivo . Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando File para criar um novo ficheiro, é criado um objecto válido File mas nada é realmente armazenado no disco até chamar a função file.create( ) ."/><meta data-rh=true property=og:description content="Os objectos do ficheiro são criados com o comando Arquivo . Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando File para criar um novo ficheiro, é criado um objecto válido File mas nada é realmente armazenado no disco até chamar a função file.create( ) ."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/20/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/category/core-development","name":"Desenvolvimento","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/FileClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>File | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/20/API/FileClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="File | 4D Docs"/><meta data-rh=true name=description content="Os objectos do ficheiro são criados com o comando Arquivo . Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando File para criar um novo ficheiro, é criado um objecto válido File mas nada é realmente armazenado no disco até chamar a função file.create( ) ."/><meta data-rh=true property=og:description content="Os objectos do ficheiro são criados com o comando Arquivo . Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando File para criar um novo ficheiro, é criado um objecto válido File mas nada é realmente armazenado no disco até chamar a função file.create( ) ."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/20/API/FileClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/FileClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/FileClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/FileClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/FileClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/FileClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/category/core-development","name":"Desenvolvimento","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/20/API/FileClass","name":"File","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/20/API/FileClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/API/FileClass>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/API/FileClass>21 R4 BETA</a><li><a class=dropdown__link href=/docs/pt/21/API/FileClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/20/API/FileClass>20</a><li><a class=dropdown__link href=/docs/pt/19/API/FileClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -9,175 +9,13 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=pathnames>Pathnames<a href=#pathnames class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p><code>Os objectos</code> suportam vários pathnames, incluindo <code>filesystems</code> ou <code>posix</code> syntax. Os pathnames suportados são detalhados na página <a class="" href=/docs/pt/20/Concepts/paths><strong>Pathnames</strong></a> .</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-file>Objeto File<a href=#objeto-file class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#copyto class=""><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D. Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D. File</a>    A propriedade <code>.platformPath</code> devolve<tr><td><a href=#create class=""><strong>.create()</strong> : Boolean </a>    cria um arquivo em disco de acordo com as propriedades do objecto <code>File</code><tr><td><a href=#createalias class=""><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D. Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D. File</a>    cria um pseudónimo (macOS) ou um atalho (Windows)<tr><td><a href=#creationdate class=""><strong>.creationDate</strong> : Date</a>    A propriedade <code>.modificationDate</code> devolve<tr><td><a href=#creationtime class=""><strong>.creationTime</strong> : Time</a>    a hora da criação do arquivo<tr><td><a href=#delete class=""><strong>.delete</strong>()</a>    A função <code>.delete()</code><tr><td><a href=#exists class=""><strong>.exists</strong> : Boolean</a>    true se o ficheiro existir em disco<tr><td><a href=#extension class=""><strong>.extension</strong> : Text</a>    a extensão do nome do ficheiro (se existir)<tr><td><a href=#fullname class=""><strong>.fullName</strong> : Text</a>    o nome completo do ficheiro, incluindo a sua extensão (se houver)<tr><td><a href=#getappinfo class=""><strong>.getAppInfo</strong>() : Object</a>    retorna os conteúdos de um arquivo de informação <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong> como um objeto<tr><td><a href=#getcontent class=""><strong>.getContent( )</strong> : Blob</a>returns a <code>4D. Blob</code> object containing the entire content of a file<tr><td><a href=#geticon class=""><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a>    o ícone do ficheiro<tr><td><a href=#gettext class=""><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br/><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a>    devolve o conteúdo do ficheiro como texto<tr><td><a href=#hidden class=""><strong>.hidden</strong> : Boolean</a>    true se o arquivo for definido como "escondido" ao nível do sistema<tr><td><a href=#isalias class=""><strong>.isAlias</strong> : Boolean</a>    verdadeiro se o arquivo for um alias (apelido), um atalho, ou um link simbólico<tr><td><a href=#isfile class=""><strong>.isFile</strong> : Boolean</a>    A propriedade <code>.name</code> devolve<tr><td><a href=#isfolder class=""><strong>.isFolder</strong> : Boolean</a>    A função <code>.copyTo()</code><tr><td><a href=#iswritable class=""><strong>.isWritable</strong> : Boolean</a>    verdadeiro se o arquivo existir em disco e for gravável<tr><td><a href=#modificationdate class=""><strong>.modificationDate</strong> : Date</a>    A propriedade <code>.aceita a transação</code> devolve<tr><td><a href=#modificationtime class=""><strong>.modificationTime</strong> : Time</a>    A propriedade <code>.modificationTime</code> devolve<tr><td><a href=#moveto class=""><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D. Folder { ; <em>newName</em> : Text } ) : 4D. File</a>    move ou renomeia o objeto <code>File</code> na <em>destinationFolder</em> especificada<tr><td><a href=#name class=""><strong>.name</strong> : Text</a>    A propriedade <code>.isFolder</code> devolve<tr><td><a href=#open class="">$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if</a>    cria e devolve um novo objeto <a class="" href=/docs/pt/20/API/FileHandleClass>4D. FileHandle</a> no arquivo, no <em>mode</em> ou como as <em>options</em> especificadas<tr><td>[<tr><td><a href=#parent class=""><strong>.parent</strong> : 4D. Folder</a>    A propriedade <code>.parent</code> devolve<tr><td><a href=#path class=""><strong>.path</strong> : Text</a>    A propriedade <code>.path</code> devolve<tr><td><a href=#platformpath class=""><strong>.platformPath</strong> : Text</a>    A propriedade <code>.isFile</code> devolve<tr><td><a href=#rename class=""><strong>.rename</strong>( <em>newName</em> : Text ) : 4D. File</a>    A função <code>.rename()</code><tr><td><a href=#setappinfo class=""><strong>.setAppInfo</strong>( <em>info</em> : Object )</a>    escreve as propriedades de <em>info</em> como conteúdo informativo de um arquivo <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong><tr><td><a href=#setcontent class=""><strong>.setContent</strong> ( <em>content</em> : Blob ) </a>    reescreve todo o conteúdo do ficheiro utilizando os dados armazenados no BLOB <em>content</em><tr><td><a href=#settext class=""><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br/><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } )</a>    escreve <em>text</em> como o novo conteúdo do ficheiro<tr><td><a href=#size class=""><strong>.size</strong> : Real</a>    o tamanho do arquivo expresso em bytes</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=file>File<a href=#file class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>19 R4<td>Nova constante <code>HTTP Client log file</code><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>File</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer }{ ; * } ) : 4D. File<br/><strong>File</strong> ( <em>fileConstant</em> : Integer { ; * } ) : 4D. File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>path<td>Text<td style=text-align:center>-><td>File path<tr><td>fileConstant<td>Integer<td style=text-align:center>-><td>4D file constant<tr><td>pathType<td>Integer<td style=text-align:center>-><td><code>fk posix path</code> (default) or <code>fk platform path</code><tr><td>*<td><td style=text-align:center>-><td>* to return file of host database<tr><td>Result<td>4D. File<td style=text-align:center>&lt;-<td>New file object</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição>Descrição<a href=#descrição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -188,172 +26,14 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Apenas são compatíveis os nomes de caminho absolutos com o comando <code>File</code> .</p>
 </blockquote>
 <p>Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro <em>pathType</em> . Estão disponíveis as seguintes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td>fk platform path<td>1<td>Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma)<tr><td>fk posix path<td>0<td>Caminho expresso com a sintaxe POSIX (por padrão)</table>
 <p><strong>File ( fileConstant { ; * } )</strong></p>
 <p>No parâmetro <em>fileConstant</em> , passe um ficheiro 4D incorporado ou de sistema, utilizando uma das constantes seguintes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td>Backup history file<td>19<td>Arquivo de histórico de cópias de segurança (ver Arquivos de configuração e rastreio). Armazenado na pasta de destino de cópia de segurança.<tr><td>Backup log file<td>13<td>Arquivo atual do diário de backup. Armazenado na pasta Logs da aplicação.<tr><td>Backup settings file<td>1<td>Arquivo padrão backup.4DSettings (formato xml), armazenado na pasta Settings do projecto<tr><td>Backup settings file for data<td>17<td>backup.4DSettings file (formato xml) para o arquivo de dados, armazenado na pasta Settings da pasta de dados<tr><td>Build application log file<td>14<td>Arquivo de registo atual em formato xml do construtor da aplicação. Armazenado na pasta Logs.<tr><td>Build application settings file<td>20<td>Arquivo de configurações padrão do construtor da aplicação ("buildApp.4DSettings"). Armazenado na pasta Settings do projecto.<tr><td>Compacting log file<td>6<td>Arquivo de registo da mais recente compactação feita com o comando Compact data file ou o centro de Manutenção e segurança. Armazenado na pasta Logs.<tr><td>Current backup settings file<td>18<td>arquivo backup.4DSettings utilizado actualmente pela aplicação. Pode ser o arquivo de definições de backup (predefinido) ou um arquivo personalizado de definições de backup do usuário definido para o arquivo de dados<tr><td>Debug log file<td>12<td>Arquivo de registo criado pelo comando <code>SET DATABASE PARAMETER(Debug log recording)</code> . Armazenado na pasta Logs.<tr><td>Diagnostic log file<td>11<td>Arquivo de registo criado pelo comando <code>SET DATABASE PARAMETER(Diagnostic log recording)</code> . Armazenado na pasta Logs.<tr><td>Directory file<td>16<td>directório.json, contendo a descrição dos usuários e grupos (se houver) para a aplicação do projecto. Pode ser localizado ou na pasta de configurações do usuário (por padrão, global ao projecto), ou na pasta de definições de dados (específica a um arquivo de dados).<tr><td>HTTP Client log file<td>24<td>Arquivo de histórico criado pelo comando <code>HTTP SET OPTION (HTTP client log)</code>. Armazenado na pasta Logs.<tr><td>HTTP debug log file<td>9<td>Arquivo de registo criado pelo comando <code>WEB SET OPTION(Web debug log)</code> . Armazenado na pasta Logs.<tr><td>HTTP log file<td>8<td>Arquivo de registo criado pelo comando <code>WEB SET OPTION(Web log recording)</code> . Armazenado na pasta Logs.<tr><td>IMAP Log file<td>23<td>Arquivo de registo criado pelo comando <code>SET DATABASE PARAMETER(IMAP Log)</code> . Armazenado na pasta Logs.<tr><td>Last backup file<td>2<td>Último arrquivo de cópia de segurança, denominado <code>\&lt;applicationName>[bkpNum].4BK</code>, armazenado num local personalizado.<tr><td>Last journal integration log file<td>22<td>Nome completo do último arquivo de registo de integração do diário (armazenado na pasta Logs da aplicação restaurada), se existir. Este arquivo é criado, em modo de auto-reparação, assim que ocorrer a integração de um arquivo de registo<tr><td>Repair log file<td>7<td>Arquivo de registo das reparações da base de dados efetuadas na base de dados no Centro de Manutenção e Segurança (MSC). Armazenado na pasta Logs.<tr><td>Request log file<td>10<td>Arquivo padrão de registo de pedido de cliente/servidor (excluindo pedidos Web) criado pelos comandos <code>SET DATABASE PARAMETER(4D Server log recording)</code> ou <code>SET DATABASE PARAMETER(Client log recording)</code> . Se executado no servidor, o ficheiro de registo do servidor é devolvido (armazenado na pasta Logs do servidor). Se executado no cliente, o arquivo de registo do cliente é devolvido (armazenado na pasta local Logs do cliente).<tr><td>SMTP log file<td>15<td>Arquivo de registo criado pelo comando <code>SET DATABASE PARAMETER(SMTP Log)</code> . Armazenado na pasta Logs.<tr><td>User settings file<td>3<td>settings.4DSettings arquivo para todos os arquivos de dados, guardados na pasta Preferências ao lado do arquivo de estrutura, se ativado.<tr><td>User settings file for data<td>4<td>arquivo settings.4DSettings para dados atual, guardado na pasta Preferências ao lado do arquivo de dados.<tr><td>Verification log file<td>5<td>Arquivo Log criado pelos comandos <code>VERIFY CURRENT DATA FILE</code> e <code>VERIFY DATA FILE</code> ou pelo Maintenance and Security Center (MSC). Armazenado na pasta Logs.</table>
 <p>Se o alvo <em>fileConstant</em> não existir, um objecto nulo é devolvido. Não se levantam erros.</p>
 <p>Se o comando for chamado a partir de um componente, passe o parâmetro opcional <code>*</code> para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro <code>*</code> , um objecto nulo é sempre devolvido.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4d-filenew>4D. File.new()<a href=#4d-filenew class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p><strong>4D. File.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer } ) : 4D. File<br/><strong>4D. File.new</strong> ( <em>fileConstant</em> : Integer ) : 4D. File</p>
@@ -364,58 +44,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=copyto>.copyTo()<a href=#copyto class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D. Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D. File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th style=text-align:center><th>Description<tbody><tr><td>destinationFolder<td>4D. Folder<td style=text-align:center>-><td>Destination folder<tr><td>newName<td>Text<td style=text-align:center>-><td>Name for the copy<tr><td>overwrite<td>Integer<td style=text-align:center>-><td><code>fk overwrite</code> to replace existing elements<tr><td>Result<td>4D. File<td style=text-align:center>&lt;-<td>Copied file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-2>Descrição<a href=#descrição-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -423,21 +55,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>A <em>destinationFolder</em> deve existir em disco, senão um erro é gerado.</p>
 <p>Como padrão, o arquivo é copiado com o nome do arquivo original. Se quiser renomear a cópia, passe o novo nome no parâmetro <em>newName</em> . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.</p>
 <p>Se já existir um arquivo com o mesmo nome em <em>destinationFolder</em>, por padrão 4D gera um erro. Pode passar a constante <code>fk overwrite</code> no parâmetro <em>overwrite</em> para ignorar e sobrescriber o arquivo existente</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk overwrite</code><td>4<td>Sobrescrever os elementos existentes, se houver</table>
 <p><strong>Valor retornado</strong></p>
 <p>O objeto <code>File</code> copiado.</p>
@@ -446,41 +63,11 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $source; $copy : Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$source:=Folder(fk documents folder).file("Pictures/photo.png")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=create>.create()<a href=#create class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>Não disponível para arquivos ZIP</strong></p>
 <p><strong>.create()</strong> : Boolean</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>Boolean<td>&lt;-<td>True if the file was created successfully, false otherwise</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-3>Descrição<a href=#descrição-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -496,84 +83,16 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $created : Boolean</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=createalias>.createAlias()<a href=#createalias class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D. Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D. File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>destinationFolder<td>4D. Folder<td>-><td>Destination folder for the alias or shortcut<tr><td>aliasName<td>Text<td>-><td>Name of the alias or shortcut<tr><td>aliasType<td>Integer<td>-><td>Type of the alias link<tr><td>Result<td>4D. File<td>&lt;-<td>Alias or shortcut file reference</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-4>Descrição<a href=#descrição-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>.createAlias()</code> cria um pseudónimo (macOS) ou um atalho (Windows) para o arquivo com o nome <em>aliasName</em> especificado na pasta designada pelo objecto <em>destinationFolder</em> .</p>
 <p>Passar o nome do pseudónimo ou atalho para criar no parâmetro <em>aliasName</em> .</p>
 <p>Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro <em>aliasType</em> . Estão disponíveis as seguintes constantes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>fk alias link</code><td>0<td>Alias link (padrão)<tr><td><code>fk symbolic link</code><td>1<td>Link simbólico (só em macOS)</table>
 <p>No Windows, é sempre criado um atalho (arquivo .lnk) (o parâmetro <em>aliasType</em> é ignorado).</p>
 <p><strong>Objeto devolvido</strong></p>
@@ -583,19 +102,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $aliasFile:=$myFile.createAlias(File("/PACKAGE");"ReadMe")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationdate>.creationDate<a href=#creationdate class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.creationDate</strong> : Date</p>
@@ -604,19 +110,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=creationtime>.creationTime<a href=#creationtime class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.creationTime</strong> : Time</p>
@@ -625,40 +118,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=delete>.delete()<a href=#delete class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.delete</strong>()</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td><td><td><td>Does not require any parameters</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-7>Descrição<a href=#descrição-7 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -675,19 +138,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($tempo.exists)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $tempo.delete()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    ALERT("User preference file deleted.")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exists>.exists<a href=#exists class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.exists</strong> : Boolean</p>
@@ -696,19 +146,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=extension>.extension<a href=#extension class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.extension</strong> : Text</p>
@@ -717,19 +154,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=fullname>.fullName<a href=#fullname class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.fullName</strong> : Text</p>
@@ -738,40 +162,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getappinfo>.getAppInfo()<a href=#getappinfo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>19<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getAppInfo</strong>() : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>Object<td>&lt;-<td>Contents of .exe/.dll version resource or .plist file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-11>Descrição<a href=#descrição-11 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -785,47 +179,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>A leitura de um .exe ou .dll só é possível no Windows.</p>
 </blockquote>
 <p>Todos os valores de propriedades são Texto.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<tbody><tr><td>InternalName<td>Text<tr><td>ProductName<td>Text<tr><td>CompanyName<td>Text<tr><td>LegalCopyright<td>Text<tr><td>ProductVersion<td>Text<tr><td>FileDescription<td>Text<tr><td>FileVersion<td>Text<tr><td>OriginalFilename<td>Text</table>
 <p><strong>Objeto devolvido com um arquivo .split</strong></p>
 <p>O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). <code>.plist dict</code> é devolvido como um objeto JSON e <code>.plist array</code> é devolvido como um array JSON.</p>
@@ -835,44 +188,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#setappinfo class="">.setAppInfo()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getcontent>.getContent()<a href=#getcontent class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>19 R2<td>Returns 4D. Blob<tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getContent( )</strong> : Blob</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>Result<td>4D. Blob<td>&lt;-<td>File content</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-12>Descrição<a href=#descrição-12 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -884,46 +203,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> var $vPath : Text</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $vPath:=Select document(""; "*"; "Select a document";0)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If(OK=1) //Se tiver sido escolhido um documento</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    [aTable]aBlobField:=File($vPath;fk platform path).getContent()</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=geticon>.getIcon()<a href=#geticon class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>size<td>Integer<td>-><td>Side length for the returned picture (pixels)<tr><td>Result<td>Picture<td>&lt;-<td>Icon</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-13>Descrição<a href=#descrição-13 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -934,58 +217,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Ícone de arquivo <a class="" href=/docs/pt/20/Concepts/picture.html>imagem</a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=gettext>.getText()<a href=#gettext class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br/><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>charSetName<td>Text<td>-><td>Name of character set<tr><td>charSetNum<td>Integer<td>-><td>Number of character set<tr><td>breakMode<td>Integer<td>-><td>Processing mode for line breaks<tr><td>Result<td>Text<td>&lt;-<td>Text from the document</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-14>Descrição<a href=#descrição-14 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1000,41 +235,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <p>Se o documento contiver uma nota de ordem de byte (BOM), 4D usa o conjunto de caracteres que definiu em vez do especificado no <em>charSetName</em> ou <em>charSetNum</em> (este parâmetro é então ignorado). Se o documento não contiver uma LDM e se o <em>charSetName</em> ou <em>charSetNum</em> for omitido, por padrão 4D usa o conjunto de caracteres "UTF-8".</p>
 <p>Em <em>breakMode</em>, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. As seguintes constantes do tema "Documentos do Sistema" estão disponíveis:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>Document unchanged</code><td>0<td>Não processado<tr><td><code>Document with native format</code><td>1<td>(Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob macOS, CRLF (retorno do carro + salto de linha) em Windows<tr><td><code>Documento com CRLF</code><td>2<td>Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)<tr><td><code>Documento com CR</code><td>3<td>Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)<tr><td><code>Documento com LF</code><td>4<td>Quebras de linha são convertidas em formato Unix: LF (feed de linha)</table>
 <p>Por padrão, ao omitir o parâmetro <em>breakMode</em> , as quebras de linha são processadas no modo nativo (1).</p>
 <p><strong>Valor retornado</strong></p>
@@ -1054,19 +254,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Este tempo <code>\n</code> (LF) é usado como delimitador de linha.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hidden>.hidden<a href=#hidden class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.hidden</strong> : Boolean</p>
@@ -1075,19 +262,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Esta propriedade é <strong>read/write</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isalias>.isAlias<a href=#isalias class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isAlias</strong> : Boolean</p>
@@ -1096,19 +270,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfile>.isFile<a href=#isfile class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isFile</strong> : Boolean</p>
@@ -1117,19 +278,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=isfolder>.isFolder<a href=#isfolder class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isFolder</strong> : Boolean</p>
@@ -1138,19 +286,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=iswritable>.isWritable<a href=#iswritable class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.isWritable</strong> : Boolean</p>
@@ -1164,19 +299,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> If($myFile.isWritable)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">    $myNewFile:=$myFile.setText("Added text")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> End if</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationdate>.modificationDate<a href=#modificationdate class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.modificationDate</strong> : Date</p>
@@ -1185,19 +307,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=modificationtime>.modificationTime<a href=#modificationtime class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.modificationTime</strong> : Time</p>
@@ -1206,52 +315,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=moveto>.moveTo()<a href=#moveto class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D. Folder { ; <em>newName</em> : Text } ) : 4D. File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>destinationFolder<td>4D. Folder<td>-><td>Destination folder<tr><td>newName<td>Text<td>-><td>Full name for the moved file<tr><td>Result<td>4D. File<td>&lt;-<td>Moved file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-22>Descrição<a href=#descrição-22 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1264,19 +331,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$DocFolder:=Folder(fk documents folder)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile:=$DocFolder.file("Current/Infos.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=name>.name<a href=#name class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.name</strong> : Text</p>
@@ -1285,150 +339,22 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=open>.open()<a href=#open class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>18 R6<td>Adicionado</table>
 </div></div></details>
 <p>$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>mode<td>Text<td>-><td>Opening mode: "read", "write", "append"<tr><td>options<td>Object<td>-><td>Opening options<tr><td>Result<td><a class="" href=/docs/pt/20/API/FileHandleClass>4D. FileHandle</a><td>&lt;-<td>New File handle object</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-24>Descrição<a href=#descrição-24 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>.open()</code> cria e devolve um novo objeto <a class="" href=/docs/pt/20/API/FileHandleClass>4D. FileHandle</a> no arquivo, no <em>mode</em> ou como as <em>options</em> especificadas. Pode utilizar funções e propriedades da classe <a class="" href=/docs/pt/20/API/FileHandleClass>4D. FileHandle</a> para escrever, ler ou anexar conteúdo ao arquivo.</p>
 <p>Se utilizar o parâmetro <em>mode</em> (text), passe o modo de abertura para o file handle:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><em>mode</em><th>Descrição<tbody><tr><td>"read"<td>(Padrão) Cria um file handle para ler os valores do arquivo. Se o arquivo não existir em disco, um erro é retornado. Pode abrir quantos file handles quiser em modo "ler" no mesmo objeto File.<tr><td>"write"<td>Cria um file handle para escrever os valores no arquivo (começando no início do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "write" no mesmo objeto File.<tr><td>"append"<td>Cria um file handle para escrever os valores no arquivo (começando no fim do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "append" no mesmo objeto File.</table>
 <blockquote>
 <p>O valor do modo ** é sensível a maiúsculas e minúsculas.</p>
 </blockquote>
 <p>Se utilizar o parâmetro <em>options</em> (objecto), pode passar mais opções para o file handle através das seguintes propriedades (estas propriedades podem ser lidas posteriormente a partir do <a class="" href=/docs/pt/20/API/FileHandleClass>objeto file handle</a> aberto):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><em>options</em><th>Tipo<th>Descrição<th>Por padrão<tbody><tr><td><code>.mode</code><td>Text<td>Modo de abertura (ver <em>mode</em> acima)<td>"read"<tr><td><code>.charset</code><td>Text<td>Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8")<td>"UTF-8"<tr><td><code>.breakModeRead</code><td>Text ou Number<td>Modo de tratamento das quebras de linha utilizadas na leitura do arquivo (veja abaixo)<td>"native" ou 1<tr><td><code>.breakModeWrite</code><td>Text ou Number<td>Modo de processamento das quebras de linha utilizadas ao escrever no ficheiro (ver abaixo)<td>"native" ou 1</table>
 <p>A função substitui todos os delimitadores de fim de linha originais. Por defeito, é utilizado o delimitador nativo, mas é possível definir outro delimitador. <code>.breakModeRead</code> e <code>.breakModeWrite</code> indicam o processamento a aplicar aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Modo de interrupção no texto<th>Break mode em numérico (constante)<th>Descrição<tbody><tr><td>"native"<td>1 (<code>Document with native format</code>)<td>(Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows<tr><td>"crlf"<td>2 (<code>Document with CRLF</code>)<td>As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows<tr><td>"cr"<td>3 (<code>Document with CR</code>)<td>As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS<tr><td>"lf"<td>4 (<code>Document with LF</code>)<td>As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS</table>
 <blockquote>
 <p>O modo de pausa <em>como texto</em> valor é sensível a maiúsculas e minúsculas.</p>
@@ -1438,19 +364,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $f : 4D. File</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $fhandle : 4D. FileHandle</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$fhandle:=$f.open("read")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=original>.original<a href=#original class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p>|</p>
@@ -1464,19 +377,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=parent>.parent<a href=#parent class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.parent</strong> : 4D. Folder</p>
@@ -1485,19 +385,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=path>.path<a href=#path class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.path</strong> : Text</p>
@@ -1506,19 +393,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=platformpath>.platformPath<a href=#platformpath class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.platformPath</strong> : Text</p>
@@ -1527,46 +401,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Essa propriedade é <strong>apenas leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=rename>.rename()<a href=#rename class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.rename</strong>( <em>newName</em> : Text ) : 4D. File</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>newName<td>Text<td>-><td>New full name for the file<tr><td>Result<td>4D. File<td>&lt;-<td>Renamed file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-29>Descrição<a href=#descrição-29 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1580,44 +418,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setappinfo>.setAppInfo()<a href=#setappinfo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20<td>Suporte de WinIcon<tr><td>19<td>Adicionado</table>
 </div></div></details>
 <p><strong>.setAppInfo</strong>( <em>info</em> : Object )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>info<td>Object<td>-><td>Properties to write in .exe/.dll version resource or .plist file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-30>Descrição<a href=#descrição-30 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1628,61 +432,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>A escrita de um arquivo .exe ou .dll só é possível no Windows.</p>
 </blockquote>
 <p>Cada propriedade válida definida no parâmetro objeto <em>info</em> está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<th>Comentário<tbody><tr><td>InternalName<td>Text<td><tr><td>ProductName<td>Text<td><tr><td>CompanyName<td>Text<td><tr><td>LegalCopyright<td>Text<td><tr><td>ProductVersion<td>Text<td><tr><td>FileDescription<td>Text<td><tr><td>FileVersion<td>Text<td><tr><td>OriginalFilename<td>Text<td><tr><td>WinIcon<td>Text<td>Caminho Posix do ficheiro .ico. Esta propriedade aplica-se apenas a ficheiros executáveis gerados por 4D.</table>
 <p>Para todas as propriedades, exceto <code>WinIcon</code>, se passar um texto null ou vazio como valor, é escrita uma cadeia vazia na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.</p>
 <p>Para a propriedade <code>WinIcon</code>, se o ficheiro de ícones não existir ou tiver um formato incorrecto, é gerado um erro.</p>
@@ -1702,40 +451,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><a href=#getappinfo class="">.getAppInfo()</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=setcontent>.setContent()<a href=#setcontent class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.setContent</strong> ( <em>content</em> : Blob )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>content<td>BLOB<td>-><td>New contents for the file</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-31>Descrição<a href=#descrição-31 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1744,62 +463,10 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> $myFile:=Folder(fk documents folder).file("Archives/data.txt")</span><br/></div><div class=token-line style=color:#393A34><span class="token plain"> $myFile.setContent([aTable]aBlobField)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=settext>.setText()<a href=#settext class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>19 R3<td>Padrão para novos projectos: sem BOM e (macOS) LF para EOL<tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br/><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } )</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parameter<th>Type<th><th>Description<tbody><tr><td>text<td>Text<td>-><td>Text to store in the file<tr><td>charSetName<td>Text<td>-><td>Name of character set<tr><td>charSetNum<td>Integer<td>-><td>Number of character set<tr><td>breakMode<td>Integer<td>-><td>Processing mode for line breaks</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-32>Descrição<a href=#descrição-32 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -1816,41 +483,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 </blockquote>
 <p>Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.</p>
 <p>Em <em>breakMode</em>, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. Estão disponíveis as seguintes constantes, encontradas no tema <strong>System Documents</strong>:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetros<th>Valor<th>Comentário<tbody><tr><td><code>Document unchanged</code><td>0<td>Não processado<tr><td><code>Document with native format</code><td>1<td>(Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows<tr><td><code>Documento com CRLF</code><td>2<td>As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows<tr><td><code>Documento com CR</code><td>3<td>As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS<tr><td><code>Documento com LF</code><td>4<td>As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS</table>
 <p>Por padrão, ao omitir o parâmetro <em>breakMode</em> , as quebras de linha são processadas no modo nativo (1).</p>
 <blockquote>
@@ -1860,19 +492,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">$myFile:=File("C:\\Documents\\Hello.txt";fk platform path)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$myFile.setText("Hello world")</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=size>.size<a href=#size class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Histórico</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>17 R5<td>Adicionado</table>
 </div></div></details>
 <p><strong>.size</strong> : Real</p>

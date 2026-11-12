@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/IncomingMessageClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>IncomingMessage | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="IncomingMessage | 4D Docs"/><meta data-rh=true name=description content="The 4D.IncomingMessage class allows you to handle the object received by a custom HTTP request handler. HTTP requests and their properties are automatically received as an instance of the 4D.IncomingMessage class. Parameters given directly in the request with GET verb are handled by the .urlQuery property, while parameters passed in the body of the request are available through functions such as .getBlob() or getText()."/><meta data-rh=true property=og:description content="The 4D.IncomingMessage class allows you to handle the object received by a custom HTTP request handler. HTTP requests and their properties are automatically received as an instance of the 4D.IncomingMessage class. Parameters given directly in the request with GET verb are handled by the .urlQuery property, while parameters passed in the body of the request are available through functions such as .getBlob() or getText()."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/IncomingMessageClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/IncomingMessageClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/IncomingMessageClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/IncomingMessageClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/IncomingMessageClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/API/IncomingMessageClass","name":"IncomingMessage","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/IncomingMessageClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>IncomingMessage | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="IncomingMessage | 4D Docs"/><meta data-rh=true name=description content="The 4D.IncomingMessage class allows you to handle the object received by a custom HTTP request handler. HTTP requests and their properties are automatically received as an instance of the 4D.IncomingMessage class. Parameters given directly in the request with GET verb are handled by the .urlQuery property, while parameters passed in the body of the request are available through functions such as .getBlob() or getText()."/><meta data-rh=true property=og:description content="The 4D.IncomingMessage class allows you to handle the object received by a custom HTTP request handler. HTTP requests and their properties are automatically received as an instance of the 4D.IncomingMessage class. Parameters given directly in the request with GET verb are handled by the .urlQuery property, while parameters passed in the body of the request are available through functions such as .getBlob() or getText()."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/IncomingMessageClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/IncomingMessageClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/IncomingMessageClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/IncomingMessageClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/IncomingMessageClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/IncomingMessageClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/API/IncomingMessageClass","name":"IncomingMessage","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/21/API/IncomingMessageClass>21</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/API/IncomingMessageClass>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/API/IncomingMessageClass>21 R4 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/21/API/IncomingMessageClass>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -8,19 +8,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>The HTTP request handler can return any value (or nothing). Geralmente ele retorna uma instância da classe <a class="" href=/docs/pt/21/API/OutgoingMessageClass><code>4D.OutgoingMessage</code></a>.</p>
 <p>All properties of this class are read-only. They are automatically filled by the request handler.</p>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R8<td>Classe adicionada</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemplo>Exemplo<a href=#exemplo class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
@@ -33,66 +20,11 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <div class="language-json codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-json codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">Called URL</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> /start/example? param=demo&name=4D </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">The parameters are received as an object</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>{</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token property" style=color:#36acaa>"param"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"demo"</span><span class="token punctuation" style=color:#393A34>,</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">  </span><span class="token property" style=color:#36acaa>"name"</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> </span><span class="token string" style=color:#e3116c>"4D"</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain"></span><span class="token punctuation" style=color:#393A34>}</span><span class="token plain"></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">The verb is</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> GET</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">There are </span><span class="token number" style=color:#36acaa>2</span><span class="token plain"> url parts - Url parts are</span><span class="token operator" style=color:#393A34>:</span><span class="token plain"> start - example</span><br/></div></code></pre></div></div>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-incomingmessage>Objeto IncomingMessage<a href=#objeto-incomingmessage class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p>4D.IncomingMessage objects provide the following properties and functions:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#getblob class=""><strong>.getBlob</strong>() : Blob</a><br/>retorna o corpo da solicitação como um Blob<tr><td><a href=#getheader class=""><strong>.getHeader</strong>( <em>key</em> : Text ) : Text</a><br/>retorna o valor do cabeçalho <em>key</em><tr><td><a href=#getjson class=""><strong>.getJSON</strong>() : Variant</a><br/>retorna o corpo da solicitação como uma resolução JSON<tr><td><a href=#getpicture class=""><strong>.getPicture</strong>() : Picture</a><br/>returns the body of the request as a picture (in case of a body sent as a picture)<tr><td><a href=#gettext class=""><strong>.getText</strong>() : Text</a><br/>retorna o corpo da solicitação como valor de texto<tr><td><a href=#headers class=""><strong>headers</strong> : Object</a><br/> os cabeçalhos atuais da mensagem recebida como pares chave/valor (strings)<tr><td><a href=#url class=""><strong>url</strong> : Text</a><br/>a URL da solicitação sem a parte <em>IP:port</em> e como um string<tr><td><a href=#urlpath class=""><strong>urlPath</strong> : Collection</a><br/>the URL of the request without the <em>IP:port</em> part and as a collection of strings<tr><td><a href=#urlquery class=""><strong>urlQuery</strong> : Object</a><br/>os parâmetros da solicitação quando eles são fornecidos no URL como pares de chave/valor<tr><td><a href=#verb class=""><strong>verb</strong> : Text</a><br/>o verbo usado pelo pedido</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>nota</div><div class=admonitionContent_BuS1><p>Um objeto 4D.IncomingMessage é um objeto <a class="" href=/docs/pt/21/Concepts/shared>não compartilhável</a>.</div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getblob>.getBlob()<a href=#getblob class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.getBlob</strong>() : Blob</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>Resultados<td>Blob<td>&lt;-<td>Body of the request as a Blob</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição>Descrição<a href=#descrição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -101,29 +33,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getheader>.getHeader()<a href=#getheader class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.getHeader</strong>( <em>key</em> : Text ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>|<td>Text<td>-><td>Propriedade de cabeçalho a obter<tr><td>Resultados<td>Text<td>&lt;-<td>Valor da propriedade do cabeçalho</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-1>Descrição<a href=#descrição-1 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -134,23 +43,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getjson>.getJSON()<a href=#getjson class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.getJSON</strong>() : Variant</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>Resultados<td>Diferente de<td>&lt;-<td>JSON resolution of the body of the request</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-2>Descrição<a href=#descrição-2 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -159,23 +51,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=getpicture>.getPicture()<a href=#getpicture class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.getPicture</strong>() : Picture</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>Resultados<td>Imagem<td>&lt;-<td>Body of the request as picture</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-3>Descrição<a href=#descrição-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
@@ -186,23 +61,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=gettext>.getText()<a href=#gettext class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.getText</strong>() : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>Resultados<td>Text<td>&lt;-<td>Corpo da solicitação como texto</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-4>Descrição<a href=#descrição-4 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>

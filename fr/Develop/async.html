@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-Develop/async" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Exécution asynchrone | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/Develop/async /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Exécution asynchrone | 4D Docs"/><meta data-rh=true name=description content="4D prend en charge les modes d'exécution synchrone et asynchrone, ce qui permet aux développeurs de choisir la meilleure approche en fonction des performances, de la réactivité et de la répartition de la charge de travail."/><meta data-rh=true property=og:description content="4D prend en charge les modes d'exécution synchrone et asynchrone, ce qui permet aux développeurs de choisir la meilleure approche en fonction des performances, de la réactivité et de la répartition de la charge de travail."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/Develop/async /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Develop/async hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/Develop/async hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/Develop/async hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/Develop/async hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/Develop/async hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Develop/async hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/category/core","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/category/processes","name":"Process","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/Develop/async","name":"Exécution asynchrone","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-Develop/async" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Exécution asynchrone | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/Develop/async /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Exécution asynchrone | 4D Docs"/><meta data-rh=true name=description content="4D prend en charge les modes d'exécution synchrone et asynchrone, ce qui permet aux développeurs de choisir la meilleure approche en fonction des performances, de la réactivité et de la répartition de la charge de travail."/><meta data-rh=true property=og:description content="4D prend en charge les modes d'exécution synchrone et asynchrone, ce qui permet aux développeurs de choisir la meilleure approche en fonction des performances, de la réactivité et de la répartition de la charge de travail."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/Develop/async /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Develop/async hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/Develop/async hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/Develop/async hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/Develop/async hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/Develop/async hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Develop/async hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/category/core","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/category/processes","name":"Process","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/Develop/async","name":"Exécution asynchrone","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/Develop/async>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/Develop/async>21 R5 BETA</a><li><a class=dropdown__link href=/docs/fr/21-R4/Develop/async>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/Develop/async>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -24,39 +24,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <li class="">Les tâches d'arrière-plan, la communication réseau ou le traitement parallèle sont effectués.</li>
 </ul>
 <p>Choisir entre l'exécution synchrone et l'exécution asynchrone :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Scénario<th>Meilleure approche<tbody><tr><td>Opérations rapides avec un minimum de traitement<td><strong>Synchrone</strong><tr><td>Tâches nécessitant un ordre d'exécution strict<td><strong>Synchrone</strong><tr><td>Tâches d'arrière-plan de longue durée<td><strong>Asynchrone</strong><tr><td>Interactions de longue durée avec l'interface utilisateur<td><strong>Asynchrone</strong><tr><td>Interactions de courte durée avec l'interface utilisateur<td><strong>Synchrone</strong><tr><td>Charges de travail multi-tâches, hautes performances<td><strong>Asynchrone</strong></table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=principes-fondamentaux>Principes fondamentaux<a href=#principes-fondamentaux class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>4D offre des capacités intégrées d'exécution <strong>asynchrone</strong> par le biais de diverses classes et commandes. Elles permettent l'exécution de tâches en arrière-plan, la communication réseau et le traitement de données volumineuses, tout en attendant que d'autres opérations se terminent sans bloquer le process en cours.</p>
@@ -87,31 +54,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Pour les classes asynchrones, une <strong>référence supplémentaire</strong> est toujours maintenue par 4D dans le process qui a instancié l'objet. Cette référence n'est libérée que lorsque l'opération est terminée, c'est-à-dire après le déclenchement de l'événement <code>onTerminate</code>. Ce référencement automatique permet à votre objet de survivre même si vous ne l'avez pas référencé spécifiquement dans une variable.</p>
 <p>Si vous voulez "forcer" la libération d'un objet à tout moment, utilisez une fonction <code>.shutdown()</code> ou <code>terminate()</code> ; elle déclenche l'événement onTerminate\` et libère ainsi l'objet.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemples-illustrant-le-concept-commun>Exemples illustrant le concept commun<a href=#exemples-illustrant-le-concept-commun class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Fonctionnalité<th>Lancement asynchrone<th>Gestion des callbacks et des événements<tbody><tr><td>CALL WORKER<td>CALL WORKER("wk" ; "MyMethod" ; $params)<td>MyMethod est appelée avec $params<tr><td>CALL FORM<td>CALL FORM($win; "MyMethod"; $params)<td>MyMethod est appelée avec $params<tr><td>4D.SystemWorker<td>4D.SystemWorker.new(cmd; $options)<td>Callbacks: onData, onResponse, onError, onTerminate</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=programmation-asynchrone-avec-les-classes-4d>Programmation asynchrone avec les classes 4D<a href=#programmation-asynchrone-avec-les-classes-4d class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Plusieurs classes 4D prennent en charge les traitements asynchrones :</p>

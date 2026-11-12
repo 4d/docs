@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/HTTPAgentClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>HTTPAgent | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="HTTPAgent | 4D Docs"/><meta data-rh=true name=description content="La classe HTTPAgent vous permet de manipuler des objets HTTPAgent qui peuvent être utilisés pour gérer la persistance et la réutilisation des connexions aux serveurs en utilisant la classe HTTPRequest."/><meta data-rh=true property=og:description content="La classe HTTPAgent vous permet de manipuler des objets HTTPAgent qui peuvent être utilisés pour gérer la persistance et la réutilisation des connexions aux serveurs en utilisant la classe HTTPRequest."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/HTTPAgentClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/HTTPAgentClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/HTTPAgentClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/HTTPAgentClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/HTTPAgentClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass","name":"HTTPAgent","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R4 docs-doc-page docs-doc-id-API/HTTPAgentClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>HTTPAgent | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21-R4 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true name=docsearch:version content=21-R4 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R4 /><meta data-rh=true property=og:title content="HTTPAgent | 4D Docs"/><meta data-rh=true name=description content="La classe HTTPAgent vous permet de manipuler des objets HTTPAgent qui peuvent être utilisés pour gérer la persistance et la réutilisation des connexions aux serveurs en utilisant la classe HTTPRequest."/><meta data-rh=true property=og:description content="La classe HTTPAgent vous permet de manipuler des objets HTTPAgent qui peuvent être utilisés pour gérer la persistance et la réutilisation des connexions aux serveurs en utilisant la classe HTTPRequest."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/HTTPAgentClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21-R4/API/HTTPAgentClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21-R4/API/HTTPAgentClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21-R4/API/HTTPAgentClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21-R4/API/HTTPAgentClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21-R4/API/HTTPAgentClass","name":"HTTPAgent","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/21-R4/API/HTTPAgentClass>21 R4</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/API/HTTPAgentClass>21 R5 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/21-R4/API/HTTPAgentClass>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/API/HTTPAgentClass>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -8,89 +8,19 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>La classe <code>HTTPAgent</code> est disponible dans le class store <code>4D</code>. Vous pouvez créer un nouvel objet <a href=#httpagent-object class=""><code>HTTPAgent</code></a> en utilisant la fonction <a href=#4dhttpagentnew class="">4D.HTTPAgent.new()</a>.</p>
 <p>Si aucun agent n'est associé à une requête HTTP, un agent global avec des valeurs par défaut est utilisé. L'agent par défaut est la forme la plus simple d'agent HTTP, adaptée aux cas d'utilisation de base. Il est recommandé d'utiliser des agents personnalisés pour mieux contrôler, au niveau de l'agent plutôt que pour chaque requête HTTP, des aspects spécifiques de la connexion tels que les paramètres keep-alive, les délais d'attente ou les configurations TLS/SSL.</p>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>20 R6<td>Classe ajoutée</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objet-httpagent>Objet HTTPAgent<a href=#objet-httpagent class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <p>Un objet HTTPAgent est un objet partageable.</p>
 <p>Les objets HTTPAgent fournissent les propriétés et fonctions suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#params class=""><strong>options</strong> : Object</a><br/>les options actuellement utilisées par le HTTPAgent<tr><td><a href=#requestscount class=""><strong>requestsCount</strong> : Integer</a><br/>le nombre de requêtes actuellement traitées par le HTTPAgent<tr><td><a href=#freesocketscount class=""><strong>freeSocketsCount</strong> : Integer</a><br/>le nombre de sockets libres du <code>maxSockets</code> associé au HTTPAgent</table>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 12 16"><path fill-rule=evenodd d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></span>tip</div><div class=admonitionContent_BuS1><p>Comme HTTPAgent est un objet partageable, vous pouvez en ajouter un à une classe singleton afin d'utiliser le même agent pour toutes les requêtes adressées au même serveur.</div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dhttpagentnew>4D.HTTPAgent.new()<a href=#4dhttpagentnew class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>4D.HTTPAgent.new</strong>( { <em>options</em> : Object } ) : 4D.HTTPAgent</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>options<td>Object<td style=text-align:center>-><td>options par défaut pour le HTTPAgent<tr><td>Résultat<td><a href=#objet-httpagent class="">4D.HTTPAgent</a><td style=text-align:center>&lt;-<td>Nouvel objet HTTPAgent</table>
 </div>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>21 R3<td>Prise en charge de la propriété <em>storeCertificateName</em> sur macOS<tr><td>21<td>Prise en charge de la propriété <em>storeCertificateName</em> sous Windows</table>
 </div></div></details>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description>Description<a href=#description class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -99,71 +29,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=paramètre-options>Paramètre <code>options</code><a href=#paramètre-options class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Dans le paramètre <em>options</em>, passez un objet qui peut contenir les propriétés suivantes (toutes les propriétés sont facultatives) :</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Les options HTTPAgent seront fusionnées avec les <a class="" href=/docs/fr/21-R4/API/HTTPRequestClass#4dhttprequestnew>options HTTPRequest</a> (les options HTTPRequest sont prioritaires) ; si aucun agent spécifique n'est défini, un agent global est utilisé.</div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Par défaut<th>Description<tbody><tr><td>certificatesFolder<td>Folder<td>undefined (voir valeur par défaut dans <a class="" href=/docs/fr/21-R4/API/HTTPRequestClass#options-parameter>HTTPRequest.new()</a>)<td>Définit le dossier actif des certificats du client pour les requêtes utilisant l'agent. Peut être remplacé par "storeCertificateName" (voir ci-dessous)<tr><td>keepAlive<td>Boolean<td>true<td>Active le keep-alive de l'agent<tr><td>maxSockets<td>Integer<td>65535<td>Nombre maximum de sockets par serveur<tr><td>maxTotalSockets<td>Integer<td>65535<td>Nombre maximum de sockets pour l'agent<tr><td>minTLSVersion<td>Text<td>undefined (voir valeur par défaut dans <a class="" href=/docs/fr/21-R4/API/HTTPRequestClass#options-parameter>HTTPRequest.new()</a>)<td>Définit la version minimale de TLS pour les requêtes utilisant cet agent<tr><td>protocol<td>Text<td>undefined (voir valeur par défaut dans <a class="" href=/docs/fr/21-R4/API/HTTPRequestClass#options-parameter>HTTPRequest.new()</a>)<td>Protocole mis en oeuvre pour les requêtes utilisant l'agent<tr><td>storeCertificateName<td>Text<td>undefined<td>Nom d'un certificat stocké dans le Certificate Store (Windows) ou dans le <em>keychain</em> (macOS) à utiliser à la place d'un certificat enregistré dans le dossier des certificats. Si le certificat n'est pas trouvé dans le store, une erreur est renvoyée. Pour plus d'informations, voir <a href=https://blog.4d.com/https-requests-now-support-windows-certificate-store target=_blank rel="noopener noreferrer" class="">ce blog post pour Windows</a> et <a href=https://blog.4d.com/https-requests-macos-keychain-support-is-here target=_blank rel="noopener noreferrer" class="">ce blog post pour macOS</a>.<tr><td>timeout<td>Real<td>undefined<td>Si défini, délai après lequel une socket inutilisée est fermée<tr><td>validateTLSCertificate<td>Boolean<td>undefined (voir valeur par défaut dans <a class="" href=/docs/fr/21-R4/API/HTTPRequestClass#options-parameter>HTTPRequest.new()</a>)<td>validateTLSCertificate pour les requêtes utilisant l'agent</table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Sur macOS, lorsqu'une nouvelle application (nouvel <a class="" href=/docs/fr/21-R4/API/FileClass#setappinfo>UUID</a>) demande l'accès à la keychain (<em>trousseau</em>) pour la première fois, un mot de passe peut être demandé à l'utilisateur, en fonction de la configuration locale du trousseau.</div></div>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></span>note</div><div class=admonitionContent_BuS1><p>Vous pouvez effectuer des requêtes vers plusieurs serveurs en utilisant le même agent. Dans ce cas, chaque serveur aura son propre pool de connexions utilisant les mêmes options d'agent.</div></div>

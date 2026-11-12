@@ -1,4 +1,4 @@
-<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-Admin/cli" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Command Line Interface | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/Admin/cli /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Command Line Interface | 4D Docs"/><meta data-rh=true name=description content="You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and tool4d) using command lines. More particularly, this functionality allows you to:"/><meta data-rh=true property=og:description content="You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and tool4d) using command lines. More particularly, this functionality allows you to:"/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/Admin/cli /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Admin/cli hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/Admin/cli hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/Admin/cli hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/Admin/cli hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/Admin/cli hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Admin/cli hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/category/server--admin","name":"Server & Admin","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/Admin/cli","name":"Command Line Interface","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.5b6e6d51.js defer></script><script src=/docs/assets/js/main.0783b5ac.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21-R5 docs-doc-page docs-doc-id-Admin/cli" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Command Line Interface | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/Admin/cli /><meta data-rh=true property=og:locale content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=21-R5 /><meta data-rh=true name=docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true name=docsearch:version content=21-R5 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21-R5 /><meta data-rh=true property=og:title content="Command Line Interface | 4D Docs"/><meta data-rh=true name=description content="You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and tool4d) using command lines. More particularly, this functionality allows you to:"/><meta data-rh=true property=og:description content="You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and tool4d) using command lines. More particularly, this functionality allows you to:"/><link data-rh=true rel=icon href=/docs/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/Admin/cli /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Admin/cli hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/Admin/cli hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/Admin/cli hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/Admin/cli hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/Admin/cli hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/Admin/cli hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/category/server--admin","name":"Server & Admin","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/Admin/cli","name":"Command Line Interface","position":2}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/assets/css/styles.4cf13e15.css /><script src=/docs/assets/js/runtime~main.51a757fe.js defer></script><script src=/docs/assets/js/main.0dec8d36.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/img/logohome.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/><div class=navbar__logo><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/Admin/cli>21 R5 BETA</a><ul class=dropdown__menu><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/Admin/cli>21 R5 BETA</a><li><a class=dropdown__link href=/docs/21-R4/Admin/cli>21 R4</a><li><a class=dropdown__link href=/docs/21/Admin/cli>21</a><li><a class=dropdown__link href=/docs/20/Admin/cli>20</a><li><a class=dropdown__link href=/docs/19/Admin/cli>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -20,101 +20,6 @@ Opening the default page instead" href=/docs/18/GettingStarted/installation>18</
 <p>Here is a description of command lines and arguments supported to launch 4D applications.</p>
 <p>Syntax:</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-text codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">&lt;applicationPath> [--version] [--help] [--project] [&lt;projectPath | packagePath | 4dlinkPath> [--data &lt;dataPath>]]</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">[--opening-mode interpreted | compiled] [--create-data] [--user-param &lt;user string>] [--headless] [--dataless]  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]  </span><br/></div><div class=token-line style=color:#393A34><span class="token plain">[--utility] [--skip-onstartup] [--startup-method &lt;methodName string>]</span><br/></div></code></pre></div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th style=text-align:left>Argument<th>Value<th>Description<tbody><tr><td style=text-align:left><code>applicationPath</code><td>Path of 4D, 4D Server, merged application, or tool4d<td>Launches the application.<br/>If not headless: identical to double-clicking the application; when called without structure file argument, the application is executed and the 'select database' dialog box appears.<tr><td style=text-align:left><code>--version</code><td><td>Displays application version and exits<tr><td style=text-align:left><code>--help</code><td><td>Displays help and exits. Alternate arguments: -?, -h<tr><td style=text-align:left><code>--project</code><td>projectPath | packagePath | 4dlinkPath<td>Project file to open with the current data file. No dialog box appears.<tr><td style=text-align:left><code>--data</code><td>dataPath<td>Data file to open with the designated project file. If not specified, the last opened data file is used.<tr><td style=text-align:left><code>--opening-mode</code><td>interpreted | compiled<td>Requests database to open in interpreted or compiled mode. No error is thrown if the requested mode is unavailable.<tr><td style=text-align:left><code>--create-data</code><td><td>Automatically creates a new data file if no valid data file is found. No dialog box appears. 4D uses the file name passed in the "--data" argument if any (generates an error if a file with the same name already exists).<tr><td style=text-align:left><code>--user-param</code><td>Custom user string<td>A string that will be available within the application through the <a class="" href=/docs/commands/get-database-parameter><code>Get database parameter</code></a> command (the string must not start with a "-" character, which is reserved).<tr><td style=text-align:left><code>--headless</code><td><td>Launches the 4D, 4D Server or merged application without interface (headless mode). In this mode:<li class=""> The Design mode is not available, database starts in Application mode</li><li class=""> No toolbar, menu bar, MDI window or splash screen is displayed</li><li class="">No icon is displayed in the dock or task bar</li><li class="">The opened database is not registered in the "Recent databases" menu</li><li class="">The diagnostic log is automatically started (see <a class="" href=/docs/commands/set-database-parameter>SET DATABASE PARAMETER</a>, selector 79)</li><li class="">Every call to a dialog box is intercepted and an automatic response it provided (e.g. OK for the <a class="" href=/docs/commands/alert>ALERT</a> command, Abort for an error dialog...). All intercepted commands(*) are logged in the diagnostic log.</li><br/>For maintenance needs, you can send any text to standard output streams using the <a class="" href=/docs/commands/log-event>LOG EVENT</a> command. Note that headless 4D applications can only be closed by a call to <a class="" href=/docs/commands/quit-4d>QUIT 4D</a> or using the OS task manager.<tr><td style=text-align:left><code>--dataless</code><td><td>Launches 4D, 4D Server, merged application or tool4d in dataless mode. Dataless mode is useful when 4D runs tasks with no need for data (project compilation for example). In this mode: <li class="">No file containing data is opened, even if specified in the command line or the <code>.4DLink</code> file, or when using the <code>CREATE DATA FILE</code> and <code>OPEN DATA FILE</code> commands.</li><li class="">Commands that manipulate data will throw an error. For example, <code>CREATE RECORD</code> throws “no table to apply the command to”.</li><br/><strong>Note</strong>:<li class="">If passed in the command line, dataless mode applies to all databases opened in 4D, as long as the application is not closed.</li><li class="">If passed using the <code>.4DLink</code> file, dataless mode only applies to the database specified in the <code>.4DLink</code> file. For more information on <code>.4DLink</code> files, see <a class="" href=/docs/GettingStarted/creating#project-opening-shortcuts>Project opening shortcuts</a>.</li><tr><td style=text-align:left><code>--webadmin-settings-file</code><td>File path<td>Path of the custom WebAdmin <code>.4DSettings</code> file for the <a class="" href=/docs/Admin/webAdmin>WebAdmin web server</a>. Not available with <a href=#tool4d class="">tool4d</a>.<tr><td style=text-align:left><code>--webadmin-access-key</code><td>Text<td>Access key for the <a class="" href=/docs/Admin/webAdmin>WebAdmin web server</a>. Not available with <a href=#tool4d class="">tool4d</a>.<tr><td style=text-align:left><code>--webadmin-auto-start</code><td>Boolean<td>Status of the automatic startup for the <a class="" href=/docs/Admin/webAdmin>WebAdmin web server</a>. Not available with <a href=#tool4d class="">tool4d</a>.<tr><td style=text-align:left><code>--webadmin-store-settings</code><td><td>Store the access key and automatic starting parameters in the currently used settings file (i.e. the default <a class="" href=/docs/Admin/webAdmin#settings><code>WebAdmin.4DSettings</code></a> file or a custom file designated with the <code>--webadmin-settings-path</code> parameter). Use the <code>--webadmin-store-settings</code> argument to save these settings if necessary. Not available with <a href=#tool4d class="">tool4d</a>.<tr><td style=text-align:left><code>--utility</code><td><td>Only available with 4D Server. Launches <a href=#4d-server-in-utility-mode class="">4D Server in utility mode</a>.<tr><td style=text-align:left><code>--skip-onstartup</code><td><td>Launches the project without executing any "automatic" methods, including the <code>On Startup</code> and <code>On Exit</code> database methods<tr><td style=text-align:left><code>--startup-method</code><td>Project method name (string)<td>Project method to execute immediately after the <code>On Startup</code> database method (if not skipped with <code>--skip-onstartup</code>).</table>
 <p>(*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the <a class="" href=/docs/Debugging/debugLogFiles#4ddiagnosticlogtxt>Diagnostic log file</a> (license alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=examples>Examples<a href=#examples class=hash-link aria-label="Direct link to heading" title="Direct link to heading" translate=no>​</a></h3>

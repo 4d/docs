@@ -1,4 +1,4 @@
-<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/TCPConnectionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>TCPConnection | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="TCPConnection | 4D Docs"/><meta data-rh=true name=description content="A classe TCPConnection permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um servidor, possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada."/><meta data-rh=true property=og:description content="A classe TCPConnection permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um servidor, possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/TCPConnectionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/TCPConnectionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/TCPConnectionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/TCPConnectionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/TCPConnectionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/API/TCPConnectionClass","name":"TCPConnection","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.60d63dac.js defer></script><script src=/docs/pt/assets/js/main.58c1a975.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=pt dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/TCPConnectionClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>TCPConnection | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass /><meta data-rh=true property=og:locale content=pt /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=fr /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true name=docusaurus_locale content=pt /><meta data-rh=true name=docsearch:language content=pt /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="TCPConnection | 4D Docs"/><meta data-rh=true name=description content="A classe TCPConnection permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um servidor, possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada."/><meta data-rh=true property=og:description content="A classe TCPConnection permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um servidor, possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada."/><link data-rh=true rel=icon href=/docs/pt/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/TCPConnectionClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/TCPConnectionClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/TCPConnectionClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/TCPConnectionClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/TCPConnectionClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/TCPConnectionClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/4d-language","name":"Línguagem 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/pt/21/API/TCPConnectionClass","name":"TCPConnection","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/pt/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/pt/assets/css/styles.4cf13e15.css /><script src=/docs/pt/assets/js/runtime~main.b06f23ec.js defer></script><script src=/docs/pt/assets/js/main.59d474a2.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/pt/img/logohome.png /><div role=region aria-label="Saltar para o conteúdo principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Saltar para o conteúdo principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Alternar barra de navegação" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/pt/><div class=navbar__logo><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/pt/img/logohome.png alt="Logotipo 4D" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Documentação 4D</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/pt/21/API/TCPConnectionClass>21</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/pt/API/TCPConnectionClass>Próximo</a><li><a class=dropdown__link href=/docs/pt/21-R4/API/TCPConnectionClass>21 R4 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/pt/21/API/TCPConnectionClass>21</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -11,23 +11,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>Os objetos TCPConnection são liberados quando não houver mais referências a eles na memória. Isso geralmente ocorre, por exemplo, no final da execução de um método para variáveis locais. Se quiser "forçar" o fechamento de uma conexão a qualquer momento, <a class="" href=/docs/pt/21/Concepts/object#resources><strong>nullify</strong> suas referências, definindo-as como <strong>Null</strong></a>.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class=admonitionHeading_Gvgb><span class=admonitionIcon_Rf37><svg viewBox="0 0 14 16"><path fill-rule=evenodd d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></span>4DTCPUDPLog.txt file</div><div class=admonitionContent_BuS1><p>For debugging and monitoring, you can use the <a class="" href=/docs/pt/21/Debugging/debugLogFiles#4dtcpudplogtxt>4DTCPUDPLog.txt log file</a> that records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information.</div></div>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>História</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Mudanças<tbody><tr><td>20 R9<td>Novos atributos <code>listener</code>, <code>address</code> e <code>port</code><tr><td>20 R8<td>Classe adicionada</table>
 </div></div></details>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemplos>Exemplos<a href=#exemplos class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
@@ -46,166 +29,17 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=objeto-tcpconnection>Objeto TCPConnection<a href=#objeto-tcpconnection class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h3>
 <p>Um objeto TCPConnection é um objeto não compartilhável.</p>
 <p>Os objetos TCPConnection fornecem as seguintes propriedades e funções:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#address class=""><strong>address</strong> : Text</a><br/>o endereço IP ou nome de domínio da máquina remota<tr><td><a href=#closed class=""><strong>closed</strong> : Boolean</a><br/>se a conexão está fechada<tr><td><a href=#errors class=""><strong>errors</strong> : Collection</a><br/>uma coleção de objetos de erro associados à conexão<tr><td><a href=#listener class=""><strong>listener</strong> : Object</a><br/>o objeto <a class="" href=/docs/pt/21/API/TCPListenerClass><code>TCPListener</code></a> que criou a <code>TCPConnection</code>, se houver<tr><td><a href=#nodelay class=""><strong>noDelay</strong> : Boolean</a><br/>se o algoritmo de Nagle está desativado (<code>true</code>) ou ativado (<code>false</code>)<tr><td><a href=#port class=""><strong>port</strong> : Number</a><br/> o número da porta da máquina remota<tr><td><a href=#send class=""><strong>.send</strong>( <em>data</em> : Blob )</a><br/>envia dados para o servidor<tr><td><a href=#shutdown class=""><strong>.shutdown</strong>()</a><br/>fecha o canal de <em>gravação</em> da conexão (fluxo do cliente para o servidor)<tr><td><a href=#wait class=""><strong>.wait</strong>( { <em>timeout</em> : Real } )</a><br/>aguarda até que a conexão TCP seja fechada ou o <code>timeout</code> especificado seja atingido</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=4dtcpconnectionnew>4D.TCPConnection.new()<a href=#4dtcpconnectionnew class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>4D.TCPConnection.new</strong>( <em>serverAddress</em> : Text ; <em>serverPort</em> : Number ; <em>options</em> : Object  ) : 4D.TCPConnection</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>serverAddress<td>Text<td>-><td>Nome de domínio ou endereço IP do servidor<tr><td>serverPort<td>Integer<td>-><td>Número da porta do servidor<tr><td>options<td>Object<td>-><td>Configuração <a href=#options-parameter class="">opções</a> para a conexão<tr><td>Resultados<td>4D.TCPConnection<td>&lt;-<td>Novo objeto TCPConnection</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição>Descrição<a href=#descrição class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>The <code>4D.TCPConnection.new()</code> function creates a new TCP connection to the specified <em>serverAddress</em> and <em>serverPort</em>, using the defined <em>options</em>, and returns a <code>4D.TCPConnection</code> object.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=options-parameter><code>options</code> parameter<a href=#options-parameter class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>No parâmetro <em>options</em>, passe um objeto que possa conter as seguintes propriedades:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th>Tipo<th>Descrição<th>Por padrão<tbody><tr><td>onConnection<td>Formula<td>Callback acionado quando a conexão for estabelecida.<td>Indefinido<tr><td>onData<td>Formula<td>Callback acionado quando os dados forem recebidos<td>Indefinido<tr><td>onShutdown<td>Formula<td>Callback acionado quando a conexão for fechada corretamente<td>Indefinido<tr><td>onError<td>Formula<td>Callback acionado no caso de um erro<td>Indefinido<tr><td>onTerminate<td>Formula<td>Callback acionada imediatamente antes de a TCPConnection ser liberada<td>Indefinido<tr><td>noDelay<td>Parâmetros<td><strong>Somente leitura</strong> Desabilita o algoritmo do Nagle se <code>true</code><td>False<tr><td>connectionTimeout<td>Real<td>Tempo máximo (em segundos) para estabelecer a conexão. Se excedido, a tentativa de conexão será abortada<td>Definido pelo sistema, geralmente ≥ 30<tr><td>TLS<td>Parâmetros<td>Enables TLS encryption for connections<td>False</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=funções-callback>Funções Callback<a href=#funções-callback class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>Todas as funções de chamada de retorno recebem dois parâmetros de objectos:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th>Descrição<tbody><tr><td>$connection<td><a href=#tcpconnection-object class="">objeto <code>TCPConnection</code></a><td>A instância de conexão TCP atual.<tr><td>$event<td><a href=#tcpevent-object class="">objeto <code>TCPEvent</code></a><td>Contém informações sobre o evento.</table>
 <p><strong>Sequência de chamadas de retorno:</strong></p>
 <ol>
@@ -233,41 +67,6 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p><strong>errors</strong> : Collection</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-3>Descrição<a href=#descrição-3 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A propriedade <code>.errors</code> contém uma coleção de objetos de erro associados à conexão. Cada objeto de erro inclui o código de erro, uma descrição e a assinatura do componente que causou o erro.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriedade<th><th>Tipo<th>Descrição<tbody><tr><td>errors<td><td>Collection<td>pilha de erros 4D em caso de erro<tr><td><td>[].errCode<td>Number<td>Código de erro 4D<tr><td><td>[].message<td>Text<td>Descrição do erro 4D<tr><td><td>[].componentSignature<td>Text<td>Assinatura da componente interna que devolveu o erro</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=listener>.listener<a href=#listener class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>listener</strong> : Object</p>
@@ -283,67 +82,16 @@ Opening the default page instead" href=/docs/pt/18/GettingStarted/installation>1
 <p>A propriedade <code>.port</code> contém  o número da porta da máquina remota . Essa propriedade é <strong>somente leitura</strong>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=send>.send()<a href=#send class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.send</strong>( <em>data</em> : Blob )</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th><th>Descrição<tbody><tr><td>data<td>Blob<td>-><td>Dados a serem enviados</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-7>Descrição<a href=#descrição-7 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>send()</code> envia dados para o servidor. Se a conexão ainda não foi estabelecida, os dados são enviados assim que a conexão for estabelecida.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=shutdown>.shutdown()<a href=#shutdown class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.shutdown</strong>()</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td><td><td style=text-align:center><td>Não exige nenhum parâmetro</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-8>Descrição<a href=#descrição-8 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>shutdown()</code> fecha o canal de <em>gravação</em> da conexão (fluxo do cliente para o servidor) e mantém o canal de <em>leitura</em> (fluxo do servidor para o cliente) aberto, permitindo que você continue recebendo dados até que a conexão seja totalmente fechada pelo servidor ou ocorra um erro.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=wait>.wait()<a href=#wait class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h2>
 <p><strong>.wait</strong>( { <em>timeout</em> : Real } )</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Parâmetro<th>Tipo<th style=text-align:center><th>Descrição<tbody><tr><td>timeout<td>Real<td style=text-align:center>-><td>Tempo máximo de espera em segundos</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=descrição-9>Descrição<a href=#descrição-9 class=hash-link aria-label="Link direto para o cabeçalho" title="Link direto para o cabeçalho" translate=no>​</a></h4>
 <p>A função <code>wait()</code> aguarda até que a conexão TCP seja fechada ou o <code>timeout</code> especificado seja atingido</p>

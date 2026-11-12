@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/EmailObjectClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Email | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/20/API/EmailObjectClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Email | 4D Docs"/><meta data-rh=true name=description content="La création, l'envoi et la réception d'emails dans 4D s'effectuent par l'intermédiaire des objets Email."/><meta data-rh=true property=og:description content="La création, l'envoi et la réception d'emails dans 4D s'effectuent par l'intermédiaire des objets Email."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/20/API/EmailObjectClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/EmailObjectClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/EmailObjectClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/EmailObjectClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/EmailObjectClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/EmailObjectClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/EmailObjectClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/core-development","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/API/EmailObjectClass","name":"Email","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-20 docs-doc-page docs-doc-id-API/EmailObjectClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Email | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/20/API/EmailObjectClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=20 /><meta data-rh=true name=docusaurus_tag content=docs-default-20 /><meta data-rh=true name=docsearch:version content=20 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-20 /><meta data-rh=true property=og:title content="Email | 4D Docs"/><meta data-rh=true name=description content="La création, l'envoi et la réception d'emails dans 4D s'effectuent par l'intermédiaire des objets Email."/><meta data-rh=true property=og:description content="La création, l'envoi et la réception d'emails dans 4D s'effectuent par l'intermédiaire des objets Email."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/20/API/EmailObjectClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/EmailObjectClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/20/API/EmailObjectClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/20/API/EmailObjectClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/20/API/EmailObjectClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/20/API/EmailObjectClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/20/API/EmailObjectClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/core-development","name":"Développement","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/20/API/EmailObjectClass","name":"Email","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/20/API/EmailObjectClass>20</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/API/EmailObjectClass>21 R5 BETA</a><li><a class=dropdown__link href=/docs/fr/21-R4/API/EmailObjectClass>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/API/EmailObjectClass>21</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/20/API/EmailObjectClass>20</a><li><a class=dropdown__link href=/docs/fr/19/API/EmailObjectClass>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
@@ -18,80 +18,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <blockquote>
 <p>Le format des objets Email de 4D suit la <a href=https://jmap.io/spec/rfc8621/ target=_blank rel="noopener noreferrer" class="">spécification JMAP</a>.</p>
 </blockquote>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th><tbody><tr><td><a href=#attachments class=""><strong>.attachments</strong> : Collection</a>    collection d'objet(s) <code>4D.MailAttachment</code><tr><td><a href=#bcc class=""><strong>.bcc</strong> : Text<br/><strong>.bcc</strong> : Object<br/><strong>.bcc</strong> : Collection</a>    les <a href=#email-addresses class="">adresses</a> des destinataires cachés en Copie Carbone Invisible de l'email<tr><td><a href=#bodystructure class=""><strong>.bodyStructure</strong> : Object</a>    objet <em>EmailBodyPart</em>, c'est-à-dire la structure MIME complète du body du message (facultatif)<tr><td><a href=#bodyvalues class=""><strong>.bodyValues</strong> : Object</a>    objet <em>EmailBodyValue</em>, contenant un objet pour chaque &lt;partID> de <code>bodyStructure</code> (facultatif)<tr><td><a href=#cc class=""><strong>.cc</strong> : Text<br/><strong>.cc</strong> : Object<br/><strong>.cc</strong> : Collection</a>    les adresse(s) email supplémentaire(s) des destinataires en Copie Carbone (CC) de l'email<tr><td><a href=#comments class=""><strong>.comments</strong> : Text</a>    header de commentaires supplémentaires<tr><td><a href=#from class=""><strong>.from</strong> : Text<br/><strong>.from</strong> : Object<br/><strong>.from</strong> : Collection</a>    <a href=#email-addresses class="">l'adresse ou les adresse(s) d'origine</a> de l'email<tr><td><a href=#headers class=""><strong>.headers</strong> : Collection</a>    d'objets <code>EmailHeader</code>, dans l'ordre où ils apparaissent dans le message<tr><td><a href=#htmlbody class=""><strong>.htmlBody</strong> : Text</a>    représentation HTML du message électronique (jeu de caractères par défaut : UTF-8) (optionnel, SMTP uniquement)<tr><td><a href=#id class=""><strong>.id</strong> : Text</a>    ID unique du serveur IMAP<tr><td><a href=#inreplyto class=""><strong>.inReplyTo</strong> : Text</a>    identifiant(s) du ou des messages originaux auquel/auxquels le message courant est une réponse<tr><td><a href=#keywords class=""><strong>.keywords</strong> : Object</a>    ensemble de mots-clés sous forme d'objet, où chaque nom de propriété est un mot-clé et chaque valeur est mise à true<tr><td><a href=#messageid class=""><strong>.messageId</strong> : Text</a>    header d'identification du message ("message-id")<tr><td><a href=#receivedat class=""><strong>.receivedAt</strong> : Text</a>    de l'arrivée de l'email sur le serveur IMAP au format ISO 8601 UTC (ex : 2020-09-13T16:11:53Z)<tr><td><a href=#references class=""><strong>.references</strong> : Collection</a>    collection de tous les numéros d'identification des messages de la chaîne de réponse précédente<tr><td><a href=#replyto class=""><strong>.replyTo</strong> : Text<br/><strong>.replyTo</strong> : Object<br/><strong>.replyTo</strong> : Collection</a>    <a href=#email-addresses class="">addresse(s)</a> pour les réponses<tr><td><a href=#sendat class=""><strong>.sendAt</strong> : Text</a>    horodatage de l'email au format ISO 8601 UTC<tr><td><a href=#sender class=""><strong>.sender</strong> : Text<br/><strong>.sender</strong> : Object<br/><strong>.sender</strong> : Collection</a>    <a href=#email-addresses class="">l'adresse ou les adresses</a> source de l'email<tr><td><a href=#size class=""><strong>.size</strong> : Integer</a>    taille (exprimée en octets) de l'objet Email renvoyé par le serveur IMAP<tr><td><a href=#subject class=""><strong>.subject</strong> : Text</a>    description du sujet<tr><td><a href=#textbody class=""><strong>.textBody</strong> : Text</a>    représentation en texte brut du message électronique (jeu de caractères par défaut : UTF-8) (optionnel, SMTP uniquement)<tr><td><a href=#to class=""><strong>.to</strong> : Text<br/><strong>.to</strong> : Object<br/><strong>.to</strong> : Collection</a>    la ou les <a href=#email-addresses class="">adresse(s)</a> des destinataires principaux de l'email</table>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=adresses-email>Adresses Email<a href=#adresses-email class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h3>
 <p>Toutes les propriétés qui contiennent des adresses email (<a href=#from class=""><code>from</code></a>, <a href=#cc class=""><code>cc</code></a>, <a href=#bcc class=""><code>bcc</code></a>, <a href=#to class=""><code>to</code></a>, <a href=#sender class=""><code>sender</code></a>, <a href=#replyto class=""><code>replyTo</code></a>) acceptent des valeurs de type texte, objet ou collection.</p>
@@ -103,26 +29,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=object>Object<a href=#object class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Un objet avec deux propriétés :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>name<td>Text<td>Nom à afficher (peut être null)<tr><td>email<td>Text<td>Adresse email</table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=collection>Collection<a href=#collection class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>Une collection d'objets adresse.</p>
@@ -145,87 +51,12 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-2>Description<a href=#description-2 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La propriété <code>.bodyStructure</code> contient l'objet <em>EmailBodyPart</em>, c'est-à-dire la structure MIME complète du body du message (facultatif). Voir section <a href=#traitement-du-body class="">Traitement du body</a>.</p>
 <p>L'objet <code>.bodyStructure</code> contient les propriété suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Valeur<tbody><tr><td>partID<td>Text<td>Identifie la partie de manière unique dans l'email<tr><td>type<td>Text<td>(obligatoire) Valeur du champ d'en-tête Content-Type de la partie<tr><td>charset<td>Text<td>Valeur du paramètre charset du champ d'en-tête Content-Type<tr><td>encoding<td>Text<td>Si <code>isEncodingProblem=true</code>, la valeur de Content-Transfer-Encoding est ajoutée (par défaut indéfini)<tr><td>disposition<td>Text<td>Valeur du champ d'en-tête Content-Disposition de la partie<tr><td>language<td>Collection de textes<td>Liste de balises de langage, telles que définies dans la <a href=https://tools.ietf.org/html/rfc3282 target=_blank rel="noopener noreferrer" class="">RFC3282</a>, dans le champ d'en-tête Content-Language de la partie, le cas échéant.<tr><td>location<td>Text<td>URI, tel que défini dans la <a href=https://tools.ietf.org/html/rfc2557 target=_blank rel="noopener noreferrer" class="">RFC2557</a>, dans le champ d'en-tête Content-Location de la partie, le cas échéant.<tr><td>subParts<td>Collection d'objets<td>Parties du corps de chaque enfant (collection d'objets <em>EmailBodyPart</em>)<tr><td>headers<td>Collection d'objets<td>Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets <em>EmailHeader</em> voir propriété <a href=#headers class="">headers</a>)</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=bodyvalues>.bodyValues<a href=#bodyvalues class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>.bodyValues</strong> : Object</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-3>Description<a href=#description-3 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La propriété <code>.bodyValues</code> contient l'objet <em>EmailBodyValue</em>, contenant un objet pour chaque &lt;partID> de <code>bodyStructure</code> (facultatif). Voir section <a href=#traitement-du-body class="">Traitement du body</a>.</p>
 <p>L'objet <code>.bodyValues</code> contient les propriété suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Valeur<tbody><tr><td><em>partID</em>.value<td>text<td>Valeur de la partie body<tr><td><em>partID</em>.isEncodingProblem<td>boolean<td>Vrai si des sections malformées sont identifiées durant le décodage du charset, si le charset est inconnu, ou si le content transfer-encoding est inconnu. Faux par défaut</table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cc>.cc<a href=#cc class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>.cc</strong> : Text<br/><strong>.cc</strong> : Object<br/><strong>.cc</strong> : Collection</p>
@@ -255,26 +86,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Si une propriété d'objet <code>EmailHeader</code> définit un en-tête tel que "from" ou "cc" qui est déjà défini comme propriété au niveau du mail, la propriété <code>EmailHeader</code> est ignorée.</p>
 </blockquote>
 <p>Chaque objet de la collection de headers peut contenir les propriétés suivantes :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Valeur<tbody><tr><td>[].name<td>text<td>(obligatoire) Nom du champ en-tête, tel que défini dans la <a href=https://tools.ietf.org/html/rfc5322 target=_blank rel="noopener noreferrer" class="">RFC#5322</a>. S'il est null ou indéfini, le champ en-tête n'est pas ajouté à l'en-tête MIME.<tr><td>[].value<td>text<td>Valeur du champ d'en-tête telle que définie dans la <a href=https://tools.ietf.org/html/rfc5322 target=_blank rel="noopener noreferrer" class="">RFC#5322</a></table>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=htmlbody>.htmlBody<a href=#htmlbody class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p><strong>.htmlBody</strong> : Text</p>
@@ -295,21 +106,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-11>Description<a href=#description-11 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La propriété <code>.keywords</code> contient un ensemble de mots-clés sous forme d'objet, où chaque nom de propriété est un mot-clé et chaque valeur est mise à true.</p>
 <p>Cette propriété est l'en-tête "keywords" (voir la <a href=https://tools.ietf.org/html/rfc4021 target=_blank rel="noopener noreferrer" class="">RFC#4021</a>).</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Valeur<tbody><tr><td>.&lt;keyword><td>boolean<td>Mot-clé à définir à définir (la valeur doit être mise à vrai)</table>
 <p>Mots-clés réservés :</p>
 <ul>
@@ -373,46 +169,10 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>La propriété <code>.to</code> contient la ou les <a href=#email-addresses class="">adresse(s)</a> des destinataires principaux de l'email.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=mail-convert-from-mime>MAIL Convert from MIME<a href=#mail-convert-from-mime class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>18<td>Ajout</table>
 </div></div></details>
 <p><strong>MAIL Convert from MIME</strong>( <em>mime</em> : Blob ) : Object<br/><strong>MAIL Convert from MIME</strong>( <em>mime</em> : Text ) : Object</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mime<td>Blob, Text<td style=text-align:center>-><td>Email en MIME<tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Objet email</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-22>Description<a href=#description-22 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -431,56 +191,10 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">var $mime: Blob</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">var $email;$server;$transporter;$status: Object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// Export Mime du document 4D Write Pro</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">WP EXPORT VARIABLE(WParea;$mime;wk mime html)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// convertir la variable Mime de 4D Write Pro en objet email</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$email:=MAIL Convert from MIME($mime)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">// Remplir les en-têtes de l'objet email</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$email.subject:="4D Write Pro HTML body"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$email.from:="YourEmail@gmail.com"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$email.to:="RecipientEmail@mail.com"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server:=New object</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.host:="smtp.gmail.com"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.port:=465</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.user:="YourEmail@gmail.com"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$server.password:="XXXX"</span><br/></div><div class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$transporter:=SMTP New transporter($server)</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">$status:=$transporter.send($email)</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=mail-convert-to-mime>MAIL Convert to MIME<a href=#mail-convert-to-mime class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed=true><summary>Historique</summary><div><div class=collapsibleContent_i85q>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17 R4<td>Ajout<tr><td>17 R5<td>Modifié</table>
 </div></div></details>
 <p><strong>MAIL Convert to MIME</strong>( <em>mail</em> : Object { ; <em>options</em> : Object } ) : Text</p>
 <div class=no-index>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mail<td>Object<td style=text-align:center>-><td>Objet email<tr><td>options<td>Object<td style=text-align:center>-><td>Options d'encodage et de charset du mail<tr><td>Résultat<td>Text<td style=text-align:center>&lt;-<td>Objet email converti en MIME</table>
 </div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-23>Description<a href=#description-23 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -490,26 +204,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Le format des objets Email de 4D suit la <a href=https://jmap.io/spec/rfc8621/ target=_blank rel="noopener noreferrer" class="">spécification JMAP</a>.</p>
 </blockquote>
 <p>Dans <em>options</em>, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Propriété<th>Type<th>Description<tbody><tr><td>headerCharset<td>Text<td>Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<table><tr><th>Constante<th>Valeur<th>Commentaire<tr><td>Mode courrier ISO2022JP<td>US-ASCII_ISO-2022-JP_UTF8_QP<td><ul><li class=""><i>headerCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable<li class=""><i>bodyCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & 7-bit si possible, sinon UTF-8 & Quoted-printable</ul><tr><td>mode courrier ISO88591<td>ISO-8859-1<td><ul><li class=""><i>headerCharset</i>: ISO-8859-1 & Quoted-printable<li class=""><i>bodyCharset</i>: ISO-8859-1 & 8-bit</ul><tr><td>mode courrier UTF8<td>US-ASCII_UTF8_QP<td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & Quoted-printable (<strong>valeur par défaut</strong>)<tr><td>mode courrier UTF8 en base64<td>US-ASCII_UTF8_B64<td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & base64</table><tr><td>bodyCharset<td>Text<td>Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)</table>
 <p>Si le paramètre <em>options</em> est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-3>Exemple<a href=#exemple-3 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>

@@ -1,60 +1,15 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuration | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Configuration | 4D Docs"/><meta data-rh=true name=description content="Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les ports d'écoute, les chemins par défaut et diverses options couvrant toutes les fonctionnalités du serveur. 4D fournit des valeurs par défaut pour tous les paramètres."/><meta data-rh=true property=og:description content="Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les ports d'écoute, les chemins par défaut et diverses options couvrant toutes les fonctionnalités du serveur. 4D fournit des valeurs par défaut pour tous les paramètres."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/19/WebServer/webServerConfig","name":"Configuration","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.3255fc38.js defer></script><script src=/docs/fr/assets/js/main.f0917df6.js defer></script></head><body><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-19 docs-doc-page docs-doc-id-WebServer/webServerConfig" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>Configuration | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=19 /><meta data-rh=true name=docusaurus_tag content=docs-default-19 /><meta data-rh=true name=docsearch:version content=19 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-19 /><meta data-rh=true property=og:title content="Configuration | 4D Docs"/><meta data-rh=true name=description content="Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les ports d'écoute, les chemins par défaut et diverses options couvrant toutes les fonctionnalités du serveur. 4D fournit des valeurs par défaut pour tous les paramètres."/><meta data-rh=true property=og:description content="Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les ports d'écoute, les chemins par défaut et diverses options couvrant toutes les fonctionnalités du serveur. 4D fournit des valeurs par défaut pour tous les paramètres."/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/19/WebServer/webServerConfig hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/19/WebServer/webServerConfig hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/19/WebServer/webServerConfig hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/19/WebServer/webServerConfig hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/19/WebServer/webServerConfig hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/19/WebServer/webServerConfig","name":"Configuration","position":1}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.4cf13e15.css /><script src=/docs/fr/assets/js/runtime~main.a0dbded6.js defer></script><script src=/docs/fr/assets/js/main.858453fa.js defer></script></head><body><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/19/WebServer/webServerConfig>19</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/WebServer/webServerConfig>21 R5 BETA</a><li><a class=dropdown__link href=/docs/fr/21-R4/WebServer/webServerConfig>21 R4</a><li><a class=dropdown__link href=/docs/fr/21/WebServer/webServerConfig>21</a><li><a class=dropdown__link href=/docs/fr/20/WebServer/webServerConfig>20</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/19/WebServer/webServerConfig>19</a><li class=""><hr class=version-separator><li><a class="dropdown__link version-unavailable" title="Page not available in this version
 Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Français</a><ul class=dropdown__menu><li><a href=/docs/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=fr>Français</a><li><a href=/docs/es/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=es>Español</a><li><a href=/docs/ja/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/19/WebServer/webServerConfig target=_self rel="noopener noreferrer" class=dropdown__link lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="mode système" aria-label="Basculer entre le mode sombre et clair (actuellement mode système)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Rechercher (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Rechercher</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/fr/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>4D Documentation</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/GettingStarted/installation><span class=categoryLinkLabel_W154>Prise en main</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Project/overview><span class=categoryLinkLabel_W154>Gestion des projets</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Concepts/about><span class=categoryLinkLabel_W154>Concepts du langage 4D</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/ORDA/overview><span class=categoryLinkLabel_W154>ORDA</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/API/overview><span class=categoryLinkLabel_W154>Class API Reference</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Preferences/overview><span class=categoryLinkLabel_W154>Préférences</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Admin/webAdmin><span class=categoryLinkLabel_W154>Administration</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Users/overview><span class=categoryLinkLabel_W154>Droits d'accès</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/MSC/overview><span class=categoryLinkLabel_W154>CSM</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Backup/overview><span class=categoryLinkLabel_W154>Sauvegarde et restitution</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/fr/19/WebServer/overview><span class=categoryLinkLabel_W154>Serveur Web</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/19/WebServer/overview><span class=linkLabel_WmDU>Vue d’ensemble</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/fr/19/WebServer/webServerConfig><span class=linkLabel_WmDU>Configuration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/19/WebServer/webServerAdmin><span class=linkLabel_WmDU>Administration</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/19/WebServer/webServerObject><span class=linkLabel_WmDU>Objet Web Server</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/WebServer/gettingStarted><span class=categoryLinkLabel_W154>Développement Web</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/REST/gettingStarted><span class=categoryLinkLabel_W154>Serveur REST</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Desktop/clientServer><span class=categoryLinkLabel_W154>Client/Serveur</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/FormEditor/forms><span class=categoryLinkLabel_W154>Formulaires</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/FormEditor/jsonReference><span class=categoryLinkLabel_W154>Propriétés des formulaires</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/FormObjects/formObjectsOverview><span class=categoryLinkLabel_W154>Objets de formulaire</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/FormObjects/propertiesReference><span class=categoryLinkLabel_W154>Propriétés des objets de formulaire</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Events/overview><span class=categoryLinkLabel_W154>Evénements formulaire</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Menus/overview><span class=categoryLinkLabel_W154>Menus</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false href=/docs/fr/19/Desktop/building><span class=categoryLinkLabel_W154>Générateur d'application</span></a></div></ul></nav><button type=button title="Réduire le menu latéral" aria-label="Réduire le menu latéral" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Page d’accueil" class=breadcrumbs__link href=/docs/fr/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>Serveur Web</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Configuration</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Version : 19</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Configuration</h1></header><p>Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les ports d'écoute, les chemins par défaut et diverses options couvrant toutes les fonctionnalités du serveur. 4D fournit des valeurs par défaut pour tous les paramètres.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=configurer-les-paramètres>Configurer les paramètres<a href=#configurer-les-paramètres class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
 <p>Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la portée et du serveur que vous souhaitez configurer :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Emplacement du paramètre<th>Portée<th>Serveur web concerné<tbody><tr><td><a class="" href=/docs/fr/19/WebServer/webServerObject>objet webServer</a><td>Temporaire (session courante)<td>N'importe quel serveur web, y compris les serveurs Web de composants<tr><td><code>WEB SET OPTION</code> ou commande <code>WEB XXX</code><td>Temporaire (session courante)<td>Serveur principal<tr><td>Fenêtre des <strong>Propriétés</strong> (pages <strong>Web</strong>)<td>Permanent (toutes les sessions, stocké sur le disque)<td>Serveur principal</table>
 <blockquote>
 <p>Certains paramètres ne sont pas disponibles depuis tous les emplacements.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=cache>Cache<a href=#cache class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>Boîte de dialogue des Propriétés<td>Page de configuration/Utilisation du cache Web 4D<td><tr><td>Boîte de dialogue des Propriétés<td>Page de configuration/Taille du cache des pages<td></table>
 <p>Active et configure le cache des pages web.</p>
 <p>Le serveur web 4D dispose d'un cache qui permet de charger les pages statiques, les images GIF, les images JPEG (&lt;512 kb) et les feuilles de style (fichiers .css) en mémoire, au fur et à mesure qu'elles sont appelées. L'utilisation du cache permet d'augmenter considérablement les performances du serveur web lors de l'envoi de pages statiques. Le cache est partagé entre tous les processus web.</p>
@@ -63,21 +18,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Lorsque vous utilisez votre base de données web, vous pouvez vérifier les performances du cache en utilisant la commande <code>WEB LIRE STATISTIQUES</code>. Si, par exemple, vous remarquez que le taux d'utilisation du cache est proche de 100 %, vous pouvez envisager d'augmenter la taille qui lui a été allouée. Les URL [/4DSTATS] et [/4DHTMLSTATS] vous permettent également d'obtenir des informations sur l'état du cache.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dossier-de-certificat>Dossier de certificat<a href=#dossier-de-certificat class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><code>certificateFolder</code><td>La propriété Text, mais il peut s'agir d'un objet <a class="" href=/docs/fr/19/API/FolderClass><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code>.</table>
 <p>Dossier qui contient les fichiers de certificat TLS pour le serveur web.</p>
 <p>Par défaut, avec 4D ou 4D Server, ces fichiers doivent être placés à côté du <a class="" href=/docs/fr/19/Project/architecture#project-folder>dossier du projet</a>.</p>
@@ -86,83 +26,18 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Les fichiers de certificat TLS sont <em>key.pem</em> (document contenant la clé de chiffrement privée) et <em>cert.pem</em> (document contenant le certificat).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=jeu-de-caractères>Jeu de caractères<a href=#jeu-de-caractères class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><code>characterSet</code><td>Entier long (MIBEnum) ou chaîne de caractères (nom)<tr><td><code>WEB SET OPTION</code><td><code>Web character set</code><td>Entier long (MIBEnum) ou chaîne de caractères (nom)<tr><td>Boîte de dialogue des Propriétés<td>Page Options (II)/Jeu standard<td>Menu popup</table>
 <p>Définit le jeu de caractères à utiliser par le serveur web 4D. La valeur par défaut dépend de la langue du système d'exploitation.</p>
 <blockquote>
 <p>Ce paramètre est également utilisé pour générer des États Rapides au format HTML.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=liste-des-chiffrements>Liste des chiffrements<a href=#liste-des-chiffrements class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#ciphersuite><code>cipherSuite</code></a><td>Text</table>
 <p>Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité des algorithmes de chiffrement implémentés par le serveur web. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la <a href=https://www.openssl.org/docs/manmaster/man1/ciphers.html target=_blank rel="noopener noreferrer" class="">page des chiffrements</a> sur le site OpenSSL.</p>
 <blockquote>
 <p>La liste de chiffrement par défaut utilisée par 4D peut être modifiée pour la session à l'aide de la commande <code>FIXER PARAMETRE BASE</code>, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur web, le serveur SQL, les connexions client/serveur, ainsi que le client HTTP et toutes les commandes 4D qui font appel au protocole sécurisé.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=paramètres-cors>Paramètres CORS<a href=#paramètres-cors class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#corssettings><code>CORSSettings</code></a><td>Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)<tr><td><code>WEB SET OPTION</code><td><code>Web CORS settings</code><td>Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)<tr><td>Boîte de dialogue des Propriétés<td>Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées<td>Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes</table>
 <p>Liste des hôtes et méthodes autorisé(e)s pour le service CORS.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=noms-de-domaine>Noms de domaine<a href=#noms-de-domaine class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -195,71 +70,11 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=voir-également>Voir également<a href=#voir-également class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p><a href=#enable-cors-service class="">Activer CORS</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=debug-log>Debug log<a href=#debug-log class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><code>debugLog</code><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web debug log</code><td>number</table>
 <p>État du fichier journal des requêtes HTTP du serveur web (HTTPDebugLog_nn.txt, stocké dans le dossier "Logs" de l'application -- nn est le numéro du fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque requête et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Valeur<th>Constante<th>Description<tbody><tr><td>0<td>wdl disable<td>Le journal de débogage HTTP du web est désactivé</table>
 <p>|1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=page-daccueil-par-défaut>Page d'accueil par défaut<a href=#page-daccueil-par-défaut class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#defaulthomepage><code>defaultHomepage</code></a><td>Text<tr><td><code>WEB SET HOME PAGE</code><td><td>Peut être différente pour chaque web process<tr><td>Boîte de dialogue des Propriétés<td>Configuration > Page d'accueil par défaut<td></table>
 <p>Désigne une page comme page d'accueil par défaut pour le serveur web. Cette page peut être statique ou [semi-dynamic].</p>
 <p>Par défaut, quand le serveur web est lancé pour la première fois, 4D crée une page d'accueil appelée "index.html" et la place dans le dossier HTML racine. Si vous ne modifiez pas cette configuration, n'importe quel browser se connectant au serveur web obtiendra cette page :</p>
@@ -273,31 +88,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Par exemple, pour que la page d'accueil par défaut soit "MyHome.htm", si elle se trouve dans le dossier "Web" (lui-même situé dans le dossier racine HTML par défaut), utilisez "Web/MyHome.htm".</p>
 <p>Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base <code>On Web Connection</code> est appelée. Il vous appartient de traiter la demande de manière procédurale.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activer-cors>Activer CORS<a href=#activer-cors class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#corsenabled><code>CORSEnabled</code></a><td>True pour activer CORS (False par défaut).<tr><td><code>WEB SET OPTION</code><td><code>Web CORS enabled</code><td>0 (désactivé, par défaut) ou 1 (activé)<tr><td>Boîte de dialogue des Propriétés<td>Page Options (II) > Activer CORS<td>Décoché par défaut</table>
 <p>Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsque l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisé(e) envoie une demande intersite, celle-ci est rejetée avec une réponse d'erreur "403 - interdit".</p>
 <p>Lorsqu'elle est désactivée (par défaut), toutes les demandes intersites envoyées avec CORS sont ignorées.</p>
@@ -305,82 +95,12 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=voir-également-1>Voir également<a href=#voir-également-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p><a href=#cors-settings class="">Paramètres CORS</a></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activer-http>Activer HTTP<a href=#activer-http class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpenabled><code>HTTPEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP enabled</code><td><tr><td>Boîte de dialogue des Propriétés<td>Configuration > Activer HTTP<td></table>
 <p>Indique si le web server accepte des connexions non sécurisées.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activer-https>Activer HTTPS<a href=#activer-https class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpsenabled><code>HTTPSEnabled</code></a><td>boolean<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS enabled</code><td><tr><td>Boîte de dialogue des Propriétés<td>Page Configuration/Activer HTTPS<td></table>
 <p>Statut de la communication via HTTPS. Cette option est décrite dans <a class="" href=/docs/fr/19/Admin/tls>cette section</a>.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=activer-hsts>Activer HSTS<a href=#activer-hsts class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#hstsenabled><code>HSTSEnabled</code></a><td>Booléen, True pour activer le HSTS (False par défaut)<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS enabled</code><td>0 (désactivé, par défaut) ou 1 (activé)</table>
 <p>État de HTTP Strict Transport Security (HSTS).</p>
 <p>Lorsque <a href=#enable-https class="">HTTPS est activé</a>, n'oubliez pas que si <a href=#enable-http class="">HTTP est également activé</a>, le navigateur peut toujours basculer entre HTTPS et HTTP (par exemple, dans la zone URL du navigateur, l'utilisateur peut remplacer "https" par "http"). Pour interdire les redirections http, vous pouvez <a href=#enable-http class="">désactiver le HTTP</a>, cependant dans ce cas un message d'erreur est affiché lors des requêtes HTTP du client.</p>
@@ -392,105 +112,20 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Vous pouvez vérifier le mode de connexion utilisé en utilisant la commande <code>WEB Is secured connection</code>.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=hsts-max-age>HSTS Max Age<a href=#hsts-max-age class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#hstsmaxage><code>HSTSMaxAge</code></a><td>nombre en secondes<tr><td><code>WEB SET OPTION</code><td><code>Web HSTS max age</code><td>nombre en secondes</table>
 <p>Spécifie la durée maximale (en secondes) d'activation de HSTS pour chaque nouvelle connexion client. Ces informations sont stockées côté client pendant la durée spécifiée. Valeur par défaut : 63072000 (2 ans)</p>
 <blockquote>
 <p><strong>Avertissement:</strong> Une fois le HSTS activé, les connexions des clients continueront à utiliser ce mécanisme pendant la durée spécifiée. Lorsque vous testez vos applications, il est recommandé de définir une courte durée pour pouvoir passer du mode de connexion sécurisé au mode non sécurisé si nécessaire.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=niveau-de-compression>Niveau de compression<a href=#niveau-de-compression class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpcompressionlevel><code>HTTPCompressionLevel</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression level</code><td>S'applique au Web et au service Web</table>
 <p>Niveau de compression pour tous les échanges HTTP compressés pour le serveur web 4D (requêtes clients ou réponses serveur). Cette option vous permet d'optimiser les échanges en privilégiant soit la vitesse d'exécution (moins de compression), soit la quantité de compression (moins de vitesse). Le choix d'une valeur dépend de la taille et du type de données échangées.</p>
 <p>Passez une valeur de 1 à 9 où 1 est la compression la plus rapide et 9 la plus élevée. Vous pouvez également passer -1 pour un compromis entre vitesse et taux de compression. Par défaut, le niveau de compression est de 1 (compression plus rapide).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=seuil-de-compression-http>Seuil de compression HTTP<a href=#seuil-de-compression-http class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpcompressionthreshold><code>HTTPCompressionThreshold</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web HTTP compression threshold</code><td></table>
 <p>Dans le cadre des échanges HTTP optimisés, seuil de taille des requêtes en dessous duquel les échanges ne doivent pas être compressés. Ce paramètre est utile pour éviter de perdre du temps machine en compressant les petits échanges.</p>
 <p>Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de compression est fixé à 1024 octets.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=port-http>Port HTTP<a href=#port-http class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpport><code>HTTPPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web port ID</code><td><tr><td>Boîte de dialogue des Propriétés<td>Configuration > Port HTTP<td></table>
 <p>Numéro de port IP (TCP) d'écoute pour HTTP. Par défaut, 4D publie une application Web sur le port HTTP normal (port TCP), qui est le port 80. Si ce port est déjà utilisé par un autre service Web, vous devez modifier le port HTTP utilisé par 4D pour ce projet.</p>
 <blockquote>
@@ -502,135 +137,20 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 </blockquote>
 <p>Si vous spécifiez 0, 4D utilisera le numéro de port HTTP 80 par défaut.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=http-trace>HTTP Trace<a href=#http-trace class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httptrace><code>HTTPTrace</code></a><td>Booléen, false par défaut<tr><td><code>WEB SET OPTION</code><td><code>Web HTTP TRACE</code><td>Entier long, 0 par défaut (désactivé)</table>
 <p>Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de sécurité, le serveur web 4D rejette par défaut les demandes HTTP TRACE avec une erreur 405. Si nécessaire, vous pouvez activer la méthode HTTP TRACE, auquel cas le serveur Web 4D répond aux demandes HTTP TRACE avec la request line, l'en-tête et le body.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=port-https>Port HTTPS<a href=#port-https class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#httpsport><code>HTTPSPort</code></a><td>number<tr><td><code>WEB SET OPTION</code><td><code>Web HTTPS port ID</code><td><tr><td>Boîte de dialogue des Propriétés<td>Configuration > Port HTTP<td></table>
 <p>Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi <a href=#http-port class="">HTTP Port</a> pour plus d'informations sur les numéros de port.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=conservation-des-process-inactifs>Conservation des process inactifs<a href=#conservation-des-process-inactifs class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#inactiveprocesstimeout><code>inactiveProcessTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive process timeout</code><td><tr><td>Boîte de dialogue des Propriétés<td>Options (I) > Conservation des Process inactifs<td>Curseur</table>
 <p>Durée de vie (en minutes) des process inactifs associés aux anciennes sessions. À la fin du délai d'attente (tiemout), le process est tué sur le serveur, la méthode base <code>On Web Close Process</code> est appelée, puis le contexte de session est détruit.</p>
 <p>Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=durée-de-vie-des-sessions-inactives>Durée de vie des sessions inactives<a href=#durée-de-vie-des-sessions-inactives class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#inactivesessiontimeout><code>inactiveSessionTimeout</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web inactive session timeout</code><td></table>
 <p>Durée de vie (en minutes) des sessions inactives (durée définie dans le cookie). À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.</p>
 <p>Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=adresse-ip-découte>Adresse IP d'écoute<a href=#adresse-ip-découte class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#ipaddresstolisten><code>IPAddressToListen</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web IP address to listen</code><td><tr><td>Boîte de dialogue des Propriétés<td>Configuration > Adresse IP<td>Menu popup</table>
 <p>Adresses IP (chaînes) sur lesquelles le serveur web 4D recevra les requêtes HTTP (4D local et 4D Server).</p>
 <p>Par défaut, aucune adresse spécifique n'est définie (<strong>Valeur Any</strong> dans la boîte de dialogue Paramètres), cela signifie que le serveur répond à toutes les adresses IP. Lorsque vous désignez une adresse spécifique, le serveur ne répond qu'aux demandes envoyées à cette adresse. Cette fonction est conçue pour être utilisée avec les serveurs Web 4D situés sur des machines ayant plusieurs adresses TCP/IP. Par exemple, c'est régulièrement le cas dans des contextes d'hébergement.</p>
@@ -651,31 +171,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Pour éviter cette confusion, nous recommandons d'utiliser la notation [ ] lorsque vous combinez une adresse IPv6 avec un numéro de port. Par exemple:</p>
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain"> [2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081</span><br/></div></code></pre></div></div>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=keep-session>Keep Session<a href=#keep-session class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#keepsession><code>keepSession</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web keep session</code><td><tr><td>Boîte de dialogue des Propriétés<td>Page Options (I)/Gestion automatique des sessions<td></table>
 <p>Statut de la gestion de session pour le serveur Web 4D. Le fonctionnement des sessions est décrit dans la section <a class="" href=/docs/fr/19/WebServer/sessions>Gestion des sessions</a>.</p>
 <p>True par défaut (activé).</p>
@@ -683,167 +178,27 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Lorsque cette option est cochée, l'option "réutilisation des contextes temporaires" est automatiquement cochée (et verrouillée).</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=enregistrement-des-logs>Enregistrement des logs<a href=#enregistrement-des-logs class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#logrecording><code>logRecording</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web log recording</code><td><tr><td>Boîte de dialogue des Propriétés<td>Journal (format)/Format du journal<td>Menu popup</table>
 <p>Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier <em>logweb.txt</em> et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier <em>logweb.txt</em> est automatiquement placé dans le dossier Logs.</p>
 <p>Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Valeur<th>Nom du format<th>Description<tbody><tr><td>0<td>Pas de journal<td>Par défaut<tr><td>1<td>CLF<td>Format de journal commun - Chaque ligne du fichier représente une requête, telle que : <code>host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length</code> - Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF.<tr><td>2<td>DLF<td>Combined Log Format - Similaire au format NSI mais ajoute deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.<tr><td>3<td>ELF<td>Extended Log Format - À personnaliser dans la boîte de dialogue des Propriétés<tr><td>4<td>WLF<td>Webstar Log Format- À personnaliser dans la boîte de dialogue des Propriétés</table>
 <blockquote>
 <p>Les formats 3 et 4 sont des formats personnalisés dont le contenu doit être défini au préalable dans la boîte de dialogue des Propriétés. Si vous utilisez l'un de ces formats sans qu'aucun de ses champs n'ait été sélectionné sur cette page, le fichier d'enregistrement des logs ne sera pas généré.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=process-web-simultanés-maxi>Process Web simultanés maxi<a href=#process-web-simultanés-maxi class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#maxconcurrentprocesses><code>maxConcurrentProcesses</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max concurrent processes</code><td><tr><td>Boîte de dialogue des Propriétés<td>Options (I) > Réutilisation des contextes temporaires<td></table>
 <p>Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP <code>503 - Service indisponible</code> à toutes les nouvelles requêtes.</p>
 <p>La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=taille-de-requête-maximale>Taille de requête maximale<a href=#taille-de-requête-maximale class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#maxrequestsize><code>maxRequestSize</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web maximum requests size</code><td></table>
 <p>Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Passer la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.</p>
 <p>Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Lorsqu'une requête atteint cette limite, le serveur Web 4D la rejette.</p>
 <p>Valeurs possibles: 500 000 - 2147483648.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nombre-maximal-de-sessions>Nombre maximal de sessions<a href=#nombre-maximal-de-sessions class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#maxsessions><code>maxSessions</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web max sessions</code><td></table>
 <p>Nombre maximum d'anciennes sessions simultanées. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base <code>On Web Legacy Close Session</code> est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions simultanées ne peut pas dépasser le <a href=#maximum-concurrent-web-processes class="">nombre maximal de process Web</a> (100 par défaut).</p>
 <p>Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=version-tls-minimale>Version TLS minimale<a href=#version-tls-minimale class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#mintlsversion><code>minTLSVersion</code></a><td>number</table>
 <p>Version TLS minimale acceptée pour les connexions. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.</p>
 <p>Valeurs possibles :</p>
@@ -858,57 +213,12 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>La version TLS minimale utilisée par 4D peut être modifiée pour la session à l'aide de la commande <code>SET DATABASE PARAMETER</code>, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur Web, le serveur SQL et les connexions client/serveur.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nom>Nom<a href=#nom class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#name><code>name</code></a><td></table>
 <p>Nom de l'application de serveur Web. Utile lorsque les serveurs web des composants sont démarrés.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=version-openssl>Version OpenSSL<a href=#version-openssl class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#opensslversion><code>openSSLVersion</code></a><td>Lecture seule</table>
 <p>Version de la bibliothèque OpenSSL utilisée.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=perfect-forward-secrecy>Perfect Forward Secrecy<a href=#perfect-forward-secrecy class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#perfectforwardsecrecy><code>perfectForwardSecrecy</code></a><td>Booléen, lecture seule</table>
 <p>Vrai si le PFS est disponible sur le serveur web (voir la section <a class="" href=/docs/fr/19/Admin/tls#perfect-forward-secrecy-pfs>TLS</a>).</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=robotstxt>Robots.txt<a href=#robotstxt class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
@@ -927,31 +237,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <div class="language-code4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-code4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><div class=token-line style=color:#393A34><span class="token plain">   User-Agent: *</span><br/></div><div class=token-line style=color:#393A34><span class="token plain">   Disallow: /</span><br/></div></code></pre></div></div>
 <p>Dans ce cas, les robots n'auront accès à aucune partie du site.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=dossier-racine>Dossier racine<a href=#dossier-racine class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#rootfolder><code>rootFolder</code></a><td>Propriété Text, mais il peut s'agir d'un objet <a class="" href=/docs/fr/19/API/FolderClass><code>4D.Folder</code></a> lorsqu'il est utilisé avec le paramètre <em>settings</em> de la fonction <code>start()</code><tr><td><code>WEB SET ROOT FOLDER</code><td><td><tr><td>Boîte de dialogue des Propriétés<td>Configuration > Racine HTML par défaut<td></table>
 <p>Chemin du dossier racine du serveur web, i.e le dossier dans lequel 4D va chercher les pages HTML statiques et semi-dynamiques, les images, etc. à envoyer aux navigateurs. Le chemin d'accès est au format POSIX (chemin entier). Le serveur web doit être redémarré pour que le nouveau dossier racine soit pris en compte.</p>
 <p>De plus, le dossier racine HTML définit, sur le disque dur du serveur web, le niveau hiérarchique au-dessus duquel les fichiers ne seront pas accessibles. Si une URL demandée ou une commande 4D tente d'accéder à un fichier situé au-dessus du dossier racine HTML, une erreur est renvoyée indiquant que le fichier n'a pas été trouvé.</p>
@@ -972,90 +257,15 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Lorsque le dossier racine HTML est modifié, le cache est effacé afin que les fichiers dont l'accès est restreint ne soient pas stockés.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=domaine-du-cookie-de-session>Domaine du cookie de session<a href=#domaine-du-cookie-de-session class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#sessioncookiedomain><code>sessionCookieDomain</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie domain</code><td></table>
 <p>Valeur du champ "domain" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=nom-du-cookie-de-session>Nom du cookie de session<a href=#nom-du-cookie-de-session class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#sessioncookiename><code>sessionCookieName</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie name</code><td></table>
 <p>Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=chemin-du-cookie-de-session>Chemin du cookie de session<a href=#chemin-du-cookie-de-session class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#sessioncookiepath><code>sessionCookiePath</code></a><td><tr><td><code>WEB SET OPTION</code><td><code>Web session cookie path</code><td></table>
 <p>Valeur du champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=session-cookie-samesite>Session Cookie SameSite<a href=#session-cookie-samesite class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>objet webServer<td><a class="" href=/docs/fr/19/API/WebServerClass#sessioncookiesamesite><code>sessionCookieSameSite</code></a><td></table>
 <p>Valeur de l'attribut <code>SameSite</code> du cookie de session. Cet attribut vous permet de déclarer si votre cookie doit être limité à un contexte de première partie ou de même site, comme une protection contre certaines attaques CSRF (<a href=https://developer.mozilla.org/en-US/docs/Glossary/CSRF target=_blank rel="noopener noreferrer" class="">cross-site request forgery</a>).</p>
 <blockquote>
@@ -1072,21 +282,6 @@ Opening the default page instead" href=/docs/fr/18/GettingStarted/installation>1
 <p>Il n'est pas recommandé de définir <code>SameSite=None</code> sur un serveur HTTP car l'attribut <code>Secure</code> sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.</p>
 </blockquote>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=utiliser-des-process-préemptifs>Utiliser des process préemptifs<a href=#utiliser-des-process-préemptifs class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <table><thead><tr><th>Peut être configuré via<th>Nom<th>Commentaires<tbody><tr><td>Boîte de dialogue des Propriétés<td>Options (I) > Réutilisation des contextes temporaires<td></table>
 <p>Cette option active le mode préemptif pour le code du serveur web de votre application lorsque l'option <strong>No sessions</strong> est sélectionnée (le mode préemptif est toujours activé avec les <strong>sessions extensibles</strong>). Lorsque cette option est cochée dans ce contexte, le compilateur 4D évalue automatiquement la propriété thread-safety de chaque élément du code <a class="" href=/docs/fr/19/WebServer/preemptiveWeb#thread-safety-of-4d-web-code>lié au web</a> et renvoie des erreurs en cas d'incompatibilité.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=propriétés-obsolètes>Propriétés obsolètes<a href=#propriétés-obsolètes class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h2>
