@@ -85,3 +85,12 @@ In this example, we want to create four windows:
 ## See also 
 
 [Create entity selection](../commands/create-entity-selection)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1840 |
+| Thread safe | no |
+

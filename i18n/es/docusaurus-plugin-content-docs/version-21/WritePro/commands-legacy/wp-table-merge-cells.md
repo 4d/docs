@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
 ## Descripción 
@@ -71,3 +70,11 @@ Para más detalles, consulte *Fusión y división de celdas*.
 
 *Manejo de tablas*  
 [WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1815 |
+| Hilo seguro | yes |

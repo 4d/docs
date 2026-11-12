@@ -151,7 +151,7 @@ If the code is executed on 4D Server, the object contains (for example):
 |  |  |
 | --- | --- |
 | Command number | 1599 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 
 

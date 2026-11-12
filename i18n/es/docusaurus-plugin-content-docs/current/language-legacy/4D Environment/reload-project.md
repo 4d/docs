@@ -52,6 +52,6 @@ Cuando se llama al comando desde:
 |  |  |
 | --- | --- |
 | Número de comando | 1739 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 

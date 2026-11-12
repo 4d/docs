@@ -17,7 +17,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
 ## Descripción 
@@ -98,3 +97,11 @@ Resultado:
 ## Ver también 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1797 |
+| Hilo seguro | yes |

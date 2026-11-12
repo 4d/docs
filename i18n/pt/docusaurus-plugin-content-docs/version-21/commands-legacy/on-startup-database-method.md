@@ -1,6 +1,6 @@
 ---
 id: on-startup-database-method
-title: On Startup database method
+title: Método banco de dados On Startup
 slug: /commands/on-startup-database-method
 displayed_sidebar: docs
 ---
@@ -35,6 +35,7 @@ O Método banco de dados On Startup é perfeito para:
 * Carregar preferências ou parâmetros guardados durante a sessão de trabalho anterior.
 * Evitar a abertura do banco se não se cumprirem uma condição (por exemplo, se faltar um recurso do sistema) chamando explicitamente [QUIT 4D](quit-4d.md).
 * Realizar outras ações que deseja executar automaticamente cada vez que abra um banco.
+
 No entanto, lhe recomendamos NÃO lançar trabalhos de impressão desde o **Método banco de dados On Startup**. 
 
 ## Exemplo 
@@ -43,6 +44,6 @@ Veja o exemplo na seção [Semaphore](semaphore.md).
 
 ## Ver também 
 
-[Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
 *Métodos de banco de dados*  
-[QUIT 4D](quit-4d.md)  
+[Método banco de dados On Exit](on-exit-database-method.md)  
+[QUIT 4D](quit-4d.md)

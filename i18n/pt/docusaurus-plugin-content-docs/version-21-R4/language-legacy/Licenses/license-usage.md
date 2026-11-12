@@ -19,6 +19,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License usage.Summary-->O comando **License usage** retorna uma coleção de objetos contendo informação das licenças retidas.<!-- END REF-->
 
+:::note
+
+Este comando só pode ser executado no 4D Server. Ele retorna `null` quando chamado de outro contexto.
+
+:::
+
 Cada objeto na coleção retornada tem os atributos abaixo:
 
 | **Nome propriedade**   | **Tipo** | **Descrição**                                                                                                            |
@@ -80,7 +86,7 @@ Essa tabela detalha os conteúdos do objeto sessão para sessões REST:
 |  |  |
 | --- | --- |
 | Número do comando | 1782 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 
 

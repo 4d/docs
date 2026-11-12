@@ -15,7 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
 ## Description 
@@ -41,3 +40,11 @@ Vous souhaitez supprimer une zone de texte en utilisant son ID :
 ## Voir aussi 
 
 [WP New text box](wp-new-text-box.md)  
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1798 |
+| Thread safe | yes |

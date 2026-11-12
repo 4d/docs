@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -94,7 +93,15 @@ O exemplo abaixo recorre uma seleção de entidades e cria uma vista previa de i
 
 ## Ver também 
 
-  
+[Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
 [Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get data context](wp-get-data-context.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1786 |
+| Thread safe | sim |

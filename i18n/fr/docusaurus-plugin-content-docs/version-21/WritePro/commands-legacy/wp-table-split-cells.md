@@ -20,7 +20,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
 
 ## Description 
@@ -70,3 +69,11 @@ Pour plus de détails, veuillez consulter *Fusionner et fractionner des cellules
 
 *Manipuler des tableaux*  
 [WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
+
+
+## Propriétés
+
+|  |  |
+| --- | --- |
+| Numéro de commande | 1816 |
+| Thread safe | yes |

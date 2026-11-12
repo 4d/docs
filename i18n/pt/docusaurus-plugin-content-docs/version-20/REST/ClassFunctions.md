@@ -15,7 +15,7 @@ com dados no corpo do pedido POST: `["Aguada"]`
 Na linguagem 4D, esta chamada é equivalente a:
 
 ```4d
-$city:=ds. City.getCity("Aguada")
+$city:=ds.City.getCity("Aguada")
 ```
 
 > Apenas as funções com a palavra-chave `exposed` podem ser diretamente chamadas a partir de pedidos REST. Ver a secção [Funções expostas vs não expostas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
@@ -123,7 +123,9 @@ Esta base de dados é exposta como um datastore remoto no localhost (porta 8111)
 A classe de `DataStore` US_Cities fornece uma API:
 
 ```  
-// DataStore class Class extends DataStoreImplementation
+// DataStore class
+
+Class extends DataStoreImplementation
 
 exposed Function getName()
     $0:="US cities and zip codes manager" 
@@ -146,13 +148,15 @@ Pode então executar este pedido:
 A classe Dataclass `City` fornece uma API que devolve uma entidade cidade a partir de um nome passado como parâmetro:
 
 ```
-// City class Class extends DataClass
+// City class
+
+Class extends DataClass
 
 exposed Function getCity()
- var $0 : cs. CityEntity
- var $1,$nameParam : text
- $nameParam:=$1
- $0:=This.query("name = :1";$nameParam).first()
+	var $0 : cs.CityEntity
+	var $1;$nameParam : text
+	$nameParam:=$1
+	$0:=This.query("name = :1";$nameParam).first()
 ```
 
 Pode então executar este pedido:
@@ -193,7 +197,9 @@ O resultado é uma entidade:
 A classe de entidade `CityEntity` fornece uma API:
 
 ```
-// CityEntity class Class extends Entity
+// CityEntity class
+
+Class extends Entity
 
 exposed Function getPopulation()
     $0:=This.zips.sum("population")
@@ -217,7 +223,9 @@ Pode então executar este pedido:
 A classe de selection de entidade `CitySelection` fornece uma API:
 
 ```
-// CitySelection class Class extends EntitySelection
+// CitySelection class
+
+Class extends EntitySelection
 
 exposed Function getPopulation()
     $0:=This.zips.sum("population")
@@ -240,17 +248,19 @@ Pode então executar este pedido:
 A classe `StudentsSelection` tem uma função `getAgeAverage`:
 
 ```  
-// StudentsSelection Class Class extends EntitySelection
+// StudentsSelection Class
+
+Class extends EntitySelection
 
 exposed Function getAgeAverage
- C_LONGINT($sum;$0)
- C_OBJECT($s)
+	C_LONGINT($sum;$0)
+	C_OBJECT($s)
 
- $sum:=0
- For each ($s;This)
-     $sum:=$sum+$s.age()
- End for each 
- $0:=$sum/This.length
+	$sum:=0
+	For each ($s;This)
+	    $sum:=$sum+$s.age()
+	End for each 
+	$0:=$sum/This.length
 ```
 
 Uma vez criado um conjunto de entidades, é possível executar este pedido:
@@ -270,14 +280,17 @@ Uma vez criado um conjunto de entidades, é possível executar este pedido:
 A classe `StudentsSelection` tem uma função `getLastSummary`:
 
 ```  
-// StudentsSelection Class Class extends EntitySelection
+// StudentsSelection Class
+
+
+Class extends EntitySelection
 
 exposed Function getLastSummary
- C_TEXT($0)
- C_OBJECT($last)
+	C_TEXT($0)
+	C_OBJECT($last)
 
- $last:=This.last()
- $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+	$last:=This.last()
+	$0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 Pode então executar este pedido:
@@ -300,23 +313,25 @@ Pode então executar este pedido:
 A classe de Dataclass `Students` tem a função `pushData()` que recebe uma entidade que contém dados do cliente. O método `checkData()` executa alguns controlos. Se estiverem corretas, a entidade é guardada e devolvida.
 
 ```
-// Students Class Class extends DataClass
+// Students Class
+
+Class extends DataClass
 
 exposed Function pushData
- var $1, $entity, $status, $0 : Object
+	var $1; $entity; $status; $0 : Object
 
- $entity:=$1
+	$entity:=$1
 
- $status:=checkData($entity) // $status is an object with a success boolean property
+	$status:=checkData($entity) // $status is an object with a success boolean property
 
- $0:=$status
+	$0:=$status
 
- If ($status.success)
-     $status:=$entity.save()
-     If ($status.success)
-         $0:=$entity
-     End if 
- End if
+	If ($status.success)
+	    $status:=$entity.save()
+ 	   If ($status.success)
+ 	       $0:=$entity
+  	  End if 
+	End if
 
 ```
 
@@ -439,18 +454,22 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// Classe StudentsEntity Class extends Entity
+// StudentsEntity class
+
+Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 
-        //$school é uma entidade Schools
-        //Associar a entidade relacionada school à entidade Students atual
-    This.school:=$school
+		//$school é uma entidade Schools
+		//Associar a entidade relacionada school à entidade Students atual
+	This.school:=$school
 
-    $status:=This.save()
+	$status:=This.save()
 ```
 
-You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
+Executa-se este pedido, chamado numa entidade Students: 
+**POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`
+Corpo do pedido:
 ```
 [{
 "__DATACLASS":"Schools",
@@ -475,12 +494,14 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 Na classe `Students` Dataclass, a função `setFinalExam()` atualiza uma seleção de entidade recebida ($1). Na realidade, atualiza o atributo *finalExam* com o valor recebido ($2). Devolve as chaves primárias das entidades atualizadas.
 
 ```
-// Students class Class extends DataClass
+// Students class
+
+Class extends DataClass
 
 exposed Function setFinalExam()
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $1; $es; $student; $status : Object
+    var $2; $examResult : Text
 
     var $keys, $0 : Collection
 
@@ -542,14 +563,14 @@ As entidades com chaves primárias 1 e 2 foram atualizadas.
 Utilizando a função `getAgeAverage()` [definida acima](#using-an-entityselection-class-function-and-an-entityset).
 
 ```4d
-var $remoteDS, $newStudent, $students : Object
+var $remoteDS; $newStudent; $students : Object
 var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
 // $newStudent is a student entity to procees
 $newStudent:=...
-$students:=$remoteDS. Students.query("school.name = :1";"Math school")
+$students:=$remoteDS.Students.query("school.name = :1";"Math school")
 // We add an entity to the $students entity selection on the client
 $students.add($newStudent) 
 

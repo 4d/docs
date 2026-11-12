@@ -52,6 +52,6 @@ Quando o comando for chamado de:
 |  |  |
 | --- | --- |
 | Número do comando | 1739 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 

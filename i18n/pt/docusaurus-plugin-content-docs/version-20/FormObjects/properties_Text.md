@@ -7,7 +7,7 @@ title: Text
 
 ## Permitir a selecção de tipo de letra/cor
 
-Quando esta propriedade está activada, os comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) e [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) podem ser chamados para apresentar as janelas de seleção de fontes sistema e de cores. Usando essas janelas, os usuários podem alterar a fonte ou a cor de um objeto formulário que tenha o foco diretamente ao clicar. Quando essa propriedade está desativada (padrão), os comandos do seletor de abertura não têm efeito.
+Quando esta propriedade está activada, os comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-FONT-PICKER.301-7487278.en.html) e [OPEN COLOR PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-COLOR-PICKER.301-7487279.en.html) podem ser chamados para apresentar as janelas de seleção de fontes sistema e de cores. Usando essas janelas, os usuários podem alterar a fonte ou a cor de um objeto formulário que tenha o foco diretamente ao clicar. Quando essa propriedade está desativada (padrão), os comandos do seletor de abertura não têm efeito.
 
 #### Gramática JSON
 
@@ -25,7 +25,7 @@ Quando esta propriedade está activada, os comandos [OPEN FONT PICKER](https://d
 
 Define o texto selecionado para aparecer mais escuro e mais pesado.
 
-Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
+Você pode definir essa propriedade usando o comando [OBJECT SET FONT STYLE](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.en.html).
 > This is normal text.<br/> **This is bold text.**
 
 #### Gramática JSON
@@ -44,7 +44,7 @@ Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**]
 
 Define o texto selecionado como ligeiramente inclinado para a direita.
 
-Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
+Você também pode definir essa propriedade por meio do comando [OBJECT SET FONT STYLE](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.en.html).
 > This is normal text.<br/> *This is text in italics.*
 
 #### Gramática JSON
@@ -116,7 +116,7 @@ Existem dois tipos de nomes de famílias de letras:
 - *family-name:* o nome de uma família de tipos de letra, como "times", "courier", "arial", etc.
 - *generic-family:* o nome de uma família genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-Pode ser definido utilizando o comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
+Pode ser definido utilizando o comando [OBJECT SET FONT](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT.301-7487845.en.html).
 
 #### Gramática JSON
 
@@ -159,7 +159,7 @@ A cor pode ser especificada por:
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
-Você também pode definir esta propriedade usando o comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
+Você também pode definir esta propriedade usando o comando [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.en.html).
 
 #### Gramática JSON
 
@@ -177,9 +177,9 @@ Você também pode definir esta propriedade usando o comando [**OBJECT SET RGB C
 
 `List box do tipo coleção/seleção de entidade`
 
-Utilizado para aplicar uma cor de letra personalizada a cada linha do list box. É necessário utilizar valores de cor RGB. Para obter mais informações sobre isso, consulte a descrição do comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) no manual Linguagem 4D.
+Utilizado para aplicar uma cor de letra personalizada a cada linha do list box. É necessário utilizar valores de cor RGB. Para obter mais informações sobre isso, consulte a descrição do comando [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.en.html) no manual Linguagem 4D.
 
-Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha exibida. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
+Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha exibida. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.en.html).
 
 Também pode definir esta propriedade utilizando o comando `LISTBOX SET PROPERTY` com a constante `lk font color expression`.
 > Esta propriedade também pode ser definida utilizando uma [expressão Meta Info](properties_Text.md#meta-info-expression).
@@ -208,7 +208,7 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 Utilizado para aplicar um estilo de carácter personalizado a cada linha do list box ou a cada célula da coluna.
 
-Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha apresentada (se aplicada à list box) ou para cada célula apresentada (se aplicada a uma coluna). Pode utilizar as constantes do tema [Estilos de fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
+Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha apresentada (se aplicada à list box) ou para cada célula apresentada (se aplicada a uma coluna). Pode utilizar as constantes do tema [Estilos de fonte](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.en.html).
 
 Exemplo:
 
@@ -263,7 +263,7 @@ A opção **Padrão** (valor JSON `automático`) define o alinhamento conforme o
 - `abaixo` para todos os dados (exceto imagens) e
 - `topo` para dados de tipo imagem.
 
-Esta propriedade também pode ser manipulada pelos comandos [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) e [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html).
+Esta propriedade também pode ser manipulada pelos comandos [OBJECT Get vertical alignment](https://doc.4d.com/4dv20/help/command/en/page1188.html) e [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv20/help/command/en/page1187.html).
 
 #### Gramática JSON
 
@@ -309,13 +309,15 @@ No método de projeto *Color*, entre o código abaixo:
 
 ```4d
 //Color method
-//Sets font color for certain rows and the background color for a specific column: C_OBJECT($0)
-Form.meta:=New object If(This.ID>5) //ID is an attribute of collection objects/entities
+//Sets font color for certain rows and background color for Col2 and Col3 columns
+Form.meta:=New object
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+  Form.meta.cell:=New object("Col2";New object("fill";"black");\
+  	"Col3";New object("fill";"red"))
 Else
-  Form.meta.stroke:="orange" End if
-$0:=Form.meta
+  Form.meta.stroke:="orange"
+End if
 ```
 
 **Melhores práticas:** por razões de otimização, é recomendado nesse caso criar o objeto `meta.cell` uma vez no método formulário:
@@ -324,7 +326,11 @@ $0:=Form.meta
   //método de formulário
  Case of
     :(Form event code=On Load)
-       Form.colStyle:=New object("Column2";New object("fill";"black"))
+       Form.colStyle:=New object("Col2";New object("fill";"black");\
+       	"Col3";New object("fill";"red"))  
+ // you can also define other style sets  
+       Form.colStyle2:=New object("Col2";New object("fill";"green");\
+       	"Col3";New object("fontWeight";"bold"))  
  End case
 ```
 
@@ -336,6 +342,10 @@ O método *Color* iria conter :
  If(This.ID>5)
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle //reusa o mesmo objeto para melhor performance
+ Else
+ 	Form.meta.stroke:="orange"
+	Form.meta.cell:=Form.colStyle2
+ End if
  ...
 ```
 
@@ -402,7 +412,7 @@ Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os ob
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
-O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html).
+O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.en.html). Se quiser que a célula herde a cor de fundo definida no nível superior, passe o valor -255 para o elemento correspondente do array.
 
 #### Gramática JSON
 
@@ -422,7 +432,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
-O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Para preencher esse array (usando um método) use as constantes do tema [Estillos de Fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
+O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Para preencher esse array (usando um método) use as constantes do tema [Estillos de Fonte](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.en.html). Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
 
 #### Gramática JSON
 

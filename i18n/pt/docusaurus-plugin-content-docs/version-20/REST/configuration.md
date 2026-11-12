@@ -9,7 +9,7 @@ Para iniciar usando as funcionalidades REST, precisa iniciar e configurar o serv
 
 > - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
 > - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
-> - You need to manage the [session cookie](authUsers.md#session-cookie) to use the same session for your requesting application.
+> - You need to manage the [session](authUsers.md) for your requesting application.
 
 
 
@@ -46,7 +46,7 @@ Como padrão, o menu mostra `<Anyone>`, o que significa que os acessos REST est�
 > Para essa configuração funcionar, o método de database `On REST Authentication` não deve ser definido. Se existir, 4D ignora os parâmetros de aceso definidos nas propriedades do banco de dados.
 
 ### Método base On REST Authentication
-O método database `On REST Authentication` lhe oferece uma forma personalizada de controlar a abertura de sessões REST em 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Quando receber uma [solicitação para abrir uma sessão REST](authUsers.md), os identificadores de conexão são oferecidos no cabeçalho da solicitação. O método database `On REST Authentication` é chamado para poder avaliar estes identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores. Para obter mais informações, consulte a [documentação](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html) do método banco de dados `On REST Authentication`.
+O método database `On REST Authentication` lhe oferece uma forma personalizada de controlar a abertura de sessões REST em 4D. Esse método de banco de dados é chamado automaticamente quando uma nova sessão for aberta através da petição REST. Quando receber uma [solicitação para abrir uma sessão REST](authUsers.md), os identificadores de conexão são oferecidos no cabeçalho da solicitação. O método database `On REST Authentication` é chamado para poder avaliar estes identificadores. Pode utilizar a lista de usuários do banco 4D ou pode utilizar sua própria tabela de identificadores. Para obter mais informações, consulte a [documentação](https://doc.4d.com/4Dv20/4D/20.6/On-REST-Authentication-database-method.301-7487975.en.html) do método banco de dados `On REST Authentication`.
 
 
 

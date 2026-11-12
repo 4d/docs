@@ -17,7 +17,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -98,3 +97,11 @@ Result:
 ## Ver também 
 
 [WP DELETE TEXT BOX](wp-delete-text-box.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1797 |
+| Thread safe | sim |

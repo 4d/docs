@@ -1,4 +1,4 @@
-﻿---
+---
 id: web-set-option
 title: WEB SET OPTION
 slug: /commands/web-set-option
@@ -106,7 +106,7 @@ Uma entrada registrada se vê dessa maneira:
 
 |  |  |
 | --- | --- |
-| Número do comando | 5 |
+| Número do comando | 1210 |
 | Thread-seguro | yes |
 
 

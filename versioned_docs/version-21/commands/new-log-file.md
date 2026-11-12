@@ -49,4 +49,12 @@ In the event of an error, the command generates a code that can be intercepted u
 
 ## See also 
 
-[SELECT LOG FILE](select-log-file.md) 
+[SELECT LOG FILE](select-log-file.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 926 |
+| Thread safe | yes |

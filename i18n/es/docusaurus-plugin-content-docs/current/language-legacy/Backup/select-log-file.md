@@ -56,7 +56,7 @@ OK toma el valor 1 si el archivo de historial está correctamente creado, o cerr
 |                        |           |
 | ---------------------- | --------- |
 | Número de comando      | 345       |
-| Hilo seguro            | no        |
+| Hilo seguro            | yes        |
 | Modifica las variables | OK, error |
 
 

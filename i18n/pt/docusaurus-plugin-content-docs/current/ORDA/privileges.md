@@ -37,7 +37,44 @@ A permissão **execute** de um [singleton compartilhado](../Concepts/classes.md#
 
 :::
 
-Permissões nunca se aplicam a [código de sessão desktop](../Desktop/sessions.md) (standalone, client/server, stored procedures) ou [tool4d](../Admin/cli.md#tool4d).
+Permissões nunca se aplicam a [código de sessão desktop](../Desktop/sessions.md) (standalone, client/server, stored procedures) ou [tool4d](../Admin/cli.md#tool4d). 
+
+:::warning
+
+Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso fica acessível para sessões `guest`.
+
+- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
+- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
+- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
+- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
+
+### Ferramentas MCP
+
+As mesmas permissões se aplicam às sessões do [servidor MCP](../WebServer/mcp-server.md), sem nada específico para configurar:
+
+- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
+- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
+- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
+- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
+
+#### Exemplo
+
+Clientes MCP autenticados com o privilégio "salesReader" podem ler as dataclasses Customer e Order com as ferramentas CRUD, e chamar as ferramentas publicadas pelo singleton `OrderManager` (por exemplo, `OrderManager-getYearTotal`):
+
+```json
+{
+	"privileges": [{"privilege": "salesReader", "includes": []}],
+	"roles": [],
+	"permissions": {
+		"allowed": [
+			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
+			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
+			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
+		]
+	},
+	"restrictedByDefault": true
+}
+```
 
 ### Ferramentas MCP
 

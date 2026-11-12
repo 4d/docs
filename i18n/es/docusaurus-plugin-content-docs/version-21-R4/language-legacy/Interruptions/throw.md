@@ -122,7 +122,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | Número de comando | 1805 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 
 

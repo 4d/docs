@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-### 説明
+## 説明
 
 `WA SET CONTEXT` コマンドは、<!--REF #_command_.WA SET CONTEXT.Summary--> \* および *object* 引数で指定されたWeb エリア内の `$4d` に対して *contextObj* 引数で指定したコンテキストオブジェクトを定義します。このコマンドが使用されると、 `$4d` は提供された *contextObj* 内で宣言されたコンテンツのみにアクセスできます。コンテキストオブジェクトが何も設定されていない場合、 `$4d` はすべての4D メソッドにアクセスできますが、ユーザークラスにはアクセスできません。<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 - *contextObj* が null の場合、`$4d` はすべての4D メソッドにアクセスできます。
 - *contextObj* が空の場合、`$4d` はメソッドに対しアクセスができません。
 
-### 例題 1
+## 例題 1
 
 `$4d` に特定のメソッドを許可する
 
@@ -64,7 +64,7 @@ $4d.myMethod2(); // 許可されている
 $4d.someOtherMethod(); // アクセス不可
 ```
 
-### 例題 2
+## 例題 2
 
 クラスオブジェクトを使用する場合を考えます
 
@@ -81,11 +81,11 @@ $4d.myWAFunction(); // 許可されている
 $4d._myPrivateFunction(); // 関数が非公開扱いになっているため何もしません
 ```
 
-### 参照
+## 参照
 
 [WA Get context](wa-get-context.md)
 
-### プロパティ
+## プロパティ
 
 |         |      |
 | ------- | ---- |

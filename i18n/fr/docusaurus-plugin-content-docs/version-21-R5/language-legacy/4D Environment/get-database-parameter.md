@@ -1087,6 +1087,6 @@ Dans la [On Startup database method](../commands/on-startup-database-method), vo
 |  |  |
 | --- | --- |
 | Numéro de commande | 643 |
-| Thread safe | no |
+| Thread safe | yes (partially) |
 
 

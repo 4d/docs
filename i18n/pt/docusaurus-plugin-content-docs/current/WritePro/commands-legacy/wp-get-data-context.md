@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -62,5 +61,16 @@ method2 poderia parecer com algo como:
 
 ## Ver também 
 
-  
+[Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
 [WP SET DATA CONTEXT](../commands/wp-set-data-context)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 1787 |
+| Thread safe | sim |
+
+
+

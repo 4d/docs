@@ -48,7 +48,13 @@ Em cada caso com um 4D remoto, três processos são iniciados. Um na máquina cl
  CREATE RECORD([Table_1])
  [Table_1])field1_1:="Hello world"
  SAVE RECORD([Table_1]) // criação aqui do processo apropriado no servidor
+ $serverTime:=Current time(*) // criação aqui do processo cooperativo no servidor
+  // chamada ao On Server Open Connection
 ```
+
+**Importante**: Conexões Web e conexões SQL não invocam o **On Server Open Connection database method**. Quando um navegador Web conecta ao 4D Server, o *On Web Authentication Database Method* (se existir) e/ou o [On Web Connection database method](../commands/on-web-connection-database-method) são invocados. Quando o 4D Server recebe uma consulta SQL, o [On SQL Authentication database method](../commands/on-sql-authentication-database-method) (se existir) é chamado. Para mais informações, consulte a descrição deste método base no manual de Referência da Linguagem 4D.
+
+**Importante**: Quando um Stored Procedure é iniciado, o **On Server Open Connection database method** NÃO é invocado. *Stored Procedures* são processos do servidor, não processos 4D Client. Eles executam código na máquina Servidor, mas não respondem a solicitações trocadas por um cliente 4D (ou outros clientes) e o 4D Server. 
 
 ## Como se chama ao método base On Server Open Connection? 
 
@@ -139,14 +145,5 @@ O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M.
     $result:=0
  End if
 ```
-
-
-## Propriedades
-
-|  |  |
-| --- | --- |
-| Número do comando | 16001 |
-| Thread-seguro | no |
-
 
 

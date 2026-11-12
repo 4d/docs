@@ -1,6 +1,6 @@
 ---
 id: on-exit-database-method
-title: On Exit database method
+title: Método banco de dados On Exit
 slug: /commands/on-exit-database-method
 displayed_sidebar: docs
 ---
@@ -21,10 +21,10 @@ displayed_sidebar: docs
 Este método é utilizado nos seguintes ambientes 4D:
 
 * 4D em modo local
-* 4D em modo remoto (do lado do cliente)
-* Aplicação 4D compilada e fusionada com 4D Volume Desktop
+* 4D em modo remoto
+* Aplicação 4D compilada e fusionada com 4D VolumeDesktop
 
-**Nota**: o Método banco de dados On Exit NÃO é invocado por 4D Server.
+**Nota**: o Método banco de dados On Exit NÃO é invocado por 4D Server. Você deve usar o [On Server Shutdown database method](../commands/on-server-shutdown-database-method) neste contexto.
 
 O Método banco de dados On Exit é invocado automaticamente por 4D; diferentemente dos métodos de projeto, você não pode chamar este método por programação. Entretanto, pode ser executado desde o editor de métodos. Igualmente pode utilizar subrotinas.
 
@@ -39,6 +39,14 @@ Sem importar como se inicie a saída do banco, 4D realiza as seguintes ações:
 * Se não existir um Método banco de dados On Exit, 4D aborta cada processo em execução um por um, sem distinção. Se o usuário está introduzindo dados, os registros não serão guardados.
 * Se existir um Método banco de dados On Exit , 4D começa a execução deste método em um processo local criado recentemente. Observe que sairá eventualmente de 4D, o Método banco de dados On Exit pode realizar toda a limpeza ou fechar as operações que queira, mas não pode ser negado a sair.
 
+Quando o 4D está prestes a sair, o programa:
+
+* solicita que os processos em execução abortem sua execução o mais rápido possível (considerado apenas em processos executando código 4D)
+* define o flag ‘process aborted’ deles
+* acorda processos que foram atrasados por [DELAY PROCESS](../commands/delay-process) ou outros meios.
+
+O 4D continua iterando processos enquanto qualquer processo ainda estiver ativo, por uma duração máxima de 13 segundos. Para responder a uma ação de saída, recomendamos definir uma flag (como uma entrada no objeto [Storage](../commands/storage)) no Método banco de dados On Exit ou no seu método personalizado de saída. Pode fazer sentido fazer um loop nesse método (máx. 10 segundos) para dar tempo aos seus processos em execução de responderem e saírem corretamente. Não é recomendado esperar mais de 10 segundos, para evitar que o 4D mate o processo ou o sistema operacional encerre toda a aplicação.
+
 O Método banco de dados On Exit é perfeito para:
 
 * Salvar (localmente, no disco) preferências ou parâmetros a reutilizar ao começo da seguinte sessão em .
@@ -52,9 +60,9 @@ Quando sair de 4D Server e se dá um tempo de corte (por exemplo, 10 minutos), c
 
 ## Nota 
 
-O exemplo abaixo mostra um caso típico onde você lança um ou mais processos no fundo fazendo trabalhos regulares, rodando sem parar em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup) (ou em [On Server Startup database method](../commands/on-server-startup-database-method)). Uma flag no objeto da aplicação [Storage](../commands/storage) é usado para dizer para terminar - e marcar se terminaram.
+O exemplo abaixo mostra um caso típico onde você lança um ou mais processos no fundo fazendo trabalhos regulares, rodando sem parar em [On Startup database method](../commands/on-startup-database-method) (ou em [On Server Startup database method](../commands/on-server-startup-database-method)). Uma flag no objeto da aplicação [Storage](../commands/storage) é usado para dizer para terminar - e marcar se terminaram.
 
-* Em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup)
+* Em [On Startup database method](../commands/on-startup-database-method)
 
 ```4d
  Use(Storage)
@@ -98,5 +106,5 @@ O exemplo abaixo mostra um caso típico onde você lança um ou mais processos n
 
 ## Ver também 
 
-[Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup)  
-[QUIT 4D](../commands/quit-4d)  
+[On Startup database method](../commands/on-startup-database-method)  
+[QUIT 4D](../commands/quit-4d)

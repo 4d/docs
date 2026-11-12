@@ -15,7 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
 ## Descrição 
@@ -40,4 +39,12 @@ Se quiser apagar uma text box usando seu ID:
 
 ## Ver também 
 
-[WP New text box](../commands/wp-new-text-box)  
+[WP New text box](wp-new-text-box.md)  
+
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Command number | 1798 |
+| Thread safe | yes |

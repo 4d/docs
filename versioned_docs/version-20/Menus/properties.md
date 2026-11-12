@@ -94,7 +94,7 @@ You add a separator line by creating a specific menu command.
 In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the **Separator Line** option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect.
 **Note:** Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM`] commands. 
+In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands. 
 
 
 

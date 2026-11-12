@@ -107,5 +107,5 @@ exposed function hideOnLoad()
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1734 |
-| Hilo seguro       | no   |
+| Hilo seguro       | yes   |
 

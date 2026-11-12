@@ -55,6 +55,6 @@ OK is set to 1 if the log file is correctly created, or closed.
 |                       |           |
 | --------------------- | --------- |
 | Número de comando     | 345       |
-| Thread safe           | não       |
+| Thread safe           | sim       |
 | Modifica as variáveis | OK, error |
 

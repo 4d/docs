@@ -156,7 +156,7 @@ Class extends DataClass
 
 exposed Function getCity()
 	var $0 : cs.CityEntity
-	var $1,$nameParam : text
+	var $1;$nameParam : text
 	$nameParam:=$1
 	$0:=This.query("name = :1";$nameParam).first()
 ```
@@ -320,7 +320,7 @@ The Dataclass class `Students` has the function `pushData()` receiving an entity
 Class extends DataClass
 
 exposed Function pushData
-	var $1, $entity, $status, $0 : Object
+	var $1; $entity; $status; $0 : Object
 
 	$entity:=$1
 
@@ -502,8 +502,8 @@ Class extends DataClass
 
 exposed Function setFinalExam()
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $1; $es; $student; $status : Object
+    var $2; $examResult : Text
 
     var $keys, $0 : Collection
 
@@ -565,7 +565,7 @@ The entities with primary keys 1 and 2 have been updated.
 Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).  
 
 ```4d
-var $remoteDS, $newStudent, $students : Object
+var $remoteDS; $newStudent; $students : Object
 var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")

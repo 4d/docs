@@ -1001,7 +1001,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |---|---|---
 |format| text| (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used.|
 |password| text| Microsoft Excel only (optional) - Password used to protect the MS Excel document|
-|formula| object |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).|
+|formula| object |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) command (see below for more information).|
 |valuesOnly| boolean| Specifies that only the values from formulas (if any) will be exported.|
 |includeFormatInfo| boolean| True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.|
 |includeBindingSource| Boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
@@ -1029,7 +1029,7 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 #### Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
 
 |Variable|  |Type| Description|
 |---|---|---|---|
@@ -3120,7 +3120,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 |Parameter||Type|Description|
 |---|---|---|---|
-|formula|| object | A callback method name to be launched when the import has completed. The method must use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
+|formula|| object | A callback method name to be launched when the import has completed. The method must use the [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
 |password|| text| Microsoft Excel only (optional) - The password used to protect a MS Excel document. |
 |csvOptions||object|options for csv import |
 ||range|object|Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used. |
@@ -3882,6 +3882,8 @@ VP REMOVE SHEET("ViewProArea";2)
 |rangeObj   |Object|->|Range object|
 </div>
 <!-- END REF -->
+
+
 #### Description
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.

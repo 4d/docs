@@ -57,7 +57,7 @@ CSS の <strong x-id="1">要素セレクター</strong>と同様に、スタイ�
 
 :::note
 
-- オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
+- オブジェクトタイプとは、フォームオブジェクトの "[type](FormObjects/properties_Object.md#型)" JSON プロパティを指します。
 - リストボックスの場合、次のタイプがサポートされています:  *列*, *ヘッダー*, *フッター*。
 
 :::
@@ -101,7 +101,7 @@ text, input {
 }
 ```
 
-### Class
+### クラス
 
 CSS の **クラスセレクター**と同様に、スタイルの適用対象をフォームオブジェクトの `class` 属性で指定することができます。
 
@@ -126,7 +126,7 @@ text.center {
 }
 ```
 
-4D フォームの詳細では、[CSSクラス](../FormObjects/properties_Object.md#cssクラス) 属性を使用してクラス名を割り当てます。この属性には一つ以上のクラス名を指定することができます。 複数の場合はクラス名を半角スペースで区切ります:
+4D フォームの詳細では、[CSSクラス](../FormObjects/properties_Object.md#cssクラス) 属性を使用してクラス名を割り当てます。この属性には一つ以上のクラス名を指定することができます。複数の場合はクラス名を半角スペースで区切ります:
 
 ```css
 class: "okButtons important"       

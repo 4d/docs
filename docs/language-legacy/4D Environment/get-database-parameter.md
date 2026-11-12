@@ -1522,7 +1522,7 @@ In the [On Startup database method](../commands/on-startup-database-method), you
 |  |  |
 | --- | --- |
 | Command number | 643 |
-| Thread safe | no |
+| Thread safe | yes (partially) |
 
 
 

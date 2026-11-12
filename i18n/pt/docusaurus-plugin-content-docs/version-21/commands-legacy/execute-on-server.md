@@ -216,6 +216,6 @@ Consulte a seção *Serviços baseados nos procedimentos armazenados (exemplo)* 
 |  |  |
 | --- | --- |
 | Número do comando | 373 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 

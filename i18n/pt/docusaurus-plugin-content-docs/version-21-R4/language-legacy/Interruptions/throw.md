@@ -1,19 +1,19 @@
-﻿---
+---
 id: throw
 title: throw
 slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ({ *errorObj* : Object })<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 <div class="no-index">
 
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | errorCode | Integer | &#8594; | Um inteiro longo representando o código de erro |
-| descrição | Text | &#8594; | Um texto fornecendo uma descrição do erro |
-| erroObj | Object | &#8594; | Um objeto contendo propriedades para construir o erro |
+| description | Text | &#8594; | Um texto fornecendo uma descrição do erro |
+| errorObj | Object | &#8594; | Um objeto contendo propriedades para construir o erro |
 </div>
 <!-- END REF-->
 
@@ -43,8 +43,8 @@ O comando admite três sintaxes:
 Especifica o código de erro e um texto de descrição opcional, o erro se lança imediatamente.  
 Se não indicar nenhuma descrição, se preenche com:
 
-* Código de erro (errorCode): (host) na aplicação local
-* Código de erro (errorCode): (C00x) em um componente
+* Código de erro errorCode: (host) na aplicação local
+* Código de erro errorCode: (C00x) em um componente
 
 ### throw(errorObj)
 
@@ -52,16 +52,16 @@ O objeto *errorObj* permite obter informação de erro mais detalhada e controla
 
 Pode conter as seguintes propriedades, assim como toda propriedade personalizada a que possa fazer referência utilizando marcadores de posição dentro da propriedade message.
 
-| **propriedade**    | **tipo<br/>** | **descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| componentSignature | text                  | Assinatura de quatro letras para identificar de forma única a origem do erro. Se não indicar **componentSignature**, o comando utilizar "host" para o banco de dados host, e "C001", "C002", ... para os componentes.                                                                                                                                                                                                                                                                    |
-| errCode            | number                | Código de erro.<br/> Se não indicar **errCode**, o comando utiliza -1.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| message            | text                  | Descrição do erro.<br/> A **mensagem** pode conter marcadores de posição que serão substituídos por propriedades personalizadas adicionadas ao objeto errorObj. Cada marcador de posição deve especificar-se utilizando chaves {} terminando o nome da propriedade a utilizar. Se a **mensagem** não for indicada ou for uma string vazia, o comando buscará uma descrição nos arquivos xliff da base de dados atual com um renome construido assuim: ERR\_{component}\_{code}". |
-| deferred           | boolean               | True se o erro deve diferir-se quando voltar o método atual. O valor por padrão é false.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **propriedade**    | **tipo** | **descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| componentSignature | text     | Assinatura de quatro letras para identificar de forma única a origem do erro. Se não indicar **componentSignature**, o comando utilizar "host" para o banco de dados host, e "C001", "C002", ... para os componentes.                                                                                                                                                                                                                                                                    |
+| errCode            | number   | Código de erro.<br/> Se não indicar **errCode**, o comando utiliza -1.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| message            | text     | Descrição do erro.<br/> A **mensagem** pode conter marcadores de posição que serão substituídos por propriedades personalizadas adicionadas ao objeto errorObj. Cada marcador de posição deve especificar-se utilizando chaves {} terminando o nome da propriedade a utilizar. Se a **mensagem** não for indicada ou for uma string vazia, o comando buscará uma descrição nos arquivos xliff da base de dados atual com um renome construido assuim: ERR\_{componentSignature}\_{errCode}". |
+| deferred           | boolean  | True se o erro deve diferir-se quando voltar o método atual ou ao final do [bloco Try](../../Concepts/error-handling.md#trycatchend-try). O valor por padrão é false.                                                                                                                                                                                                                                                                      |
 
 Quando se utilizar esta sintaxe, o objeto *errorObj* se devolve em Últimos erros.
 
-**Nota:** é possível chamar o comando várias vezes no mesmo projeto para gerar vários erros. Pode usar a opção diferida para enviar todos os erros de vez.
+**Nota:** é possível chamar o comando várias vezes no mesmo método de projeto para gerar vários erros. Pode usar a opção diferida para enviar todos os erros de vez.
 
 ### throw
 
@@ -122,7 +122,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | Número do comando | 1805 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 
 

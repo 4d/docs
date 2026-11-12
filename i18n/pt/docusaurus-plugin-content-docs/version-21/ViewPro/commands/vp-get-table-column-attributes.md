@@ -3,32 +3,29 @@ id: vp-get-table-column-attributes
 title: VP Get column attributes
 ---
 
-<details><summary>História</summary>
+<details><summary>Histórico</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R6   | Adicionado |
-
+|Release|Mudanças|
+|---|---|
+|19 R7|Adicionado
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
-
 **VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get table column attributes.Params -->
-
 <div class="no-index">
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
-| tableName  | Text    | ->                          | Nome da tabela                                              |
-| column     | Integer | ->                          | Índice da coluna na tabela                                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
-| Resultados | Object  | <- | Atributos da *coluna*                                       |
-
+|Parâmetro|Tipo| |Descrição|
+|---|---|---|---|
+|vpAreaName |Text|->|Nome de objeto formulário área 4D View Pro|
+|tableName|Text|->|Nome da tabela|
+|column|Integer|->|Índice da coluna na tabela|
+|sheet   |Integer|->|Índice da folha (folha atual se omitida)|
+|Resultados|Object|<-|Atributos da *coluna*|
 </div>
 <!-- END REF -->
+
 
 ## Descrição
 
@@ -42,13 +39,13 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 O comando retorna um objeto descrevendo os atributos atuais da *column*:
 
-| Propriedade         | Tipo    | Descrição                                                                                                                               |
-| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados. Não devolvido se a tabela for apresentada automaticamente |
-| name                | text    | Nome da coluna da tabela.                                                                                               |
-| footerText          | text    | Valor do rodapé da coluna.                                                                                              |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
-| filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                                  |
+|Propriedade|Tipo|Descrição|
+|---|---|---|
+|dataField|text|Nome da propriedade da coluna da tabela no contexto de dados. Não devolvido se a tabela for apresentada automaticamente |
+|name|text|Nome da coluna da tabela.|
+|footerText|text|Valor do rodapé da coluna.|
+|footerFormula|text|Fórmula do rodapé da coluna.|
+|filterButtonVisible|boolean|True se o botão de filtro da coluna da tabela for exibido, senão False |
 
 Se *tableName* não for encontrado ou se o índice *column* for maior que o número de colunas, o comando retorna **null**.
 

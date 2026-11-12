@@ -50,4 +50,12 @@ In the event of an error, the command generates a code that can be intercepted u
 
 ## See also 
 
-[SELECT LOG FILE](../commands/select-log-file) 
+[SELECT LOG FILE](../commands/select-log-file)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 926 |
+| Thread safe | yes |

@@ -1,4 +1,4 @@
-﻿---
+---
 id: get-database-localization
 title: Get database localization
 slug: /commands/get-database-localization
@@ -29,8 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-## Descrição 
-
+## Descrição
 <!--REF #_command_.Get database localization.Summary-->O comando Get database localization \[#descv\] retorna o idioma padrão ou a linguagem do banco de dados especificado pelo *tipoLinguagem*, expresso no padrão definido pela RFC 3066\.<!-- END REF--> \[#descv\] Normalmente, o comando retorna "en" para Inglês, "es" para o espanhol, etc Para mais informações sobre esta norma e os valores retornados por este comando, consulte o manual de referência de design.  
   
 Diversas configurações de idioma podem ser usados simultaneamente no aplicativo. Para designar a configuração a ser obtida, em *tipoLinguagem* você pode passar uma das seguintes constantes, encontrada no tema *Ambiente 4D*:  
@@ -49,8 +48,7 @@ O parâmetro opcional *\** é útil no caso de uma arquitetura que utiliza compo
 * Quando chamar ao comando desde um componente:  
    * Se passar o paâámetro *\**, o comando devolve a configuração de idioma do banco de dados local.  
    * Se não passar o parâmetro *\**, o comando devolve a configuração de idioma do banco de dados componente.
-
-Quando chamar ao comando desde um método do banco de dados local, sempre devolve a configuração de idioma do banco de dados local (*\** se ignora).
+* Quando chamar ao comando desde um método do banco de dados local, sempre devolve a configuração de idioma do banco de dados local (*\** se ignora).
 
   
 O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj onde o programa irá procurar os itens localizados do banco de dados. 4D determina automaticamente a linguagem corrente na inicialização do banco de dados de acordo com o conteúdo da pasta de  e do ambiente do sistema. Como funciona: 4D carrega a primeira pasta .lproj do banco de dados que corresponde a referência do idioma, com a seguinte ordem de prioridade:
@@ -68,7 +66,6 @@ O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj o
 [SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
 ## Propriedades
-
 |  |  |
 | --- | --- |
 | Número do comando | 1009 |

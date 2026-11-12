@@ -18,7 +18,8 @@ Um stepper pode ser associado diretamente a uma variável número, hora ou data.
     * [máximo](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
     * [passo](properties_Scale.md#step) = 600 (10*60)
 * Para valores do tipo data, o valor introduzido na propriedade [passo](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.
-> > > > > > > > > > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
+
+>Para o stepper funcionar com uma variável do tipo hora ou data, é imprescindível definir seu tipo no formulário E declará-lo explicitamente através do comando [C_TIME](https://doc.4d.com/4Dv20/4D/20.6/C-TIME.301-7487018.en.html) ou [C_DATE](https://doc.4d.com/4Dv20/4D/20.6/C-DATE.301-7487002.en.html).
 
 Para mais informações, consultar [Utilizar indicadores](progressIndicator.md#using-indicators) na página "Indicadores de progresso".
 

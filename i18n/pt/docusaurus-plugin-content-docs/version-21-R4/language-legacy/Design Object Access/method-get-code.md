@@ -1,4 +1,4 @@
-﻿---
+---
 id: method-get-code
 title: METHOD GET CODE
 slug: /commands/method-get-code
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, triggers, métodos projeto, métodos formulário e métodos objeto.  
+<!--REF #_command_.METHOD GET CODE.Summary-->O comando **METHOD GET CODE** devolve no parâmetro *codigo*, o conteúdo dos métodos designados pelo parâmetro *rota*.<!-- END REF--> Este comando pode devolver o código de todos os tipos de métodos: métodos base, definições de classe, triggers, métodos projeto, métodos formulário e métodos objeto.  
   
 Pode utilizar dois tipos de sintaxes, baseadas em arrays texto ou variáveis texto:  
 
@@ -61,7 +61,7 @@ No texto do *codigo* gerado por este comando:
 * Para aumentar a legibilidade do código, o texto é indentado com os caracteres de tabulação em função das estruturas de programação, da mesma forma que no editor de métodos.
 * Uma linha é adicionada no cabeçalho do código gerado que contém os metadatos utilizados para a importação do código, por exemplo:  
 ```4d  
-  // %attributes = {"lang":"fr","invisible":true,"folder":"Web3"}  
+  // %attributes = {"lang":"en","invisible":true,"folder":"Web3"}  
 ```  
     
     
@@ -146,7 +146,7 @@ O documento resultante conterá:
 |  |  |
 | --- | --- |
 | Número do comando | 1190 |
-| Thread-seguro | no |
+| Thread-seguro | sim |
 
 
 

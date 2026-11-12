@@ -202,6 +202,6 @@ var $result:=Compile project($options)
 |         |      |
 | ------- | ---- |
 | コマンド番号  | 1760 |
-| スレッドセーフ | ×    |
+| スレッドセーフ | yes    |
 
 

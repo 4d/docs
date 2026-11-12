@@ -53,6 +53,6 @@ Using **SET REAL COMPARISON LEVEL**, you can increase or decrease the epsilon va
 |  |  |
 | --- | --- |
 | Command number | 623 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

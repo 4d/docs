@@ -143,7 +143,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.inBytesPerHourPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one hour<!-- END REF -->.
+La propiedad `.inBytesPerHourPerSession` contiene <!-- REF #QuotaManagerClass.inBytesPerHourPerSession.Summary -->el número máximo total de bytes que el servidor Web puede recibir para una sesión en una hora<!-- END REF -->.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -171,7 +171,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.inBytesPerMinPerSession` property contains <!-- REF #QuotaManagerClass.inBytesPerMinPerSession.Summary -->the maximum total number of bytes that the Web server can receive for a session in one minute<!-- END REF -->.
+La propiedad `.inBytesPerMinPerSession` contiene <!-- REF #QuotaManagerClass.inBytesPerMinPerPerPerSession.Summary -->el número máximo total de bytes que el servidor Web puede recibir para una sesión en un minuto <!-- END REF -->.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -268,7 +268,7 @@ Esta cuota sólo se aplica a una sesión REST.
 
 :::
 
-The `.nbEntitySetsPerSession` property contains <!-- REF #QuotaManagerClass.nbEntitySetsPerSession.Summary -->the maximum number of entity sets allowed in memory for each REST session<!-- END REF -->.
+La propiedad `.nbEntitySetsPerSession` contiene <!-- REF #QuotaManagerClass.deeEntitySetsPerSession.Summary -->el número máximo de conjuntos de entidades permitidos en memoria para cada sesión REST<!-- END REF -->.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -296,7 +296,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbRequestsPerHour` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->the maximum total number of requests that the Web server can receive in one hour<!-- END REF -->.
+La propiedad `.nbRequestsPerHour` contiene <!-- REF #QuotaManagerClass.nbRequestsPerHour.Summary -->el número máximo total de peticiones que el servidor Web puede recibir en una hora<!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -310,7 +310,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbRequestsPerHourPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerHourPerSession.Summary -->the maximum total number of requests that a session can receive in one hour<!-- END REF -->.
+La propiedad `.nbRequestsPerHourPerSession` contiene <!-- REF #QuotaManagerClass.deeRequestsPerHourPerSession.Summary -->el número máximo de solicitudes que una sesión puede recibir en una hora<!--END REF -->.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
@@ -324,7 +324,7 @@ Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbRequestsPerMin` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->the maximum total number of requests that the Web server can receive in one minute<!-- END REF -->.
+La propiedad `.nbRequestsPerMin` contiene <!-- REF #QuotaManagerClass.nbRequestsPerMin.Summary -->el número máximo total de peticiones que el servidor Web puede recibir en un minuto <!-- END REF -->.
 
 Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
@@ -338,7 +338,7 @@ Alcance: [servidor global](./WebServerClass.md#scope-levels)
 
 #### Descripción
 
-The `.nbRequestsPerMinPerSession` property contains <!-- REF #QuotaManagerClass.nbRequestsPerMinPerSession.Summary -->the maximum total number of requests that a session can receive in one minute<!-- END REF -->.
+La propiedad `.nbRequestsPerMinPerSession` contiene <!-- REF #QuotaManagerClass.deeRequestsPerMinPerSession.Summary -->el número máximo de solicitudes que una sesión puede recibir en un minuto <!--END REF -->.
 
 Alcance: [sesión por defecto](./WebServerClass.md#scope-levels)
 

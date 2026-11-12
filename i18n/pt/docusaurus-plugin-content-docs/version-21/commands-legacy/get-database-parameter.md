@@ -419,9 +419,7 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 
 **Se conserva entre duas sessões**: não
 
-**Valores possíveis**: 1 a 9 (1 = mais rápido, 9 = mais comprimido) ou -1 = o mejor compromiso.
-
-**Descrição**: nível de compressão para todos os intercambios HTTP comprimidos efetuados para os serviços web (petições cliente ou respostas servidor). Os intercâmbios comprimidos são uma otimização que pode implementar quando tiver duas aplicações 4D que se comunicam através serviços web (ver o comando *SET WEB SERVICE OPTION*). Este seletor lhe permite otimizar os intercâmbios n seja privilegiando a velocidade de execução (menor compressão) ou a quantidade de compressão (menor velocidade). A escolha de um valor depende do tamanho e da natureza dos dados intercambiados. Passe de 1 a 9 no parâmetro valor onde 1 é a compressão mais rápida e 9 a mais alta. Também pode passar -1 para obter um compromisso entre velocidade e taxa de compressão. Por padrão, o nível de compressão é 1 (compressão rápida).
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
 
  
 
@@ -436,8 +434,6 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 **Alcance**: aplicação 4D
 
 **Se conserva entre duas sessões**: não
-
-**Valores possíveis**: todo valor de tipo inteiro longo
 
 **Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
 
@@ -806,11 +802,18 @@ Lembre que este parâmetro define todos os conselhos 4D, ou seja, as mensages de
 
 **Mantido entre sessões**: Não
 
-**Descrição**: Usado para especificar o nível de Transport Layer Security (TLS) , o que oferece criptografia e autenticação de dados entre aplicações e servidores. Os valores definidos são aplicados globalmente a capa de rede. Quando for modificado o servidor deve ser reiniciado para usar o novo valor. O protocolo mínimo padrão é TLSv1\_2.
+**Descrição**: Usado para especificar o nível de Transport Layer Security (TLS) , o que oferece criptografia e autenticação de dados entre aplicações e servidores. Os valores definidos são aplicados globalmente a capa de rede. Quando for modificado o servidor deve ser reiniciado para usar o novo valor. 
+
+**Valor padrão**: TLSv1\_3
 
 **Valores possíveis**:
 
-TLSv1\_0 \- TLS 1.0, introduzido em 1999 como uma atualização de SSL v3.0\. TLS 1.0 e SSL 3.0 não interoperamTLSv1\_1 \- TLS 1.1, introduzido em 2006 como uma atualização de TLS 1.0\. Melhorias incluem melhor segurança e manejo de erros.TLSv1\_2 \- TLS 1.2, introduzido em 2008 como uma atualização de TLS 1.1\. Melhorias incluem flexibilidade, compatibilidade adicional para criptografia autenticada, etc.**NOTA**: O plugin 4D Internet Commands usa uma capa de rede diferente, portanto esse seletor terá nenhum impacto na versão TLS.
+- TLSv1\_2 (TLS 1.2, introduzido em 2008)
+- TLSv1\_3 (TLS 1.3, introduzido em 2018)
+
+**NOTAS**: 
+- O plugin 4D Internet Commands usa uma capa de rede diferente, portanto esse seletor terá nenhum impacto na versão TLS.
+- Esta configuração é ignorada para suas conexões client server se seu 4D Server usa a camada de rede antiga.
 
 
 
@@ -1058,6 +1061,6 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 |  |  |
 | --- | --- |
 | Número do comando | 643 |
-| Thread-seguro | no |
+| Thread-seguro | sim (parcialmente) |
 
 

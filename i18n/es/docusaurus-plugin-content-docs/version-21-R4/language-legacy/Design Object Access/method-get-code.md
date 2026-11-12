@@ -150,7 +150,7 @@ Case of
 |  |  |
 | --- | --- |
 | Número de comando | 1190 |
-| Hilo seguro | no |
+| Hilo seguro | yes |
 
 
 

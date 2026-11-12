@@ -207,7 +207,7 @@ Refer to the *SP-Based Services (Example)* section in the *4D Server Reference* 
 |  |  |
 | --- | --- |
 | Command number | 373 |
-| Thread safe | no |
+| Thread safe | yes |
 
 
 

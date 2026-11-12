@@ -153,7 +153,7 @@ title: リストボックス
 
 ## 列数
 
-Sets the length of the [column collection](#columns) of the list box.
+リストボックスの[列のコレクション](#列) の長さを設定します。
 
 > [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page829.html) や [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page830.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
 

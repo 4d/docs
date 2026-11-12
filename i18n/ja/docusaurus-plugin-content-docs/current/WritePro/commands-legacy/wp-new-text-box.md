@@ -17,7 +17,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
 ## 説明 
@@ -98,3 +97,11 @@ displayed_sidebar: docs
 ## 参照 
 
 [WP DELETE TEXT BOX](../commands/wp-delete-text-box)  
+
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 1797 |
+| スレッドセーフである | yes |

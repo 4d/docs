@@ -148,6 +148,6 @@ Fin de cas
 |  |  |
 | --- | --- |
 | Numéro de commande | 1190 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: parse-formula
 title: Parse formula
 slug: /commands/parse-formula
@@ -114,7 +114,7 @@ O parâmetro opcional *mensagemE* *rro* receberá uma mensagem de erro se houver
 |  |  |
 | --- | --- |
 | Número do comando | 1576 |
-| Thread-seguro | no |
+| Thread-seguro | yes |
 
 
 

@@ -52,6 +52,6 @@ When the command is called from:
 |  |  |
 | --- | --- |
 | Command number | 1739 |
-| Thread safe | no |
+| Thread safe | yes |
 
 

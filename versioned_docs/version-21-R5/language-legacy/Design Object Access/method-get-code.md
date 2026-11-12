@@ -148,7 +148,7 @@ End case
 |  |  |
 | --- | --- |
 | Command number | 1190 |
-| Thread safe | no |
+| Thread safe | yes |
 
 
 

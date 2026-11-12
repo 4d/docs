@@ -110,13 +110,3 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
 
 [On Startup database method](../commands/on-startup-database-method)  
 [QUIT 4D](../commands/quit-4d)  
-
-## Propriétés
-
-|  |  |
-| --- | --- |
-| Numéro de commande | 905252 |
-| Thread safe | no |
-
-
-

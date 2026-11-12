@@ -47,13 +47,3 @@ Reportez-vous à l'exemple de la section [On Exit database method](../commands/o
 [On Exit database method](../commands/on-exit-database-method)  
 *Présentation des méthodes base*  
 [QUIT 4D](../commands/quit-4d)  
-
-## Propriétés
-
-|  |  |
-| --- | --- |
-| Numéro de commande | 905263 |
-| Thread safe | no |
-
-
-

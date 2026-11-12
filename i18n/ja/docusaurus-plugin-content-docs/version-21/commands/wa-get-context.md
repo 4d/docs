@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-### 説明
+## 説明
 
 `WA Get context` コマンドは、<!--REF #_command_.WA Get context.Summary--> \* および *object* 引数で指定された Web エリア内の `$4d` に対して [`WA SET CONTEXT`](./wa-set-context.md) を使用して定義されたコンテキストオブジェクトを取得します。<!-- END REF--> このWeb エリアに対して `WA SET CONTEXT` が呼ばれていなかった場合、コマンドは `null` を返します。このWeb エリアに対して `WA SET CONTEXT` が呼ばれていなかった場合、コマンドは `null` を返します。
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 :::
 
-### 例題
+## 例題
 
 コンテキストが存在するかどうかをチェックする場合を考えます:
 
@@ -53,11 +53,11 @@ displayed_sidebar: docs
  End if
 ```
 
-### 参照
+## 参照
 
 [WA SET CONTEXT](wa-set-context.md)
 
-### プロパティ
+## プロパティ
 
 |         |      |
 | ------- | ---- |

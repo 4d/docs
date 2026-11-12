@@ -146,12 +146,3 @@ The following example prevents any new connection from 2 to 4 A.M.
 ```
 
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 16001 |
-| Thread safe | no |
-
-
-

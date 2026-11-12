@@ -1,5 +1,5 @@
 ---
-id: vp-get-stylesheet
+id: vp-get-stylesheets
 title: VP Get stylesheets
 ---
 

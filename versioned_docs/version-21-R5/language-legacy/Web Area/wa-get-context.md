@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </div>
 
 
-### Description 
+## Description 
 
 The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the * and *object* parameters using [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
 
@@ -39,7 +39,7 @@ The command is only usable with an embedded web area where the [**Use embedded w
 
 :::
 
-### Example
+## Example
 
 Checking if a context exists:
 
@@ -53,11 +53,11 @@ Checking if a context exists:
  End if
 ```
 
-### See also 
+## See also 
 
 [WA SET CONTEXT](../commands/wa-set-context)  
 
-### Properties
+## Properties
 
 |  |  |
 | --- | --- |

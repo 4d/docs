@@ -19,7 +19,7 @@ You can manage picture pop-up menus using methods. As with [button grids](button
 
 ### Goto page 
  
-You can assign the ``gotoPage`` [standard action](https://doc.4d.com/4Dv19R4/4D/19-R4/Standard-actions.300-5736871.en.html) to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
+You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
 
 For example, if the user selects the 3rd element, 4D will display the third page of the current form (if it exists). 
 If you want to manage the effect of a click yourself, select `No action`.

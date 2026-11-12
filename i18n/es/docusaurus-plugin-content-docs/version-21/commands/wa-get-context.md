@@ -29,7 +29,7 @@ displayed_sidebar: docs
 </details>
 </div>
 
-### Descripción
+## Descripción
 
 El comando `WA Get context`<!--REF #_command_.WA Get context.Summary--> recupera el objeto de contexto definido para `$4d` en el área Web designada por los parámetros \* y *object* utilizando [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> Si `WA SET CONTEXT` no fue llamado para el área web, el comando devuelve `null`.
 
@@ -39,7 +39,7 @@ El comando solo es utilizable con un área web integrada en la que los parámetr
 
 :::
 
-### Ejemplo
+## Ejemplo
 
 Verificación de la existencia de un contexto:
 
@@ -53,11 +53,11 @@ Verificación de la existencia de un contexto:
  End if
 ```
 
-### Ver también
+## Ver también
 
 [WA SET CONTEXT](wa-set-context.md)
 
-### Propiedades
+## Propiedades
 
 |                   |      |
 | ----------------- | ---- |

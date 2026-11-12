@@ -15,7 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*Este comando no es hilo seguro, no puede ser utilizado en código apropiativo.*
 
 
 ## Descripción 
@@ -41,3 +40,11 @@ Quiere borrar una caja de texto utilizando su ID:
 ## Ver también 
 
 [WP New text box](wp-new-text-box.md)  
+
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1798 |
+| Hilo seguro | yes |

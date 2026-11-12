@@ -51,7 +51,7 @@ Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramenta
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos de formulário padrão fornecem informações estendidas no objeto retornado pelo comando [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) quando eles são gerados em 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos de formulário padrão fornecem informações estendidas no objeto retornado pelo comando [`FORM Event`](https://doc.4d.com/4dv20/help/command/en/page1606.html) quando eles são gerados em 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -155,7 +155,8 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 #### Exemplo
 
 ```4d
-//Set the cell value as $125,571.35 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
+//Set the cell value as $125,571.35
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
 ```
 
 ### Formatos data e hora
@@ -170,14 +171,15 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 | `vk pattern month day`                    | "*monthDayPattern*"                  | Formato ISO 8601 para o mês e dia no padrão da localização atual: "MMMM dd"                                                                                              |
 | `vk pattern short date`                   | "*shortDatePattern*"                 | Formato ISO 8601 abreviado para a data na data atual de localização.USA padrão padrão: "MM/dd/yyyy"                                                                      |
 | `vk pattern short time`                   | "*shortTimePattern*"                 | Formato abreviado ISO 8601 para a hora no padrão de localização.EUA atual: "HH:mm"                                                                                       |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'dd\'T\'H\':\'mm\':\':\'mm\':\'ss"        |
-| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd H\':\'mm\':\':\'ss\'Z\'" |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"        |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
 | `vk pattern year month`                   | "*yearMonthPattern*"                 | Formato ISO 8601 para o mês e ano na localização atual. Padrão padrão para EUA: "MMM aaaa"                                                                               |
 
 #### Exemplo
 
 ```4d
-//Set the cell value as specific date and time VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
+//Set the cell value as specific date and time
+VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
 ```
 
 ### Formatos data e hora personalizados
@@ -502,6 +504,6 @@ Contém as seguintes propriedades:
 | ViewPro.callbacks      | Object        | Armazena informações temporárias necessárias para comandos que requerem callbacks como importar e exportar.                                                                                                                                                                                                                   |
 | ViewPro.commandBuffers | Collection    | Armazena sequencialmente os comandos chamados pelo método e os executa como um lote (em vez de individualmente) ao sair do método, ou se um comando retornar um valor ou se a [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) for chamada. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
 | ViewPro.events         | Object        | Lista [Evento](#form-events).                                                                                                                                                                                                                                                                                                 |
-| ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                |
-| ViewPro.inited         | Parâmetros    | Indica se a área 4D View Pro foi inicializada ou não (consulte o evento [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                  |
+| ViewPro.formulaBar     | Boolean       | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                |
+| ViewPro.inited         | Boolean       | Indica se a área 4D View Pro foi inicializada ou não (consulte o evento [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                  |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                       |

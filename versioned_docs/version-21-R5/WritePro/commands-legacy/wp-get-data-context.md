@@ -16,7 +16,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 
 ## Description 
@@ -64,3 +63,11 @@ method2 might look something like:
 
 [Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
 [WP SET DATA CONTEXT](wp-set-data-context.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1787 |
+| Thread safe | yes |

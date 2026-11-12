@@ -15,7 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-*This command is not thread-safe, it cannot be used in preemptive code.*
 
 
 ## Description 
@@ -41,3 +40,11 @@ You want to delete a text box using its ID:
 ## See also 
 
 [WP New text box](wp-new-text-box.md)  
+
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1798 |
+| Thread safe | yes |
