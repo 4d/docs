@@ -308,7 +308,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 </details>
 
-<!-- REF #DataStoreClass.generateFineGrainedToken().Syntax -->**.generateFineGrainedToken**( *privilege* : Text ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *privileges* : Collection ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *settings* : Object ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<!-- END REF -->
+<!-- REF #DataStoreClass.generateFineGrainedToken().Syntax -->**.generateFineGrainedToken**( *privilege* : Text ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<br/>**.generateFineGrainedToken**( *privileges* : Collection ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<br/>**.generateFineGrainedToken**( *settings* : Object ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.generateFineGrainedToken().Params -->
 <div class="no-index">
@@ -317,7 +317,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 |---|---|---|---|
 |privilege|Text|&#8594;|Nome do privilégio, ou nomes de privilégios separados por vírgula|
 |privileges|Collection|&#8594;|Coleção de nomes de privilégios|
-|settings|Object|&#8594;|Objeto com propriedade "privileges" e/ou "roles"|
+|settings|Object|&#8594;|Objeto com uma propriedade "privileges" e/ou "roles"|
 |name|Text|&#8594;|Nome do token|
 |expiry|Date|&#8594;|Data de expiração do token|
 |info|Object|&#8594;|Informações armazenadas com o token e passadas para `ds.mcpAuthenticated()`|
@@ -339,7 +339,7 @@ Diferente de `Session.setPrivileges()`, um nome que não está declarado no arqu
 
 Em *name*, passe um nome que identifica o token, por exemplo o usuário e o cliente que irá utilizá-lo. É o nome de usuário das sessões MCP abertas com o token.
 
-Em *expiry*, passe a data de expiração do token. É obrigatório, e deve ser posterior à data atual e no máximo 366 dias à frente.
+Em *expiry*, passe a data de expiração do token. Deve ser posterior à data atual e no máximo 366 dias à frente. Se *expiry* for omitido, um erro será gerado.
 
 Em *info*, você pode passar um objeto que o 4D armazena com o token como está, e passa para a função [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) quando uma sessão MCP é aberta com o token. Como não pode ser modificado depois, armazene identificadores estáveis (como um ID de usuário) e leia os valores atuais em `ds.mcpAuthenticated()`. Construa *info* a partir da sessão autenticada, nunca de valores enviados pelo cliente.
 
@@ -352,7 +352,7 @@ Se um erro for gerado, nenhum token é criado.
 |Propriedade|Tipo|Descrição|
 |---|---|---|
 |id|Text|Identificador do token. Não é secreto: use para [revogar](#revokefinegrainedtoken) o token|
-|token|Text|O token, começando com "4dfgt_". É retornado apenas uma vez: o 4D armazena apenas seu hash, no arquivo `fgt.json` da pasta de dados|
+|token|Text|O token, começando com "4dfgt_". Ele é retornado apenas uma vez: o 4D armazena apenas seu hash, no arquivo `fgt.json` da pasta de dados|
 
 #### Exemplo
 
@@ -982,8 +982,8 @@ Se nenhuma *curPassphrase* ou *curDataKey* for fornecida, `.provideDataKey()` re
 
 |Parâmetro|Tipo||Descrição|
 |---|---|---|---|
-|id|Text|&#8594;|Identificador do token a revogar|
-|tokenObj|Object|&#8594;|Objeto com uma propriedade `token` contendo o token a revogar|
+|id|Text|&#8594;|Identificador do token a ser revogado|
+|tokenObj|Object|&#8594;|Objeto com uma propriedade `token` contendo o token a ser revogado|
 |Result|Boolean|&#8592;|True se o token foi revogado|
 </div>
 <!-- END REF -->
@@ -999,9 +999,9 @@ Você designa o token:
 
 A função retorna **True** se o token foi revogado, **False** caso contrário (por exemplo, se o token não existir ou já tiver sido revogado).
 
-O token para de funcionar na próxima requisição, e as sessões MCP abertas com ele são fechadas. [URLs binários](../WebServer/mcp-server.md#binary-attributes) já retornados ao cliente permanecem válidos até expirarem (no máximo 10 minutos).
+O token para de funcionar na próxima requisição, e as sessões MCP abertas com ele são fechadas. [Binary URLs](../WebServer/mcp-server.md#binary-attributes) já retornadas ao cliente permanecem válidas até expirarem (no máximo 10 minutos).
 
-Quando a função é chamada em contexto web (código executado para uma requisição web ou REST), só pode revogar um token cujos privilégios são todos detidos pela sessão atual.
+Quando a função é chamada em contexto web (código executado para uma requisição web ou REST), ela só pode revogar um token cujos privilégios são todos detidos pela sessão atual.
 
 #### Exemplo
 
@@ -1038,7 +1038,7 @@ End if
 
 |Parâmetro|Tipo||Descrição|
 |---|---|---|---|
-|id|Text|&#8594;|Identificador do grant a revogar|
+|id|Text|&#8594;|Identificador do grant a ser revogado|
 |Result|Boolean|&#8592;|True se o grant foi revogado|
 </div>
 <!-- END REF -->
@@ -1049,13 +1049,13 @@ A função `.revokeOAuthGrant()` <!-- REF #DataStoreClass.revokeOAuthGrant().Sum
 
 A função retorna **True** se o grant foi revogado, **False** caso contrário (por exemplo, se o grant não existir ou já tiver sido revogado).
 
-Os access tokens do grant recebem status HTTP 401 a partir da próxima requisição, seu refresh token é recusado, e suas sessões MCP são fechadas. O usuário deve fazer login novamente a partir do cliente MCP.
+Os access tokens do grant recebem um status HTTP 401 a partir da próxima requisição, seu refresh token é recusado, e suas sessões MCP são fechadas. O usuário deve fazer login novamente a partir do cliente MCP.
 
-Quando a função é chamada em contexto web (código executado para uma requisição web ou REST), só pode revogar um grant cujos privilégios são todos detidos pela sessão atual.
+Quando a função é chamada em contexto web (código executado para uma requisição web ou REST), ela só pode revogar um grant cujos privilégios são todos detidos pela sessão atual.
 
 #### Exemplo
 
-Quando você desativa um usuário do seu aplicativo, revoga seus grants OAuth:
+Quando você desativa um usuário da sua aplicação, você revoga seus grants OAuth:
 
 ```4d
 var $grant : Object
