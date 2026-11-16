@@ -1045,22 +1045,6 @@ Quand elle est utilisée avec [SET DATABASE PARAMETER](../commands/set-database-
 * Le paramètre *laTable* est utilisé par les sélecteurs 31, 46 et 47 uniquement. Dans les autres cas, il est ignoré s'il est passé.
 * Lorsqu'un paramétrage n'est pas conservé entre les sessions, vous pouvez le définir au démarrage via la ou la [On Server Startup database method](../commands/on-server-startup-database-method).
 
-## Sélecteurs thread-safe 
-
-La commande **SET DATABASE PARAMETER** peut être utilisée dans des processus préemptifs lors de l'appel des sélecteurs suivants :
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
-
-
 ## Exemple 1 
 
 L’instruction suivante permet d'anticiper un éventuel problème de **timeout**
@@ -1108,6 +1092,7 @@ Vous souhaitez exporter des données en JSON contenant une date 4D convertie. A 
 |  |  |
 | --- | --- |
 | Numéro de commande | 642 |
-| Thread safe | yes (partially) |
+| Thread safe | yes (partially). Thread-safe selectors: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
+
 
 

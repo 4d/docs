@@ -1059,22 +1059,6 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 
 
-## スレッドセーフなセレクター 
-
-**Get database parameter** コマンドは、以下のセレクターを使用する場合にはプリエンプティブプロセスで使用することができます:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
-
-
 ## 例題 
 
 アプリケーションを、初回起動後に再起動させたい場合を考えます。アプリケーションは、Windows 上において例えば以下のようなコマンドラインで起動したとします:
@@ -1111,7 +1095,7 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 |  |  |
 | --- | --- |
 | コマンド番号 | 643 |
-| スレッドセーフである | yes (partially) |
+| スレッドセーフである | yes (partially). スレッドセーフなセレクター: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
 
 
 

@@ -1470,22 +1470,6 @@ Cuando se utiliza con [SET DATABASE PARAMETER](../commands/set-database-paramete
 
 
 
-## Selectores hilo seguro 
-
-El comando **Get database parameter** puede utilizarse en procesos apropiativos al llamar a los siguientes selectores:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
-
-
 <h2 data-noindex>Ejemplo</h2> 
 
 Desea que su aplicación se reinicie después de un primer lanzamiento. La aplicación se inicia con, por ejemplo, una línea de comando en Windows:
@@ -1522,4 +1506,4 @@ En el [Método base On Startup](../commands/metodo-base-on-startup), usted escri
 |  |  |
 | --- | --- |
 | Número de comando | 643 |
-| Hilo seguro | yes (partially) |
+| Hilo seguro | yes (partially). Selectores hilo seguro: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
