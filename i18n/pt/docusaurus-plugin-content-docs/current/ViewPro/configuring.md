@@ -11,9 +11,9 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
-### Selecção de uma interface utilizador
+### Selecionando uma interface de usuário
 
-Puede seleccionar la interfaz a utilizar con sus áreas de formulario 4D View Pro en la **Lista de propiedades**, en **Apariencia**:
+Você pode selecionar a interface a ser usada com suas áreas de formulário 4D View Pro na **Lista de Propriedades**, em **Aparência**:  
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
@@ -35,17 +35,17 @@ Com barra de fórmula visível:
 
 #### Funcionalidades
 
-Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramentas (toolbar) nas abas:
+Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramentas (toolbar) nas abas:  
 
-| Tab      | Acções                           | Interface Ribbon | Interface da barra de ferramentas |
-| -------- | -------------------------------- | :--------------: | :-------------------------------: |
-| File     | Manipulação de ficheiros         |         X        |                                   |
-| Inicio   | Aspecto do texto                 |         X        |                 X                 |
-| Inserir  | Adicionar itens                  |         X        |                 X                 |
-| Fórmulas | Cálculo de fórmulas e biblioteca |         X        |                 X                 |
-| Dados    | Manipulação de dados             |         X        |                 X                 |
-| Mostrar  | Apresentação visual              |         X        |                 X                 |
-| Settings | Presentação da folha             |         X        |                                   |
+|Tab|  Actions |Ribbon Interface| Toolbar Interface|
+|---|---|:---:|:---:|
+|File|File manipulation|X| |  
+|Home|Text appearance|X|X|
+|Insert|Add items| X| X|
+|Formulas|Formula calculation and library|  X|X|
+|Data|Data manipulation|X| X|
+|View|Visual presentation| X| X|
+|Settings|Sheet presentation reference|X| |  
 
 ## Eventos formulário
 
@@ -157,7 +157,8 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 #### Exemplo
 
 ```4d
-//Set the cell value as $125,571.35 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
+//Set the cell value as $125,571.35
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
 ```
 
 ### Formatos data e hora
@@ -172,14 +173,15 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 | `vk pattern month day`                    | "*monthDayPattern*"                  | Formato ISO 8601 para o mês e dia no padrão da localização atual: "MMMM dd"                                                                                                                                                                       |
 | `vk pattern short date`                   | "*shortDatePattern*"                 | Formato ISO 8601 abreviado para a data na data atual de localização.USA padrão padrão: "MM/dd/yyyy"                                                                                                                               |
 | `vk pattern short time`                   | "*shortTimePattern*"                 | Formato abreviado ISO 8601 para a hora no padrão de localização.EUA atual: "HH:mm"                                                                                                                                |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'dd\'T\'H\':\'mm\':\':\'mm\':\'ss" |
-| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd H\':\'mm\':\':\'ss\'Z\'"          |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss" |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'"          |
 | `vk pattern year month`                   | "*yearMonthPattern*"                 | Formato ISO 8601 para o mês e ano na localização atual. Padrão padrão para EUA: "MMM aaaa"                                                                                                                                        |
 
 #### Exemplo
 
 ```4d
-//Set the cell value as specific date and time VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
+//Set the cell value as specific date and time
+VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
 ```
 
 ### Formatos data e hora personalizados
@@ -400,7 +402,7 @@ Atributos de marca d'água são usados para sobrepor texto ou uma imagem na áre
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Não importa o tipo usado para definir uma imagem, a imagem em si (não é uma referência) é armazenada na área 4D View Pro sendo retornada pela [VP Get print info](commands/vp-get-print-info.md).
 
-## Style Objects {#style-objects} {#style-objects}
+## Style Objects {#style-objects}
 
 Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os aspectos gráficos e a aparência dos seus documentos 4D View Pro.
 
@@ -496,7 +498,7 @@ Contém as seguintes propriedades:
 
 ## Variável de objeto do formulário 4D View Pro
 
-La variable del objeto del formulario 4D View Pro es la variable del objeto  asociada al área del formulario 4D View Pro. Gere a informação utilizada pelo objeto 4D View Pro.
+A variável de objeto do formulário 4D View Pro é a variável [object](Concepts/dt_object.md) associada à área de formulário 4D View Pro. Gere a informação utilizada pelo objeto 4D View Pro.
 
 > A variável de objeto 4D View Pro é apenas para fins informativos (ou seja, depuração). Não deve, em caso algum, ser modificado.
 
@@ -508,7 +510,7 @@ Contém as seguintes propriedades:
 | ViewPro.callbacks      | Object        | Armazena informações temporárias necessárias para comandos que requerem callbacks como importar e exportar.                                                                                                                                                                                                                                                      |
 | ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) when exiting the method, when a command returns a value, or when the [VP FLUSH COMMANDS](commands/vp-flush-commands.md) is called. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
 | ViewPro.events         | Object        | [Eventos](#form-events).                                                                                                                                                                                                                                                                                                                                         |
-| ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
-| ViewPro.inited         | Parâmetros    | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
+| ViewPro.formulaBar     | Boolean       | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
+| ViewPro.inited         | Boolean       | Indica se a área 4D View Pro foi inicializada ou não (ver evento [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                          |
 

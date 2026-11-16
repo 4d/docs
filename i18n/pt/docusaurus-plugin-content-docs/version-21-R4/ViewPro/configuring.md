@@ -7,13 +7,13 @@ As propriedades da área 4D View Pro podem ser configuradas utilizando a lista d
 
 ## Propriedades da área do formulário
 
-Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
+Usando a lista de propriedades da área, você pode definir [propriedades do objeto 4D View Pro](FormObjects/viewProArea_overview.md#supported-properties) como **Nome do Objeto**, [**Variável ou Expressão**](#4d-view-pro-form-object-variable), **Aparência**, **Ação** e **Eventos**.
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
-### Selecção de uma interface utilizador
+### Seleção de uma interface de usuário
 
-Puede seleccionar la interfaz a utilizar con sus áreas de formulario 4D View Pro en la **Lista de propiedades**, en **Apariencia**:
+Você pode selecionar a interface a ser usada com suas áreas de formulário 4D View Pro na **Lista de Propriedades**, em **Aparência**:  
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
@@ -35,23 +35,23 @@ Com barra de fórmula visível:
 
 #### Funcionalidades
 
-Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramentas (toolbar) nas abas:
+Tanto a interface Ribbon quanto a Toolbar agrupam funcionalidades relacionadas em abas:  
 
 | Tab      | Acções                           | Interface Ribbon | Interface da barra de ferramentas |
 | -------- | -------------------------------- | :--------------: | :-------------------------------: |
 | File     | Manipulação de ficheiros         |         X        |                                   |
-| Inicio   | Aspecto do texto                 |         X        |                 X                 |
-| Inserir  | Adicionar itens                  |         X        |                 X                 |
-| Fórmulas | Cálculo de fórmulas e biblioteca |         X        |                 X                 |
-| Dados    | Manipulação de dados             |         X        |                 X                 |
-| Mostrar  | Apresentação visual              |         X        |                 X                 |
+| Home     | Aspecto do texto                 |         X        |                 X                 |
+| Insert   | Adicionar itens                  |         X        |                 X                 |
+| Formulas | Cálculo de fórmulas e biblioteca |         X        |                 X                 |
+| Data     | Manipulação de dados             |         X        |                 X                 |
+| View     | Apresentação visual              |         X        |                 X                 |
 | Settings | Presentação da folha             |         X        |                                   |
 
 ## Eventos formulário
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos padrão de formulário fornecem informações estendidas no objeto retornado pelo comando [`FORM Event`](../commands/form-event) quando são gerados para áreas 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -157,7 +157,8 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 #### Exemplo
 
 ```4d
-//Set the cell value as $125,571.35 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
+//Set the cell value as $125,571.35
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
 ```
 
 ### Formatos data e hora
@@ -172,14 +173,15 @@ Formatos de números se aplicam a todos os tipos de números (por exemplo, posit
 | `vk pattern month day`                    | "*monthDayPattern*"                  | Formato ISO 8601 para o mês e dia no padrão da localização atual: "MMMM dd"                                                                                                                                                                       |
 | `vk pattern short date`                   | "*shortDatePattern*"                 | Formato ISO 8601 abreviado para a data na data atual de localização.USA padrão padrão: "MM/dd/yyyy"                                                                                                                               |
 | `vk pattern short time`                   | "*shortTimePattern*"                 | Formato abreviado ISO 8601 para a hora no padrão de localização.EUA atual: "HH:mm"                                                                                                                                |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'dd\'T\'H\':\'mm\':\':\'mm\':\'ss" |
-| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd H\':\'mm\':\':\'ss\'Z\'"          |
-| `vk pattern year month`                   | "*yearMonthPattern*"                 | Formato ISO 8601 para o mês e ano na localização atual. Padrão padrão para EUA: "MMM aaaa"                                                                                                                                        |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Formato ISO 8601 para a data e hora na localização atual que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss" |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Formato ISO 8601 para a data e hora na localização atual usando UTC que pode ser classificado.EUA padrão padrão: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'"          |
+| `vk pattern year month`                   | "*yearMonthPattern*"                 | Formato ISO 8601 para o mês e ano na localização atual. Padrão padrão para EUA: "yyyy MMMM"                                                                                                                                        |
 
 #### Exemplo
 
 ```4d
-//Set the cell value as specific date and time VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
+//Set the cell value as specific date and time
+VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
 ```
 
 ### Formatos data e hora personalizados
@@ -211,7 +213,7 @@ Para criar seus próprios padrões de data e hora, na sua localização atual, v
 |      | \[ss]             | Tempo decorrido em segundos                                                                    | 50585                                                           |
 |      | AM/PM                                                                  | Períodos do dia. Se omitido, utiliza-se o formato de 24 horas. | PM                                                              |
 
-> O código "m" é interpretado de acordo com sua posição no padrão. Se for imediatamente após 'h' ou 'hh' ou imediatamente antes 't' ou 'ss', será interpretado como actos, caso contrário será interpretado como meses.
+> O código "m" é interpretado de acordo com sua posição no padrão. Se for imediatamente após 'h' ou 'hh' ou imediatamente antes 's' ou 'ss', será interpretado como minutos, caso contrário será interpretado como meses.
 
 ### Símbolos adicionais
 
@@ -312,7 +314,7 @@ Atributos de margem são usados para especificar a margem 4D View Pro para impre
 |             | top     | inteiro longo | Margem superior, em centésimos de polegada. Valor padrão = 75         |
 |             | bottom  | inteiro longo | Margem inferior, em centésimos de polegada. Valor padrão = 75         |
 |             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70         |
-|             | direita | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70          |
+|             | right   | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70          |
 |             | header  | inteiro longo | Deslocação do cabeçalho, em centésimos de polegada. Valor padrão = 30 |
 |             | footer  | inteiro longo | Deslocamento do rodapé, em centésimos de polegada. Valor padrão = 30  |
 
@@ -334,7 +336,7 @@ Os atributos de página são utilizados para especificar as definições gerais 
 | --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Valor padrão = false</p><p>**Nota**: os PDFs não são afetados por esse atributo. As cores nos PDFs mantêm-se.</p>                                          |
 | centering       | inteiro longo | A forma como o conteúdo é centrado na página impressa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical` |
-| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                                                                     |
+| firstPageNumber | inteiro longo | O número da página a ser impresso na primeira página. Valor padrão = 1                                                                                                                                                                                     |
 | pageOrder       | inteiro longo | As páginas do pedido são impressas. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.                 |
 | pageRange       | text          | O intervalo de páginas para impressão                                                                                                                                                                                                                             |
 | qualityFactor   | inteiro longo | O fator de qualidade para impressão (1 a 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                            |
@@ -353,14 +355,14 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 | paperSize   |        | object        | Dimensões do papel (altura, largura) ou formato específico (tipo) para impressão.                                                              |
 |             | height | inteiro longo | Altura do papel, em centésimos de polegada.                                                                                                                                          |
 |             | width  | inteiro longo | Largura do papel, em centésimos de polegada.                                                                                                                                         |
-|             | kind   | text          | Name of standard paper size (e.g., A2, A4, legal, etc.) retornado por `Get Print Option`. Valor padrão = "letter" |
+|             | kind   | text          | Nome do tamanho de papel padrão (por exemplo, A2, A4, legal, etc.) retornado por `Get Print Option`. Valor padrão = "letter" |
 
-- If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
+- Se o tamanho do papel for especificado usando as propriedades `height` e `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retorna um tamanho de papel com `custom` como valor para `kind`.
 
-- Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
-  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
-    um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands/print-option-values).
+- Se você definir o tamanho do papel usando a propriedade `kind`, você pode usar:
+  - um dos formatos da [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands/print-option-values).
+    Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
 
@@ -379,7 +381,7 @@ Mostrar / Ocultar atributos são usados para especificar a visibilidade (impress
 
 | Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                                                    |
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                                                            |
+| showBorder       | boolean       | Imprime a borda do contorno. Valor padrão = "true"                                                                                                                                                                                            |
 | showColumnHeader | inteiro longo | Parâmetros de impressão do cabeçalho da coluna. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
 | showGridLine     | boolean       | Imprime as linhas de grade. Valor padrão = "false"                                                                                                                                                                                           |
 | showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
@@ -390,7 +392,7 @@ Atributos de marca d'água são usados para sobrepor texto ou uma imagem na áre
 
 | Propriedade   |                                                                                    | Tipo                                      | Descrição                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| marca de água |                                                                                    | collection                                | Coleção de parâmetros de marcas de água.  Valor padrão: undefined                                                                                                                                                                                                                                                |
+| watermark     |                                                                                    | collection                                | Coleção de parâmetros de marcas de água.  Valor padrão: undefined                                                                                                                                                                                                                                                |
 |               | \[ ].height   | inteiro longo                             | A altura do texto/imagem da marca de água.                                                                                                                                                                                                                                                                                       |
 |               | \[ ].imageSrc | picture &#124; text\* | O texto/imagem da marca de água.                                                                                                                                                                                                                                                                                                 |
 |               | \[ ].page     | text                                      | A(s) página(s) onde a marca de água é impressa. Para todas as páginas: "all". Para páginas específicas: números de página ou intervalos de páginas separados por vírgulas. Ex.: "1,3,5-12" |
@@ -400,7 +402,7 @@ Atributos de marca d'água são usados para sobrepor texto ou uma imagem na áre
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Não importa o tipo usado para definir uma imagem, a imagem em si (não é uma referência) é armazenada na área 4D View Pro sendo retornada pela [VP Get print info](commands/vp-get-print-info.md).
 
-## Style Objects {#style-objects} {#style-objects}
+## Style Objects {#style-objects}
 
 Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os aspectos gráficos e a aparência dos seus documentos 4D View Pro.
 
@@ -408,7 +410,7 @@ Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os 
 
 Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Objetos de estilo também podem ser usados além de uma folha de estilo para que diferentes configurações possam ser especificadas para intervalos de células individuais sem afetar o resto do documento. Você pode usar objetos de estilo diretamente com os comandos [VP SET CELL STYLE](commands/vp-set-cell-style.md) e [VP SET PELO STYLE](commands/vp-set-default-style.md). You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
 
-Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Folhas de estilo salvas com o documento podem ser usadas para definir as propriedades para uma única folha, várias folhas ou um livro de trabalho inteiro. Quando criada, uma folha de estilo 4D View Pro é dado um nome que é salvo na folha de estilo na propriedade "nome". Isto permite que uma folha de estilo seja facilmente usada e, se cuidadosamente selecionada, pode facilitar sua identificação e propósito (por exemplo, Letterhead\_internal, Letterhead_external).
+Uma **folha de estilo** agrupa uma combinação de propriedades em um objeto de estilo para especificar a aparência de todas as células dos seus documentos 4D View Pro. Folhas de estilo salvas com o documento podem ser usadas para definir as propriedades para uma única folha, várias folhas ou um livro de trabalho inteiro. Quando criada, uma folha de estilo 4D View Pro recebe um nome que é salvo na folha de estilo na propriedade "name". Isso permite que uma folha de estilo seja facilmente usada e, se cuidadosamente selecionada, pode facilitar sua identificação e propósito (por exemplo, Letterhead\_internal, Letterhead_external).
 
 Style sheets are created with the [VP ADD STYLESHEET](commands/vp-add-stylesheet.md) command and applied with the the [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) or [VP SET CELL STYLE](commands/vp-set-cell-style.md) commands. Você pode remover uma folha de estilos com o comando [VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md).
 
@@ -459,7 +461,7 @@ Exemplo:
 | textDecoration  |              | inteiro longo | Especifica a decoração adicionada ao texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                                                 |
 | textIndent      |              | inteiro longo | Define a unidade de indentação do texto. 1 = 8 píxeles                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                                                    |
 | textOrientation |              | inteiro longo | Define o ângulo de rotação do texto numa célula. Número entre -90 e 90                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                                                    |
-| marca de água   |              | text          | Define o conteúdo da marca de água (etiqueta da célula)                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                    |
+| watermark       |              | text          | Define o conteúdo da marca de água (etiqueta da célula)                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                    |
 | wordWrap        |              | boolean       | Especifica se o texto deve ser envolvido.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | True = texto embrulhado, False = texto não embrulhado                                                                                                                                                                                              |
 
 #### Layout
@@ -496,7 +498,7 @@ Contém as seguintes propriedades:
 
 ## Variável de objeto do formulário 4D View Pro
 
-La variable del objeto del formulario 4D View Pro es la variable del objeto  asociada al área del formulario 4D View Pro. Gere a informação utilizada pelo objeto 4D View Pro.
+A variável de objeto do formulário 4D View Pro é a variável [objeto](Concepts/dt_object.md) associada à área de formulário 4D View Pro. Gere a informação utilizada pelo objeto 4D View Pro.
 
 > A variável de objeto 4D View Pro é apenas para fins informativos (ou seja, depuração). Não deve, em caso algum, ser modificado.
 
@@ -506,9 +508,9 @@ Contém as seguintes propriedades:
 | -------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ViewPro.area           | Text          | Nome da área 4D View Pro                                                                                                                                                                                                                                                                                                                                                         |
 | ViewPro.callbacks      | Object        | Armazena informações temporárias necessárias para comandos que requerem callbacks como importar e exportar.                                                                                                                                                                                                                                                      |
-| ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) when exiting the method, when a command returns a value, or when the [VP FLUSH COMMANDS](commands/vp-flush-commands.md) is called. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
+| ViewPro.commandBuffers | Collection    | Armazena sequencialmente os comandos chamados pelo método e os executa em lote (em vez de individualmente) ao sair do método, quando um comando retorna um valor ou quando o [VP FLUSH COMMANDS](commands/vp-flush-commands.md) é chamado. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
 | ViewPro.events         | Object        | [Eventos](#form-events).                                                                                                                                                                                                                                                                                                                                         |
-| ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
-| ViewPro.inited         | Parâmetros    | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
+| ViewPro.formulaBar     | Boolean       | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
+| ViewPro.inited         | Boolean       | Indica se a área 4D View Pro foi inicializada ou não (ver evento [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                          |
 
