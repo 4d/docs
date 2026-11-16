@@ -315,7 +315,7 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 </details>
 
-<!-- REF #DataStoreClass.generateFineGrainedToken().Syntax -->**.generateFineGrainedToken**( *privilege* : Text ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *privileges* : Collection ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<br/>**.generateFineGrainedToken**( *settings* : Object ; *name* : Text ; *expiry* : Date {; *info* : Object} ) : Object<!-- END REF -->
+<!-- REF #DataStoreClass.generateFineGrainedToken().Syntax -->**.generateFineGrainedToken**( *privilege* : Text ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<br/>**.generateFineGrainedToken**( *privileges* : Collection ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<br/>**.generateFineGrainedToken**( *settings* : Object ; *name* : Text {; *expiry* : Date {; *info* : Object}} ) : Object<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.generateFineGrainedToken().Params -->
@@ -347,7 +347,7 @@ Unlike `Session.setPrivileges()`, a name that is not declared in the [`roles.jso
 
 In *name*, pass a name that identifies the token, for example the user and the client that will use it. It is the user name of the MCP sessions opened with the token.
 
-In *expiry*, pass the expiration date of the token. It is required, and it must be later than the current date and at most 366 days ahead.
+In *expiry*, pass the expiration date of the token. It must be later than the current date and at most 366 days ahead. If *expiry* is omitted, an error is raised.
 
 In *info*, you can pass an object that 4D stores with the token as is, and passes to the [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) function when an MCP session is opened with the token. Since it cannot be modified later, store stable identifiers (such as a user ID) and read the current values in `ds.mcpAuthenticated()`. Build *info* from the authenticated session, never from values sent by the client.
 
@@ -987,7 +987,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 </details>
 
-<!-- REF #DataStoreClass.revokeFineGrainedToken().Syntax -->**.revokeFineGrainedToken**( *id* : Text )<br/>**.revokeFineGrainedToken**( *tokenObj* : Object )<!-- END REF -->
+<!-- REF #DataStoreClass.revokeFineGrainedToken().Syntax -->**.revokeFineGrainedToken**( *id* : Text ) : Boolean<br/>**.revokeFineGrainedToken**( *tokenObj* : Object ) : Boolean<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.revokeFineGrainedToken().Params -->
@@ -997,6 +997,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 |---|---|---|---|
 |id|Text|&#8594;|Identifier of the token to revoke|
 |tokenObj|Object|&#8594;|Object with a `token` property containing the token to revoke|
+|Result|Boolean|&#8592;|True if the token was revoked|
 </div>
 <!-- END REF -->
 
@@ -1008,6 +1009,8 @@ You designate the token:
 
 - in the *id* parameter, with its identifier (returned by [`.generateFineGrainedToken()`](#generatefinegrainedtoken) and [`.listFineGrainedTokens()`](#listfinegrainedtokens)),
 - or in the *tokenObj* parameter, with an object whose `token` property contains the token itself (`"4dfgt_..."`), for example to let the holder of a token revoke it.
+
+The function returns **True** if the token was revoked, **False** otherwise (for example if the token does not exist or was already revoked).
 
 The token stops working at the next request, and the MCP sessions opened with it are closed. [Binary URLs](../WebServer/mcp-server.md#binary-attributes) already returned to the client remain valid until they expire (10 minutes at most).
 
@@ -1041,7 +1044,7 @@ End if
 
 </details>
 
-<!-- REF #DataStoreClass.revokeOAuthGrant().Syntax -->**.revokeOAuthGrant**( *id* : Text )<!-- END REF -->
+<!-- REF #DataStoreClass.revokeOAuthGrant().Syntax -->**.revokeOAuthGrant**( *id* : Text ) : Boolean<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.revokeOAuthGrant().Params -->
@@ -1050,12 +1053,15 @@ End if
 |Parameter|Type||Description|
 |---|---|---|---|
 |id|Text|&#8594;|Identifier of the grant to revoke|
+|Result|Boolean|&#8592;|True if the grant was revoked|
 </div>
 <!-- END REF -->
 
 #### Description
 
 The `.revokeOAuthGrant()` function <!-- REF #DataStoreClass.revokeOAuthGrant().Summary -->revokes a grant given to a user through the OAuth mode of the MCP server<!-- END REF --> (see [`.listOAuthGrants()`](#listoauthgrants)).
+
+The function returns **True** if the grant was revoked, **False** otherwise (for example if the grant does not exist or was already revoked).
 
 The access tokens of the grant get an HTTP 401 status from the next request, its refresh token is refused, and its MCP sessions are closed. The user must log in again from the MCP client.
 

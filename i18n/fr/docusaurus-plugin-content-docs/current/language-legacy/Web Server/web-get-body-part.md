@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Passez dans le paramètre *partie* le numéro de la partie à analyser. Vous pouvez obtenir le nombre total de parties à l’aide de la commande [WEB Get body part count](../commands/web-get-body-part-count).
 
-Le paramètre *contenuParti*e récupère le contenu de la partie. Lorsque les parties à récupérer sont des fichiers, vous devez passer un paramètre de type BLOB. Dans le cas de variables TEXT postées dans un formulaire Web, vous pouvez passer un paramètre de type texte. 
+Le paramètre *contenuPartie* récupère le contenu de la partie. Lorsque les parties à récupérer sont des fichiers, vous devez passer un paramètre de type BLOB. Dans le cas de variables TEXT postées dans un formulaire Web, vous pouvez passer un paramètre de type texte. 
 
 Le paramètre *nomPartie* récupère le nom de la variable du champ input HTTP.
 

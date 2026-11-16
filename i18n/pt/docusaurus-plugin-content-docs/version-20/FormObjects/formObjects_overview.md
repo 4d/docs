@@ -22,9 +22,10 @@ Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 
 * **Linguagem 4D**: os comandos do tema [Objetos (Formulários)](https://doc.4d.com/4Dv20/4D/20.6/Objects-Forms.201-7486936.en.html), como `OBJECT DUPLICATE` ou `OBJECT SET FONT STYLE`, permitem criar e definir objetos de formulário.
 
-*   **Código JSON em formulários dinâmicos:** defina as propriedades usando JSON. Use a propriedade [type](properties_Object.md#type) para definir o tipo de objeto e, em seguida, defina suas propriedades disponíveis.  Veja a página [Formulários Dinâmicos](https://doc.4d.com/4Dv21R4/4D/21-R4/Dynamic-Forms.300-7753010.en.html) para informações.  
-  Exemplo de um objeto botão:
-	```
+*   **Código JSON em formulários dinâmicos:** defina as propriedades usando JSON. Use a propriedade [type](properties_Object.md#type) para definir o tipo de objeto e, em seguida, defina suas propriedades disponíveis.  Veja a página [Formulários Dinâmicos](https://doc.4d.com/4Dv20/4D/20.2/Dynamic-Forms.300-6750140.en.html) para informações.  
+
+Exemplo de um objeto botão:
+	```json
 	{
 		"type": "button", 
 		"style": "bevel", 

@@ -45,6 +45,16 @@ displayed_sidebar: docs
 | ------- | ---- | ----------------------------------------------------------------------------- |
 | context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../../ORDA/client-server-optimization.md) のラベル。 |
 
+:::info
+
+パフォーマンス上の理由から、4D シングルユーザーおよび 4D Server では、返されるエンティティセレクションは *dsTable* のカレントセレクションに直接接続されています (コピーではありません)。 カレントセレクションが置き換えられるまでは、一方に加えた変更がもう一方にも反映されます。 たとえば、[`REDUCE SELECTION`](../commands/reduce-selection) はエンティティセレクションを縮小し、エンティティセレクションに対する [`.add()`](../../API/EntitySelectionClass.md#add) はカレントセレクションにエンティティを追加します。 独立したエンティティセレクションを取得するには、戻り値に対して [`.copy()`](../../API/EntitySelectionClass.md#copy) を呼び出します:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
+
 ## 例題
 
 ```4d

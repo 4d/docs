@@ -6,11 +6,6 @@ title: Web Server
 
 4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
 
-:::warning Deprecated feature
-
- Using the web server on a remote 4D (4D client) is **deprecated** as of 4D 21. It is no longer recommended to use this feature.   
-
-:::
 
 ## Easy Monitoring
 
@@ -67,3 +62,9 @@ The 4D web server supports access to data stored in your 4D applications through
 
 `On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
 
+
+:::warning Deprecated feature
+
+ Using the web server on a remote 4D (4D client) is **deprecated** as of 4D 21. It is no longer recommended to use this feature.   
+
+:::

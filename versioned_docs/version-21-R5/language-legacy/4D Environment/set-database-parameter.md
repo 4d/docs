@@ -812,9 +812,9 @@ Refer to example 2.
 
 **Kept between two sessions**: No
 
-**Possible values**: Positive integer. Default value = 15, minimum value = 1. 
+**Possible values**: Positive integer. Default value = 900, minimum value = 60. 
 
-**Description**: Timeout in minutes for client/server sessions in the event of an unexpected disconnection from the QUIC network layer. This timeout is the period of time allowed for a session during which the connection between the server and the client can be automatically reestablished following an unintended disconnection. If, at the end of this timeout, the connection has not been reestablished. 
+**Description**: Timeout in seconds for client/server sessions in the event of an unexpected disconnection from the QUIC network layer. This timeout is the period of time allowed for a session during which the connection between the server and the client can be automatically reestablished following an unintended disconnection. If, at the end of this timeout, the connection has not been reestablished, the client session is closed with a message. 
 
 This setting can only be set on 4D Server and applies to all new 4D remote sessions (existing sessions timeout value is untouched). 
 

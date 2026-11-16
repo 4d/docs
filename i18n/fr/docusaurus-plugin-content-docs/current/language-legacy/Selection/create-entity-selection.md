@@ -45,6 +45,16 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant l
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Nom du [contexte d'optimisation](../../ORDA/client-server-optimization.md) appliqué à l'entity selection. |
 
+:::info
+
+Pour des raisons de performance, en 4D monoposte et 4D Server, l'entity selection retournée est directement liée à la sélection courante de *dsTable* (il ne s'agit pas d'une copie). Tant que la sélection courante n'est pas remplacée, les modifications apportées à l'une sont répercutées dans l'autre. Par exemple, [`REDUCE SELECTION`](../commands/reduce-selection) réduit l'entity selection, et [`.add()`](../../API/EntitySelectionClass.md#add) appliquée à l'entity selection ajoute l'entité à la sélection courante. Pour obtenir une entity selection indépendante, appelez [`.copy()`](../../API/EntitySelectionClass.md#copy) sur le résultat :
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
+
 ## Exemple
 
 ```4d

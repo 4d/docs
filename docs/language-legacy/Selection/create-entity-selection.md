@@ -32,6 +32,7 @@ displayed_sidebar: docs
 
 The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
 
+
 If the current selection is sorted, an [ordered](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
 If the *dsTable* is not exposed in [`ds`](../commands/ds), an error is returned. This command cannot be used with a Remote datastore.
@@ -42,6 +43,16 @@ In the optional *settings* parameter, you can pass an object containing the foll
 |---|---|---|
 |context|Text|Label for the [optimization context](../../ORDA/client-server-optimization.md) applied to the entity selection.|
 
+
+:::info
+
+For performance reasons, in 4D single-user and 4D Server, the returned entity selection is directly connected to the current selection of *dsTable* (it is not a copy). Until the current selection is replaced, changes made to one are reflected in the other. For example, [`REDUCE SELECTION`](../commands/reduce-selection) shortens the entity selection, and [`.add()`](../../API/EntitySelectionClass.md#add) on the entity selection adds the entity to the current selection. To get an independent entity selection, call [`.copy()`](../../API/EntitySelectionClass.md#copy) on the result:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
 
 ## Example
 

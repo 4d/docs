@@ -1,4 +1,4 @@
-﻿---
+---
 id: create-entity-selection
 title: Criar uma seleção de entidades (entity selection)
 slug: /commands/create-entity-selection
@@ -35,6 +35,7 @@ displayed_sidebar: docs
 
 O comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->cria e retorna uma nova seleção de entidade [alterável](../../ORDA/entities.md#shareable-or-alterable-entity-selections) relacionada à classe de dados correspondente à *dsTable* fornecida, de acordo com a seleção atual dessa tabela<!-- END REF-->.
 
+
 Se a seleção atual for ordenada, uma entidade [ordenada](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) é criada (a ordem da seleção atual é mantida). Se a seleção atual não for ordenada, se cria uma seleção de entidades não ordenada.
 
 Se *dsTable* não for exposta em [`ds`](../commands/ds), um erro será retornado. Esse comando não pode usado com uma datastore remota.
@@ -44,6 +45,17 @@ No parâmetro opcional *settings*, você pode passar um objeto que contenha a se
 | Propriedade | Tipo | Descrição                                                                                                                      |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
 | context     | Text | Rótulo para o [contexto de otimização](../../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
+
+
+:::info
+
+Por razões de desempenho, no 4D monousuário e no 4D Server, a entity selection retornada está diretamente conectada à seleção atual de *dsTable* (não é uma cópia). Até que a seleção atual seja substituída, alterações feitas em uma são refletidas na outra. Por exemplo, [`REDUCE SELECTION`](../commands/reduce-selection) reduz a entity selection, e [`.add()`](../../API/EntitySelectionClass.md#add) na entity selection adiciona a entidade à seleção atual. Para obter uma entity selection independente, chame [`.copy()`](../../API/EntitySelectionClass.md#copy) no resultado:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
 
 ## Exemplo
 

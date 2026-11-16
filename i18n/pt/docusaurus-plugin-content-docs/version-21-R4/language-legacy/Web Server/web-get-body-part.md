@@ -1,4 +1,4 @@
-﻿---
+---
 id: web-get-body-part
 title: WEB GET BODY PART
 slug: /commands/web-get-body-part

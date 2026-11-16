@@ -605,7 +605,7 @@ The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session
 |Constant|Value|Description|
 |---|---|---|
 |Web SameSite Strict|"Strict"|*Default value* - Cookies are only sent in a first-party context|
-|Web SameSite Lax|"Lax"|Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link).|
+|Web SameSite Lax|"Lax"|Cookies are not sent with requests coming from other websites (images, frames, forms, scripts), except when the user navigates to the site from another website with a GET request (following a link, redirection).|
 |Web SameSite None|"None"|Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.
 
 See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.

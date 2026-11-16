@@ -790,7 +790,7 @@ Reportez-vous à l'exemple 2.
 
 **Valeurs possibles** : Entier positif. Valeur par défaut = 900, valeur minimale = 60. 
 
-**Description** : Délai en secondes pour les sessions client/serveur en cas de déconnexion inattendue lors de l'utilisation de la couche réseau QUIC. Ce délai est la période accordée à une session pendant laquelle la connexion entre le serveur et le client peut être rétablie automatiquement suite à une déconnexion involontaire. Si, à l'issue de ce délai, la connexion n'a pas été rétablie, la session est fermée.  
+**Description** : Délai en secondes pour les sessions client/serveur en cas de déconnexion inattendue lors de l'utilisation de la couche réseau QUIC. Ce délai est la période accordée à une session pendant laquelle la connexion entre le serveur et le client peut être rétablie automatiquement suite à une déconnexion involontaire. Si, à l'issue de ce délai, la connexion n'a pas été rétablie, la session client est fermée avec un message.  
 
 Ce paramètre ne peut être défini que sur 4D Server et s'applique à toutes les nouvelles sessions distantes 4D (la valeur du délai des sessions existantes n'est pas modifiée). 
 

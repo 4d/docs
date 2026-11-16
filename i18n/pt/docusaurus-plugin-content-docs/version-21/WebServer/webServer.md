@@ -6,12 +6,6 @@ title: Servidor Web
 
 4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
 
-:::warning Deprecated feature
-
- Usar o servidor web em um 4D remoto (4D client) está **obsoleto** a partir do 4D 21. Não é mais recomendado utilizar este recurso.   
-
-:::
-
 ## Monitorização fácil
 
 Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. Para fazer isso, você só precisa selecionar um comando de menu ou executar uma única linha de código.
@@ -66,3 +60,10 @@ O servidor web 4D suporta acesso a dados armazenados em suas aplicações 4D atr
 ## Métodos banco de dados dedicados
 
 `On Web Authentication`, `On Web Connection`, así como también los métodos base`On REST Authentication` son los puntos de entrada de las peticiones en el servidor web; se pueden utilizar para evaluar y enrutar todo tipo de petición.
+
+
+:::warning Deprecated feature
+
+ Usar o servidor web em um 4D remoto (4D client) está **obsoleto** a partir do 4D 21. Não é mais recomendado utilizar este recurso.   
+
+:::

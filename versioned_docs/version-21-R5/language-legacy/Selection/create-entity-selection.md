@@ -43,6 +43,16 @@ In the optional *settings* parameter, you can pass an object containing the foll
 |context|Text|Label for the [optimization context](../../ORDA/client-server-optimization.md) applied to the entity selection.|
 
 
+:::info
+
+For performance reasons, in 4D single-user and 4D Server, the returned entity selection is directly connected to the current selection of *dsTable* (it is not a copy). Until the current selection is replaced, changes made to one are reflected in the other. For example, [`REDUCE SELECTION`](../commands/reduce-selection) shortens the entity selection, and [`.add()`](../../API/EntitySelectionClass.md#add) on the entity selection adds the entity to the current selection. To get an independent entity selection, call [`.copy()`](../../API/EntitySelectionClass.md#copy) on the result:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
+
 ## Example
 
 ```4d

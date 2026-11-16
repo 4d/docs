@@ -988,9 +988,9 @@ Esse seletor permite suspender/retomar todas as operações de histórico inicia
 
 **Se conserva entre duas sessões**: não
 
-**Valores possíveis**: número inteiro positivo. Valor padrão = 15, valor mínimo = 1. 
+**Valores possíveis**: número inteiro positivo. Valor padrão = 900, valor mínimo = 60. 
 
-**Descrição**: tempo limite em minutos para sessões cliente/servidor em caso de desconexão inesperada ao utilizar a camada de rede QUIC. Este tempo limite é o período permitido para uma sessão durante o qual a conexão entre o servidor e o cliente pode ser restabelecida automaticamente após uma desconexão não intencional. Se, ao final deste tempo limite, a conexão não tiver sido restabelecida, a sessão será encerrada.  
+**Descrição**: tempo limite em segundos para sessões cliente/servidor em caso de desconexão inesperada ao utilizar a camada de rede QUIC. Este tempo limite é o período permitido para uma sessão durante o qual a conexão entre o servidor e o cliente pode ser restabelecida automaticamente após uma desconexão não intencional. Se, ao final deste tempo limite, a conexão não tiver sido restabelecida, a sessão do cliente é encerrada com uma mensagem.  
 
 Esta configuração só pode ser definida no 4D Server e aplica-se a todas as novas sessões remotas 4D (o valor do tempo limite das sessões existentes não é alterado). 
 

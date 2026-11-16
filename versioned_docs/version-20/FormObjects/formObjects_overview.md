@@ -22,9 +22,10 @@ See the [Building Forms](https://doc.4d.com/4Dv20/4D/20.2/Building-forms.200-675
 
 * **4D language**: Commands from the [Objects (Forms)](https://doc.4d.com/4Dv20/4D/20.6/Objects-Forms.201-7486936.en.html) theme such as `OBJECT DUPLICATE` or `OBJECT SET FONT STYLE` allow to create and define form objects. 
 
-*	**JSON code in dynamic forms:** Define the properties using JSON. Use the [type](properties_Object.md#type) property to define the object type, then set its available properties.  See the [Dynamic Forms](https://doc.4d.com/4Dv21R4/4D/21-R4/Dynamic-Forms.300-7753010.en.html) page for information.  
+*	**JSON code in dynamic forms:** Define the properties using JSON. Use the [type](properties_Object.md#type) property to define the object type, then set its available properties.  See the [Dynamic Forms](https://doc.4d.com/4Dv20/4D/20.2/Dynamic-Forms.300-6750140.en.html) page for information.  
+
 Example for a button object:  
-	```
+	```json
 	{
 		"type": "button", 
 		"style": "bevel", 

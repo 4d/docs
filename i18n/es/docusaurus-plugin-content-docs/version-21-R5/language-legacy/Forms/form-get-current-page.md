@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get current page.Summary-->El comando **FORM Get current page** devuelve el número de la página actual del formulario mostrada actualmente o del formulario actual cargado vía el comando [FORM LOAD](../commands/form-load).<!-- END REF--> 
 
-El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando cambia la página del subformulario actual (la que llamó al comando). Por defecto, cuando se omite el parámetro *\**, el comando se aplica siempre al formulario padre. 
+El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando devuelve el número de página del subformulario actual (el que llamó al comando). Por defecto, cuando se omite el parámetro *\**, el comando se aplica siempre al formulario padre. 
 
 ## Ejemplo 
 

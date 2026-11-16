@@ -822,7 +822,7 @@ Consulte el ejemplo 2.
 
 **Valores posibles**: entero positivo. Valor predeterminado = 900, valor mínimo = 60. 
 
-**Descripción**: tiempo de espera en segundos para las sesiones cliente/servidor en caso de desconexión inesperada al utilizar la capa de red QUIC. Este tiempo de espera es el período permitido para una sesión durante el cual la conexión entre el servidor y el cliente puede restablecerse automáticamente tras una desconexión involuntaria. Si, al final de este tiempo de espera, la conexión no se ha restablecido, la sesión se cierra.  
+**Descripción**: tiempo de espera en segundos para las sesiones cliente/servidor en caso de desconexión inesperada al utilizar la capa de red QUIC. Este tiempo de espera es el período permitido para una sesión durante el cual la conexión entre el servidor y el cliente puede restablecerse automáticamente tras una desconexión involuntaria. Si, al final de este tiempo de espera, la conexión no se ha restablecido, la sesión cliente se cierra con un mensaje.  
 
 Este parámetro solo puede configurarse en 4D Server y se aplica a todas las nuevas sesiones remotas de 4D (el valor del tiempo de espera de las sesiones existentes no se modifica). 
 

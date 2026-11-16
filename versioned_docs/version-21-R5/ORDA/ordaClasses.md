@@ -1062,7 +1062,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHTTPGet keyword
+## `onHTTPGet` keyword
 
 Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class. 
 
@@ -1086,7 +1086,9 @@ The `exposed` keyword must also be added in this case, otherwise an error will b
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+`onHTTPGet` lets the function also be called with GET, for example by following a link. Depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can then send a request that runs in the session of the user logged in to your application.
+
+Use `onHTTPGet` only for functions that read and return content, such as a file to download, a picture or a report. Do not use `onHTTPGet` for a function that changes anything (i.e. that creates, modifies or deletes data, issues or revokes credentials, sends a message).
 
 :::
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: create-entity-selection
 title: Criar uma seleção de entidades (entity selection)
 slug: /commands/create-entity-selection
@@ -44,6 +44,16 @@ No parâmetro opcional *settings*, você pode passar um objeto que contenha a se
 | Propriedade | Tipo | Descrição                                                                                                                      |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------ |
 | context     | Text | Rótulo para o [contexto de otimização](../../ORDA/client-server-optimization.md) aplicado à seleção de entidades. |
+
+:::info
+
+Por questões de desempenho, no 4D monousuário e no 4D Server, a entity selection retornada está diretamente conectada à seleção atual de *dsTable* (não é uma cópia). Até que a seleção atual seja substituída, as alterações feitas em uma são refletidas na outra. Por exemplo, [`REDUCE SELECTION`](../commands/reduce-selection) reduz a entity selection, e [`.add()`](../../API/EntitySelectionClass.md#add) na entity selection adiciona a entidade à seleção atual. Para obter uma entity selection independente, chame [`.copy()`](../../API/EntitySelectionClass.md#copy) no resultado:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
 
 ## Exemplo
 
