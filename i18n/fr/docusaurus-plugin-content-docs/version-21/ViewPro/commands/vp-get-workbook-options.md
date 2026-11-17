@@ -23,8 +23,8 @@ title: VP Get workbook options
 
 ## Description
 
-`VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-retourne un objet contenant toutes les options du workbook dans *vpAreaName*<!-- END REF -->
+`VP Get workbook options` <!-- REF #_method_.VP Get workbook options.Summary -->
+returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 

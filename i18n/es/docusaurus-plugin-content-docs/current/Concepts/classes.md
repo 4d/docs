@@ -681,7 +681,7 @@ Functions of EntitySelection classes and of other classes, as well as functions 
 
 :::note
 
-If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
+If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. El compilador nunca lo sobrescribe. See [`Resources` folder](../Project/architecture.md#resources).
 
 :::
 
@@ -765,7 +765,7 @@ exposed MCP Function addDayOffsets(... : Integer) : Date
 	return This.date
 ```
 
-After compilation, `Project/DerivedData/syntaxMCP.json` contains:
+Tras la compilación, el archivo `Project/DerivedData/syntaxMCP.json` contiene:
 
 ```json
 {

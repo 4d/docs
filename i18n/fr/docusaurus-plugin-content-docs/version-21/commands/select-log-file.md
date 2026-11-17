@@ -55,6 +55,6 @@ OK prend la valeur 1 si le fichier d'historique est correctement créé ou ferm�
 |                       |           |
 | --------------------- | --------- |
 | Numéro de commande    | 345       |
-| Thread safe           | yes       |
+| Thread safe           | oui       |
 | Modifie les variables | OK, error |
 

@@ -142,11 +142,11 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | ICU             | 77.1                   | 21                  | Cette mise à jour entraîne une reconstruction automatique des index alphanumériques, textes et objets.                                |
 | libldap         | 2.6.10 | 21                  |                                                                                                                                                       |
 | libsasl         | 2.1.28 | 20                  |                                                                                                                                                       |
-| Libuv           | 1.53.0 | **21 R5**           | Utilisé pour QUIC                                                                                                                                     |
+| Libuv           | 1.53.0 | 21 R5               | Utilisé pour QUIC                                                                                                                                     |
 | libZip          | 1.11.4 | 21                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                            |
 | LZMA            | 5.8.1  | 21                  |                                                                                                                                                       |
-| ngtcp2          | 1.24.0 | 21 R4               | Utilisé pour QUIC                                                                                                                                     |
-| OpenSSL         | 4.0.3  | **21 R5**           |                                                                                                                                                       |
+| ngtcp2          | 1.26.0 | **21 R6**           | Utilisé pour QUIC                                                                                                                                     |
+| OpenSSL         | 4.0.3  | 21 R5               |                                                                                                                                                       |
 | PDFWriter       | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS        | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit          | WKWebView                              | 19                  |                                                                                                                                                       |

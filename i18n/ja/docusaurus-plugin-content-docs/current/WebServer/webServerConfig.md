@@ -582,13 +582,31 @@ User-Agent: <name>
 
 次の値が提供されています:
 
-- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティの Webサイトには決して送信されません。
-- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
+- "Strict" (default `SameSite` attribute value for 4D session cookies): the session cookie is only sent with requests coming from pages of the same site, and never with requests coming from other websites. A "site" is a domain with all its subdomains, with the same scheme: `https://app.example.com` and `https://blog.example.com` are the same site, `http://app.example.com` is another one.
+- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site with a GET request (i.e. they follow a link).
 - "None": ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
 
-セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。
+#### Effect on exposed functions
 
-> HTTPサーバーで `SameSite=None` を設定することは、(HTTPS でのみ使用される) `Secure` 属性が欠落し、cookie がブロックされるため、推奨されません。
+Any web page open in a user's browser can make that browser send requests to your application. If the user has opened a 4D web session in the same browser, the `SameSite` value determines whether these requests carry the 4D session cookie:
+
+- with the cookie, the request runs in the user's session. This can be intended (from an intranet portal, for example), but a malicious website can use it to act on behalf of the user (cross-site request forgery, CSRF);
+- without the cookie, the request runs as a guest.
+
+In both cases, the function is executed only if the privileges of that session allow it.
+
+| Request from another website to                                                                               | "Strict"        | "Lax"                                                                            | "None"                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- | --------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| an [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function (POST only) | Runs as a guest | Runs as a guest                                                                  | Runs in the user's session (form, script)                           |
+| an exposed [onHTTPGet](../ORDA/ordaClasses.md#onhttpget-keyword) function (GET and POST)   | Runs as a guest | Runs in the user's session through a link or a redirection; as a guest otherwise | Runs in the user's session (link, redirection, image, form, script) |
+
+:::note 注記
+
+- Keep in mind that a site includes its subdomains. Whatever the `SameSite` value, requests sent by pages of another application on your site (for example https://blog.example.com for https://app.example.com) run in the user's session.
+- Use "None" only if your application must be used inside another website (for example in a frame), and check that each exposed function can safely run in the user's session when another website requests it.
+- セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。 HTTPサーバーで `SameSite=None` を設定することは、(HTTPS でのみ使用される) `Secure` 属性が欠落し、cookie がブロックされるため、推奨されません。
+
+:::
 
 ## プリエンプティブプロセスを使用
 

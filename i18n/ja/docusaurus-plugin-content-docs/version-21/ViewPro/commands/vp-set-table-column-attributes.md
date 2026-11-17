@@ -22,7 +22,7 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 | 引数         | 型       |    | 説明                                             |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |
-| tableName  | Text    | -> | Table name                                     |
+| tableName  | Text    | -> | 表組みの名称                                         |
 | column     | Integer | -> | 表の列のインデックス                                     |
 | attributes | Object  | -> | *column* の列に適用する属性                             |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |

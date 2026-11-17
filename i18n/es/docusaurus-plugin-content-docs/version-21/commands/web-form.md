@@ -52,7 +52,7 @@ El comando devuelve `null` si es llamado en una petición que no se origina desd
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1735 |
-| Hilo seguro       | yes   |
+| Hilo seguro       | sí   |
 
 
 

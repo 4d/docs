@@ -45,7 +45,7 @@ SPN 識別子は以下のパターンに従う必要があります:
 4D アプリケーションでは、SPN は以下のようにして設定することができます:
 
 - 4D Server での使用に対しては、データベースストラクチャー設定[structure settings](../Project/architecture.md#sources) 内で設定できます。
-- 配布のための使用については、[ユーザー設定](../Project/architecture.md#settings-ユーザーデータ) で設定できます。
+- 配布のための使用については、[ユーザー設定](../Project/architecture.md#settings-ユーザー) で設定できます。
 
 ## SSOの実装
 

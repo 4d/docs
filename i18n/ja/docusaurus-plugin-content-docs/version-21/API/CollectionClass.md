@@ -266,7 +266,7 @@ $vSize:=$col.length //$vSize=0
 var $c; $fruits : Collection
 $c:=New collection(1;2;3;4;5;6)
 $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
-$c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
+$c.combine($fruits;3) //$c=[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 ```
 
 <!-- END REF -->

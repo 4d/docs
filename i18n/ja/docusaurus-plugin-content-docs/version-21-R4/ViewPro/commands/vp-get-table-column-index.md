@@ -22,7 +22,7 @@ title: VP Get table column index
 | 引数         | 型       |                             | 説明                                             |
 | ---------- | ------- | --------------------------- | ---------------------------------------------- |
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |
-| tableName  | Text    | ->                          | Table name                                     |
+| tableName  | Text    | ->                          | 表組みの名称                                         |
 | columnName | Text    | ->                          | 列の名称                                           |
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |
 | 戻り値        | Integer | <- | *columnName* のインデックス                           |

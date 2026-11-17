@@ -12,12 +12,6 @@ Web サーバークォータを使用して、トラフィック、リクエス�
 
 :::
 
-:::tip 関連したBlog 記事
-
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## 要件
 
 クォータの設定のためには、[スケーラブルセッション](./sessions.md#Webセッションの有効化) が有効化されている必要があります。

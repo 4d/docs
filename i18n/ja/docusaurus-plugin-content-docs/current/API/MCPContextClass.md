@@ -117,7 +117,7 @@ End if
 
 ## .error()
 
-<!-- REF #MCPContextClass.error().Syntax -->**.error**( *message* : Text )<!-- END REF -->
+<!-- REF #MCPContextClass.error().Syntax -->**.error**( { *message* : Text } )<!-- END REF -->
 
 <!-- REF #MCPContextClass.error().Params -->
 
@@ -132,7 +132,7 @@ End if
 
 #### 説明
 
-The `.error()` function <!-- REF #MCPContextClass.error().Summary -->makes the current tool call return an error result with *message*<!-- END REF -->. The result has `isError: true`, and the value returned by the function is ignored.
+The `.error()` function <!-- REF #MCPContextClass.error().Summary -->makes the current tool call return an error result with *message*<!-- END REF -->. The result has `isError: true`, and the value returned by the function is ignored. If *message* is omitted, the error message is empty.
 
 `.error()` does not stop the execution of the function: call `return` after it if needed.
 
@@ -157,16 +157,16 @@ exposed MCP Function refund($amount : Real) : Text
 
 ## .hasInput()
 
-<!-- REF #MCPContextClass.hasInput().Syntax -->**.hasInput**( *name* : Text ) : Boolean<!-- END REF -->
+<!-- REF #MCPContextClass.hasInput().Syntax -->**.hasInput**( { *name* : Text } ) : Boolean<!-- END REF -->
 
 <!-- REF #MCPContextClass.hasInput().Params -->
 
 <div class="no-index">
 
-| 引数   | 型       |                             | 説明                                               |
-| ---- | ------- | --------------------------- | ------------------------------------------------ |
-| name | Text    | &#8594; | Name of a field requested with `.requireInput()` |
-| 戻り値  | Boolean | &#8592; | True if the user answered this field             |
+| 引数   | 型       |                             | 説明                                                                                          |
+| ---- | ------- | --------------------------- | ------------------------------------------------------------------------------------------- |
+| name | Text    | &#8594; | Name of a field requested with `.requireInput()`                                            |
+| 戻り値  | Boolean | &#8592; | True if the user answered this field (or any field if *name* is omitted) |
 
 </div>
 <!-- END REF -->
@@ -174,6 +174,8 @@ exposed MCP Function refund($amount : Real) : Text
 #### 説明
 
 The `.hasInput()` function <!-- REF #MCPContextClass.hasInput().Summary -->returns **True** if the current call contains a verified answer of the user for the *name* field<!-- END REF -->.
+
+If *name* is omitted or empty, `.hasInput()` returns **True** if the current call contains a verified answer of the user for at least one field.
 
 The answer is verified when the client calls the tool again with the answers and a valid `requestState`: signed by 4D for the same token, tool, arguments, and fields, less than 10 minutes ago, and since the MCP server was last enabled. Otherwise, `.hasInput()` returns **False**.
 

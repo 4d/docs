@@ -54,7 +54,7 @@ Le champ contient en fait "proportion". 4D accepte et stocke la saisie complète
 
 Les formats de date contrôlent la façon dont les dates apparaissent lorsqu'elles sont affichées ou imprimées. Pour la saisie des données (FR), vous entrez les dates dans le format JJ/MM/AAAA, quel que soit le format d'affichage que vous avez choisi.
 
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
+> Contrairement aux formats [Alpha](#alpha-format) et [numériques](#number-format), les formats d'affichage des dates doivent être sélectionnés uniquement parmi les formats 4D intégrés.
 
 Le tableau ci-dessous montre les choix disponibles :
 
@@ -315,7 +315,7 @@ Si le champ est réduit à une taille plus petite que celle de l'image d'origine
 
 Les formats heure contrôlent la façon dont les heures apparaissent lorsqu'elles sont affichées ou imprimées. Pour la saisie des données, vous entrez les heures dans le format 24 heures HH:MM:SS ou dans le format 12 heures HH:MM:SS AM/PM, quel que soit le format d'affichage que vous avez choisi.
 
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
+> Contrairement aux formats [Alpha](#alpha-format) et [numériques](#number-format), les formats d'affichage des heures doivent être sélectionnés uniquement parmi les formats 4D intégrés.
 
 Le tableau ci-dessous montre les formats d'affichage du champ Heure et donne des exemples :
 

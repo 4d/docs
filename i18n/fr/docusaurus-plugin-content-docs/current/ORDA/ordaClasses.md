@@ -1020,7 +1020,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 ```
 
-## onHTTPGet
+## `onHTTPGet` keyword
 
 Utilisez le mot-clé `onHTTPGet` pour déclarer des fonctions qui peuvent être appelées par des requêtes HTTP utilisant le verbe `GET`. Ces fonctions peuvent renvoyer n'importe quel contenu web, par exemple en utilisant la classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
@@ -1044,7 +1044,9 @@ Le mot-clé `exposed` doit également être ajouté dans ce cas, sinon une erreu
 
 :::caution
 
-Comme ce type d'appel est une action facile d'accès, le développeur doit s'assurer qu'aucune action sensible n'est effectuée dans ces fonctions.
+`onHTTPGet` lets the function also be called with GET, for example by following a link. Depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can then send a request that runs in the session of the user logged in to your application.
+
+Use `onHTTPGet` only for functions that read and return content, such as a file to download, a picture or a report. Do not use `onHTTPGet` for a function that changes anything (i.e. that creates, modifies or deletes data, issues or revokes credentials, sends a message).
 
 :::
 

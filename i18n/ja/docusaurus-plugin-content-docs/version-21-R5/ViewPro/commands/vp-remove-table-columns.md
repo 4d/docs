@@ -22,7 +22,7 @@ title: VP REMOVE TABLE COLUMNS
 | 引数         | 型       |    | 説明                                             |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |
-| tableName  | Text    | -> | Table name                                     |
+| tableName  | Text    | -> | 表組みの名称                                         |
 | column     | Integer | -> | 列の削除の開始場所を指定する表組み内のインデックス                      |
 | count      | Integer | -> | 削除する列の数 (>0)                |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |

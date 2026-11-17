@@ -9,7 +9,7 @@ Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et co
 
 > - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
 > - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
-> - You need to manage the [session](authUsers.md) for your requesting application.
+> - Vous devez gérer la [session](authUsers.md) pour votre application requérante.
 
 ## Démarrage du serveur REST
 
@@ -29,23 +29,23 @@ Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est
 
 Vous pouvez configurer les accès REST de l'une des manières suivantes :
 
-- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
+- assigner un groupe d'utilisateurs en **lecture/écriture** aux services REST dans la page "Web/REST" des paramètres de la structure ;
+- écrire une méthode base `On REST Authentication` pour intercepter et gérer chaque requête REST initiale.
 
-> Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+> Vous ne pouvez pas utiliser les deux fonctionnalités simultanément. Une fois qu'une méthode base `On REST Authentication` a été définie, 4D lui donne entièrement le contrôle des requêtes REST : tout paramétrage effectué à l'aide du menu "Lecture/Ecriture" de la page de Web/Fonctionnalités Web des paramètres de la structure est ignoré.
 
 ### Utilisation des Paramètres de la Structure
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+Le menu **Lecture/Écriture** de la page "Web/Web Features" des paramètres de la structure désigne un groupe d'utilisateurs 4D autorisé à établir le lien vers l'application 4D en utilisant des requêtes REST.
 
-By default, the menu displays `\<Anyone>`, which means that REST accesses are open to all users. Une fois que vous avez spécifié un groupe, seul un compte utilisateur 4D appartenant à ce groupe peut être utilisé pour [accéder à 4D via une requête REST](authUsers.md). Si un compte utilisé n'appartient pas à ce groupe, 4D renvoie une erreur d'authentification à l'expéditeur de la requête.
+Par défaut, le menu affiche `<Tout le monde>`, ce qui signifie que les accès REST sont ouverts à tous les utilisateurs. Une fois que vous avez spécifié un groupe, seul un compte utilisateur 4D appartenant à ce groupe peut être utilisé pour [accéder à 4D via une requête REST](authUsers.md). Si un compte utilisé n'appartient pas à ce groupe, 4D renvoie une erreur d'authentification à l'expéditeur de la requête.
 
 > Pour que ce paramètre prenne effet, la méthode base `On REST Authentication` ne doit pas être définie. Si elle existe, 4D ignore les paramètres d'accès définis dans les propriétés de la structure.
 
 ### Méthode base On REST Authentication
 
 La méthode base `On REST Authentication` vous permet de contrôler de manière personnalisée l’ouverture des sessions REST sur 4D. Cette méthode base est automatiquement appelée lorsqu'une nouvelle session est ouverte à l'aide d'une requête REST. Lorsqu'une [requête d’ouverture de session REST](authUsers.md) est reçue, les identifiants de connexion sont fournis dans l’en-tête de la requête. La méthode base `On REST Authentication` est appelée afin de vous permettre d’évaluer ces identifiants. Vous pouvez utiliser la liste des utilisateurs de la base 4D ou votre propre table d’identifiants.
-For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
+Pour plus d'informations, reportez-vous à la [documentation de la méthode base `On REST Authentication`](https://doc.4d.com/4Dv20/4D/20.6/On-REST-Authentication-database-method.301-7487975.fe.html).
 
 ## Exposer les tables et les champs
 

@@ -73,7 +73,11 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 ### `onHTTPGet`
 
-HTTP `GET` リクエストから呼び出すことのできる関数は、[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onHttpGet-キーワード) も使用して明確に宣言されていなければなりません。例:
+HTTP `GET` リクエストから呼び出すことのできる関数は、[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onHttpGet-キーワード) も使用して明確に宣言されていなければなりません。 Functions declared with `exposed` alone can only be called with `POST`.
+
+Declare with `onHTTPGet` only functions that read and return content: depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can send a request that runs in the session of a logged-in user (see the caution in [`onHTTPGet` keyword section](../ORDA/ordaClasses.md#onhttpget-keyword)).
+
+例:
 
 ```4d
 // GET リクエストを許可する

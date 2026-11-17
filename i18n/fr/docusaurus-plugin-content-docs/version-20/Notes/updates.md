@@ -5,7 +5,7 @@ title: Release Notes
 
 :::tip
 
-Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D 20.x LTS.
+Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20.x LTS.
 
 :::
 
@@ -13,7 +13,7 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Points forts
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.9): list of all bugs that have been fixed in 4D 20.9 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.9) : liste de tous les bugs qui ont été corrigés dans 4D 20.9 LTS.
 
 La version des clients distants se connectant à 4D Server 20.9 et suivantes doit être au moins 4D 20.9.
 
@@ -23,13 +23,13 @@ La version des clients distants se connectant à 4D Server 20.9 et suivantes doi
 
 - 4D 20.8 LTS est certifié sur Windows 11 25H2.
 - 4D 20.8 LTS est certifié sur macOS Tahoe (macOS 26).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.8) : liste de tous les bugs qui ont été corrigés dans 4D 20.8 LTS.
 
 ## 4D 20.7 LTS
 
 #### Points forts
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.7): list of all bugs that have been fixed in 4D 20.7 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.7) : liste de tous les bugs qui ont été corrigés dans 4D 20.7 LTS.
 
 :::note Version minimale du client pour 4D Server 20.7 et ultérieures
 
@@ -39,28 +39,28 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 #### Changements de comportement
 
-- As of 4D **20.7 HF2**, the [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) command returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will now return -01:02:03. Dans les versions précédentes, le signe moins était ignoré.
+- À partir de 4D **20.7 HF2**, la commande [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) retourne une expression heure négative lorsque le paramètre *timeValue* est négatif. Par exemple, `Time("-01:02:03")` renverra désormais -01:02:03. Dans les versions précédentes, le signe moins était ignoré.
 
 ## 4D 20.6 LTS
 
 #### Points forts
 
-:::info Evaluation applications
+:::info Applications d'évaluation
 
-Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building#evaluation-application).
+À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir la [description dans la documentation 4D Rx](../../../docs/Desktop/building#evaluation-application).
 
 :::
 
 - 4D 20.6 LTS est certifié sur Windows Server 2025
 
-:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+:::warning Problème connu avec Windows Server 2025
 
 Sur Windows Server 2025, certaines options personnalisées de la nouvelle boîte de dialogue d'impression de Windows ne sont pas disponibles et sont toujours à l'étude. Un correctif sera disponible dans la prochaine hotfix.
 
 :::
 
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.6) : liste de tous les bugs qui ont été corrigés dans 4D 20.6 LTS.
 
 ## 4D 20.5 LTS
 
@@ -69,19 +69,19 @@ Sur Windows Server 2025, certaines options personnalisées de la nouvelle boîte
 - 4D 20.5 LTS est certifié sur Windows 11 24H2.
 - 4D 20.5 est certifié sur macOS Sequoia (macOS 15).
 
-:::warning Known issue on Windows 11 24H2
+:::warning Problème connu sur Windows 11 24H2
 
 Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Microsoft Print to PDF peut échouer en raison d'un problème qui est toujours en cours d'investigation. Si vous imprimez fréquemment des PDF avec votre application 4D, nous vous recommandons actuellement de ne pas passer à Windows 11 24H2.
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.5) : liste de tous les bugs qui ont été corrigés dans 4D 20.5 LTS.
 
 ## 4D 20.4 LTS
 
 #### Points forts
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.4) : liste de tous les bugs qui ont été corrigés dans 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
@@ -89,7 +89,7 @@ Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Micros
 
 - CEF mis à jour en Chromium 5993
 - SpreadJS mis à jour en version 16.2.6 (dans 4D 20.2 HF1).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.3) : liste de tous les bugs qui ont été corrigés dans 4D 20.3 LTS.
 
 #### Changements de comportement
 
@@ -113,12 +113,12 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.2) : liste de tous les bugs qui ont été corrigés dans 4D 20.2 LTS.
 
 #### Changements de comportement
 
 - À partir de la version 20.2, 4D 20 LTS n'est plus compatible avec Windows Server 2012 R2.
-- **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. A fix has been made in 4D as of versions **20.2** (20.1 HF1) and **20 R2** and the value is now 0.
+- **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.2** (20.1 HF1) et **20 R2** et la valeur est maintenant 0.
 
 ## 4D 20.1 LTS
 
@@ -133,7 +133,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.1) : liste de tous les bugs qui ont été corrigés dans 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
@@ -145,7 +145,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 :::
 
-- New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+- Nouvelle propriété `plugins` dans le paramètre *options* de la commande [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore-and-log-integration).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md) : [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) renvoie *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) renvoie *id*, *flags* et *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) et [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) prennent en charge les mots-clés personnalisés.
 - Nouvelles classes [WebSocketServer](../API/WebSocketServerClass.md) et [WebSocketConnection](../API/WebSocketConnectionClass.md) pour créer et gérer des connexions WebSocket depuis 4D.
@@ -168,7 +168,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 - Nouvelle option `validateTLSCertificate` pour [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) permettant de contrôler la validation automatique des certificats.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) sur doc.4d.com.
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20) : liste de tous les bugs qui ont été corrigés dans 4D 20 LTS.
 
 #### Changements de comportement
 
@@ -240,7 +240,7 @@ Lisez [**Les nouveautés de 4D 19 R7**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 ### 4D 19 R5
 
-- The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+- Le [fichier directory.json](../Users/handling_users_groups.md#directoryjson-file) du projet peut désormais être [intégré dans le serveur](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) au moment du build, ce qui vous permet de déployer une application client/serveur avec une configuration de sécurité d'utilisateurs et groupes de base.
 - Vous pouvez maintenant [désélectionner les modules inutiles](../Desktop/building.md#deselecting-modules) dans vos applications construites.
 - La bibliothèque *MeCab* est incluse par défaut dans toutes les applications 4D sur macOS. Dans les versions précédentes, cette bibliothèque, spécialement conçue pour gérer le texte japonais, n'était disponible que dans la version japonaise de 4D sur macOS. Si vous n'avez pas besoin de cette bibliothèque dans vos applications finales, vous pouvez maintenant la [désélectionner](../Desktop/building.md#deselecting-modules).
 - [Optimisation client/serveur](../ORDA/remoteDatastores.md#clientserver-optimisation) : De nouvelles fonctions de classe permettent de gérer le cache ORDA et le contenu d'un contexte d'optimisation. Voir [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) et [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) pour plus d'informations.
@@ -274,7 +274,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 - Prise en charge des instructions [break and continue](../Concepts/flow-control.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](../Concepts/flow-control.md#return-expression) et de l'expression [return expression](../Concepts/parameters.md#return-expression) pour renvoyer des valeurs.
 - Support des [opérateurs d'assignation composés](../Concepts/operators.md#compound-assignment-operators), [opérateurs de court-circuits](../Concepts/operators.md#short-circuit-operators), et [opérateur ternaire](../Concepts/operators.md#ternary-operator)
-- The [Code Editor](../code-editor/overview.md) now includes an dropdown tool and supports markers for better code navigation.
+- L'[Éditeur de code](../code-editor/overview.md) comporte désormais une liste déroulante et prend en charge des marqueurs pour une meilleure navigation dans le code.
 - Nouvelles préférences : Option [**Inclure les jetons dans les fichiers source du projet**](../Preferences/general.md#include-tokens-in-project-source-files) et [**Afficher les presse-papiers**](../Preferences/methods.md#show-clipboards) sur la page Méthodes.
 - Nouvelle requête REST pour [verrouiller/déverrouiller](../REST/$lock.md) les entités.
 - Le chapitre [4D View Pro](../ViewPro/getting-started.md) a été ajouté avec de nouvelles commandes : [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
@@ -284,7 +284,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 - En raison de la prise en charge de l'[opérateur ternaire](../Concepts/operators.md#ternary-operator), les deux points ":" ne sont plus autorisés dans les noms de variables, de champs, de constantes, de fonctions, de plugins et de méthodes de projet. Si votre base de données/projet contient des identifiants avec des deux-points, vous devez les remplacer avant de la convertir à la v19 R4 ou à une version plus récente, sinon des erreurs peuvent se produire dans votre code. Par exemple, si vous avez une variable nommée *a:b*, elle peut être interprétée comme une syntaxe d'opérateur ternaire :
 
 ```4d
-$value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
+$value:=($size>1000) ? a:b // Ici, 'a:b' est considéré comme un opérateur ternaire.
 ```
 
 ### 4D 19 R3
@@ -312,9 +312,9 @@ ALERT($param1+""+$param2)
 
 Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). Pour bénéficier de cette simplification globale, vous devez recompiler à la fois les méthodes appelantes et les méthodes appelées ; les composants doivent donc être recompilés.
 
-- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
+- Le débogage des sessions du serveur web [est plus facile sur 4D Server](../WebServer/sessions.md).
 
-- The new [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) component allows you to connect to third-party APIs such as Microsoft Graph.
+- Le nouveau composant [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
 
 - Ce nouvel algorithme est automatiquement utilisé lorsqu'un mot de passe est modifié à l'aide de la boîte à outils, de la commande <code>CHANGE PASSWORD</code> ou de la commande <code>Set user properties</code> . Ce nouvel algorithme est automatiquement utilisé lorsqu'un mot de passe est modifié à l'aide de la boîte à outils, de la commande `CHANGE PASSWORD` ou de la commande `Set user properties`. Une fois le mot de passe modifié, l'ouverture de la base de données avec une version antérieure à 4D 19 R3 entraînera un refus d'authentification pour ce compte. Si vous utilisez les mots de passe 4D, il est fortement recommandé de sauvegarder le fichier .4db (bases de données binaires) ou le fichier directory.json (projets) avant d'effectuer la mise à jour vers 4D 19 R3 ou une version ultérieure.
 

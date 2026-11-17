@@ -81,27 +81,27 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                    |                             | Description                                |
 | ---------- | ----------------------------------------------------------------------- | :-------------------------: | ------------------------------------------ |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer |              ->             | Valeur(s) de collection |
-| Résultat   | Collection                                                              | <- | nombres                                    |
+| Résultat   | Collection                                                              | <- | La nouvelle collection                     |
 
 </div>
 <!-- END REF -->
 
 #### Description
 
-Recherche avec des dates :
+La commande `New collection` <!-- REF #_command_.New collection.Summary -->crée une nouvelle collection vide ou préremplie<!-- END REF --> et retourne sa référence.
 
-Prise en charge des formules
+Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Utilisation de parenthèses
+> N'oubliez pas que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable du type `Collection` mais ne créent pas de collection.
 
-Condition Not appliquée à une assertion
+Optionnellement, vous pouvez préremplir la nouvelle collection en passant une ou plusieurs *value*(s) comme paramètre(s).
 
 Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
-Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+ myCol[10]:="Mon nouvel élément"
 ```
 
 Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
@@ -110,7 +110,7 @@ Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris 
 
 Vous devez prêter attention aux problèmes de conversion suivants :
 
-- La nouvelle collection partagée
+- Si vous passez un pointeur, il est conservé "tel quel" ; il est évalué à l'aide de la commande `JSON Stringify`
 - Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Indice de fin (non inclus)
 - Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).
 
@@ -175,11 +175,11 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou préremplie<!-- END REF --> et retourne sa référence.
 
-Par exemple : Par exemple : La lecture d'un élément sans structure *Use...End use* est cependant possible.
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](Concepts/shared.md#useend-use), sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](#push) ou [`map()`](#map) car elles utilisent automatiquement une structure interne *Use...End use*). La lecture d'un élément sans structure *Use...End use* est cependant possible.
 
 :::info
 
-Les symboles suivants sont pris en charge :
+Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](Concepts/shared.md).
 
 :::
 
@@ -187,7 +187,7 @@ Si vous ne passez aucun paramètre, `New shared collection` crée une collection
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Utilisation de parenthèses
+> N'oubliez pas que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable du type `Collection` mais ne créent pas de collection.
 
 Optionnellement, vous pouvez préremplir la nouvelle collection partagée en passant une ou plusieurs *value*(s) comme paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
@@ -201,8 +201,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 - date
 - heure (stockée en nombre de milliseconds - réel)
 - Null
-- Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
-- Sommaire
+- objet partagé
+- collection partagée
 
 :::note
 
@@ -419,7 +419,7 @@ Par défaut, les éléments *col2* sont ajoutés à la fin de la collection orig
 var $c; $fruits : Collection
 $c:=New collection(1;2;3;4;5;6)
 $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
-$c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
+$c.combine($fruits;3) //$c=[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 ```
 
 <!-- END REF -->
@@ -1224,7 +1224,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1315,7 +1315,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant le test. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1499,7 +1499,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1597,7 +1597,7 @@ Dans *toSearch*, passez l'expression à trouver dans la collection. Vous pouvez 
 Optionnellement, vous pouvez passer l'indice de la collection à partir duquel démarrer la recherche dans *startFrom*.
 
 - Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la recherche n'est pas effectuée.
-- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Note**: Même si *startFrom* est négatif, la collection est toujours recherchée de gauche à droite.
+- Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention** : N'oubliez pas que la numérotation des éléments de collection débute à 0.
 - Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -2023,7 +2023,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet Formula](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet;
 - soit *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans <em x-id="3">param</em> (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -2543,9 +2543,9 @@ Le paramètre *queryString* doit respecter la syntaxe suivante :
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-For detailed information on how to build a query using *queryString*, *value* and *querySettings* parameters, please refer to the [`dataClass.query()`](DataClassClass.md#query) function description.
+Pour plus d'informations sur la génération d'une requête à l'aide des paramètres *queryString*, *value* et *querySettings*, reportez-vous à la description de la fonction de DataClass [`query()`](DataClassClass.md#query).
 
-> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+> Les formules ne sont pas prises en charge par la fonction `collection.query()`, ni dans le paramètre *queryString*, ni en tant que paramètre objet *formula*.
 
 #### Exemple 1
 
@@ -2758,8 +2758,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //returns 86400
-
+$r:=$c.reduceRight(Formula($1.accumulator=$1.value); 1)  //86400
 
 ```
 
@@ -3195,7 +3194,7 @@ La callback reçoit les paramètres suivants :
 
 Si vous avez utilisé une méthode, vous devez définir le paramètre suivant :
 
-- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** otherwise.
+- *$1.result* (booléen) : **true** si *$1.value < $1.value2*, **false** sinon.
 
 #### Exemple 1
 

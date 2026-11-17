@@ -22,7 +22,7 @@ title: VP SET TABLE THEME
 | 引数         | 型                                                                                 |    | 説明                                             |
 | ---------- | --------------------------------------------------------------------------------- | -- | ---------------------------------------------- |
 | vpAreaName | Text                                                                              | -> | 4D View Pro フォームオブジェクト名                        |
-| tableName  | Text                                                                              | -> | Table name                                     |
+| tableName  | Text                                                                              | -> | 表組みの名称                                         |
 | options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | 設定する表テーマのプロパティ                                 |
 | sheet      | Integer                                                                           | -> | シートのインデックス (省略した場合はカレントシート) |
 

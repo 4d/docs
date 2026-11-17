@@ -22,7 +22,7 @@ title: VP Get table range
 | 引数         | 型       |                             | 説明                                                                         |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------------------- |
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                                                    |
-| tableName  | Text    | ->                          | Table name                                                                 |
+| tableName  | Text    | ->                          | 表組みの名称                                                                     |
 | onlyData   | Integer | ->                          | `vk table full range` (デフォルト) または `vk table data range` |
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート)                             |
 | 戻り値        | Object  | <- | 表組みが含まれるレンジ                                                                |

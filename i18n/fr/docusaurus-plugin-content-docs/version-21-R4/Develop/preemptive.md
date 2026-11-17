@@ -41,7 +41,7 @@ Le code 4D ne peut être exécuté dans un process préemptif que lorsque certai
 
 La propriété "thread safety" de chaque élément dépend de l'élément lui-même :
 
-- Commandes 4D : la propriété thread-safe est une propriété interne. Dans la documentation 4D, les commandes thread-safe sont identifiées par l'icône ![](../assets/en/Develop/thread-safe.png). Vous pouvez également utiliser la commande [`Command name`](../commands/command-name) pour savoir si une commande est thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
+- Commandes 4D : la propriété thread-safe est une propriété interne. The 4D documentation indicates whether each command is thread-safe or not in the Properties section.  Vous pouvez également utiliser la commande [`Command name`](../commands/command-name) pour savoir si une commande est thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
 - Méthodes projet : les conditions pour être thread-safe sont répertoriées dans [ce paragraphe](#writing-a-thread-safe-method).
 
 Fondamentalement, le code à exécuter dans des threads préemptifs ne peut pas appeler des parties avec des interactions externes, telles que du code de plug-in ou des variables interprocess. Cependant, l'accès aux données est autorisé car le serveur de données 4D et ORDA prennent en charge l'exécution préemptive.

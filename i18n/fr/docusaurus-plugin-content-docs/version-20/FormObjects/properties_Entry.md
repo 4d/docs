@@ -34,7 +34,7 @@ Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbo
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
   Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
+Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande `WA SET PREFERENCE`.
 
 #### Grammaire JSON
 
@@ -85,7 +85,7 @@ La plupart du temps, les [filtres intégrés](#default-entry-filters) de 4D rép
 - vous pouvez directement entrer une chaîne de définition de filtre
 - ou vous pouvez entrer le nom d'un filtre de saisie créé dans l'éditeur de filtres de la Boîte à outils. Les noms des filtres personnalisés que vous créez commencent par une barre verticale (|).
 
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
+Pour plus d'informations sur la création de filtres d'entrée, voir [Codes des filtres et formats](https://doc.4d.com/4Dv18/4D/18/Codes-des-filtres-et-formats.300-4575706.fr.html).
 
 ### Filtres par défaut
 
@@ -221,7 +221,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
 
-> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
+> Vous pouvez également fixer et lire le texte du placeholder par programmation à l'aide des commandes `OBJECT SET PLACEHOLDER` et `OBJECT Get placeholder`.
 
 #### Grammaire JSON
 

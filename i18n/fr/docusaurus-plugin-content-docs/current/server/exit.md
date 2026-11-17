@@ -27,15 +27,15 @@ Une fenêtre similaire apparaît sur chaque poste distant 4D. Cette fenêtre est
 
 - **Attendre que tous les clients aient quitté**
 
-Le serveur ne s'arrêtera qu'une fois que tous les clients, y compris ceux en mode veille, se seront déconnectés. Cette option peut s'avérer inappropriée pour les opérations de maintenance lancées pendant les horaires de déjeuner, par exemple, puisqu'il est possible que des clients soient [en mode veille](../ServerWindow/users.md#managing-sleeping-users).
+Le serveur ne s'arrêtera qu'une fois que tous les clients, y compris ceux en mode veille, se seront déconnectés. Cette option peut s'avérer inappropriée pour les opérations de maintenance lancées pendant les horaires de déjeuner, par exemple, puisqu'il est possible que des clients soient [en mode veille](../ServerWindow/sessions.md#management-of-sleeping-client-sessions).
 
 - **Attendre que les clients actifs aient quitté. (Ignorer les clients endormis)**
 
-Le serveur ne s'arrêtera qu'une fois que tous les clients actifs se seront déconnectés (autrement dit, tous les postes clients qui ne sont pas en [mode veille](../ServerWindow/users.md#managing-sleeping-users)). Avec cette option, les clients en mode veille ne sont pas considérés comme connectés. Utilisez cette option si vous souhaitez effectuer des opérations de maintenance pendant la pause déjeuner, par exemple. Lorsque cette option est activée, tous les clients en mode veille rencontreront une erreur de connexion à leur réveil.
+Le serveur ne s'arrêtera qu'une fois que tous les clients actifs se seront déconnectés (autrement dit, tous les postes clients qui ne sont pas en [mode veille](../ServerWindow/sessions.md#management-of-sleeping-client-sessions)). Avec cette option, les clients en mode veille ne sont pas considérés comme connectés. Utilisez cette option si vous souhaitez effectuer des opérations de maintenance pendant la pause déjeuner, par exemple. Lorsque cette option est activée, tous les clients en mode veille rencontreront une erreur de connexion à leur réveil.
 
 :::note
 
-Un *client endormi* désigne une application 4D distante installée sur une machine qui est passée en [mode veille](../ServerWindow/users.md#managing-sleeping-users) alors que la connexion au serveur était encore active.
+Un *client endormi* désigne une application 4D distante installée sur une machine qui est passée en [mode veille](../ServerWindow/sessions.md#management-of-sleeping-client-sessions) alors que la connexion au serveur était encore active.
 
 :::
 

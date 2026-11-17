@@ -176,16 +176,15 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// cs.EmployeeSelection class
-
+// classe cs.EmployeeSelection	
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extraire de cette entity selection les employés dont le salaire est supérieur à la moyenne. 
 
 Function withSalaryGreaterThanAverage
-	C_OBJECT($0)
-	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+ C_OBJECT($0)
+ $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -234,7 +233,7 @@ Function getPopulation()
 
 
 Function isBigCity(): Boolean
-// The getPopulation() function is usable inside the class
+// La fonction getPopulation() est utilisable dans la classe
 $0:=This.getPopulation()>50000
 ```
 

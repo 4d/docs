@@ -6,12 +6,6 @@ title: Web サーバー
 
 4D のローカルモード、および 4D Server には Webサーバーエンジン (HTTPサーバー) があります。 この Webサーバーエンジンを使用して、4Dデータベースを最大限に活用できる強力な Webアプリケーションを設計・公開することができます。
 
-:::warning 廃止予定の機能
-
-Using the web server on a remote 4D (4D client) is **deprecated** as of 4D 21. この機能を使用することは今後推奨されません。
-
-:::
-
 ## 簡単なモニタリング
 
 Webアプリケーションの公開は、いつでも開始または停止することができます。メニューコマンドを選択、またはランゲージコマンドを実行するだけで、操作できます。
@@ -66,3 +60,9 @@ RESTリクエストの詳細については、[RESTサーバー](../REST/getting
 ## 専用のデータベースメソッド
 
 `On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッドは、Webサーバーにおいてリクエストのエントリーポイントであり、あらゆるタイプのリクエストを評価・ルーティングするのに使用できます。
+
+:::warning 廃止予定の機能
+
+Using the web server on a remote 4D (4D client) is **deprecated** as of 4D 21. この機能を使用することは今後推奨されません。
+
+:::

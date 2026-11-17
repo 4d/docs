@@ -82,12 +82,11 @@ Dans cet exemple, nous voulons créer quatre fenêtres :
 
 ## Voir également
 
-[Create entity selection](create-entity-selection.md)  
-
+[Create entity selection](create-entity-selection.md)
 
 ## Propriétés
 
-|  |  |
-| --- | --- |
+|                    |      |
+| ------------------ | ---- |
 | Numéro de commande | 1840 |
-| Thread safe | no |
+| Thread safe        | non  |

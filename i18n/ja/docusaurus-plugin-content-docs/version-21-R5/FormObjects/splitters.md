@@ -33,7 +33,7 @@ title: スプリッター
 
 ### プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - - [ヘルプTips](properties_Help.md#ヘルプtips)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#variable-or-expression) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 ### サポートされるイベント
 
@@ -57,7 +57,7 @@ title: スプリッター
 
 オブジェクトメソッドをスプリッターに指定することができます。スプリッターを移動する間 `On Clicked` イベントでこのメソッドが呼び出されます。
 
-各スプリッターには *倍長整数* 型の [変数](properties_Object.md#変数あるいは式) が割り当てられます。この変数はオブジェクトメソッドやフォームメソッドで使用することができます。この変数の値により、スプリッターの最初の位置に対する現在位置がピクセル単位で示されます。
+各スプリッターには *倍長整数* 型の [変数](properties_Object.md#variable-or-expression) が割り当てられます。この変数はオブジェクトメソッドやフォームメソッドで使用することができます。この変数の値により、スプリッターの最初の位置に対する現在位置がピクセル単位で示されます。
 
 - この値が負数の場合: スプリッターは上または左方向へ移動されました。
 - この値が正数の場合: スプリッターは下または右方向へ移動されました。

@@ -79,7 +79,7 @@ slug: /WritePro/formulas
 
 :::
 
-(\*) **重要**: **This.pageNumber**、**This.pageIndex** および **This.pageCount** は4D Write Pro フォーミュラの中で直接的にのみ使用することができます( *formula.source* 文字列の中に記入されている必要があります)。これらはフォーミュラから呼び出されたメソッド内の4D ランゲージで使用された場合には不正確な値を返します。ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます:
+(\*) **重要**: **This.pageNumber**、**This.pageIndex** および **This.pageCount** は4D Write Pro フォーミュラの中で直接的にのみ使用することができます( *formula.source* 文字列の中に記入されている必要があります)。これらはフォーミュラから呼び出されたメソッド内の 4Dランゲージで使用された場合には不正確な値を返します。ただし、フォーミュラから直接呼び出されるメソッドにこれらを引数として渡すことはできます:
 
 - この使い方は動作します: « *formatNumber(This.pageNumber)* »
 - この使い方は動作**しません**: « *formatNumber* » (*formatNumber* メソッド内部で*This.pageNumber* を処理する)

@@ -3,7 +3,7 @@ id: getting-started
 title: Prise en main
 ---
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
+4D View Pro est un [composant 4D](Concepts/components.md) qui inclut une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [commandes](method-list.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
@@ -35,7 +35,7 @@ Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans l
 
 > Les zones 4D View Pro peuvent également être [créées et utilisées hors écran](method-list.md#vp-run-offscreen-area).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
+Vous pouvez [configurer la zone](configuring.md) à l'aide de la Liste de propriétés et des commandes 4D View Pro.
 
 ## Fondamentaux de la sélection, de la saisie et de la navigation
 
@@ -84,7 +84,7 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
 
 - cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 - cliquez sur une cellule ou une plage de cellules :
-  - **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+  - **Filtrer** : permet de masquer les lignes à travers les filtres (voir [Filtrer les lignes](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) dans la documentation SpreadJS).
   - **Trier** : permet de trier le contenu des colonnes.
   - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
     ![](../assets/en/ViewPro/vpContext2.PNG)
@@ -93,11 +93,11 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
 
 Les méthodes 4D View Pro peuvent être utilisées dans l'éditeur de code 4D, tout comme les commandes du langage 4D.
 
-Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
+4D View Pro étant un composant 4D intégré, vous pouvez accéder à sa liste de méthodes à partir de l'Explorateur, dans la section **Méthodes composants** :
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list of component methods, see [Method list](method-list.md).
+Pour une liste détaillée des méthodes du composant, voir [Liste des méthodes](method-list.md).
 
 ### Traiter une zone 4D View Pro
 
@@ -105,7 +105,7 @@ Une zone 4D View Pro gère plusieurs objets et éléments.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
+La plupart des commandes 4D View Pro nécessitent un paramètre *vpAreaName*, qui correspond au [**nom de la zone de formulaire 4D View Pro**](FormObjects/viewProArea_overview.md) (objet de formulaire 4D). Ce nom est la propriété du [nom de l'objet](FormObjects/properties_Object.md#object-name).
 
 Par exemple, si vous souhaitez définir le nombre total de colonnes d'une zone nommée "myVpArea", saisissez le code suivant :
 
@@ -117,7 +117,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilisation d'objets de plage
 
-Some 4D View Pro methods require a *rangeObj* parameter. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des méthodes 4D View Pro, vous pouvez créer des plages et les passer à d'autres méthodes pour lire ou écrire dans des emplacements spécifiques de votre document.
+Certaines méthodes 4D View Pro nécessitent un paramètre *rangeObj*. Dans 4D View Pro, une plage est un objet qui fait référence à une zone dans une feuille de calcul. Cette zone peut être composée d'une ou plusieurs cellules. À l'aide des méthodes 4D View Pro, vous pouvez créer des plages et les passer à d'autres méthodes pour lire ou écrire dans des emplacements spécifiques de votre document.
 
 Par exemple, pour créer un objet plage pour les cellules suivantes :
 

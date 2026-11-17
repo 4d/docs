@@ -164,7 +164,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` または `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
-In ORDA data model classes and singleton classes, the [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) keyword allows a function to be called by REST requests, and the `exposed MCP Function` declaration publishes the function as a tool of the [MCP server](../WebServer/mcp-server.md). The `MCP` keyword is supported in the DataStore class, DataClass and Entity classes, and shared singleton classes. A function declared with `MCP` but without `exposed` is not published. For more information, refer to [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
+ORDA データモデルクラスとシングルトンクラスでは、[`exposed`](../ORDA/ordaClasses.md#公開vs非公開関数) キーワードを使用すると関数がREST リクエストから呼び出せるようにし、`exposed MCP Function` 宣言を使用するとその関数を[MCP サーバー](../WebServer/mcp-server.md) のツールとして公開します。 `MCP` キーワードはデータストアクラス、データクラスクラス、エンティティクラス、および共有シングルトンクラスによってによってサポートされています。 `MCP` で宣言されていながら`exposed` 宣言がない関数は、公開されていません。詳細な情報については、[`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) を参照してください。
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -592,7 +592,7 @@ Class constructor ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Function comments
+## 関数コメント
 
 You can document a class function or a class constructor with comment lines written right above its `Function` or `Class constructor` declaration. 4D reads this comment block and shows it in the code assistance of the [4D code editor](../code-editor/write-class-method.md#help-tips) and of VS Code (completion details, help tips, and signature help), together with the function signature. The same comments also provide the [MCP tool metadata](#mcp-tool-metadata) of the function.
 

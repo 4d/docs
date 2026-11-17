@@ -67,6 +67,12 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 Los parámetros de permisos requieren ser consistentes, en particular los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita).
 
+:::warning
+
+When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+
+:::
+
 ### Permisos heredados
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:

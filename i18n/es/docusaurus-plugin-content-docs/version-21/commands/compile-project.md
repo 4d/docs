@@ -202,6 +202,6 @@ var $result:=Compile project($options)
 |                   |      |
 | ----------------- | ---- |
 | Número de comando | 1760 |
-| Hilo seguro       | yes   |
+| Hilo seguro       | sí   |
 
 

@@ -92,6 +92,6 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 
 :::info
 
-[**Get application info**](https://doc.4d.com/4dv19R/help/command/ja/page1599.html) コマンドを使用すると、Windows で現在実行中のモードを確認することができます。
+You can use the [Get application info](https://doc.4d.com/4dv20/help/command/en/page1599.html) command to know the current running mode on Windows.
 
 :::

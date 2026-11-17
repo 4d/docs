@@ -11,26 +11,26 @@ title: VP PASTE FROM OBJECT
 
 </details>
 
-<!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
+<!-- REF #_method_.VP PASTE FROM OBJECT.Syntax -->
 
 **VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
-<!-- REF #_method_.PASTE FROM OBJECT.Params -->
+<!-- REF #_method_.VP PASTE FROM OBJECT.Params -->
 
 <div class="no-index">
 
-| Paramètres | Type    |    | Description                                                                |
-| ---------- | ------- | -- | -------------------------------------------------------------------------- |
-| rangeObj   | Object  | -> | Pour lire les détails du style par défaut de ce document : |
-| dataObject | Object  | -> | Objet contenant les données à coller                                       |
-| options    | Integer | -> | Spécifie ce qui est collé                                                  |
+| Paramètres | Type    |    | Description                          |
+| ---------- | ------- | -- | ------------------------------------ |
+| rangeObj   | Object  | -> | Objet plage de cellules              |
+| dataObject | Object  | -> | Objet contenant les données à coller |
+| options    | Integer | -> | Spécifie ce qui est collé            |
 
 </div>
 <!-- END REF -->
 
 ## Description
 
-La commande `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT. ummary -->colle les contenus, styles et formules stockés dans *dataObject* dans l'objet *rangeObj*<!-- END REF -->.
+The `VP PASTE FROM OBJECT` command <!-- REF #_method_.VP PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
 Dans *rangeObj*, passez l'objet de plage de cellules dans lequel les valeurs, le formatage et/ou les cellules de formule seront collés. Si *rangeObj* fait référence à plusieurs cellules, seule la première est utilisée.
 

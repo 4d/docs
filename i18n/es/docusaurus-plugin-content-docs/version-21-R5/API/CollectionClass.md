@@ -271,7 +271,7 @@ Por defecto, los elementos *col2* se añaden al final de la colección original.
 var $c; $fruits : Collection
 $c:=New collection(1;2;3;4;5;6)
 $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
-$c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
+$c.combine($fruits;3) //$c=[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 ```
 
 <!-- END REF -->
@@ -2207,7 +2207,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
   Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
-Si la colección contiene elementos de diferentes [tipos](../Concepts/data-types.md), se ordenarán según los [principios de ordenación de 4D](../Concepts/ordering.md).
+Si la colección contiene elementos de diferentes [tipos](../Concepts/data-types.md), se ordenarán según los [principios de ordenación 4D](../Concepts/ordering.md).
 
 #### Ejemplo 1
 

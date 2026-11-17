@@ -95,7 +95,7 @@ When the compilation succeeds, the compiler also generates the `Project/DerivedD
 
 コンポーネントが選択されている場合、[コンパイラー設定](../settings/) を編集することはできません(ボタンはグレーアウトされています)。
 
-コンパイルに関してはそれぞれのコンポーネントの[コンパイラー設定](../settings/) が適用されますが、[エラーファイルとSymbol ファイルの生成オプション](#コンパイラー設定) は例外です: これに関してはホストプロジェクトの設定がコンポーネントのオプションを上書きします。これらのオプションが有効化されている場合、それぞれのコンポーネントの[error and warning file](#エラーファイルを生成) および[Symbol ファイル](#symbolファイルを生成) は[ホストプロジェクトの**Logs** フォルダ](../Project/architecture.md#logs) 内の専用のフォルダに保存されます(コンポーネント名がフォルダ名になります)。
+コンパイルに関してはそれぞれのコンポーネントの[コンパイラー設定](../settings/) が適用されますが、[エラーファイルとSymbol ファイルの生成オプション](#コンパイラー設定) は例外です: これに関してはホストプロジェクトの設定がコンポーネントのオプションを上書きします。これらのオプションが有効化されている場合、それぞれのコンポーネントの [error and warning file](#エラーファイル) および [Symbol ファイル](#symbolファイルを生成) は[ホストプロジェクトの **Logs** フォルダー](../Project/architecture.md#logs) 内の専用のフォルダーに保存されます(コンポーネント名がフォルダー名になります)。
 
 コンパイルまたはシンタックスチェックを開始すると、処理されているすべてのプロジェクトがコンパイラーウィンドウに表示されます。エラーまたは警告が検知された場合、これらは対応するプロジェクトの下に階層リストとして表示されます。エラーが含まれるプロジェクトは**太字** で表示されます:
 
@@ -278,7 +278,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 :::
 
-### Warnings on function comments
+### 関数コメントに関する警告
 
 When a class function or a class constructor has a [comment block above its declaration](../Concepts/classes.md#function-comments), the compiler checks it and reports a warning:
 

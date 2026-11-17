@@ -73,7 +73,11 @@ Voir la section [Fonctions exposées vs non exposées](../ORDA/ordaClasses.md#ex
 
 ### `onHTTPGet`
 
-Les fonctions autorisées à être appelées à partir de requêtes HTTP `GET` doivent également être spécifiquement déclarées avec le [mot-clé `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Par exemple :
+Les fonctions autorisées à être appelées à partir de requêtes HTTP `GET` doivent également être spécifiquement déclarées avec le [mot-clé `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Functions declared with `exposed` alone can only be called with `POST`.
+
+Declare with `onHTTPGet` only functions that read and return content: depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can send a request that runs in the session of a logged-in user (see the caution in [`onHTTPGet` keyword section](../ORDA/ordaClasses.md#onhttpget-keyword)).
+
+Par exemple :
 
 ```4d
 //autoriser les requêtes GET

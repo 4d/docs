@@ -294,6 +294,12 @@ The project's web security settings are defined in `roles.json`:
 
 :::
 
+:::warning
+
+When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+
+:::
+
 ### Default location and content
 
 New projects generate `roles.json` at:

@@ -144,7 +144,7 @@ QUERY([PICTURES];[PICTURES]Photos %"cats")
 
 - 複合インデックスを作成するには、インデックスに含めるフィールドを複数選択します。フィールドリストが完成したら、矢印ボタンやドラッグ＆ドロップを使用してフィールドの並びを変更できます。
 - 主キーフィールドをもとに複合インデックスを作成する場合、フィールドの並び順が主キーとインデックスとで同じ順番になるようにしてください。
-- If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
+- “キーワードインデックス”タイプは文字やテキスト、またはピクチャーフィールドタイプでのみ使用できます。またこの場合、インデックスに含めることができるのは1つのフィールドのみです。
 
 インデックスからフィールドを削除するには、リスト中でそれを選択し、 **[-]** ボタンをクリックします。
 

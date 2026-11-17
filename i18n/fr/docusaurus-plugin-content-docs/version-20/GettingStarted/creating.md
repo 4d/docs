@@ -109,20 +109,20 @@ Les fichiers `.4DLink` peuvent également être créés à l'aide d'un éditeur 
 
 ## Enregistrement des fichiers
 
-Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs 4D intégrés pour créer, modifier ou enregistrer des éléments de structure, des méthodes, des formulaires, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs 4D intégrés pour créer, modifier ou enregistrer des éléments de structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur le disque lorsque vous sélectionnez une commande de menu **Enregistrer**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
 
-Étant donné que les éditeurs utilisent des fichiers sur le disque, des conflits potentiels peuvent se produire si le même fichier est modifié ou même supprimé à différents endroits. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
+Étant donné que les éditeurs utilisent des fichiers sur le disque, des conflits potentiels peuvent se produire si le même fichier est modifié ou même supprimé à différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre de l'éditeur de code *et* dans un éditeur de texte, l'enregistrement des deux modifications entraînera un conflit.
 
 Le framework de développement 4D comprend un gestionnaire d'accès aux fichiers pour contrôler l'accès simultané :
 
-- if an open file is read-only at the OS level, a locked icon is displayed in the editor:
+- si un fichier ouvert est en lecture seule au niveau de l'OS, une icône de verrouillage est affichée dans l'éditeur :
   ![](../assets/en/Project/lockicon.png)
 - si un fichier ouvert est modifié simultanément à partir de différents emplacements, 4D affiche une boîte de dialogue d'alerte lorsqu'on tente d'enregistrer les modifications :
 
 ![](../assets/en/Project/projectReload.png)
 
-- **Yes**: discard editor changes and reload the modified version
-- **No**: save changes and overwrite the other version
-- **Cancel**: do not save
+- **Oui** : annuler les modifications de l'éditeur et recharger la version modifiée
+- **Non** : enregistrer les modifications et écraser l'autre version
+- **Annuler** : ne pas enregistrer
 
 Cette fonction est activée pour tous les éditeurs 4D intégrés (Structure, Formulaires, Méthodes, Paramètres et Toolbox).

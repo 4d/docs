@@ -12,12 +12,6 @@ Las cuotas del servidor web le permiten controlar el uso de recursos limitando e
 
 :::
 
-:::tip Entradas de blog relacionadas
-
-[Un servidor web 4D que sabe cuándo decir No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## Requisitos
 
 La configuración de cuotas requiere la activación de las [sesiones escalables](./sessions.md#enabling-web-sessions).

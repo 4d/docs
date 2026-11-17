@@ -14,7 +14,7 @@ title: VP SET BORDER
 | Paramètres     | Type   |    | Description                               |
 | -------------- | ------ | -- | ----------------------------------------- |
 | rangeObj       | Object | -> | Objet plage                               |
-| borderStyleObj | Object | -> | Voici le résultat :       |
+| borderStyleObj | Object | -> | Objet contenant le style de bordure       |
 | borderPosObj   | Object | -> | Objet contenant la position de la bordure |
 
 </div>

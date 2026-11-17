@@ -3,15 +3,15 @@ id: privileges
 title: Rôles et privilèges
 ---
 
-The ORDA security architecture controls access to project resources for web and REST sessions. It lets you grant specific permissions on resources such as the datastore, dataclasses, attributes, and functions.
+L'architecture de sécurité ORDA contrôle l'accès aux ressources du projet pour les sessions web et REST. Elle vous permet d'accorder des permissions spécifiques sur des ressources telles que le datastore, les dataclass, les attributs et les fonctions.
 
 ## Vue d’ensemble
 
-The security model combines **privileges**, **actions** (such as `read` and `create`), and **resources**.
+Le modèle de sécurité combine des **privilèges**, des **actions** (comme `read` et `create`), et des **ressources**.
 
-Assign privileges to a **session** using [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges).
+Assignez des privilèges à une **session** en utilisant [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges).
 
-Each request is checked against the permissions defined in the project's `roles.json` file. An unauthorized action raises a privilege error. Attributes without read permission are omitted from the response.
+Chaque requête est vérifiée par rapport aux permissions définies dans le fichier `roles.json` du projet. Une action non autorisée génère une erreur de privilège. Les attributs sans permission de lecture ne sont pas présents dans la réponse.
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
@@ -29,19 +29,19 @@ Les permissions contrôlent l'accès aux objets ou fonctions du datastore. Si vo
 
 ## Portée
 
-Permissions apply to **web and REST sessions**: [REST requests](../REST/gettingStarted.md), including [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), and **4D code executed in a web process**. This includes [exposed functions](./ordaClasses.md), [HTTP request handlers](../WebServer/http-request-handler.md), the [On Web Connection database method](../commands/on-web-connection-database-method), and any code they call. For example, an allowed function call still fails if the function reads a dataclass for which the session has no read permission.
+Les permissions s'appliquent aux **sessions web et REST** : les [requêtes REST](../REST/gettingStarted.md), y compris celles des [pages Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), et le **code 4D exécuté dans un process web**. Cela inclut les [fonctions exposées](./ordaClasses.md), les [gestionnaires de requêtes HTTP](../WebServer/http-request-handler.md), la méthode base [Sur connexion Web](../commands/on-web-connection-database-method), et tout code qu'ils appellent. Par exemple, un appel à une fonction autorisée échoue malgré tout si la fonction lit une dataclass pour laquelle la session n'a pas de permission de lecture.
 
 :::info Exception
 
-The **execute** permission of a [shared singleton](../Concepts/classes.md#shared-singleton) or [singleton function](../Concepts/classes.md#singleton-classes) is checked only when the function is [called through REST](../REST/$singleton.md). When 4D code running in a web session directly calls it (`cs.MySingleton.me.myFunction()`), no permission is checked, unlike dataclass, entity, entity selection and datastore functions, which are checked in both cases.
+La permission **execute** d'un [singleton partagé](../Concepts/classes.md#shared-singleton) ou d'une [fonction de singleton](../Concepts/classes.md#singleton-classes) n'est vérifiée que lorsque la fonction est [appelée via REST](../REST/$singleton.md). Lorsque le code 4D qui s'exécute dans une session web l'appelle directement (`cs.MySingleton.me.myFunction()`), aucune permission n'est vérifiée, contrairement aux fonctions de dataclass, d'entités, d'entity selection d'entités et de datastore qui sont vérifiées dans les deux cas.
 
 :::
 
-Permissions never apply to [desktop session code](../Desktop/sessions.md) (standalone, client/server, stored procedures) or [tool4d](../Admin/cli.md#tool4d).
+Les permissions ne s'appliquent jamais à au [code d'une session desktop](../Desktop/sessions.md) (autonome, client/serveur, procédures stockées) ou [tool4d](../Admin/cli.md#tool4d).
 
 :::warning
 
-When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+Lorsqu'une permission référence un [privilège](#privileges-and-roles) non déclaré, 4D enregistre une erreur et ignore le tout. Dans ce cas, la permission est ignorée. Si le [mode restreint par défaut](#restriction-modes) n'est pas activé, la ressource est accessible dans les sessions `guest`.
 
 :::
 
@@ -103,23 +103,23 @@ MCP clients authenticated with the "salesReader" privilege can read the Customer
 
 ## Resources
 
-4D checks the session's permissions whenever a resource is accessed. The following resources can have specific permissions:
+4D vérifie les permissions de la session chaque fois que l'accès à une ressource est requis. Les ressources suivantes peuvent avoir des permissions spécifiques :
 
-| Ressource                                                                                                                                                                | `applyTo`                 | `type`            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | ----------------- |
-| [Datastore](./dsMapping.md#datastore)                                                                                                                                    | `ds`                      | `datastore`       |
-| [Datastore class function](./ordaClasses.md#datastore-class)                                                                                                             | `ds.<function>`           | `method`          |
-| [Dataclass](./dsMapping.md#dataclass)                                                                                                                                    | `<Dataclass>`             | `dataclass`       |
-| [Attribute](./dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1)) | `<Dataclass>.<attribute>` | `attribut`        |
-| [Dataclass, entity or entity selection function](./ordaClasses.md)                                                                                                       | `<Dataclass>.<function>`  | `method`          |
-| [Shared singleton](../Concepts/classes.md#shared-singleton) (all its exposed functions)                                                               | `<Singleton>`             | `singleton`       |
-| [Singleton function](../Concepts/classes.md#singleton-classes)                                                                                                           | `<Singleton>.<function>`  | `singletonMethod` |
+| Ressource                                                                                                                                                                        | `applyTo`                 | `type`            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ----------------- |
+| [Datastore](./dsMapping.md#datastore)                                                                                                                                            | `ds`                      | `datastore`       |
+| [Fonction de datastore class](./ordaClasses.md#datastore-class)                                                                                                                  | `ds.<function>`           | `method`          |
+| [Dataclass](./dsMapping.md#dataclass)                                                                                                                                            | `<Dataclass>`             | `dataclass`       |
+| [Attribut](./dsMapping.md#attribute) (y compris [attributs calculés](./ordaClasses.md#computed-attributes-1) et [alias](./ordaClasses.md#alias-attributes-1)) | `<Dataclass>.<attribute>` | `attribut`        |
+| [Fonction de dataclass, entity selection ou entité](./ordaClasses.md)                                                                                                            | `<Dataclass>.<function>`  | `method`          |
+| [Singleton partagé](../Concepts/classes.md#shared-singleton) (toutes ses fonctions exposées)                                                                  | `<Singleton>`             | `singleton`       |
+| [Fonction de singleton](../Concepts/classes.md#singleton-classes)                                                                                                                | `<Singleton>.<function>`  | `singletonMethod` |
 
-Use the `applyTo` and `type` values shown in the table when defining permissions in [`roles.json`](#rolesjson-file).
+Utilisez les valeurs `applyTo` et `type` décrites dans ce tableau lors de la définition des permissions dans [`roles.json`](#rolesjson-file).
 
 :::note Attribution de permissions aux fonctions de la classe ORDA
 
-In `roles.json`, identify an ORDA class function in `applyTo` with this syntax:
+Dans `roles.json`, vous identifiez une fonction de classe ORDA dans `applyTo` avec cette syntaxe :
 
 ```json
 <DataclassName>.<functionName>
@@ -134,13 +134,13 @@ Class extends Entity
    ...
 ```
 
-Use this value:
+Vous utilisez cette valeur :
 
 ```json
 "applyTo":"City.getPopulation"
 ```
 
-Because permissions identify functions by dataclass and function name, functions with the same name in different ORDA classes (entity, entity selection, dataclass) cannot be assigned different privileges. Give them distinct names instead. For example, name the functions `dropEntity()` and `dropSelection()` in `cs.CityEntity` and `cs.CitySelection`, respectively:
+Comme les permissions identifient des fonctions par dataclass et nom de fonction, des fonctions avec le même nom mais dans différentes classes ORDA (entité, entity selection, dataclass) ne pourront pas se voir assigner des privilèges différents. Donnez-leur des noms distincts à la place. Par exemple, nommez les fonctions `dropEntity()` et `dropSelection()` dans `cs.CityEntity` et `cs.CitySelection`, respectivement :
 
 ```json
 	"permissions": {
@@ -168,51 +168,51 @@ Because permissions identify functions by dataclass and function name, functions
 
 ## Permissions
 
-A **permission** allows an action on a resource; for example, executing `ds.myTable.myFunction()`. Permissions are defined in [`roles.json`](#rolesjson-file) and granted to one or more [privileges](#privileges-and-roles).
+Une **permission** permet une action sur une ressource ; par exemple, exécuter `ds.myTable.myFunction()`. Les permissions sont définies dans [`roles.json`](#rolesjson-file) et accordées à un ou plusieurs [privilège(s)](#privileges-and-roles).
 
-If no permission is defined for a resource, access depends on the project's [restriction mode](#restriction-modes).
+Si aucune permission n'est définie pour une ressource, l'accès dépend du [mode de restriction](#restriction-modes) du projet.
 
 ### Actions de permission
 
-Available actions depend on the resource:
+Les actions disponibles dépendent de la ressource :
 
-| Action                                                 | Datastore                                                                                                             | Dataclass                                                                                                                   | Attribut                                                                                                       | Function                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **create**                                             | Create entities in any dataclass                                                                                      | Create entities in this dataclass                                                                                           | Create an entity with a non-default value for this attribute (ignored for alias attributes) | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **read**                                               | Lire les attributs de n'importe quelle dataclass                                                                      | Lire les attributs de cette dataclass                                                                                       | Read this attribute's content                                                                                  | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **update**                                             | Mettre à jour les attributs dans n'importe quelle dataclass                                                           | Mettre à jour les attributs de cette dataclass                                                                              | Update this attribute's content (ignored for alias attributes)                              | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **drop** ("Delete" in Qodly Studio) | Supprimer des données dans n'importe quelle dataclass                                                                 | Supprimer des données dans cette dataclass                                                                                  | Delete a non-null value for this attribute (except for alias and computed attributes)       | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **execute**                                            | Execute any function on the project (datastore, dataclass, entity selection, entity, or singleton) | Execute any function on the dataclass; dataclass, entity, and entity selection functions are treated as dataclass functions | n/a                                                                                                            | Exécuter cette fonction                                                                                                                                                                                                                                                                                                                                     |
-| **promote**                                            | n/a                                                                                                                   | n/a                                                                                                                         | n/a                                                                                                            | Temporarily add a privilege for the duration of the function call. Only the process executing the function receives it, not the whole session. Use [`promote()`](../API/SessionClass.md#promote) and [`demote()`](../API/SessionClass.md#demote) to set or remove this action dynamically in a web process. |
+| Action                                                   | Datastore                                                                                                                      | Dataclass                                                                                                                                                        | Attribut                                                                                                                               | Function                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **create**                                               | Créer une entité dans n'importe quelle dataclass                                                                               | Créer une entité dans cette dataclass                                                                                                                            | Créer une entité avec une valeur qui n'est pas celle par défaut pour cet attribut (ignoré pour les attributs alias) | n/a                                                                                                                                                                                                                                                                                                                                                                                       |
+| **read**                                                 | Lire les attributs de n'importe quelle dataclass                                                                               | Lire les attributs de cette dataclass                                                                                                                            | Lire le contenu de cet attribut                                                                                                        | n/a                                                                                                                                                                                                                                                                                                                                                                                       |
+| **update**                                               | Mettre à jour les attributs dans n'importe quelle dataclass                                                                    | Mettre à jour les attributs de cette dataclass                                                                                                                   | Mettre à jour le contenu de cet attribut (ignoré pour les attributs alias)                                          | n/a                                                                                                                                                                                                                                                                                                                                                                                       |
+| **drop** ("Delete" dans Qodly Studio) | Supprimer des données dans n'importe quelle dataclass                                                                          | Supprimer des données dans cette dataclass                                                                                                                       | Supprimer une valeur non nulle pour cet attribut (sauf alias et attributs calculés)                                 | n/a                                                                                                                                                                                                                                                                                                                                                                                       |
+| **execute**                                              | Exécuter n'importe quelle fonction du projet (datastore, dataclass, entity selection, entité, ou singleton) | Exécuter n'importe quelle fonction sur la dataclass ; les fonctions de dataclass, d'entités et d'entity selection sont traitées comme des fonctions de dataclass | n/a                                                                                                                                    | Exécuter cette fonction                                                                                                                                                                                                                                                                                                                                                                   |
+| **promote**                                              | n/a                                                                                                                            | n/a                                                                                                                                                              | n/a                                                                                                                                    | Ajoute temporairement un privilège pendant la durée de l'appel de la fonction. Seul le process qui exécute la fonction le reçoit, pas la session entière. Utilisez [`promote()`](../API/SessionClass.md#promote) et [`demote()`](../API/SessionClass.md#demote) pour définir ou supprimer cette action dynamiquement dans un process web. |
 
-### Permission rules
+### Règles des permissions
 
-- **update** and **drop** require **read** on the resource; **create** does not.
-- A function can be **promoted** by multiple privileges. During execution, it receives the combined permissions of all those privileges; there is no priority order.
-- An [alias attribute](./ordaClasses.md#alias-attributes-1) can be read if the session has permission to read the alias, even if it cannot read the attributes the alias resolves to.
-- A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if its underlying attributes have no permissions.
-- In REST [force login mode](../REST/authUsers.md#force-login-mode), guest users can always execute [`authentify()`](../REST/authUsers.md#function-authentify), regardless of the permissions configuration.
+- **update** et **drop** nécessitent **read** sur la ressource ; pas **create**.
+- Une fonction peut avoir un **promote** par plusieurs privilèges. Lors de l'exécution, elle reçoit les permissions combinées de tous ces privilèges ; il n'y a pas d'ordre de priorité.
+- Un [attribut alias](./ordaClasses.md#alias-attributes-1) peut être lu si la session a la permission de lire l'alias, même si elle ne peut pas lire les attributs qui résolvent l'alias.
+- Un [attribut calculé](./ordaClasses.md#computed-attributes-1) est accessible même si ses attributs sous-jacents n'ont pas de permissions.
+- En [mode force login](../REST/authUsers.md#force-login-mode) de REST, les utilisateurs guest peuvent toujours exécuter [`authentify()`](../REST/authUsers.md#function-authentify), quelle que soit la configuration des permissions.
 
 ### Permissions héritées
 
-Permission actions are inherited according to the following rules:
+Les actions de permission sont héritées selon les règles suivantes :
 
-1. Permissions descend **datastore → dataclass → attribute / function**, and **datastore → singleton → singleton function**.
-2. Resolution is **per action**. Defining `read` on a dataclass does not change how `create`, `update`, `drop` or `execute` are resolved for it.
-3. **Dataclass replaces datastore**. A permission defined on a dataclass for an action replaces the datastore permission for that action. Privileges granted the action only on the datastore lose it on that dataclass.
-4. **Function replaces dataclass**. An `execute` permission defined on a function replaces the dataclass (and datastore) `execute` permission for that function. Entity and entity selection functions follow the same rule as dataclass functions.
-5. **Singleton replaces datastore**, **singleton function replaces singleton**.
-6. **Datastore function replaces datastore**.
-7. **Attribute adds to its parent**. To act on an attribute that has its own permission, a session needs a privilege granted by the attribute permission **and** a privilege granted the action on the dataclass (directly or through the datastore).
-8. An action granted to **no privilege** (for example, `"read": []`) is "not set", so the permission at the level above applies. It does not mean "nobody". To deny the action, use [restricted mode](#restriction-modes) without defining that permission, or grant it to a privilege that no session receives.
+1. Les permissions descendent **datastore → dataclass → attribut / fonction**, et **datastore → singleton → fonction singleton**.
+2. La résolution est **par action**. Définir `read` sur une dataclass ne change pas comment `create`, `update`, `drop` ou `execute` sont résolus pour elle.
+3. **La dataclass remplace le datastore**. Une permission définie sur une dataclasse pour une action remplace l'autorisation du datastore pour cette action. Les privilèges permettant l'action uniquement sur le datastore la perdent pour cette dataclass.
+4. **La fonction remplace la dataclass**. Une permission `execute` définie sur une fonction remplace la permission `execute` pour cette fonction sur la dataclass (et le datastore). Les fonctions d'entity selection et d'entité suivent la même règle que les fonctions de dataclass.
+5. **Le singleton remplace le datastore**, **la fonction singleton remplace le singleton**.
+6. **La fonction de datastore remplace le datastore**.
+7. **L'attribut s'ajoute à son parent**. Pour agir sur un attribut qui a sa propre permission, une session a besoin du privilège accordé par la permission de l'attribut **et** un privilège accordé à l'action sur la dataclass (directement ou via le datastore).
+8. Une action accordée à **aucun privilège** (par exemple, `"read": []`) est "non définie", donc la permission au niveau du dessus s'applique. Cela ne veut pas dire "personne". Pour refuser l'action, utilisez [mode restreint](#restriction-modes) sans définir cette permission, ou accordez-la à un privilège qu'aucune session ne reçoit.
 
-Permissions only grant access; there is no explicit deny. A dataclass or function permission can therefore narrow a broader datastore permission by replacing it. An attribute permission is additive: it grants access to that attribute only when the session also has the action on its dataclass.
+Les permissions ne peuvent que permettre l'accès ; il n'y a pas de refus explicite. Une permission de dataclass ou de fonction peut donc réduire une permission plus large du datastore en la remplaçant. Une permission d'attribut s'ajoute : elle n'autorise l'accès à cet attribut que lorsque la session a aussi l'action sur sa dataclass.
 
-:::tip Recommended practice
+:::tip Pratique recommandée
 
-- Assign access to sessions through **roles** with `Session.setPrivileges({roles: [...]})`. Define roles around business profiles; privileges are the reusable building blocks. [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/roles/overview) displays effective permissions by role.
-- If an administration role needs full access, include every privilege in it except a lock privilege, if used. Add each new privilege to that role: a dataclass-level permission can replace a broader datastore permission.
-- Review the effect of privilege changes on every role. In Qodly Studio, **Detailed Permission Review** shows a role's effective access; a role with no privileges can help you review guest-only access.
+- Assignez les accès aux sessions via les **rôles** avec `Session.setPrivileges({roles: [...]})`. Définissez les rôles autour des profils métiers ; les privilèges sont les blocs de construction réutilisables. [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/roles/overview) affiche les permissions réelles par rôle.
+- Si un rôle d'administration a besoin d'un accès complet, incluez tous les privilèges dans ce rôle sauf un droit de verrouillage, s'il est utilisé. Ajoutez chaque nouveau privilège à ce rôle : une permission au niveau du dataclass peut remplacer une permission plus large du datastore .
+- Examinez l'effet des changements de privilèges sur chaque rôle. Dans Qodly Studio, la **vue détaillée des permissions** montre l'accès effectif d'un rôle. Un rôle sans privilège peut vous aider à visualiser l'accès réservé aux guests.
 
 :::
 
@@ -291,6 +291,12 @@ The project's web security settings are defined in `roles.json`:
 - Qodly Studio can add an optional `id` property to privileges and roles to preserve references when they are renamed.
 - Multiple entries with the same `applyTo` are not merged: the last entry wins without an error. Define only one entry per resource.
 - A resource entry that grants no actions has no effect.
+
+:::
+
+:::warning
+
+Lorsqu'une permission référence un [privilège](#privileges-and-roles) non déclaré, 4D enregistre une erreur et ignore le tout. Dans ce cas, la permission est ignorée. Si le [mode restreint par défaut](#restriction-modes) n'est pas activé, la ressource est accessible dans les sessions `guest`.
 
 :::
 

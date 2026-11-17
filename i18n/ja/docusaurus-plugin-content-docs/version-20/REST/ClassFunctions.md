@@ -142,7 +142,7 @@ Class extends DataClass
 
 exposed Function getCity()
 	var $0 : cs.CityEntity
-	var $1,$nameParam : text
+	var $1;$nameParam : text
 	$nameParam:=$1
 	$0:=This.query("name = :1";$nameParam).first()
 ```
@@ -303,7 +303,7 @@ exposed Function getLastSummary
 Class extends DataClass
 
 exposed Function pushData
-	var $1, $entity, $status, $0 : Object
+	var $1; $entity; $status; $0 : Object
 
 	$entity:=$1
 
@@ -479,25 +479,25 @@ Body of the request:
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// cs.Students クラス
+// Students class
 
 Class extends DataClass
 
 exposed Function setFinalExam()
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $1; $es; $student; $status : Object
+    var $2; $examResult : Text
 
     var $keys, $0 : Collection
 
-      // エンティティセレクション
+      //Entity selection
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      // エンティティセレクションをループします
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -548,7 +548,7 @@ exposed Function setFinalExam()
 [前述](#EntitySelectionクラス関数とエンティティセットを使用する) の `getAgeAverage()` 関数を使います。
 
 ```4d
-var $remoteDS, $newStudent, $students : Object
+var $remoteDS; $newStudent; $students : Object
 var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")

@@ -38,13 +38,14 @@ REST接続は次の方法で制限することができます:
 
 ストラクチャー設定の "**Web** ＞ **Web機能**" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dアプリケーションへのリンクを設立することのできる 4Dユーザーのグループを指定します。
 
-デフォルトでは、メニューには `<Anyone>` が選択されています。 これは、REST接続はすべてのユーザーに対してオープンであるという状態を示しています。グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
+By default, the menu displays `<Anyone>`, which means that REST accesses are open to all users. グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
 
 > この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。これが定義されている場合は、ストラクチャー設定にて指定したアクセス設定は無視されます。
 
 ### On REST Authentication データベースメソッドを使用する
 
-`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。評価にあたっては、4Dアプリケーションのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
+`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。評価にあたっては、4Dアプリケーションのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。
+For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv20/4D/20.6/On-REST-Authentication-database-method.301-7487975.en.html).
 
 ## テーブルやフィールドの公開
 

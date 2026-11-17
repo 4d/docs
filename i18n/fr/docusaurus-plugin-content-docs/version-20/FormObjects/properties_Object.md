@@ -29,7 +29,7 @@ Chaque objet de formulaire actif est associé à un nom d'objet. Chaque nom d'ob
 
 > Les noms d'objets sont limités à une taille de 255 octets.
 
-When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
+Lorsque vous utilisez le langage 4D, vous pouvez faire référence à un objet de formulaire actif par son nom d’objet (pour plus d’informations à ce sujet, consultez la section [Propriétés des objets](https://doc.4d.com/4Dv20/4D/20.6/Object-Properties.300-7487807.fe.html) du manuel de référence du langage 4D).
 
 Pour plus d'informations sur les règles de nommage pour les objets de formulaire, reportez-vous à la section [Identifiers](Concepts/identifiers.md).
 
@@ -148,7 +148,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 
 - **[Variables dynamiques](#dynamic-variables)** : vous pouvez utiliser cette propriété pour déclarer le type des variables dynamiques.
 - **[Colonnes de list box](listbox-column.md)** : cette propriété est utilisée pour associer un format d'affichage aux données de la colonne. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
-- **[Variables image](input_overview.md)** : vous pouvez utiliser ce menu pour déclarer les variables avant de charger le formulaire en mode interprété. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Ces mécanismes exigent une plus grande précision dans la configuration des variables : elles doivent avoir été déclarées avant le chargement du formulaire - c'est-à-dire avant même l'événement formulaire `On Load` - à la différence des autres types de variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property.
+- **[Variables image](input_overview.md)** : vous pouvez utiliser ce menu pour déclarer les variables avant de charger le formulaire en mode interprété. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Ces mécanismes exigent une plus grande précision dans la configuration des variables : elles doivent avoir été déclarées avant le chargement du formulaire - c'est-à-dire avant même l'événement formulaire `On Load` - à la différence des autres types de variables. Pour cela, il faut soit que l'instruction `C_PICTURE(varName)` ait été exécutée avant le chargement du formulaire (typiquement, dans la méthode appelant la commande `DIALOG`), soit que la variable ait été typée au niveau du formulaire à l'aide de la propriété Type d'expression.
   Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
 
 #### Grammaire JSON
@@ -271,7 +271,7 @@ Pour insérer un \ dans le libellé, entrez "&#92;&#92;".
 
 Par défaut, le libellé est placé au centre de l'objet. Lorsque l'objet contient également une icône, vous pouvez modifier l'emplacement relatif de ces deux éléments à l'aide de la propriété [Position Titre/Image](properties_TextAndPicture.md#titlepicture-position).
 
-For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Pour des raisons de traduction d'applications, vous pouvez entrer une référence XLIFF dans la zone de titre d'un bouton (voir [Annexe B : architecture XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 #### Grammaire JSON
 

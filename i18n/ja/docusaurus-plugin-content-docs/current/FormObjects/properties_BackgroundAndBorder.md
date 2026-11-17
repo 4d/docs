@@ -27,7 +27,7 @@ title: 背景色と境界線
 
 ## 背景色/塗りカラー
 
-オブジェクトの背景色/塗りカラーを設定します。 It can be defined for some standard objects (`fill` JSON property) or ["custom style" objects](#custom-button-custom-check-box-or-custom-radio-button) (`borderFillColor` JSON property).
+オブジェクトの背景色/塗りカラーを設定します。一部の標準のオブジェクト(`fill` JSON プロパティを使用) あるいは["custom style" オブジェクト](#custom-button-custom-check-box-or-custom-radio-button)(`borderFillColor` JSON プロパティを使用) に対して定義することが可能です。
 
 :::note
 
@@ -105,17 +105,17 @@ title: 背景色と境界線
 
 ## 境界線カラー{#border-color}
 
-Allows defining the border color. The effect of this property varies slightly depending on the type of object to which it is applied.
+境界線のカラーを定義することができます。このプロパティの効果は、適用されるオブジェクトのタイプによって若干異なります。
 
-- **objects with text properties**: [buttons](./button_overview.md) (all styles except "custom", see  below), [hierarchical lists](list_overview.md), [inputs](input_overview.md), [list boxes](listbox_overview.md), [progress indicators](./progressIndicator.md), [rulers](./ruler.md), and [text areas](text.md).  
-  By default, the border color of these objects is automatically set to their [**font color**](./properties_Text.md#font-color) property. This default configuration corresponds to the **Same as font** option in the Property List (`borderColor` property is undefined in JSON).  
-  You can separate these two properties by setting a color value for the object's "Border color" property (only available when the [**border line style**](#border-line-style) property is **plain** (`solid` in JSON property) or **dotted**).
+- **テキストプロパティを持つオブジェクト**: [ボタン](./button_overview.md) ("カスタム" を除く全てのスタイル、詳細は以下参照)、[階層リスト](list_overview.md)、[入力](input_overview.md)、[リストボックス](listbox_overview.md)、[進捗インジケーター](./progressIndicator.md)、[ルーラー](./ruler.md), and [text areas](text.md)。  
+  デフォルトで、これらのオブジェクトの境界線カラーは自動的に[**フォントカラー**](./properties_Text.md#フォントカラー) プロパティと同じに設定されています。このデフォルトの設定はプロパティリストの**Same as font** オプションに対応しています(`borderColor` プロパティはJSON では未定義です)。  
+  これらの二つのプロパティはオブジェクトの"境界線カラー" プロパティ([**境界線スタイル**](#border-line-style) プロパティが**実線** (JSON プロパティでは`solid`) あるいは **点線**のときのみ利用可能) にカラー値を設定することで分離させることができます。
 
-- **objects without text properties**: [4D View Pro areas](viewProArea_overview.md), [4D Write Pro areas](writeProArea_overview.md), [button grids](buttonGrid_overview.md), [picture buttons](pictureButton_overview.md), [picture pop-up menus](picturePopupMenu_overview.md), [plug-in areas](pluginArea_overview.md), [subforms](subform_overview.md), [spinners](spinner.md), [splitters](splitters.md), [steppers](stepper.md), [web areas](webArea_overview.md).  
-  The border color property sets the color of the borders. The default color value is "Automatic", i.e. the border is displayed with the automatic color set by your OS.
+- **テキストプロパティを持たないオブジェクト**: [4D View Pro エリア](viewProArea_overview.md)、[4D Write Pro エリア](writeProArea_overview.md)、[ボタングリッド](buttonGrid_overview.md)、[ピクチャーボタン](pictureButton_overview.md)、[ピクチャーポップアップメニュー](picturePopupMenu_overview.md)、[プラグインエリア](pluginArea_overview.md)、[サブフォーム](subform_overview.md)、[スピナー](spinner.md)、[スプリッター](splitters.md)、[ステッパー](stepper.md)、[Web エリア](webArea_overview.md)。  
+  境界線カラープロパティは境界線のカラーを設定します。デフォルトのカラー値は"自動"で、これは境界線がOS によって設定されている自動カラーで表示されることを意味します。
 
-- **custom-styled buttons**: [custom buttons](./button_overview.md#custom) with ["custom" Border Line Style](#border-line-style), [custom check boxes](./checkbox_overview.md#custom), and [custom radio buttons](./radio_overview.md#custom).  
-  In this case, the border color property defines the color of an *inner* border, which is an attribute of the object itself ans not a decoration property. This inner border can also have a [width](#border-width) (it is displayed only if the width > 0).
+- **カスタムスタイルのボタン**: ["カスタム" 境界線スタイル](#border-line-style)をもった[カスタムボタン](./button_overview.md#カスタム)、[カスタムチェックボックス](./checkbox_overview.md#カスタム)、および[カスタムラジオボタン](./radio_overview.md#カスタム)。  
+  この場合、境界線カラープロパティーは*内側の* 境界線カラーを定義し、これはオブジェクト自身の属性であり、装飾プロパティではありません。内側の境界線は[幅](#border-width) を持つこともできます(幅が0 より大きい場合にのみ表示されます)。
 
 #### JSON 文法
 
@@ -125,7 +125,26 @@ Allows defining the border color. The effect of this property varies slightly de
 
 #### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](./button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](./progressIndicator.md) - [Radio Button ("custom" style)](radio_overview.md#custom) - [Ruler](./ruler.md) - [Text Area](text.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) -
+[4D Write Pro エリア](writeProArea_overview.md) -
+[ボタン](button_overview.md) -
+[ボタングリッド](buttonGrid_overview.md) -
+[チェックボックス("カスタム"スタイル)](checkbox_overview.md#custom) -
+[階層リスト](list_overview.md) -
+[入力](input_overview.md) -
+[リストボックス](listbox_overview.md) -
+[ピクチャーボタン](pictureButton_overview.md) -
+[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
+[プラグインエリア](pluginArea_overview.md) -
+[進捗インジケーター](progressIndicator.md) -
+[ラジオボタン("カスタム"スタイル)](radio_overview.md#custom) -
+[ルーラー](ruler.md) -
+[テキストエリア](text.md) -
+[スピナー](spinner.md) -
+[Splitter](splitters.md) -
+[ステッパー](stepper.md) -
+[サブフォーム](subform_overview.md) -
+[Web エリア](webArea_overview.md)
 
 #### コマンド
 
@@ -133,25 +152,25 @@ Allows defining the border color. The effect of this property varies slightly de
 
 #### 参照
 
-[Line Color](#line-color) (for shapes)
+[線カラー](#線カラー) (図形用)
 
 ## 境界線スタイル{#border-line-style}
 
-Allows setting a style for the object border. The following choices are available (all choices are not possible depending on the object):
+オブジェクトの境界線のスタイルを設定することができます。以下の選択肢が利用可能です(オブジェクトによっては全ての選択肢が利用可能ではないこともあります):
 
-| Style          | Objects (\*)                                      | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| なし             | all                                                                  | Objects appear with no border.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Plain          | all                                                                  | Objects appear framed with a continuous 1-pt. border line. ("solid" json value)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Dotted         | all                                                                  | Objects appear framed with a dotted 1-pt. border line.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Raised         | all                                                                  | Objects appear framed with a 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Sunken         | all                                                                  | Objects appear framed with a sunken 3D effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Double         | all                                                                  | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| System         | all *except* [buttons](button_overview.md) and [text areas](text.md) | Objects appear with a border line based on the graphic specifications of the OS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| System rounded | [inputs](input_overview.md)                                          | On macOS, objects appear with a native "Liquid Glass" system border effect (for information about Liquid Glass, see [this 4D blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications/)). It includes system-defined inner border, corner radius, grey border color, and inner padding. Note that the "Liquid Glass" appearance is *not* used in a multiline input object if the [scroll bars property](./properties_Appearance.md#vertical-scroll-bar) is enabled ("System" is used in this case).<br/> On Windows, this style is similar to "System" at runtime. |
-| カスタム           | [custom buttons](./button_overview.md#custom)                        | Enables the inner border design, that includes a set of extra properties: [Fill color](#fill-color), [Border color](#border-color), [Border width](#border-width), and [Corner radius](#corner-radius). <br/>![](../assets/en/FormObjects/custom-button.png)                                                                                                                                                                                                                                                                                                                                                                                                            |
+| スタイル      | オブジェクト(\*)                             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| なし        | all                                                       | オブジェクトは境界線なしで表示されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 標準        | all                                                       | オブジェクトは連続した1pt の幅の境界線で表示されます。 ("solid" json 値)                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ドット       | all                                                       | オブジェクトは点線の1pt の幅の境界線で表示されます。                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 浮き上がり     | all                                                       | オブジェクトは3D エフェクトの境界線で表示されます。                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| くぼみ       | all                                                       | オブジェクトは、くぼみ3D エフェクトの境界線で表示されます。                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 二重        | all                                                       | オブジェクトは連続した1pt の幅の二重線の境界線で表示されます。二重線は1ピクセル間の隙間で表示されます。                                                                                                                                                                                                                                                                                                                                                                                                               |
+| システム      | [ボタン](button_overview.md)および [テキストエリア](text.md) を *除く* 全て | オブジェクトはOS のグラフィック仕様に基づいた境界線で表示されます。                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| システムの角の丸み | [入力](input_overview.md)                                   | macOS では、オブジェクトはネイティブの"Liquid Glass" システム境界線エフェクトで表示されます(Liquid Glass についての情報については[こちらの4D blog 記事](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications/))。これにはシステム定義の内側の境界線、角の半径、グレーの境界線カラー、そして内側のパディングが含まれます。[スクロールバープロパティ](./properties_Appearance.md#縦スクロールバー) が有効化されている複数行の入力オブジェクト内においてはアピアランスは使用されないという点に注意してください(この場合には"システム"が使用されます)。<br/> Windows においては、このスタイルはランタイムでは"システム" に似たスタイルで表示されます。 |
+| カスタム      | [カスタムボタン](./button_overview.md#カスタム)                      | 内側の境界線デザインを有効化し、これには以下の追加のプロパティのセットが含まれます: [塗りカラー](#背景色-塗りカラー)、[境界線カラー](#border-color)、[境界線幅](#border-width)、および[角の半径](#角の半径)。 <br/>![](../assets/en/FormObjects/custom-button.png)                                                                                                                                                                                                                                                                  |
 
-(\*) "all" means "all objects supported" listed below.
+(\*) この"all" または"全て" とは、以下の"サポートされる全てのオブジェクト" を意味します。
 
 :::tip 関連したblog 記事
 
@@ -165,7 +184,7 @@ Allows setting a style for the object border. The following choices are availabl
 
 | 名称          | データタイプ | とりうる値                                                                                        |
 | ----------- | ------ | -------------------------------------------------------------------------------------------- |
-| borderStyle | text   | "custom", "dotted", "double", "none", "raised", "solid", "sunken", "system", "systemRounded" |
+| borderStyle | text   | "custom"、 "dotted"、 "double"、 "none"、 "raised"、 "solid"、 "sunken"、 "system"、 "systemRounded" |
 
 #### 対象オブジェクト
 
@@ -193,7 +212,7 @@ Allows setting a style for the object border. The following choices are availabl
 
 #### 参照
 
-[Dotted Line Type](#dotted-line-type) (shapes)
+[点線タイプ](#dotted-line-type) (図形)
 
 ---
 
@@ -217,7 +236,7 @@ Allows setting a style for the object border. The following choices are availabl
 
 #### 対象オブジェクト
 
-[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom style")](checkbox_overview.md#custom) - [Radio Button ("custom" style)](radio_overview.md#custom)
+(["カスタム" 境界線スタイル](#border-line-style)を持った)[ボタン("カスタム"スタイル)](./button_overview.md#カスタム) - [チェックボックス("カスタムスタイル")](checkbox_overview.md#カスタム) - [ラジオボタン("カスタム" スタイル)](radio_overview.md#カスタム)
 
 ---
 
@@ -258,7 +277,7 @@ Allows setting a style for the object border. The following choices are availabl
 
 #### 対象オブジェクト
 
-[Button ("custom" style)](./button_overview.md#custom) (with ["custom" Border Line Style](#border-line-style)) - [Check Box ("custom" style)](checkbox_overview.md#custom) - [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md) - [Radio Button ("custom" style)](radio_overview.md#custom)
+(["カスタム"境界線スタイル](#border-line-style)を持った)[ボタン("カスタム"スタイル)](./button_overview.md#カスタム) - [チェックボックス("カスタム" スタイル)](checkbox_overview.md#カスタム) - [入力](input_overview.md) - [四角形](shapes_overview.md#四角形) - [テキストエリア](text.md) - [ラジオボタン("カスタム" スタイル)](radio_overview.md#カスタム)
 
 #### コマンド
 
@@ -326,7 +345,7 @@ Allows setting a style for the object border. The following choices are availabl
 
 :::note
 
-This property is also available for objects with text properties, in which case it designates both the [Font color](properties_Text.md#font-color) and the object's lines, except if you used the [Border color](#border-color) property.
+このプロパティはテキストプロパティを持つオブジェクトでも利用可能で、その場合には[フォントカラー](properties_Text.md#フォントカラー) とオブジェクトの線の両方を指定します(ただし[境界線カラー](#border-color) プロパティを使用していた場合を除く)。
 
 :::
 

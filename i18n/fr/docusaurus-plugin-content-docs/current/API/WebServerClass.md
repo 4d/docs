@@ -731,11 +731,11 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->champ "path" du cookie 
 
 La <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur "SameSite" du cookie de session<!-- END REF -->. Valeurs possibles (avec constantes) :
 
-| Constante           | Valeur   | Description                                                                                                                                                                                            |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                    |
-| Web SameSite Lax    | "Lax"    | Les cookies sont également envoyés aux sous-requêtes intersites mais uniquement lorsque l'internaute navigue vers le site d'origine (i.e.           |
-| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin. |
+| Constante           | Valeur   | Description                                                                                                                                                                                                                                                               |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                                                                                       |
+| Web SameSite Lax    | "Lax"    | Cookies are not sent with requests coming from other websites (images, frames, forms, scripts), except when the user navigates to the site from another website with a GET request (following a link, redirection). |
+| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin.                                                                    |
 
 Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-samesite) pour des informations détaillées.
 

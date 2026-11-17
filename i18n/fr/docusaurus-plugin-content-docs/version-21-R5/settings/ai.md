@@ -95,7 +95,7 @@ Lors de l'utilisation de 4D en mode client/serveur, il est **fortement recommand
 
 ## Alias de modèles
 
-La page Alias de modèles vous permet de lister les modèles des fournisseurs enregistrés que vous voulez utiliser dans votre code et de les nommer avec des *alias*. Grâce aux alias de modèles, vous évitez de coder en dur les noms de modèles, vous pouvez changer de modèle sans modifier votre code et vous garantissez la cohérence entre les différents environnements.
+La page Alias de modèles vous permet de lister les modèles des fournisseurs enregistrés que vous voulez utiliser dans votre code et de les nommer avec des *alias*. Grâce aux alias de modèles, vous évitez de coder en dur les noms de modèles, vous pouvez changer de modèle sans modifier votre code et vous garantissez la cohérence entre les différents environnements. Model aliases are also fully supported by the [4D Embedding Studio](../embedding-studio/overview.md) component.
 
 Lorsque vous utilisez un alias de modèle :
 
@@ -131,15 +131,17 @@ Pour modifier ou supprimer un alias :
 
 ### Utiliser un alias de modèle
 
-Vous pouvez utiliser directement le nom d'alias du modèle partout où un nom de modèle est requis (à condition que les alias de modèles soient pris en charge).
+Vous pouvez utiliser directement le nom d'alias du modèle partout où un nom de modèle est requis (à condition que les alias de modèles soient pris en charge). Exemples :
 
-Par exemple, dans 4D-AIKit, vous pouvez faire référence à un modèle à l'aide de la syntaxe suivante : *{model:"ModelName"}*, où *ModelName* correspond à un modèle valide défini dans l'onglet Alias de modèles :
+- in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
 var $result := $client.chat.completions.create($messages; \
     {model: "Chat Model"})
 ```
+
+- in 4D Embedding Studio, the [list of models](../embedding-studio/overview.md#selecting-a-model) available for generating embeddings includes the model aliases.
 
 ### Voir également
 

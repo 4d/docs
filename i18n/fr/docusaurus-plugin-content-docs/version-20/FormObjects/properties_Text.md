@@ -7,7 +7,7 @@ title: Text
 
 ## Autoriser sélecteur police/couleur
 
-Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) et [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) peuvent être appelées pour afficher les fenêtres de sélection des polices et des couleurs du système. A l'aide de ces fenêtres, les utilisateurs peuvent modifier la police ou la couleur d'un objet formulaire dont le focus est accessible directement au clic. Lorsque cette propriété est désactivée (par défaut), les commandes d'ouverture du sélecteur ne produisent aucun effet.
+Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-FONT-PICKER.301-7487278.en.html) et [OPEN COLOR PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-COLOR-PICKER.301-7487279.en.html) peuvent être appelées pour afficher les fenêtres de sélection des polices et des couleurs du système. A l'aide de ces fenêtres, les utilisateurs peuvent modifier la police ou la couleur d'un objet formulaire dont le focus est accessible directement au clic. Lorsque cette propriété est désactivée (par défaut), les commandes d'ouverture du sélecteur ne produisent aucun effet.
 
 #### Grammaire JSON
 
@@ -25,7 +25,7 @@ Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https:/
 
 Le texte sélectionné est plus foncé et plus épais.
 
-Vous pouvez définir cette propriété en utilisant la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
+Vous pouvez définir cette propriété en utilisant la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.fe.html).
 
 > Ceci est un texte normal.<br/>
 > **Ceci est un texte en gras.**
@@ -46,7 +46,7 @@ Vous pouvez définir cette propriété en utilisant la commande [**OBJECT SET FO
 
 Fait pencher le texte sélectionné légèrement vers la droite.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+Vous pouvez également définir cette propriété via la commande [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.fe.html).
 
 > Ceci est un texte normal.<br/>
 > *Ceci est un texte en italique.*
@@ -121,7 +121,7 @@ Il existe deux types de noms de familles de polices :
 - *family-name :* Le nom d'une famille de polices, comme "times", "courier", "arial", etc.
 - *generic-family*: Le nom d'une famille générique, comme "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Vous pouvez le définir en utilisant la commande [`OBJECT SET FONT`](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT.301-7487845.fe.html).
 
 #### Grammaire JSON
 
@@ -165,7 +165,7 @@ La couleur peut être spécifiée par :
 - une valeur HEX - comme "# ff0000"
 - une valeur RVB - comme "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.fe.html).
 
 #### Grammaire JSON
 
@@ -183,9 +183,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 `List box de type collection/sélection/entity selection`
 
-Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) command in the 4D Language Reference manual.
+Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. Pour plus d'informations, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.en.html) dans le manuel de référence du langage 4D.
 
-Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.en.html).
 
 Vous pouvez également définir cette propriété à l'aide de la commande `LISTBOX SET PROPERTY` avec la constante `lk font color expression`.
 
@@ -216,7 +216,7 @@ Foreground color;Dark shadow color)
 
 Utilisé pour appliquer un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 
-Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou variable sera évaluée pour chaque ligne affichée (si elle s'applique à la list box) ou chaque cellule affichée (si elle s'applique à la list box). Vous pouvez utiliser les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
+Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou variable sera évaluée pour chaque ligne affichée (si elle s'applique à la list box) ou chaque cellule affichée (si elle s'applique à la list box). Vous pouvez utiliser les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.en.html).
 
 Exemple :
 
@@ -252,7 +252,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 :::note
 
-- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
+- "automatic" n'est pas pris en charge par les [boutons](button_overview.md), [cases à cocher](checkbox_overview.md) et [boutons radio](radio_overview.md)
 - "justify" n'est pris en charge que par les [zones de saisie](input_overview.md) et les [zones de texte](text.md)
 
 :::
@@ -272,7 +272,7 @@ L'option **Par défaut** (valeur JSON `automatic`) définit l'alignement en fonc
 - `bas` pour toutes les données (sauf les images) et
 - `haut` pour les données de type image.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+Cette propriété peut également être gérée par les commandes [OBJECT Get vertical alignment](https://doc.4d.com/4dv20/help/command/en/page1188.html) et [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv20/help/command/en/page1187.html).
 
 #### Grammaire JSON
 
@@ -419,7 +419,7 @@ En plus des [zones de texte statiques](text.md), les objets de texte des [zones 
 
 Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 
-Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.en.html). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 
 #### Grammaire JSON
 
@@ -439,7 +439,7 @@ Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tabl
 
 <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 
-Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.en.html). Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 
 #### Grammaire JSON
 

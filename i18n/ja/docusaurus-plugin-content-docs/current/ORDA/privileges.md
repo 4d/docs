@@ -3,15 +3,15 @@ id: privileges
 title: ロールと権限
 ---
 
-The ORDA security architecture controls access to project resources for web and REST sessions. It lets you grant specific permissions on resources such as the datastore, dataclasses, attributes, and functions.
+ORDA セキュリティアーキテクチャーはWeb およびREST セッションに対してプロジェクトリソースへのアクセスを制御します。これを使用するとデータストア、データクラス、属性、関数といったリソースに対する特定の権限を付与することができます。
 
 ## 概要
 
-The security model combines **privileges**, **actions** (such as `read` and `create`), and **resources**.
+セキュリティモデルは**privileges**、**actions** (`read` や `create` などのアクション)、および**resources** などを組み合わせて構成されています。
 
-Assign privileges to a **session** using [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges).
+[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を使用して**session** に権限を割り当てます。
 
-Each request is checked against the permissions defined in the project's `roles.json` file. An unauthorized action raises a privilege error. Attributes without read permission are omitted from the response.
+各リクエストはプロジェクトの`roles.json` ファイル内で定義されているパーミッションに対してチェックされます。未認証のアクションは権限エラーを起こします。読み出し(read)権限がない属性はレスポンスから省略されます。
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
@@ -29,34 +29,34 @@ Each request is checked against the permissions defined in the project's `roles.
 
 ## スコープ
 
-Permissions apply to **web and REST sessions**: [REST requests](../REST/gettingStarted.md), including [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), and **4D code executed in a web process**. This includes [exposed functions](./ordaClasses.md), [HTTP request handlers](../WebServer/http-request-handler.md), the [On Web Connection database method](../commands/on-web-connection-database-method), and any code they call. For example, an allowed function call still fails if the function reads a dataclass for which the session has no read permission.
+パーミッションは**Web および REST セッション** に対して適用されます: [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview)、および **Web プロセス内で実行された4D コード** を含めた[REST リクエスト](../REST/gettingStarted.md)。これには[公開された関数](./ordaClasses.md)、[HTTP リクエストハンドラ](../WebServer/http-request-handler.md)、[On Web Connection データベースメソッド](../commands/on-web-connection-database-method)、 およびそれらが呼び出すあらゆるコードが含まれます。例えば、関数がデータクラスを読み出すがセッションに読み出しのパーミッション(許可)がない場合には、許可された関数の呼び出しも失敗します。
 
-:::info Exception
+:::info 例外
 
-The **execute** permission of a [shared singleton](../Concepts/classes.md#shared-singleton) or [singleton function](../Concepts/classes.md#singleton-classes) is checked only when the function is [called through REST](../REST/$singleton.md). When 4D code running in a web session directly calls it (`cs.MySingleton.me.myFunction()`), no permission is checked, unlike dataclass, entity, entity selection and datastore functions, which are checked in both cases.
+[共有シングルトン](../Concepts/classes.md#共有シングルトン) あるいは [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) の**execute** パーミッションは、関数が[REST 経由で呼び出された](../REST/$singleton.md) ときにのみチェックされます。 Web セッション内で実行された4D コードがそれ(`cs.MySingleton.me.myFunction()`) を直接呼び出した場合、パーミッションは何もチェックされません。これはどちらの場合にもチェックされるデータクラス、エンティティ、エンティティセレクションおよびデータストア関数などとは異なります。
 
 :::
 
-Permissions never apply to [desktop session code](../Desktop/sessions.md) (standalone, client/server, stored procedures) or [tool4d](../Admin/cli.md#tool4d).
+パーミッションは、[デスクトップセッションコード](../Desktop/sessions.md)(スタンドアロン、クライアント/サーバー、ストアドプロシージャー) あるいは [tool4d](../Admin/cli.md#tool4d) に対して適用されることは決してありません。
 
 :::warning
 
-When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+パーミッションエントリが宣言されていない[権限](#権限とロール) を参照する場合、4D はエラーをログに記録し、そのエントリを無視します。この場合、パーミッションは無視されます。[デフォルトの制限モード](#制限モード) が有効化されていない場合、リソースは`guest` セッションからアクセス可能となります。
 
 :::
 
-### MCP tools
+### MCPツール
 
-The same permissions apply to the sessions of the [MCP server](../WebServer/mcp-server.md), with nothing specific to configure:
+特段何の設定をしなくても、[MCP サーバー](../WebServer/mcp-server.md) のセッションにも同じパーミッションが適用されます:
 
-- A [custom tool](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requires the **execute** permission on its function, and benefits from its **promote** permission.
-- The [built-in CRUD tools](../WebServer/mcp-server.md#built-in-crud-tools) require the **read**, **create**, **update**, or **drop** permission on the dataclass, and the attribute permissions apply. Each attribute of a path used in a filter, a sort, or a projection requires the **read** permission.
-- The CRUD tools are listed only if the session has at least one data permission on a dataclass, and the `describeModel` tool only describes the dataclasses on which the session has a data permission, with their readable or writable attributes.
-- A tool, a dataclass, or an attribute that the session cannot access is reported as if it did not exist.
+- [カスタムツール](../WebServer/mcp-server.md#カスタムツール) (`exposed MCP Function`) はその関数に対して**execute** パーミッションを必要とし、**promote** パーミッションがあると望ましいです。
+- [ビルトインのCRUD ツール](../WebServer/mcp-server.md#ビルトインcrudツール) はデータクラスの**read**、**create**、**update**、あるいは**drop** パーミッションを必要とし、属性のパーミッションが適用されます。フィルター、並べ替え、または取得属性の指定に使用されるそれぞれの属性は、**read** パーミッションが必要になります。
+- CRUD ツールは、セッションがデータクラスに対して少なくとも一つのデータパーミッションを持っている場合に表示されます。そして`describeModel` ツールはセッションがデータパーミッションをもつデータクラスのみを、その読み出し可能および書き込み可能属性とともに記述します。
+- 属性がアクセスできないツール、データクラス、または属性は、それが存在しないかのように報告されます。
 
 #### 例題
 
-MCP clients authenticated with the "salesReader" privilege can read the Customer and Order dataclasses with the CRUD tools, and call the tools published by the `OrderManager` singleton (for example `OrderManager-getYearTotal`):
+"salesReader" 権限で認証されたMCP クライアントは、Customer およびOrder データクラスをCRUD ツールを使って読み出すことができ、また`OrderManager` シングルトンによって公開されたツール(例えば`OrderManager-getYearTotal`)を呼び出すこともできます:
 
 ```json
 {
@@ -73,18 +73,18 @@ MCP clients authenticated with the "salesReader" privilege can read the Customer
 }
 ```
 
-### MCP tools
+### MCPツール
 
-The same permissions apply to the sessions of the [MCP server](../WebServer/mcp-server.md), with nothing specific to configure:
+特段何の設定をしなくても、[MCP サーバー](../WebServer/mcp-server.md) のセッションにも同じパーミッションが適用されます:
 
-- A [custom tool](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requires the **execute** permission on its function, and benefits from its **promote** permission.
-- The [built-in CRUD tools](../WebServer/mcp-server.md#built-in-crud-tools) require the **read**, **create**, **update**, or **drop** permission on the dataclass, and the attribute permissions apply. Each attribute of a path used in a filter, a sort, or a projection requires the **read** permission.
-- The CRUD tools are listed only if the session has at least one data permission on a dataclass, and the `describeModel` tool only describes the dataclasses on which the session has a data permission, with their readable or writable attributes.
-- A tool, a dataclass, or an attribute that the session cannot access is reported as if it did not exist.
+- [カスタムツール](../WebServer/mcp-server.md#カスタムツール) (`exposed MCP Function`) はその関数に対して**execute** パーミッションを必要とし、**promote** パーミッションがあると望ましいです。
+- [ビルトインのCRUD ツール](../WebServer/mcp-server.md#ビルトインcrudツール) はデータクラスの**read**、**create**、**update**、あるいは**drop** パーミッションを必要とし、属性のパーミッションが適用されます。フィルター、並べ替え、または取得属性の指定に使用されるそれぞれの属性は、**read** パーミッションが必要になります。
+- CRUD ツールは、セッションがデータクラスに対して少なくとも一つのデータパーミッションを持っている場合に表示されます。そして`describeModel` ツールはセッションがデータパーミッションをもつデータクラスのみを、その読み出し可能および書き込み可能属性とともに記述します。
+- 属性がアクセスできないツール、データクラス、または属性は、それが存在しないかのように報告されます。
 
 #### 例題
 
-MCP clients authenticated with the "salesReader" privilege can read the Customer and Order dataclasses with the CRUD tools, and call the tools published by the `OrderManager` singleton (for example `OrderManager-getYearTotal`):
+"salesReader" 権限で認証されたMCP クライアントは、Customer およびOrder データクラスをCRUD ツールを使って読み出すことができ、また`OrderManager` シングルトンによって公開されたツール(例えば`OrderManager-getYearTotal`)を呼び出すこともできます:
 
 ```json
 {
@@ -103,23 +103,23 @@ MCP clients authenticated with the "salesReader" privilege can read the Customer
 
 ## リソース
 
-4D checks the session's permissions whenever a resource is accessed. The following resources can have specific permissions:
+4D は、リソースがアクセスされるときにセッションのパーミッションをチェックします。以下のリソースは特定のパーミッションを持つことができます:
 
-| リソース                                                                                                                                                                     | `applyTo`                 | `type`            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | ----------------- |
-| [Datastore](./dsMapping.md#datastore)                                                                                                                                    | `ds`                      | `データストア`          |
-| [Datastore class function](./ordaClasses.md#datastore-class)                                                                                                             | `ds.<function>`           | `method`          |
-| [Dataclass](./dsMapping.md#dataclass)                                                                                                                                    | `<Dataclass>`             | `データクラス`          |
-| [Attribute](./dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1)) | `<Dataclass>.<attribute>` | `属性`              |
-| [Dataclass, entity or entity selection function](./ordaClasses.md)                                                                                                       | `<Dataclass>.<function>`  | `method`          |
-| [Shared singleton](../Concepts/classes.md#shared-singleton) (all its exposed functions)                                                               | `<Singleton>`             | `singleton`       |
-| [Singleton function](../Concepts/classes.md#singleton-classes)                                                                                                           | `<Singleton>.<function>`  | `singletonMethod` |
+| リソース                                                                                                                      | `applyTo`                 | `type`            |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ----------------- |
+| [データストア](./dsMapping.md#datastore)                                                                                        | `ds`                      | `datastore`       |
+| [データストアクラス関数](./ordaClasses.md#datastore-class)                                                                           | `ds.<function>`           | `method`          |
+| [データクラス](./dsMapping.md#dataclass)                                                                                        | `<Dataclass>`             | `dataclass`       |
+| [属性](./dsMapping.md#属性) ([計算属性](./ordaClasses.md#計算属性-1) および[エイリアス属性](./ordaClasses.md#エイリアス属性-1) を含む) | `<Dataclass>.<attribute>` | `attribute`       |
+| [データクラス、エンティティまたはエンティティセレクション関数](./ordaClasses.md)                                                                        | `<Dataclass>.<function>`  | `method`          |
+| [共有シングルトン](../Concepts/classes.md#共有シングルトン) (ただし公開された関数を除く)                                            | `<Singleton>`             | `singleton`       |
+| [シングルトン関数](../Concepts/classes.md#シングルトンクラス)                                                                              | `<Singleton>.<function>`  | `singletonMethod` |
 
-Use the `applyTo` and `type` values shown in the table when defining permissions in [`roles.json`](#rolesjson-file).
+パーミッションを[`roles.json`](#rolesjson-ファイル) 内で定義する際には、上記の表の`applyTo` および `type` の値を使用してください。
 
 :::note ORDA クラス関数の権限の設定
 
-In `roles.json`, identify an ORDA class function in `applyTo` with this syntax:
+`roles.json` 内では、以下のシンタックスを使用して`applyTo` 内でORDA クラス関数を識別します:
 
 ```json
 <DataclassName>.<functionName>
@@ -134,13 +134,13 @@ Class extends Entity
    ...
 ```
 
-Use this value:
+この場合、以下の値を使用します:
 
 ```json
 "applyTo":"City.getPopulation"
 ```
 
-Because permissions identify functions by dataclass and function name, functions with the same name in different ORDA classes (entity, entity selection, dataclass) cannot be assigned different privileges. Give them distinct names instead. For example, name the functions `dropEntity()` and `dropSelection()` in `cs.CityEntity` and `cs.CitySelection`, respectively:
+パーミッションはデータクラスと関数名で関数を識別するため、異なるORDA クラス(エンティティ、エンティティセレクション、データクラス)で同じ名前をもつ関数を異なる権限に割り当てることはできません。その場合にはそれぞれ個別の名前をつけてください。例えば、`cs.CityEntity` および `cs.CitySelection` 内の`dropEntity()` および `dropSelection()` 関数は、それぞれ以下のように名前をつけます:
 
 ```json
 	"permissions": {
@@ -168,73 +168,73 @@ Because permissions identify functions by dataclass and function name, functions
 
 ## パーミッション
 
-A **permission** allows an action on a resource; for example, executing `ds.myTable.myFunction()`. Permissions are defined in [`roles.json`](#rolesjson-file) and granted to one or more [privileges](#privileges-and-roles).
+**パーミッション** は、リソースに対するアクションを許可します。例えば`ds.myTable.myFunction()` を実行するなどです。パーミッションは[`roles.json`](#rolesjson-ファイル) 内で定義され、一つまたは複数の[権限](#権限とロール) に対して付与されます。
 
-If no permission is defined for a resource, access depends on the project's [restriction mode](#restriction-modes).
+リソースに対してパーミッションが何も定義されていなければ、そこへのアクセスはプロジェクトの[制限モード](#制限モード) に依存します。
 
 ### 許諾アクション
 
-Available actions depend on the resource:
+利用可能なアクションは、リソースに依存します:
 
-| 動作                                                     | データストア                                                                                                                | データクラス                                                                                                                      | 属性                                                                                                             | Function                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **create**                                             | Create entities in any dataclass                                                                                      | Create entities in this dataclass                                                                                           | Create an entity with a non-default value for this attribute (ignored for alias attributes) | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **read**                                               | 任意のデータクラスにおいて属性を読み取り                                                                                                  | 当該データクラスにおいて属性を読み取り                                                                                                         | Read this attribute's content                                                                                  | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **update**                                             | Update attributes in any dataclass                                                                                    | Update attributes in this dataclass                                                                                         | Update this attribute's content (ignored for alias attributes)                              | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **drop** ("Delete" in Qodly Studio) | Delete data in any dataclass                                                                                          | Delete data in this dataclass                                                                                               | Delete a non-null value for this attribute (except for alias and computed attributes)       | n/a                                                                                                                                                                                                                                                                                                                                                         |
-| **execute**                                            | Execute any function on the project (datastore, dataclass, entity selection, entity, or singleton) | Execute any function on the dataclass; dataclass, entity, and entity selection functions are treated as dataclass functions | n/a                                                                                                            | 当該関数を実行                                                                                                                                                                                                                                                                                                                                                     |
-| **promote**                                            | n/a                                                                                                                   | n/a                                                                                                                         | n/a                                                                                                            | Temporarily add a privilege for the duration of the function call. Only the process executing the function receives it, not the whole session. Use [`promote()`](../API/SessionClass.md#promote) and [`demote()`](../API/SessionClass.md#demote) to set or remove this action dynamically in a web process. |
+| 動作                                                    | データストア                                                                           | データクラス                                                           | 属性                                                               | Function                                                                                                                                                                                                     |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **create**                                            | 任意のデータクラス内にてエンティティを作成する                                                          | 当該データクラス内にてエンティティを作成する                                           | 当該属性にデフォルト以外の値でエンティティを作成する(エイリアス属性の場合は無視されます) | n/a                                                                                                                                                                                                          |
+| **read**                                              | 任意のデータクラスにおいて属性を読み取り                                                             | 当該データクラスにおいて属性を読み取り                                              | 当該属性を読み取り                                                        | n/a                                                                                                                                                                                                          |
+| **update**                                            | 任意のデータクラスにおいて属性を更新                                                               | 当該データクラスにおいて属性を更新                                                | 当該属性を更新(エイリアス属性の場合は無視されます)                    | n/a                                                                                                                                                                                                          |
+| **drop** (Qodly Studio では"Delete") | 任意のデータクラスにおいてデータを削除                                                              | 当該データクラスにおいてデータを削除                                               | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)          | n/a                                                                                                                                                                                                          |
+| **execute**                                           | プロジェクトの任意の関数を実行 (データストア、データクラス、エンティティセレクション、エンティティ、またはシングルトン) | デークラス上で任意の関数を実行。データクラス、エンティティ、およびエンティティセレクション関数はデータクラス関数として扱われます | n/a                                                              | 当該関数を実行                                                                                                                                                                                                      |
+| **promote**                                           | n/a                                                                              | n/a                                                              | n/a                                                              | 関数の呼び出しの間、権限を一時的に追加します。セッション全体ではなく、関数を実行しているプロセスのみがその権限を受け取ります。 Web プロセス内においてこのアクションを動的に設定あるいは削除したい場合には[`promote()`](../API/SessionClass.md#promote) および [`demote()`](../API/SessionClass.md#demote) を使用します。 |
 
-### Permission rules
+### パーミッションルール
 
-- **update** and **drop** require **read** on the resource; **create** does not.
-- A function can be **promoted** by multiple privileges. During execution, it receives the combined permissions of all those privileges; there is no priority order.
-- An [alias attribute](./ordaClasses.md#alias-attributes-1) can be read if the session has permission to read the alias, even if it cannot read the attributes the alias resolves to.
-- A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if its underlying attributes have no permissions.
-- In REST [force login mode](../REST/authUsers.md#force-login-mode), guest users can always execute [`authentify()`](../REST/authUsers.md#function-authentify), regardless of the permissions configuration.
+- **update** および **drop** はリソースに対して**read** を持っている必要があります。**create** を持っているは必要ありません。
+- 関数は複数の権限で**promoted** (昇格)させることができます。実行の間、関数はこれらすべての権限を組み合わせたパーミッションを受け取ります。優先順位はありません。
+- [エイリアス属性](./ordaClasses.md#エイリアス属性-1) は、セッションがそのエイリアスを読み出すパーミッションを持っていれば(たとえそのエイリアスが解決する先の属性を読むことができなくても)読み出すことができます。
+- [計算属性](./ordaClasses.md#計算属性-1) は、セッションがその計算属性の下地となる属性に対するアクセス件を持っていなくても、その計算属性へのアクセス権があれば、それを読み出すことができます。
+- REST [強制ログインモード](../REST/authUsers.md#強制ログインモード) においては、パーミッション設定に関係なく、ゲストユーザーは常に[`authentify()`](../REST/authUsers.md#function-authentify) を実行することができます。
 
 ### 継承されたパーミッション
 
-Permission actions are inherited according to the following rules:
+パーミッションは、以下のルールに従って継承されます:
 
-1. Permissions descend **datastore → dataclass → attribute / function**, and **datastore → singleton → singleton function**.
-2. Resolution is **per action**. Defining `read` on a dataclass does not change how `create`, `update`, `drop` or `execute` are resolved for it.
-3. **Dataclass replaces datastore**. A permission defined on a dataclass for an action replaces the datastore permission for that action. Privileges granted the action only on the datastore lose it on that dataclass.
-4. **Function replaces dataclass**. An `execute` permission defined on a function replaces the dataclass (and datastore) `execute` permission for that function. Entity and entity selection functions follow the same rule as dataclass functions.
-5. **Singleton replaces datastore**, **singleton function replaces singleton**.
-6. **Datastore function replaces datastore**.
-7. **Attribute adds to its parent**. To act on an attribute that has its own permission, a session needs a privilege granted by the attribute permission **and** a privilege granted the action on the dataclass (directly or through the datastore).
-8. An action granted to **no privilege** (for example, `"read": []`) is "not set", so the permission at the level above applies. It does not mean "nobody". To deny the action, use [restricted mode](#restriction-modes) without defining that permission, or grant it to a privilege that no session receives.
+1. パーミッションは **データストア → データクラス → 属性 / 関数**、および **データストア → シングルトン → シングルトン関数** の順番で継承されます。
+2. 解決は**アクションごと** に行われます。データクラスに対して`read` を定義しても、`create`、`update`、`drop` あるいは `execute` がデータクラスに対してどのように解決されるかは変わりません。
+3. **データクラスはデータストアを置き換えます**。アクションに対してデータクラスに定義されたパーミッションは、そのアクションに対するデータストアパーミッションを置き換えます。データストア上でのみ権限が付与されたアクションは、データクラス上ではその権限を失います。
+4. **関数はデータクラスを置き換えます**。関数に対して定義された`execute` パーミッションは、その関数に対するデータクラス(およびデータストア) の`execute` パーミッションを置き換えます。エンティティとエンティティセレクションの関数はデータクラス関数と同じルールに従います。
+5. **シングルトンはデータストアを置き換え**、**シングルトン関数はシングルトンを置き換えます**。
+6. **データストア関数はデータストアを置き換えます**。
+7. **属性はその親に対して追加されます**。独自のパーミッションを持つ属性に対してアクションを行うには、セッションは属性パーミッションから付与された権限 **に加えて** データクラス上でのアクションを許可する権限も(直接、あるいはデータクラスを通して)必要になります。
+8. **権限が与えられていないアクション** (例えば、`"read": []` など) は"未設定"とみなされ、一つ上のレベルのパーミッションが適用されます。これは"誰も実行できない"ということを意味しません。アクションを拒否するためには、パーミッションを定義しないで[制限モード](#制限モード) を使用するか、どのセッションにも付与されない権限に付与します。
 
-Permissions only grant access; there is no explicit deny. A dataclass or function permission can therefore narrow a broader datastore permission by replacing it. An attribute permission is additive: it grants access to that attribute only when the session also has the action on its dataclass.
+パーミッションはアクセスを許可するだけです。明示的な拒否を示すものではありません。そのためデータクラスまたは関数のパーミッションを使うと、より広いデータストアパーミッションを上書きすることでそれを狭めることができます。属性パーミッションは加算的です。セッションがその属性のデータクラスへのアクションを持っている場合にのみ属性へのアクセスが認可されます。
 
-:::tip Recommended practice
+:::tip 推奨される手法
 
-- Assign access to sessions through **roles** with `Session.setPrivileges({roles: [...]})`. Define roles around business profiles; privileges are the reusable building blocks. [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/roles/overview) displays effective permissions by role.
-- If an administration role needs full access, include every privilege in it except a lock privilege, if used. Add each new privilege to that role: a dataclass-level permission can replace a broader datastore permission.
-- Review the effect of privilege changes on every role. In Qodly Studio, **Detailed Permission Review** shows a role's effective access; a role with no privileges can help you review guest-only access.
+- `Session.setPrivileges({roles: [...]})` を使用して**roles** を通してセッションにアクセス件を割り当てるようにします。ビジネスプロフィールに基づいてロールを定義してください。権限は言わば再利用可能な構成要素として活用します。 [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/roles/overview) では、ロールごとに有効なパーミッションを表示します。
+- 管理者のロールに完全なアクセスが必要な場合、ロック権限(使用していれば)を除く全ての権限を含めてください。そのロールに新しい権限を加えていってください。データクラスレベルのパーミッションはより広いデータストアのパーミッションを置き換えるからです。
+- 全てのロールに対して権限の変更がおよび影響を確認してください。 Qodly Studio では、**詳細なパーミッションレビュー** を見ればロールの有効なアクセス権が表示されます。権限のないロールを使用することでゲスト用のアクセス権を確認することができます。
 
 :::
 
 ## 権限とロール
 
-A **privilege** grants actions on resources. A **role** groups privileges into a business profile that an administrator can assign to a session.
+**権限** はリソースへのアクション許可します。**ロール** は権限をビジネスプロフィールとしてまとめたもので、管理者はこれをセッションへと割り当てることができます。
 
-For example, `manageInvoices` could be a privilege and `secretary` a role that includes it and other privileges. Assign roles to sessions with [`Session.setPrivileges({roles: [...]})`](../API/SessionClass.md#setprivileges); the role grants all its privileges.
+例えば、`manageInvoices` (請求管理)は権限の一例で、`secretary` はそれとその他の権限を持ったロールの一例です。ロールは[`Session.setPrivileges({roles: [...]})`](../API/SessionClass.md#setprivileges)を使用してセッションへと割り当てます。ロールは持っている全ての権限を付与します。
 
-Privileges can be granted permission on multiple action-resource combinations, and an action can be granted to multiple privileges.
+権限は、複数のアクションとリソースの組み合わせに対して付与することができ、単一のアクションに複数の権限を付与することもできます。
 
-Define privileges and roles in [`roles.json`](#rolesjson-file), then grant roles to sessions with `Session.setPrivileges()`.
+権限とロールを[`roles.json`](#rolesjson-ファイル) で定義したあとに、`Session.setPrivileges()` を使用してセッションにロールを付与します。
 
-### Including privileges
+### 権限を含める
 
-A privilege can include other privileges using the `includes` property in `roles.json`. Inclusion is transitive and one-way: if A includes B, and B includes C, A receives the permissions of B and C.
+権限は、`roles.json` 内で`includes` プロパティを使用することで他の権限を内包することができます。権限を含めた場合それは一方向に伝播します。つまりA がB を内包し、B がC を内包する場合、A はB とC 両方の権限を受け取ります。
 
-[`Session.getPrivileges()`](../API/SessionClass.md#getprivileges) returns the expanded collection (for example, A, B, and C) in no guaranteed order. Declare an included privilege before the privilege that includes it; otherwise, 4D drops the inclusion and logs an error.
+[`Session.getPrivileges()`](../API/SessionClass.md#getprivileges) は権限の展開されたコレクション(例えばA、B、およびC) を順不同で返します。権限を内包する場合、内包される権限を、内包する権限よりも先に宣言して下さい。そうでない場合、4D はその内包を無視し、エラーをログに記録します。
 
 ### 例題
 
-This authentication function assigns the user's role to the session:
+認証用の関数はユーザーのロールをセッションに割り当てます:
 
 ```4d
 
@@ -258,20 +258,20 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## `guest` privilege
+## `guest` 権限
 
-`guest` is built in; declaring a privilege named `Guest` is an error ("privilege already defined"). Sessions without privileges (`Session.isGuest() = True`) receive the permissions granted to `guest`.
+`guest` はビルトインされた権限です。`Guest` という名前の権限を宣言した場合、エラーとなります("権限がすでに定義されています")。権限がないセッション(`Session.isGuest() = True` の場合)は、`guest` に付与された権限を受け取ります。
 
-Permissions granted to `guest` are available to every session, regardless of its other privileges. Do not grant `guest` access that should be withheld from other sessions, and account for its permissions when restricting access at the dataclass level.
+`guest` に付与された権限は、全てのセッションで利用可能です(そのセッションに割り当てられた他の権限に関わらず)。他のセッションからは拒否したいアクセスには`guest` 権限を付与しないでください。またデータクラスレベルでアクセスを制限したい場合、このアカウントの権限を考慮するようにして下さい。
 
 ## `roles.json` ファイル
 
-The project's web security settings are defined in `roles.json`:
+プロジェクトのWeb セキュリティ設定は`roles.json` 内で定義されています:
 
 | プロパティ                           | 型                                | 必須 | 説明                                                                                                                                               |
 | ------------------------------- | -------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `privileges`                    | Collection of privilege objects  | ◯  | Defined privileges. Each object has a `privilege` name and can have an `includes` collection of privilege names. |
-| `ロール`                           | Collection of role objects       | ×  | Defined roles. Each object has a `role` name and a `privileges` collection of privilege names.                   |
+| `privileges`                    | 権限オブジェクトのコレクション                  | ◯  | 定義された権限。それぞれのオブジェクトは`privilege` 名を持ち、また権限名のコレクションである`includes` を持ちます。                                                                            |
+| `roles`                         | ロールオブジェクトのコレクション                 | ×  | 定義されたロール。それぞれのオブジェクトは`role` 名を持ち、権限名の`privileges` コレクションであるを持ちます。                                                                                |
 | `permissions.allowed`           | Collection of permission objects | ◯  | Permissions assigned to resources.                                                                                               |
 | `permissions.allowed[].applyTo` | Text                             | ◯  | Target [resource](#resources) name.                                                                                              |
 | `permissions.allowed[].type`    | Text                             | ◯  | [Resource](#resources) type: `datastore`, `dataclass`, `attribute`, `method`, `singletonMethod`, or `singleton`. |
@@ -287,10 +287,16 @@ The project's web security settings are defined in `roles.json`:
 :::note 注記
 
 - The `WebAdmin` privilege name is reserved for the application; do not use it for custom privileges.
-- Privilege and role names are case-insensitive. Unknown names passed to [`.setPrivileges()`](../API/SessionClass.md#setprivileges) are ignored.
+- Privileges および roles の名称においては文字の大小が区別されません。 Unknown names passed to [`.setPrivileges()`](../API/SessionClass.md#setprivileges) are ignored.
 - Qodly Studio can add an optional `id` property to privileges and roles to preserve references when they are renamed.
 - Multiple entries with the same `applyTo` are not merged: the last entry wins without an error. Define only one entry per resource.
 - A resource entry that grants no actions has no effect.
+
+:::
+
+:::warning
+
+パーミッションエントリが宣言されていない[権限](#権限とロール) を参照する場合、4D はエラーをログに記録し、そのエントリを無視します。この場合、パーミッションは無視されます。[デフォルトの制限モード](#制限モード) が有効化されていない場合、リソースは`guest` セッションからアクセス可能となります。
 
 :::
 

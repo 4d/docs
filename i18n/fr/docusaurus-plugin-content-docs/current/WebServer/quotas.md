@@ -12,12 +12,6 @@ Les quotas du serveur Web vous permettent de contrôler l'utilisation des ressou
 
 :::
 
-:::tip Article de blog lié
-
-[Un serveur web 4D qui sait quand dire « non »](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## Conditions requises
 
 La configuration des quotas nécessite l'activation des [sessions évolutives](./sessions.md#enabling-web-sessions).

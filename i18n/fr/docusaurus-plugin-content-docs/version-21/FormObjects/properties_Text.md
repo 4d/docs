@@ -286,7 +286,7 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 :::note
 
-- "automatic" is not supported by [buttons](button_overview.md), [check boxes](checkbox_overview.md), and [radio buttons](radio_overview.md)
+- "automatic" n'est pas pris en charge par les [boutons](button_overview.md), [cases à cocher](checkbox_overview.md) et [boutons radio](radio_overview.md)
 - "justify" n'est pris en charge que par les [zones de saisie](input_overview.md) et les [zones de texte](text.md)
 
 :::
