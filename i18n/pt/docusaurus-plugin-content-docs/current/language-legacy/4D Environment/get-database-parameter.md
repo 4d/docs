@@ -244,7 +244,9 @@ Para todo tipo de aplicação 4D interpretada ou compilada (4D todos os modos, 4
 
 -restrição de comandos 4D que são examinados usando Log command list (selector 80), ou
 
--restrição do processo atual com Current process debug log recording (selector 111). Isso vai adicionar a letra "p" e o número de processo ao nome de arquivo: 4DDebugLog\[\_pn\_n\].txt ou 4DDebugLogServer\[\_pn\_n\].txt Para saber mais sobre esse formato e o uso do arquivo 4DDebugLog, veja a seção *Descrição de arquivos de log* **Nota**: Esta opção se oferece unicamente com fins de depuração e deve ser utilizada com cuidado já que pode afetar o rendimento da aplicação.
+-restrição do processo atual com Current process debug log recording (selector 111). Isso vai adicionar a letra "p" e o número de processo ao nome de arquivo: 4DDebugLog\[\_pn\_n\].txt ou 4DDebugLogServer\[\_pn\_n\].txt Para saber mais sobre esse formato e o uso do arquivo 4DDebugLog, veja a seção [*Descrição de arquivos de log*](../../Debugging/debugLogFiles.md).
+
+**Nota**: Esta opção se oferece unicamente com fins de depuração e deve ser utilizada com cuidado já que pode afetar o rendimento da aplicação.
 
 
 
@@ -1014,23 +1016,7 @@ Esta configuração só pode ser definida no 4D Server e aplica-se a todas as no
 
 
 
-## seletores Thread-seguro 
-
-O comando **Get database parameter** pode ser usado em processos preemptivos ao chamar os seletores abaixo:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
-
-
-## Exemplo 
+## Exemplo
 
 Imagine que queira que sua aplicação reinicie após a primeira execução. A aplicação é lançada, com, por exemplo, uma linha de comando em Windows:
 
@@ -1062,11 +1048,11 @@ Em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-star
 [SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriedades
-
 |  |  |
 | --- | --- |
 | Número do comando | 643 |
-| Thread-seguro | yes (parcialmente) |
+| Thread-seguro | yes (parcialmente). Seletores thread-seguros: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
+
 
 
 
