@@ -34,7 +34,7 @@ The [`4D.MCPContext`](../../API/MCPContextClass.md) object gives information abo
 - ask the user for a confirmation or for values before running an action ([`.requireInput()`](../../API/MCPContextClass.md#requireinput), [`.hasInput()`](../../API/MCPContextClass.md#hasinput), [`.input`](../../API/MCPContextClass.md#input), [`.bound`](../../API/MCPContextClass.md#bound)),
 - return an error to the client ([`.error()`](../../API/MCPContextClass.md#error)).
 
-The context is available while an [`exposed MCP Function`](../../ORDA/ordaClasses.md#exposed-mcp-function) runs as a tool of the [MCP server](../../WebServer/mcp-server.md), including in the methods and functions it calls.
+The context is available while an [`exposed mcp Function`](../../ORDA/ordaClasses.md#exposed-mcp-function) runs as a tool of the [MCP server](../../WebServer/mcp-server.md), including in the methods and functions it calls.
 
 Outside an MCP tool call (for example in a REST request or in a method run from the 4D environment), `MCP` returns an inert object:
 
@@ -54,9 +54,9 @@ You want the user to confirm the deletion of an order before it is dropped:
 Class extends Entity
 
 // Deletes the order
-exposed MCP Function delete() : Text
+exposed mcp Function delete() : Text
 	If (Not(MCP.hasInput("confirm")))
-		MCP.requireInput({message: "Delete order "+String(This.ID)+"?"; confirm: {type: "boolean"; title: "Delete"}}; This.getStamp())
+		MCP.requireInput({confirm: {type: "boolean"; prompt: "Delete order "+String(This.ID)+"?"}}; This.getStamp())
 		return
 	End if
 	If (MCP.bound#This.getStamp())
@@ -83,9 +83,10 @@ End if
 
 ## See also
 
-[MCPContext class](../../API/MCPContextClass.md)  
-[MCP server](../../WebServer/mcp-server.md)  
-[Session](../../commands/session)
+- [MCPContext class](../../API/MCPContextClass.md)
+- [MCP server](../../WebServer/mcp-server.md)
+- [MCP behavior tags](../../WebServer/mcp-server.md#mcp-tool-metadata)
+- [Session](../../commands/session)
 
 ## Properties
 

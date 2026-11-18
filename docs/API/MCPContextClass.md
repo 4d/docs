@@ -45,6 +45,8 @@ The `.bound` property contains <!-- REF #MCPContextClass.bound.Summary -->the *b
 
 The value comes back signed with the user's answers, so the function can compare it with the current value and detect a change that occurred while the user was answering (for example, a modified entity). It is empty when the call does not carry verified answers.
 
+Bind what the user was shown. For example, a tool acting on several entities binds their keys, or a digest of their keys, rather than their number: a count only detects a change of size, not other entities taking the place of the ones the user confirmed.
+
 The *bind* value is signed, not encrypted: the client can read it.
 
 This property is **read-only**.
@@ -135,6 +137,8 @@ The `.error()` function <!-- REF #MCPContextClass.error().Summary -->makes the c
 
 `.error()` does not stop the execution of the function: call `return` after it if needed.
 
+An error raised while the function runs (for example with [`throw`](../commands/throw)) also ends the call with an error result (`isError: true`) containing the error message.
+
 Outside an MCP tool call, `.error()` does nothing.
 
 #### Example
@@ -142,7 +146,7 @@ Outside an MCP tool call, `.error()` does nothing.
 You refuse an amount that is too high:
 
 ```4d
-exposed MCP Function refund($amount : Real) : Text
+exposed mcp Function refund($amount : Real) : Text
 	If ($amount>1000)
 		MCP.error("Refunds over 1000 must be done by an accountant")
 		return
@@ -174,7 +178,7 @@ The `.hasInput()` function <!-- REF #MCPContextClass.hasInput().Summary -->retur
 
 If *name* is omitted or empty, `.hasInput()` returns **True** if the current call contains a verified answer of the user for at least one field.
 
-The answer is verified when the client calls the tool again with the answers and a valid `requestState`: signed by 4D for the same token, tool, arguments, and fields, less than 10 minutes ago, and since the MCP server was last enabled. Otherwise, `.hasInput()` returns **False**.
+The answer is verified when the client calls the tool again with the answers and a valid `requestState`: signed by 4D for the same token, tool, arguments, and fields, less than 10 minutes ago, since the MCP server was last enabled, and not used yet. A `requestState` is used once: after 4D has run the function with its answers, a new call with the same `requestState` does not carry verified answers, and the input is asked again. Otherwise, `.hasInput()` returns **False**.
 
 Outside an MCP tool call, `.hasInput()` returns **False**.
 
@@ -184,7 +188,7 @@ You ask for a confirmation only if the user has not answered yet:
 
 ```4d
 If (Not(MCP.hasInput("confirm")))
-	MCP.requireInput({confirm: {type: "boolean"; title: "Send the invoice to the customer"}})
+	MCP.requireInput({confirm: {type: "boolean"; prompt: "Send the invoice to the customer?"}})
 	return
 End if
 ```
@@ -238,10 +242,14 @@ End if
 
 The `.requireInput()` function <!-- REF #MCPContextClass.requireInput().Summary -->asks the user, through the MCP client, to fill in a form before the tool continues<!-- END REF -->.
 
-In *fields*, pass an object with:
+In *fields*, pass an object with one property per field to display. The property name is the field name, and its value is an object with:
 
-- an optional `message` property (Text): the text displayed to the user,
-- one property per field to display, whose name is the field name and whose value is the JSON Schema of a `"boolean"`, `"string"`, `"number"`, or `"integer"` field (for example `{type: "boolean"; title: "Confirm"}`). A field is required unless its schema contains `required: False`.
+- a `type` property: the JSON Schema type of the field, `"string"`, `"number"`, `"integer"`, or `"boolean"`. For a choice, use a `"string"` field with an `enum` collection of the possible values, as in JSON Schema (for example `{type: "string"; enum: ["Yes"; "No"]; prompt: "Ship now?"}`),
+- a `prompt` property (Text): the text displayed to the user for this field, for example the question to confirm.
+
+A field is required unless its object contains `required: False`.
+
+Any other `type` (for example `"text"` or `"enum"`) raises an error naming the field and the expected types, and the tool call ends with an error result (`isError: true`).
 
 When the tool function returns, 4D answers the call with `resultType: "input_required"`, the form, and a `requestState` signed by 4D. The client displays the form, then calls the tool again with the answers. The function then runs again **from the top**: [`.hasInput()`](#hasinput) returns **True** for the answered fields and [`.input`](#input) contains the answers. If the answers are already there and *bind* has the same value as when the input was asked, `.requireInput()` does not ask again.
 
@@ -265,9 +273,9 @@ You ask the user to confirm the closing of a ticket and to enter an optional com
 // cs.TicketEntity class
 Class extends Entity
 
-exposed MCP Function close() : Text
+exposed mcp Function close() : Text
 	If (Not(MCP.hasInput("confirm")))
-		MCP.requireInput({message: "Close ticket "+String(This.ID)+"?"; confirm: {type: "boolean"; title: "Close"}; comment: {type: "string"; title: "Comment"; required: False}}; This.getStamp())
+		MCP.requireInput({confirm: {type: "boolean"; prompt: "Close ticket "+String(This.ID)+"?"}; comment: {type: "string"; prompt: "Comment"; required: False}}; This.getStamp())
 		return
 	End if
 	If (MCP.input.confirm)

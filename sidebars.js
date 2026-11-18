@@ -193,6 +193,7 @@ module.exports =
             "Concepts/parameters",
             "Concepts/shared",
             "Concepts/classes",
+            "Concepts/comments",
             "Concepts/control-flow",
             "Concepts/error-handling",
             "Concepts/interpreted-compiled",
@@ -406,10 +407,10 @@ module.exports =
             "WebServer/authentication",
             "WebServer/sessions",
             "WebServer/quotas",
-            "WebServer/mcp-server",
             "WebServer/preemptiveWeb"
           ]
         },
+        "WebServer/mcp-server",
         {
           type: "category",
           label: "REST API",
@@ -785,7 +786,7 @@ module.exports =
       label: "Server & Admin",
       link: {
         type: "generated-index",
-        title: "Administration",
+        title: "Server & Admin",
         description: "How to monitor your 4D applications",
         keywords: [
           "administration"
