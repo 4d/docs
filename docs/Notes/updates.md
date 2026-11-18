@@ -40,6 +40,7 @@ Read [**What’s new in 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 - Support of ["System rounded" border line style](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) property for [inputs](../FormObjects/input_overview.md), compliant with macOS *Liquid glass* design. Also supported by [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) and [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) commands.
 - New ["Border color" property](../FormObjects/properties_BackgroundAndBorder.md#border-color) available for most form objects. [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) and [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) commands support a new *borderColor* parameter.
 - [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes. 
+- [New **4D Embedding Studio** component](../embedding-studio/overview.md) that helps you create and manage vector embeddings within your entities. 
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R5): list of all bugs that have been fixed in 4D 21 R5.  
 
 #### Behavior changes

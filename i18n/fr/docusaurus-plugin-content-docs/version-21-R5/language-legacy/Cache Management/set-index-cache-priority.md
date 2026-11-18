@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont vous voulez modifier la priorité des index pour toute la session |
+| leChamp | Field | &#8594;  | Champ dont vous voulez modifier la priorité des index pour toute la session |
 | priorité | Integer | &#8594;  | Priorité du ou des index du champ dans le cache |
 </div>
 <!-- END REF-->

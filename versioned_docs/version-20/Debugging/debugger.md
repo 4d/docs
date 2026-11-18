@@ -7,6 +7,14 @@ The debugger is useful when you need to spot errors or monitor the execution of 
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
+
+:::note
+
+The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.  
+
+:::
+ 
+
 ## Calling the Debugger
 
 There are multiple ways to get the Debugger to display:
