@@ -24,7 +24,7 @@ Informação gravada precisa ser analisada para detectar e corrigir os problemas
 Arquivos de Histórico compartilham alguns campos para que possa estabelecer uma cronologia e fazer conexões entre entradas quando depurar:
 
 - `sequence_number`: esse número é exclusivo em todos os logs de depuração e é incrementado para cada nova entrada, seja qual for o arquivo de log, para que você possa saber a sequência exata das operações.
-- `connection_uuid`: para cada proceso 4D creado en un cliente 4D que se conecte a un servidor, este UUID de conexión se registra tanto del lado del servidor como del cliente. Permite que facilmente identifique o cliente remoto que lança cada processo.
+- `connection_uuid`: para cada proceso 4D creado en un cliente 4D que se conecte a un servidor, este UUID de conexão se registra tanto del lado del servidor como del cliente. Permite que facilmente identifique o cliente remoto que lança cada processo.
 
 ## 4DRequestsLog.txt
 
@@ -153,6 +153,17 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 | ConnectionID   | Connection UUID (UUID de VTCPSocket usada para comunicação) |
 | SequenceNumber | Número de operação único e sequencial da sessão de histórico                   |
 
+:::caution
+
+Trate este arquivo de log como um segredo. Ele contém os cabeçalhos das requisições e respostas e, nos modos que registram partes do corpo, os corpos das requisições e respostas.
+
+- As credenciais nos cabeçalhos são mascaradas: `Authorization` e `Proxy-Authorization`, cookies (`Cookie`, `Set-Cookie`) e `Mcp-Session-Id` mantêm apenas seu esquema, o prefixo de um token e seus últimos 4 caracteres, para que você ainda possa distinguir dois deles (por exemplo, `Authorization: Bearer 4dfgt_…k3Zq`). Nada é mantido das credenciais `Basic` e `Digest`.
+- Na linha de requisição, o token de uma URL binária do servidor MCP e o token de sessão de uso único de um parâmetro `$4DSID` são mascarados da mesma forma.
+- Os corpos do endpoint OAuth do [servidor MCP](../WebServer/mcp-server.md), de seu formulário de login e de suas URLs binárias não são registrados (`[body not logged: credentials]`).
+- Os corpos de outras requisições e respostas, incluindo os parâmetros e resultados de suas funções, são registrados como estão: se uma função receber ou retornar um segredo (uma senha, um token), ele aparecerá no log.
+
+:::
+
 ## 4DHTTPClientLog.txt
 
 Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Petições inteiras e respostas, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
@@ -189,7 +200,9 @@ Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
-//standard, all processes SET DATABASE PARAMETER(Current process debug log recording;2)  
+//standard, all processes
+
+SET DATABASE PARAMETER(Current process debug log recording;2)  
 //standard, current process only
 ```
 
@@ -212,7 +225,9 @@ Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
-//extended tabbed format, all processes SET DATABASE PARAMETER(Current process debug log recording;2+4)  
+//extended tabbed format, all processes
+
+SET DATABASE PARAMETER(Current process debug log recording;2+4)  
 //extended, current process only
 ```
 
@@ -454,11 +469,11 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 
 ## 4DTCPUDPLog.txt
 
-This log file records events related to TCP or UDP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+Este arquivo de histórico registra eventos relacionados a conexões TCP ou UDP. Os eventos incluem transmissão de dados, erros e informações do ciclo de vida da conexão. Este log ajuda desenvolvedores a monitorar e depurar a atividade de rede dentro de suas aplicações.
 
 Como iniciar esse log:
 
-- Use the `SET DATABASE PARAMETER` command:
+- Use o comando `SET DATABASE PARAMETER`:
 
   ```4d
   SET DATABASE PARAMETER(TCPUDP log recording; 1)
@@ -482,12 +497,12 @@ Os campos abaixo estão registrados para cada evento:
 | localPort   | Number    | Porta local usada para a conexão                                                         |
 | peerAddress | Text      | Endereço IP do par remoto                                                                |
 | peerPort    | Number    | Porta do peer remoto                                                                     |
-| protocol    | Text      | "TCP" or "UDP"                                                                           |
-| "event"     | Text      | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen` |
-| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable   |
+| protocol    | Text      | "TCP" ou "UDP"                                                                           |
+| event       | Text      | O tipo de evento: `open`, `close`, `error`, `send`, `receive`, `listen`                  |
+| size        | Number    | Quantidade de dados enviados ou recebidos (em bytes), 0 se não aplicável                 |
 | excerpt     | Number    | Primeiros 10 bytes de dados em formato hexadecimal                                       |
 | textExcerpt | Text      | Primeiros 10 bytes de dados em formato de texto                                          |
-| comment     | Text      | Additional information about the event, such as error details or encryption status       |
+| comment     | Text      | Informações adicionais sobre o evento, como detalhes de erro ou status de criptografia   |
 
 ## Utilizar um ficheiro de configuração de log
 
