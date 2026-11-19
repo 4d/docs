@@ -13,6 +13,13 @@ Se estiver acostumado a codificar com **VS Code**, você também pode usar esse 
 
 :::
 
+:::note
+
+O depurador só pode ser chamado quando seu código **é executado interpretado**. Se você quiser depurar algum código em um aplicativo compilado, será necessário reiniciar seu projeto em modo interpretado previamente.
+
+:::
+ 
+
 ## Chamando o depurador
 
 Há várias formas de exibir o depurador:
@@ -492,7 +499,7 @@ Esta secção lista todos os atalhos disponíveis na janela do depurador.
 - **Alt-Clique** (Windows) ou **Option-Clique** exibe a janela Editar Quebra para um novo ponto de quebra ou um ponto de quebra existente.
 - Uma expressão ou objeto selecionado pode ser copiado para a janela de avaliação personalizada através de um simples arrastar e largar.
 - **Ctrl+D** (Windows) ou **Cmd+D** (macOS) copiam as combinações de teclas selecionadas para a Janela de Observação Personalizada.
-- \*\*As combinações de teclas Ctrl+Shift+E (Windows) ou Cmd+Shift+E (macOS) localizam as cadeias de caracteres anteriores idênticas à selecionada.
+- **Ctrl+E** (Windows) ou **Cmd+E** (macOS) localizam as próximas cadeias de caracteres idênticas à selecionada.
 - \*\*As combinações de teclas Ctrl+Shift+E (Windows) ou Cmd+Shift+E (macOS) localizam as cadeias de caracteres anteriores idênticas à selecionada.
 
 #### Todas as janelas

@@ -24,6 +24,7 @@ Leia [**O que há de novo no 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-
 - Support of ["System rounded" border line style](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) property for [inputs](../FormObjects/input_overview.md), compliant with macOS *Liquid glass* design. Also supported by [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) and [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) commands.
 - New ["Border color" property](../FormObjects/properties_BackgroundAndBorder.md#border-color) available for most form objects. [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) and [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) commands support a new *borderColor* parameter.
 - [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes.
+- [Novo componente **4D Embedding Studio**](../embedding-studio/overview.md) que ajuda você a criar e gerenciar embeddings vetoriais dentro de suas entidades.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos os bugs corrigidos em 4D 21 R5.
 
 #### Mudanças de comportamento
@@ -124,7 +125,6 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 | ICU             | 77.1                   | 21               | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
 | libldap         | 2.6.10 | 21               |                                                                                                                                                    |
 | libsasl         | 2.1.28 | 20               |                                                                                                                                                    |
-| Liblsquic       | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                                                    |
 | Libuv           | 1.53.0 | **21 R5**            | Usado para QUIC                                                                                                                                    |
 | libZip          | 1.11.4 | 21               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                               |
 | LZMA            | 5.8.1  | 21               |                                                                                                                                                    |

@@ -7,6 +7,14 @@ O depurador é útil quando é necessário detetar erros ou monitorizar a execu�
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
+
+:::note
+
+O depurador só pode ser chamado quando seu código **é executado interpretado**. Se você quiser depurar algum código em uma aplicação compilada, será necessário reiniciar seu projeto em modo interpretado previamente.  
+
+:::
+ 
+
 ## Chamando o depurador
 
 Há várias formas de exibir o depurador:
