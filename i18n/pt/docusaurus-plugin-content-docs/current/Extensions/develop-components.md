@@ -7,7 +7,7 @@ title: Componentes de desenvolvimento
 
 Um componente 4D é um conjunto de funções, métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser [instaladas e usadas em aplicativos 4D](Concepts/components.md). Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em aplicativos 4D.
 
-Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-los privados. You can also [propose them to 4D Corner](https://corner.4d.com/) and [share them with the 4D community](https://github.com/topics/4d-component).
+Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-los privados. Você também pode [propor eles ao 4D Corner](https://corner.4d.com/) e [compartilhá-los com a comunidade 4D](https://github.com/topics/4d-component).
 
 ## Definições
 
@@ -17,7 +17,7 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project.
+Você pode [criar um componente diretamente do projeto host](#creating-components) sem precisar passar por um projeto matriz separado.
 
 :::
 
@@ -25,7 +25,7 @@ You can [create a component directly from the host](#creating-components) projec
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
-- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md). You can also create a new component directly from the host, in which case it is immediately usable.
+- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md). Você também pode criar um novo componente diretamente do host, caso em que ele estará imediatamente utilizável.
 - Um projeto pode ser tanto uma matriz quanto um host, em outras palavras, um projeto de matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - A component can call on most of the 4D elements: datastore ([`ds`](../commands/ds)), classes, functions, project methods, project forms, menu bars, choice lists, and so on. The following database methods can be used: [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
 - A component can create and/or use tables, fields and data files using mechanisms of external databases. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
@@ -33,7 +33,7 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
 :::note
 
-Interpreted component code can be [edited](#editing-components) and [compiled](../Project/compiler.md#compile-components) directly from the host project if the context is supported.
+O código do componente interpretado pode ser [editado](#editing-components) e [compilado](../Project/compiler.md#compile-components) diretamente do projeto host se o contexto for suportado.
 
 :::
 
@@ -56,8 +56,8 @@ This action opens a folder selection dialog where you choose where [the componen
 
 :::note Notas
 
-- You cannot store a component **in the project package** but **outside the Components folder**.
-- When a component is created from the host, it is assigned a [default namespace](#default-namespace).
+- Você não pode armazenar um componente **no pacote do projeto** mas **fora da pasta Components**.
+- Quando um componente é criado a partir do host, ele recebe um [namespace padrão](#default-namespace).
 
 :::
 
@@ -174,7 +174,7 @@ Por outro lado, por padrão, esses métodos projeto não estarão visíveis e n�
 
 Os métodos do projeto compartilhado podem ser chamados no código do projeto host (mas não podem ser modificados no Editor de código do projeto host). Estos métodos son los **puntos de entrada** del componente.
 
-Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu projeto host. Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host.
+Por outro lado, por motivos de segurança, por padrão, um componente não pode executar métodos de projeto pertencentes ao projeto host. Em alguns casos, talvez seja necessário permitir que um componente acesse os métodos de projeto do seu projeto host. Para isso, você deve designar explicitamente quais métodos de projeto do projeto host deseja tornar acessíveis aos componentes (nas propriedades do método, marque a caixa **Compartilhado por componentes e projeto host**).
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
@@ -193,7 +193,6 @@ EXECUTE METHOD($param)
 
 > Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Caso contrário, uma caixa de diálogo de aviso será exibida quando você tentar iniciar a compilação ou uma verificação de sintaxe, e não será possível executar a operação.  
 > Lembre-se de que um método interpretado pode chamar um método compilado, mas não o contrário, exceto pelo uso dos comandos `EXECUTE METHOD` e `EXECUTE FORMULA`.  
-> Lembre-se de que um método interpretado pode chamar um método compilado, mas não o contrário, exceto pelo uso dos comandos `EXECUTE METHOD` e `EXECUTE FORMULA`.
 
 ## Compartilhamento de classes
 
@@ -222,7 +221,7 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component is added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+O namespace de um componente [compilado](#protection-of-components-compilation) é adicionado entre parênteses após o nome do componente na [página Métodos do Componente](../Concepts/components.md#using-components) dos projetos host:
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
@@ -234,9 +233,9 @@ As classes ORDA de um componente não estão disponíveis no seu projeto host. P
 
 #### Default namespace
 
-When a new component is [created from the host](#creating-components), a default namespace is automatically assigned to the component.
+Quando um novo componente é [criado a partir do host](#creating-components), um namespace padrão é automaticamente atribuído ao componente.
 
-The default namespace is the component's name, without characters that do not comply with [property naming rules](../Concepts/identifiers.md#object-properties), if any. For example, for a component named "My Component-2", the default namespace will be "MyComponent2".
+O namespace padrão é o nome do componente, sem caracteres que não estejam em conformidade com as [regras de nomeação de propriedades](../Concepts/identifiers.md#object-properties), se houver. Por exemplo, para um componente chamado "My Component-2", o namespace padrão será "MyComponent2".
 
 ### Classes ocultas
 
@@ -254,12 +253,26 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 Para facilitar o uso do seu componente pelos desenvolvedores, você pode marcar a opção [**Gerar arquivo de sintaxe para autocompletar código quando compilado** na página Geral](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz.
 
-Um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de compilação, preenchido com a sintaxe das classes, funções e [métodos expostos] do seu componente (#sharing-of-project-methods) e colocado na pasta `\Resources\en.lproj` do projeto do componente. 4D usa o conteúdo desse arquivo de sintaxe para gerar ajuda contextual no editor de código, como autocompletar código e sintaxe de função:
+Um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de compilação, preenchido com a sintaxe das classes, funções e [métodos expostos](#sharing-of-project-methods) do seu componente e colocado na pasta `\Resources\en.lproj` do projeto do componente. 4D usa o conteúdo desse arquivo de sintaxe para gerar ajuda contextual no editor de código, como autocompletar código e sintaxe de função:
 
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
 
 Se você não inserir um [component namespace](#declaring-the-component-namespace), os recursos para as classes e os métodos expostos não serão gerados, mesmo que a opção de arquivo de sintaxe esteja marcada.
+
+Quando as funções de suas classes e os construtores de classes são documentados com um [bloco de comentário acima de sua declaração](../Concepts/comments.md#syntax-description), o arquivo de sintaxe também contém sua descrição e comentários de parâmetros (linhas `MCP:` nunca são incluídas). Os projetos host então os exibem como texto simples na conclusão de código e na ajuda do componente compilado. Por exemplo, com a seguinte função em uma classe de componente:
+
+```4d
+// Class: Tools
+
+// Scales a value by a factor
+// $value: value to scale
+// $factor: multiplier to apply
+Function scale($value : Real; $factor : Real) : Real
+	return $value*$factor
+```
+
+um projeto host que digita `cs.MyComponent.Tools.new().scale(` vê "Scales a value by a factor" e as linhas `$value:` e `$factor:` abaixo da assinatura.
 
 ## Passar variáveis
 
@@ -329,7 +342,7 @@ Neste caso é preciso usar a comparação de ponteiros:
 
 An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands/on-err-call) command only applies to the running application. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+No entanto, você pode instalar um [tratador de erros de componente na aplicação host](../Concepts/error-handling.md#scope-and-components) para gerenciar erros não capturados de componentes.
 
 ## Acesso às tabelas do projeto local
 
@@ -462,52 +475,52 @@ A execução do código de inicialização ou fechamento é feita por meio do m�
 
 ## Ícone personalizado
 
-You can use a **custom icon** for your dependency, so that it can be visually distinguished from other components in the [Project Dependencies panel](../Project/components.md#monitoring-project-dependencies).
+Você pode usar um **ícone personalizado** para sua dependência, para que ela possa ser visualmente distinguida de outros componentes no [painel de Dependências do Projeto](../Project/components.md#monitoring-project-dependencies).
 
-When no custom icon is defined, components use a **default icon**:
+Quando nenhum ícone personalizado é definido, os componentes usam um **ícone padrão**:
 
 ![](../assets/en/Develop/icon-comp-default.png)
 
-To declare a custom icon for your component:
+Para declarar um ícone personalizado para seu componente:
 
-1. Create a picture file for the icon and name it `logo.svg` or `logo.png`. Note that the picture will be displayed with a square shape (and automatically resized if necessary). The **svg** format is recommended.
+1. Crie um arquivo de imagem para o ícone e nomeie-o como `logo.svg` ou `logo.png`. Observe que a imagem será exibida em formato quadrado (e redimensionada automaticamente, se necessário). O formato **svg** é recomendado.
 
-2. Copy the icon file in the [**Resources folder**](../Project/architecture.md#resources) of the component.
+2. Copie o arquivo do ícone para a [**pasta Resources**](../Project/architecture.md#resources) do componente.
 
-The logo file will be used in the Project Dependency window for the component, whether it is interpreted or [built](../Desktop/building.md#build-component).
+O arquivo do logo será usado na janela de Dependências do Projeto para o componente, seja ele interpretado ou [construído](../Desktop/building.md#build-component).
 
 ![](../assets/en/Develop/icon-comp.png)
 
 :::note
 
-If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priority.
+Se ambos os arquivos `logo.svg` e `logo.png` forem encontrados, o `logo.svg` terá prioridade.
 
 :::
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies).
+Componentes podem ter um arquivo `Info.plist` em sua [pasta raiz](../Project/architecture.md) para fornecer informações extras legíveis pelo sistema (apenas macOS) e pelo [Gerenciador de dependências](../Project/components.md#monitoring-project-dependencies).
 
 :::note
 
-Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note que algumas chaves podem ser definidas usando uma chave XML do buildApp (veja [componente de compilação](../Desktop/building.md#build-component)).
+Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. Ele é criado automaticamente na [etapa de build](../Desktop/building.md#build-component) se ainda não existir. Note que algumas chaves podem ser definidas usando uma chave XML do buildApp (veja [componente de compilação](../Desktop/building.md#build-component)).
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#monitoring-project-dependencies) em todas as plataformas.
+As chaves suportadas em arquivos `Info.plist` de componentes são principalmente [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list), que são ignoradas no Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#monitoring-project-dependencies) em todas as plataformas.
 
-The following keys can be defined:
+As seguintes chaves podem ser definidas:
 
-| \|                                                         | description                                                                                                                                                                         |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Nome do componente (interno)                                                                                                                                     |
-| CFBundleDisplayName                                        | Component name to display                                                                                                                                                           |
-| NSHumanReadableCopyright                                   | Direitos autorais para exibir                                                                                                                                                       |
-| CFBundleVersion                                            | Versão do componente                                                                                                                                                                |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                                 |
-| com.4d.minSupportedVersion | Versão 4D mínima compatível, usada pelo gerenciador de dependências para [versões de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+|key|description|
+|---|---|
+|CFBundleName  |Nome do componente (interno)|
+|CFBundleDisplayName |Nome do componente a exibir|
+|NSHumanReadableCopyright |Direitos autorais para exibir|
+|CFBundleVersion  |Versão do componente|
+|CFBundleShortVersionString  |Versão do componente a exibir|
+|com.4d.minSupportedVersion |Versão 4D mínima compatível, usada pelo gerenciador de dependências para [versões de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags)|
 
-Here is an example of `Info.plist` file:
+Aqui está um exemplo de arquivo `Info.plist`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -529,7 +542,7 @@ Here is an example of `Info.plist` file:
 </plist>
 ```
 
-On macOS, information is available from the finder:
+No macOS, as informações estão disponíveis no Finder:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
@@ -546,9 +559,9 @@ Para proteger o código de um componente de forma eficaz, basta [compilar e cons
 - Os métodos, as classes e as funções do projeto compartilhado podem ser chamados nos métodos do projeto host e também ficam visíveis na página Métodos do Explorer. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.
 
-## Sharing your components on GitHub
+## Compartilhando seus componentes no GitHub
 
 Nós encorajamos você a apoiar a comunidade de desenvolvedores 4D compartilhando seus componentes, de preferência na [plataforma GitHub](https://github.com/topics/4d-component). Recomendamos que você use o tópico **`4d-component`** para ser referenciado corretamente.
 
-Use the [4D Corner platform](https://corner.4d.com/) to browse among existing components, and to register your own 4D components.
+Use a [plataforma 4D Corner](https://corner.4d.com/) para navegar entre os componentes existentes e registrar seus próprios componentes 4D.
 

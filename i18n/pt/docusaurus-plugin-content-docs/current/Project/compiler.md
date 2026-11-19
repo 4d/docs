@@ -9,23 +9,23 @@ Você pode compilar seus projetos, ou seja, traduzir todos os seus métodos para
 
 A compilação é tratada da sua aplicação 4D e é inteiramente automática.
 
-> En macOS, la compilación requiere que instale `Xcode`. Consulte [esta sección](#silicon-compiler) para obtener más información sobre este requisito.
+> Em macOS, a compilação requer que você instale o `Xcode`. Veja [esta seção](#silicon-compiler) para mais informações sobre este requisito.
 
-1. Abra la ventana de compilación seleccionando el comando **Compilador...** en el menú **Diseño** o el botón **Compilador** de la barra de herramientas.
+1. Abra la ventana de compilação selecionando o comando **Compilador...** no menu **Design** ou o botão **Compilador** da barra de ferramentas.
 
    ![](../assets/en/Project/compilerWin1.png)
 
    ![](../assets/en/Project/comp1.png)
 
-> También puede lanzar directamente la compilación seleccionando el elemento de menú **Iniciar compilación** en el menú **Diseño**.
+> Você também pode iniciar diretamente a compilação selecionando o item de menu **Iniciar Compilação** no menu **Design**.
 
-2. Haga clic en el botón **Compilar** para lanzar la compilación utilizando los [parámetros ded compilación](#compiler-settings) actuales.
+2. Clique no botão **Compilar** para iniciar a compilação usando as [configurações de compilação](#compiler-settings) atuais.
 
 Se nenhum erro for detectado, a compilação atual começa e a mensagem "Compilação com sucesso" é exibida na parte inferior da janela quando a compilação é concluída:
 
 ![](../assets/en/Project/success.png)
 
-Puede inmediatamente [ejecutar su aplicación en modo compilado](#run-compiled) y ver lo rápido que es.
+Você pode imediatamente [executar sua aplicação em modo compilado](#run-compiled) e ver como ela está mais rápida.
 
 Se erros forem detectados, o processo é interrompido e a mensagem "Compilação falhou" é exibida. A área de informação da janela exibe os nomes de métodos e números de linha envolvidos em uma lista hierárquica:
 
@@ -33,9 +33,9 @@ Se erros forem detectados, o processo é interrompido e a mensagem "Compilação
 
 Clique duas vezes em cada erro detectado para abrir o método ou a classe em questão diretamente no Editor de Código 4D. A linha que contém o erro é destacada e o tipo de erro é exibido na área de sintaxe da janela.
 
-Utilice los comandos **Error anterior** / **Error siguiente** del menú **Método** para navegar de un error a otro.
+Utilize os comandos **Erro Anterior** / **Próximo Erro** do menu **Método** para navegar de um erro a outro.
 
-O número de erros encontrados durante as suas primeiras compilações podem ser um desafio, mas não deixe isso te avisar. Logo você descobrirá que eles muitas vezes nascem da mesma fonte, ou seja, não conformidade com certas convenções do projeto. El compilador siempre ofrece un [diagnóstico preciso](#error-file) de los errores para ayudarle a corregirlos.
+O número de erros encontrados durante as suas primeiras compilações podem ser um desafio, mas não deixe isso te avisar. Logo você descobrirá que eles muitas vezes nascem da mesma fonte, ou seja, não conformidade com certas convenções do projeto. O compilador sempre oferece um [diagnóstico preciso](#error-file) dos erros para ajudá-lo a corrigi-los.
 
 :::note
 
@@ -101,9 +101,9 @@ When you start a compilation or a syntax check, every processed project is liste
 
 ## Executar a compilação
 
-Una vez compilado un proyecto, es posible pasar del [modo interpretado al modo compilado](Concepts/interpreted.md), y viceversa, en cualquier momento y sin tener que salir de la aplicación 4D (excepto cuando se ha eliminado el código interpretado). Para ello, utilice los comandos **Reiniciar en interpretado** y **Reiniciar en compilado** del menú **Ejecución**. La [caja de diálogo de apertura del proyecto](GettingStarted/creating.md#options) también ofrece elegir entre el modo interpretado o compilado para iniciar la base de datos.
+Uma vez compilado um projeto, é possível passar do [modo interpretado ao modo compilado](Concepts/interpreted.md), e vice-versa, em qualquer momento e sem ter que sair da aplicação 4D (exceto quando o código interpretado foi removido). Para isso, utilize os comandos **Reiniciar em interpretado** e **Reiniciar em compilado** do menu **Executar**. A [caixa de diálogo de abertura do projeto](GettingStarted/creating.md#options) também oferece escolher entre o modo interpretado ou compilado para iniciar o banco de dados.
 
-Quando você alternar de um modo para o outro, a 4D fecha o modo atual e abre o novo. Isto é equivalente a sair e reabrir a aplicação. Cada vez que se cambia de un modo a otro, 4D ejecuta los dos métodos base siguientes (si se especifican) en este orden: `On Exit` -> `On Startup`.
+Quando você alternar de um modo para o outro, a 4D fecha o modo atual e abre o novo. Isto é equivalente a sair e reabrir a aplicação. Cada vez que você muda de um modo para outro, o 4D executa os dois métodos base seguintes (se especificados) nesta ordem: `On Exit` -> `On Startup`.
 
 Se você modificar seu projeto em modo interpretado, é necessário recompilá-lo para que suas edições sejam consideradas no modo compilado.
 
@@ -113,9 +113,9 @@ Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos 
 
 ### Verificar sintaxe
 
-O botão **Verificar a sintaxe** inicia a execução da fase de verificação de sintaxe. No final do processo de verificação, todos os erros detectados são listados na área de informações. You can double–click on an error line in order to display the corresponding method or form object.
+O botão **Verificar a sintaxe** inicia a execução da fase de verificação de sintaxe. No final do processo de verificação, todos os erros detectados são listados na área de informações. Você pode clicar duas vezes em uma linha de erro para exibir o método ou objeto de formulário correspondente.
 
-El control sintáctico también puede lanzarse directamente con el comando **Verificar sintaxis** asociado al botón de la barra de herramientas **Compilador**. Esta é a única opção disponível se você não tiver uma licença adequada para permitir a compilação de aplicações.
+A verificação de sintaxe também pode ser iniciada diretamente usando o comando **Verificar sintaxe** associado ao botão da barra de ferramentas **Compilador**. Esta é a única opção disponível se você não tiver uma licença adequada para permitir a compilação de aplicações.
 
 ### Gerar digitação
 
@@ -127,7 +127,7 @@ Este botão só será exibido em projetos convertidos se as **variáveis forem d
 
 ### Limpar código compilado
 
-O botão **Limpar o código compilado** exclui o código compilado do projeto. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
+O botão **Limpar o código compilado** exclui o código compilado do projeto. Ao clicar nele, todo o [código gerado durante a compilação](#classic-compiler) é excluído, o comando **Reiniciar compilado** do menu **Executar** é desativado e a opção "Projeto compilado" não está disponível na inicialização.
 
 ### Mostrar/ocultar avisos
 
@@ -143,7 +143,7 @@ Um duplo clique num aviso abre o método correspondente.
 
 ## Parâmetros do compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Você pode abrir diretamente esta página através da [janela do compilador](#compiler-window-features) clicando no botão **Parâmetros do Compilador**:
+A aba "Compilador" da caixa de diálogo de Configurações permite definir parâmetros relacionados à compilação do projeto. Você pode abrir diretamente esta página através da [janela do compilador](#compiler-window-features) clicando no botão **Parâmetros do Compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -157,7 +157,7 @@ Usado para gerar o arquivo de símbolo (veja [arquivo de símbolos](#symbol-file
 
 #### Gerar ficheiro de erros
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. O arquivo de erro foi criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_errors.xml`.
+Usado para gerar o arquivo de erro (veja [arquivo de erro](#error-file)) no momento da verificação de sintaxe. O arquivo de erro foi criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_errors.xml`.
 
 #### Objectivo de compilação
 
@@ -171,17 +171,17 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 
 Este parâmetro permite selecionar a família de processadores para a qual seu projeto 4D deve ser compilado nativamente. O compilador 4D pode criar código nativo para duas famílias de processadores:
 
-- \*\*Os processadores Intel/AMD (todas as máquinas),
-- los procesadores **Apple Silicon**.
+- **Processadores Intel/AMD** (todas as máquinas),
+- **Processadores Apple Silicon**.
 
 Duas opções de alvo estão disponíveis. O resultado depende do processador da máquina em que 4D está em execução.
 
-| *Opção*                                                                   | *no Windows Intel/AMD*                                                             | *macOS Intel*                                                                                    | *no macOS Silicon*                                                                               |
+| *Opção*                                                                   | *no Windows Intel/AMD*                                                             | *no macOS Intel*                                                                                    | *no macOS Silicon*                                                                               |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| **Todos os processadores (Intel/AMD e Apple Silicon)** | Código para Intel/AMD<br/>*No es posible producir código Apple Silicon en Windows* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* | Código para Apple Silicon + Código para Intel/AMD<br/>*Habrá dos códigos compilados disponibles* |
+| **Todos os processadores (Intel/AMD e Apple Silicon)** | Código para Intel/AMD<br/>*Não é possível produzir código Apple Silicon no Windows* | Código para Apple Silicon + Código para Intel/AMD<br/>*Dois códigos compilados estarão disponíveis* | Código para Apple Silicon + Código para Intel/AMD<br/>*Dois códigos compilados estarão disponíveis* |
 | **O meu processador (processador)**                    | Código para Intel/AMD                                                              | Código para Intel/AMD                                                                            | Código para Apple Silicon                                                                        |
 
-> El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang vem com a versão mais recente do Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
+> O alvo do compilador Apple Silicon requer que o aplicativo **Clang** esteja instalado em sua máquina. Clang vem com a versão mais recente do Xcode. Veja os [requisitos do compilador Silicon](#requirements) para mais informações.
 
 ### Opções adicionais (Compatibilidade)
 
@@ -196,7 +196,7 @@ Essas opções só são mantidas para compatibilidade com os códigos legados. P
 Em projetos convertidos, é recomendado [ativar o modo de digitação direta](#enabling-direct-typing) e escrever o código de declaração em conformidade, i.e.:
 
 - declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- declarar explicitamente todos os parâmetros em protótipos de função (ou seja, usando as palavras-chave `Function` ou `Class constructor`) ou com palavras-chave `#DECLARE` em métodos (veja [Declarando parâmetros](../Concepts/parameters.md#declaring-parameters).
 
 #### Ativando digitação direta
 
@@ -208,58 +208,58 @@ O modo de digitação direta é opcional somente em projetos convertidos. É uti
 
 Selecione **Todas as variáveis são digitadas (digitação direta)** no menu **Compilação de Caminho** para habilitar o modo de digitação direta. Quando esta opção for selecionada, outras opções de compatibilidade se tornam inúteis e não são mais exibidas.
 
-Recomenda-se a utilização desta opção, uma vez que proporciona flexibilidade e eficiência. O conceito de digitação direta assume que todos os elementos são declarados diretamente onde eles são definidos em seu código. Você só precisa ter certeza de que todas as suas variáveis são declaradas usando o recurso regular [`var` syntax](../Concepts/variables.md#declaring-variables) e que seu método e parâmetros de função são declarados [em seus protóticos](../Concepts/parameters.md) (o [Verificar sintaxe](#check-syntax) pode ajudá-lo a detectar declarações ausentes ou inválidas).
+Recomenda-se a utilização desta opção, uma vez que proporciona flexibilidade e eficiência. O conceito de digitação direta assume que todos os elementos são declarados diretamente onde eles são definidos em seu código. Você só precisa ter certeza de que todas as suas variáveis são declaradas usando o recurso regular [`var` syntax](../Concepts/variables.md#declaring-variables) e que seu método e parâmetros de função são declarados [em seus protótipos](../Concepts/parameters.md) (o recurso [Verificar sintaxe](#check-syntax) pode ajudá-lo a detectar declarações ausentes ou inválidas).
 
 ## Avisos
 
 Avisos são mensagens específicas geradas pelo compilador quando verifica a sintaxe. Essas mensagens têm o objetivo de chamar sua atenção para declarações que podem levar a erros de execução. Não impedem a compilação.
 
-Depending on circumstances and the programming style used, warnings may be more or less relevant. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+Dependendo das circunstâncias e do estilo de programação utilizado, os avisos podem ser mais ou menos relevantes. Você pode ativar ou desativar avisos, na janela do compilador e nos editores de código (editor de código 4D e VS Code), globalmente através da [aba de avisos](#warnings-tab) ou localmente usando [`//%W`](#disabling-and-enabling-warnings-locally).
 
-### Warnings tab
+### Aba de avisos
 
 ![](../assets/en/Project/warnings-tab.png)
 
-This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+Esta aba permite definir quais avisos devem ser exibidos globalmente. A partir da lista de todos os avisos possíveis com seus tipos, seus códigos e seus rótulos localizados, ordenados por código de aviso.
 
 Para reduzir a lista, você pode pesquisar palavras por etiquetas e códigos de aviso usando a caixa de texto **Pesquisar em códigos e rótulos** ou o ícone da lupa à esquerda.
 
-By default, all warning types are checked and enabled.
+Por padrão, todos os tipos de aviso estão marcados e ativados.
 
-When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+Quando você modifica o status de exibição de um aviso, a informação é armazenada no arquivo "warnings.json", colocado na pasta de Configurações do projeto.
 
-The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+O botão **Restaurar configurações de fábrica** define todas as caixas de seleção de status de exibição de aviso para os valores padrão e exclui o arquivo "warnings.json".
 
 ### Desativar e ativar avisos localmente
 
-You can control warnings in specific parts of your code by using special comments to disable or enable them.
+Você pode controlar avisos em partes específicas do seu código usando comentários especiais para desativá-los ou ativá-los.
 
-To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+Para desativar avisos, insira os seguintes comentários antes e depois da seção de código onde deseja desativar os avisos:
 
 ```4d
-// Before the selected code part use
-  //%W-<warning number>
+// Antes da parte selecionada do código use
+  //%W-<número do aviso>
 
-// After the selected code part use
-  //%W+<warning number>
+// Depois da parte selecionada do código use
+  //%W+<número do aviso>
 ```
 
 Para reativar os avisos em uma seção de código, use os seguintes comentários:
 
 ```4d
-// Before the selected code part use
-  //%W+<warning number>
+// Antes da parte selecionada do código use
+  //%W+<número do aviso>
 
-// After the selected code part use
-  //%W-<warning number>
+// Depois da parte selecionada do código use
+  //%W-<número do aviso>
 ```
 
-Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Somente avisos com números podem ser desativados ou ativados. Os números dos avisos são especificados ao final de cada mensagem na lista de erros de compilação ou na lista encontrada na aba de avisos.
 Por exemplo, para desativar o seguinte aviso:
 
 *1: Redefinição da variável $a (550.10)*
 
-... you just need to write the following comments in your 4D method:
+... você só precisa escrever os seguintes comentários em seu método 4D:
 
 ```4d
   var $a : Text
@@ -273,7 +273,7 @@ Por exemplo, para desativar o seguinte aviso:
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+Os comentários especiais de avisos têm prioridade sobre as configurações de exibição de avisos definidas na aba de avisos.
 
 :::
 
@@ -281,7 +281,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Ficheiro Symbol
 
-Se você marcar a opção [**Gerar o arquivo de símbolos**](#symbol-file) nas configurações do compilador, um arquivo de símbolo chamado `ProjectName_symbols. xt` é criado na [pasta Logs](../Project/architecture.md#logs) do projeto durante a compilação. Está dividido em várias partes:
+Se você marcar a opção [**Gerar o arquivo de símbolos**](#symbol-file) nas configurações do compilador, um arquivo de símbolo chamado `ProjectName_symbols.txt` é criado na [pasta Logs](../Project/architecture.md#logs) do projeto durante a compilação. Está dividido em várias partes:
 
 #### Lista das variáveis processo e interprocesso
 
@@ -329,33 +329,33 @@ tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 
 ### Arquivo de erros
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. O arquivo de erro é automaticamente chamado `projectName_errors.xml` e é colocado na [pasta de logs](../Project/architecture.md#logs) do projeto.
+Você pode escolher se deseja ou não gerar um arquivo de erro durante a compilação usando a opção [**Gerar arquivo de erro**](#generate-error-file) nas configurações do compilador. O arquivo de erro é automaticamente chamado `projectName_errors.xml` e é colocado na [pasta de logs](../Project/architecture.md#logs) do projeto.
 
-Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
+Embora os erros possam ser acessados diretamente pela [janela do compilador](#compile), pode ser útil ter um arquivo de erro que possa ser transmitido de uma máquina para outra. O arquivo de erro é gerado no formato XML para facilitar a análise automática de seu conteúdo. Também permite a criação de interfaces customizadas de exibição de erros.
 
 O tamanho do arquivo de erros depende do número de erros e avisos emitidos pelo compilador.
 
 A estrutura do ficheiro de erros é a seguinte:
 
 - Na parte superior do arquivo está a lista de erros e avisos, classificados por método e em sua ordem de criação em 4D.
-- En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. There are two cases in which the compiler reports a general error:
+- Na seção ***Erros gerais***, todas as impossibilidades de digitação e ambiguidades de identidade são agrupadas. Esses erros e avisos são listados usando o seguinte formato:
   - número da linha no método (0 indica erros gerais)
   - atributo de aviso indicando se a anomalia detectada é um aviso (warning="true") ou um erro (warning="false")
   - diagnóstico que descreve o erro
 
-Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
+Se seu projeto não tiver erros gerais, o arquivo não terá uma seção *Erros gerais*.
 
 Um ficheiro de erros pode conter três tipos de mensagens:
 
-- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. O compilador relata esse tipo de erro quando encontra uma expressão em que vê uma inconsistência relacionada ao tipo de dados ou sintaxe. Na janela do compilador, clique duas vezes em cada erro detectado para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o erro destacado.
+- **Erros associados a uma linha específica**: esses erros são exibidos em contexto — a linha em que foram encontrados — com uma explicação. O compilador relata esse tipo de erro quando encontra uma expressão em que vê uma inconsistência relacionada ao tipo de dados ou sintaxe. Na janela do compilador, clique duas vezes em cada erro detectado para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o erro destacado.
 
-- **Errores generales**: son errores que imposibilitan la compilación del proyecto. Há dois casos em que o compilador informa um erro geral:
+- **Erros gerais**: são erros que impossibilitam a compilação do projeto. Existem dois casos em que o compilador relata um erro geral:
   - Não foi possível determinar o tipo de dados de uma variável processo.
   - Dois tipos diferentes de objetos têm o mesmo nome.
 
 Os erros gerais são assim chamados porque não podem ser vinculados a nenhum método específico. No primeiro caso, o compilador não pôde executar uma digitação especificada em nenhum lugar do projeto. No segundo, ele não conseguiu decidir se associava um determinado nome a um objeto e não a outro.
 
-- **Avisos**: los avisos no son errores. Eles não impedem que o projeto seja compilado, mas simplesmente apontam possíveis erros de código. Na janela do compilador, os avisos aparecem em itálico. Clique duas vezes em cada aviso para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o aviso destacado.
+- **Avisos**: avisos não são erros. Eles não impedem que o projeto seja compilado, mas simplesmente apontam possíveis erros de código. Na janela do compilador, os avisos aparecem em itálico. Clique duas vezes em cada aviso para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o aviso destacado.
 
 ### Controlo de execução
 
@@ -363,7 +363,7 @@ O código gerado pelo compilador 4D verifica automaticamente que todo acesso a u
 
 Em alguns casos, pode preferir que a verificação de intervalos não se aplique a certas partes do código consideradas fiáveis. Mais especificamente, no caso de repetições que se repetem por diversas vezes. e ao executar a base de dados compilada em máquinas mais antigas, a verificação por intervalo pode diminuir significativamente o processamento. Se você tiver certeza de que o código em questão é confiável e não pode causar erros no sistema, poderá desativar a verificação de intervalo localmente.
 
-Para ello, debe rodear el código a excluir del control de rangos con los comentarios especiales `//%R-` y `//%R+`. El comentario `//%R-` desactiva el control de rangos y `//%R+` lo reactiva:
+Para isso, você deve envolver o código a ser excluído da verificação de intervalo com os comentários especiais `//%R-` e `//%R+`. O comentário `//%R-` desativa a verificação de intervalo e `//%R+` a ativa novamente:
 
 ```4d
   // %R-   to disable range checking
@@ -388,7 +388,7 @@ O compilador clássico pode ser usado em qualquer plataforma, enquanto o compila
 | Intel Mac   | &#10003; | &#10003; | &#10003; |
 | Silicon Mac | &#10003; | &#10003; | &#10003; |
 
-Ambos os compiladores estão integrados em 4D. El compilador adecuado se selecciona automáticamente en función de la opción [objetivo de compilación](#compilation-target).
+Ambos os compiladores estão integrados em 4D. O compilador apropriado é selecionado automaticamente dependendo da opção [objetivo de compilação](#compilation-target).
 
 ### Compilador clássico
 
@@ -398,19 +398,19 @@ O código compilado resultante é armazenado na pasta [DerivedData](architecture
 
 ### Compilador Silicon
 
-El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
+O compilador Silicon gera código compilado nativo para processadores Apple Silicon, como *Apple M1*.
 
 O código compilado resultante é armazenado na pasta [Libraries](architecture.md#libraries) do projeto.
 
 #### Requisitos
 
-- **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
-- **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
-- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
-  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
-  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
+- **Máquina Apple**: o compilador Silicon só pode ser executado a partir de uma máquina Apple.
+- **Arquitetura de Projeto 4D**: o compilador Silicon só está disponível para desenvolvimentos 4D que utilizam [arquitetura de projeto](architecture.md).
+- **Xcode ou Developer Tools**: o compilador Silicon chama o compilador open-source de macOS **Clang** para compilar o projeto a partir de código C++ na [segunda etapa](#incremental-compiler) da compilação. *clang* requer bibliotecas nativas da Apple, que são fornecidas pelo pacote **Xcode** ou **Developer Tools**.
+  - **Se você já tem** Xcode ou Developer Tools instalados em seu computador, só precisa garantir que sua versão está em conformidade com os requisitos do 4D.
+  - **Se você não tem** nenhuma dessas ferramentas instaladas em seu computador, será necessário baixar uma delas no site Apple Developer.
 
-> Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
+> Recomendamos instalar o **Xcode**, que é bastante simples de instalar. Você pode decidir instalar o **Developer Tools**, que é mais compacto, porém sua instalação é um pouco mais complexa.
 
 Em quaisquer casos, o compilador 4D de Silicon irá avisá-lo se sua configuração não corresponder com seus requisitos.
 
@@ -418,5 +418,5 @@ Em quaisquer casos, o compilador 4D de Silicon irá avisá-lo se sua configuraç
 
 O compilador Silicon é incremental, o que significa que:
 
-- Durante la primera compilación, se compilan **todos los métodos 4D**. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
-- Durante todas las compilaciones posteriores, sólo se procesan los métodos **nuevos o modificados**, lo que reduce drásticamente el tiempo de compilación.
+- Durante a primeira compilação, **todos os métodos 4D** são compilados. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
+- Durante todas as compilações subsequentes, apenas **novos ou métodos modificados** são processados, reduzindo drasticamente o tempo de compilação.

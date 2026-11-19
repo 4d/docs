@@ -164,6 +164,8 @@ Se as funções forem declaradas em uma [classe compartilhada](#shared-classes),
 
 In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below.
 
+Em classes de modelo de dados ORDA e classes singleton, a palavra-chave [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) permite que uma função seja chamada por requisições REST, e a declaração `exposed mcp Function` publica a função como uma ferramenta do [servidor MCP](../WebServer/mcp-server.md). A palavra-chave `mcp` é suportada nas classes DataStore, DataClass e Entity, e em classes singleton compartilhadas. Uma função declarada com `mcp` mas sem `exposed` não é publicada. Para mais informações, consulte [`exposed mcp Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
+
 O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
 :::note
@@ -239,7 +241,9 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 Você também pode declarar o parâmetro de retorno adicionando apenas `: type` e usar a [`return expression`](parameters.md#return-expression) (ele também encerrará a execução da função). Por exemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-&gt;$result : Integer
+Function add($x : Variant; $y : Integer): Integer
+ // some code
+ return $x+$y
 ```
 
 #### Exemplo 1
@@ -586,6 +590,299 @@ Classe ($side : Integer)
  Função getArea() -> $area : Integer
   $area:=This.height*This.width
 ```
+
+## Comentários de função
+
+Você pode documentar uma função de classe ou um construtor de classe com linhas de comentário escritas logo acima de sua declaração `Function` ou `Class constructor`. O 4D lê esse bloco de comentários e o exibe na assistência de código do [editor de código 4D](../code-editor/write-class-method.md#help-tips) e do VS Code (detalhes de preenchimento, dicas de ajuda e ajuda de assinatura), juntamente com a assinatura da função. Os mesmos comentários também fornecem os [metadados da ferramenta MCP](#mcp-tool-metadata) da função.
+
+O bloco de comentários segue estas regras:
+
+- É composto por linhas `//` e/ou um bloco `/* */`. Cada linha de um bloco `/* */` é tratada como uma linha `//`, e os marcadores `/*` e `*/` não são exibidos.
+- Deve ser colocado imediatamente acima da declaração. Uma linha em branco entre o bloco de comentários e a declaração quebra a associação: apenas a assinatura é exibida.
+- Cada bloco de comentários está associado apenas à próxima declaração, mesmo quando está escrito logo após o código da função anterior.
+- Apenas o código salvo é lido: após editar um comentário, a assistência de código mostra o novo texto assim que a classe é salva.
+- O texto é exibido como texto simples: marcadores Markdown como `**` ou `*` são mostrados como escritos.
+
+Cada linha do bloco é interpretada de acordo com seu início:
+
+|Linha|Significado|
+|---|---|
+|`// <texto>`|Descrição da função. Várias linhas de descrição são combinadas em ordem, com suas quebras de linha. Linhas `//` vazias no início ou no final do bloco são ignoradas.|
+|`// $name: <texto>`|Descrição do parâmetro *$name*.|
+|`// {$name}: <texto>`|Descrição do parâmetro *$name*, marcado como opcional para MCP.|
+|`// ...: <texto>`|Descrição dos [parâmetros variádicos](parameters.md#declaring-variadic-parameters) (`... : Type`).|
+|`// MCP: <texto>`|Descrição da função apenas para MCP. Várias linhas de descrição `MCP:` são combinadas em ordem.|
+|`// MCP: @tag {@tag}`|Tags de comportamento MCP (veja [metadados da ferramenta MCP](#mcp-tool-metadata)). A linha deve conter apenas tags suportadas, caso contrário é uma linha de descrição `MCP:`.|
+
+O prefixo `MCP:` não diferencia maiúsculas de minúsculas: `MCP:`, `mcp:` e `Mcp:` são iguais.
+
+Uma linha `$name:` ou `{$name}:` é uma descrição de parâmetro apenas se *$name* for um parâmetro da assinatura da função. Caso contrário, é uma linha de descrição (por exemplo, `// $120: preço em dólares`). Uma linha `...:` é uma descrição de parâmetro apenas se a função tiver parâmetros variádicos.
+
+:::note
+
+As seguintes sintaxes não são suportadas. Se seu código as contiver, substitua-as:
+
+- Linhas `// param: $name <texto>`, `// param: {$name} <texto>`, e `// param: ... <texto>` são ignoradas: não são descrições de parâmetros. Escreva `// $name: <texto>`, `// {$name}: <texto>`, e `// ...: <texto>` em vez disso.
+- Uma linha de tag de comportamento sem o prefixo `MCP:`, como `// @readOnly`, é ignorada: não é uma tag de comportamento MCP, e a função não recebe anotação por ela. Escreva `// MCP: @readOnly` em vez disso. Em uma função `exposed mcp`, o compilador emite um aviso para tal linha.
+
+:::
+
+A assistência de código exibe as linhas de descrição, depois uma linha em branco, depois as linhas de parâmetro conforme escritas. Linhas `MCP:` nunca são exibidas na assistência de código.
+
+Quando você [compila](../Project/compiler.md) o projeto, o compilador verifica os comentários das funções `exposed mcp` e emite [avisos](../Project/compiler.md#warnings-on-function-comments), por exemplo para um parâmetro da assinatura que não tem uma linha `$name:` ou `{$name}:` no bloco de comentários, para uma função sem descrição, ou para tags de comportamento MCP contraditórias. Outras funções não são verificadas.
+
+:::note
+
+Blocos de comentários são suportados em classes de projeto (incluindo classes compartilhadas e singleton) e em classes de componente. Para componentes compilados, as descrições são fornecidas pelo [arquivo de sintaxe](../Extensions/develop-components.md#code-completion-for-compiled-components).
+
+:::
+
+#### Exemplo 1
+
+Você deseja documentar uma função e seu parâmetro para que sejam exibidos no editor de código:
+
+```4d
+// Class: Invoice
+
+// Returns the price with taxes
+// The rate is a percentage
+// $rate: tax rate to apply (20 for 20%)
+Function priceWithTaxes($rate : Real) : Real
+	return This.price*(1+($rate/100))
+```
+
+Quando você digita `$invoice.priceWithTaxes(` em um método, a ajuda exibe a assinatura com:
+
+```
+Returns the price with taxes
+The rate is a percentage
+
+$rate: tax rate to apply (20 for 20%)
+```
+
+#### Exemplo 2
+
+Você deseja documentar um construtor de classe com um bloco `/* */`:
+
+```4d
+// Class: Counter
+
+/*
+Creates a counter starting at a value
+$start: initial value of the counter
+*/
+Class constructor($start : Integer)
+	This.value:=$start
+```
+
+A descrição e a linha `$start:` são exibidas quando você digita `cs.Counter.new(`.
+
+### Metadados da ferramenta MCP
+
+Os blocos de comentários das declarações `exposed mcp Function` também descrevem essas funções como ferramentas MCP. Quando o projeto é compilado, o 4D gera o arquivo `Project/DerivedData/syntaxMCP.json`, que contém os metadados dessas ferramentas em um array `toolList`.
+
+Apenas funções das seguintes classes são listadas:
+
+- a classe DataStore,
+- classes DataClass e Entity,
+- classes singleton.
+
+Funções de classes EntitySelection e de outras classes, assim como funções que não são declaradas `exposed mcp Function`, não são listadas, mesmo que seu bloco de comentários contenha linhas `MCP:`.
+
+:::note
+
+Para adaptar os textos das ferramentas para um cliente sem recompilar, você pode escrever um arquivo `Resources/syntaxMCP.json` após a compilação. Ele é aplicado sobre o arquivo gerado `Project/DerivedData/syntaxMCP.json`, não usado em vez dele: só pode sobrescrever a `description` de uma ferramenta e a `description` de seus parâmetros (`inputSchema.properties.<name>.description`), correspondendo pelo nome da ferramenta e do parâmetro. Um arquivo parcial é suficiente. A lista de ferramentas, os schemas e as anotações sempre vêm do arquivo gerado. Qualquer outra coisa no arquivo (outras propriedades, ferramentas ou parâmetros que não existem) é ignorada, e o servidor MCP registra isso. O compilador nunca sobrescreve esse arquivo. Por exemplo:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the current date",
+      "inputSchema": {
+        "properties": {
+          "days": { "description": "number of days (negative to go back)" }
+        }
+      }
+    }
+  ]
+}
+```
+
+Veja [pasta `Resources`](../Project/architecture.md#resources).
+
+:::
+
+O arquivo `syntaxMCP.json` contém exatamente o que o [servidor MCP](../WebServer/mcp-server.md) retorna para cada ferramenta em `tools/list`, incluindo o parâmetro `key` de funções de classe Entity e `"additionalProperties": false` em `inputSchema` (veja [Catálogo de ferramentas](../WebServer/mcp-server.md#tool-catalog)). Em modo compilado, o servidor MCP lê esse arquivo. Em modo interpretado, ele constrói seu catálogo de ferramentas a partir dos mesmos blocos de comentários e das mesmas conversões de tipo, usando o código em execução: uma função que você adicionar ou modificar é publicada na próxima requisição `tools/list`, sem reiniciar.
+
+As seguintes funções `exposed mcp` não podem ser ferramentas MCP. Elas não recebem entrada em `syntaxMCP.json` e não são publicadas; o compilador emite um aviso nomeando a função e o motivo, e em modo interpretado o servidor MCP registra uma mensagem:
+
+- uma função cujo nome de ferramenta tem mais de 64 caracteres, contém caracteres diferentes de letras, dígitos, `_` e `-`, ou é o nome de outra ferramenta (incluindo uma ferramenta CRUD embutida),
+- uma função de classe Entity que declara um parâmetro `$key`,
+- uma função que declara tanto um parâmetro `$args` quanto parâmetros variádicos,
+- uma função com um parâmetro `Pointer`.
+
+Uma função sem descrição é publicada, e o compilador emite um aviso.
+
+Cada ferramenta do array `toolList` é um objeto com as seguintes propriedades:
+
+|Propriedade|Descrição|
+|---|---|
+|`name`|Nome da ferramenta: o nome da função para uma função de classe DataStore, `ClassName-functionName` para outras classes|
+|`description`|Texto das linhas de descrição `MCP:`, ou das linhas de descrição se não houver descrição `MCP:`. Omitido se não houver descrição|
+|`inputSchema`|`{"type": "object", "properties": {...}, "required": [...], "additionalProperties": false}`: uma propriedade por parâmetro da assinatura, nomeada sem o `$`, com o comentário do parâmetro como `description`|
+|`outputSchema`|Schema do tipo de retorno (veja abaixo). Omitido se a função não retorna nada, um Object sem tipo, ou um Variant|
+|`annotations`|Dicas de comportamento derivadas das tags de comportamento `MCP:`|
+
+Em `inputSchema`:
+
+- todo parâmetro é listado em `required`, exceto aqueles documentados com uma linha `{$name}:`. `required` é omitido se estiver vazio.
+- parâmetros variádicos tipados (`... : Type`) são representados por uma propriedade opcional `args` do tipo `array`, cujos `items` têm o schema de *Type*. A linha `...:` é sua descrição.
+- para uma função de classe Entity, uma propriedade obrigatória `key` recebe a chave primária da entidade: `{"type": ["string", "integer"], "description": "<Dataclass> primary key (<type>)"}`, por exemplo `"Invoice primary key (integer)"`.
+- `additionalProperties` é sempre `false`.
+- `properties` é omitido se a função não tiver parâmetro: `inputSchema` é então `{"type": "object", "additionalProperties": false}`.
+
+Os tipos de parâmetro são convertidos para JSON Schema da seguinte forma:
+
+|Tipo 4D|JSON Schema|
+|---|---|
+|Text|`{"type": "string"}`|
+|Integer|`{"type": "integer"}`|
+|Real|`{"type": "number"}`|
+|Boolean|`{"type": "boolean"}`|
+|Date|`{"type": "string", "format": "date"}`|
+|Time|`{"type": "integer", "description": "duration in seconds"}`|
+|Object, class instance|`{"type": "object"}`|
+|Collection|`{"type": "array"}`|
+|Blob, 4D.Blob, Picture|`{"type": "string", "contentEncoding": "base64"}`|
+|Variant, ou sem tipo|`{}`|
+
+Parâmetros `Pointer` não são suportados: uma função com um parâmetro `Pointer` não é publicada (veja acima).
+
+O `outputSchema` deve ser um objeto. Um tipo de retorno que não é um objeto (por exemplo Text, Boolean, Integer, Real, Date, Time ou Collection) é encapsulado em um objeto cuja propriedade `result` tem o schema do tipo, por exemplo `{"type": "object", "properties": {"result": {"type": "boolean"}}}` para um Boolean. Veja [Catálogo de ferramentas](../WebServer/mcp-server.md#tool-catalog) para tipos de retorno entity, entity selection e instância de classe.
+
+As tags de comportamento suportadas são convertidas em anotações da seguinte forma:
+
+|Tag|Anotação|
+|---|---|
+|`@readOnly`|`"readOnlyHint": true`|
+|`@destructive`|`"destructiveHint": true`|
+|`@additive`|`"destructiveHint": false`|
+|`@idempotent`|`"idempotentHint": true`|
+|`@openWorld`|`"openWorldHint": true`|
+
+`openWorldHint` está sempre presente: é `false` se `@openWorld` não for usada. Outras dicas são omitidas quando sua tag não é usada. `@readOnly`, `@destructive` e `@additive` se contradizem: se uma função usar duas ou mais delas, o compilador emite um aviso e as dicas correspondentes são omitidas. Tags desconhecidas são ignoradas.
+
+#### Exemplo 3
+
+Você documenta as ferramentas MCP de uma classe singleton `DateTime`:
+
+```4d
+// Class: DateTime
+
+singleton Class constructor()
+	This.date:=Current date
+
+// Adds a number of days to the date
+// MCP: Add days to the date-time
+// $days: number of days to add (negative to subtract)
+exposed mcp Function addDays($days : Integer) : Date
+	This.date:=Add to date(This.date; 0; 0; $days)
+	return This.date
+
+// Adds zero or more day offsets to the date and returns the updated date
+// MCP: Add day offsets to the date-time
+// MCP: @idempotent
+// ...: day offsets to add (negative to subtract)
+exposed mcp Function addDayOffsets(... : Integer) : Date
+	var $offsetIndex; $totalDays : Integer
+	For ($offsetIndex; 1; Count parameters)
+		$totalDays+=${$offsetIndex}
+	End for
+	This.date:=Add to date(This.date; 0; 0; $totalDays)
+	return This.date
+```
+
+Após a compilação, `Project/DerivedData/syntaxMCP.json` contém:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
+        },
+        "required": ["days"],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": { "result": { "type": "string", "format": "date" } }
+      },
+      "annotations": { "openWorldHint": false }
+    },
+    {
+      "name": "DateTime-addDayOffsets",
+      "description": "Add day offsets to the date-time",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "description": "day offsets to add (negative to subtract)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": { "result": { "type": "string", "format": "date" } }
+      },
+      "annotations": { "idempotentHint": true, "openWorldHint": false }
+    }
+  ]
+}
+```
+
+#### Exemplo 4
+
+Você deseja ler os nomes das ferramentas MCP geradas pela última compilação:
+
+```4d
+var $file : 4D.File:=File("/PACKAGE/Project/DerivedData/syntaxMCP.json")
+var $metadata : Object:=JSON Parse($file.getText())
+var $names : Collection:=$metadata.toolList.extract("name")
+// $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
+```
+
+#### Exemplo 5
+
+Você documenta uma ferramenta com um parâmetro opcional e uma tag de comportamento:
+
+```4d
+// Class: Stock
+
+shared singleton Class constructor()
+
+// Returns the quantity in stock of a product
+// $reference: reference of the product
+// {$warehouse}: code of the warehouse (all warehouses if omitted)
+// MCP: @readOnly
+exposed mcp Function getQuantity($reference : Text; $warehouse : Text) : Integer
+	If ($warehouse="")
+		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
+	End if
+	return ds.Stock.query("reference = :1 and warehouse = :2"; $reference; $warehouse).sum("quantity")
+```
+
+A ferramenta `Stock-getQuantity` tem uma propriedade `reference` obrigatória, uma propriedade `warehouse` opcional e a anotação `"readOnlyHint": true`.
+
+Se você escrever os parâmetros como linhas `// param: $reference ...` e a tag como `// @readOnly` (sem o prefixo `MCP:`), essas linhas são ignoradas: ambas as propriedades então são obrigatórias e não têm descrição, a ferramenta não tem anotação `readOnlyHint`, e o compilador emite avisos.
 
 ## Comandos de funções de classe
 

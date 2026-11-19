@@ -113,6 +113,8 @@ var $webServer : 4D.WebServer:=WEB Server
 $webServer.quotas.nbRequestsPerMinPerSession:=30
 ```
 
+MCP sessions cannot get their own quotas: the session default quotas apply to every Web session alike, and [`Session.quotas`](../API/SessionClass.md#quotas) only holds the REST entity-set limits.
+
 ### Rate limiting responses
 
 Rate-limiting quotas use fixed time windows. When a quota is reached, subsequent requests are rejected until the current one-minute or one-hour window ends. The **HTTP 429 Too Many Requests** response includes a `Retry-After` header containing the time to wait before sending another request.

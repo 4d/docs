@@ -44,7 +44,7 @@ Cada janela do Editor de Código possui uma barra de ferramentas que fornece ace
 
 | Opção                                     | Descrição                                                                                                                                                                                                                                                                                                 | Definido em...                                                                                                                                                                         |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **fuente** y **tamaño de la fuente**      | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                                                                                                                            | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Visualização** > **Fonte Maior** ou **Fonte Menor**                                                                                                          |
+| **fuente** y **tamanho de la fonte**      | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                                                                                                                            | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Visualização** > **Fonte Maior** ou **Fonte Menor**                                                                                                          |
 | **estilo e cor dos elementos de sintaxe** | atribui uma cor e/ou estilo específicos a cada tipo de elemento da linguagem 4D.  Você também pode alterar as diferentes cores usadas na interface da área de edição (destaque, fundo, etc.).                                          | Clique com o botão direito do mouse em um elemento de linguagem (variável, palavra-chave, etc.) > Submenú **Estilo**. Ou **Preferences** > [**Methods**](../Preferences/methods.md) |
 | **espaços**                               | Você pode exibir os espaços entre as palavras usando pontos (.) em vez de espaços em branco. Esta opção se aplica a todos os elementos de código (nomes de comandos, variáveis, comentários, etc.). | **Método > Ver > Espaços em branco**                                                                                                                                                                                                   |
 | **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                                                                                                                                  | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                            |
@@ -391,6 +391,8 @@ Se os caracteres digitados correspondem a diferentes tipos de objetos, a lista o
 
 > Por motivos práticos, você pode desativar a exibição automática da lista de sugestões para **constantes**, **variáveis (locais ou entre processos) e atributos de objetos**, **tabelas** e/ou **protótipos**. Essas opções podem ser encontradas em **Preferências** > **Métodos** > **Opções**
 
+Quando uma função de classe sugerida ou um construtor de classe é documentado com um [bloco de comentário acima de sua declaração](../Concepts/comments.md#syntax-description), sua descrição e comentários de parâmetros são exibidos junto com sua assinatura nos detalhes da sugestão.
+
 #### Nomes de propriedade de objeto
 
 O 4D exibe automaticamente sugestões sensíveis a maiúsculas e minúsculas de todos os nomes de propriedades de objetos válidos no código 4D quando você:
@@ -540,6 +542,25 @@ A [barra de status](#status-bar) também fornece informações contextuais.
 
 - Você também pode criar um arquivo de documentação **dedicado** chamado `<MethodName>.md` na pasta `<package>/documentation`. Veja [Visualizar a documentação no editor de código](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
+- **Comentários de função de classe e construtor de classe**: Quando você chama uma função de classe ou um construtor de classe (`cs.MyClass.new()`), a dica de ajuda e a ajuda de assinatura exibem sua assinatura juntamente com o [bloco de comentário escrito logo acima de sua declaração](../Concepts/comments.md#syntax-description): as linhas de descrição, depois as linhas de parâmetro `$name:`. Linhas `MCP:` não são exibidas. Isso se aplica a classes de projeto, classes compartilhadas e singleton, e classes de componente, e funciona da mesma forma no VS Code.
+
+  - O texto é exibido como texto simples: marcadores Markdown são mostrados como escritos.
+  - Apenas o código salvo é usado: um comentário editado é exibido assim que a classe é salva.
+  - Se não houver um bloco de comentário logo acima da declaração (por exemplo, se uma linha em branco os separar), apenas a assinatura é exibida.
+
+  Por exemplo, com a seguinte função de classe:
+
+  ```4d
+  // Class: Invoice
+
+  // Returns the price with taxes
+  // $rate: tax rate to apply (20 for 20%)
+  Function priceWithTaxes($rate : Real) : Real
+  	return This.price*(1+($rate/100))
+  ```
+
+  ao digitar `$invoice.priceWithTaxes(` exibe "Returns the price with taxes" e "$rate: tax rate to apply (20 for 20%)" abaixo da assinatura.
+
 ## Comentar / Não comentar
 
 A linguagem 4D suporta [comentários](../Concepts/quick-tour.md#comments), que são linhas de código inativas. O editor de código não aplica nenhum estilo específico nos comentários. O comprimento dos comentários é limitado ao tamanho máximo de 32.000 caracteres por linha.
@@ -680,9 +701,9 @@ O item atual é aquele selecionado ou aquele em que o cursor está localizado. P
 
 Este comando apresenta os seus resultados numa nova janela.
 
-## Rename
+## Renomear
 
-A global renaming feature can be used with **variables** and **project methods**, allowing you to rename them safely throughout the whole project. To do this, highlight the variable or project method name in the editor and select **Rename...** from the **Method** menu or the context menu. A dialog box is then displayed, allowing you to write the new name. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
+Um recurso de renomeação global pode ser usado com **variáveis** e **métodos de projeto**, permitindo que você os renomeie com segurança em todo o projeto. Para fazer isso, selecione o nome da variável ou do método de projeto no editor e selecione **Renomear...** no menu **Método** ou no menu de contexto. Uma caixa de diálogo será exibida, permitindo que você escreva o novo nome. Para mais informações, consulte a seção [Renomeando métodos de projeto e variáveis](../Project/search-replace.md#renaming-project-methods-and-variables).
 
 ## Macros
 

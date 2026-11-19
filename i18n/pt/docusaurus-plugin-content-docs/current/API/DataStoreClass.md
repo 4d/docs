@@ -53,7 +53,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface fornecido p
 
 #### Descrição
 
-Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore) data. O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
+Cada dataclass em um datastore está disponível como uma propriedade dos dados do [objeto DataStore](ORDA/dsMapping.md#datastore). O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
 
 #### Exemplo
 
@@ -133,7 +133,7 @@ Veja o exemplo da função [`.startTransaction()`](#starttransaction).
 
 A função `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->limpa todos os atributos de todos os contextos ativos no repositório de dados<!-- END REF -->.
 
-Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários. Isso pode sobrecarregar seus contextos com dados desnecessários.
+Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários.
 
 Nesses casos, você pode usar `.clearAllRemoteContexts()` para limpar seus contextos e mantê-los limpos.
 
@@ -320,7 +320,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 |settings|Object|&#8594;|Objeto com uma propriedade "privileges" e/ou "roles"|
 |name|Text|&#8594;|Nome do token|
 |expiry|Date|&#8594;|Data de expiração do token|
-|info|Object|&#8594;|Informações armazenadas com o token e passadas para `ds.mcpAuthenticated()`|
+|info|Object|&#8594;|Informações armazenadas com o token e passadas para `ds.mcpAuthenticated()` em `$info.info`|
 |Result|Object|&#8592;|`{id; token}`|
 </div>
 <!-- END REF -->
@@ -341,7 +341,7 @@ Em *name*, passe um nome que identifica o token, por exemplo o usuário e o clie
 
 Em *expiry*, passe a data de expiração do token. Deve ser posterior à data atual e no máximo 366 dias à frente. Se *expiry* for omitido, um erro será gerado.
 
-Em *info*, você pode passar um objeto que o 4D armazena com o token como está, e passa para a função [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) quando uma sessão MCP é aberta com o token. Como não pode ser modificado depois, armazene identificadores estáveis (como um ID de usuário) e leia os valores atuais em `ds.mcpAuthenticated()`. Construa *info* a partir da sessão autenticada, nunca de valores enviados pelo cliente.
+Em *info*, você pode passar um objeto que o 4D armazena com o token como está, e passa para a função [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated), na propriedade `info` do parâmetro *$info*, quando uma sessão MCP é aberta com o token. Como não pode ser modificado depois, armazene identificadores estáveis (como um ID de usuário) e leia os valores atuais em `ds.mcpAuthenticated()`. Construa *info* a partir da sessão autenticada, nunca de valores enviados pelo cliente.
 
 A função só pode ser chamada em contexto web, ou seja, a partir de código executado para uma requisição web ou REST (por exemplo, uma função exposta chamada após o usuário ser autenticado). Todo privilégio do token deve ser detido pela sessão atual ([`Session.getPrivileges()`](SessionClass.md#getprivileges), incluindo roles, excluindo privilégios promovidos). Caso contrário, um erro é gerado.
 
@@ -601,7 +601,7 @@ Em um armazém de dados remoto:
 
 A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> retorna um objeto que contém informações sobre o contexto de otimização *contextName* no datastore<!-- END REF -->.
 
-Para saber mais informações sobre como os contextos de otimização podem ser criados, veja [otimização cliente/servidor](../ORDA/otimizacao-cliente-servidor.md#contexto-de-otimização).
+Para obter mais informações sobre como os contextos de otimização podem ser criados, consulte [otimização do cliente/servidor](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Objeto devolvido
 

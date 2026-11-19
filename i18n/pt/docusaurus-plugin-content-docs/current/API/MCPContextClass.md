@@ -45,6 +45,8 @@ A propriedade `.bound` contém <!-- REF #MCPContextClass.bound.Summary -->o valo
 
 O valor retorna assinado junto com as respostas do usuário, assim a função pode compará-lo com o valor atual e detectar uma alteração que ocorreu enquanto o usuário respondia (por exemplo, uma entity modificada). Fica vazio quando a chamada não traz respostas verificadas.
 
+Vincule o que foi mostrado ao usuário. Por exemplo, uma ferramenta que atua sobre várias entities vincula suas chaves, ou um digest de suas chaves, em vez de sua quantidade: uma contagem só detecta alteração de tamanho, não outras entities ocupando o lugar das que o usuário confirmou.
+
 O valor *bind* é assinado, não criptografado: o cliente pode lê-lo.
 
 Esta propriedade é **somente leitura**.
@@ -135,6 +137,8 @@ A função `.error()` <!-- REF #MCPContextClass.error().Summary -->faz com que a
 
 `.error()` não interrompe a execução da função: chame `return` após ela, se necessário.
 
+Um erro gerado enquanto a função é executada (por exemplo, com [`throw`](../commands/throw)) também encerra a chamada com um resultado de erro (`isError: true`) contendo a mensagem do erro.
+
 Fora de uma chamada de ferramenta MCP, `.error()` não faz nada.
 
 #### Exemplo
@@ -142,7 +146,7 @@ Fora de uma chamada de ferramenta MCP, `.error()` não faz nada.
 Você recusa um valor muito alto:
 
 ```4d
-exposed MCP Function refund($amount : Real) : Text
+exposed mcp Function refund($amount : Real) : Text
 	If ($amount>1000)
 		MCP.error("Refunds over 1000 must be done by an accountant")
 		return
@@ -174,7 +178,7 @@ A função `.hasInput()` <!-- REF #MCPContextClass.hasInput().Summary -->retorna
 
 Se *name* for omitido ou vazio, `.hasInput()` retorna **True** se a chamada atual contém uma resposta verificada do usuário para pelo menos um campo.
 
-A resposta é verificada quando o cliente chama a ferramenta novamente com as respostas e um `requestState` válido: assinado pelo 4D para o mesmo token, ferramenta, argumentos e campos, há menos de 10 minutos, e desde que o servidor MCP foi ativado pela última vez. Caso contrário, `.hasInput()` retorna **False**.
+A resposta é verificada quando o cliente chama a ferramenta novamente com as respostas e um `requestState` válido: assinado pelo 4D para o mesmo token, ferramenta, argumentos e campos, há menos de 10 minutos, desde que o servidor MCP foi ativado pela última vez, e ainda não utilizado. Um `requestState` é usado uma vez: depois que o 4D executou a função com suas respostas, uma nova chamada com o mesmo `requestState` não traz respostas verificadas, e a entrada é solicitada novamente. Caso contrário, `.hasInput()` retorna **False**.
 
 Fora de uma chamada de ferramenta MCP, `.hasInput()` retorna **False**.
 
@@ -184,7 +188,7 @@ Você solicita uma confirmação apenas se o usuário ainda não respondeu:
 
 ```4d
 If (Not(MCP.hasInput("confirm")))
-	MCP.requireInput({confirm: {type: "boolean"; title: "Send the invoice to the customer"}})
+	MCP.requireInput({confirm: {type: "boolean"; prompt: "Send the invoice to the customer?"}})
 	return
 End if
 ```
@@ -238,10 +242,14 @@ End if
 
 A função `.requireInput()` <!-- REF #MCPContextClass.requireInput().Summary -->solicita ao usuário, através do cliente MCP, o preenchimento de um formulário antes que a ferramenta continue<!-- END REF -->.
 
-Em *fields*, passe um objeto com:
+Em *fields*, passe um objeto com uma propriedade para cada campo a ser exibido. O nome da propriedade é o nome do campo, e seu valor é um objeto com:
 
-- uma propriedade opcional `message` (Text): o texto exibido para o usuário,
-- uma propriedade para cada campo a ser exibido, cujo nome é o nome do campo e cujo valor é o JSON Schema de um campo `"boolean"`, `"string"`, `"number"` ou `"integer"` (por exemplo, `{type: "boolean"; title: "Confirm"}`). Um campo é obrigatório, a menos que seu schema contenha `required: False`.
+- uma propriedade `type`: o tipo JSON Schema do campo, `"string"`, `"number"`, `"integer"` ou `"boolean"`. Para uma escolha, use um campo `"string"` com uma coleção `enum` dos valores possíveis, como em JSON Schema (por exemplo, `{type: "string"; enum: ["Yes"; "No"]; prompt: "Ship now?"}`),
+- uma propriedade `prompt` (Text): o texto exibido para o usuário para este campo, por exemplo a pergunta a ser confirmada.
+
+Um campo é obrigatório, a menos que seu objeto contenha `required: False`.
+
+Qualquer outro `type` (por exemplo, `"text"` ou `"enum"`) gera um erro informando o campo e os tipos esperados, e a chamada da ferramenta é encerrada com um resultado de erro (`isError: true`).
 
 Quando a função da ferramenta retorna, o 4D responde à chamada com `resultType: "input_required"`, o formulário e um `requestState` assinado pelo 4D. O cliente exibe o formulário e, em seguida, chama a ferramenta novamente com as respostas. A função então é executada novamente **desde o início**: [`.hasInput()`](#hasinput) retorna **True** para os campos respondidos e [`.input`](#input) contém as respostas. Se as respostas já estiverem presentes e *bind* tiver o mesmo valor de quando a entrada foi solicitada, `.requireInput()` não solicita novamente.
 
@@ -265,9 +273,9 @@ Você solicita ao usuário a confirmação do fechamento de um ticket e a inser�
 // cs.TicketEntity class
 Class extends Entity
 
-exposed MCP Function close() : Text
+exposed mcp Function close() : Text
 	If (Not(MCP.hasInput("confirm")))
-		MCP.requireInput({message: "Close ticket "+String(This.ID)+"?"; confirm: {type: "boolean"; title: "Close"}; comment: {type: "string"; title: "Comment"; required: False}}; This.getStamp())
+		MCP.requireInput({confirm: {type: "boolean"; prompt: "Close ticket "+String(This.ID)+"?"}; comment: {type: "string"; prompt: "Comment"; required: False}}; This.getStamp())
 		return
 	End if
 	If (MCP.input.confirm)

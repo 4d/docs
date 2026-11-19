@@ -45,6 +45,7 @@ Eles oferecem as propriedades abaixo e funções:
 | [<!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Syntax -->](#maxconcurrentprocesses)<br/><!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Summary -->             |
 | [<!-- INCLUDE #WebServerClass.maxRequestSize.Syntax -->](#maxrequestsize)<br/><!-- INCLUDE #WebServerClass.maxRequestSize.Summary -->                                     |
 | [<!-- INCLUDE #WebServerClass.maxSessions.Syntax -->](#maxsessions)<br/><!-- INCLUDE #WebServerClass.maxSessions.Summary -->                                              |
+| [<!-- INCLUDE #WebServerClass.mcp.Syntax -->](#mcp)<br/><!-- INCLUDE #WebServerClass.mcp.Summary -->                                                                     |
 | [<!-- INCLUDE #WebServerClass.minTLSVersion.Syntax -->](#mintlsversion)<br/><!-- INCLUDE #WebServerClass.minTLSVersion.Summary -->                                        |
 | [<!-- INCLUDE #WebServerClass.name.Syntax -->](#name)<br/><!-- INCLUDE #WebServerClass.name.Summary -->                                                                   |
 | [<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)<br/><!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->                                     |
@@ -54,7 +55,7 @@ Eles oferecem as propriedades abaixo e funções:
 | [<!-- INCLUDE #WebServerClass.rules.Syntax -->](#rules)<br/><!-- INCLUDE #WebServerClass.rules.Summary -->                                                                |
 | [<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)<br/><!-- INCLUDE #WebServerClass.scalableSession.Summary -->                                  |
 | [<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<br/><!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->                      |
-| [<!-- INCLUDE #WebServerClass.IPAddressToListen.Syntax -->](#ipaddresstolisten)<br/><!-- INCLUDE #WebServerClass.IPAddressToListen.Summary -->                            |
+| [<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)<br/><!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->                            |
 | [<!-- INCLUDE #WebServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)<br/><!-- INCLUDE #WebServerClass.sessionCookiePath.Summary -->                            |
 | [<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Syntax -->](#sessioncookiesamesite)<br/><!-- INCLUDE #WebServerClass.sessionCookieSameSite.Summary -->                |
 | [<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)<br/><!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Summary --> |
@@ -418,6 +419,63 @@ Contém o <!-- REF #WebServerClass.maxSessions.Summary --> número máximo de se
 
 <!-- END REF -->
 
+<!-- REF WebServerClass.mcp.Desc -->
+
+## .mcp
+
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 21 R6   | Adicionado |
+
+</details>
+
+<!-- REF #WebServerClass.mcp.Syntax -->**.mcp** : Object<!-- END REF -->
+
+#### Descrição
+
+A propriedade `.mcp` contém <!-- REF #WebServerClass.mcp.Summary -->as configurações do servidor MCP do servidor web<!-- END REF -->. Para mais informações, veja [MCP server](../WebServer/mcp-server.md).
+
+O servidor MCP está disponível apenas no servidor web do aplicativo host e requer [sessões escalonáveis](#scalablesession).
+
+O objeto `.mcp` contém as seguintes propriedades:
+
+|Propriedade|Tipo|Padrão|Descrição|
+|---|---|---|---|
+|enabled|Boolean|False|True para habilitar o servidor MCP na URL `/mcp`. Pode ser modificado enquanto o servidor web está em execução|
+|serverName|Text|""|Nome do servidor retornado por `server/discover`. Se vazio, o nome do aplicativo é retornado|
+|serverVersion|Text|""|Versão do servidor retornada por `server/discover`. Se vazio, a versão do aplicativo compilado é retornada ("0.0.0" se o aplicativo não estiver compilado)|
+|instructions|Text|""|Instruções para os clientes MCP, retornadas por `server/discover`|
+|maxResults|Integer|100|Número máximo de entidades retornadas por uma página `queryEntities` ou por uma ferramenta personalizada que retorna uma entity selection|
+|crudTools|Collection|Todas as ferramentas|Nomes das [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) disponíveis para os clientes: "describeModel", "getEntity", "queryEntities", "aggregateEntities", "addEntity", "updateEntity", "dropEntity", "getBinaryAttribute", "setBinaryAttribute"|
+|allowInsecureHTTP|Boolean|False|True para aceitar solicitações MCP via HTTP simples de qualquer endereço (não recomendado). Por padrão, HTTP simples só é aceito de um endereço loopback ou de um proxy confiável. Veja [Secure connections](../WebServer/mcp-server.md#secure-connections)|
+|trustedProxies|Collection|[]|Endereços IP dos proxies reversos cujos cabeçalhos `X-Forwarded-For`, `X-Forwarded-Proto` e `X-Forwarded-Host` são usados|
+|publicURL|Text|""|URL base (esquema e host) das URLs publicadas pelo servidor MCP, por exemplo "https://sales.example.com". Se vazio, a URL base é construída a partir da requisição|
+|oauthDynamicRegistration|Boolean|True|True para permitir o registro dinâmico de clientes no [modo OAuth](../WebServer/mcp-server.md#oauth-21-mode)|
+
+As configurações do MCP são definidas nas configurações do aplicativo, ou passando um objeto `mcp` no parâmetro *settings* da função [`.start()`](#start). No objeto `.mcp`, todas as propriedades são somente leitura exceto `enabled`: enquanto o servidor web está em execução, definir `mcp.enabled` como **True** ou **False** habilita ou desabilita o servidor MCP sem reiniciar o servidor web. Essa alteração se aplica até o 4D ser encerrado: ela não é salva nas configurações, e o próximo início do 4D usa as configurações. As configurações do MCP são mantidas quando o servidor web é reiniciado.
+
+#### Exemplo 1
+
+Você habilita o servidor MCP na inicialização:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+var $status:=$webServer.start({mcp: {enabled: True; serverName: "Sales"; maxResults: 50}})
+```
+
+#### Exemplo 2
+
+Você desabilita o servidor MCP enquanto o servidor web está em execução:
+
+```4d
+var $webServer : 4D.WebServer:=WEB Server
+$webServer.mcp.enabled:=False // /mcp agora responde 404, sessões MCP são encerradas
+```
+
+<!-- END REF -->
+
 <!-- REF WebServerClass.minTLSVersion.Desc -->
 
 ## .minTLSVersion
@@ -703,6 +761,7 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 | Release | Mudanças                                   |
 | ------- | ------------------------------------------ |
+| 21 R6   | Suporte a `mcp` no parâmetro `settings`    |
 | 21 R5   | Support quotas in the `settings` parameter |
 | 18 R3   | Adicionado                                 |
 
@@ -734,7 +793,9 @@ Você pode configurar quotas através da propriedade `quotas` no parâmetro *set
 
 :::
 
-As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
+Você pode configurar o [servidor MCP](../WebServer/mcp-server.md) através da propriedade [`mcp`](#mcp) no parâmetro *settings*.
+
+As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada, exceto as configurações `mcp`, que são mantidas.
 
 #### Objeto devolvido
 
@@ -769,6 +830,15 @@ The following example starts the web server with customized settings:
  If($result.success)
   //...
  End if
+```
+
+#### Exemplo 2
+
+O exemplo a seguir inicia o servidor web com o servidor MCP habilitado:
+
+```4d
+var $webServer:=WEB Server
+var $result:=$webServer.start({mcp: {enabled: True; instructions: "Use describeModel to learn the data model."}})
 ```
 
 <!-- END REF -->
