@@ -15,7 +15,6 @@ Leia [**O que há de novo no 4D 21 R6**](https://blog.4d.com/whats-new-in-4d-21-
 - Clientes MCP autenticam-se com Fine-Grained Tokens gerenciados com as novas funções [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken), [`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens) e [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken). A função reservada [`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) da classe DataStore prepara cada sessão MCP, cujo [`Session.info.type`](../API/SessionClass.md#info) é "mcp".
 - [Modo OAuth 2.1](../WebServer/mcp-server.md#oauth-21-mode) opcional do servidor MCP, habilitado pela função reservada [`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) da classe DataStore. As concessões são gerenciadas com as novas funções [`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants) e [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant).
 - Novo comando [`MCP`](../commands/mcp) e classe [`4D.MCPContext`](../API/MCPContextClass.md) para [pedir confirmação ao usuário](../WebServer/mcp-server.md#asking-the-user-for-confirmation) em ferramentas MCP.
-- Um [MCP Bundle](../WebServer/mcp-server.md#claude-desktop-bundle) de referência permite que o Claude Desktop conecte-se a um servidor MCP 4D na rede local.
 
 #### Mudanças de comportamento
 
