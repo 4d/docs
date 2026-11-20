@@ -528,7 +528,7 @@ module.exports =
         },
        {
           type: "doc",
-          label: "Sessions",
+          label: "Desktop sessions",
           id: "Desktop/desktop-sessions"
         },
         {
