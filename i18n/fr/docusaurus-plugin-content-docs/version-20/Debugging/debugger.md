@@ -7,6 +7,12 @@ Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
+:::note
+
+The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.
+
+:::
+
 ## Appeler le débogueur
 
 Il existe plusieurs façons d'afficher le débogueur :

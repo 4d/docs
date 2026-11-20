@@ -162,7 +162,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## archivo `roles.json`
+## Archivo `roles.json`
 
 El archivo `roles.json` describe todos los parámetros de seguridad web del proyecto. La sintaxis del archivo `roles.json` es la siguiente:
 

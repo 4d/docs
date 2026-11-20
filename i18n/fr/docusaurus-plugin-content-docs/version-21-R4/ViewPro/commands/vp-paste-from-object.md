@@ -38,14 +38,14 @@ Dans *dataObject*, passez l'objet qui contient les données de la cellule, la mi
 
 Dans le paramètre facultatif *options*, vous pouvez spécifier ce qu'il faut coller dans la plage de cellules. Valeurs possibles :
 
-| Constante                                      | Description                                                                                                |
-| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, la mise en forme et les formules. |
-| `vk clipboard options formatting`              | Ne colle que la mise en forme.                                                             |
-| `vk clipboard options formulas`                | Colle uniquement les formules.                                                             |
-| `vk clipboard options formulas and formatting` | Colle les formules et la mise en forme.                                                    |
-| `vk clipboard options values`                  | Ne colle que les valeurs.                                                                  |
-| `vk clipboard options value and formatting`    | Colle les valeurs et la mise en forme.                                                     |
+| Constante                                      | Description                                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, le formatage et les formules. |
+| `vk clipboard options formatting`              | Colle uniquement le formatage.                                                         |
+| `vk clipboard options formulas`                | Colle uniquement les formules.                                                         |
+| `vk clipboard options formulas and formatting` | Colle les formules et le formatage.                                                    |
+| `vk clipboard options values`                  | Colle uniquement les valeurs.                                                          |
+| `vk clipboard options value and formatting`    | Colle les valeurs et le formatage.                                                     |
 
 Les options de collage définies dans [workbook options](vp-set-workbook-options.md) sont prises en compte.
 

@@ -315,15 +315,15 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                                             |
-| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------- |
-| privilege  | Text       | &#8594; | Privilege name, or comma-separated privilege names                      |
-| privileges | Collection | &#8594; | Collection de noms de privilèges                                        |
-| settings   | Object     | &#8594; | Object with a "privileges" and/or "roles" property                      |
-| name       | Text       | &#8594; | Name of the token                                                       |
-| expiry     | Date       | &#8594; | Expiration date of the token                                            |
-| info       | Object     | &#8594; | Information stored with the token and passed to `ds.mcpAuthenticated()` |
-| Résultat   | Object     | &#8592; | `{id; token}`                                                           |
+| Paramètres | Type       |                             | Description                                                                             |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------------- |
+| privilege  | Text       | &#8594; | Privilege name, or comma-separated privilege names                                      |
+| privileges | Collection | &#8594; | Collection de noms de privilèges                                                        |
+| settings   | Object     | &#8594; | Object with a "privileges" and/or "roles" property                                      |
+| name       | Text       | &#8594; | Name of the token                                                                       |
+| expiry     | Date       | &#8594; | Expiration date of the token                                                            |
+| info       | Object     | &#8594; | Information stored with the token and passed to `ds.mcpAuthenticated()` in `$info.info` |
+| Résultat   | Object     | &#8592; | `{id; token}`                                                                           |
 
 </div>
 <!-- END REF -->
@@ -344,7 +344,7 @@ In *name*, pass a name that identifies the token, for example the user and the c
 
 In *expiry*, pass the expiration date of the token. It must be later than the current date and at most 366 days ahead. If *expiry* is omitted, an error is raised.
 
-In *info*, you can pass an object that 4D stores with the token as is, and passes to the [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) function when an MCP session is opened with the token. Since it cannot be modified later, store stable identifiers (such as a user ID) and read the current values in `ds.mcpAuthenticated()`. Build *info* from the authenticated session, never from values sent by the client.
+In *info*, you can pass an object that 4D stores with the token as is, and passes to the [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) function, in the `info` property of its *$info* parameter, when an MCP session is opened with the token. Since it cannot be modified later, store stable identifiers (such as a user ID) and read the current values in `ds.mcpAuthenticated()`. Build *info* from the authenticated session, never from values sent by the client.
 
 The function can only be called in a web context, i.e. from code executed for a web or REST request (for example an exposed function called after the user was authenticated). Every privilege of the token must be held by the current session ([`Session.getPrivileges()`](SessionClass.md#getprivileges), roles included, promoted privileges excluded). Otherwise, an error is raised.
 

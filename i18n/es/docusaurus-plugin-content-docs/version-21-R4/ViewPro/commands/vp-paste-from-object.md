@@ -38,14 +38,14 @@ En *dataObject*, pase el objeto que contiene los datos de la celda, el formato y
 
 En el parámetro opcional *options*, puede especificar qué pegar en el rango de celdas. Valores posibles:
 
-|Constante|Descripción|
-\|---|---|---|
-|`vk clipboard options all`|Pega todos los objetos de datos, incluyendo valores, formato y fórmulas.|
-|`vk clipboard options formatting`|Pega solo el formato.|
-|`vk clipboard options formulas`|Pega solo las fórmulas.|
-|`vk clipboard options formulas and formatting`|Pega fórmulas y formato.|
-|`vk clipboard options values`|Pega solo valores.|
-|`vk clipboard options value and formatting`|Pega valores y formato.|
+| Constante                                      | Descripción                                                                              |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `vk clipboard options all`                     | Pega todos los objetos de datos, incluyendo valores, formato y fórmulas. |
+| `vk clipboard options formatting`              | Pega sólo el formato.                                                    |
+| `vk clipboard options formulas`                | Pegar sólo las fórmulas.                                                 |
+| `vk clipboard options formulas and formatting` | Pega fórmulas y formato.                                                 |
+| `vk clipboard options values`                  | Pega sólo valores.                                                       |
+| `vk clipboard options value and formatting`    | Pega valores y formato.                                                  |
 
 Se tienen en cuenta las opciones de pegado definidas en las [opciones del libro de trabajo](vp-set-workbook-options.md).
 

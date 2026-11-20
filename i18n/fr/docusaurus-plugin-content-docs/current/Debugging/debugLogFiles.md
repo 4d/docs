@@ -153,6 +153,17 @@ Les champs suivants sont enregistrés pour Requête et Réponse :
 | ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication) |
 | SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log                       |
 
+:::caution
+
+Handle this log file as a secret. It contains the request and response headers and, in the modes that log body parts, the bodies of the requests and responses.
+
+- Credentials in the headers are masked: `Authorization` and `Proxy-Authorization`, cookies (`Cookie`, `Set-Cookie`) and `Mcp-Session-Id` keep only their scheme, the prefix of a token and its last 4 characters, so that you can still tell two of them apart (for example `Authorization: Bearer 4dfgt_…k3Zq`). Nothing is kept of `Basic` and `Digest` credentials.
+- In the request line, the token of a binary URL of the MCP server and the one-time session token of a `$4DSID` parameter are masked the same way.
+- The bodies of the [MCP server](../WebServer/mcp-server.md) OAuth token endpoint, of its login form and of its binary URLs are not logged (`[body not logged: credentials]`).
+- The bodies of other requests and responses, including the parameters and results of your functions, are logged as they are: if a function receives or returns a secret (a password, a token), it appears in the log.
+
+:::
+
 ## 4DHTTPClientLog.txt
 
 Ce fichier journal enregistre le trafic HTTP qui passe par le client HTTP 4D. Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent optionnellement être enregistrées.

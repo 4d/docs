@@ -1081,7 +1081,7 @@ Une fois l'opération d'exportation terminée, `VP EXPORT DOCUMENT` déclenche a
 
 #### Passer une méthode callback (formula)
 
-When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. La méthode callback recevra les valeurs suivantes dans des variables locales :
+Lorsque vous passez le paramètre optionnel *paramObj*, la commande `VP EXPORT DOCUMENT` vous permet d'utiliser la commande [`Formula`](https://doc.4d.com/4dv20/help/command/fe/page1597.html) pour appeler une méthode 4D qui sera exécutée une fois l'exportation terminée. La méthode callback recevra les valeurs suivantes dans des variables locales :
 
 | Variable |                               | Type    | Description                                                                                |
 | -------- | ----------------------------- | ------- | ------------------------------------------------------------------------------------------ |
@@ -3083,10 +3083,10 @@ Dans *rangeObj*, passez une plage dont vous souhaitez récupérer la valeur.
 
 L'objet retourné contiendra la propriété `value` et, dans le cas d'une valeur de date js, une propriété `time` :
 
-| Propriété | Type                                    | Description                                                               |
-| --------- | --------------------------------------- | ------------------------------------------------------------------------- |
-| value     | Entier long, Réel, Booléen, Texte, Date | Valeur de *rangeObj* (exceptée - time)                 |
-| time      | Real                                    | Valeur heure (en secondes) si la valeur est du type js |
+| Propriété | Type                               | Description                                                               |
+| --------- | ---------------------------------- | ------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date | Valeur de *rangeObj* (exceptée - time)                 |
+| time      | Real                               | Valeur heure (en secondes) si la valeur est du type js |
 
 Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit :
 
@@ -3249,14 +3249,14 @@ Une erreur est retournée si le paramètre `filePath` est invalide, ou si le fic
 
 Le paramètre optionnel *paramObj* vous permet de définir les propriétés du document importé:
 
-| Paramètres |                 | Type   | Description                                                                                                                                                                                                                                                                                                                                                                        |
-| ---------- | --------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                 | object | Nom d'une méthode callback (ou méthode rétro-rappel) à lancer lorsque l'import est terminé. The method must use the [`Formula`](https://doc.4d.com/4dv20/help/command/en/page1597.html) command. Voir [Passer une méthode de callback (formula)](#passer-une-m%C3%A9thode-callback-formula). |
-| password   |                 | text   | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                                                                                                        |
-| csvOptions |                 | object | options d'import csv                                                                                                                                                                                                                                                                                                                                                               |
-|            | range           | object | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                                                                                               |
-|            | rowDelimiter    | text   | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                                                                                                    |
-|            | columnDelimiter | text   | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                                                                                                            |
+| Paramètres |                 | Type   | Description                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------- | --------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                 | object | Nom d'une méthode callback (ou méthode rétro-rappel) à lancer lorsque l'import est terminé. La méthode doit utiliser la commande [`Formula`](https://doc.4d.com/4dv20/help/command/fe/page1597.html). Voir [Passer une méthode de callback (formula)](#passer-une-m%C3%A9thode-callback-formula). |
+| password   |                 | text   | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                                                                                                             |
+| csvOptions |                 | object | options d'import csv                                                                                                                                                                                                                                                                                                                                                                    |
+|            | range           | object | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                                                                                                    |
+|            | rowDelimiter    | text   | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                                                                                                         |
+|            | columnDelimiter | text   | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                                                                                                                 |
 
 > Pour plus d'informations sur le format CSV et les valeurs séparées par des délimiteurs en général, voir [cet article sur Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -3823,14 +3823,14 @@ Dans *dataObject*, passez l'objet qui contient les données de la cellule, la mi
 
 Dans le paramètre facultatif *options*, vous pouvez spécifier ce qu'il faut coller dans la plage de cellules. Valeurs possibles :
 
-| Constante                                      | Description                                                                                                |
-| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, la mise en forme et les formules. |
-| `vk clipboard options formatting`              | Ne colle que la mise en forme.                                                             |
-| `vk clipboard options formulas`                | Colle uniquement les formules.                                                             |
-| `vk clipboard options formulas and formatting` | Colle les formules et la mise en forme.                                                    |
-| `vk clipboard options values`                  | Ne colle que les valeurs.                                                                  |
-| `vk clipboard options value and formatting`    | Colle les valeurs et la mise en forme.                                                     |
+| Constante                                      | Description                                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, le formatage et les formules. |
+| `vk clipboard options formatting`              | Colle uniquement le formatage.                                                         |
+| `vk clipboard options formulas`                | Colle uniquement les formules.                                                         |
+| `vk clipboard options formulas and formatting` | Colle les formules et le formatage.                                                    |
+| `vk clipboard options values`                  | Colle uniquement les valeurs.                                                          |
+| `vk clipboard options value and formatting`    | Colle les valeurs et le formatage.                                                     |
 
 Les options de collage définies dans [workbook options](#vp-set-workbook-options) sont prises en compte.
 
@@ -5248,7 +5248,7 @@ Dans *options*, vous pouvez passer un objet qui spécifie des options supplémen
 
 Dans *sheet*,, transmettez l'index de la feuille qui recevra le contexte de données. Si aucun numéro d'indice n'est passé, le contexte est appliqué à la feuille courante.
 
-Si vous exportez votre document vers un objet en utilisant [VP Export to object](#vp-export-to-object), ou vers un document 4DVP en utilisant [VP EXPORT DOCUMENT] (#vp-export-document), l'option `includeBindingSource` vous permet de copier le contenu des contextes actuels en tant que valeurs de cellules dans l'objet ou le document exporté. Pour plus de détails, reportez-vous à la description de ces méthodes.
+Si vous exportez votre document vers un objet en utilisant [VP Export to object](#vp-export-to-object), ou vers un document 4DVP en utilisant [VP EXPORT DOCUMENT](#vp-export-document), l'option `includeBindingSource` vous permet de copier le contenu des contextes actuels en tant que valeurs de cellules dans l'objet ou le document exporté. Pour plus de détails, reportez-vous à la description de ces méthodes.
 
 #### Exemple
 

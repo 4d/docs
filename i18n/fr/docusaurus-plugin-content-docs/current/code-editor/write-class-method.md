@@ -391,7 +391,7 @@ Si les caractères saisis correspondent à différents types d'objets, la liste 
 
 > Pour des raisons pratiques, vous pouvez désactiver l'affichage automatique de la liste des suggestions pour les **constantes**, les **variables (locales ou interprocess) et attributs d'objets**, les **tables** et/ou les **prototypes**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
 
-When a suggested class function or class constructor is documented with a [comment block above its declaration](../Concepts/classes.md#function-comments), its description and parameter comments are displayed with its signature in the suggestion details.
+When a suggested class function or class constructor is documented with a [comment block above its declaration](../Concepts/comments.md#syntax-description), its description and parameter comments are displayed with its signature in the suggestion details.
 
 #### Noms de propriétés d'objets
 
@@ -542,7 +542,7 @@ La [barre d'état](#status-bar) fournit également des informations contextuelle
 
 - Vous pouvez également créer un **fichier de documentation dédié** nommé `<MethodName>MethodName<MethodName>.md` dans le dossier `<package>package<package>/documentation`. Voir [Afficher la documentation dans l'éditeur de code](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
-- **Class function and class constructor comments**: When you call a class function or a class constructor (`cs.MyClass.new()`), the help tip and the signature help display its signature along with the [comment block written right above its declaration](../Concepts/classes.md#function-comments): the description lines, then the `$name:` parameter lines. `MCP:` lines are not displayed. This applies to project classes, shared and singleton classes, and component classes, and works the same in VS Code.
+- **Class function and class constructor comments**: When you call a class function or a class constructor (`cs.MyClass.new()`), the help tip and the signature help display its signature along with the [comment block written right above its declaration](../Concepts/comments.md#syntax-description): the description lines, then the `$name:` parameter lines. `MCP:` lines are not displayed. This applies to project classes, shared and singleton classes, and component classes, and works the same in VS Code.
 
   - The text is displayed as plain text: Markdown markers are shown as written.
   - Only the saved code is used: an edited comment is displayed once the class is saved.

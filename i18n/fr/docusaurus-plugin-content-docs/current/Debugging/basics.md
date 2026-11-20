@@ -45,7 +45,7 @@ Parfois, le morceau de code qui affiche l'erreur peut être différent du code q
 
 ### Erreurs d'exécution
 
-En mode Application, vous pouvez obtenir des erreurs que vous ne voyez pas en mode interprété. Voici un exemple :
+In compiled applications, you might obtain errors that you don't see in [interpreted mode](../Concepts/interpreted.md). Voici un exemple :
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 

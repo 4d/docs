@@ -113,6 +113,8 @@ var $webServer : 4D.WebServer:=WEB Server
 $webServer.quotas.nbRequestsPerMinPerSession:=30
 ```
 
+MCP sessions cannot get their own quotas: the session default quotas apply to every Web session alike, and [`Session.quotas`](../API/SessionClass.md#quotas) only holds the REST entity-set limits.
+
 ### Réponses de limitation de débit
 
 Les quotas de limitation de débit s'appuient sur des fenêtres horaires définies. Lorsqu'un quota est atteint, les requêtes suivantes sont rejetées jusqu'à la fin de la fenêtre courante d'une minute ou d'une heure. La réponse **HTTP 429 Too Many Requests** comprend un en-tête `Retry-After` indiquant le délai à respecter avant d'envoyer une nouvelle requête.

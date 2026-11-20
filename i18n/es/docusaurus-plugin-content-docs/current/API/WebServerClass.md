@@ -454,7 +454,7 @@ The `.mcp` object contains the following properties:
 | publicURL                | Text       | ""                                                     | Base URL (scheme and host) of the URLs published by the MCP server, for example "https://sales.example.com". If empty, the base URL is built from the request                                               |
 | oauthDynamicRegistration | Boolean    | True                                                   | True to allow dynamic client registration in [OAuth mode](../WebServer/mcp-server.md#oauth-21-mode)                                                                                                                                                                                            |
 
-You can pass an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. While the web server is running, only `mcp.enabled` can be modified: setting it to **True** or **False** enables or disables the MCP server without restarting the web server. The MCP settings are kept when the web server is restarted.
+The MCP settings are defined in the Settings of the application, or by passing an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. On the `.mcp` object, all properties are read-only except `enabled`: while the web server is running, setting `mcp.enabled` to **True** or **False** enables or disables the MCP server without restarting the web server. This change applies until 4D quits: it is not saved in the settings, and the next start of 4D uses the settings. The MCP settings are kept when the web server is restarted.
 
 #### Ejemplo 1
 

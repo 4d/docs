@@ -53,13 +53,13 @@ LIST TO ARRAY("ListName";varCol)
 myCol:=myCol.push("new value") // リストボックスに new value を表示
 ```
 
-## Supported standard actions
+## サポートされる標準アクション
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Available for array list boxes; see the [supported properties by list box type](#supported-properties).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): 配列型リストボックスに対して利用可能です。詳細は[リストボックス型ごとにサポートされるプロパティ](#プロパティ一覧) を参照してください。
 
-The [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord), [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord), [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord), and [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) actions can affect selection list boxes, but are assigned to buttons or menu commands, not to the selection list box itself.
+[addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord)、 [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord)、 [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord)、および [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) アクションはセレクション型リストボックスに影響をおよぼす可能性がありますが、これらはボタンまたはメニューコマンドに対して割り当てられるもので、セレクション型リストボックス自体に割り当てられるものではありません。
 
-See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+詳細については[標準アクション互換性表](../Desktop-legacy/standard-actions.md#サポートされるフォームオブジェクト) を参照してください。
 
 ## プロパティ一覧
 
@@ -118,7 +118,7 @@ See the [standard action compatibility table](../Desktop-legacy/standard-actions
 | [右](properties_CoordinatesAndSizing.md#右)                                | X         | ○             | X                            |
 | [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列)                       | X         |               |                              |
 | [行コントロール配列](properties_ListBox.md#行コントロール配列)                             | X         |               |                              |
-| [行フォントカラー配列](properties_Text.md#行フォントカラー式)                               | X         |               |                              |
+| [行フォントカラー配列](properties_Text.md#行フォントカラー配列])                             | X         |               |                              |
 | [行の高さ](properties_CoordinatesAndSizing.md#行の高さ)                          | X         |               |                              |
 | [行高さ配列](properties_CoordinatesAndSizing.md#行高さ配列)                        | X         |               |                              |
 | [行スタイル配列](properties_Text.md#行スタイル配列)                                    | X         |               |                              |
@@ -132,7 +132,7 @@ See the [standard action compatibility table](../Desktop-legacy/standard-actions
 | [透過](properties_BackgroundAndBorder.md#透過)                               | X         | X             | X                            |
 | [タイプ](properties_Object.md#タイプ)                                          | X         | X             | X                            |
 | [下線](properties_Text.md#下線)                                              | X         | X             | ○                            |
-| [変数あるいは式](properties_Object.md#変数あるいは式)                                  | X         | X             |                              |
+| [変数あるいは式](properties_Object.md#variable-or-expression)                   | X         | X             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                            | X         | X             | X                            |
 | [縦線カラー](properties_Gridlines.md#縦線カラー)                                   | X         | X             | X                            |
 | [縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング)                  | X         | X             | X                            |

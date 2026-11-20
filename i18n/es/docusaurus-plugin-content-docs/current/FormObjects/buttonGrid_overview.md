@@ -28,7 +28,7 @@ Puede asignar la [acción estándar](/Desktop/standard-actions) `gotoPage` a una
 
 ## Supported standard actions
 
-- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected button number as described in [Goto page](#goto-page).
+- [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): utiliza el número de botón seleccionado tal y como se describe en [Goto page](#goto-page).
 
 See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
 

@@ -69,7 +69,7 @@ Los parámetros de permisos requieren ser consistentes, en particular los permis
 
 :::warning
 
-When a permission entry references an undeclared [privilege](#privileges-and-roles), 4D logs an error and ignores the entry. In this case, the permission is ignored. If the [restricted mode by default](#restriction-modes) is not enabled, the resource is accessible to `guest` sessions.
+Cuando una entrada de permiso hace referencia a un [privilegio](#privileges-and-roles) no declarado, 4D registra un error e ignora la entrada. En este caso, el permiso se ignora. Si el [modo restringido por defecto](#restriction-modes) no está habilitado, el recurso es accesible a las sesiones `guest`.
 
 :::
 
@@ -168,7 +168,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## archivo `roles.json`
+## Archivo `roles.json`
 
 El archivo `roles.json` describe todos los parámetros de seguridad web del proyecto. La sintaxis del archivo `roles.json` es la siguiente:
 

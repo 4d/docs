@@ -292,11 +292,11 @@ Every new table created in the database contains a primary key by default. This 
 - Autoincrement,
 - Automatic index.
 
-You can use this field as is, or change its name and/or its properties if you want (for example, you may want to use an UUID field). You can also delete it if you want to use another field (or fields) as primary key(s). However, it is strongly recommended to keep at least one primary key in each 4D table.
+You can use this field as is, or change its name and/or its properties if you want (for example, you may want to use an UUID field). You can also delete it if you want to use another field (or fields) as primary key(s). Sin embargo, se recomienda encarecidamente mantener al menos una llave primaria en cada tabla 4D.
 
 :::note
 
-In the [Structure page of the Preferences](../Preferences/structure.md), you can modify the name and type of the primary keys that are created by default.
+En la [Página Estructura de las Preferencias](../Preferences/structure.md), puede modificar el nombre y el tipo de las llaves primarias que se crean por defecto.
 
 :::
 
@@ -327,9 +327,9 @@ There are two ways to display the **Primary key manager** window:
 
 - From the **Structure editor**: click on the button in the [toolbar](./structure-editor.md#toolbar) of this window to display the assistant.
 
-### Using the assistant
+### Cómo utilizar el asistente
 
-The **Primary key manager** window displays a line for every table in the database:
+La ventana **Gestor de llaves primarias** muestra una línea por cada tabla de la base de datos:
 
 ![](../assets/en/Develop/pk-1.png)
 
@@ -352,7 +352,7 @@ For each journaled table that does not have a primary key, the assistant display
 
 - **Create a new field:** creates a new primary key field in the table. This field will have the same characteristics as the one [added by default when a new table is created](#default-primary-key-field). By default, the assistant proposes to create a field of the Longint type, named “ID”. You can modify the name and type of default primary key fields in the [Preferences](../Preferences/structure.md#primary-key). You can also change the name and/or type of the field directly in the Primary key manager window.
 
-- **Do not log this table:** unchecks the [**Include in Log File**](#include-in-log-file) option for the table. You can choose this option in the case of temporary tables. After you validate this dialog box, a “Warning” status is assigned to the table.
+- **Do not log this table:** unchecks the [**Include in Log File**](#include-in-log-file) option for the table. Puede elegir esta opción en el caso de tablas temporales. After you validate this dialog box, a “Warning” status is assigned to the table.
 
 Once you have made your settings, click on **Apply...** to apply the changes to the database or **Close** to close the dialog box without modifying the database. When you click on **Apply...**, a confirmation dialog box appears listing the operations to be performed; you can either confirm or cancel the operation.
 

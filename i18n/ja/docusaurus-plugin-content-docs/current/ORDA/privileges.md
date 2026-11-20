@@ -29,7 +29,7 @@ ORDA セキュリティアーキテクチャーはWeb およびREST セッショ
 
 ## スコープ
 
-パーミッションは**Web および REST セッション** に対して適用されます: [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview)、および **Web プロセス内で実行された4D コード** を含めた[REST リクエスト](../REST/gettingStarted.md)。これには[公開された関数](./ordaClasses.md)、[HTTP リクエストハンドラ](../WebServer/http-request-handler.md)、[On Web Connection データベースメソッド](../commands/on-web-connection-database-method)、 およびそれらが呼び出すあらゆるコードが含まれます。例えば、関数がデータクラスを読み出すがセッションに読み出しのパーミッション(許可)がない場合には、許可された関数の呼び出しも失敗します。
+Permissions apply to **web and REST sessions**: [REST requests](../REST/gettingStarted.md), including [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), [`Open datastore`](../commands/open-datastore) sessions, [MCP sessions](../WebServer/mcp-server.md) and **4D code executed in a web process**. これには[公開された関数](./ordaClasses.md)、[HTTP リクエストハンドラ](../WebServer/http-request-handler.md)、[On Web Connection データベースメソッド](../commands/on-web-connection-database-method)、 およびそれらが呼び出すあらゆるコードが含まれます。例えば、関数がデータクラスを読み出すがセッションに読み出しのパーミッション(許可)がない場合には、許可された関数の呼び出しも失敗します。
 
 :::info 例外
 
@@ -44,62 +44,6 @@ ORDA セキュリティアーキテクチャーはWeb およびREST セッショ
 パーミッションエントリが宣言されていない[権限](#権限とロール) を参照する場合、4D はエラーをログに記録し、そのエントリを無視します。この場合、パーミッションは無視されます。[デフォルトの制限モード](#制限モード) が有効化されていない場合、リソースは`guest` セッションからアクセス可能となります。
 
 :::
-
-### MCPツール
-
-特段何の設定をしなくても、[MCP サーバー](../WebServer/mcp-server.md) のセッションにも同じパーミッションが適用されます:
-
-- [カスタムツール](../WebServer/mcp-server.md#カスタムツール) (`exposed MCP Function`) はその関数に対して**execute** パーミッションを必要とし、**promote** パーミッションがあると望ましいです。
-- [ビルトインのCRUD ツール](../WebServer/mcp-server.md#ビルトインcrudツール) はデータクラスの**read**、**create**、**update**、あるいは**drop** パーミッションを必要とし、属性のパーミッションが適用されます。フィルター、並べ替え、または取得属性の指定に使用されるそれぞれの属性は、**read** パーミッションが必要になります。
-- CRUD ツールは、セッションがデータクラスに対して少なくとも一つのデータパーミッションを持っている場合に表示されます。そして`describeModel` ツールはセッションがデータパーミッションをもつデータクラスのみを、その読み出し可能および書き込み可能属性とともに記述します。
-- 属性がアクセスできないツール、データクラス、または属性は、それが存在しないかのように報告されます。
-
-#### 例題
-
-"salesReader" 権限で認証されたMCP クライアントは、Customer およびOrder データクラスをCRUD ツールを使って読み出すことができ、また`OrderManager` シングルトンによって公開されたツール(例えば`OrderManager-getYearTotal`)を呼び出すこともできます:
-
-```json
-{
-	"privileges": [{"privilege": "salesReader", "includes": []}],
-	"roles": [],
-	"permissions": {
-		"allowed": [
-			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
-		]
-	},
-	"restrictedByDefault": true
-}
-```
-
-### MCPツール
-
-特段何の設定をしなくても、[MCP サーバー](../WebServer/mcp-server.md) のセッションにも同じパーミッションが適用されます:
-
-- [カスタムツール](../WebServer/mcp-server.md#カスタムツール) (`exposed MCP Function`) はその関数に対して**execute** パーミッションを必要とし、**promote** パーミッションがあると望ましいです。
-- [ビルトインのCRUD ツール](../WebServer/mcp-server.md#ビルトインcrudツール) はデータクラスの**read**、**create**、**update**、あるいは**drop** パーミッションを必要とし、属性のパーミッションが適用されます。フィルター、並べ替え、または取得属性の指定に使用されるそれぞれの属性は、**read** パーミッションが必要になります。
-- CRUD ツールは、セッションがデータクラスに対して少なくとも一つのデータパーミッションを持っている場合に表示されます。そして`describeModel` ツールはセッションがデータパーミッションをもつデータクラスのみを、その読み出し可能および書き込み可能属性とともに記述します。
-- 属性がアクセスできないツール、データクラス、または属性は、それが存在しないかのように報告されます。
-
-#### 例題
-
-"salesReader" 権限で認証されたMCP クライアントは、Customer およびOrder データクラスをCRUD ツールを使って読み出すことができ、また`OrderManager` シングルトンによって公開されたツール(例えば`OrderManager-getYearTotal`)を呼び出すこともできます:
-
-```json
-{
-	"privileges": [{"privilege": "salesReader", "includes": []}],
-	"roles": [],
-	"permissions": {
-		"allowed": [
-			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
-		]
-	},
-	"restrictedByDefault": true
-}
-```
 
 ## リソース
 
@@ -148,6 +92,9 @@ Class extends Entity
 			{
 				"applyTo": "City.dropEntity",
 				"type": "method",
+				"execute": [
+					"cityAdmin"
+				],
 				"promote": [
 					"name"
 				]
@@ -203,8 +150,9 @@ Class extends Entity
 4. **関数はデータクラスを置き換えます**。関数に対して定義された`execute` パーミッションは、その関数に対するデータクラス(およびデータストア) の`execute` パーミッションを置き換えます。エンティティとエンティティセレクションの関数はデータクラス関数と同じルールに従います。
 5. **シングルトンはデータストアを置き換え**、**シングルトン関数はシングルトンを置き換えます**。
 6. **データストア関数はデータストアを置き換えます**。
-7. **属性はその親に対して追加されます**。独自のパーミッションを持つ属性に対してアクションを行うには、セッションは属性パーミッションから付与された権限 **に加えて** データクラス上でのアクションを許可する権限も(直接、あるいはデータクラスを通して)必要になります。
-8. **権限が与えられていないアクション** (例えば、`"read": []` など) は"未設定"とみなされ、一つ上のレベルのパーミッションが適用されます。これは"誰も実行できない"ということを意味しません。アクションを拒否するためには、パーミッションを定義しないで[制限モード](#制限モード) を使用するか、どのセッションにも付与されない権限に付与します。
+7. **A function inherits what it does not set**. At every level, an action that a function permission does not list is inherited from its dataclass or singleton, then from the datastore. For example, a singleton function permission that only defines `promote` keeps the `execute` permission of its singleton. A `promote` permission never grants `execute`: to let a privilege call a promoted function, list it in the function's `execute` permission.
+8. **属性はその親に対して追加されます**。独自のパーミッションを持つ属性に対してアクションを行うには、セッションは属性パーミッションから付与された権限 **に加えて** データクラス上でのアクションを許可する権限も(直接、あるいはデータクラスを通して)必要になります。
+9. **権限が与えられていないアクション** (例えば、`"read": []` など) は"未設定"とみなされ、一つ上のレベルのパーミッションが適用されます。これは"誰も実行できない"ということを意味しません。アクションを拒否するためには、パーミッションを定義しないで[制限モード](#制限モード) を使用するか、どのセッションにも付与されない権限に付与します。
 
 パーミッションはアクセスを許可するだけです。明示的な拒否を示すものではありません。そのためデータクラスまたは関数のパーミッションを使うと、より広いデータストアパーミッションを上書きすることでそれを狭めることができます。属性パーミッションは加算的です。セッションがその属性のデータクラスへのアクションを持っている場合にのみ属性へのアクセスが認可されます。
 

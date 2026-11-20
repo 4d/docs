@@ -56,17 +56,17 @@ title: ピクチャーボタン
 - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用)
 - [アニメーション間隔 (秒)](./properties_Animation.md#アニメーション間隔-秒)
 
-> ピクチャーボタンに [関連付けた変数](properties_Object.md#変数あるいは式) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
+> ピクチャーボタンに [関連付けた変数](properties_Object.md#variable-or-expression) は、ピクチャーのサムネールテーブルで現在表示されているピクチャーのインデックス番号を返します。このテーブル内のピクチャー番号は 0 から始まります。
 
-## Supported standard actions
+## サポートされる標準アクション
 
-Picture buttons support the same [standard actions as buttons](button_overview.md#supported-standard-actions), except for actions restricted to a specific button style, such as [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) for invisible buttons. Assign an action using the [Standard action property](properties_Action.md#standard-action).
+ピクチャーボタンは[ボタンと同じ標準アクション](button_overview.md#サポートされる標準アクション) と同じアクションをサポートしますが、非表示ボタンにおける[automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) など、特定のボタンスタイルでのみ使用可能なアクションを除きます。[標準アクションプロパティ](properties_Action.md#標準アクション) を使用して標準アクションを割り当てます。
 
-For action descriptions and activation conditions, see [Standard actions](../Desktop-legacy/standard-actions.md#available-actions). See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+アクションの詳細と有効化条件については、[標準アクション](../Desktop-legacy/standard-actions.md#利用可能なアクション) を参照してください。[標準アクション互換性表](../Desktop-legacy/standard-actions.md#supported-form-objects) も参照してください。
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [パス名](properties_Picture.md#パス名) - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新) - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る) - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果) - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用) - [アニメーション間隔 (tick)](properties_Animation.md#アニメーション間隔-tick) - [行](properties_Crop.md#行) - [列](properties_Crop.md#列) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [ショートカット](properties_Entry.md#ショートカット) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [境界線カラー](./properties_BackgroundAndBorder.md#境界線カラー) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [イタリック](properties_Text.md#イタリック) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#variable-or-expression) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [パス名](properties_Picture.md#パス名) - [マウス押下中は自動更新](properties_Animation.md#マウス押下中は自動更新) - [先頭フレームに戻る](properties_Animation.md#先頭フレームに戻る) - [ロールオーバー効果](properties_Animation.md#ロールオーバー効果) - [無効時に最終フレームを使用](properties_Animation.md#無効時に最終フレームを使用) - [アニメーション間隔 (tick)](properties_Animation.md#アニメーション間隔-tick) - [行](properties_Crop.md#行) - [列](properties_Crop.md#列) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [ショートカット](properties_Entry.md#ショートカット) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [境界線カラー](./properties_BackgroundAndBorder.md#border-color) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [イタリック](properties_Text.md#イタリック) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
 
 ## サポートされるイベント
 

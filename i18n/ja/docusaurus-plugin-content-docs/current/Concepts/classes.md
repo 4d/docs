@@ -164,7 +164,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` または `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
-ORDA データモデルクラスとシングルトンクラスでは、[`exposed`](../ORDA/ordaClasses.md#公開vs非公開関数) キーワードを使用すると関数がREST リクエストから呼び出せるようにし、`exposed MCP Function` 宣言を使用するとその関数を[MCP サーバー](../WebServer/mcp-server.md) のツールとして公開します。 `MCP` キーワードはデータストアクラス、データクラスクラス、エンティティクラス、および共有シングルトンクラスによってによってサポートされています。 `MCP` で宣言されていながら`exposed` 宣言がない関数は、公開されていません。詳細な情報については、[`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) を参照してください。
+In ORDA data model classes and singleton classes, the [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) keyword allows a function to be called by REST requests, and the `exposed mcp Function` declaration publishes the function as a tool of the [MCP server](../WebServer/mcp-server.md). The `mcp` keyword is supported in the DataStore class, DataClass and Entity classes, and shared singleton classes. A function declared with `mcp` but without `exposed` is not published. For more information, refer to [`exposed mcp Function`](../ORDA/ordaClasses.md#exposed-mcp-function).
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -606,21 +606,31 @@ The comment block follows these rules:
 
 Each line of the block is interpreted according to its beginning:
 
-| 線                                                                            | 意味                                                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `// <text>`                                                                  | Description of the function. Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored. |
-| `// $name: <text>`                                                           | Description of the *$name* parameter.                                                                                                                                                                       |
-| `// {$name}: <text>`                                                         | Description of the *$name* parameter, marked as optional for MCP.                                                                                                                                           |
-| `// ...: <text>`                                                             | Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : 型`).                                                                                       |
-| `// param: $name <text>`, `// param: {$name} <text>`, `// param: ... <text>` | Same as `$name:`, `{$name}:`, and `...:` lines.                                                                                                                                                             |
-| `// MCP: <text>`                                                             | Description of the function for MCP only. Several `MCP:` description lines are combined in order.                                                                                           |
-| `// MCP: @tag {@tag}` or `// @tag {@tag}`                                    | MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is a description line.                          |
+| 線                     | 意味                                                                                                                                                                                                                          |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `// <text>`           | Description of the function. Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored. |
+| `// $name: <text>`    | Description of the *$name* parameter.                                                                                                                                                                       |
+| `// {$name}: <text>`  | Description of the *$name* parameter, marked as optional for MCP.                                                                                                                                           |
+| `// ...: <text>`      | Description of the [variadic parameters](parameters.md#declaring-variadic-parameters) (`... : 型`).                                                                                       |
+| `// MCP: <text>`      | Description of the function for MCP only. Several `MCP:` description lines are combined in order.                                                                                           |
+| `// MCP: @tag {@tag}` | MCP behavior tags (see [MCP tool metadata](#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is an `MCP:` description line.                  |
+
+The `MCP:` prefix is not case-sensitive: `MCP:`, `mcp:`, and `Mcp:` are the same.
 
 A `$name:` or `{$name}:` line is a parameter description only if *$name* is a parameter of the function signature. Otherwise, it is a description line (for example `// $120: price in dollars`). A `...:` line is a parameter description only if the function has variadic parameters.
 
+:::note
+
+The following syntaxes are not supported. If your code contains them, replace them:
+
+- `// param: $name <text>`, `// param: {$name} <text>`, and `// param: ... <text>` lines are ignored: they are not parameter descriptions. Write `// $name: <text>`, `// {$name}: <text>`, and `// ...: <text>` instead.
+- A behavior tag line without the `MCP:` prefix, such as `// @readOnly`, is ignored: it is not an MCP behavior tag, and the function gets no annotation for it. Write `// MCP: @readOnly` instead. In an `exposed mcp` function, the compiler reports a warning for such a line.
+
+:::
+
 The code assistance displays the description lines, then a blank line, then the parameter lines as written. `MCP:` lines are never displayed in the code assistance.
 
-When you [compile](../Project/compiler.md) the project, the compiler reports a [warning](../Project/compiler.md#warnings-on-function-comments) for each parameter of the signature that has no `$name:` or `{$name}:` line in the comment block, and for contradictory MCP behavior tags. Functions without a comment block are not checked.
+When you [compile](../Project/compiler.md) the project, the compiler checks the comments of `exposed mcp` functions and reports [warnings](../Project/compiler.md#warnings-on-function-comments), for example for a parameter of the signature that has no `$name:` or `{$name}:` line in the comment block, for a function without description, or for contradictory MCP behavior tags. Other functions are not checked.
 
 :::note
 
@@ -670,7 +680,7 @@ The description and the `$start:` line are displayed when you type `cs.Counter.n
 
 ### MCP tool metadata
 
-The comment blocks of `exposed MCP Function` declarations also describe these functions as MCP tools. When the project is compiled, 4D generates the `Project/DerivedData/syntaxMCP.json` file, which contains the metadata of these tools in a `toolList` array.
+The comment blocks of `exposed mcp Function` declarations also describe these functions as MCP tools. When the project is compiled, 4D generates the `Project/DerivedData/syntaxMCP.json` file, which contains the metadata of these tools in a `toolList` array.
 
 Only functions of the following classes are listed:
 
@@ -678,38 +688,62 @@ Only functions of the following classes are listed:
 - DataClass and Entity classes,
 - シングルトンクラス.
 
-Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed MCP Function`, are not listed, even if their comment block contains `MCP:` lines.
+Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed mcp Function`, are not listed, even if their comment block contains `MCP:` lines.
 
 :::note
 
-If a `Resources/syntaxMCP.json` file exists in the project, it is used instead of the generated file. The compiler never overwrites it. See [`Resources` folder](../Project/architecture.md#resources).
+To adapt the texts of the tools to a customer without recompiling, you can write a `Resources/syntaxMCP.json` file after compilation. It is applied over the generated `Project/DerivedData/syntaxMCP.json` file, not used instead of it: it can only override the `description` of a tool and the `description` of its parameters (`inputSchema.properties.<name>.description`), matched by tool name and parameter name. A partial file is enough. The list of tools, the schemas, and the annotations always come from the generated file. Anything else in the file (other properties, tools or parameters that do not exist) is ignored, and the MCP server logs it. The compiler never overwrites this file. 例:
+
+```json
+{
+  "toolList": [
+    {
+      "name": "DateTime-addDays",
+      "description": "Add days to the current date",
+      "inputSchema": {
+        "properties": {
+          "days": { "description": "number of days (negative to go back)" }
+        }
+      }
+    }
+  ]
+}
+```
+
+See [`Resources` folder](../Project/architecture.md#resources).
 
 :::
 
-The [MCP server](../WebServer/mcp-server.md) of 4D builds its tool catalog from the same comment blocks and the same type conversions, using the running code: in interpreted mode, a function you add or modify is published at the next `tools/list` request, without restarting. The catalog of the MCP server also adds the elements needed to call the tools, such as a `key` argument for Entity class functions and `"additionalProperties": false` in `inputSchema` (see [Tool catalog](../WebServer/mcp-server.md#tool-catalog)). The following functions are not published, and 4D logs a message:
+The `syntaxMCP.json` file contains exactly what the [MCP server](../WebServer/mcp-server.md) returns for each tool in `tools/list`, including the `key` parameter of Entity class functions and `"additionalProperties": false` in `inputSchema` (see [Tool catalog](../WebServer/mcp-server.md#tool-catalog)). In compiled mode, the MCP server reads this file. In interpreted mode, it builds its tool catalog from the same comment blocks and the same type conversions, using the running code: a function you add or modify is published at the next `tools/list` request, without restarting.
+
+The following `exposed mcp` functions cannot be MCP tools. They get no entry in `syntaxMCP.json` and are not published; the compiler reports a warning that names the function and the reason, and in interpreted mode the MCP server logs a message:
 
 - a function whose tool name is longer than 64 characters, contains characters other than letters, digits, `_` and `-`, or is the name of another tool (including a built-in CRUD tool),
 - an Entity class function that declares a `$key` parameter,
-- a function that declares both a `$args` parameter and variadic parameters.
+- a function that declares both a `$args` parameter and variadic parameters,
+- a function with a `Pointer` parameter.
 
-A function without description is published, and 4D logs a warning.
+A function without description is published, and the compiler reports a warning.
 
 Each tool of the `toolList` array is an object with the following properties:
 
-| プロパティ          | 説明                                                                                                                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`         | Name of the tool: the function name for a DataStore class function, `ClassName-functionName` for other classes                                                                |
-| `description`  | Text of the `MCP:` description lines, or the description lines if there is no `MCP:` description. Omitted if there is no description                                          |
-| `inputSchema`  | `{"type": "object", "properties": {...}, "required": [...]}`: one property per parameter of the signature, named without the `$`, with the parameter comment as `description` |
-| `outputSchema` | Schema of the return type. Omitted if the function returns nothing or a Variant                                                                                               |
-| `annotations`  | Behavior hints derived from the `MCP:` behavior tags                                                                                                                                          |
+| プロパティ          | 説明                                                                                                                                                                                                                           |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`         | Name of the tool: the function name for a DataStore class function, `ClassName-functionName` for other classes                                                                                               |
+| `description`  | Text of the `MCP:` description lines, or the description lines if there is no `MCP:` description. Omitted if there is no description                                                                         |
+| `inputSchema`  | `{"type": "object", "properties": {...}, "required": [...], "additionalProperties": false}`: one property per parameter of the signature, named without the `$`, with the parameter comment as `description` |
+| `outputSchema` | Schema of the return type (see below). Omitted if the function returns nothing, an untyped Object, or a Variant                                                                           |
+| `annotations`  | Behavior hints derived from the `MCP:` behavior tags                                                                                                                                                                         |
 
 In `inputSchema`:
 
 - every parameter is listed in `required`, except those documented with a `{$name}:` line. `required` is omitted if it is empty.
 - typed variadic parameters (`... : Type`) are represented by an optional `args` property of type `array`, whose `items` have the schema of *Type*. The `...:` line is its description.
+- for an Entity class function, a required `key` property receives the primary key of the entity: `{"type": ["string", "integer"], "description": "<Dataclass> primary key (<type>)"}`, for example `"Invoice primary key (integer)"`.
+- `additionalProperties` is always `false`.
+- `properties` is omitted if the function has no parameter: `inputSchema` is then `{"type": "object", "additionalProperties": false}`.
 
-Parameter and return types are converted to JSON Schema as follows:
+Parameter types are converted to JSON Schema as follows:
 
 | 4D type                                | JSON Schema                                                 |
 | -------------------------------------- | ----------------------------------------------------------- |
@@ -723,6 +757,10 @@ Parameter and return types are converted to JSON Schema as follows:
 | Collection                             | `{"type": "array"}`                                         |
 | Blob, 4D.Blob, Picture | `{"type": "string", "contentEncoding": "base64"}`           |
 | Variant, or no type                    | `{}`                                                        |
+
+`Pointer` parameters are not supported: a function with a `Pointer` parameter is not published (see above).
+
+The `outputSchema` must be an object. A return type that is not an object (for example Text, Boolean, Integer, Real, Date, Time, or Collection) is wrapped in an object whose `result` property has the schema of the type, for example `{"type": "object", "properties": {"result": {"type": "boolean"}}}` for a Boolean. See [Tool catalog](../WebServer/mcp-server.md#tool-catalog) for entity, entity selection, and class instance return types.
 
 The supported behavior tags are converted to annotations as follows:
 
@@ -749,7 +787,7 @@ singleton Class constructor()
 // Adds a number of days to the date
 // MCP: Add days to the date-time
 // $days: number of days to add (negative to subtract)
-exposed MCP Function addDays($days : Integer) : Date
+exposed mcp Function addDays($days : Integer) : Date
 	This.date:=Add to date(This.date; 0; 0; $days)
 	return This.date
 
@@ -757,7 +795,7 @@ exposed MCP Function addDays($days : Integer) : Date
 // MCP: Add day offsets to the date-time
 // MCP: @idempotent
 // ...: day offsets to add (negative to subtract)
-exposed MCP Function addDayOffsets(... : Integer) : Date
+exposed mcp Function addDayOffsets(... : Integer) : Date
 	var $offsetIndex; $totalDays : Integer
 	For ($offsetIndex; 1; Count parameters)
 		$totalDays+=${$offsetIndex}
@@ -779,9 +817,13 @@ After compilation, `Project/DerivedData/syntaxMCP.json` contains:
         "properties": {
           "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
         },
-        "required": ["days"]
+        "required": ["days"],
+        "additionalProperties": false
       },
-      "outputSchema": { "type": "string", "format": "date" },
+      "outputSchema": {
+        "type": "object",
+        "properties": { "result": { "type": "string", "format": "date" } }
+      },
       "annotations": { "openWorldHint": false }
     },
     {
@@ -795,9 +837,13 @@ After compilation, `Project/DerivedData/syntaxMCP.json` contains:
             "items": { "type": "integer" },
             "description": "day offsets to add (negative to subtract)"
           }
-        }
+        },
+        "additionalProperties": false
       },
-      "outputSchema": { "type": "string", "format": "date" },
+      "outputSchema": {
+        "type": "object",
+        "properties": { "result": { "type": "string", "format": "date" } }
+      },
       "annotations": { "idempotentHint": true, "openWorldHint": false }
     }
   ]
@@ -817,7 +863,7 @@ var $names : Collection:=$metadata.toolList.extract("name")
 
 #### 例題 5
 
-You document a tool with `param:` lines and a behavior tag line without the `MCP:` prefix:
+You document a tool with an optional parameter and a behavior tag:
 
 ```4d
 // Class: Stock
@@ -825,10 +871,10 @@ You document a tool with `param:` lines and a behavior tag line without the `MCP
 shared singleton Class constructor()
 
 // Returns the quantity in stock of a product
-// param: $reference reference of the product
-// param: {$warehouse} code of the warehouse (all warehouses if omitted)
-// @readOnly
-exposed MCP Function getQuantity($reference : Text; $warehouse : Text) : Integer
+// $reference: reference of the product
+// {$warehouse}: code of the warehouse (all warehouses if omitted)
+// MCP: @readOnly
+exposed mcp Function getQuantity($reference : Text; $warehouse : Text) : Integer
 	If ($warehouse="")
 		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
 	End if
@@ -836,6 +882,8 @@ exposed MCP Function getQuantity($reference : Text; $warehouse : Text) : Integer
 ```
 
 The `Stock-getQuantity` tool has a required `reference` property, an optional `warehouse` property, and the `"readOnlyHint": true` annotation.
+
+If you write the parameters as `// param: $reference ...` lines and the tag as `// @readOnly` (without the `MCP:` prefix), these lines are ignored: both properties are then required and have no description, the tool has no `readOnlyHint` annotation, and the compiler reports warnings.
 
 ## クラス関数コマンド
 

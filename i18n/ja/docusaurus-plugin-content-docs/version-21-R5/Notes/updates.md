@@ -24,6 +24,7 @@ title: リリースノート
 - macOS の*Liquid glass* デザインに準拠した、[入力](../FormObjects/input_overview.md) における["システムの丸み" 境界線スタイル](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) プロパティのサポート。これはまた[`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) および [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) コマンドによってもサポートされています。
 - 多くのフォームオブジェクトにおいて利用可能な新しい["境界線カラー" プロパティ](../FormObjects/properties_BackgroundAndBorder.md#border-color)。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) および [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) コマンドは新しい*borderColor* 引数をサポートします。
 - 4Dメソッドまたはクラスを作成または開くときに4D コードエディターを開くかVS Code を開くかを自動的に決定する[新しい**コードエディター** 設定](../Preferences/methods.md#コードエディター)。
+- エンティティ内の埋め込みを作成および管理を可能にするのを手助けするための[新しい**4D Embedding Studio** コンポーネント](../embedding-studio/overview.md)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
 
 #### 動作の変更

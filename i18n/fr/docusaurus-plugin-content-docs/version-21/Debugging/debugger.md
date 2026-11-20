@@ -13,6 +13,12 @@ Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utilis
 
 :::
 
+:::note
+
+The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.
+
+:::
+
 ## Appeler le débogueur
 
 Il existe plusieurs façons d'afficher le débogueur :

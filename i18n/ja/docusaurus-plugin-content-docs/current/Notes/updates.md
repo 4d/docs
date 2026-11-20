@@ -9,17 +9,13 @@ title: リリースノート
 
 #### ハイライト
 
-- クラス関数とクラスコンストラクターに関して、[宣言の上のコメントブロック](../Concepts/classes.md#関数コメント)を使用してドキュメントを書くことができます: 詳細と引数コメントは、[4D コードエディター](../code-editor/write-class-method.md#ヘルプtips) とVS Codeのコード補完とヘルプ、および[コンパイル済みのコンポーネントのシンタックスファイル](../Extensions/develop-components.md#コンパイル済みコンポーネントのコード補完)に表示されます。
-- `MCP:` コメント行と行動タグは`exposed MCP Function` 宣言の[MCP ツールメタデータ](../Concepts/classes.md#mcp-ツールメタデータ) をコンパイル時に[`Project/DerivedData/syntaxMCP.json`](../Project/architecture.md#deriveddata) 内に生成するか、あるいはカスタムの[`Resources/syntaxMCP.json`](../Project/architecture.md#resources) ファイル内に提供されます。
-- 4D Web サーバー内の新しいネイティブな[MCP サーバー](../WebServer/mcp-server.md): AI クライアントはあなたの[`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) 関数と[ビルトイン CRUD ツール](../WebServer/mcp-server.md#ビルトインCRUDツール) を、REST リクエストと同じ[ロールと権限](../ORDA/privileges.md#mcpツール) で呼び出すことができます。 MCP サーバーは新しい[`WebServer.mcp`](../API/WebServerClass.md#mcp) プロパティで設定することができます。
-- MCP クライアントは新しい[`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken)、[`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens)、および[`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken) 関数で管理されたファイングレインドトークンで認証します。予約されている[`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) データストアクラス関数はそれぞれのMCP セッションを準備し、その場合の[`Session.info.type`](../API/SessionClass.md#info) は"mcp" となります。
-- MCP サーバーのオプションの[OAuth 2.1モード](../WebServer/mcp-server.md#oauth-21モード) は、予約された[`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) データストアクラス関数によって有効化されます。付与は、新しい[`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants) および [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant) 関数によって管理されます。
-- 新しい[`MCP`](../commands/mcp) コマンドおよび[`4D.MCPContext`](../API/MCPContextClass.md) クラスを使用してMCP ツール内において[ユーザーに確認を求める](../WebServer/mcp-server.md#ユーザーに確認を求める) ことができます。
-- リファレンス[MCP バンドル](../WebServer/mcp-server.md#claude-デスクトップバンドル) を使用すると、ローカルネットワークを使用してClaude デスクトップが4D MCP サーバーに接続できるようにします。
+- 4D Web サーバー内の新しいネイティブな[MCP サーバー](../WebServer/mcp-server.md)。 AI クライアントはREST リクエストと同じ[ロールと権限](../WebServer/mcp-server.md#パーミッション) を使用して、[`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) 関数と[ビルトインCRUD ツール](../WebServer/mcp-server.md#ビルトインcrudツール) を呼び出すことができます。サーバーは[`WebServer.mcp`](../API/WebServerClass.md#mcp) で設定され、ファイングレードトークンとオプションの[OAuth 2.1](../WebServer/mcp-server.md#oauth-21モード) をサポートし、[Claude デスクトップバンドル](../WebServer/mcp-server.md#claude-デスクトップバンドル) と一緒に使用することができます。
+- MCP 用の新しいランゲージとAPI 機能: [`MCP`](../commands/mcp) コマンドと[`4D.MCPContext`](../API/MCPContextClass.md) クラス、それに加えてファイングレードトークン用([`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken)、[`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens)、[`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken))、セッション認証用([`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated))、およびOAuth 認証用([`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant)、[`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants)、[`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant)) の新しいデータストアクラス関数。
 
 #### 動作の変更
 
-- コンパイラーは、今後[関数のコメントにも警告を報告する](../Project/compiler.md#関数コメントに関する警告) ようになりました: 宣言文の上にあるコメントブロッククラス関数またはクラスコンストラクターに関しては、引数に`$name:` コメントがない場合、またMCP 行動タグ内に矛盾がある場合には警告が出されるようになりました。
+- [パーミッションの継承](../ORDA/privileges.md#継承されたパーミッション): 関数のパーミッションは、そのリストに含まれていない各アクションを、シングルトンまたはデータクラスから、その次にデータストアから継承するようになりました。また**promote** パーミッションは**execute** の権限を付与することはありません。以前は、権限のみが定義されていたシングルトン関数の**promote** パーミッションは、データストアの**execute** パーミッションへとフォールバックしていました。これは、データストア上で実行が許可されていた全てのセッション(例えばREST 経由など)に対して、制限された関数が公開されてしまう可能性がありました。昇格された関数を権限が呼び出せるようにするためには、関数の**execute** パーミッションに追加してください。
+- ライブチェッカーとコンパイラーは、今後関数コメントに対して[警告](../Project/compiler.md#警告) を生成するようになりました: 宣言分の上にあるコメントブロッククラス関数またはクラスコンストラクターに関しては、引数に $name: コメントがない場合、またMCP 行動タグ内に矛盾がある場合には警告が出されるようになりました。
 
 ## 4D 21 R5
 
@@ -42,6 +38,7 @@ title: リリースノート
 - macOS の*Liquid glass* デザインに準拠した、[入力](../FormObjects/input_overview.md) における["システムの丸み" 境界線スタイル](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) プロパティのサポート。これはまた[`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) および [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) コマンドによってもサポートされています。
 - 多くのフォームオブジェクトにおいて利用可能な新しい["境界線カラー" プロパティ](../FormObjects/properties_BackgroundAndBorder.md#border-color)。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) および [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) コマンドは新しい*borderColor* 引数をサポートします。
 - 4Dメソッドまたはクラスを作成または開くときに4D コードエディターを開くかVS Code を開くかを自動的に決定する[新しい**コードエディター** 設定](../Preferences/methods.md#コードエディター)。
+- エンティティ内の埋め込みを作成および管理を可能にするのを手助けするための[新しい**4D Embedding Studio** コンポーネント](../embedding-studio/overview.md)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
 
 #### 動作の変更

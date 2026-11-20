@@ -561,11 +561,11 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->セッションcookie の "SameSite" 属性の値<!-- END REF -->。とりうる値 (定数使用):
 
-| 定数                  | 値        | 説明                                                              |
-| ------------------- | -------- | --------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティのコンテキストでのみ cookie が送信されます。                  |
-| Web SameSite Lax    | "Lax"    | サイト間のサブリクエストにおいても cookie が送信されますが、ユーザーがリンクを辿って大元のサイトに戻る場合に限ります。 |
-| Web SameSite None   | "None"   | ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。       |
+| 定数                  | 値        | 説明                                                                                                                                                                                                                                                                        |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *デフォルト値* - ファーストパーティのコンテキストでのみ cookie が送信されます。                                                                                                                                                                                                                            |
+| Web SameSite Lax    | "Lax"    | Cookies are not sent with requests coming from other websites (images, frames, forms, scripts), except when the user navigates to the site from another website with a GET request (following a link, redirection). |
+| Web SameSite None   | "None"   | ファーストパーティやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。                                                                                                                                                                                                                 |
 
 詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) の説明を参照ください。
 

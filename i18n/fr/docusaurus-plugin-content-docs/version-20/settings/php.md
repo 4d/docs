@@ -7,11 +7,11 @@ Dans 4D, vous pouvez exécuter directement des scripts PHP en configurant la pag
 
 ## Interpréteur
 
-- **IP Address** and **Port number**  
-  By default, 4D provides a PHP interpreter, compiled in FastCGI. Pour des raisons liées à l'architecture interne, les demandes d'exécution vont vers l'interpréteur PHP à une adresse HTTP spécifique. Par défaut, 4D utilise l'adresse 127.0.0.1 et le port 8002. Vous pouvez modifier cette adresse et/ou ce port s'ils sont déjà utilisés par un autre service ou si vous avez plusieurs interpréteurs sur la même machine. Pour ce faire, modifiez les paramètres Adresse IP et Numéro de port. A noter que l'adresse HTTP doit se trouver sur la même machine que 4D.
+- **Adresse IP** et **Numéro de port**  
+  Par défaut, 4D fournit un interpréteur PHP, compilé en FastCGI. Pour des raisons liées à l'architecture interne, les demandes d'exécution vont vers l'interpréteur PHP à une adresse HTTP spécifique. Par défaut, 4D utilise l'adresse 127.0.0.1 et le port 8002. Vous pouvez modifier cette adresse et/ou ce port s'ils sont déjà utilisés par un autre service ou si vous avez plusieurs interpréteurs sur la même machine. Pour ce faire, modifiez les paramètres Adresse IP et Numéro de port. A noter que l'adresse HTTP doit se trouver sur la même machine que 4D.
 
-- **External interpreter**  
-  If you use an external PHP interpreter, it must be compiled in FastCGI and be on the same machine as 4D (see "Using another PHP interpreter or another php.ini file" in [Executing PHP scripts in 4D](https://doc.4d.com/4Dv20/4D/20.6/Executing-PHP-scripts-in-4D.300-7488160.en.html)).
+- **Interpréteur externe**  
+  Si vous utilisez un interpréteur PHP externe, celui-ci doit être compilé en mode FastCGI et se trouver sur la même machine que 4D (voir "Utilisation d’un autre interpréteur PHP ou d’un autre fichier php.ini" dans [Exécution de scripts PHP dans 4D](https://doc.4d.com/4Dv20/4D/20.6/Executing-PHP-scripts-in-4D.300-7488160.en.html)).
   Sélectionnez cette option pour que 4D ne tente pas de se connecter avec l'interpréteur interne lors de l'exécution d'une requête PHP. A noter que cette configuration nécessite une exécution et un contrôle manuels de l'interpréteur externe.
 
 **4D Server** : Ces paramètres sont partagés entre 4D Server et les machines distantes 4D ; il n'est donc pas possible d'utiliser un interpréteur externe sur le serveur et d'utiliser simultanément l'interpréteur interne sur les machines clientes (et vice versa). De plus, si le serveur utilise un interpréteur externe sur le port 9002, les machines clientes doivent également utiliser un interpréteur sur ce port.
@@ -26,4 +26,4 @@ Ces options sont liées à la gestion automatique de l'interpréteur PHP 4D et s
 
 - **Redémarrer l'interpréteur après X requêtes** : cela définit le nombre maximum de requêtes acceptées par l'interpréteur PHP 4D. Lorsque ce nombre est atteint, l'interpréteur redémarre. Pour plus d'informations sur ce paramètre, reportez-vous à la documentation FastCGI-PHP.
 
-  > **Note :** Dans cette boîte de dialogue, les paramètres sont spécifiés par défaut pour toutes les machines connectées et toutes les sessions. You can also modify and read them separately for each machine and each session using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) and [Get database parameter](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. The parameters modified by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command have priority for the current session.
+  > **Note :** Dans cette boîte de dialogue, les paramètres sont spécifiés par défaut pour toutes les machines connectées et toutes les sessions. Vous pouvez également les modifier et les lire séparément pour chaque machine et chaque session en utilisant les commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fe/page7836.html) et [`Get database parameter`](https://doc.4d.com/4dv20/help/command/fe/page7837.html). Les paramètres modifiés par la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ont la priorité pour la session courante.

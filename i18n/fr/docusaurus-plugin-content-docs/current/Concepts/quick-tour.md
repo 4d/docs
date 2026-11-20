@@ -352,56 +352,6 @@ $str:=String("hello"+\
 "!")
 ```
 
-## Commentaires
-
-Les commentaires sont des lignes d’instructions inactives. Ces lignes ne sont pas interprétées par le programme (4D n’applique aucun style spécifique à l’intérieur de la ligne de commentaire) et ne sont pas exécutées lorsque la méthode est appelée.
-
-Voici deux manières de créer des commentaires :
-
-- `//` pour créer une ligne de commentaire
-- `/...**/` pour les blocs de commentaire en ligne et multi-lignes.
-
-Les deux styles de commentaires peuvent être utilisés simultanément.
-
-#### Commentaires sur une seule ligne (`//commentaire`)
-
-Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Exemple :
-
-```4d
-//Ceci est un commentaire
-For($vCounter;1;100) //Début de la boucle
-  //commentaire
-  //commentaire
-  //commentaire
-End for
-```
-
-#### Commentaires en ligne ou multilignes (`/*comment*/`)
-
-Encadrez le contenu avec les caractères `/*` ... `*/` pour créer des blocs de commentaires en ligne ou multi-lignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
-
-- Les **lignes de commentaires en ligne** - peuvent être insérées n'importe où dans le code. Exemple :
-
-```4d
-For /* ligne de commentaire */ ($vCounter;1;100)
- ...
-End for
-```
-
-- Les **blocs de commentaires multi-lignes** permettent de commenter un nombre illimité de lignes. Les blocs de commentaires peuvent être imbriqués (ce qui est utile, étant donné que l'éditeur de code 4D prend en charge les blocs condensés). Exemple :
-
-```4d
-For ($vCounter;1;100)
-/*
-commentaires  
-	/*
-	autres commentaires
-	*/
-*/
-...
-End for
-```
-
 ## Séquences d’échappement
 
 Le langage 4D vous permet d'utiliser des séquences d'échappement (aussi appelées caractères d'échappement). Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”.

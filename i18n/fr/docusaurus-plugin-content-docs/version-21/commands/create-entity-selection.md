@@ -46,7 +46,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant l
 
 :::info
 
-For performance reasons, in 4D single-user and 4D Server, the returned entity selection is directly connected to the current selection of *dsTable* (it is not a copy). Until the current selection is replaced, changes made to one are reflected in the other. For example, [`REDUCE SELECTION`](../commands-legacy/reduce-selection.md) shortens the entity selection, and [`.add()`](../API/EntitySelectionClass.md#add) on the entity selection adds the entity to the current selection. To get an independent entity selection, call [`.copy()`](../API/EntitySelectionClass.md#copy) on the result:
+Pour des raisons de performances, dans 4D mono-utilisateur et 4D Server, l'entity selection renvoyée est directement liée à la sélection courante de *dsTable* (il ne s'agit pas d'une copie). Tant que la sélection courante n'est pas remplacée, les modifications apportées à l'une se répercutent sur l'autre. Par exemple, [`REDUCE SELECTION`](../commands-legacy/reduce-selection.md) réduit l'entity selection, et [`.add()`](../API/EntitySelectionClass.md#add) appliqué à l'entity selection ajoute l'entité à la sélection courante. Pour obtenir une entity selection indépendante, appelez [`.copy()`](../API/EntitySelectionClass.md#copy) sur le résultat :
 
 ```4d
 $es:=Create entity selection([Employee]).copy()

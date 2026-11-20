@@ -24,6 +24,7 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Prise en charge de la propriété [style de bordure "Système arrondie"](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) pour les [champs de saisie](../FormObjects/input_overview.md), conforme au design *Liquid glass* de macOS. Également prise en charge par les commandes [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) et [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style).
 - Nouvelle propriété ["Couleur de la bordure"](../FormObjects/properties_BackgroundAndBorder.md#border-color) disponible pour la plupart des objets de formulaire. Les commandes [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) et [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) prennent désormais en charge un nouveau paramètre *borderColor*.
 - [Nouvelle préférence **Éditeur de code**](../Preferences/methods.md#code-editor) permettant d'utiliser automatiquement l'éditeur de code 4D ou VS Code lors de la création ou l'ouverture de méthodes et de classes 4D.
+- [New **4D Embedding Studio** component](../embedding-studio/overview.md) that helps you create and manage vector embeddings within your entities.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R5) : liste de tous les bugs qui ont été corrigés dans 4D 21 R5.
 
 #### Changements de comportement
