@@ -23,7 +23,6 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|21 R6|Added *ORDA JSON encoding*|
 |21 R3|Removed support of *Use legacy network layer*, added *Use legacy print rendering*|
 |20 R6|Modified|
 |19 R5|Modified|
@@ -1065,22 +1064,6 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 
 
-### ORDA JSON encoding (139)
-
-**Scope**: 4D Server (connections opened after the call)
-
-**Kept after restart:** No
-
-**Possible values**: 0 = binary encoding (default), 1 = JSON encoding
-
-**Description**: Encoding of the [ORDA requests exchanged between 4D Server and 4D remote applications](../../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests) through [`ds`](../commands/ds).
-
-- On 4D Server, returns the current value: the value of the [**Use JSON for ORDA requests**](../../settings/client-server.md#use-json-for-orda-requests) setting read when 4D Server started (0 if unchecked, 1 if checked), or the last value set with [SET DATABASE PARAMETER](../commands/set-database-parameter) during the session. This value is used by the 4D remote applications that connect afterwards.
-- On a 4D remote application or a single-user 4D, always returns 0, whatever the encoding used by the connection. To know the encoding of a 4D remote application connection, use the `useORDABinaryEncoding` property returned by [`Application info`](../commands/application-info).
-
-
-
-
 ### Order by formula on server (47)
 
 **Scope**:Current table and process
@@ -1489,7 +1472,7 @@ When used with [SET DATABASE PARAMETER](../commands/set-database-parameter), def
 
 
 
-## Example 1
+## Example
 
 You want your application to restart after a first launch. The application is launched with, for example, a command line on Windows:
 
@@ -1510,20 +1493,6 @@ In the [On Startup database method](../commands/on-startup-database-method), you
        SET DATABASE PARAMETER(User param value;"Database has restarted!") //for the next launch
        RESTART 4D
     End if
- End if
-```
-
-## Example 2
-
-In a method executed on 4D Server, you want to know which encoding the 4D remote applications that connect will use for their ORDA requests:
-
-```4d
- var $encoding : Integer
- $encoding:=Get database parameter(ORDA JSON encoding)
- If ($encoding=1)
-  // new connections use the JSON encoding
- Else
-  // new connections use the binary encoding (default)
  End if
 ```
 

@@ -20,7 +20,6 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|21 R6|Support of "useORDABinaryEncoding" property|
 |21 R2|Support of "useFluentUI" and "canUseFluentUI" properties|
 
 </details>
@@ -55,13 +54,12 @@ The returned object contains the following properties:
 | TLSEnabled  | boolean    | True if TLS enabled for client/server communications. Not returned in standalone environment. Possible values: true, false. For more information, see [Encrypt Client-Server Communications](../../settings/client-server.md#encrypt-client-server-communications). |
 | uptime  | number | Time elapsed (in seconds) since local 4D database was opened. For remote connections, returns the time elapsed since the connection was made.  | 143 |
 |useFluentUI|boolean|True if the application is [running in Fluent UI](../../FormEditor/forms.md#fluent-ui-rendering) on Windows (useless on macOS). Possible values: true, false.|true|
-| useORDABinaryEncoding | boolean | 4D remote application only. True if the ORDA requests of the connection to 4D Server use the [binary encoding](../../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests), false if they use the JSON encoding. The encoding is chosen when the connection opens and is kept for the whole connection. Not returned on 4D Server or in standalone environment. Possible values: true, false. | true |
 | useQUICNetworkLayer  | boolean  | True if [QUIC network layer](../../settings/client-server.md#network-layer) used for the application server and db4d server. Not returned in standalone environment. Possible values: true, false. | false  |
 | volumeShadowCopyStatus | string     | Returns the status of the Volume Shadow Copy Service. Windows only. For more information, see *Using Volume Shadow Copy Service on Windows*.  Possible values: <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>vss available</td> <td>available</td> <td>The service is available.</td> </tr><tr> <td>vss error</td> <td>error</td> <td>The service experienced an error.</td> </tr><tr> <td>vss not available</td> <td>notAvailable</td> <td>The service is unavailable.</td> </tr><tr> <td>vss update required</td> <td>updateRequired</td> <td>The service needs to be updated.</td> </tr> </tbody> </table> | "available" |
 
 (\*) On Windows, you need to get this counter previously initialized, for example by a call to the **Application info** command in the [On Startup database method](../commands/on-startup-database-method). 
 
-## Example 1
+## Example
 
 The following code returns an object containing information about the running application:
 
@@ -98,7 +96,6 @@ If the code is executed from a 4D remote client, the object contains (for exampl
   "headless": false,
   "pid": 1550,
   "useLegacyNetworkLayer": true,
-  "useORDABinaryEncoding": true,
   "networkInputThroughput": 268047058,
   "networkOutputThroughput": 12207686274
 }
@@ -140,19 +137,6 @@ If the code is executed on 4D Server, the object contains (for example):
   "networkInputThroughput": 149014925,
   "networkOutputThroughput": 80238805
 }
-```
-
-## Example 2
-
-On a 4D remote application, you want to know which encoding the ORDA requests of the connection use:
-
-```4d
- var $info : Object:=Application info
- If ($info.useORDABinaryEncoding)
-  // ORDA requests travel in the binary encoding
- Else
-  // ORDA requests travel in the JSON encoding
- End if
 ```
 
 ## See also 
