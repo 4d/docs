@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R6|Added *ORDA JSON encoding* |
 |21 R4|Added *QUIC session timeout* |
 |21 R3|Removed support of *Use legacy network layer*, added *Use legacy print rendering* |
 |20 R6|Modified|
@@ -672,6 +673,25 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 
 
+### ORDA JSON encoding (139)
+
+**Scope**: 4D Server (connections opened after the call)
+
+**Kept between two sessions**: No
+
+**Possible values**: 0 = binary encoding (default), 1 = JSON encoding
+
+**Description**: Encoding of the [ORDA requests exchanged between 4D Server and 4D remote applications](../../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests) through [`ds`](../commands/ds). By default, these requests use a binary encoding (CBOR). Pass 1 to make the 4D remote applications that connect afterwards use the JSON encoding, and 0 to go back to the binary encoding.
+
+- The new value applies to the connections opened after the call. Connections already open keep the encoding chosen when they opened.
+- The value is not saved in the settings. When 4D Server starts, the value comes from the [**Use JSON for ORDA requests**](../../settings/client-server.md#use-json-for-orda-requests) setting (0 when it is unchecked).
+- On a 4D remote application or a single-user 4D, the selector is ignored and no error is raised. It is not sent to 4D Server: to change the encoding from a 4D remote application, call it in a method executed on the server.
+
+You can know which encoding a 4D remote application uses with the `useORDABinaryEncoding` property returned by [`Application info`](../commands/application-info).
+
+
+
+
 ### Order by formula on server (47)
 
 **Scope**:Current table and process
@@ -1117,6 +1137,16 @@ You want to export data in JSON that contains a converted 4D date. Note that con
  OB SET($o ;"myDate";Current date) // JSON conversion
  $json:=JSON Stringify($o)
  SET DATABASE PARAMETER(Dates inside objects;1)
+```
+
+## Example 4
+
+In the [On Server Startup database method](../commands/on-server-startup-database-method), you want the 4D remote applications that connect to use the JSON encoding for their ORDA requests:
+
+```4d
+ // On Server Startup database method
+ SET DATABASE PARAMETER(ORDA JSON encoding; 1) // connections opened from now on use JSON
+ $value:=Get database parameter(ORDA JSON encoding) // $value is 1
 ```
 
 ## See also 
