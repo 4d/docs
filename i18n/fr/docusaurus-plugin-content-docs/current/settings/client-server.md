@@ -100,6 +100,21 @@ En cas de modification, vous devez redémarrer l'application pour que le changem
 
 :::
 
+#### Use JSON for ORDA requests
+
+By default, the ORDA requests exchanged between 4D Server and 4D remote applications through [`ds`](../commands/ds) use a [binary encoding](../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests). When this option is checked, they use the JSON encoding instead, for example for compatibility or diagnostic purposes.
+
+- When this option is not checked (default), the binary encoding is used.
+- When this option is checked, the JSON encoding is used.
+
+This option is available in projects and binary databases, with all [network layers](#network-layer).
+
+:::note
+
+The option is read when 4D Server starts: if you modify it, you must restart 4D Server for the change to be taken into account. Connections already open keep their encoding. To change the encoding during a session, call [`SET DATABASE PARAMETER`](../commands/set-database-parameter) with the `ORDA JSON encoding` selector on 4D Server.
+
+:::
+
 #### Délai avant déconnexion Client-Serveur
 
 :::note

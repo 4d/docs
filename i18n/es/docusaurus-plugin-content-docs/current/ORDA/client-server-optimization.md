@@ -7,6 +7,7 @@ title: Optimización cliente/servidor
 
 - el **contexto de optimización**
 - la **caché ORDA**
+- the **binary encoding** of ORDA requests between 4D remote applications and 4D Server
 
 ## Arquitecturas soportadas
 
@@ -190,6 +191,65 @@ $status:=Form.student.checkData()
 If ($status.success)
     $status:=Form.student.save() // llamada al servidor
 End if
+```
+
+## Binary encoding of ORDA requests
+
+In client/server mode, the ORDA requests that a 4D remote application sends to 4D Server through [`ds`](../commands/ds), and the responses of 4D Server, travel in a binary encoding: [CBOR](https://www.rfc-editor.org/rfc/rfc8949) (Concise Binary Object Representation, RFC 8949). Binary messages are smaller and faster to process than JSON text.
+
+The binary encoding applies to all ORDA exchanges, in both directions: queries, entity and entity selection loads (including [entity selection-based list boxes](#entity-selection-based-list-box)), saves, drops, locks and unlocks, reloads, [ORDA class function](ordaClasses.md) calls with their parameters and results, and ORDA cache refreshes. Messages are not compressed.
+
+The binary encoding is transparent for your code:
+
+- Existing code runs unchanged, and every value it receives (attribute values, function parameters and results, status objects, errors returned by [`Last errors`](../commands/last-errors)) is identical to what it receives with the JSON encoding.
+- The [optimization context](#optimization-context), the [ORDA cache](#orda-cache) and [`local` functions](#using-the-local-keyword) work as before. The binary encoding reduces the size of each message, not the number of requests.
+- The [ORDA request logs](../Debugging/debugLogFiles.md#orda-requests) keep the same readable content.
+
+:::note
+
+The binary encoding only applies to the main datastore accessed through `ds` by 4D remote applications. [Remote datastores](remoteDatastores.md) opened with [`Open datastore`](../commands/open-datastore) and REST requests still use JSON.
+
+:::
+
+### Encoding of a connection
+
+The encoding is chosen once, when a 4D remote application opens its connection to 4D Server, and is kept for the whole connection:
+
+- If 4D Server or the 4D remote application is of a release earlier than 4D 21 R6, the connection uses the JSON encoding. The connection opens normally.
+- Otherwise, the connection uses the encoding currently set on 4D Server: the binary encoding by default, or the JSON encoding if you switched back to JSON (see below).
+
+Several 4D remote applications connected to the same 4D Server can use different encodings, each one keeping its own.
+
+On a 4D remote application, the `useORDABinaryEncoding` property returned by [`Application info`](../commands/application-info) tells which encoding the connection uses.
+
+If a binary message cannot be decoded, the ORDA request fails with an error, and an error is written to the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt).
+
+### Switching back to the JSON encoding
+
+You can make ORDA requests use the JSON encoding, for example for compatibility or diagnostic purposes:
+
+- With the [**Use JSON for ORDA requests**](../settings/client-server.md#use-json-for-orda-requests) option on the "Client-server/Network options" page of the Settings. The option is read when 4D Server starts.
+- With the `ORDA JSON encoding` selector of [`SET DATABASE PARAMETER`](../commands/set-database-parameter), called on 4D Server (1 = JSON, 0 = binary). The new value applies to the connections opened afterwards, until 4D Server stops. It is not saved in the settings. On a 4D remote application or a single-user 4D, the selector is ignored.
+
+In both cases, connections already open keep their encoding.
+
+#### Ejemplo 1
+
+On a 4D remote application, you check the encoding of the connection:
+
+```4d
+var $info : Object:=Application info
+var $binary : Boolean:=$info.useORDABinaryEncoding
+// $binary is True with a 4D Server of the same release and the default settings
+```
+
+#### Ejemplo 2
+
+You want the 4D remote applications that connect from now on to use the JSON encoding. You call this code on 4D Server, for example in the [On Server Startup database method](../commands/on-server-startup-database-method):
+
+```4d
+SET DATABASE PARAMETER(ORDA JSON encoding; 1)
+// existing connections keep their encoding, new connections use JSON
 ```
 
 

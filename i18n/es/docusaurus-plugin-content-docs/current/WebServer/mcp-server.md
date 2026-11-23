@@ -197,7 +197,7 @@ Every request (except `server/discover` and `ping`) carries a token in its `Auth
 | -------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | Who authenticates the user | Your application, its own way, before generating the token                                       | 4D, through a login page that calls your [`ds.mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) function |
 | Token                      | `4dfgt_…`                                                                                        | JWT signed by 4D                                                                                              |
-| Privilegios                | Given when the token is generated                                                                | Returned by `ds.mcpGrant()`                                                                                   |
+| Privilegios                | Given when the token is generated                                                                | Devuelto por `ds.mcpGrant()`                                                                                  |
 | Lifetime                   | Expiry date chosen at generation (366 days at most)                           | 15 minutes, renewed with a refresh token                                                                      |
 | Revocation                 | [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken)                 | [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant)                                          |
 | Typical use                | Services, the [Claude Desktop bundle](#claude-desktop-bundle), applications with their own login | Interactive login of each user in their AI client                                                             |
@@ -230,7 +230,7 @@ exposed Function getMCPToken() : Text
 	return $result.token // "4dfgt_..."
 ```
 
-### MCP sessions
+### Sesiones MCP
 
 Requests are stateless, but 4D keeps one web session per token and caller IP address (or per user and client in [OAuth mode](#oauth-21-mode)), so that repeated requests reuse the same session:
 

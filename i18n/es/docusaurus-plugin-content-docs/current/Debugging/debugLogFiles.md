@@ -361,6 +361,12 @@ Los registros de peticiones ORDA pueden registrar cada petición ORDA y la respu
 - un registro de peticiones ORDA del lado del cliente, en formato .txt
 - un registro de peticiones ORDA del lado del servidor, en formato .jsonl
 
+:::note
+
+When a 4D remote application and 4D Server exchange ORDA requests in the [binary encoding](../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests), both logs record the same readable content as with the JSON encoding: the `url` field contains the request URL, and the `response` field contains the server response as an object. The logs never contain raw binary data.
+
+:::
+
 ### Del lado del cliente
 
 El registro ORDA del lado del cliente registra cada petición ORDA enviada desde una máquina remota. Puede dirigir la información de registro a la memoria o a un archivo .txt en el disco de la máquina remota. El nombre y la ubicación de este archivo de registro son de su elección.
@@ -408,6 +414,19 @@ Este es un ejemplo de un registro de archivo de historial ORDA del lado del clie
 			"body": 75651
 		}
 	}
+```
+
+You can also log requests in memory and read them with [`ds.getRequestLog()`](../API/DataStoreClass.md#getrequestlog). With the binary encoding as with the JSON encoding, each entry is a readable object:
+
+```4d
+	//on a remote machine
+var $log : Collection
+var $sel : 4D.EntitySelection
+ds.startRequestLog(100) //log the next 100 requests in memory
+$sel:=ds.Employee.query("lastname = :1"; "Smith")
+ds.stopRequestLog()
+$log:=ds.getRequestLog()
+	// $log[0].url is a text, $log[0].response is an object such as {status: 200; body: {...}}
 ```
 
 ### Del lado del servidor

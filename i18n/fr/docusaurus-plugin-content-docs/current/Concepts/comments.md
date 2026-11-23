@@ -53,30 +53,30 @@ commentaires
 End for
 ```
 
-## Comments for syntax description
+## Commentaires de description de syntaxe
 
-Comments can describe the syntax of your methods, class functions, or constructors.
+Les commentaires peuvent servir à décrire la syntaxe de vos méthodes, fonctions de classe ou constructeurs.
 
-- For a method, write the comment block in the first lines of the method. In the 4D code editor, comments are displayed in its [Help tips](../code-editor/write-class-method.md#help-tips) (the 5 first lines are displayed).
-- For a class function or constructor, write the comment block immediately above the `Function` or `Class constructor` declaration. Comments are displayed with the signature in 4D code assistance and in VS Code (completion details, help tips, and signature help). Add a dedicated comment for every parameter with the `// $paramName: <text>` syntax (see below).
+- Pour une méthode, écrivez le bloc de commentaire dans les premières lignes de la méthode. Dans l'éditeur de code 4D, les commentaires sont affichés dans ses [infobulles](../code-editor/write-class-method.md#help-tips) (les 5 premières lignes sont affichées).
+- Pour une fonction de classe ou un constructeur, placez le bloc de commentaires immédiatement au-dessus de la déclaration `Function` ou `Class constructor`. Les commentaires s'affichent avec la signature dans l'aide du code 4D et dans VS Code (détails de complétion, astuces d'aide et aide relative à la signature). Ajoutez un commentaire spécifique pour chaque paramètre en utilisant la syntaxe `// $paramName: <text>` (voir ci-dessous).
 
 Exemple :
 
 ```4d
 
-// Adds or updates a local dependency (as a file URL) in the "dependencies" object of the environment file
-// $folder: folder of the dependency to register
-// $optionalName: optional dependency name (defaults to the folder's full name)
+// Ajoute ou met à jour une dépendance locale (URL de fichier) dans l'objet "dependencies" du fichier d'environnement
+// $folder: dossier de la dépendance à enregistrer
+// $optionalName: nom facultatif de la dépendance (par défaut : nom complet du dossier)
 #DECLARE($folder : 4D.Folder; $optionalName : Text)
 
 //...code
 
 ```
 
-The comment block follows these rules:
+Le bloc de commentaires respecte les règles suivantes :
 
 - It is made of `//` lines and/or a `/* */` block. Each line of a `/* */` block is handled like a `//` line, and the `/*` and `*/` markers are not displayed.
-- For a class function or constructor, it must be placed immediately above the declaration. A blank line between the comment block and the declaration breaks the association: only the signature is displayed.
+- Dans le cas d'une fonction de classe ou d'un constructeur, le commentaire doit être placé immédiatement au-dessus de la déclaration. A blank line between the comment block and the declaration breaks the association: only the signature is displayed.
 - Each comment block is associated only with the next declaration, even when it is written right after the code of the previous function.
 - Only the saved code is read: after you edit a comment, the code assistance shows the new text once the class is saved.
 - The text is displayed as plain text: Markdown markers such as `**` or `*` are shown as written.
@@ -123,17 +123,17 @@ Class constructor($start : Integer; $name : Text)
 	This.name:=$name || "default name"
 ```
 
-You can display:
+Vous pouvez afficher :
 
 ![tips](../assets/en/Concepts/comments-tips.png)
 
-## Comments for specific features
+## Commentaires pour des fonctionnalités spécifiques
 
-### MCP tool
+### Outil MCP
 
-When a function is published as an **MCP tool**, its comments are used to provide [MCP tool code description](../WebServer/mcp-server.md#describing-the-tools), including MCP behavior tags.
+Lorsqu'une fonction est publiée en tant qu'**outil MCP** (*MCP tool*), ses commentaires servent à fournir une [description du code de l'outil MCP](../WebServer/mcp-server.md#describing-the-tools), y compris les balises de comportement MCP.
 
-### Code navigation markers
+### Marqueurs de navigation dans le code
 
-Code navigation markers such as `MARK:`, `TODO:`, and `FIXME:` are inserted through comments. See [Manual tagging](../code-editor/write-class-method.md#manual-tagging).
+Les marqueurs de navigation dans le code, tels que `MARK:`, `TODO:` et `FIXME:`, sont insérés sous forme de commentaires. Voir [Balisage manuel](../code-editor/write-class-method.md#manual-tagging).
 
