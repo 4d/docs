@@ -67,7 +67,7 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 </div>
 <!-- END REF -->
 
-O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis. Ele retorna todas as classes de usuários [definidas](../Project/code-overview.md#creating-classes) no projeto ou componente aberto.
+O comando `cs` <!-- REF #_command_.cs.Summary -->devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Ele retorna todas as classes de usuários [definidas](../Project/code-overview.md#creating-classes) no projeto ou componente aberto. Por padrão, apenas as classes [ORDA do projeto](ORDA/ordaClasses.md) estão disponíveis.
 
 #### Exemplo
 
@@ -119,7 +119,7 @@ Uma classe é um objeto em si, da classe ["Class" class](API/ClassClass.md). Qua
 - [`new()`](API/ClassClass.md#new) função, permitindo instanciar objetos de classe
 - Propriedade [`isShared`](API/ClassClass.md#isshared), true se a classe é [compartilhada](#classes-compartilhadas)
 - Propriedade [`isSingleton`](API/ClassClass.md#issingleton), true se a classe define uma [singleton](#singleton-classes).
-- propriedade [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true se a classe definir uma [session singleton](#singleton-classes).
+- propriedade [`isSessionSingleton`](API/ClassClass.md#issessionsingleton), true se a classe definir uma [session singleton](#singleton-classes).
 - Propriedade [`me`](API/ClassClass.md#me), permitindo instanciar e acessar [singletons](#singleton-classes).
 
 Além disso, um objeto de classe pode fazer referência a um objeto [`construtor`](#class-constructor) (opcional).
@@ -306,11 +306,11 @@ Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e
 
 Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). O comando [`Super`](../commands/super) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). Um construtor pode usar a palavra-chave [`Super`](#super) para chamar o construtor da superclasse.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependem dos parâmetros passados ao construtor, você pode defini-los usando a palavra-chave [`property`](#property).
 
-Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared classes](#shared-classes) abaixo.
 
 O uso da palavra-chave `singleton` cria um **singleton**, usado para criar uma única instância da classe. Uma `session singleton` cria uma única instância por sessão. Para obter mais informações, consulte o parágrafo [classes do Singleton](#singleton-classes).
 
@@ -591,306 +591,13 @@ Classe ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Comentários de função
-
-Você pode documentar uma função de classe ou um construtor de classe com linhas de comentário escritas logo acima de sua declaração `Function` ou `Class constructor`. O 4D lê esse bloco de comentários e o exibe na assistência de código do [editor de código 4D](../code-editor/write-class-method.md#help-tips) e do VS Code (detalhes de preenchimento, dicas de ajuda e ajuda de assinatura), juntamente com a assinatura da função. Os mesmos comentários também fornecem os [metadados da ferramenta MCP](#mcp-tool-metadata) da função.
-
-O bloco de comentários segue estas regras:
-
-- É composto por linhas `//` e/ou um bloco `/* */`. Cada linha de um bloco `/* */` é tratada como uma linha `//`, e os marcadores `/*` e `*/` não são exibidos.
-- Deve ser colocado imediatamente acima da declaração. Uma linha em branco entre o bloco de comentários e a declaração quebra a associação: apenas a assinatura é exibida.
-- Cada bloco de comentários está associado apenas à próxima declaração, mesmo quando está escrito logo após o código da função anterior.
-- Apenas o código salvo é lido: após editar um comentário, a assistência de código mostra o novo texto assim que a classe é salva.
-- O texto é exibido como texto simples: marcadores Markdown como `**` ou `*` são mostrados como escritos.
-
-Cada linha do bloco é interpretada de acordo com seu início:
-
-|Linha|Significado|
-|---|---|
-|`// <texto>`|Descrição da função. Várias linhas de descrição são combinadas em ordem, com suas quebras de linha. Linhas `//` vazias no início ou no final do bloco são ignoradas.|
-|`// $name: <texto>`|Descrição do parâmetro *$name*.|
-|`// {$name}: <texto>`|Descrição do parâmetro *$name*, marcado como opcional para MCP.|
-|`// ...: <texto>`|Descrição dos [parâmetros variádicos](parameters.md#declaring-variadic-parameters) (`... : Type`).|
-|`// MCP: <texto>`|Descrição da função apenas para MCP. Várias linhas de descrição `MCP:` são combinadas em ordem.|
-|`// MCP: @tag {@tag}`|Tags de comportamento MCP (veja [metadados da ferramenta MCP](#mcp-tool-metadata)). A linha deve conter apenas tags suportadas, caso contrário é uma linha de descrição `MCP:`.|
-
-O prefixo `MCP:` não diferencia maiúsculas de minúsculas: `MCP:`, `mcp:` e `Mcp:` são iguais.
-
-Uma linha `$name:` ou `{$name}:` é uma descrição de parâmetro apenas se *$name* for um parâmetro da assinatura da função. Caso contrário, é uma linha de descrição (por exemplo, `// $120: preço em dólares`). Uma linha `...:` é uma descrição de parâmetro apenas se a função tiver parâmetros variádicos.
-
-:::note
-
-As seguintes sintaxes não são suportadas. Se seu código as contiver, substitua-as:
-
-- Linhas `// param: $name <texto>`, `// param: {$name} <texto>`, e `// param: ... <texto>` são ignoradas: não são descrições de parâmetros. Escreva `// $name: <texto>`, `// {$name}: <texto>`, e `// ...: <texto>` em vez disso.
-- Uma linha de tag de comportamento sem o prefixo `MCP:`, como `// @readOnly`, é ignorada: não é uma tag de comportamento MCP, e a função não recebe anotação por ela. Escreva `// MCP: @readOnly` em vez disso. Em uma função `exposed mcp`, o compilador emite um aviso para tal linha.
-
-:::
-
-A assistência de código exibe as linhas de descrição, depois uma linha em branco, depois as linhas de parâmetro conforme escritas. Linhas `MCP:` nunca são exibidas na assistência de código.
-
-Quando você [compila](../Project/compiler.md) o projeto, o compilador verifica os comentários das funções `exposed mcp` e emite [avisos](../Project/compiler.md#warnings-on-function-comments), por exemplo para um parâmetro da assinatura que não tem uma linha `$name:` ou `{$name}:` no bloco de comentários, para uma função sem descrição, ou para tags de comportamento MCP contraditórias. Outras funções não são verificadas.
-
-:::note
-
-Blocos de comentários são suportados em classes de projeto (incluindo classes compartilhadas e singleton) e em classes de componente. Para componentes compilados, as descrições são fornecidas pelo [arquivo de sintaxe](../Extensions/develop-components.md#code-completion-for-compiled-components).
-
-:::
-
-#### Exemplo 1
-
-Você deseja documentar uma função e seu parâmetro para que sejam exibidos no editor de código:
-
-```4d
-// Class: Invoice
-
-// Returns the price with taxes
-// The rate is a percentage
-// $rate: tax rate to apply (20 for 20%)
-Function priceWithTaxes($rate : Real) : Real
-	return This.price*(1+($rate/100))
-```
-
-Quando você digita `$invoice.priceWithTaxes(` em um método, a ajuda exibe a assinatura com:
-
-```
-Returns the price with taxes
-The rate is a percentage
-
-$rate: tax rate to apply (20 for 20%)
-```
-
-#### Exemplo 2
-
-Você deseja documentar um construtor de classe com um bloco `/* */`:
-
-```4d
-// Class: Counter
-
-/*
-Creates a counter starting at a value
-$start: initial value of the counter
-*/
-Class constructor($start : Integer)
-	This.value:=$start
-```
-
-A descrição e a linha `$start:` são exibidas quando você digita `cs.Counter.new(`.
-
-### Metadados da ferramenta MCP
-
-Os blocos de comentários das declarações `exposed mcp Function` também descrevem essas funções como ferramentas MCP. Quando o projeto é compilado, o 4D gera o arquivo `Project/DerivedData/syntaxMCP.json`, que contém os metadados dessas ferramentas em um array `toolList`.
-
-Apenas funções das seguintes classes são listadas:
-
-- a classe DataStore,
-- classes DataClass e Entity,
-- classes singleton.
-
-Funções de classes EntitySelection e de outras classes, assim como funções que não são declaradas `exposed mcp Function`, não são listadas, mesmo que seu bloco de comentários contenha linhas `MCP:`.
-
-:::note
-
-Para adaptar os textos das ferramentas para um cliente sem recompilar, você pode escrever um arquivo `Resources/syntaxMCP.json` após a compilação. Ele é aplicado sobre o arquivo gerado `Project/DerivedData/syntaxMCP.json`, não usado em vez dele: só pode sobrescrever a `description` de uma ferramenta e a `description` de seus parâmetros (`inputSchema.properties.<name>.description`), correspondendo pelo nome da ferramenta e do parâmetro. Um arquivo parcial é suficiente. A lista de ferramentas, os schemas e as anotações sempre vêm do arquivo gerado. Qualquer outra coisa no arquivo (outras propriedades, ferramentas ou parâmetros que não existem) é ignorada, e o servidor MCP registra isso. O compilador nunca sobrescreve esse arquivo. Por exemplo:
-
-```json
-{
-  "toolList": [
-    {
-      "name": "DateTime-addDays",
-      "description": "Add days to the current date",
-      "inputSchema": {
-        "properties": {
-          "days": { "description": "number of days (negative to go back)" }
-        }
-      }
-    }
-  ]
-}
-```
-
-Veja [pasta `Resources`](../Project/architecture.md#resources).
-
-:::
-
-O arquivo `syntaxMCP.json` contém exatamente o que o [servidor MCP](../WebServer/mcp-server.md) retorna para cada ferramenta em `tools/list`, incluindo o parâmetro `key` de funções de classe Entity e `"additionalProperties": false` em `inputSchema` (veja [Catálogo de ferramentas](../WebServer/mcp-server.md#tool-catalog)). Em modo compilado, o servidor MCP lê esse arquivo. Em modo interpretado, ele constrói seu catálogo de ferramentas a partir dos mesmos blocos de comentários e das mesmas conversões de tipo, usando o código em execução: uma função que você adicionar ou modificar é publicada na próxima requisição `tools/list`, sem reiniciar.
-
-As seguintes funções `exposed mcp` não podem ser ferramentas MCP. Elas não recebem entrada em `syntaxMCP.json` e não são publicadas; o compilador emite um aviso nomeando a função e o motivo, e em modo interpretado o servidor MCP registra uma mensagem:
-
-- uma função cujo nome de ferramenta tem mais de 64 caracteres, contém caracteres diferentes de letras, dígitos, `_` e `-`, ou é o nome de outra ferramenta (incluindo uma ferramenta CRUD embutida),
-- uma função de classe Entity que declara um parâmetro `$key`,
-- uma função que declara tanto um parâmetro `$args` quanto parâmetros variádicos,
-- uma função com um parâmetro `Pointer`.
-
-Uma função sem descrição é publicada, e o compilador emite um aviso.
-
-Cada ferramenta do array `toolList` é um objeto com as seguintes propriedades:
-
-|Propriedade|Descrição|
-|---|---|
-|`name`|Nome da ferramenta: o nome da função para uma função de classe DataStore, `ClassName-functionName` para outras classes|
-|`description`|Texto das linhas de descrição `MCP:`, ou das linhas de descrição se não houver descrição `MCP:`. Omitido se não houver descrição|
-|`inputSchema`|`{"type": "object", "properties": {...}, "required": [...], "additionalProperties": false}`: uma propriedade por parâmetro da assinatura, nomeada sem o `$`, com o comentário do parâmetro como `description`|
-|`outputSchema`|Schema do tipo de retorno (veja abaixo). Omitido se a função não retorna nada, um Object sem tipo, ou um Variant|
-|`annotations`|Dicas de comportamento derivadas das tags de comportamento `MCP:`|
-
-Em `inputSchema`:
-
-- todo parâmetro é listado em `required`, exceto aqueles documentados com uma linha `{$name}:`. `required` é omitido se estiver vazio.
-- parâmetros variádicos tipados (`... : Type`) são representados por uma propriedade opcional `args` do tipo `array`, cujos `items` têm o schema de *Type*. A linha `...:` é sua descrição.
-- para uma função de classe Entity, uma propriedade obrigatória `key` recebe a chave primária da entidade: `{"type": ["string", "integer"], "description": "<Dataclass> primary key (<type>)"}`, por exemplo `"Invoice primary key (integer)"`.
-- `additionalProperties` é sempre `false`.
-- `properties` é omitido se a função não tiver parâmetro: `inputSchema` é então `{"type": "object", "additionalProperties": false}`.
-
-Os tipos de parâmetro são convertidos para JSON Schema da seguinte forma:
-
-|Tipo 4D|JSON Schema|
-|---|---|
-|Text|`{"type": "string"}`|
-|Integer|`{"type": "integer"}`|
-|Real|`{"type": "number"}`|
-|Boolean|`{"type": "boolean"}`|
-|Date|`{"type": "string", "format": "date"}`|
-|Time|`{"type": "integer", "description": "duration in seconds"}`|
-|Object, class instance|`{"type": "object"}`|
-|Collection|`{"type": "array"}`|
-|Blob, 4D.Blob, Picture|`{"type": "string", "contentEncoding": "base64"}`|
-|Variant, ou sem tipo|`{}`|
-
-Parâmetros `Pointer` não são suportados: uma função com um parâmetro `Pointer` não é publicada (veja acima).
-
-O `outputSchema` deve ser um objeto. Um tipo de retorno que não é um objeto (por exemplo Text, Boolean, Integer, Real, Date, Time ou Collection) é encapsulado em um objeto cuja propriedade `result` tem o schema do tipo, por exemplo `{"type": "object", "properties": {"result": {"type": "boolean"}}}` para um Boolean. Veja [Catálogo de ferramentas](../WebServer/mcp-server.md#tool-catalog) para tipos de retorno entity, entity selection e instância de classe.
-
-As tags de comportamento suportadas são convertidas em anotações da seguinte forma:
-
-|Tag|Anotação|
-|---|---|
-|`@readOnly`|`"readOnlyHint": true`|
-|`@destructive`|`"destructiveHint": true`|
-|`@additive`|`"destructiveHint": false`|
-|`@idempotent`|`"idempotentHint": true`|
-|`@openWorld`|`"openWorldHint": true`|
-
-`openWorldHint` está sempre presente: é `false` se `@openWorld` não for usada. Outras dicas são omitidas quando sua tag não é usada. `@readOnly`, `@destructive` e `@additive` se contradizem: se uma função usar duas ou mais delas, o compilador emite um aviso e as dicas correspondentes são omitidas. Tags desconhecidas são ignoradas.
-
-#### Exemplo 3
-
-Você documenta as ferramentas MCP de uma classe singleton `DateTime`:
-
-```4d
-// Class: DateTime
-
-singleton Class constructor()
-	This.date:=Current date
-
-// Adds a number of days to the date
-// MCP: Add days to the date-time
-// $days: number of days to add (negative to subtract)
-exposed mcp Function addDays($days : Integer) : Date
-	This.date:=Add to date(This.date; 0; 0; $days)
-	return This.date
-
-// Adds zero or more day offsets to the date and returns the updated date
-// MCP: Add day offsets to the date-time
-// MCP: @idempotent
-// ...: day offsets to add (negative to subtract)
-exposed mcp Function addDayOffsets(... : Integer) : Date
-	var $offsetIndex; $totalDays : Integer
-	For ($offsetIndex; 1; Count parameters)
-		$totalDays+=${$offsetIndex}
-	End for
-	This.date:=Add to date(This.date; 0; 0; $totalDays)
-	return This.date
-```
-
-Após a compilação, `Project/DerivedData/syntaxMCP.json` contém:
-
-```json
-{
-  "toolList": [
-    {
-      "name": "DateTime-addDays",
-      "description": "Add days to the date-time",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "days": { "type": "integer", "description": "number of days to add (negative to subtract)" }
-        },
-        "required": ["days"],
-        "additionalProperties": false
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": { "result": { "type": "string", "format": "date" } }
-      },
-      "annotations": { "openWorldHint": false }
-    },
-    {
-      "name": "DateTime-addDayOffsets",
-      "description": "Add day offsets to the date-time",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "args": {
-            "type": "array",
-            "items": { "type": "integer" },
-            "description": "day offsets to add (negative to subtract)"
-          }
-        },
-        "additionalProperties": false
-      },
-      "outputSchema": {
-        "type": "object",
-        "properties": { "result": { "type": "string", "format": "date" } }
-      },
-      "annotations": { "idempotentHint": true, "openWorldHint": false }
-    }
-  ]
-}
-```
-
-#### Exemplo 4
-
-Você deseja ler os nomes das ferramentas MCP geradas pela última compilação:
-
-```4d
-var $file : 4D.File:=File("/PACKAGE/Project/DerivedData/syntaxMCP.json")
-var $metadata : Object:=JSON Parse($file.getText())
-var $names : Collection:=$metadata.toolList.extract("name")
-// $names is ["DateTime-addDays";"DateTime-addDayOffsets"]
-```
-
-#### Exemplo 5
-
-Você documenta uma ferramenta com um parâmetro opcional e uma tag de comportamento:
-
-```4d
-// Class: Stock
-
-shared singleton Class constructor()
-
-// Returns the quantity in stock of a product
-// $reference: reference of the product
-// {$warehouse}: code of the warehouse (all warehouses if omitted)
-// MCP: @readOnly
-exposed mcp Function getQuantity($reference : Text; $warehouse : Text) : Integer
-	If ($warehouse="")
-		return ds.Stock.query("reference = :1"; $reference).sum("quantity")
-	End if
-	return ds.Stock.query("reference = :1 and warehouse = :2"; $reference; $warehouse).sum("quantity")
-```
-
-A ferramenta `Stock-getQuantity` tem uma propriedade `reference` obrigatória, uma propriedade `warehouse` opcional e a anotação `"readOnlyHint": true`.
-
-Se você escrever os parâmetros como linhas `// param: $reference ...` e a tag como `// @readOnly` (sem o prefixo `MCP:`), essas linhas são ignoradas: ambas as propriedades então são obrigatórias e não têm descrição, a ferramenta não tem anotação `readOnlyHint`, e o compilador emite avisos.
-
 ## Comandos de funções de classe
 
 Os comandos a seguir têm recursos específicos quando são usados em funções de classe:
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Ele pode ser chamado no [construtor da classe](#class-constructor) ou no código de uma função de classe.
 
 Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super).
 
@@ -997,7 +704,7 @@ Singletons são úteis para definir valores que precisam estar disponíveis em q
 
 - um **processo singleton** tem uma instância única para o processo no qual ele é instanciado,
 - um **singleton compartilhado** tem uma instância única para todos os processos na máquina.
-- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Os singletons de sessão são compartilhados em uma sessão inteira, mas variam entre as sessões. No contexto de um cliente-servidor ou de um aplicativo Web, os singletons de sessão possibilitam a criação e o uso de uma instância diferente para cada sessão, portanto, para cada usuário. Session singletons are particularly appropriate with [Qodly applications](https://developer.4d.com/qodly/).
+- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Os singletons de sessão são compartilhados em uma sessão inteira, mas variam entre as sessões. No contexto de um cliente-servidor ou de um aplicativo Web, os singletons de sessão possibilitam a criação e o uso de uma instância diferente para cada sessão, portanto, para cada usuário. Singletons de sessão são particularmente apropriados com [Qodly applications](https://developer.4d.com/qodly/).
 
 :::info
 
@@ -1139,9 +846,9 @@ $myList := cs.ItemInventory.me.itemList
 
 :::
 
-## `local` and `server`
+## `local` e `server`
 
-In [client/server architecture](../Desktop/clientServer.md), `local` and `server` keywords allow you to specify where you want the function to be executed: client-side, or server-side. Controlling the execution location is useful for performance reasons or to implement business logic features.
+Em uma [arquitetura cliente/servidor](../Desktop/clientServer.md), as palavras-chave `local` e `server` permitem especificar onde você deseja que a função seja executada: no lado do cliente ou no lado do servidor. Controlar o local de execução é útil por motivos de desempenho ou para implementar recursos de lógica de negócios.
 
 A sintaxe formal é:
 
@@ -1155,10 +862,10 @@ local Function <functionName>
 server Function <functionName>   
 ```
 
-`local` and `server` keywords are only available for the functions of the following classes:
+As palavras-chave `local` e `server` estão disponíveis apenas para funções das seguintes classes:
 
-- [ORDA data model](../ORDA/ordaClasses.md) classes
-- [shared or session singleton](#singleton-classes) classes.
+- classes de [modelo de dados ORDA](../ORDA/ordaClasses.md)
+- classes [singleton compartilhadas ou de sessão](#singleton-classes).
 
 :::tip Related blog post
 
@@ -1168,34 +875,34 @@ server Function <functionName>
 
 ### Visão Geral
 
-Supported functions have a **default execution location** when no location keyword is used. You can nevertheless insert a `local` or `server` keyword to modify the execution location, or to make the code more explicit.
+Funções suportadas têm um **local de execução padrão** quando nenhuma palavra-chave de local é usada. No entanto, você pode inserir uma palavra-chave `local` ou `server` para modificar o local de execução ou para tornar o código mais explícito.
 
-| Supported functions                               | Default execution | with `local` keyword                                           | with `server` keyword                                                                                                                                                                       |
-| ------------------------------------------------- | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ORDA data model](../ORDA/ordaClasses.md)         | on Server         | The function is executed on the client if called on the client |                                                                                                                                                                                             |
-| [Shared or session singleton](#singleton-classes) | Local             |                                                                | The function is executed on the server on the server instance of the singleton. <br/>If there is no instance of the singleton on the server, it is created. |
+| Funções suportadas                                 | Execução padrão   | com palavra-chave `local`                                 | com palavra-chave `server`                                                                                                                                                                 |
+| -------------------------------------------------- | ----------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [modelo de dados ORDA](../ORDA/ordaClasses.md)     | no Servidor       | A função é executada no cliente se chamada no cliente     |                                                                                                                                                                                            |
+| [Singleton compartilhado ou de sessão](#singleton-classes) | Local             |                                                         | A função é executada no servidor na instância do singleton no servidor. <br/>Se não houver instância do singleton no servidor, ela é criada. |
 
-If `local` and `server` keywords are used in another context, an error is returned.
+Se as palavras-chave `local` e `server` forem usadas em outro contexto, um erro será retornado.
 
 :::note
 
-For a overall description of where code is actually executed in client/server, please refer to [this section](../Desktop/clientServer.md#code-execution-location).
+Para uma descrição geral de onde o código é realmente executado em cliente/servidor, consulte [esta seção](../Desktop/clientServer.md#code-execution-location).
 
 ::::
 
 ### `local`
 
-In a [client/server architecture](../Desktop/clientServer.md), the `local` keyword specifies that the function must be executed **on the machine from where it is called**.
+Em uma [arquitetura cliente/servidor](../Desktop/clientServer.md), a palavra-chave `local` especifica que a função deve ser executada **na máquina de onde foi chamada**.
 
-:::note Reminder
+:::note Lembrete
 
-The `local` keyword is useless for [shared or session singleton functions](#singleton-classes), which are executed locally by default.
+A palavra-chave `local` é inútil para [funções singleton compartilhadas ou de sessão](#singleton-classes), que são executadas localmente por padrão.
 
 :::
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede. However, [for optimization reasons](../ORDA/client-server-optimization.md#using-the-local-keyword), you could want to execute a data model function on client. You can then use the `local` keyword.
+Por padrão, [funções de modelo de dados ORDA](../ORDA/ordaClasses.md) são executadas no servidor. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede. No entanto, [por motivos de otimização](../ORDA/client-server-optimization.md#using-the-local-keyword), você pode querer executar uma função de modelo de dados no cliente. Você pode então usar a palavra-chave `local`.
 
-#### Example: Calculating age
+#### Exemplo: Calculando idade
 
 Dada uma entidade com um atributo de *data de nascimento*, queremos definir uma função `idade()` que seria chamada em uma caixa de lista. Esta função pode ser executada no cliente, o que evita desencadear um pedido ao servidor para cada linha da caixa de listagem.
 
@@ -1215,36 +922,36 @@ End if
 
 ### `server`
 
-In a [client/server architecture](../Desktop/clientServer.md), the `server` keyword specifies that the function must be executed **on the server side**.
+Em uma [arquitetura cliente/servidor](../Desktop/clientServer.md), a palavra-chave `server` especifica que a função deve ser executada **no lado do servidor**.
 
 :::note Lembrete
 
-The `server` keyword is useless for [ORDA data model functions](../ORDA/ordaClasses.md), which are executed on the server by default.
+A palavra-chave `server` é inútil para [funções de modelo de dados ORDA](../ORDA/ordaClasses.md), que são executadas no servidor por padrão.
 
 :::
 
-`server` function parameters and result must be [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
+Parâmetros e resultado de funções `server` devem ser [**streamable**](./dt_object.md#streaming-support). Por exemplo, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md) ou [WebServer](../API/WebServerClass.md) são classes não streamable, mas [4D.File](../API/FileClass.md) é streamable.
 
-This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](../Concepts/classes.md#session-singleton) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+Esse recurso é particularmente útil no contexto de [sessões de usuário remotas](../Desktop/sessions.md#remote-user-sessions), permitindo implementar a lógica de negócios em um [session singleton](../Concepts/classes.md#session-singleton) para compartilhá-la entre todos os processos da sessão, estendendo assim as funcionalidades do comando [`Session`](../commands/session). Nesse caso, você pode querer que a lógica de negócios relevante seja executada **no servidor** para que todas as informações da sessão sejam reunidas no servidor.
 
-By default, shared or session singleton functions are executed locally. Adding the `server` keyword in the class function definition makes 4D use the singleton instance on the server. Note that this can result of an instantiation of the singleton on the server if no instance exists yet.
+Por padrão, funções singleton compartilhadas ou de sessão são executadas localmente. Adicionar a palavra-chave `server` na definição da função de classe faz com que o 4D use a instância do singleton no servidor. Observe que isso pode resultar na instanciação do singleton no servidor se ainda não existir uma instância.
 
-For [sessions singletons](#singleton-classes), the function is executed on the server in the corresponding singleton instance, i.e. the instance of the singleton for the current session.
+Para [singletons de sessão](#singleton-classes), a função é executada no servidor na instância correspondente do singleton, ou seja, a instância do singleton para a sessão atual.
 
 :::note
 
-If you declare a `server Function` in a shared singleton, then:
+Se você declarar uma `server Function` em um singleton compartilhado, então:
 
-- you instantiate a singleton *S1* on the client (named *s1*),
-- you run *s1.function()* on the client.
+- você instancia um singleton *S1* no cliente (chamado *s1*),
+- você executa *s1.function()* no cliente.
 
-If no instance of *S1* exists on the server at that moment, *S1* is instantiated on the server (the constructor is executed), and *function()* runs on that server instance. As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
+Se nenhuma instância de *S1* existir no servidor naquele momento, *S1* é instanciado no servidor (o construtor é executado), e *function()* é executada naquela instância do servidor. Como resultado, duas instâncias de *S1* podem coexistir (lado do cliente e lado do servidor), com valores de propriedade distintos. Nesse caso, *s1.property* é sempre acessado localmente. Não pode ser acessado no servidor, por exemplo, a partir de código do lado do servidor usando notação direta de ponto (um erro é retornado).
 
 :::
 
-#### Example: Administration singleton
+#### Exemplo: Singleton de administração
 
-The *Administration* shared singleton has a "server" function running the [`Process activity`](../commands/process-activity) command. This singleton is instantiated on a remote 4D but the function returns the server activity on the server.
+O singleton compartilhado *Administration* tem uma função "server" que executa o comando [`Process activity`](../commands/process-activity). Este singleton é instanciado em um 4D remoto, mas a função retorna a atividade do servidor no servidor.
 
 ```4d
   // Administration class
@@ -1260,7 +967,7 @@ Function localProcessActivity() : Object
   return Process activity
 ```
 
-Code running on the client:
+Código executando no cliente:
 
 ```4d
 var $localActivity; $serverActivity : Object
@@ -1277,9 +984,9 @@ $serverActivity:=$administration.processActivity()
 
 ```
 
-#### Example: Session singleton
+#### Exemplo: Singleton de sessão
 
-You store your users in a Users table and handle a custom authentication. You use a session singleton for the authentication:
+Você armazena seus usuários em uma tabela Users e lida com uma autenticação personalizada. Você usa um session singleton para a autenticação:
 
 ```4d
 // UserSession session singleton class
@@ -1304,7 +1011,7 @@ End if
 return $result
 ```
 
-To provide the current user to 4D clients, the singleton exposes a user computed property got from the server:
+Para fornecer o usuário atual aos clientes 4D, o singleton expõe uma propriedade computada do usuário obtida do servidor:
 
 ```4d
 server Function get user() : cs.UsersEntity
