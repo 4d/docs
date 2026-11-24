@@ -134,8 +134,8 @@ Las acciones disponibles dependen del recurso:
 
 ### Reglas de permisos
 
-- **update** and **drop** require **read** on the resource; **create** does not.
-- A function can be **promoted** by multiple privileges. During execution, it receives the combined permissions of all those privileges; there is no priority order.
+- **update** y **drop** requieren **read** sobre el recurso; **create** no lo requiere.
+- Una función puede ser **promoted** con múltiples privilegios. During execution, it receives the combined permissions of all those privileges; there is no priority order.
 - An [alias attribute](./ordaClasses.md#alias-attributes-1) can be read if the session has permission to read the alias, even if it cannot read the attributes the alias resolves to.
 - A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if its underlying attributes have no permissions.
 - In REST [force login mode](../REST/authUsers.md#force-login-mode), guest users can always execute [`authentify()`](../REST/authUsers.md#function-authentify), regardless of the permissions configuration.

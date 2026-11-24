@@ -361,12 +361,6 @@ Les journaux des requêtes ORDA peuvent enregistrer chaque requête ORDA et chaq
 - un journal des requêtes ORDA côté client, au format .txt
 - un journal des requêtes ORDA côté serveur, au format .jsonl
 
-:::note
-
-When a 4D remote application and 4D Server exchange ORDA requests in the [binary encoding](../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests), both logs record the same readable content as with the JSON encoding: the `url` field contains the request URL, and the `response` field contains the server response as an object. The logs never contain raw binary data.
-
-:::
-
 ### Côté client
 
 Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis une machine distante. Vous pouvez diriger les informations du journal vers la mémoire ou vers un fichier .txt sur le disque de la machine distante. Vous pouvez choisir le nom et l'emplacement de ce fichier journal.
@@ -414,19 +408,6 @@ Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :
 			"body": 75651
 		}
 	}
-```
-
-You can also log requests in memory and read them with [`ds.getRequestLog()`](../API/DataStoreClass.md#getrequestlog). With the binary encoding as with the JSON encoding, each entry is a readable object:
-
-```4d
-	//on a remote machine
-var $log : Collection
-var $sel : 4D.EntitySelection
-ds.startRequestLog(100) //log the next 100 requests in memory
-$sel:=ds.Employee.query("lastname = :1"; "Smith")
-ds.stopRequestLog()
-$log:=ds.getRequestLog()
-	// $log[0].url is a text, $log[0].response is an object such as {status: 200; body: {...}}
 ```
 
 ### Côté serveur
