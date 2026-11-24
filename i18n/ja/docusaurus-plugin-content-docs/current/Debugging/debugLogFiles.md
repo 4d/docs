@@ -361,12 +361,6 @@ ORDAリクエストログは、ORDAリクエストとサーバーのレスポン
 - クライアント側の ORDAリクエストログ (.txt形式)
 - サーバー側の ORDAリクエストログ (.jsonl形式)
 
-:::note
-
-When a 4D remote application and 4D Server exchange ORDA requests in the [binary encoding](../ORDA/client-server-optimization.md#binary-encoding-of-orda-requests), both logs record the same readable content as with the JSON encoding: the `url` field contains the request URL, and the `response` field contains the server response as an object. The logs never contain raw binary data.
-
-:::
-
 ### クライアント側
 
 クライアント側の ORDAログファイルには、リモートマシンが送信する ORDAリクエストが記録されます。ログ情報はメモリか、リモートマシンディスク上の .txtファイルに書くことができます。このログファイルの名称や保管場所は任意に決めることができます。
@@ -414,19 +408,6 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 			"body": 75651
 		}
 	}
-```
-
-You can also log requests in memory and read them with [`ds.getRequestLog()`](../API/DataStoreClass.md#getrequestlog). With the binary encoding as with the JSON encoding, each entry is a readable object:
-
-```4d
-	//on a remote machine
-var $log : Collection
-var $sel : 4D.EntitySelection
-ds.startRequestLog(100) //log the next 100 requests in memory
-$sel:=ds.Employee.query("lastname = :1"; "Smith")
-ds.stopRequestLog()
-$log:=ds.getRequestLog()
-	// $log[0].url is a text, $log[0].response is an object such as {status: 200; body: {...}}
 ```
 
 ### サーバー側

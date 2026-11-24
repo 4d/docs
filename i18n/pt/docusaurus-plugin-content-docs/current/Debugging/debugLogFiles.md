@@ -681,7 +681,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`), [`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log\\`,...).
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`), [`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log`,...).
 - For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands/web-set-option) command.
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
 
