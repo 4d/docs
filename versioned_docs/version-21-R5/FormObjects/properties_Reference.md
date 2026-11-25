@@ -175,7 +175,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`shortcutKey`](properties_Entry.md#shortcut)|The letter or name of a special meaning key.|"a", "b",... or "[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
 |[`shortcutShift`](properties_Entry.md#shortcut)	|Designates the Shift key	|true, false|
 |[`showBackground`](properties_Appearance.md#show-background-and-anchored-elements)| Displays or hides background contents. |true, false|   
-|[`showEmptyImages`](properties_Appearance.md#show-empty-or-unsupported-images)|Displays/hides a black rectangle for empty images|true, false||[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
+|[`showEmptyImages`](properties_Appearance.md#show-empty-or-unsupported-images)|Displays/hides a black rectangle for empty images|true, false|   
+|[`showFooters`](properties_Footers.md#display-footers)|Displays or hides column footers. |true, false|
 |[`showGraduations`](properties_Scale.md#display-graduation)|Displays/Hides the graduations next to the labels. |true, false|
 |[`showHeaders`](properties_Headers.md#display-headers)|Displays or hides column headers. |true, false|
 |[`showHiddenChars`](properties_Appearance.md#show-hidden-characters)|Displays/hides invisible characters.|true, false|
