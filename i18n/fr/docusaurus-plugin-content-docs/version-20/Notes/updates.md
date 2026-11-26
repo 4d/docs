@@ -13,7 +13,7 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 #### Points forts
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.9) : liste de tous les bugs qui ont été corrigés dans 4D 20.9 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.9) : liste de tous les bugs qui ont été corrigés dans 4D 20.9 LTS.
 
 La version des clients distants se connectant à 4D Server 20.9 et suivantes doit être au moins 4D 20.9.
 
@@ -23,13 +23,13 @@ La version des clients distants se connectant à 4D Server 20.9 et suivantes doi
 
 - 4D 20.8 LTS est certifié sur Windows 11 25H2.
 - 4D 20.8 LTS est certifié sur macOS Tahoe (macOS 26).
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.8) : liste de tous les bugs qui ont été corrigés dans 4D 20.8 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.8) : liste de tous les bugs qui ont été corrigés dans 4D 20.8 LTS.
 
 ## 4D 20.7 LTS
 
 #### Points forts
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.7) : liste de tous les bugs qui ont été corrigés dans 4D 20.7 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.7) : liste de tous les bugs qui ont été corrigés dans 4D 20.7 LTS.
 
 :::note Version minimale du client pour 4D Server 20.7 et ultérieures
 
@@ -60,7 +60,7 @@ Sur Windows Server 2025, certaines options personnalisées de la nouvelle boîte
 :::
 
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.6) : liste de tous les bugs qui ont été corrigés dans 4D 20.6 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.6) : liste de tous les bugs qui ont été corrigés dans 4D 20.6 LTS.
 
 ## 4D 20.5 LTS
 
@@ -75,13 +75,13 @@ Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Micros
 
 :::
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.5) : liste de tous les bugs qui ont été corrigés dans 4D 20.5 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.5) : liste de tous les bugs qui ont été corrigés dans 4D 20.5 LTS.
 
 ## 4D 20.4 LTS
 
 #### Points forts
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.4) : liste de tous les bugs qui ont été corrigés dans 4D 20.4 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.4) : liste de tous les bugs qui ont été corrigés dans 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
@@ -89,7 +89,7 @@ Sous Windows 11 24H2, la génération de fichiers PDF à l'aide du pilote Micros
 
 - CEF mis à jour en Chromium 5993
 - SpreadJS mis à jour en version 16.2.6 (dans 4D 20.2 HF1).
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.3) : liste de tous les bugs qui ont été corrigés dans 4D 20.3 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.3) : liste de tous les bugs qui ont été corrigés dans 4D 20.3 LTS.
 
 #### Changements de comportement
 
@@ -113,7 +113,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 :::
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.2) : liste de tous les bugs qui ont été corrigés dans 4D 20.2 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.2) : liste de tous les bugs qui ont été corrigés dans 4D 20.2 LTS.
 
 #### Changements de comportement
 
@@ -133,7 +133,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 
 :::
 
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.1) : liste de tous les bugs qui ont été corrigés dans 4D 20.1 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20.1) : liste de tous les bugs qui ont été corrigés dans 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
@@ -168,7 +168,7 @@ Pour des raisons internes, la version des clients distants se connectant à 4D S
 - Nouvelle option `validateTLSCertificate` pour [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) permettant de contrôler la validation automatique des certificats.
 - Commandes du langage 4D : [page What's new](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) sur doc.4d.com.
-- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20) : liste de tous les bugs qui ont été corrigés dans 4D 20 LTS.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/20) : liste de tous les bugs qui ont été corrigés dans 4D 20 LTS.
 
 #### Changements de comportement
 

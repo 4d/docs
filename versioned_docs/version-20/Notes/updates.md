@@ -15,7 +15,7 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Highlights
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.9): list of all bugs that have been fixed in 4D 20.9 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.9): list of all bugs that have been fixed in 4D 20.9 LTS.
 
 The version of 4D clients connecting to 4D Server 20.9 and later must be at least 20.9.
 
@@ -26,7 +26,7 @@ The version of 4D clients connecting to 4D Server 20.9 and later must be at leas
 
 - 4D 20.8 LTS is certified on Windows 11 25H2.
 - 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
 
 
 
@@ -34,7 +34,7 @@ The version of 4D clients connecting to 4D Server 20.9 and later must be at leas
 
 #### Highlights
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.7): list of all bugs that have been fixed in 4D 20.7 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.7): list of all bugs that have been fixed in 4D 20.7 LTS.
 
 :::note Minimal client version for 4D Server 20.7 and later
 
@@ -66,7 +66,7 @@ On Windows Server 2025, some custom options in the new Windows Print dialog box 
 :::
 
 - Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
 
 
 
@@ -83,14 +83,14 @@ On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may f
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
 
 
 ## 4D 20.4 LTS
 
 #### Highlights
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
@@ -98,7 +98,7 @@ On Windows 11 24H2, generating pdf using the Microsoft Print to PDF driver may f
 
 - CEF updated to Chromium 5993
 - SpreadJS updated to version 16.2.6 (in 4D 20.2 HF1).
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
 
 #### Behavior changes
 
@@ -123,7 +123,7 @@ For internal reasons, the version of remote clients connecting to 4D Server 20.2
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
 
 #### Behavior changes
 
@@ -144,7 +144,7 @@ For internal reasons, the version of remote clients connecting to 4D Server 20.2
 :::
 
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
@@ -180,7 +180,7 @@ For internal reasons, the version of remote clients connecting to 4D Server 20.2
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) allowing you to control the automatic certificate validation.   
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20): list of all bugs that have been fixed in 4D 20 LTS.
 
 
 #### Behavior changes
