@@ -117,7 +117,7 @@ Quando um tempo limite for selecionado, o servidor fechará a conexão de um cli
 
 #### Registrar clientes na inicialização para Execute On Client
 
-Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
+Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la seção [Procedimentos armazenados nas máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
 
 #### Encriptar as comunicações cliente-servidor
 
