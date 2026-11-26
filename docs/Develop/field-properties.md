@@ -37,7 +37,7 @@ To retrieve the associated class name at runtime, use the [`classID`](../API/Dat
 
 ### `4D.Vector` class
 
-If you assign `4D.Vector` as the class of an Object type field, you define a **vector field**. Such fields store embessings and can be used to query data using AI features. See the [`4D.Vector` class](../API/VectorClass.md) documentation to see how to query with vectors. 
+If you assign `4D.Vector` as the class of an Object type field, you define a **vector field**. Such fields store embeddings and can be used to query data using AI features. See the [`4D.Vector` class](../API/VectorClass.md) documentation to see how to query with vectors. 
 
 Note that the [**4D Embedding Studio** component](https://corner.4d.com/component/4d-embedding-studio) can help you configuring and updating your 4D.Vector fields.   
 
