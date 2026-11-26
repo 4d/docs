@@ -4,7 +4,7 @@ title: Utilizar processos web preemptivos
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
+The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your applications. You can configure your web-related code, including 4D tags, web database methods or ORDA REST class functions to run simultaneously on as many cores as possible.
 
 Para informações aprofundadas sobre o processo preventivo em 4D, por favor consulte *Processos 4D preventivos* seção na referência de linguagem[*4D*](https://doc.4d.com).
 
@@ -15,8 +15,8 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 | 4D Server             | Interpretado ([associado ao depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
 | --------------------- | ------------------------------------------------------------------------- | ----------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                               | preemptive                                | preemptive      |
-| Servidor Web          | cooperativo                                                               | cooperativo                               | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                               | cooperativo                               | *parâmetro web* |
+| Servidor Web          | cooperativo                                                               | preemptive se sessões escalonáveis, senão cooperativo | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                               | preemptive se sessões escalonáveis, senão cooperativo | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |
@@ -37,17 +37,17 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 
 ## Escrever código servidor Web hilo seguro
 
-Todo o código 4D executado pelo servidor deve ser hilo seguro se você quiser que seus processos web sejam executados em modo preventivo. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
+Todo o código 4D executado pelo servidor deve ser hilo seguro se você quiser que seus processos web sejam executados em modo preventivo. When the [preemptive mode is enabled](#availability-of-preemptive-mode-for-web-processes), the following parts of the application will be automatically evaluated by the 4D compiler:
 
 *   Todos os métodos bases relacionados com a Web:
     *   [`On Web Authentication`](authentication.md#on-web-authentication)
     *   [`On Web Connection`](httpRequests.md#on-web-connection)
     *   [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-    *   https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication
+    *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 *   O método projeto `compiler_web` (independentemente da sua propriedade "Modo de execução");
 
-*   Basically any code processed by the `PROCESS 4D TAGS` command in the web context, for example through .shtml pages.
+*   Basically any code processed by the [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) command in the web context, for example through .shtml pages
 
 *   Qualquer método do projeto com o atributo "Disponível através de etiquetas 4D e URLs (`4DACTION`, etc.)"
 
@@ -68,7 +68,7 @@ Todos os comandos 4D relacionados à Web são hilo seguro *i.e.*:
 *   todos os comandos do tema *Servidor Web*,
 *   todos os comandos do tema *Cliente HTTP*.
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+The web-related database methods are thread-safe and can be used in preemptive mode (see above): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
 Obviamente, o código executado por esses métodos também deve ser hilo seguro.
 
