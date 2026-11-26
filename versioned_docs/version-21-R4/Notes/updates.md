@@ -17,7 +17,7 @@ Read [**What’s new in 4D 21 R4**](https://blog.4d.com/whats-new-in-4d-21-r4/),
 - New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
 - New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
 - Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).  
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R4): list of all bugs that have been fixed in 4D 21 R4.  
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21_R4): list of all bugs that have been fixed in 4D 21 R4.  
 
 #### Behavior changes
 
@@ -41,7 +41,7 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions. 
 - New [printing renderer](../FormEditor/forms.md#print-rendering-engine) for forms on Liquid glass and Fluent UI interfaces. New compatibility options to [enable the renderer on Classic interfaces](../FormEditor/forms.md#legacy-print-renderer). 
 - Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R3): list of all bugs that have been fixed in 4D 21 R3.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21_R3): list of all bugs that have been fixed in 4D 21 R3.
 
 
 
@@ -75,7 +75,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 - You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon). 
 - 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features. 
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in content**](../Project/search-replace.md#replace-in-content) features can now support editable components.  
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21_R2): list of all bugs that have been fixed in 4D 21 R2.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21_R2): list of all bugs that have been fixed in 4D 21 R2.
 
 #### Developer Preview
 

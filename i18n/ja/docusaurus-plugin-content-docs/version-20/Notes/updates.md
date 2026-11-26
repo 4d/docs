@@ -193,7 +193,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
   - 新しい [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) コマンドの追加
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D 19 R8 で修正されたバグのリストです。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/19_R8): 4D 19 R8 で修正されたバグのリストです。
 
 #### 動作の変更
 

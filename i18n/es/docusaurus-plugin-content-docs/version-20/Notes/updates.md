@@ -193,7 +193,7 @@ Lee [**Novedades en 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-19-r8/), 
   - nuevo comando [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos los bugs que se han corregido en 4D 19 R8.
+- [**Lista de bugs corregidos**](https://developer.4d.com/FixedBugsList/versions/19_R8): lista de todos los bugs que se han corregido en 4D 19 R8.
 
 #### Cambios de comportamiento
 
@@ -217,7 +217,7 @@ Lee [**Novedades en 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-19-r7/), 
 - Los objetos Área de texto y Formulario de entrada soportan ahora la [propiedad radio de esquina](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) en doc.4d.com.
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R7): lista de todos los bugs que se han corregido en 4D 19 R7.
+- [**Lista de bugs corregidos**](https://developer.4d.com/FixedBugsList/versions/19_R7): lista de todos los bugs que se han corregido en 4D 19 R7.
 
 #### Cambios de comportamiento
 

@@ -13,13 +13,13 @@ title: リリースノート
 
 #### ハイライト
 
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21.2): 4D 21.2 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2026/229/release-note-version-21/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21.2): 4D 21.2 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2026/229/release-note-version-21/))。
 
 ## 4D 21.1 LTS
 
 #### ハイライト
 
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21.1): 4D 21.1 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2026/78/release-note-version-21/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21.1): 4D 21.1 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2026/78/release-note-version-21/))。
 
 ## 4D 21 LTS
 
@@ -42,7 +42,7 @@ title: リリースノート
 - 4Dランゲージ:
   - 文字列から先頭と末尾のスペースを削除する新しい "trim" 系コマンド: [`Trim`](../commands/trim.md)、[`Trim start`](../commands/trim-start.md)、および[`Trim end`](../commands/trim-end.md)。
   - [`Num`](../commands/num.md) および [`String`](../commands/string.md) コマンドは、異なる基数での変換をサポートするようにアップデートされました。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
 - [**4D Qodly Pro リリースノート**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): Qodly Studio での新機能。
 
 #### 動作の変更
@@ -94,7 +94,7 @@ title: リリースノート
   - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
   - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。
   - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) および [`LISTBOX Get property`](../commands/listbox-get-property.md) は3つの新しい定数をサポートするようになりました: `lk current item`、`lk current item position`、および `lk selected items expression` です。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R10): 4D 20 R10 で修正されたバグのリストです(日本語版は[こちら](https://4d-jp.github.io/2025/188/release-note-version-20r10/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R10): 4D 20 R10 で修正されたバグのリストです(日本語版は[こちら](https://4d-jp.github.io/2025/188/release-note-version-20r10/))。
 
 #### 動作の変更
 
@@ -123,7 +123,7 @@ title: リリースノート
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
 - 4D Write Pro インターフェース: 新しい [統合されたAI](../WritePro/writeprointerface.md#integrated-ai) を使用して、4D Write Pro ドキュメントから**chatGTP** とやり取りすることができます。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R9): 4D 20 R9 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/99/release-note-version-20r9//))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R9): 4D 20 R9 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/99/release-note-version-20r9//))。
 
 ### 4D 20 R8
 
@@ -148,7 +148,7 @@ title: リリースノート
 - 4Dランゲージ:
   - 変更されたコマンド: [`FORM EDIT`](../commands/form-edit.md)
   - [4D.CryptoKey class](../API/CryptoKeyClass.md) の[`.sign()`](../API/CryptoKeyClass.md#sign) および [`.verify()`](../API/CryptoKeyClass.md#verify) 関数は *message* 引数においてBlob をサポートするようになりました。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R8): 4D 20 R8 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2024/360/release-note-version-20r8/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R8): 4D 20 R8 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2024/360/release-note-version-20r8/))。
 
 #### 動作の変更
 
@@ -179,7 +179,7 @@ title: リリースノート
 - 4D Write Pro:
   - 新コマンド: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - 変更されたコマンド: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) および [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R7): 4D 20 R7 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/274/release-note-version-20r7/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R7): 4D 20 R7 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/274/release-note-version-20r7/))。
 
 #### 動作の変更
 
@@ -206,7 +206,7 @@ title: リリースノート
 - [新しい設定タブ](../Project/compiler.md#警告) を使用して、警告の生成をグローバルに定義できます。
 - 主に"4D 環境"テーマからのコマンドを含めたいくつかのコマンドがスレッドセーフになったとともに、[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドのいくつかもセレクターもスレッドセーフとなりました。
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R6): 4D 20 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R6): 4D 20 R6 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r6/))。
 
 #### 動作の変更
 
@@ -228,7 +228,7 @@ title: リリースノート
 - RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート]((developer.4d.com/qodly/4DQodlyPro/force-login))。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - [`Session`](../commands/session.md) オブジェクトはリモートユーザーセッションおよびすトアドプロシージャーセッションにおいても利用可能になりました。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。
 
 #### 動作の変更
 
@@ -251,7 +251,7 @@ title: リリースノート
 - 新しい[`HTTP Parse message`](../commands/http-parse-message.md) コマンド。
 - 新しい [ノンブロッキング印刷](../settings/compatibility.md) 互換性オプション。
 - データエクスプローラーの新しい [編集モード](../Admin/dataExplorer.md#データの編集)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R4): 4D 20 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R4): 4D 20 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 #### 動作の変更
 
@@ -275,7 +275,7 @@ title: リリースノート
 - ログファイルの設定は、[カレントデータファイル](../Backup/settings.md#ログ管理) とともに保存されるようになりました。
 - [可変長引数を宣言するための新しいシンタックス](../Concepts/parameters.md#可変長引数の宣言)
 - 4D View Pro:ドキュメントの [インポート](../ViewPro/commands/vp-import-from-blob) および [エクスポート](../ViewPro/commands/vp-export-to-blob) で Blob形式をサポート。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R3): 4D 20 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R3): 4D 20 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/269/release-note-version-20r3/))。
 
 #### 動作の変更
 
@@ -298,7 +298,7 @@ title: リリースノート
 - 新しい QUICネットワークレイヤー [インタフェース設定](../settings/client-server.md#ネットワークレイヤー)。
 - 4D View Pro:ドキュメントの [インポート](../ViewPro/commands/vp-import-document) および [エクスポート](../ViewPro/commands/vp-export-document) で **.sjs** ファイル形式をサポート。
 - 4D Write Pro インターフェース: 新しい [表ウィザード](../WritePro/writeprointerface.md)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R2): 4D 20 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/349/release-note-version-20r2/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/20_R2): 4D 20 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/349/release-note-version-20r2/))。
 
 #### 動作の変更
 

@@ -208,7 +208,7 @@ Read [**What’s new in 4D 19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 	- new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D 19 R8.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19_R8): list of all bugs that have been fixed in 4D 19 R8.
 
 
 #### Behavior changes
@@ -236,7 +236,7 @@ Read [**What’s new in 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r
 - Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D 19 R7.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19_R7): list of all bugs that have been fixed in 4D 19 R7.
 
 
 #### Behavior changes

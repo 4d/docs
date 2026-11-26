@@ -15,7 +15,7 @@ Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), t
 
 #### Highlights
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.8): list of all bugs that have been fixed in 4D 19.8.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19.8): list of all bugs that have been fixed in 4D 19.8.
 
 
 ## 4D 19.7 LTS
@@ -28,14 +28,14 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 :::
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D 19.7.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19.7): list of all bugs that have been fixed in 4D 19.7.
 
 
 ## 4D 19.6 LTS
 
 #### Highlights
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D 19.6.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19.6): list of all bugs that have been fixed in 4D 19.6.
 
 
 ## 4D 19.5 LTS
@@ -45,7 +45,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - 4D 19.5 is certified on Windows 11 22H2
 - 4D 19.5 is certified on macOS Ventura (macOS 13)
 - SpreadJS version has been updated (14.1.6).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/19.5): list of all bugs that have been fixed in 4D 19.5.
 
 
 ## 4D 19.x LTS

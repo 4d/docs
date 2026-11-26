@@ -25,7 +25,7 @@ title: リリースノート
 - 多くのフォームオブジェクトにおいて利用可能な新しい["境界線カラー" プロパティ](../FormObjects/properties_BackgroundAndBorder.md#border-color)。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) および [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) コマンドは新しい*borderColor* 引数をサポートします。
 - 4Dメソッドまたはクラスを作成または開くときに4D コードエディターを開くかVS Code を開くかを自動的に決定する[新しい**コードエディター** 設定](../Preferences/methods.md#コードエディター)。
 - エンティティ内の埋め込みを作成および管理を可能にするのを手助けするための[新しい**4D Embedding Studio** コンポーネント](../embedding-studio/overview.md)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21_R5): 4D 21 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/178/release-note-version-20r5/))。
 
 #### 動作の変更
 
@@ -51,7 +51,7 @@ title: リリースノート
 - サーバーを保護するための閾値オブジェクトを管理するための[`4D.QuotaManager`](../API/QuotaManagerClass.md) クラス。
 - サーバーキャッシュからエンティティのセットを削除するための新しい[`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST リクエスト。
 - 改善された4D Server 管理ウィンドウ内にて、セッションの情報を表示するための[**Sessions**](../ServerWindow/sessions.md) ページ(旧**Users**ページ)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/194/release-note-version-21r4/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21_R4): 4D 21 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/194/release-note-version-21r4/))。
 
 #### 動作の変更
 
@@ -74,7 +74,7 @@ title: リリースノート
 - ORDA データモデル関数および共有/セッションシングルトン関数における [`server` キーワード](../Concepts/classes.md#server) のサポート。
 - Liquid glass および Fluent UI インターフェースのフォーム用の新しい[印刷レンダラー](../FormEditor/forms.md#印刷レンダリングエンジン)。[クラシックインターフェースのレンダラーを有効化する](../FormEditor/forms.md#旧式印刷レンダラー) ための新しい互換性オプション。
 - 依存関係: [GitLab リポジトリ上に保存されたコンポーネント](../Project/components.md#configuring-a-gitlab-repository) のサポート。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/101/release-note-version-21r3/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21_R3): 4D 21 R3 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/101/release-note-version-21r3/))。
 
 #### macOS におけるLiquid glass のサポート
 
@@ -103,7 +103,7 @@ title: リリースノート
 - [コンポーネントのアイコンをカスタマイズできる](../Extensions/develop-components.md#custom-icon) ようになりました。
 - 4D AIKit component: 新しい [ファイル API](../aikit/Classes/OpenAIFilesAPI.md) クラスを使用することで **ファイルアップロード** 機能を実装できます。
 - [**デザインモードを検索**](../Project/search-replace.md#コンポーネント内を検索) および [**コンテンツを置換**](../Project/search-replace.md#コンテンツを置換) 機能は編集可能なコンポーネントをサポートするようになりました。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/54/release-note-version-21r2/))。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2026/54/release-note-version-21r2/))。
 
 #### デベロッパー・プレビュー
 

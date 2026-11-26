@@ -13,13 +13,13 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/
 
 #### Destaques
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21.2): list of all bugs that have been fixed in 4D 21.2.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21.2): list of all bugs that have been fixed in 4D 21.2.
 
 ## 4D 21.1 LTS
 
 #### Destaques
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21.1): list of all bugs that have been fixed in 4D 21.1.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21.1): list of all bugs that have been fixed in 4D 21.1.
 
 ## 4D 21 LTS
 
@@ -42,7 +42,7 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/
 - Línguagem 4D:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21): list of all bugs that have been fixed in 4D 21.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/21): list of all bugs that have been fixed in 4D 21.
 - [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
 
 #### Mudanças de comportamento
@@ -94,7 +94,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
   - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
   - New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects.
   - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) e [`LISTBOX Get property`](../commands/listbox-get-property.md) suporta três novas constantes: `lk current item`, `lk current item position` e `lk selected items expression`.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R10): list of all bugs that have been fixed in 4D 20 R10.
+- [**Fixed bug list**](https://developer.4d.com/FixedBugsList/versions/20_R10): list of all bugs that have been fixed in 4D 20 R10.
 
 #### Mudanças de comportamento
 
@@ -123,7 +123,7 @@ Leia [**O que há de novo no 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-
 - Os seguintes comandos de callbacks de comando VP agora esperam que todas as funções personalizadas 4D completem seus cálculos: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md) e [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - Novos recursos [4D Netkit](https://developer.4d.com/4D-NetKit/) para gerenciar agendas do Google e do Microsoft 365; capacidade de usar o servidor web de hospedagem para autenticação OAuth 2.0.
 - 4D Write Pro Interface: New [integrated AI](../WritePro/writeprointerface.md#integrated-ai) to interact with **chatGTP** from your 4D Write Pro documents.
-- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=20_R9): lista de todos os bugs que foram corrigidos no 4D 20 R9.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20_R9): lista de todos os bugs que foram corrigidos no 4D 20 R9.
 
 ### 4D 20 R8
 
@@ -148,7 +148,7 @@ Leia [**O que há de novo no 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-
 - Línguagem 4D:
   - Comandos modificados: [`FORM EDIT`](../commands/form-edit.md)
   - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R8): lista de todos os bugs corrigidos em 4D 20 R8.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R8): lista de todos os bugs corrigidos em 4D 20 R8.
 
 #### Mudanças de comportamento
 
@@ -178,7 +178,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - 4D Write Pro:
   - Novo comando: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - Comandos modificados: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) e [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R7): lista de todos os bugs corrigidos em 4D 20 R7.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R7): lista de todos os bugs corrigidos em 4D 20 R7.
 
 #### Mudanças de comportamento
 
@@ -205,7 +205,7 @@ Leia [**O que há de novo no 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-
 - Uma [nova guia de parametros](../Project/compiler.md#warnings) ajuda a definir a geração de avisos globalmente.
 - Several commands, mainly from the "4D Environment" theme, are now thread-safe, as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.
 - New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R6): lista de todos os bugs corrigidos em 4D 20 R6.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R6): lista de todos os bugs corrigidos em 4D 20 R6.
 
 #### Mudanças de comportamento
 
@@ -227,7 +227,7 @@ Leia [**O que há de novo no 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-
 - Novo modo [forçar  login para solicitações REST](../REST/authUsers.md#force-login-mode) com um suporte específico [no Qodly Studio para 4D]((developer.4d.com/qodly/4DQodlyPro/force-login)).
 - Novo parâmetro REST [$format](../REST/$format.md).
 - O objeto [`Session`](../commands/session.md) agora está disponível em sessões de usuários remotos e sessões de procedimentos armazenados.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R5): lista de todos os bugs corrigidos em 4D 20 R5.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R5): lista de todos os bugs corrigidos em 4D 20 R5.
 
 #### Mudanças de comportamento
 
@@ -250,7 +250,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 - Novo comando [`HTTP Parse message`](../commands/http-parse-message.md).
 - Nova opção de compatibilidade [Impressão sem bloqueio](../settings/compatibility.md).
 - Nuevo [modo de edición](../Admin/dataExplorer.md#editing-data) en el Explorador de datos.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos os bugs corrigidos em 4D 20 R4.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R4): lista de todos os bugs corrigidos em 4D 20 R4.
 
 #### Mudanças de comportamento
 
@@ -274,7 +274,7 @@ Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d
 - As configurações de arquivos de log agora são [salvas com o arquivo de dados atual](../Backup/settings.md#log-management)
 - Nova sintaxe para [declarar parâmetros variádicos](../Concepts/parameters.md#declaring-variadic-parameters)
 - 4D View Pro: soporte de la [importación](../ViewPro/commands/vp-import-from-blob) y de la [exportación](../ViewPro/commands/vp-export-to-blob) de documentos 4D View Pro al formato Blob.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D 20 R3.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R3): lista de todos os bugs corrigidos em 4D 20 R3.
 
 #### Mudanças de comportamento
 
@@ -297,7 +297,7 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 - Nova [configuração de interface](../settings/client-server.md#network-layer) para a camada de rede QUIC.
 - 4D View Pro: soporte del formato de archivo **.sjs** para [la importación](../ViewPro/commands/vp-import-document) y la [exportación](../ViewPro/commands/vp-export-document) de documentos.
 - Interface 4D Write Pro: novo [Table Wizard](../WritePro/writeprointerface.md).
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R2): lista de todos os bugs corrigidos em 4D 20 R2.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/20_R2): lista de todos os bugs corrigidos em 4D 20 R2.
 
 #### Mudanças de comportamento
 

@@ -39,7 +39,7 @@ Lisez [**Les nouveautés de 4D 21 R5**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Nouvelle propriété ["Couleur de la bordure"](../FormObjects/properties_BackgroundAndBorder.md#border-color) disponible pour la plupart des objets de formulaire. Les commandes [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) et [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) prennent désormais en charge un nouveau paramètre *borderColor*.
 - [Nouvelle préférence **Éditeur de code**](../Preferences/methods.md#code-editor) permettant d'utiliser automatiquement l'éditeur de code 4D ou VS Code lors de la création ou l'ouverture de méthodes et de classes 4D.
 - [New **4D Embedding Studio** component](../embedding-studio/overview.md) that helps you create and manage vector embeddings within your entities.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R5) : liste de tous les bugs qui ont été corrigés dans 4D 21 R5.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/21_R5) : liste de tous les bugs qui ont été corrigés dans 4D 21 R5.
 
 #### Changements de comportement
 
@@ -65,7 +65,7 @@ Lisez [**Les nouveautés de 4D 21 R4**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Nouvelle classe [`4D.QuotaManager`](../API/QuotaManagerClass.md) permettant de gérer des objets définissant des seuils destinés à protéger le serveur.
 - Nouvelle requête REST [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) permettant de supprimer des entity sets du cache du serveur.
 - Informations de session améliorées dans la fenêtre d'administration du serveur 4D dans une nouvelle page [**Sessions**](../ServerWindow/sessions.md) (anciennement **Utilisateurs**).
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R4) : liste de tous les bugs qui ont été corrigés dans 4D 21 R4.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/21_R4) : liste de tous les bugs qui ont été corrigés dans 4D 21 R4.
 
 #### Changements de comportement
 
@@ -88,7 +88,7 @@ Lisez [**Les nouveautés de 4D 21 R3**](https://blog.4d.com/fr/whats-new-in-4d-2
 - Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
 - Nouveau [moteur de rendu d'impression](../FormEditor/forms.md#print-rendering-engine) pour les formulaires dans les interfaces Liquid Glass et Fluent UI. Nouvelle option de compatibilité permettant d'[activer le moteur de rendu sur les interfaces classiques](../FormEditor/forms.md#legacy-print-renderer).
 - Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 
 #### Prise en charge de Liquid glass sur macOS
 
@@ -117,7 +117,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Vous pouvez [personnaliser les icônes de vos composants](../Extensions/develop-components.md#custom-icon).
 - Composant 4D AIKit : nouvelle classe [File API](../aikit/Classes/OpenAIFilesAPI.md) pour implémenter les fonctionnalités de **téléversement de fichiers**.
 - Les fonctions [**Chercher dans le développement**](../Project/search-replace.md#search-in-components) et [**Remplacer dans le contenu**](../Project/search-replace.md#replace-in-content) peuvent maintenant intégrer les composants modifiables.
-- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R2) : liste de tous les bugs qui ont été corrigés dans 4D 21 R2.
+- [**Liste des bugs corrigés**](https://developer.4d.com/FixedBugsList/versions/21_R2) : liste de tous les bugs qui ont été corrigés dans 4D 21 R2.
 
 #### Developer Preview
 
