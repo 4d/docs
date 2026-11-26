@@ -154,3 +154,4 @@ Componentes a excluir. Por padrão, todos os componentes da pasta Components da 
 Excluir um módulo pode impedir que sua aplicação gerada funcione como esperado. Se você não tiver 100% de certeza de que um módulo nunca é chamado pela sua aplicação, mantenha-o incluído.
 
 :::
+

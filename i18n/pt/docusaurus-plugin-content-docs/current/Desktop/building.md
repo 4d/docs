@@ -14,7 +14,7 @@ O construtor de aplicações permite-lhe:
 - Construir aplicações cliente-servidor com atualização automática de partes do cliente e do servidor.
 - Salve suas configurações de compilação para uso futuro (*botão Salvar configurações*)
 
-> Aplicativos compilados são baseados em [arquivos .4dz](#build-compiled-structure) que são **somente leitura**. Tenha em mente que o uso de comandos ou funções que modificam os arquivos de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, você pode construir aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (veja [doc.4d.com](https://doc.4d.com)).
+> Aplicativos compilados são baseados em [arquivos .4dz](#build-compiled-structure) que são **somente leitura**. Tenha em mente que o uso de comandos ou funções que modificam os arquivos de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, você pode construir aplicações específicas que suportem modificações locais utilizando a chave XML [`PackProject`](../BuildApplication/general.md#packproject).
 
 ## Visão Geral
 
@@ -47,7 +47,7 @@ Cada parâmetro do geração da aplicação é armazenado como uma chave XML no 
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do arquivo de projeto é atualizado, se necessário, quando você clica em **Build** ou **Save settings**. Você pode definir vários outros arquivos de configurações XML para o mesmo projeto e empregá-los usando o comando [`BUILD APPLICATION`](../commands/build-application).
 
-As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. A descrição dessas chaves estão detalhadas no manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
+As chaves XML oferecem opções adicionais além daquelas exibidas na caixa de diálogo Criar aplicativo. Essas chaves são descritas na seção [Chaves XML Build Application](../BuildApplication/overview.md).
 
 ### Arquivo histórico
 
@@ -81,13 +81,13 @@ Essa guia permite que você crie um arquivo de estrutura compilado padrão ou um
 
 Gera um banco de dados que contém apenas código compilado.
 
-Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<project name>`. For example, if you have named your application “MyProject”, 4D will create:
+Esta funcionalidad crea un arquivo *.4dz* em uma pasta `Compiled Database/<project name>`. For example, if you have named your application “MyProject”, 4D will create:
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
 Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto. Um arquivo .4dz é essencialmente uma versão compactada da pasta do projeto.
 
-> Quando gerar arquivos .4dz, 4D usa um formato zip **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se não quiser usar esse formato padrão, adicione a chave XML `UseStandardZipFormat` com o valor `False` em seu arquivo [`buildApp.4DSettings`](#buildapp4dsettings) (para obter mais informações, consulte o manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html)).
+> Quando gerar arquivos .4dz, 4D usa um formato zip **padrão** por padrão. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. Se não quiser usar esse formato padrão, adicione a chave XML [`UseStandardZipFormat`](../BuildApplication/general.md#usestandardzipformat) com o valor `False` em seu arquivo [`buildApp.4DSettings`](#buildapp4dsettings).
 
 #### Incluir pastas relacionadas
 
@@ -111,8 +111,8 @@ The *Contents* folder contains:
 - Uma pasta *Resources* - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
 - An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). Se um arquivo *Info.plist* já [existir na raiz do componente](../Extensions/develop-components.md#infoplist) ele for mesclado, caso contrário um arquivo padrão será criado. As seguintes [Chaves do pacote da Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) são prepreenchidas:
   - `CFBundleDisplayName` e `CFBundleName` para o nome da aplicação,
-  - `NSHumanReadableCopyright`, pode ser [configurado usando uma chave XML](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
-  - `CFBundleShortVersionString` e `CFBundleVersion` para a versão do aplicativo (formato x.x.x, por exemplo, 1.0.5), podem ser [definidas usando uma chave XML](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
+  - `NSHumanReadableCopyright`, pode ser [configurado usando uma chave XML](../BuildApplication/versioning.md#copyright).
+  - `CFBundleShortVersionString` e `CFBundleVersion` para a versão do aplicativo (formato x.x.x, por exemplo, 1.0.5), podem ser [definidas usando uma chave XML](../BuildApplication/versioning.md#version).
 
 ## Página Aplicação
 
@@ -126,12 +126,12 @@ Ao marcar a opção **Construir aplicação autônoma** e clicar em **Construir*
 
 O princípio consiste em mesclar um arquivo de estrutura compilado com **4D Volume Desktop** (o mecanismo de banco de dados 4D). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
-- Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](#management-of-data-files).
+- Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](data-file-configuration.md).
 - You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
 
 :::note
 
-É possível [automatizar a atualização de aplicativos mesclados de usuário único](#atualização-automática-de-aplicativos-de-servidor-ou-de-usuário-único) por meio de uma sequência de comandos de linguagem.
+É possível [automatizar a atualização de aplicativos mesclados de usuário único](managing-updates.md) por meio de uma sequência de comandos de linguagem.
 
 :::
 
@@ -156,7 +156,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 - **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. Caso contrário, o último arquivo de dados aberto será aberto (modo padrão).
 
-Para obter mais informações sobre o modo de ligação de dados, consulte a seção [Último arquivo de dados aberto](#last-data-file-open).
+Para obter mais informações sobre o modo de ligação de dados, consulte a seção [Último arquivo de dados aberto](data-file-configuration.md#last-data-file-opened).
 
 ### Ficheiros gerados
 
@@ -222,14 +222,14 @@ Uma vez criado, um aplicativo cliente/servidor é composto de duas partes person
 Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 
 - Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
-- Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, [mecanismos alternativos específicos](#management-of-client-connections) podem ser implementados). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Option** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente.
+- Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, [mecanismos alternativos específicos](merged-client-connections.md) podem ser implementados). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Option** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente.
   Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
 - Um aplicativo cliente/servidor pode ser configurado de modo que a parte do cliente [possa ser atualizada automaticamente pela rede](#copy-of-client-applications-inside-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
 - Também é possível automatizar a atualização da parte do servidor por meio do uso de uma sequência de comandos de linguagem ([SET UPDATE FOLDER](../commands/set-update-folder) e [RESTART 4D](../commands/restart-4d)).
 
 :::note
 
-Se você quiser que as conexões cliente/servidor sejam feitas em [TLS](../Admin/tls.md), basta marcar a [configuração apropriada](../settings/client-server.md#encrypt-client-server-communications). Se desejar usar um certificado personalizado, considere a possibilidade de usar o [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+Se você quiser que as conexões cliente/servidor sejam feitas em [TLS](../Admin/tls.md), basta marcar a [configuração apropriada](../settings/client-server.md#encrypt-client-server-communications). Se desejar usar um certificado personalizado, considere a possibilidade de usar o [`CertificateAuthoritiesCertificates`](../BuildApplication/client-server.md#certificateauthoritiescertificates) XML key.
 
 :::
 
@@ -288,7 +288,7 @@ Esta opção permite escolher o modo de ligação entre o aplicativo mesclado e 
 
 - **Por caminho do aplicativo** - O aplicativo 4D mesclado analisará o arquivo *lastDataPath.xml* do aplicativo e tentará abrir o arquivo de dados com um atributo "executablePath" que corresponda ao caminho completo do aplicativo. Se tal entrada for encontrada, o arquivo de dados correspondente (definido através do seu atributo "dataFilePath") será aberto. Caso contrário, o último arquivo de dados aberto será aberto (modo padrão).
 
-Para obter mais informações sobre o modo de ligação de dados, consulte a seção [Último arquivo de dados aberto](#last-data-file-open).
+Para obter mais informações sobre o modo de ligação de dados, consulte a seção [Último arquivo de dados aberto](data-file-configuration.md#last-data-file-opened).
 
 ### Criar a aplicação cliente
 
@@ -307,7 +307,7 @@ Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usad
 
 A Área de Trabalho de Volume 4D deve corresponder à plataforma atual (que também será a plataforma do aplicativo cliente). Se você deseja criar um aplicativo cliente para a plataforma "simultânea", você deve realizar uma operação de construção adicional usando uma aplicação 4D em execução nessa plataforma.
 
-Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre esse arquivo, consulte a descrição do comando [`BUILD APPLICATION`](../commands/build-application). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos no [Gerenciamento de conexões por aplicativos cliente](#management-of-client-connections) parágrafo.
+Se você deseja que o aplicativo cliente se conecte ao servidor usando um endereço específico (diferente do nome do servidor publicado na sub-rede), você deve usar a chave `IPAddress` XML no arquivo buildapp.4DSettings. Para obter mais informações sobre esse arquivo, consulte a descrição do comando [`BUILD APPLICATION`](../commands/build-application). Você também pode implementar mecanismos específicos em caso de falha na conexão. Os diferentes cenários propostos são descritos na página [Conexões de cliente mesclado](merged-client-connections.md).
 
 #### Cópia de aplicativos cliente dentro do aplicativo servidor
 
@@ -493,7 +493,7 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 - **CEF**: biblioteca integrada Chromium. É necessário executar [áreas Web](../FormObjects/webArea_overview.md) que usem o mecanismo de renderização incorporado e [áreas 4D View Pro](../FormObjects/viewProArea_overview.md). Chamar essas áreas quando o CEF for deseleito, mostrará áreas em branco e/ou gerará erros.
 - **SpellChecker**: usado para [correção ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) e comandos disponíveis para áreas de entrada e para áreas 4D Write Pro.
-- **4D Updater**: Controla a [atualização automática](#what-is-a-clientserver-application) das partes do cliente e é usado pelo comando `SET UPDATE FOLDER` para [atualizações automáticas do servidor](#automatic-updating-of-server-or-single-user-applications).
+- **4D Updater**: Controla a [atualização automática](#what-is-a-clientserver-application) das partes do cliente e é usado pelo comando `SET UPDATE FOLDER` para [atualizações automáticas do servidor](managing-updates.md).
 - **4D Qodly Pro and Data Explorer**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/) as well as the [Data Explorer](../Admin/dataExplorer.md).
 - **Windows App Runtime**: Required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 
@@ -533,14 +533,14 @@ Um aplicativo de avaliação permite que o usuário final execute uma versão co
 :::note Notas
 
 - O comando [`License info`](../commands/license-info) permite que você saiba o tipo de licença do aplicativo (coleção *.attributes*) e sua data de expiração (objeto *.expirationDate*).
-- A chave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite que você gerencie as versões de avaliação.
+- A chave xml BuildApplication [`EvaluationMode`](../BuildApplication/licenses-signature.md#evaluationmode) permite que você gerencie as versões de avaliação.
 - The [`CHANGE LICENSES`](../commands/change-licenses) command does nothing when called from an evaluation version.
 
 :::
 
 #### Application automatically embedding available licenses
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses). Esta opção corresponde à chave XML [`AutomaticLicenseIntegration`](../BuildApplication/licenses-signature.md#automaticlicenseintegration).
 
 When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands/get-4d-folder#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
@@ -633,7 +633,7 @@ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a ex
 
 Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo <em x-id="3">.icns</em> é renomeado \*ApplicationName.
 
-Você também pode definir as [chaves XML](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a usar. Estão disponíveis as seguintes chaves:
+Você também pode definir as [chaves XML](../BuildApplication/source-files.md) específicas no arquivo buildApp.4DSettings para designar cada ícone a usar. Estão disponíveis as seguintes chaves:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -795,4 +795,3 @@ O procedimento de instalação produz um arquivo de log detalhando as operaçõe
 O log de atualização é chamado `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por exemplo, `2021-08-25_14-23-00_log_1.txt` para um arquivo criado em 25 de agosto de 2021 às 14:23.
 
 Este arquivo é criado na pasta de aplicativos "Atualizadores", dentro da pasta de usuário do sistema. Você pode descobrir a localização deste arquivo a qualquer momento usando o comando [`Last update log path`](../commands/last-update-log-path).
-
