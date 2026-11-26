@@ -30,7 +30,7 @@ title: ボタングリッド
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [行](properties_Crop.md#行) -
 [列](properties_Crop.md#列) -

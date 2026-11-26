@@ -22,7 +22,7 @@ title: VP INSERT TABLE COLUMNS
 | 引数          | 型       |    | 説明                                                   |
 | ----------- | ------- | -- | ---------------------------------------------------- |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |
-| tableName   | Text    | -> | Table name                                           |
+| tableName   | Text    | -> | 表組みの名称                                               |
 | column      | Integer | -> | 列の挿入場所を指定する表組み内のインデックス                               |
 | count       | Integer | -> | 挿入する列の数 (>0)                      |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |

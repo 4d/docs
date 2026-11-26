@@ -45,7 +45,7 @@ title: デバッガー
 
 ### ランタイムエラー
 
-アプリケーションモードでは、インタープリターモードでは決して見られないエラーが発生する場合があります。次に例を示します:
+In compiled applications, you might obtain errors that you don't see in [interpreted mode](../Concepts/interpreted.md). 次に例を示します:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 

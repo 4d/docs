@@ -13,7 +13,7 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### ハイライト
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.9): list of all bugs that have been fixed in 4D 20.9 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.9): list of all bugs that have been fixed in 4D 20.9 LTS.
 
 4D 20.9 以降の 4D Server に接続する4D クライアントのバージョンは、4D 20.9 以上でなければなりません。
 
@@ -23,13 +23,13 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 - 4D 20.8 LTS は Windows 11 25H2 対応です。
 - 4D 20.8 LTS は macOS Tahoe (macOS 26) 対応です。
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
 
 ## 4D 20.7 LTS
 
 #### ハイライト
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.7): list of all bugs that have been fixed in 4D 20.7 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.7): list of all bugs that have been fixed in 4D 20.7 LTS.
 
 :::note 4D v20.7 以降の4D Server に接続する最小クライアントバージョンについて
 
@@ -60,7 +60,7 @@ Windows Server 2025 では、新しいWindows 印刷ダイアログボックス�
 :::
 
 - [埋め込みライセンスなしでスタンドアロンアプリケーションをビルドすること](../Desktop/building.md#licenses) が可能になりました。
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.6): list of all bugs that have been fixed in 4D 20.6 LTS.
 
 ## 4D 20.5 LTS
 
@@ -75,13 +75,13 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.5): list of all bugs that have been fixed in 4D 20.5 LTS.
 
 ## 4D 20.4 LTS
 
 #### ハイライト
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.4): list of all bugs that have been fixed in 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
@@ -89,7 +89,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 - CEF が Chromium 5993 にアップデートされました。
 - SpreadJS は 4D 20.2 HF1 でバージョン 16.2.6 にアップデートされました。
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.3): list of all bugs that have been fixed in 4D 20.3 LTS.
 
 #### 動作の変更
 
@@ -113,7 +113,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.2): list of all bugs that have been fixed in 4D 20.2 LTS.
 
 #### 動作の変更
 
@@ -133,7 +133,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 
 :::
 
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20.1): list of all bugs that have been fixed in 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
@@ -168,7 +168,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20): list of all bugs that have been fixed in 4D 20 LTS.
+- [**Fixed bugs list**](https://developer.4d.com/FixedBugsList/versions/20): list of all bugs that have been fixed in 4D 20 LTS.
 
 #### 動作の変更
 
@@ -193,7 +193,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
   - 新しい [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) コマンドの追加
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D 19 R8 で修正されたバグのリストです。
+- [**修正リスト**](https://developer.4d.com/FixedBugsList/versions/19_R8): 4D 19 R8 で修正されたバグのリストです。
 
 #### 動作の変更
 

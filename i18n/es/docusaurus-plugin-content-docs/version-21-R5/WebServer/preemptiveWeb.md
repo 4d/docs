@@ -14,8 +14,8 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 | 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (no asociado al depurador) | Compilado           |
 | --------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------- |
 | Servidor REST         | cooperativo                                                                                 | apropiativo                                                | apropiativo         |
-| Servidor Web          | cooperativo                                                                                 | cooperativo                                                | *configuración web* |
-| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                | *configuración web* |
+| Servidor Web          | cooperativo                                                                                 | preemptive if scalable sessions, else cooperative          | *configuración web* |
+| Servidor Web Services | cooperativo                                                                                 | preemptive if scalable sessions, else cooperative          | *configuración web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado           |
 | --------------------- | ------------ | ------------------- |

@@ -88,9 +88,9 @@ JSON ファイル(あるいは*settings* 引数内のオブジェクト)がリ�
 URL パターンは**接頭辞** として、あるいは**正規表現** を使用して定義することできます。
 
 - 接頭辞パターンを宣言するためには、HTTPHandlers.json ファイル内の"pattern" プロパティ名を使用します。接頭辞は `/` の開始と終了をすでに含んでいる正規表現とみなされます。  
-  Ex: `"pattern" : "docs"` または `"pattern" : "docs/invoices"`
+  例: `"pattern" : "docs"` または `"pattern" : "docs/invoices"`
 
-- 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。正規表現パターンは直接管理されます。礼: `"regexPattern" : "/docs/.+/index\.html"`
+- 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。正規表現パターンは直接管理されます。例: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" と "regexPattern" プロパティは同じハンドラー定義内で同時に使用することはできません(使用した場合、"regexPattern" プロパティのみが有効となります)。
 

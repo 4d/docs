@@ -3,17 +3,17 @@ id: datastores
 title: Utiliser un datastore distant
 ---
 
-A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
+Un [datastore](dsMapping.md#datastore) exposé dans une application 4D est accessible simultanément via différents clients :
 
-- 4D remote applications using ORDA to access the main datastore with the `ds` command. A noter que l'application 4D distante peut toujours accéder à la base de données en mode classique. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. These accesses are handled by the **HTTP REST server**.
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. These accesses are handled by the **HTTP server**.
+- Des applications 4D distantes utilisant ORDA pour accéder au datastore principal à l’aide de la commande `ds`. A noter que l'application 4D distante peut toujours accéder à la base de données en mode classique. Ces accès sont gérés par le **serveur d'applications de 4D**.
+- D'autres applications 4D (4D distant, 4D Server) ouvrant une session sur le datastore distant via la commande [`Open datastore`](../API/DataStoreClass.md#open-datastore). Ces accès sont gérés par le **serveur HTTP REST**.
+- Des requêtes [4D pour iOS ou 4D pour Android](https://developer.4d.com/go-mobile/) pour mettre à jour les applications mobiles. Ces accès sont gérés par le **serveur HTTP REST**.
 
 ## Ouverture des sessions
 
-When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
+Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande `Open datastore`, la connexion entre les process qui effectuent les requêtes et le datastore distant est gérée via des sessions.
 
-Une session est créée sur le datastore distant pour gérer la connexion. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
+Une session est créée sur le datastore distant pour gérer la connexion. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` du côté de l'application 4D locale. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
 Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie que :
 
@@ -25,7 +25,7 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 ![](../assets/en/ORDA/sessions.png)
 
-> For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
+> Pour les sessions ouvertes par des requêtes REST, veuillez consulter la page [Utilisateurs et sessions](REST/authUsers.md).
 
 ### Visualiser les sessions
 
@@ -60,7 +60,7 @@ Si une demande est envoyée au datastore distant après la fermeture de la sessi
 
 ## Optimisation client/serveur
 
-4D provides optimizations for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). Ces optimisations accélèrent l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau. Elles incluent :
+4D optimise automatiquement les requêtes ORDA qui utilisent des entity selections ou qui chargent des entités en configurations client/serveur (datastore accessible à distance à l'aide de `ds` ou via `Open datastore`). Ces optimisations accélèrent l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau. Elles incluent :
 
 - le **contexte d'optimisation**
 - le **Cache ORDA**

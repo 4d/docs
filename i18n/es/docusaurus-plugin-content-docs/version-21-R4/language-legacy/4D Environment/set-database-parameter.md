@@ -1080,21 +1080,6 @@ Cuando se utiliza con [SET DATABASE PARAMETER](../commands/set-database-paramete
 
 :::
 
-#### Selectores hilo seguro 
-
-El comando **SET DATABASE PARAMETER** puede utilizarse en procesos apropiativos al llamar a los siguientes selectores:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
-
 #### Ejemplo 1 
 
 La siguiente instrucción evitará un posible problema de timeout:
@@ -1142,4 +1127,4 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D convertida. Note 
 |  |  |
 | --- | --- |
 | Número de comando | 642 |
-| Hilo seguro | yes (partially) |
+| Hilo seguro | yes (partially). Selectores hilo seguro: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|

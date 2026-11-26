@@ -117,7 +117,33 @@ module.exports =
         "code-editor/write-class-method",
         "Project/components",
         "Project/compiler",
-        "Desktop/building",
+        {
+          type: "category",
+          label: "Building Applications",
+          items: [
+            "Desktop/building",
+            "Desktop/data-file-configuration",
+            "Desktop/merged-client-connections",
+            "Desktop/managing-updates",
+            {
+              type: "category",
+              label: "XML keys",
+              link: {
+                type: "doc",
+                id: "BuildApplication/overview"
+              },
+              items: [
+                "BuildApplication/general",
+                "BuildApplication/runtime-vl",
+                "BuildApplication/client-server",
+                "BuildApplication/source-files",
+                "BuildApplication/versioning",
+                "BuildApplication/auto-update",
+                "BuildApplication/licenses-signature"
+              ]
+            }
+          ]
+        },
           {
            type: "category",
            label: "Debugging",
@@ -193,6 +219,7 @@ module.exports =
             "Concepts/parameters",
             "Concepts/shared",
             "Concepts/classes",
+            "Concepts/comments",
             "Concepts/control-flow",
             "Concepts/error-handling",
             "Concepts/interpreted-compiled",
@@ -406,10 +433,10 @@ module.exports =
             "WebServer/authentication",
             "WebServer/sessions",
             "WebServer/quotas",
-            "WebServer/mcp-server",
             "WebServer/preemptiveWeb"
           ]
         },
+        "WebServer/mcp-server",
         {
           type: "category",
           label: "REST API",
@@ -527,7 +554,7 @@ module.exports =
         },
        {
           type: "doc",
-          label: "Sessions",
+          label: "Desktop sessions",
           id: "Desktop/desktop-sessions"
         },
         {
@@ -785,7 +812,7 @@ module.exports =
       label: "Server & Admin",
       link: {
         type: "generated-index",
-        title: "Administration",
+        title: "Server & Admin",
         description: "How to monitor your 4D applications",
         keywords: [
           "administration"

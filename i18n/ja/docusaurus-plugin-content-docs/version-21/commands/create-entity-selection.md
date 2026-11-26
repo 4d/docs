@@ -44,6 +44,16 @@ displayed_sidebar: docs
 | ------- | ---- | ----------------------------------------------------------------------------- |
 | context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/client-server-optimization.md) のラベル。 |
 
+:::info
+
+For performance reasons, in 4D single-user and 4D Server, the returned entity selection is directly connected to the current selection of *dsTable* (it is not a copy). Until the current selection is replaced, changes made to one are reflected in the other. For example, [`REDUCE SELECTION`](../commands-legacy/reduce-selection.md) shortens the entity selection, and [`.add()`](../API/EntitySelectionClass.md#add) on the entity selection adds the entity to the current selection. To get an independent entity selection, call [`.copy()`](../API/EntitySelectionClass.md#copy) on the result:
+
+```4d
+$es:=Create entity selection([Employee]).copy()
+```
+
+:::
+
 ## 例題
 
 ```4d

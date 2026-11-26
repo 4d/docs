@@ -13,6 +13,12 @@ Si está acostumbrado a codificar con **VS Code**, también puede usar este edit
 
 :::
 
+:::note
+
+The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.
+
+:::
+
 ## Llamada al depurador
 
 Hay varias formas de conseguir que el depurador se muestre:

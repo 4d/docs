@@ -9,17 +9,13 @@ Leia [**O que há de novo no 4D 21 R6**](https://blog.4d.com/whats-new-in-4d-21-
 
 #### Destaques
 
-- Funções de classe e construtores de classe podem ser documentados com um [bloco de comentário acima de sua declaração](../Concepts/classes.md#function-comments): a descrição e os comentários dos parâmetros são exibidos no autocompletar e na ajuda do [editor de código 4D](../code-editor/write-class-method.md#help-tips) e do VS Code, e no [arquivo de sintaxe de componentes compilados](../Extensions/develop-components.md#code-completion-for-compiled-components).
-- Linhas de comentário `MCP:` e tags de comportamento fornecem os [metadados da ferramenta MCP](../Concepts/classes.md#mcp-tool-metadata) das declarações `exposed MCP Function`, gerados na compilação em [`Project/DerivedData/syntaxMCP.json`](../Project/architecture.md#deriveddata) ou fornecidos por um arquivo [`Resources/syntaxMCP.json`](../Project/architecture.md#resources) personalizado.
-- Novo [servidor MCP](../WebServer/mcp-server.md) nativo no 4D Web Server: clientes de IA podem chamar suas funções [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) e as [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools), com os mesmos [papéis e privilégios](../ORDA/privileges.md#mcp-tools) que as requisições REST. O servidor MCP é configurado com a nova propriedade [`WebServer.mcp`](../API/WebServerClass.md#mcp).
-- Clientes MCP autenticam-se com Fine-Grained Tokens gerenciados com as novas funções [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken), [`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens) e [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken). A função reservada [`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) da classe DataStore prepara cada sessão MCP, cujo [`Session.info.type`](../API/SessionClass.md#info) é "mcp".
-- [Modo OAuth 2.1](../WebServer/mcp-server.md#oauth-21-mode) opcional do servidor MCP, habilitado pela função reservada [`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant) da classe DataStore. As concessões são gerenciadas com as novas funções [`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants) e [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant).
-- Novo comando [`MCP`](../commands/mcp) e classe [`4D.MCPContext`](../API/MCPContextClass.md) para [pedir confirmação ao usuário](../WebServer/mcp-server.md#asking-the-user-for-confirmation) em ferramentas MCP.
-- Um [MCP Bundle](../WebServer/mcp-server.md#claude-desktop-bundle) de referência permite que o Claude Desktop conecte-se a um servidor MCP 4D na rede local.
+- Novo [servidor MCP](../WebServer/mcp-server.md) nativo no 4D Web Server. Clientes de IA podem chamar funções [`exposed MCP Function`](../ORDA/ordaClasses.md#exposed-mcp-function) e [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools), com os mesmos [papéis e privilégios](../WebServer/mcp-server.md#permissions) que as requisições REST. O servidor é configurado com [`WebServer.mcp`](../API/WebServerClass.md#mcp), suporta Fine-Grained Tokens e [OAuth 2.1](../WebServer/mcp-server.md#oauth-21-mode) opcional, e pode ser usado com o [Claude Desktop bundle](../WebServer/mcp-server.md#claude-desktop-bundle).
+- Novos recursos de linguagem e API para MCP: o comando [`MCP`](../commands/mcp) e a classe [`4D.MCPContext`](../API/MCPContextClass.md), além de novas funções da classe DataStore para Fine-Grained Tokens ([`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken), [`ds.listFineGrainedTokens()`](../API/DataStoreClass.md#listfinegrainedtokens), [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken)), autenticação de sessão ([`mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated)) e concessões OAuth ([`mcpGrant()`](../ORDA/ordaClasses.md#function-mcpgrant), [`ds.listOAuthGrants()`](../API/DataStoreClass.md#listoauthgrants), [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant)).
 
 #### Mudanças de comportamento
 
-- O compilador agora reporta [avisos em comentários de função](../Project/compiler.md#warnings-on-function-comments): uma função de classe ou construtor de classe que possui um bloco de comentário acima de sua declaração recebe um aviso para cada parâmetro sem um comentário `$name:`, e para tags de comportamento MCP contraditórias.
+- [Herança de permissões](../ORDA/privileges.md#inherited-permissions): uma permissão de função agora herda cada ação que não lista de seu singleton ou dataclass, depois do datastore, e uma permissão **promote** nunca concede **execute**. Anteriormente, uma permissão de função singleton que definia apenas **promote** recorria à permissão **execute** do datastore, o que podia abrir uma função restrita para toda sessão autorizada a executar no datastore (por exemplo via REST). Para manter um privilégio capaz de chamar uma função promovida, liste-o na permissão **execute** da função.
+- O live checker e o compilador agora geram [avisos](../Project/compiler.md#warnings) em comentários de função: uma função de classe ou construtor de classe que possui um bloco de comentário acima de sua declaração recebe um aviso para cada parâmetro sem um comentário $name:, e para tags de comportamento MCP contraditórias.
 
 ## 4D 21 R5
 
@@ -42,7 +38,8 @@ Leia [**O que há de novo no 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-
 - Support of ["System rounded" border line style](../FormObjects/properties_BackgroundAndBorder.md#border-line-style) property for [inputs](../FormObjects/input_overview.md), compliant with macOS *Liquid glass* design. Also supported by [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) and [`OBJECT GET BORDER STYLE`](../commands/object-get-border-style) commands.
 - New ["Border color" property](../FormObjects/properties_BackgroundAndBorder.md#border-color) available for most form objects. [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) and [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) commands support a new *borderColor* parameter.
 - [New **Code editor** preference](../Preferences/methods.md#code-editor) to use automatically the 4D code editor or VS Code when creating or opening 4D methods and classes.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R5): lista de todos os bugs corrigidos em 4D 21 R5.
+- [Novo componente **4D Embedding Studio**](../embedding-studio/overview.md) que ajuda você a criar e gerenciar embeddings vetoriais dentro de suas entities.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/21_R5): lista de todos os bugs corrigidos em 4D 21 R5.
 
 #### Mudanças de comportamento
 
@@ -68,7 +65,7 @@ Leia [**O que há de novo no 4D v21 R4**](https://blog.4d.com/whats-new-in-4d-21
 - New [`4D.QuotaManager`](../API/QuotaManagerClass.md) class to handle threshold objects for protecting the server.
 - New [`$entityset/$release`](../REST/$entityset.md#entitysetrelease) REST request to delete entity sets from server cache.
 - Improved session information in the 4D Server Administration window in a new [**Sessions**](../ServerWindow/sessions.md) page (formerly **Users**).
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R4): lista de todos os bugs corrigidos em 4D 21 R4.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/21_R4): lista de todos os bugs corrigidos em 4D 21 R4.
 
 #### Mudanças de comportamento
 
@@ -91,7 +88,7 @@ Leia [**O que há de novo no 4D v21 R3**](https://blog.4d.com/whats-new-in-4d-21
 - Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions.
 - New [printing renderer](../FormEditor/forms.md#print-rendering-engine) for forms on Liquid glass and Fluent UI interfaces. New compatibility options to [enable the renderer on Classic interfaces](../FormEditor/forms.md#legacy-print-renderer).
 - Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R3): lista de todos os bugs corrigidos em 4D 21 R3.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/21_R3): lista de todos os bugs corrigidos em 4D 21 R3.
 
 #### Support of Liquid glass on macOS
 
@@ -120,7 +117,7 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 - You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon).
 - 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features.
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in content**](../Project/search-replace.md#replace-in-content) features can now support editable components.
-- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos os bugs corrigidos em 4D 21 R2.
+- [**Lista de erros corrigida**](https://developer.4d.com/FixedBugsList/versions/21_R2): lista de todos os bugs corrigidos em 4D 21 R2.
 
 #### Prévia do desenvolvedor
 

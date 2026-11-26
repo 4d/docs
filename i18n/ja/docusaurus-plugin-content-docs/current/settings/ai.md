@@ -95,7 +95,7 @@ AI プロバイダーを設定しているときには、自分のAPI キーを�
 
 ## モデルエイリアス
 
-モデルエイリアスページを使用すると、登録したプロバイダーの一覧からコード内で使用したいプロバイダーを選択肢、それに*エイリアス* で名前をつけることができます。モデルエイリアスのおかげで、モデル名のハードコードを避けることができ、コードを変更することなくモデルを切り替え、環境を超えて一貫性を保つことができます。
+モデルエイリアスページを使用すると、登録したプロバイダーの一覧からコード内で使用したいプロバイダーを選択肢、それに*エイリアス* で名前をつけることができます。モデルエイリアスのおかげで、モデル名のハードコードを避けることができ、コードを変更することなくモデルを切り替え、環境を超えて一貫性を保つことができます。 Model aliases are also fully supported by the [4D Embedding Studio](../embedding-studio/overview.md) component.
 
 モデルエイリアスを使用している場合:
 
@@ -131,15 +131,17 @@ AI プロバイダーを設定しているときには、自分のAPI キーを�
 
 ### モデルエイリアスの使用
 
-モデルエイリアスは、モデル名が必要なところであればどこでもモデルエイリアス名を直接使用することができます(モデルエイリアスがサポートされていれば)。
+モデルエイリアスは、モデル名が必要なところであればどこでもモデルエイリアス名を直接使用することができます(モデルエイリアスがサポートされていれば)。例:
 
-例えば、4D-AIKit 内では次のシンタックスでモデルを参照することができます: *{model:"ModelName"}* ここでの *ModelName* はモデルエイリアスタブ内で定義されている有効なモデルです:
+- in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
 var $result := $client.chat.completions.create($messages; \
     {model: "Chat Model"})
 ```
+
+- in 4D Embedding Studio, the [list of models](../embedding-studio/overview.md#selecting-a-model) available for generating embeddings includes the model aliases.
 
 ### 参照
 

@@ -11,9 +11,9 @@ title: VP SET SELECTION
 
 <div class="no-index">
 
-| Paramètres | Type   |    | Description                        |
-| ---------- | ------ | -- | ---------------------------------- |
-| rangeObj   | Object | -> | Objet plage de toutes les cellules |
+| Paramètres | Type   |    | Description             |
+| ---------- | ------ | -- | ----------------------- |
+| rangeObj   | Object | -> | Objet plage de cellules |
 
 </div>
 <!-- END REF -->

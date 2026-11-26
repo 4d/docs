@@ -109,7 +109,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [右](properties_CoordinatesAndSizing.md#右)                                | ○         | ○             | ○                            |
 | [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列)                       | ○         |               |                              |
 | [行コントロール配列](properties_ListBox.md#行コントロール配列)                             | ○         |               |                              |
-| [行フォントカラー配列](properties_Text.md#行フォントカラー式)                               | ○         |               |                              |
+| [行フォントカラー配列](properties_Text.md#行フォントカラー配列])                             | ○         |               |                              |
 | [行の高さ](properties_CoordinatesAndSizing.md#行の高さ)                          | ○         |               |                              |
 | [行高さ配列](properties_CoordinatesAndSizing.md#行高さ配列)                        | ○         |               |                              |
 | [行スタイル配列](properties_Text.md#行スタイル配列)                                    | ○         |               |                              |
@@ -123,7 +123,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [透過](properties_BackgroundAndBorder.md#透過)                               | ○         | ○             | ○                            |
 | [タイプ](properties_Object.md#タイプ)                                          | ○         | ○             | ○                            |
 | [下線](properties_Text.md#下線)                                              | ○         | ○             | ○                            |
-| [変数あるいは式](properties_Object.md#変数あるいは式)                                  | ○         | ○             |                              |
+| [変数あるいは式](properties_Object.md#variable-or-expression)                   | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                            | ○         | ○             | ○                            |
 | [縦線カラー](properties_Gridlines.md#縦線カラー)                                   | ○         | ○             | ○                            |
 | [縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング)                  | ○         | ○             | ○                            |

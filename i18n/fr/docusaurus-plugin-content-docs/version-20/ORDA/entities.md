@@ -9,10 +9,10 @@ Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (e
 
 Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-- Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-- You can also create an entity using the `dataClass.new( )` method.
+- Les entités étant des références à des enregistrements de la base de données, vous pouvez créer des entités en créant des enregistrements avec le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
+- Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
 
-Gardez à l'esprit que l'entité est créée uniquement en mémoire. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter au datastore, vous devez appeler la fonction `entity.save()`.
 
 Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
 
@@ -90,7 +90,7 @@ Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et pass
 
 ## Utilisation des attributs d'entités
 
-Les attributs d'entité stockent les données et sont reliés aux champs correspondants dans la table correspondante. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Les attributs d'entité stockent les données et sont reliés aux champs correspondants dans la table correspondante. Les attributs d'entité de type stockage peuvent être écrits ou lus sous forme de propriétés simples de l'objet entité, tandis que les attributs de type **relatedEntity** ou **relatedEntities** renverront une entité ou une entity selection.
 
 > Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [Attributs de stockage et de relation](dsMapping.md#storage-and-relation-attributes).
 
@@ -179,7 +179,7 @@ Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selec
 
 - En lançant une requête sur les entités [dans une dataclass](API/DataClassClass.md#query) ou dans une [entity selection existante](API/EntitySelectionClass.md#query) ;
 - En utilisant la fonction [`.all()`](API/DataClassClass.md#all) pour sélectionner toutes les entités d'une dataclass ;
-- Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- En utilisant la commande `Create entity selection` ou la fonction [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass pour créer une entity selection vide ;
 - En utilisant la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une entity selection existante ;
 - En utilisant l'une des différentes fonctions de la [classe Entity selection](API/EntitySelectionClass.md) qui retourne une nouvelle entity selection, comme [`.or()`](API/EntitySelectionClass.md#or) ;
 - En utilisant un attribut de relation de type "related entities" (voir ci-dessous).
@@ -244,13 +244,12 @@ Une nouvelle entity selection **hérite** de la nature de l'entity selection ori
 Exemples :
 
 ```4d
-$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
-	//$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
-
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-	//$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+$highSal:=ds.Employee.query("salary = :1" ; 1000000)
+  //$highSal est partageable à cause de la requête sur dataClass
+$comp:=$highSal.employer //$comp est partageable parce que $highSal est partageable
+$lowSal:=ds.Employee.query("salary = :1" ; 10000).copy() 
+ //$lowSal est modifiable à cause du copy()
+$comp2:=$lowSal.employer //$comp2 est modifiable parce que $lowSal est modifiable
 ```
 
 :::note Entity selections retournées depuis le serveur
@@ -258,17 +257,17 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si [`copy()`](API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter [`copy()`](API/EntitySelectionClass.md#copy) côté client. Exemple :
 
 ```4d
-	//a function is always executed on the server
+	//une fonction est toujours exécutée sur le serveur
 exposed Function getSome() : cs.MembersSelection
     return This.query("ID >= :1"; 15).orderBy("ID ASC")
- 
-	//in a method, executes on the remote side
+
+	//dans une méthode, s'exécute côté distant
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result:=ds.Members.getSome() //$result est partageable
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result est maintenant modifiable
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -281,26 +280,25 @@ Vous travaillez avec deux entity selections que vous souhaitez transmettre à un
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Nous obtenons les entity selections pour les factures payées et non payées
 
-$paid:=ds.Invoices.query("status=:1"; "Paid")
-$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
+$paid:=ds.Invoices.query("status=:1" ; "Paid")
+$unpaid:=ds.Invoices.query("status=:1" ; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
-CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
- 
+//Nous passons les références des entity selection comme paramètres au worker
+CALL WORKER("mailing" ; "sendMails" ; $paid; $unpaid)
+
 ```
 
 La méthode `sendMails` :
 
 ```4d
-
- #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
+#DECLARE ($paid : cs.InvoicesSelection ; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
- 
+
  var $server; $transporter; $email; $status : Object
- 
-  //Prepare emails
+
+  //Préparation des emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -308,18 +306,17 @@ La méthode `sendMails` :
  $transporter:=SMTP New transporter($server)
  $email:=New object()
  $email.from:="myName@company.com"
- 
-  //Loops on entity selections
- For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Payment OK for invoice # "+String($invoice.number)
 
+  //Boucle sur les entity selections
+ For each($invoice;$paid)
+    $email.to:=$invoice.customer.address // adresse email du client
+    $email.subject:="Paiement OK pour la facture #"+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
- 
+
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Please pay invoice # "+String($invoice.number)
+    $email.to:=$invoice.customer.address // adresse email du client
+    $email.subject:="Veuillez payer la facture #"+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 ```
@@ -329,8 +326,8 @@ La méthode `sendMails` :
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés d'entity selections et propriétés d'entités. Lorsqu'il est utilisé avec une entity selection, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- $localEmails:=$locals.emailAddress //collection of email addresses (strings)
+ $locals:=ds.Person.query("city =: 1"; "San Jose") // entity selection de personnes
+ $localEmails:=locals.emailAddress // collection d'adresses e-mail (chaînes)
 ```
 
 Ce code retourne dans *$localEmails* une collection d'adresses e-mail sous forme de chaînes.
@@ -342,9 +339,9 @@ En plus des multiples manières d'effectuer des recherches, vous pouvez égaleme
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myParts:=ds.Part.query("ID < 100") //Retourner les pièces dont l'ID est inférieur à 100
  $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  //Toutes les factures dont au moins une ligne est liée à une pièce dans $myParts
 ```
 
 La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée.

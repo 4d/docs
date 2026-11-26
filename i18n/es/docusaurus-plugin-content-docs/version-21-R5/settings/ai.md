@@ -95,7 +95,7 @@ Cuando se utiliza 4D en modo cliente/servidor, se **recomienda encarecidamente**
 
 ## Alias de modelos
 
-La página Alias de modelos le permite listar modelos de proveedores registrados que desea utilizar en su código y nombrarlos con *alias*. Gracias a los alias de modelos, evita tener que codificar los nombres de los modelos de forma estática, puede cambiar de modelo sin modificar el código y mantiene la coherencia entre los distintos entornos.
+La página Alias de modelos le permite listar modelos de proveedores registrados que desea utilizar en su código y nombrarlos con *alias*. Gracias a los alias de modelos, evita tener que codificar los nombres de los modelos de forma estática, puede cambiar de modelo sin modificar el código y mantiene la coherencia entre los distintos entornos. Model aliases are also fully supported by the [4D Embedding Studio](../embedding-studio/overview.md) component.
 
 Cuando se utiliza un alias de modelo:
 
@@ -131,15 +131,17 @@ Para editar o eliminar un alias:
 
 ### Utilizar un alias de modelo
 
-Puede utilizar directamente el nombre del alias del modelo siempre que sea necesario un nombre del modelo (siempre y cuando se admitan los alias del modelo).
+Puede utilizar directamente el nombre del alias del modelo siempre que sea necesario un nombre del modelo (siempre y cuando se admitan los alias del modelo). Ejemplos:
 
-Por ejemplo, en 4D-AIKit, puede hacer referencia a un modelo con la sintaxis: *{model:"ModelName"}*, donde *ModelName* es un modelo válido definido en la pestaña Alias de modelos:
+- in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
 var $result := $client.chat.completions.create($messages; \
     {model: "Chat Model"})
 ```
+
+- in 4D Embedding Studio, the [list of models](../embedding-studio/overview.md#selecting-a-model) available for generating embeddings includes the model aliases.
 
 ### Ver también
 

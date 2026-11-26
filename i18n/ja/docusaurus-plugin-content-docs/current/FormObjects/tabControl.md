@@ -48,7 +48,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 ### オブジェクトの使用
 
-[コレクション](../Concepts/dt_collection.md) をカプセル化した [オブジェクト](../Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#変数あるいは式) として割り当てることができます。このオブジェクトには、次のプロパティが格納されていなくてはなりません:
+[コレクション](../Concepts/dt_collection.md) をカプセル化した [オブジェクト](../Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#variable-or-expression) として割り当てることができます。このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
 | プロパティ          | 型          | 説明                                                                          |
 | -------------- | ---------- | --------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 この初期化コードはユーザーにフォームを表示する前に実行しなければなりません。
 
-次の例では、タブコントロールの [式](properties_Object.md#変数あるいは式) として `Form.tabControl` が定義されています。フォームオブジェクトに [`gotoPage` 標準アクション](#gotopage-標準アクション) を関連付けることができます。
+次の例では、タブコントロールの [式](properties_Object.md#variable-or-expression) として `Form.tabControl` が定義されています。フォームオブジェクトに [`gotoPage` 標準アクション](#gotopage-標準アクション) を関連付けることができます。
 
 ```4d
 Form.tabControl:=New object
@@ -124,7 +124,7 @@ FORM GOTO PAGE(arrPages)
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [式の型](properties_Object.md#式の型式タイプ) -
 [値を記憶](properties_Object.md#値を記憶) -
 [CSSクラス](properties_Object.md#cssクラス) -

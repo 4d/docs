@@ -13,7 +13,7 @@ Por exemplo, se você instalou dois componentes em sua aplicação principal, vo
 
 Além da memória, não há limite para o número de componentes e, assim, de servidores web, que podem ser anexados a um único projeto de aplicação 4D.
 
-Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
+Cada servidor web 4D, incluido el servidor web de la aplicação principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicação actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
 
 > Los [comandos WEB](../commands/theme/Web_Server) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
 
@@ -95,9 +95,22 @@ Estas propriedades são definidas:
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
 - Se o servidor web não for iniciado, as propriedades contêm os valores que serão usados na próxima inicialização do servidor web.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Se o servidor web estiver iniciado, as propriedades contêm os valores reais usados pelo servidor web (as configurações padrão podem ter sido substituídas pelo parâmetro `settings` da função [`.start()`](API/WebServerClass.md#start)).
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> *isRunning*, *name*, *openSSLVersion*, e *perfectForwardSecrecy* são propriedades somente leitura que não podem ser predefinidas no parâmetro objeto `settings` para a função [`start()`](API/WebServerClass.md#start).
+
+### Configurações do servidor MCP
+
+A propriedade [`mcp`](../API/WebServerClass.md#mcp) contém as configurações do [servidor MCP](mcp-server.md) do servidor web da aplicação host: `enabled`, `serverName`, `serverVersion`, `instructions`, `maxResults`, `crudTools`, `allowInsecureHTTP`, `trustedProxies`, `publicURL` e `oauthDynamicRegistration`. Diferente das outras propriedades:
+
+- `mcp.enabled` pode ser modificada enquanto o servidor web está em execução, para ativar ou desativar o servidor MCP sem reiniciar o servidor web (a alteração não é salva nas configurações: o próximo início do 4D usa as configurações); as demais propriedades `mcp` são somente leitura e só podem ser definidas nas configurações ou passadas para a função [`.start()`](../API/WebServerClass.md#start),
+- as configurações `mcp` passadas para a função [`.start()`](../API/WebServerClass.md#start) são mantidas quando o servidor web é reiniciado.
+
+```4d
+var webServer : 4D.WebServer:=WEB Server
+	//enable the MCP server of the running web server
+webServer.mcp.enabled:=True
+```
 
 ## Âmbito dos comandos 4D Web
 

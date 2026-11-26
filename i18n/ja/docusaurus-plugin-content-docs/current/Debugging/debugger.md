@@ -13,6 +13,12 @@ title: デバッガー
 
 :::
 
+:::note
+
+The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.
+
+:::
+
 ## デバッガーの呼び出し
 
 デバッガーを開くには、次のような方法があります:

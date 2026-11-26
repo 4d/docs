@@ -3626,18 +3626,18 @@ No *rangeObj*, passe o objeto de gama de células onde os valores, formatando, e
 
 No *dataObject*, passa o objeto que contém os dados da célula, a formatação e as fórmulas a serem coladas.
 
-Na opção opcional *opções* , você pode especificar o que colar no intervalo de células. Valores possíveis:
+No parâmetro opcional *options*, você pode especificar o que colar no intervalo de células. Valores possíveis:
 
-| Parâmetros                                     | Descrição                                                                  |
-| ---------------------------------------------- | -------------------------------------------------------------------------- |
-| `vk clipboard options all`                     | Cola todos os objectos de dados, incluindo valores, formatação e fórmulas. |
-| `vk clipboard options formatting`              | Cola apenas a formatação.                                                  |
-| `vk clipboard options formulas`                | Cola apenas as fórmulas.                                                   |
-| `vk clipboard options formulas and formatting` | Cola fórmulas e formatação.                                                |
-| `vk clipboard options values`                  | Cola apenas valores.                                                       |
-| `vk clipboard options value and formatting`    | Cola valores e formatação.                                                 |
+|Constant|Description|
+|---|---|
+|`vk clipboard options all`|Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.|
+|`vk clipboard options formatting`|Cola apenas a formatação.|
+|`vk clipboard options formulas`|Cola apenas as fórmulas.|
+|`vk clipboard options formulas and formatting`|Cola fórmulas e formatação.|
+|`vk clipboard options values`|Cola apenas valores.|
+|`vk clipboard options value and formatting`|Cola valores e formatação.|
 
-As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
+As opções de colagem definidas nas opções da pasta de trabalho [workbook options](#vp-set-workbook-options) são levadas em consideração.
 
 Se *options* se refere a uma opção de colar não presente no objeto copiado (por exemplo, fórmulas), o comando não faz nada.
 
@@ -3678,7 +3678,7 @@ No parâmetro opcional *sheet* , você pode designar uma planilha específica pa
 
 > * As áreas do 4D View Pro só podem ser impressas com o comando `VP PRINT`.
 > * Comandos do tema de idioma 4D **Imprimir** não são suportados pela `VP PRINT`.
-> * Esse comando é destinado a impressão individual pelo usuário final. Para trabalhos de impressão automáticos, recomendamos exportar a área 4D View Pro como um PDF com o método [EXPORT DOCUMENT](#vp-export-document).
+> * Esse comando é destinado a impressão individual pelo usuário final. Para trabalhos de impressão automáticos, recomendamos exportar a área 4D View Pro como um PDF com o método [VP EXPORT DOCUMENT](#vp-export-document).
 
 #### Exemplo
 

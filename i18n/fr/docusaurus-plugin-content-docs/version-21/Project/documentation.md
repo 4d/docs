@@ -3,7 +3,7 @@ id: documentation
 title: Documenter un projet
 ---
 
-In application projects, you can document your methods, classes, and forms. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
+Dans les projets d'application, vous pouvez documenter vos méthodes, vos classes et vos formulaires. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
 
 Les éléments de projet suivants peuvent être documentés :
 

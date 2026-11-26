@@ -580,13 +580,31 @@ Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet d
 
 Trois valeurs sont disponibles :
 
-- "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
-- "Lax" : Les cookies ne sont pas envoyés lors de sous-requêtes intersites (par exemple pour charger des images ou des cadres dans un site tiers), mais sont envoyés lorsqu'un utilisateur navigue vers le site d'origine (c'est-à-dire lorsqu'il suit un lien).
+- "Strict" (valeur par défaut de l'attribut `SameSite` pour les cookies de session 4D) : le cookie de session n'est envoyé qu'avec les requêtes provenant de pages du même site, et jamais avec celles provenant d'autres sites web. Un "site" correspond à un domaine et à tous ses sous-domaines, avec le même schéma : `https://app.example.com` et `https://blog.example.com` constituent le même site, tandis que `http://app.example.com` en est un autre.
+- "Lax" : les cookies ne sont pas envoyés lors de sous-requêtes inter-sites (par exemple pour charger des images ou des frames provenant d'un site tiers), mais ils sont envoyés lorsqu'un utilisateur accède au site d'origine via une requête GET (c'est-à-dire lorsqu'il suit un lien).
 - "None" : Les cookies sont envoyés dans tous les contextes, c'est-à-dire dans les réponses aux demandes primaires et cross-origin. Lorsque la valeur "None" est utilisée, l'attribut du cookie `Secure` doit également être défini (sinon le cookie sera bloqué).
 
-La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
+#### Incidence sur les fonctions exposées
 
-> Il n'est pas recommandé de définir `SameSite=None` sur un serveur HTTP car l'attribut `Secure` sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.
+Toute page Web ouverte dans le navigateur d'un utilisateur peut amener ce navigateur à envoyer des requêtes à votre application. Si l'utilisateur a ouvert une session Web 4D dans le même navigateur, la valeur `SameSite` détermine si ces requêtes contiennent le cookie de session 4D :
+
+- avec le cookie, la requête s'exécute dans la session de l'utilisateur. Cela peut être voulu (depuis un portail intranet, par exemple), mais un site web malveillant peut s'en servir pour agir au nom de l'utilisateur (falsification de requête inter-site *CSRF*) ;
+- sans ce cookie, la requête est exécutée en tant que guest.
+
+Dans les deux cas, la fonction n'est exécutée que si les privilèges de cette session le permettent.
+
+| Requête provenant d'un autre site web vers                                                                           | "Strict"                    | "Lax"                                                                                                                          | "None"                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| une fonction [exposée](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) (POST uniquement) | S'exécute en tant qu'invité | S'exécute en tant qu'invité                                                                                                    | S'exécute dans la session de l'utilisateur (formulaire, script)                           |
+| une fonction exposée [onHTTPGet](../ORDA/ordaClasses.md#onhttpget-keyword) (GET et POST)          | S'exécute en tant qu'invité | S'exécute dans la session de l'utilisateur si provient d'un lien ou d'une redirection ; sinon, en mode invité. | S'exécute dans la session de l'utilisateur (lien, redirection, image, formulaire, script) |
+
+:::note Notes
+
+- N'oubliez pas qu'un site contient ses sous-domaines. Quelle que soit la valeur de `SameSite`, les requêtes envoyées par les pages d'une autre application de votre site (par exemple https://blog.example.com vers https://app.example.com) s'exécutent dans la session de l'utilisateur.
+- N'utilisez l'option "None" que si votre application doit être utilisée au sein d'un autre site web (par exemple dans un frame), et assurez-vous que chaque fonction exposée peut s'exécuter en toute sécurité dans la session de l'utilisateur lorsqu'un autre site web la sollicite.
+- La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`). Il n'est pas recommandé de définir `SameSite=None` sur un serveur HTTP car l'attribut `Secure` sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.
+
+:::
 
 ## Utiliser des process préemptifs
 

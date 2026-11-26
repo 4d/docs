@@ -29,7 +29,7 @@ title: リストボックスのヘッダーとフッター
 ### ヘッダー特有のプロパティ
 
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [タイトル](properties_Object.md#タイトル) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [パス名](properties_TextAndPicture.md#ピクチャーパス名) -
@@ -61,7 +61,7 @@ title: リストボックスのヘッダーとフッター
 ### フッター特有のプロパティ
 
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [式の型](properties_Object.md#式の型式タイプ) -
 [変数の計算](properties_Object.md#変数の計算) -
 [CSSクラス](properties_Object.md#cssクラス) -

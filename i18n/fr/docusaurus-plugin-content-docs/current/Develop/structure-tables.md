@@ -3,363 +3,363 @@ id: structure-tables
 title: Tables
 ---
 
-Tables are the foundation of every 4D database. Each table defines a collection of records that share the same set of fields and properties. In the Structure editor, tables are represented as graphic objects that you can create, rename, or delete, and whose attributes you can configure individually.
+Les tables sont le fondement de chaque base de données 4D. Chaque table définit un ensemble d'enregistrements qui partagent les mêmes champs et propriétés. Dans l'Editeur de structure, les tables sont représentées sous forme d'objets graphiques que vous pouvez créer, renommer ou supprimer, et dont vous pouvez configurer les attributs individuellement.
 
-Using the tools provided by 4D, you can:
+Grâce aux outils fournis par 4D, vous pouvez :
 
-- Define tables and manage their primary keys and relations
-- Set and edit table-level properties such as triggers, visibility, and replication
-- Control naming rules and organize tables into folders for easier maintenance
+- Définir des tables et gérer leurs clés primaires et leurs relations
+- Définir et modifier les propriétés de tables, telles que les triggers, la visibilité et la réplication
+- Gérer les règles de nommage et regrouper les tables dans des dossiers pour faciliter leur maintenance
 
-## Creating a table
+## Créer une table
 
-You can create a new table either directly in the Structure window, or via a dialog box. Direct creation is faster; but creation using the dialog box lets you specify certain parameters of the table and cancel the operation when necessary. You can also create tables using copy-paste.
+Vous pouvez créer une nouvelle table soit directement dans la fenêtre de Structure, soit via une boîte de dialogue. La création directe est plus rapide ; toutefois, la création via la boîte de dialogue vous permet de définir certains paramètres de la table et d'annuler l'opération si nécessaire. Vous pouvez également créer des tables par copier-coller.
 
-- To create a new table directly:
+- Pour créer directement une nouvelle table :
 
-1. Right-click an empty area of the Structure editor window, then choose **Add Table...** from the context menu.  
-   **OR**  
-   In the add objects menu of the [Structure editor toolbar](./structure-editor.md#toolbar), choose the Table option.
+1. Cliquez avec le bouton droit de la souris sur une zone vide de la fenêtre de l'Editeur de structure, puis sélectionnez **Ajouter table** dans le menu contextuel.  
+   **OU**  
+   Dans le menu d'ajout d'objets de la [barre d'outils de l'éditeur de structure](./structure-editor.md#toolbar), sélectionnez l'option Table.
 
-4D creates the table directly in the Structure editor. You can then change its name, add fields, etc.
+4D crée la table directement dans l'Editeur de structure. Vous pouvez ensuite modifier son nom, ajouter des champs, etc.
 
 :::note
 
-If you want to put the table in a specific folder, you need to use the Home Page of the Explorer.
+Si vous souhaitez placer la table dans un dossier spécifique, vous devez utiliser la page d'accueil de l'Explorateur.
 
 :::
 
-- To create a new table using the "New table" dialog box:
+- Pour créer une table à l'aide de la boîte de dialogue "Nouvelle table" :
 
-1. Choose **New > Table...** in the **File** menu (or in the **New** button of the 4D tool bar).  
-   **OR**  
-   On the Tables Page of the Explorer, click on the **\[+]** button.
+1. Sélectionnez **Nouveau > Table...** dans le menu **Fichier** (ou cliquez sur le bouton **Nouveau** de la barre d'outils 4D).  
+   **OU**  
+   Dans la page Tables de l'Explorateur, cliquez sur le bouton **\[+]**.
 
-The "New table" dialog box appears. 4D names the first table `Table_1` and then numbers them sequentially:
+La boîte de dialogue "Créer une nouvelle table" s'affiche. 4D nomme la première table `Table_1` puis les numérote de manière séquentielle :
 
 ![](../assets/en/Develop/new-table.png)
 
-2. (optional) Modify the [name of the table](../Concepts/identifiers.md#tables-and-fields) you want to create.
-3. (optional) Specify the folder in which you want to place the new table.  
-   By default, the table is placed at the highest level of the folder hierarchy ("Top Level"). Folders are handled in Home Page of the Explorer.
-4. Click **OK** to validate.  
-   4D creates a new table image. It becomes the selected table image in the Structure editor window.
+2. (facultatif) Modifiez le [nom de la table](../Concepts/identifiers.md#tables-and-fields) que vous souhaitez créer.
+3. (facultatif) Indiquez le dossier dans lequel vous souhaitez placer la nouvelle table.  
+   Par défaut, la table est placée au niveau le plus élevé de la hiérarchie des dossiers ("Niveau supérieur"). Les dossiers sont gérés dans la page d'accueil de l'Explorateur.
+4. Cliquez sur **OK** pour valider.  
+   4D crée une nouvelle image de table. Elle devient l'image de table sélectionnée dans la fenêtre de l'Editeur de structure.
 
-- To create a new table by copy-paste:
+- Pour créer une nouvelle table par copier-coller :
 
-1. Select and copy the table(s) to be duplicated.
-2. Paste the table(s) in the Structure editor window.
+1. Sélectionnez et copiez la ou les table(s) à dupliquer.
+2. Collez la ou les table(s) dans la fenêtre de l'éditeur de structure.
 
-The table is pasted with all its fields and properties.
+La table est collée avec tous ses champs et propriétés.
 
-## Renaming a table
+## Renommer une table
 
-You can rename tables at any time. If you have used the old table name in a method, 4D automatically changes it to the new name provided the method is closed. If the method is open, you must make the changes yourself. Each table name must be unique in the database.
+Vous pouvez renommer les tables à tout moment. Si vous avez utilisé l'ancien nom de table dans une méthode, 4D le remplace automatiquement par le nouveau nom, à condition que la méthode soit fermée. Si la méthode est ouverte, vous devez effectuer les modifications vous-même. Le nom de chaque table doit être unique dans la base de données.
 
-You can rename a table directly in the Structure editor, in the Explorer, or using the Inspector palette.
+Vous pouvez renommer une table directement dans l'Editeur de structure, dans l'Explorateur ou à l'aide de la palette Inspecteur.
 
-To rename a table directly (Structure editor or Tables page of the Explorer), **click twice** on the table name (if the table is already selected, click once), so that it switches to editing mode:
+Pour renommer directement une table (dans l'Editeur de structure ou la page Tables de l'Explorateur), **cliquez deux fois** sur le nom de la table (si celle-ci est déjà sélectionnée, cliquez une fois) afin de passer en mode édition :
 
 ![](../assets/en/Develop/table-rename.png)
 
-Enter the new name and click outside of the table.
+Saisissez le nouveau nom, puis cliquez en dehors de la table.
 
-To rename a table using the Inspector palette of the Structure editor, double-click on the table name (or select **Table Properties...** in the context menu of the table) and enter the new name in the "Name" area.
+Pour renommer une table en utilisant la palette Inspecteur de l'Editeur de structure, double-cliquez sur le nom de la table (ou sélectionnez **Propriétés de la Table...** dans le menu contextuel de la table) et entrez le nouveau nom dans la zone "Nom".
 
 ![](../assets/en/Develop/table-rename-2.png)
 
-4D displays the name and properties of the selected table in the Inspector palette. This palette also indicates the table number. If the Inspector palette is already open but is displaying the properties of another table or another object, just select the desired table image and the palette will then display its properties.
+4D affiche le nom et les propriétés de la table sélectionnée dans la palette Inspecteur. Cette palette indique également le numéro de table. Si la palette Inspecteur est déjà ouverte mais affiche les propriétés d'une autre table ou d'un autre objet, il suffit de sélectionner l'image de la table souhaitée pour que la palette affiche alors ses propriétés.
 
-## Deleting a table
+## Supprimer une table
 
-You can delete tables from your database. There are two ways of deleting tables in 4D: **permanent deletion** (the table and its data are actually removed from the database) and **non-permanent deletion** (the table is simply put into the Trash of the Explorer and may be recovered subsequently).
+Vous pouvez supprimer des tables de votre base de données. Il existe deux façons de supprimer des tables dans 4D : la **suppression permanente** (la table et ses données sont effectivement supprimées de la base de données) et la **suppression non définitive** (la table est simplement placée dans la corbeille de l'Explorateur et peut être récupérée ultérieurement).
 
 :::info
 
-You can also remove tables using the [SQL engine of 4D](https://doc.4d.com/4Dv21/4D/21/4D-SQL-Reference.100-7649299.en.html).
+Vous pouvez également supprimer des tables à l'aide du [moteur SQL de 4D](https://doc.4d.com/4Dv21/4D/21/4D-SQL-Reference.100-7649299.en.html).
 
 :::
 
-### Permanent deletion
+### Suppression permanente
 
-To permanently delete one or more database tables in the Structure editor:
+Pour supprimer définitivement une ou plusieurs table(s) de la base de données dans l'Editeur de structure :
 
-Select the table(s) to be deleted then choose **Clear** from the **Edit** menu or choose **Delete** from the context menu of the table.
+Sélectionnez la ou les table(s) à supprimer, puis choisissez **Effacer** dans le menu **Édition** ou sélectionnez **Supprimer** dans le menu contextuel de la table.
 
-A warning dialog box will ask you to confirm the operation. When you click **OK**, 4D carries out the following operations:
+Une boîte de dialogue d'avertissement vous demandera de confirmer l'opération. Lorsque vous cliquez sur **OK**, 4D effectue les opérations suivantes :
 
-- The table is permanently deleted from the structure. All the data associated with the table are deleted permanently from the data file.
-- Any trigger method associated with the table is deleted.
-- The forms and lists associated with the table are transformed into project forms and are placed in the Trash of the Explorer.
+- La table est définitivement supprimée de la structure. Toutes les données associées à la table sont définitivement supprimées du fichier de données.
+- Toute méthode trigger associée à la table est supprimée.
+- Les formulaires et les énumérations associés à la table sont convertis en formulaires projet et placés dans la corbeille de l'Explorateur.
 
-### Non-permanent deletion
+### Suppression non définitive
 
-Non-permanent deletion of a table consists in putting it in the Trash of the project (which can be accessed via the Explorer), just like the file deletion mechanisms implemented by Windows and macOS.
+La suppression non définitive d'une table consiste à la placer dans la Corbeille du projet (accessible via l'Explorateur), tout comme les mécanismes de suppression de fichiers implémentés par Windows et macOS.
 
-The table then no longer appears in the 4D editors and its contents become inaccessible but it can still be recovered so long as the Trash is not emptied.
+La table n'apparaît alors plus dans les éditeurs 4D et son contenu devient inaccessible, mais elle peut toujours être récupérée tant que la corbeille n'a pas été vidée.
 
-To put one or more tables into the Trash from the Structure editor, choose the **Move to Trash** command from the context menu of the table or select the table(s) to be deleted then press the **Delete** or **Backspace** key. A confirmation dialog box appears. If you click **OK**, the table is put into the Trash. It can be recovered at any time from the Trash Page of the Explorer.
+Pour placer une ou plusieurs table(s) dans la corbeille à partir de l'Editeur de structure, choisissez la commande **Déplacer vers la corbeille** dans le menu contextuel de la table ou sélectionnez la ou les table(s) à supprimer, puis appuyez sur la touche **Suppr** ou **Retour arrière**. Une boîte de dialogue de confirmation s'affiche. Si vous cliquez sur **OK**, la table est mise dans la corbeille. Elle peut être récupérée à tout moment depuis la page "Corbeille" de l'Explorateur.
 
-### Numbers of deleted tables
+### Numéros des tables supprimées
 
-When a table is deleted, the other tables of the database are not renumbered, so as to avoid endangering the stability of the database. It is therefore possible, for example, to have a database with three tables numbered 2, 4 and 5.
+Lorsqu'une table est supprimée, les autres tables de la base de données ne sont pas renumérotées, afin de ne pas compromettre la stabilité de la base de données. Il est donc possible, par exemple, d'avoir une base de données comportant trois tables numérotées 2, 4 et 5.
 
-Note that the numbers of permanently deleted tables are reused when new tables are created subsequently.
+Notez que les numéros des tables supprimées définitivement sont réutilisés lors de la création ultérieure de nouvelles tables.
 
-## Table properties
+## Propriétés des tables
 
-You can set several properties for tables using the **Inspector palette** or, for certain properties, using the context menu for the tables.
+Vous pouvez définir plusieurs propriétés pour les tables en utilisant la **palette Inspecteur** ou, pour certaines propriétés, en utilisant le menu contextuel des tables.
 
 ### Triggers
 
-A [trigger](./triggers) is a method that runs automatically when certain events related to the table occur. Trigger events can be set in the **Inspector palette** or using the context menu associated with the table (right-click on the title area of the table). Check each event for which you want to [activate the trigger](./triggers#activating-and-creating-a-trigger).
+Un [trigger](./triggers) est une méthode qui s'exécute automatiquement lorsque certains événements liés à la table se produisent. Les événements triggers peuvent être définis dans la **palette Inspecteur** ou via le menu contextuel associé à la table (clic droit sur la zone de titre de la table). Cochez chaque événement pour lequel vous souhaitez [activer le trigger](./triggers#activating-and-creating-a-trigger).
 
-You can access the trigger of a table directly from the Structure editor by clicking on the **Edit...** button in the Inspector palette or by selecting **Edit Method...** in the context submenu. You can also create and display triggers with the **Methods Page** of the Explorer.
+Vous pouvez accéder au trigger d'une table directement depuis l'Editeur de structure en cliquant sur le bouton **Editer...** dans la palette Inspecteur ou en sélectionnant **Modifier la méthode...** dans le sous-menu contextuel. Vous pouvez également créer et afficher les triggers dans la **Page Méthodes** de l'Explorateur.
 
-The [information bar](./structure-editor.md#information-bar) of the **Structure editor** indicates the triggers that are activated for each table.
+La [barre d'informations](./structure-editor.md#information-bar) de l'**Editeur de structure** indique les triggers activés pour chaque table.
 
 ### Attributs
 
-You can set different attributes to configure the appearance and general behavior of each table.
+Vous pouvez définir différents attributs pour configurer l'apparence et le comportement général de chaque table.
 
 #### Invisible
 
-This option lets you make a table invisible in the Application mode and for plug-ins. You can activate this option for utility tables or tables that are not being used temporarily.
+Cette option vous permet de masquer une table en mode Application et pour les plug-ins. Vous pouvez activer cette option pour les tables utilitaires ou celles qui sont temporairement inutilisées.
 
-Making a table invisible allows you to limit the operations that a user can perform on a table by making the table and its fields invisible in all editors and some dialog boxes that appear in the Application environment. It can also not be used by plug-ins.
+Rendre une table invisible vous permet de limiter les opérations qu'un utilisateur peut effectuer sur cette table, en masquant la table et ses champs dans tous les éditeurs et dans certaines boîtes de dialogue qui s'affichent en mode Application. Elle ne peut pas non plus être utilisée par les plug-ins.
 
-The editors and dialog boxes concerned in the Application environment include the following:
+Les éditeurs et boîtes de dialogue concernés dans le mode Application sont les suivants :
 
-- All query editors
-- Order by editor
-- [Label editor](../Desktop/labels.md)
-- Quick report editor
-- Exporting and importing data dialog boxes
-- Formula editor
+- Tous les éditeurs de recherche
+- Editeur de tri
+- [Éditeur d'étiquettes](../Desktop/labels.md)
+- Éditeur d'états rapides
+- Boîtes de dialogue d'exportation et d'importation de données
+- Éditeur de formules
 
-In each of these editors, the user is unable to see or choose the table or any of its fields. For instance, the user cannot include any fields from an invisible table in a report or label.
+Dans chacun de ces éditeurs, l'utilisateur ne peut ni voir ni sélectionner la table ni aucun de ses champs. Par exemple, l'utilisateur ne peut pas inclure de champs provenant d'une table invisible dans un état ou une étiquette.
 
 :::note Notes
 
-- When using these editors, users have the option of saving their specifications (e.g., the query or sort they created) to disk files. In this case, any specified tables or fields that are subsequently made invisible may still be used in the operation.
-- Users can type the names of invisible tables and fields in the dialog box.
-- It is also possible to set this attribute for each field individually.
+- Lorsqu'ils utilisent ces éditeurs, les utilisateurs ont la possibilité d'enregistrer leurs spécifications (par exemple, la recherche ou le tri qu'ils ont créés) dans des fichiers sur le disque. Dans ce cas, les tables ou champs spécifiés qui sont ensuite rendus invisibles peuvent tout de même être utilisés dans l'opération.
+- Les utilisateurs peuvent saisir les noms des tables et des champs invisibles dans la boîte de dialogue.
+- Il est également possible de définir cet attribut individuellement pour chaque champ.
 
 :::
 
-Invisible tables and fields are displayed in *italics* in the Structure editor window.
+Les tables et les champs invisibles s'affichent en *italique* dans la fenêtre de l'Editeur de structure.
 
-#### Color of the table image
+#### Couleur de l'image de la table
 
-A color can be attributed to each table. Using colors helps to organize the structure of a large database. For example, you could use one color for all tables that relate to customers and another for tables that relate to inventory.
+Une couleur peut être attribuée à chaque table. L'utilisation des couleurs permet d'organiser la structure d'une base de données volumineuse. Par exemple, vous pourriez utiliser une couleur pour toutes les tables relatives aux clients et une autre pour celles relatives aux stocks.
 
 :::note
 
-It is also possible to attribute a color to each field individually as well as to each relation.
+Il est également possible d'attribuer une couleur à chaque champ individuellement, ainsi qu'à chaque lien.
 
 :::
 
-To set the color of one or more tables, make your selection and then choose the color using:
+Pour définir la couleur d'une ou plusieurs tables, faites votre sélection puis choisissez la couleur en utilisant :
 
-- The **Color** button of the Structure editor toolbar
-- The **Color** command in the context menu of the tables
-- The **Color** option in the **Inspector palette**
+- Le bouton **Couleur** de la barre d'outils de l'éditeur de structure
+- La commande **Couleur** dans le menu contextuel des tables
+- L'option **Couleur** dans la **palette Inspecteur**
 
-The **Automatic** option can be used to apply the standard original color to the table.
+L'option **Automatique** permet d'appliquer la couleur d'origine standard à la table.
 
-#### Expose as REST resource
+#### Exposer avec le service REST
 
-This option controls whether the [table is exposed to REST requests](../REST/configuration.md#exposing-tables).
+Cette option contrôle si la [table est exposée aux requêtes REST](../REST/configuration.md#exposing-tables).
 
 :::note Notes
 
-- You can also set this option at the level of each field of the table.
-- This option is used in the context of [ORDA remote datastore features](../ORDA/remoteDatastores.md).
+- Vous pouvez également définir cette option au niveau de chaque champ de la table.
+- Cette option est utilisée dans le cadre des [fonctionnalités ORDA de datastores distants](../ORDA/remoteDatastores.md).
 
 :::
 
-#### Records definitively deleted
+#### Enregistrements définitivement supprimés
 
-This option lets you optimize the deletion of a selection of records made using the [`DELETE SELECTION`](../commands/delete-selection) command.
+Cette option vous permet d'optimiser la suppression d'une sélection d'enregistrements effectuée à l'aide de la commande [`DELETE SELECTION`](../commands/delete-selection).
 
-When 4D deletes a selection, the record markers are also deleted. A record marker is a header attached to the record that contains information relating to this record. Deleting both markers and records is slower than deleting only records. In certain cases, it may be desirable to not automatically delete the record markers.
+Lorsque 4D supprime une sélection, les marqueurs d'enregistrement sont également supprimés. Un marqueur d'enregistrement est un en-tête associé à l'enregistrement qui contient des informations relatives à celui-ci. La suppression simultanée des marqueurs et des enregistrements est plus lente que la suppression des enregistrements seuls. Dans certains cas, il peut être préférable de ne pas supprimer automatiquement les marqueurs d'enregistrement.
 
-To accelerate the deletion of a large selection made using the [`DELETE SELECTION`](../commands/delete-selection) command, deselect the **Records definitively deleted** option. Record markers will then not be deleted. This option cannot be set by programming.
+Pour accélérer la suppression d'une sélection volumineuse effectuée à l'aide de la commande [`DELETE SELECTION`](../commands/delete-selection), désactivez l'option **Enregistrements définitivement supprimés**. Les marqueurs d'enregistrement ne seront alors pas supprimés. Cette option ne peut pas être configurée par programmation.
 
-#### Enable replication
+#### Activer réplication
 
 :::info Obsolète
 
-Replication and synchronize mechanisms using SQL are deprecated as of 4D 20 R3. They are still supported but it is now recommended to use the [ORDA-based Global Stamp feature](../ORDA/global-stamp.md), providing a flexible and robust solution to implement replication and synchronization in 4D.
+Les mécanismes de réplication et de synchronisation utilisant SQL sont obsolètes depuis la version 4D 20 R3. Ces fonctionnalités sont toujours prises en charge, mais il est désormais recommandé d'utiliser la [fonctionnalité Global Stamp basée sur ORDA](../ORDA/global-stamp.md), qui offre une solution flexible et robuste pour mettre en œuvre la réplication et la synchronisation dans 4D.
 
 :::
 
-#### Include in Log File
+#### Inclure dans le fichier d'historique
 
-By default, this option is checked for all new tables created and for all tables in converted databases. Check this option in order for operations performed on the table’s data to be included in the [database log file](../Backup/log.md) (when it is generated).
+Par défaut, cette option est cochée pour toutes les nouvelles tables créées et pour toutes les tables des bases de données converties. Cochez cette option pour que les opérations effectuées sur les données de la table soient consignées dans le [fichier d'historique de la base de données](../Backup/log.md) (lorsqu'il est généré).
 
-This option must generally be checked for most tables. However, for optimization purposes, you can uncheck it, for example for temporary tables or tables used for importing data.
+Cette option doit généralement être cochée pour la plupart des tables. Toutefois, à des fins d'optimisation, vous pouvez la désélectionner, par exemple pour les tables temporaires ou celles utilisées pour l'importation de données.
 
-It is important to note that this option only indicates that the table’s data must be journaled if the database uses a log file; it does not enable the journaling procedure itself at the database level.
+Il est important de noter que cette option indique simplement que les données de la table doivent être consignées dans le journal si la base de données utilise un fichier d'historique ; elle n'active pas la procédure de journalisation elle-même au niveau de la base de données.
 
 :::note Notes
 
-- This option is grayed out when the table does not have a primary key.
-- 4D displays a warning icon to the right of the **Include in Log File** option when the required conditions are not met. As long as this icon is shown, journaling is not yet enabled.
+- Cette option est désactivée lorsque la table ne dispose pas de clé primaire.
+- 4D affiche une icône d'avertissement à droite de l'option **Inclure dans le fichier d'historique** lorsque les conditions requises ne sont pas remplies. Tant que cette icône s'affiche, la fonction de journalisation n'est pas encore activée.
 
 :::
 
-#### Encryptable
+#### Chiffrable
 
-This option controls whether the data stored in the table must be encrypted on disk when [data file encryption is enabled](../MSC/encrypt.md).
+Cette option permet de déterminer si les données stockées dans la table doivent être chiffrées sur le disque lorsque [le chiffrement du fichier de données est activé](../MSC/encrypt.md).
 
-Since encrypting/decrypting can be time consuming, selecting the tables to encrypt allows you to optimize the performance of encrypted databases. For example, you could set only the tables that contain personal data as **Encryptable**.
+Le chiffrement/déchiffrement pouvant prendre beaucoup de temps, le fait de sélectionner les tables à chiffrer vous permet d'optimiser les performances des bases de données chiffrées. Par exemple, vous pourriez définir comme **Chiffrable** uniquement les tables contenant des données à caractère personnel.
 
-Note that this option flags table(s); it does not perform any encryption or decryption operation. To actually encrypt or decrypt selected table(s) in the data file, you must use the [MSC](../MSC/encrypt.md) or call the [`Encrypt data file`](../commands/encrypt-data-file) command.
+Notez que cette option marque les tables uniquement ; elle n'effectue aucune opération de chiffrement ou de déchiffrement. Pour chiffrer ou déchiffrer effectivement la ou les table(s) sélectionnée(s) dans le fichier de données, vous devez utiliser le [MSC](../MSC/encrypt.md) ou appeler la commande [`Encrypt data file`](../commands/encrypt-data-file).
 
 :::warning
 
-- When you modify the value of this option for a table in an already encrypted database, you must also use the [MSC](../MSC/encrypt.md) or call the [`Encrypt data file`](../commands/encrypt-data-file) command to preserve data consistency. Otherwise, you will not be allowed to save data in the modified table (errors will be returned by 4D when trying to save records).
-- Encryption of data stored outside of the data file is not managed by this option.
+- Lorsque vous modifiez la valeur de cette option pour une table d'une base de données déjà chiffrée, vous devez également utiliser le [MSC](../MSC/encrypt.md) ou exécuter la commande [`Encrypt data file`](../commands/encrypt-data-file) afin de préserver la cohérence des données. Sinon, vous ne pourrez pas enregistrer de données dans la table modifiée (4D renverra des erreurs lorsque vous tenterez d'enregistrer des enregistrements).
+- Le chiffrement des données stockées en-dehors du fichier de données n'est pas pris en charge par cette option.
 
 :::
 
 ### Commentaires
 
-The **Comments** area of the **Inspector palette** lets you store additional information about the table. These comments are available for all the developers. Note that each field and each relation has its own comments area.
+La zone **Commentaires** de la **palette Inspecteur** vous permet d'enregistrer des informations supplémentaires concernant la table. Ces commentaires sont accessibles à tous les développeurs. Notez que chaque champ et chaque lien dispose de sa propre zone de commentaires.
 
 ### SQL
 
-- The "Schemas" menu lists all the SQL schemas specified in the database. You can use this menu to set the schema to which the table will belong (it is also possible to modify this property via SQL commands). Every database has at least one schema, named **DEFAULT_SCHEMA**. By default, all the tables belong to this schema. For more information about SQL schemas, refer to the [**Schemas** section](https://doc.4d.com/4Dv21/4D/21/4D-SQL-engine-implementation.300-7649386.en.html#148386) in the *4D SQL Reference guide*.
-- The information area indicates whether the name of the table respects the rules regarding SQL nomenclature (for example, unlike 4D, SQL does not allow a field name to contain spaces).
+- Le menu "Schémas" répertorie tous les schémas SQL définis dans la base de données. Vous pouvez utiliser ce menu pour définir le schéma auquel la table appartiendra (il est également possible de modifier cette propriété via les commandes SQL). Chaque base de données comporte au moins un schéma, nommé **DEFAULT_SCHEMA**. Par défaut, toutes les tables appartiennent à ce schéma. Pour plus d'informations sur les schémas SQL, consultez la [**section Schémas**](https://doc.4d.com/4Dv21/4D/21/4D-SQL-engine-implementation.300-7649386.en.html#148386) du *Guide de référence 4D SQL*.
+- La zone d'information indique si le nom de la table respecte les règles de nomenclature SQL (par exemple, contrairement à 4D, SQL n'autorise pas les espaces dans les noms de champs).
 
-### Primary keys
+### Clés primaires
 
-A primary key designates the field(s) used for uniquely identifying the records in a table. Setting a primary key is necessary for the [journaling features](../Backup/log.md).
+Une clé primaire désigne le ou les champ(s) utilisé(s) pour identifier de manière unique les enregistrements d'une table. La définition d'une clé primaire est nécessaire pour les [fonctionnalités de journalisation](../Backup/log.md).
 
-You create, edit and/or remove primary keys directly using the context menu of the Structure editor or the [Primary key manager](#primary-key-manager).
+Vous pouvez créer, modifier et/ou supprimer des clés primaires directement à l'aide du menu contextuel de l'éditeur de structure ou via le [Gestionnaire de clés primaires](#primary-key-manager).
 
-> **Note:** Primary keys can also be set using the SQL language by means of the **PRIMARY KEY** clause followed by the list of columns.
+> **Note:** Les clés primaires peuvent également être définies en utilisant le langage SQL au moyen de la clause **PRIMARY KEY** suivie de la liste des colonnes.
 
-#### Rules for using primary key fields
+#### Règles d'utilisation des champs clé primaire
 
-Primary key fields should be handled with care to ensure data integrity at all times. In particular, a primary key field must respect the following rules:
+Les champs clé primaire doivent être manipulés avec précaution afin de garantir l'intégrité des données à tout moment. En particulier, un champ clé primaire doit respecter les règles suivantes :
 
-- it must not be empty,
-- it must be unique,
-- once created, it should (in principle) never be modified, especially if:
-  - [Global stamp features](../ORDA/global-stamp.md) are enabled,
-  - [REST (or similar) feature](../REST/gettingStarted.md) is enabled,
-  - the database is periodically synchronized (backup or logical mirror using the [log file](../Backup/log.md)).
+- il ne doit pas être vide,
+- il doit être unique,
+- Une fois créé, il ne doit (en principe) jamais être modifié, surtout si :
+  - [Les fonctionnalités de marqueur global](../ORDA/global-stamp.md) sont activées,
+  - [La fonctionnalité REST (ou équivalente)](../REST/gettingStarted.md) est activée,
+  - La base de données est synchronisée régulièrement (sauvegarde ou miroir logique à l'aide du [fichier d'historique](../Backup/log.md)).
 
-Modifying primary key field value is highly discouraged, even if 4D allows it for specific use cases.  
-If you absolutely need to modify a primary key value (e.g. you used a social security number field as primary key and incorrect values have been entered), it is preferable to disable (remove) the current primary key and to add a new field used as primary key with automatic assignment.
+Il est fortement déconseillé de modifier la valeur d'un champ clé primaire, même si 4D l'autorise dans certains cas particuliers.  
+Si vous devez absolument modifier la valeur d'une clé primaire (par exemple, si vous avez utilisé un champ "numéro de sécurité sociale" comme clé primaire et que des valeurs erronées ont été saisies), il est préférable de désactiver (supprimer) la clé primaire actuelle et d'ajouter un nouveau champ qui servira de clé primaire avec attribution automatique.
 
-Primary key fields can be long integer type or UUID format (alpha type). In most cases, we recommend the UUID format with the Auto UUID option enabled. Even though the long integer type takes up less disk space, UUIDs have many advantages, for example, facilitating the merge of independent databases, data import/export, implementation of elaborate mirror/replication strategies or synchronization with external systems.
+Les champs clé primaires peuvent être de type entier long ou au format UUID (type alphanumérique). Dans la plupart des cas, nous recommandons d'utiliser le format UUID en activant l'option **UUID auto**. Même si le type Entier long occupe moins d'espace disque, les UUID présentent de nombreux avantages, notamment celui de faciliter la fusion de bases de données indépendantes, l'importation et l'exportation de données, la mise en œuvre de stratégies sophistiquées de mise en miroir ou de réplication, ou encore la synchronisation avec des systèmes externes.
 
-#### Setting primary keys
+#### Définition des clés primaires
 
-To create a primary key from the Structure editor:
+Pour créer une clé primaire à partir de l'Editeur de structure :
 
-1. Select the field(s) that make up the table’s primary key.
-2. Right-click and choose **Create primary key** in the context menu (this command is only displayed for fields whose type is eligible for primary keys).
+1. Sélectionnez le ou les champ(s) qui constituent la clé primaire de la table.
+2. Cliquez avec le bouton droit de la souris et sélectionnez **Créer une clé primaire** dans le menu contextuel (cette commande n'apparaît que pour les champs dont le type permet la création de clés primaires).
 
-You cannot have more than one primary key for each table. If a primary key is already specified, a warning dialog box appears indicating that the existing primary key will first be disabled.
+Une table ne peut pas comporter plusieurs clés primaires. Si une clé primaire est déjà définie, une boîte de dialogue d'avertissement s'affiche pour indiquer que la clé primaire existante sera d'abord désactivée.
 
-The primary key is created immediately. Fields included in the primary key are *underlined* in the editor and their SQL description displays the **PRIMARY KEY** keyword.
+La clé primaire est créée immédiatement. Les champs inclus dans la clé primaire sont *soulignés* dans l'éditeur et leur description SQL affiche le mot-clé **PRIMARY KEY**.
 
-When you create a primary key in a table that already contains records (using an existing field or adding a new one), 4D checks the conformity of all the values present or automatically performs updating operations:
+Lorsque vous créez une clé primaire dans une table contenant déjà des enregistrements (en utilisant un champ existant ou en ajoutant un nouveau), 4D vérifie la conformité de toutes les valeurs présentes ou effectue automatiquement des opérations de mise à jour :
 
-- The field(s) belonging to the primary key cannot contain any duplicated values. If any duplicated values for the key exist in the table records, a warning dialog box appears to indicate that it is not possible to create the key because of this.
-- If the duplicated values are blank or null values (case of an added key field), you can check the corresponding automatic generation option (for Alpha fields in or for Longint fields).  
-  In this case, 4D examines all the records of the table and automatically assigns a calculated value to each primary key. Note that this process is sequential and may require a significant amount of time if there are a sizable number of records.
+- Le ou les champ(s) faisant partie de la clé primaire ne doivent pas contenir de valeurs dupliquées. Si des valeurs dupliquées pour la clé existent dans les enregistrements de la table, une boîte de dialogue d'avertissement s'affiche pour indiquer qu'il n'est pas possible de créer la clé pour cette raison.
+- Si les valeurs en double sont vides ou nulles (dans le cas d'un champ clé ajouté), vous pouvez cocher l'option de génération automatique correspondante (pour les champs de type Alpha ou pour les champs de type Entier long).  
+  Dans ce cas, 4D examine tous les enregistrements de la table et attribue automatiquement une valeur calculée à chaque clé primaire. Veuillez noter que ce processus est séquentiel et peut prendre un temps considérable si le nombre d'enregistrements est important.
 
-> **Note:** The column(s) belonging to the primary key do not accept NULL values.
+> **Note :** La ou les colonne(s) faisant partie de la clé primaire n'acceptent pas les valeurs NULL.
 
-#### Removing primary keys
+#### Suppression des clés primaires
 
-To remove a primary key from a table:
+Pour supprimer une clé primaire d'une table :
 
-1. Right-click on the table containing the primary key and choose **Remove primary key** in the context menu.
-   A confirmation dialog box appears. Click **OK** to remove the primary key.
+1. Cliquez avec le bouton droit de la souris sur la table contenant la clé primaire, puis sélectionnez **Supprimer la clé primaire** dans le menu contextuel.
+   Une boîte de dialogue de confirmation s'affiche. Cliquez sur **OK** pour supprimer la clé primaire.
 
-#### Default primary key field
+#### Champ clé primaire par défaut
 
-Every new table created in the database contains a primary key by default. This field, named **"ID"** by default, is of the Longint type, and has, in particular, the following attributes:
+Chaque nouvelle table créée dans la base de données contient par défaut une clé primaire. Ce champ, nommé **"ID"** par défaut, est de type Entier long et possède notamment les attributs suivants :
 
 - Unique,
-- Reject NULL value input,
-- Autoincrement,
-- Automatic index.
+- Refuser l'écriture de la valeur NULL,
+- Incrémentation auto
+- Index standard automatique.
 
-You can use this field as is, or change its name and/or its properties if you want (for example, you may want to use an UUID field). You can also delete it if you want to use another field (or fields) as primary key(s). However, it is strongly recommended to keep at least one primary key in each 4D table.
+Vous pouvez utiliser ce champ tel quel ou, si vous le souhaitez, modifier son nom et/ou ses propriétés (vous pouvez par exemple choisir d'utiliser un champ UUID). Vous pouvez également le supprimer si vous souhaitez utiliser un ou plusieurs autre(s) champ(s) comme clé(s) primaire(s). Il est toutefois vivement recommandé de conserver au moins une clé primaire dans chaque table 4D.
 
 :::note
 
-In the [Structure page of the Preferences](../Preferences/structure.md), you can modify the name and type of the primary keys that are created by default.
+Dans la [page « Structure » des Préférences](../Preferences/structure.md), vous pouvez modifier le nom et le type des clés primaires créées par défaut.
 
 :::
 
 :::info
 
-Default primary keys are not added to tables that are created using the SQL **CREATE TABLE** command, or tables that are imported into the database.
+Les clés primaires par défaut ne sont pas ajoutées aux tables créées à l'aide de la commande SQL **CREATE TABLE**, ni aux tables importées dans la base de données.
 
 :::
 
-## Primary key manager
+## Gestionnaire de clés primaires
 
-The **Primary key manager** is an assistant intended to facilitate the resolution of errors related to the presence of tables without primary keys, particularly in the context of a journaled database:
+Le **Gestionnaire de clés primaires** est un assistant destiné à faciliter la résolution des erreurs liées à la présence de tables sans clés primaires, en particulier dans le contexte d'une base de données journalisée :
 
 ![](../assets/en/Develop/pk-manager.png)
 
-You can use this assistant to:
+Cet assistant vous permet de :
 
-- diagnose the compatibility of each database table with the 4D journaling mechanism,
-- propose a correction for each table found that is not compatible, more particularly by creating a primary key.
+- diagnostiquer la compatibilité de chaque table de la base de données avec le mécanisme de journalisation de 4D,
+- proposer une correction pour chaque table identifiée comme non compatible, notamment en créant une clé primaire.
 
-### Accessing assistant
+### Accéder à l'assistant
 
-There are two ways to display the **Primary key manager** window:
+Il y a deux façons d'afficher la fenêtre **Gestionnaire de clés primaires** :
 
-- From the **Primary key error window**: click on the **Run assistant** button to display the assistant window.
+- Depuis la **fenêtre Erreur de clé primaire** : cliquez sur le bouton **Lancer l'assistant** pour afficher la fenêtre de l'assistant.
 
-**Note:** The Primary key manager is displayed in Design mode. If the database starts in Application mode, the assistant does not appear right away and you will need to switch to Design mode.
+**Note :** Le Gestionnaire de clés primaires est affiché en mode Développement. Si la base de données démarre en mode Application, l'assistant n'apparaît pas immédiatement et vous devrez passer en mode Développement.
 
-- From the **Structure editor**: click on the button in the [toolbar](./structure-editor.md#toolbar) of this window to display the assistant.
+- Depuis l'**Editeur de structure** : cliquez sur le bouton situé dans la [barre d'outils](./structure-editor.md#toolbar) de cette fenêtre pour afficher l'assistant.
 
-### Using the assistant
+### Utiliser l'assistant
 
-The **Primary key manager** window displays a line for every table in the database:
+La fenêtre **Gestionnaire de clés primaires** affiche une ligne pour chaque table de la base de données :
 
 ![](../assets/en/Develop/pk-1.png)
 
-The assistant does not take tables placed in the Trash into account.
+L'assistant ne tient pas compte des tables placées dans la corbeille.
 
-The icon at the head of each line indicates whether the table requires the attention of the user:
+L'icône située en tête de chaque ligne indique si la table nécessite l'attention de l'utilisateur :
 
-| Icône                                  | Statut                                               | Description                                                                                                                                                                                                                                                               |
-| -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Develop/pk-icon1.png) | OK                                                   | A valid primary key is set for the table.                                                                                                                                                                                                                 |
-| ![](../assets/en/Develop/pk-icon2.png) | No primary key, eligible field(s) | The table does not have a primary key but contains at least one field that could become the primary key.                                                                                                                                                  |
-| ![](../assets/en/Develop/pk-icon3.png) | No primary key, no eligible fields                   | The table does not have a primary key and does not have any fields that could become one (you will have to create a primary key field).                                                                                                |
-| ![](../assets/en/Develop/pk-icon4.png) | Attention                                            | The table does not have a primary key but it is not journaled ("Include in Log File" option disabled for the table). It is possible to hide tables that have this status by unchecking the option to display warnings. |
+| Icône                                  | Statut                                                                          | Description                                                                                                                                                                                                                                                                                                                       |
+| -------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Develop/pk-icon1.png) | OK                                                                              | Une clé primaire valide est définie pour la table.                                                                                                                                                                                                                                                                |
+| ![](../assets/en/Develop/pk-icon2.png) | Pas de clé primaire, champ(s) éligible(s) | La table ne possède pas de clé primaire, mais contient au moins un champ susceptible de devenir la clé primaire.                                                                                                                                                                                                  |
+| ![](../assets/en/Develop/pk-icon3.png) | Pas de clé primaire, pas de champ éligible                                      | La table ne dispose pas de clé primaire et ne comporte aucun champ pouvant en devenir une (vous devrez créer un champ de clé primaire).                                                                                                                                                        |
+| ![](../assets/en/Develop/pk-icon4.png) | Attention                                                                       | La table ne possède pas de clé primaire, mais elle n'est pas journalisée (l'option "Inclure dans le fichier d'historique" est désactivée pour cette table). Il est possible de masquer les tables présentant ce statut en désactivant l'option d'affichage des avertissements. |
 
-For each journaled table that does not have a primary key, the assistant displays a menu to set the action to be performed. You can choose from the following options:
+Pour chaque table journalisée qui n'a pas de clé primaire, l'assistant affiche un menu pour définir l'action à effectuer. Vous pouvez choisir parmi les options suivantes :
 
-- **Ignore:** does not modify the table. The errors are not corrected and the status of the table is not changed. Use this option if you wish to intervene later, or if you want to create the primary key outside of the assistant. This option is necessary in particular when you want to create a primary key based on several fields in the table.
+- **Ignorer :** ne modifie pas la table. Les erreurs ne sont pas corrigées et le statut de la table reste inchangé. Utilisez cette option si vous souhaitez intervenir ultérieurement ou si vous souhaitez créer la clé primaire en dehors de l'assistant. Cette option est notamment nécessaire lorsque vous souhaitez créer une clé primaire à partir de plusieurs champs de la table.
 
-- **Use existing field** (only shown for tables with at least one field eligible to be a primary key): designates one of the table fields as the primary key. When you choose this option, the assistant suggests the most appropriate field by default. If you want to use another field or if the assistant fails to identify a particularly suitable field (the assistant displays *Select a field*), click on the second menu in the row to display the list of eligible fields.
+- **Utiliser un champ existant** (option affichée uniquement pour les tables comportant au moins un champ pouvant servir de clé primaire) : désigne l'un des champs de la table comme clé primaire. Lorsque vous sélectionnez cette option, l'assistant vous propose par défaut le champ le plus approprié. Si vous souhaitez utiliser un autre champ ou si l'assistant ne parvient pas à identifier un champ particulièrement adapté (l'assistant affiche alors *Sélectionnez un champ*), cliquez sur le deuxième menu de la ligne pour afficher la liste des champs éligibles.
 
-- **Create a new field:** creates a new primary key field in the table. This field will have the same characteristics as the one [added by default when a new table is created](#default-primary-key-field). By default, the assistant proposes to create a field of the Longint type, named “ID”. You can modify the name and type of default primary key fields in the [Preferences](../Preferences/structure.md#primary-key). You can also change the name and/or type of the field directly in the Primary key manager window.
+- **Créer un nouveau champ :** crée un nouveau champ clé primaire dans la table. Ce champ présentera les mêmes caractéristiques que celui [ajouté par défaut lors de la création d'une nouvelle table](#default-primary-key-field). Par défaut, l'assistant propose de créer un champ de type Longint, nommé "ID". Vous pouvez modifier le nom et le type des champs clés primaires par défaut dans les [Préférences](../Preferences/structure.md#primary-key). Vous pouvez également modifier le nom et/ou le type du champ directement dans la fenêtre "Gestionnaire de clés primaires".
 
-- **Do not log this table:** unchecks the [**Include in Log File**](#include-in-log-file) option for the table. You can choose this option in the case of temporary tables. After you validate this dialog box, a “Warning” status is assigned to the table.
+- **Ne pas journaliser cette table :** désactive l'option [**Inclure dans le fichier d'historique**](#include-in-log-file) pour cette table. Vous pouvez choisir cette option dans le cas des tables temporaires. Une fois cette boîte de dialogue validée, un statut "Attention" est attribué à la table.
 
-Once you have made your settings, click on **Apply...** to apply the changes to the database or **Close** to close the dialog box without modifying the database. When you click on **Apply...**, a confirmation dialog box appears listing the operations to be performed; you can either confirm or cancel the operation.
+Une fois vos paramètres définis, cliquez sur **Appliquer...** pour appliquer les modifications à la base de données ou sur **Fermer** pour fermer la boîte de dialogue sans modifier la base de données. Lorsque vous cliquez sur **Appliquer...**, une boîte de dialogue de confirmation s'affiche, répertoriant les opérations à effectuer ; vous pouvez alors soit confirmer, soit annuler l'opération.
 
-If you have designated existing fields as primary keys, 4D checks each table to make sure that its existing data respects the rules concerning uniqueness and null values for this type of field. If, for example, a field contains duplicate values or null values, an error is generated. You will need to find and remove these anomalies before you can enable journaling for the data.
+Si vous avez défini des champs existants comme clés primaires, 4D vérifie chaque table afin de s'assurer que les données qu'elle contient respectent les règles relatives à l'unicité et aux valeurs nulles pour ce type de champ. Si, par exemple, un champ contient des valeurs dupliquées ou des valeurs nulles, une erreur est générée. Vous devrez repérer et corriger ces anomalies avant de pouvoir activer la journalisation des données.
 
 :::note
 
-In order to facilitate the correction of errors related to primary keys, the primary key values are displayed in the [**Activity analysis** page of the Maintenance and Security Center](../MSC/analysis.md).
+Afin de faciliter la correction des erreurs liées aux clés primaires, les valeurs des clés primaires sont affichées sur la [**page Analyse de l'activité** du Centre de maintenance et de sécurité](../MSC/analysis.md).
 
 :::

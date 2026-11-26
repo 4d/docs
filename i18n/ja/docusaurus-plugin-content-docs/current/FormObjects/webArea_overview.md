@@ -243,7 +243,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [左](properties_CoordinatesAndSizing.md#左) -
 [上](properties_CoordinatesAndSizing.md#上) -

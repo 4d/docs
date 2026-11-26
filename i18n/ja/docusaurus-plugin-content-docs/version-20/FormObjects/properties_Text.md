@@ -7,7 +7,7 @@ title: Text
 
 ## ピッカーの使用を許可
 
-このプロパティが有効化されていると、[OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.ja.html) または [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.ja.html) コマンドを使用してユーザーがフォントピッカー/カラーピッカーを呼び出すことを許可します。これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
+このプロパティが有効化されている場合、[OPEN FONT PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-FONT-PICKER.301-7487278.ja.html) および [OPEN COLOR PICKER](https://doc.4d.com/4Dv20/4D/20.6/OPEN-COLOR-PICKER.301-7487279.ja.html) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 #### JSON 文法
 
@@ -25,7 +25,7 @@ title: Text
 
 選択テキストの線を太くし、濃く見えるようにします。
 
-このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+You can set this property using the [OBJECT SET FONT STYLE](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.en.html) command.
 
 > これは通常のテキストです。<br/>これは通常のテキストです。<br/>
 > **これは太字のテキストです。**
@@ -58,7 +58,7 @@ title: Text
 
 選択テキストの線を右斜めに傾けます。
 
-このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+You can also set this property via the [OBJECT SET FONT STYLE](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT-STYLE.301-7487832.en.html) command.
 
 > これは通常のテキストです。<br/>*これはイタリックのテキストです。*
 
@@ -168,7 +168,7 @@ title: Text
 - *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
 - *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
-このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
+You can set this using the [OBJECT SET FONT](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-FONT.301-7487845.en.html) command.
 
 #### JSON 文法
 
@@ -236,7 +236,7 @@ title: Text
 - 16進数値 - 例: "#ff0000"
 - RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティは [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドによって設定することができます。
+You can also set this property using the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.en.html) command.
 
 #### JSON 文法
 
@@ -268,9 +268,9 @@ title: Text
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。詳細については、4Dランゲージリファレンス マニュアルの [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/ja/page628.html) コマンドの説明を参照ください。
+リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。この詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](https://doc.4d.com/4Dv20/4D/20.6/OBJECT-SET-RGB-COLORS.301-7487843.ja.html) コマンドの説明を参照ください。
 
-式または変数 (配列を除く) を入力します。表示される行ごとに式や変数は評価されます。ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
+式または変数 (配列を除く) を入力します。表示される行ごとに式や変数は評価されます。ここでは [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.ja.html) テーマの定数を使用することができます。
 
 また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font color expression` 定数を指定して設定することもできます。
 
@@ -301,7 +301,7 @@ Foreground color;Dark shadow color)
 
 リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。ここでは [Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます。
+式または変数 (配列を除く) を入力します。式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。ここでは [Font Styles](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.ja.html) テーマの定数を使用することができます。
 
 例:
 
@@ -368,7 +368,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/ja/page1188.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/ja/page1187.html) コマンドを使用して設定することもできます。
+このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4dv20/help/command/ja/page1188.html) および [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv20/help/command/ja/page1187.html) コマンドを使用しても管理することができます。
 
 #### JSON 文法
 
@@ -514,7 +514,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。ここでは [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.6/SET-RGB-COLORS.302-7488426.ja.html) テーマの定数を使用することができます。もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -534,7 +534,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。配列へは、[Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます (メソッドを使用しての入力も可能)。定数同士を足し合わせてスタイルを組み合わせることもできます。もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。 つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。メソッドを使用して配列を作成するには、[Font Styles](https://doc.4d.com/4Dv20/4D/20.6/Font-Styles.302-7488462.ja.html) コマンドのページ内で提示されている定数を使用することができます。定数同士を足し合わせてスタイルを組み合わせることもできます。もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 

@@ -12,12 +12,6 @@ Web サーバークォータを使用して、トラフィック、リクエス�
 
 :::
 
-:::tip 関連したBlog 記事
-
-[A 4D web server that knows when to say No](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## 要件
 
 クォータの設定のためには、[スケーラブルセッション](./sessions.md#Webセッションの有効化) が有効化されている必要があります。
@@ -118,6 +112,8 @@ For example, to limit each session, including MCP sessions used by AI agents, to
 var $webServer : 4D.WebServer:=WEB Server
 $webServer.quotas.nbRequestsPerMinPerSession:=30
 ```
+
+MCP sessions cannot get their own quotas: the session default quotas apply to every Web session alike, and [`Session.quotas`](../API/SessionClass.md#quotas) only holds the REST entity-set limits.
 
 ### Rate limiting responses
 

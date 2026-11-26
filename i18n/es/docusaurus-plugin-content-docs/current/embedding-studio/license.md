@@ -74,7 +74,7 @@ The Licensee is authorized to use the Software, without any limitation as to its
 - loading, displaying, running, or storing the Software on any or all medium.
 - entitlement to observe, study or test its operation.
 
-### 5.2 RIGHT OF MODIFICATION
+### 5.2 DERECHO DE MODIFICACIÓN
 
 The right of modification means the right to adapt, arrange, or make any or all modifications to the Software; being understood that such modifications of the Software shall results in a change of its functionalities and/or in an addition of functionalities to the Initial Software.
 

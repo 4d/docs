@@ -248,7 +248,7 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 > El número en la declaración tiene que ser una constante y no una variable.
 
-## `Compiler` method
+## Método `Compiler`
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 

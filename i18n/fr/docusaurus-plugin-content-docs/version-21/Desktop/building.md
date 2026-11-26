@@ -496,7 +496,7 @@ Les modules optionnels suivants peuvent être désélectionnés :
 > Si vous désélectionnez MeCab pour une application en langue japonaise utilisée sur des plateformes hétérogènes, assurez-vous de le désélectionner à la fois sur le build client/serveur et sur le [build de l'application cliente](#build-client-application) (pour la plate-forme concurrente), sinon des dysfonctionnements majeurs se produiront dans l'application.
 
 - **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
-- **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user
+- **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user).
 - **4D Qodly Pro** : Comprend [Qodly Studio et ses fonctionnalités de rendu Web](https://developer.4d.com/qodly/).
 
 ## Page Licences & Certificat

@@ -11,11 +11,11 @@ title: VP PASTE FROM OBJECT
 
 </details>
 
-<!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
+<!-- REF #_method_.VP PASTE FROM OBJECT.Syntax -->
 
 **VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
-<!-- REF #_method_.PASTE FROM OBJECT.Params -->
+<!-- REF #_method_.VP PASTE FROM OBJECT.Params -->
 
 <div class="no-index">
 
@@ -30,7 +30,7 @@ title: VP PASTE FROM OBJECT
 
 ## 説明
 
-`VP PASTE FROM OBJECT` コマンドは、<!-- REF #_method_.PASTE FROM OBJECT.Summary -->*dataObject* のコンテンツ・スタイル・フォーミュラを *rangeObj* セルレンジオブジェクトにペーストします<!-- END REF -->。
+The `VP PASTE FROM OBJECT` command <!-- REF #_method_.VP PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
 
 *rangeObj* には、値・フォーマット・フォーミュラをペーストする先のセルレンジオブジェクトを渡します。 *rangeObj* が複数のセルを参照している場合は、最初のセルだけが使用されます。
 

@@ -35,7 +35,7 @@ In *dataObject*, pass the object that contains the cell data, formatting, and fo
 In the optional *options* parameter, you can specify what to paste in the cell range. Possible values:
 
 |Constant|Description|
-|---|---|---|
+|---|---|
 |`vk clipboard options all`|Pastes all data objects, including values, formatting, and formulas.|
 |`vk clipboard options formatting`|Pastes only the formatting.|
 |`vk clipboard options formulas`|Pastes only the formulas.|

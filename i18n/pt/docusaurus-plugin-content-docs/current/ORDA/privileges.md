@@ -29,7 +29,7 @@ Permissões controlam o acesso a objetos ou funções de armazenamento de dados.
 
 ## Escopo
 
-As permissões se aplicam a **sessões web e REST**: [requisições REST](../REST/gettingStarted.md), incluindo [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), e **código 4D executado em um processo web**. Isso inclui [funções expostas](./ordaClasses.md), [HTTP request handlers](../WebServer/http-request-handler.md), o [método de banco de dados On Web Connection](../commands/on-web-connection-database-method), e qualquer código chamado por eles. Por exemplo, uma chamada de função permitida ainda falha se a função ler uma dataclass para a qual a sessão não tem permissão de leitura.
+As permissões se aplicam a **sessões web e REST**: [requisições REST](../REST/gettingStarted.md), incluindo [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), [`Open datastore`](../commands/open-datastore) sessões, [sessões MCP](../WebServer/mcp-server.md) e **código 4D executado em um processo web**. Isso inclui [funções expostas](./ordaClasses.md), [HTTP request handlers](../WebServer/http-request-handler.md), o [método de banco de dados On Web Connection](../commands/on-web-connection-database-method), e qualquer código chamado por eles. Por exemplo, uma chamada de função permitida ainda falha se a função ler uma dataclass para a qual a sessão não tem permissão de leitura.
 
 :::info Exception
 
@@ -43,66 +43,7 @@ Permissões nunca se aplicam a [código de sessão desktop](../Desktop/sessions.
 
 Quando uma entrada de permissão faz referência a um [privilégio](#privileges-and-roles) não declarado, o 4D registra um erro e ignora a entrada. Neste caso, a permissão é ignorada. Se o [modo restrito por padrão](#restriction-modes) não estiver habilitado, o recurso fica acessível para sessões `guest`.
 
-- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
-- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
-- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
-- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
-
-### Ferramentas MCP
-
-As mesmas permissões se aplicam às sessões do [servidor MCP](../WebServer/mcp-server.md), sem nada específico para configurar:
-
-- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
-- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
-- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
-- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
-
-#### Exemplo
-
-Clientes MCP autenticados com o privilégio "salesReader" podem ler as dataclasses Customer e Order com as ferramentas CRUD, e chamar as ferramentas publicadas pelo singleton `OrderManager` (por exemplo, `OrderManager-getYearTotal`):
-
-```json
-{
-	"privileges": [{"privilege": "salesReader", "includes": []}],
-	"roles": [],
-	"permissions": {
-		"allowed": [
-			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
-		]
-	},
-	"restrictedByDefault": true
-}
-```
-
-### Ferramentas MCP
-
-As mesmas permissões se aplicam às sessões do [servidor MCP](../WebServer/mcp-server.md), sem nada específico para configurar:
-
-- Uma [ferramenta personalizada](../WebServer/mcp-server.md#custom-tools) (`exposed MCP Function`) requer permissão **execute** em sua função, e se beneficia da permissão **promote**.
-- As [ferramentas CRUD integradas](../WebServer/mcp-server.md#built-in-crud-tools) requerem permissão **read**, **create**, **update** ou **drop** na dataclass, e as permissões de atributo se aplicam. Cada atributo de um caminho usado em filtro, ordenação ou projeção requer permissão **read**.
-- As ferramentas CRUD só são listadas se a sessão tiver pelo menos uma permissão de dados em uma dataclass, e a ferramenta `describeModel` só descreve as dataclasses nas quais a sessão tem permissão de dados, com seus atributos legíveis ou graváveis.
-- Uma ferramenta, dataclass ou atributo que a sessão não pode acessar é relatado como se não existisse.
-
-#### Exemplo
-
-Clientes MCP autenticados com o privilégio "salesReader" podem ler as dataclasses Customer e Order com as ferramentas CRUD, e chamar as ferramentas publicadas pelo singleton `OrderManager` (por exemplo, `OrderManager-getYearTotal`):
-
-```json
-{
-	"privileges": [{"privilege": "salesReader", "includes": []}],
-	"roles": [],
-	"permissions": {
-		"allowed": [
-			{"applyTo": "Customer", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "Order", "type": "dataclass", "read": ["salesReader"]},
-			{"applyTo": "OrderManager", "type": "singleton", "execute": ["salesReader"]}
-		]
-	},
-	"restrictedByDefault": true
-}
-```
+:::
 
 ## Recursos
 
@@ -149,6 +90,9 @@ Como as permissões identificam funções por dataclass e nome da função, fun�
 			{
 				"applyTo": "City.dropEntity",
 				"type": "method",
+				"execute": [
+					"cityAdmin"
+				],
 				"promote": [
 					"name"
 				]
@@ -204,8 +148,9 @@ Ações de permissão são herdadas conforme as seguintes regras:
 4. **Função substitui dataclass**. Uma permissão `execute` definida em uma função substitui a permissão `execute` da dataclass (e do datastore) para aquela função. Funções de entity e entity selection seguem a mesma regra das funções de dataclass.
 5. **Singleton substitui datastore**, **função singleton substitui singleton**.
 6. **Função de datastore substitui datastore**.
-7. **Atributo soma ao pai**. Para agir em um atributo que tem permissão própria, a sessão precisa de um privilégio concedido pela permissão do atributo **e** um privilégio concedido para a ação na dataclass (diretamente ou via datastore).
-8. Uma ação concedida a **nenhum privilégio** (por exemplo, `"read": []`) é "não definida", então a permissão do nível acima se aplica. Não significa "ninguém". Para negar a ação, use [modo restrito](#restriction-modes) sem definir aquela permissão, ou conceda a um privilégio que nenhuma sessão recebe.
+7. **Uma função herda o que não define**. Em cada nível, uma ação que uma permissão de função não lista é herdada de sua dataclass ou singleton, depois do datastore. Por exemplo, uma permissão de função singleton que define apenas `promote` mantém a permissão `execute` de seu singleton. Uma permissão `promote` nunca concede `execute`: para permitir que um privilégio chame uma função promovida, liste-o na permissão `execute` da função.
+8. **Atributo soma ao pai**. Para agir em um atributo que tem permissão própria, a sessão precisa de um privilégio concedido pela permissão do atributo **e** um privilégio concedido para a ação na dataclass (diretamente ou via datastore).
+9. Uma ação concedida a **nenhum privilégio** (por exemplo, `"read": []`) é "não definida", então a permissão do nível acima se aplica. Não significa "ninguém". Para negar a ação, use [modo restrito](#restriction-modes) sem definir aquela permissão, ou conceda a um privilégio que nenhuma sessão recebe.
 
 Permissões apenas concedem acesso; não há negação explícita. Uma permissão de dataclass ou função pode, portanto, restringir uma permissão mais ampla do datastore ao substituí-la. Uma permissão de atributo é aditiva: concede acesso ao atributo apenas quando a sessão também tem a ação na dataclass.
 

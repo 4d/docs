@@ -69,7 +69,7 @@ El operador modulo % divide el primer número entre el segundo y devuelve un res
 
 :::warning
 
-El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`](https://doc.4d.com/4dv20/help/command/en/page98.html).
 
 :::
 

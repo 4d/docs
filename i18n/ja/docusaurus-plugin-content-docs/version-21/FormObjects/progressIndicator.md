@@ -42,7 +42,7 @@ title: 進捗インジケーター
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [式の型](properties_Object.md#式の型式タイプ) ("整数", "数値", "日付", "時間" のみ) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [最小](properties_Scale.md#最小) -
 [最大](properties_Scale.md#最大) -
@@ -86,7 +86,7 @@ title: 進捗インジケーター
 
 バーバーショップは [スピナー](spinner.md) のように連続したアニメーションを表示します。このタイプのサーモメーターは通常プログラムが何らかの処理を行っていて、それが終了する時間が予測できない場合、そのことをユーザーに通知するために使用します。このバリエーションが選択されるとプロパティリストの [スケール](properties_Scale.md) テーマは非表示になります。
 
-フォームが実行されたとき、オブジェクトのアニメーションは開始されません。[割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
+フォームが実行されたとき、オブジェクトのアニメーションは開始されません。[割り当てられた変数](properties_Object.md#variable-or-expression) に値を代入してアニメーションを管理します:
 
 - 1 = アニメーション開始
 - 0 = アニメーション停止
@@ -96,7 +96,7 @@ title: 進捗インジケーター
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
 [式の型](properties_Object.md#式の型式タイプ) ("整数", "数値", "日付", "時間" のみ) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [バーバーショップ](properties_Scale.md#バーバーショップ) -
 [左](properties_CoordinatesAndSizing.md#左) -

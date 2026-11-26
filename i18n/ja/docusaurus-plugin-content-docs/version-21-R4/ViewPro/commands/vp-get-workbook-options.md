@@ -23,8 +23,8 @@ title: VP Get workbook options
 
 ## 説明
 
-`VP Get workbook options` コマンドは、<!-- REF #_method_.Get workbook options.Summary -->
-*vpAreaName* で指定したエリアのワークブックオプションをすべて格納したオブジェクトを返します<!-- END REF -->。
+`VP Get workbook options` <!-- REF #_method_.VP Get workbook options.Summary -->
+returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 

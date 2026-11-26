@@ -355,9 +355,9 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
-## Show table borders
+## Mostrar bordes de la tabla
 
-Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. This facilitates page layout (more accessible, more visual resizing) and data entry (convenient in the case of merged cells, for example).
+Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. Esto facilita el diseño de la página (mayor accesibilidad y un ajuste de tamaño más intuitivo) y la introducción de datos (lo cual resulta muy práctico, por ejemplo, en el caso de las celdas fusionadas).
 
 ![](../assets/en/FormObjects/visible.png)
 

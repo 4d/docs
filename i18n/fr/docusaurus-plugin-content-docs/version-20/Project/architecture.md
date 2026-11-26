@@ -215,7 +215,7 @@ Ce dossier contient les composants qui seront disponibles dans le projet d'appli
 > Un projet d'application peut être utilisé lui-même comme composant :
 >
 > - pour le développement : mettre un alias du fichier .4dproject dans le dossier Components du projet hôte.
-> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> - pour le déploiement: [construire le composant](Desktop/building.md#build-component) et mettre le fichier .4dz résultant dans un dossier .4dbase dans le dossier Composants de l'application hôte.
 
 ## `Plugins`
 

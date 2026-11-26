@@ -58,11 +58,11 @@ Les autres modes disponibles sont les suivants :
 
 > La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 
-## Supported standard actions
+## Actions standard prises en charge
 
-Picture buttons support the same [standard actions as buttons](button_overview.md#supported-standard-actions), except for actions restricted to a specific button style, such as [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) for invisible buttons. Assign an action using the [Standard action property](properties_Action.md#standard-action).
+Les boutons image prennent en charge les mêmes [actions standard que les boutons](button_overview.md#supported-standard-actions), à l'exception des actions réservées à un style de bouton spécifique, comme [automaticSplitter](../Desktop-legacy/standard-actions.md#automaticsplitter) pour les boutons invisibles. Attribuez une action à l'aide de la [propriété Action standard](properties_Action.md#standard-action).
 
-For action descriptions and activation conditions, see [Standard actions](../Desktop-legacy/standard-actions.md#available-actions). See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+Pour connaître la description des actions et leurs conditions d'activation, consultez la page [Actions standard](../Desktop-legacy/standard-actions.md#available-actions). Voir également le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

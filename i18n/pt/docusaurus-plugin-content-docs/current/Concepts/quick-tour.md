@@ -33,7 +33,7 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 
 **Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade =. Um operador de atribuição diferente (e não =) foi escolhido deliberadamente para evitar problemas e confusão que ocorrem frequentemente em outras linguagens com operadores como == ou ===. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
-## Variáveis.
+## Variáveis
 
 A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Você cria uma variável digitada usando a palavra-chave `var`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
@@ -48,7 +48,7 @@ var myPerson : cs.Person
 //variável da classe usuário Person
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Mesmo que geralmente não seja recomendado, você pode criar variáveis simplesmente usando-as; não é necessário defini-las formalmente. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
@@ -129,7 +129,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $myText:="hello"
@@ -190,7 +190,7 @@ $f.message() //exibe "Hello world!"
 Para aceder a um elemento da collection, é necessário passar o número do elemento entre parênteses rectos:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //acesso ao 4º elemento da colecção
 ```
@@ -218,9 +218,10 @@ Função hello -> $welcome : Texto
 Para executar uma função membro da classe, basta utilizar o operador `()` na função membro da instância do objeto.
 
 ```4d
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$o:=cs.myClass.new()
+$o.who:="World"
+$message:=$o.myClass.hello()  
+//$message: "Hello World"
 ```
 
 Opcionalmente, use a palavra-chave `Class constructor` para declarar as propriedades do objeto.
@@ -236,10 +237,15 @@ This.name:="Retângulo"
 Uma classe pode estender outra classe usando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por exemplo:
 
 ```4d
-//in the Square.4dm file Class extends rectangle Class constructor($length : Integer)
+//in the Square.4dm file
+Class extends rectangle
 
+Class constructor ($length : Integer)
   // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height Super($length;$length) This.name:="Square"
+  // provided for the Rectangle's width and height
+Super($length;$length)
+
+This.name:="Square"
 ```
 
 ## Operadores
@@ -346,55 +352,6 @@ $str:=String("hello"+\
 "!")
 ```
 
-## Comentários
-
-Os comentários são linhas de código inactivas. Estas linhas não são interpretadas pela linguagem 4D e não são executadas quando o código é chamado.
-
-Existem duas formas de criar comentários:
-
-- `//` para comentários de linha única
-- `/...**/` para comentarios em linha ou multilinha.
-
-Ambos os estilos de comentários podem ser utilizados em simultâneo.
-
-#### Comentários de linha única (`//comment`)
-
-Insira `//` no início de uma linha ou após uma instrução para adicionar um comentário de linha única. Exemplo:
-
-```4d
-//This is a comment For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
- End for
-```
-
-#### Comentários em linha ou em várias linhas (`/*comment*/`)
-
-Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
-
-- Pode manipular objectos e colecções da linguagem 4D utilizando a notação de objeto para obter ou definir os seus valores. Exemplo:
-
-```4d
-For /* linha de comentário */ ($vCounter;1;100)
- ...
-End for
-```
-
-- **Os blocos de comentários de várias linhas** permitem comentar um número ilimitado de linhas. Os blocos de comentários podem ser aninhados (o que é útil, já que o editor de código 4D suporta blocos condensados). Exemplo:
-
-```4d
-For ($vCounter;1;100)
-/*
-comentários
-	/*
-	outros comentários
-	*/
-*/
-...
-End for
-```
-
 ## Sequências de escape
 
 A linguagem 4D permite-lhe usar sequências de escape (também chamadas caracteres de escape). Uma sequência de escape é uma sequência de caracteres que pode ser utilizada para substituir um carácter "especial".
@@ -419,49 +376,49 @@ No exemplo a seguir, o caractere **Carriage return** (sequência de escape `\r`)
 
 ## Convenções de escrita
 
-The following conventions are used in the 4D language documentation:
+As seguintes convenções são usadas na documentação da linguagem 4D:
 
-- os caracteres `{ }` (chaves) indicam parâmetros opcionais. For example, `.delete({ option : Integer })` means that the *option* parameter may be omitted when calling the function.
-- the `any` keyword is used for parameters that can be a value of any type (number, text, boolean, date, time, object, collection...).
-- when a parameter can accept several types, they are listed and separated by comma, for example: `value : Text, Real, Date, Time`
-  This means the parameter *value* can be Text OR Real OR Date OR Time.
-- **variadic parameter**: the `...param : Type` notation indicates from 0 to an unlimited number of parameters of the same type. For example, `.concat( value : any { ;...valueN : any }) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- **variadic group of parameters**: the `{; ...(param1 : Type ; param2 : Type)}` notation indicates from 1 to an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) })` means that an unlimited number of couple values of type array/text can be passed to the command.
+- os caracteres `{ }` (chaves) indicam parâmetros opcionais. Por exemplo, `.delete({ option : Integer })` significa que o parâmetro *option* pode ser omitido ao chamar a função.
+- a palavra-chave `any` é usada para parâmetros que podem ser de qualquer tipo (número, texto, booleano, data, hora, objeto, coleção...).
+- quando um parâmetro pode aceitar vários tipos, eles são listados e separados por vírgula, por exemplo: `value : Text, Real, Date, Time`
+  Isso significa que o parâmetro *value* pode ser Text OU Real OU Date OU Time.
+- **parâmetro variádico**: a notação `...param : Type` indica de 0 a um número ilimitado de parâmetros do mesmo tipo. Por exemplo, `.concat( value : any { ;...valueN : any }) : Collection` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
+- **grupo variádico de parâmetros**: a notação `{; ...(param1 : Type ; param2 : Type)}` indica de 1 a um número ilimitado de grupos de parâmetros. Por exemplo, `COLLECTION TO ARRAY( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) })` significa que um número ilimitado de pares de valores do tipo array/text pode ser passado para o comando.
 
-### Parameter type description
+### Descrição dos tipos de parâmetros
 
-In the 4D language documentation, the following parameter types can be used.
+Na documentação da linguagem 4D, os seguintes tipos de parâmetros podem ser usados.
 
-| Tipo                                                                          | Definição                                                                                                   | Examples of a 4D command using it                                                                                                                                                                                                                                                                |
+| Tipo                                                                          | Definição                                                                                                   | Exemplos de comando 4D usando-o                                                                                                                                                                                                                                                                |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| > , <, >=, <=, #, =, \| , % | Comparison, logical operators or symbols used in query conditions or expressions.           | ORDER BY([Products];[Products]Type;<)<br/>PRINT RECORD([Employees];>) |
-| any                                                                           | A parameter that can accept any supported data type                                                         | JSON Stringify($value)<br/>$col.push(6;New object("firstname";"John"))                                                                                                                                                  |
-| Array                                                                         | A variable containing a list of values of the same type.                                    | ARRAY TEXT($arr;10)                                                                                                                                                                                                                                                           |
-| BLOB array                                                                    | An array containing BLOB values.                                                            | ARRAY BLOB($data;10)                                                                                                                                                                                                                                                          |
-| Blob                                                                          | Binary large object used to store binary data.                                              | BLOB TO DOCUMENT($blob;"file.bin")                                                                                                                                                                                                                            |
-| Parâmetros                                                                    | A logical value: True or False.                                             | If (OK=1)                                                                                                                                                                                                                                                                     |
-| Boolean array                                                                 | An array containing boolean values.                                                         | ARRAY BOOLEAN($flags;10)                                                                                                                                                                                                                                                      |
-| Class name (ex: 4D.File)   | A reference to a class type used to create or manipulate class instances.                   | $file:=File("/RESOURCES/NovelCover1.jpg")                                                                                                                                                                                                     |
-| Collection                                                                    | An ordered list of values that can contain multiple types.                                  | New collection("A";"B";"C")                                                                                                                                                                                                                                                   |
-| Date                                                                          | A calendar date value.                                                                      | $vDate:=Current date                                                                                                                                                                                                                                                             |
-| Date array                                                                    | An array containing date values.                                                            | ARRAY DATE($dates;10)                                                                                                                                                                                                                                                         |
-| Expression                                                                    | Can be anything                                                                                             | SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")                                                                                                                                                                                                                               |
-| Campo                                                                         | A reference to a field belonging to a table.                                                | ORDER BY([Person];[Person]Name)                                                                                                                                       |
-| Integer                                                                       | A whole number without decimal part.                                                        | $Sel:=ds.Employee.newSelection(dk keep ordered)                                                                                                                                                                               |
-| Integer array                                                                 | An array containing integer values.                                                         | ARRAY INTEGER($numbers;10)                                                                                                                                                                                                                                                    |
-| Longint array                                                                 | An array containing long integer values.                                                    | ARRAY LONGINT($values;10)                                                                                                                                                                                                                                                     |
-| Object array                                                                  | An array containing objects.                                                                | ARRAY OBJECT($objects;10)                                                                                                                                                                                                                                                     |
-| Object                                                                        | A structured data container composed of key/value pairs.                                    | $entity.fromObject($o)                                                                                                                                                                                                                                        |
+| > , <, >=, <=, #, =, \| , % | Operadores de comparação, lógicos ou símbolos usados em condições de consulta ou expressões.           | ORDER BY([Products];[Products]Type;<)<br/>PRINT RECORD([Employees];>) |
+| any                                                                           | Um parâmetro que pode aceitar qualquer tipo de dado suportado                                                         | JSON Stringify($value)<br/>$col.push(6;New object("firstname";"John"))                                                                                                                                                  |
+| Array                                                                         | Uma variável contendo uma lista de valores do mesmo tipo.                                    | ARRAY TEXT($arr;10)                                                                                                                                                                                                                                                           |
+| BLOB array                                                                    | Um array contendo valores BLOB.                                                            | ARRAY BLOB($data;10)                                                                                                                                                                                                                                                          |
+| Blob                                                                          | Objeto binário grande usado para armazenar dados binários.                                              | BLOB TO DOCUMENT($blob;"file.bin")                                                                                                                                                                                                                            |
+| Parâmetros                                                                    | Um valor lógico: True ou False.                                             | If (OK=1)                                                                                                                                                                                                                                                                     |
+| Boolean array                                                                 | Um array contendo valores booleanos.                                                         | ARRAY BOOLEAN($flags;10)                                                                                                                                                                                                                                                      |
+| Class name (ex: 4D.File)   | Uma referência a um tipo de classe usado para criar ou manipular instâncias de classe.                   | $file:=File("/RESOURCES/NovelCover1.jpg")                                                                                                                                                                                                     |
+| Collection                                                                    | Uma lista ordenada de valores que pode conter múltiplos tipos.                                  | New collection("A";"B";"C")                                                                                                                                                                                                                                                   |
+| Date                                                                          | Um valor de data do calendário.                                                                      | $vDate:=Current date                                                                                                                                                                                                                                                             |
+| Date array                                                                    | Um array contendo valores de data.                                                            | ARRAY DATE($dates;10)                                                                                                                                                                                                                                                         |
+| Expression                                                                    | Pode ser qualquer coisa                                                                                             | SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")                                                                                                                                                                                                                               |
+| Campo                                                                         | Uma referência a um campo pertencente a uma tabela.                                                | ORDER BY([Person];[Person]Name)                                                                                                                                       |
+| Integer                                                                       | Um número inteiro sem parte decimal.                                                        | $Sel:=ds.Employee.newSelection(dk keep ordered)                                                                                                                                                                               |
+| Integer array                                                                 | Um array contendo valores inteiros.                                                         | ARRAY INTEGER($numbers;10)                                                                                                                                                                                                                                                    |
+| Longint array                                                                 | Um array contendo valores inteiros longos.                                                    | ARRAY LONGINT($values;10)                                                                                                                                                                                                                                                     |
+| Object array                                                                  | Um array contendo objetos.                                                                | ARRAY OBJECT($objects;10)                                                                                                                                                                                                                                                     |
+| Object                                                                        | Um container de dados estruturado composto por pares chave/valor.                                    | $entity.fromObject($o)                                                                                                                                                                                                                                        |
 | Operador                                                                      | Sempre \*.                                                                                  | QUERY([Person];[Person]Name="Smith";\*)                                                                                                                               |
-| Picture array                                                                 | An array containing pictures.                                                               | ARRAY PICTURE($images;10)                                                                                                                                                                                                                                                     |
-| Imagem                                                                        | A graphical image value.                                                                    | READ PICTURE FILE($pic;"image.png")                                                                                                                                                                                                                           |
-| Pointer array                                                                 | An array containing pointers.                                                               | ARRAY POINTER($ptrs;10)                                                                                                                                                                                                                                                       |
-| Ponteiro                                                                      | A reference to another variable, field, or object.                                          | If(Is nil pointer($ptr))                                                                                                                                                                                                                                   |
-| Real array                                                                    | An array containing real numbers.                                                           | ARRAY REAL($values;10)                                                                                                                                                                                                                                                        |
-| Real                                                                          | A floating-point numeric value.                                                             | $vlResult:=Int(123.4)                                                                                                                                                                                                                         |
-| Tabela                                                                        | A reference to a database table.                                                            | ALL RECORDS([Person])                                                                                                                                                                                                     |
-| Text                                                                          | A sequence of characters representing textual data.                                         | ALERT("Hello world")                                                                                                                                                                                                                                                          |
-| Text array                                                                    | An array containing text values.                                                            | ARRAY TEXT($names;10)                                                                                                                                                                                                                                                         |
-| Hora                                                                          | A time value representing hours, minutes, and seconds.                                      | Hora actual                                                                                                                                                                                                                                                                                      |
-| Time array                                                                    | An array containing time values.                                                            | ARRAY TIME($times;10)                                                                                                                                                                                                                                                         |
-| Variável                                                                      | A writable variable of type "any" that can receive a value (assignable). | SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)                                                                                                                                                                                                                    |
+| Picture array                                                                 | Um array contendo imagens.                                                               | ARRAY PICTURE($images;10)                                                                                                                                                                                                                                                     |
+| Imagem                                                                        | Um valor de imagem gráfica.                                                                    | READ PICTURE FILE($pic;"image.png")                                                                                                                                                                                                                           |
+| Pointer array                                                                 | Um array contendo ponteiros.                                                               | ARRAY POINTER($ptrs;10)                                                                                                                                                                                                                                                       |
+| Ponteiro                                                                      | Uma referência para outra variável, campo ou objeto.                                          | If(Is nil pointer($ptr))                                                                                                                                                                                                                                   |
+| Real array                                                                    | Um array contendo números reais.                                                           | ARRAY REAL($values;10)                                                                                                                                                                                                                                                        |
+| Real                                                                          | Um valor numérico de ponto flutuante.                                                             | $vlResult:=Int(123.4)                                                                                                                                                                                                                         |
+| Tabela                                                                        | Uma referência a uma tabela de banco de dados.                                                            | ALL RECORDS([Person])                                                                                                                                                                                                     |
+| Text                                                                          | Uma sequência de caracteres representando dados textuais.                                         | ALERT("Hello world")                                                                                                                                                                                                                                                          |
+| Text array                                                                    | Um array contendo valores de texto.                                                            | ARRAY TEXT($names;10)                                                                                                                                                                                                                                                         |
+| Hora                                                                          | Um valor de hora representando horas, minutos e segundos.                                      | Hora actual                                                                                                                                                                                                                                                                                      |
+| Time array                                                                    | Um array contendo valores de hora.                                                            | ARRAY TIME($times;10)                                                                                                                                                                                                                                                         |
+| Variável                                                                      | Uma variável gravável do tipo "any" que pode receber um valor (atribuível). | SET PICTURE METADATA(vPicture;IPTC keywords;$arrTkeywords)                                                                                                                                                                                                                    |

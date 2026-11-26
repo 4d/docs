@@ -234,7 +234,7 @@ The following properties can be set:
 To change the display format of the picture, choose a value from the Picture Format menu. The formats provided are the standard picture display formats of 4D.
 To delete a custom picture, click on the **Clear** button or right-click in the preview area and choose **Clear** from the context menu.
 - **Fill Color:** You can change the color used for the background of the editor window. To do this, click in the color selection area and choose a color from the selection menu.
-- **Default Font:** To change the default font used for table and field names, choose a vaue from this menu. You can also use the Size menu to change the default font size.
+- **Default Font:** To change the default font used for table and field names, choose a value from this menu. You can also use the Size menu to change the default font size.
 
 
 ## Find in Structure

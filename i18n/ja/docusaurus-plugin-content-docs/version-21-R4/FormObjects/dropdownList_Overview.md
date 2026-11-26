@@ -42,7 +42,7 @@ macOS においては、ドロップダウンリストは "ポップアップメ
 
 - プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `\<Static List>` を選び、デフォルト値のリストを入力します。これらのデフォルト値は、オブジェクトへと自動的にロードされます。
 
-- オブジェクトとそのプロパティを作成するコードを実行します。たとえば、ドロップダウンリストに紐づいた [変数](properties_Object.md#変数あるいは式) が "myList" であれば、[On Load](Events/onLoad.md) フォームイベントに次のように書けます:
+- オブジェクトとそのプロパティを作成するコードを実行します。たとえば、ドロップダウンリストに紐づいた [変数](properties_Object.md#variable-or-expression) が "myList" であれば、[On Load](Events/onLoad.md) フォームイベントに次のように書けます:
 
 ```4d
 // Form.myDrop はフォームオブジェクトのデータソースです
@@ -87,7 +87,7 @@ Form.myDrop.index //3
   aCities{6}:="Green Bay" 
 ```
 
-この場合、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
+この場合、フォームのオブジェクトに紐付けた [変数](properties_Object.md#variable-or-expression) は `aCities` でなければなりません。このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
 - オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands/list-to-array) コマンドを使ってリストの値を配列にロードします。例:
 
@@ -95,7 +95,7 @@ Form.myDrop.index //3
    LIST TO ARRAY("Cities";aCities)
 ```
 
-この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。このコードは、前述した代入命令文の代わりに実行できます。
+この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#variable-or-expression) は `aCities` でなければなりません。このコードは、前述した代入命令文の代わりに実行できます。
 
 ユーザーがおこなった選択内容をフィールドに保存する必要があれば、レコードの登録後に代入命令を実行します。たとえば、次のような Case文のコードを作成します:
 
@@ -121,13 +121,13 @@ Form.myDrop.index //3
 
 ### 選択リストの使用
 
-入力エリア (列挙型のフィールドまたは変数) の管理のためにリストボックスを使用したい場合、フィールドまたは変数をドロップダウンリストの [データソース](properties_Object.md#変数あるいは式) として直接参照することができます。これにより列挙型のフィールド/変数を容易に管理できるようになります。
+入力エリア (列挙型のフィールドまたは変数) の管理のためにリストボックスを使用したい場合、フィールドまたは変数をドロップダウンリストの [データソース](properties_Object.md#variable-or-expression) として直接参照することができます。これにより列挙型のフィールド/変数を容易に管理できるようになります。
 
 たとえば、"White"、"Blue"、"Green"、"Red" という値のみを含む "Color" というフィールドがあった場合、これらの値を含むリストを作成し、それを "Color" フィールドを参照するドロップダウンリストに関連付けることができます。こうすることによって、あとは 4D が自動的にカレント値の入力や表示に関して管理してくれます。
 
 > 階層リストの場合、第一階層の値のみが表示・選択できます。階層的な内容を表示したい場合は、[階層型の選択リスト](#階層型選択リストの使用) を使用する必要があります。
 
-ドロップダウンリストをフィールドや変数と関連付けるには、プロパティリストの [変数あるいは式](properties_Object.md#変数あるいは式) 欄にフィールドまたは変数の名前を直接入力します。
+ドロップダウンリストをフィールドや変数と関連付けるには、プロパティリストの [変数あるいは式](properties_Object.md#variable-or-expression) 欄にフィールドまたは変数の名前を直接入力します。
 
 > この原理は、オブジェクトや配列を用いたドロップダウンリストと組み合わせることはできません。"変数あるいは式" の欄にフィールド名を入力した場合は、必ず選択リストを使用します。
 
@@ -165,7 +165,7 @@ Form.myDrop.index //3
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#cssクラス) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ-(リスト)) - [データタイプ](properties_DataSource.md#データタイプ-リスト) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [選択リスト](properties_DataSource.md#選択リスト) - [フォーカス可](properties_Entry.md#フォーカス可) - [文字フォーマット](properties_Display.md#文字フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#variable-or-expression) - [式の型](properties_Object.md#式の型式タイプ) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#cssクラス) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ-(リスト)) - [データタイプ](properties_DataSource.md#データタイプ-リスト) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [選択リスト](properties_DataSource.md#選択リスト) - [フォーカス可](properties_Entry.md#フォーカス可) - [文字フォーマット](properties_Display.md#文字フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
 
 ## サポートされるイベント
 

@@ -3,16 +3,16 @@ id: sessions
 title: Sessions utilisateur
 ---
 
-The 4D web server provides built-in features for managing **user sessions**. La création et le maintien de sessions web vous permettent de contrôler et d'améliorer l'expérience de l'utilisateur sur votre application web. Lorsque les sessions web sont activées, les clients web peuvent réutiliser le même contexte de serveur d'une requête à une autre.
+Le serveur web 4D fournit des fonctionnalités intégrées pour gérer les **sessions utilisateurs**. La création et le maintien de sessions web vous permettent de contrôler et d'améliorer l'expérience de l'utilisateur sur votre application web. Lorsque les sessions web sont activées, les clients web peuvent réutiliser le même contexte de serveur d'une requête à une autre.
 
 Les sessions utilisateur du serveur web permettent de :
 
-- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
+- gérer simultanément plusieurs requêtes depuis le même client web via un nombre illimité de process préemptifs (les sessions web sont **évolutives**),
 - partager des données entre les process d'un client web,
 - associer des privilèges aux sessions d'utilisateurs,
-- handle access through a `Session` object and the [Session API](API/SessionClass.md).
+- gérer l'accès à travers un objet `Session` et l'[API Session](API/SessionClass.md).
 
-> **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
+> **Note :** L'implémentation actuelle n'est que la première étape d'une fonctionnalité complète à venir permettant aux développeurs de gérer les permissions hiérarchiques des utilisateurs à travers des sessions dans l'ensemble de l'application web.
 
 ## Activation des sessions
 
@@ -46,7 +46,7 @@ Lorsque [les sessions sont activées](#activation-des-sessions), des mécanismes
 - une nouvelle session avec un cookie privé "4DSID__AppName_" est créée sur le serveur web
 - un nouvel objet `Session` Guest est créé et est dédié à la session web évolutive.
 
-The current `Session` object can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
+L'objet `Session` courant est alors accessible via la commande [`Session`](API/SessionClass.md#session) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -65,9 +65,9 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes).
+Ce délai peut être défini en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai ne peut pas être inférieur à 60 minutes).
 
-When a scalable web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
+Lorsqu'une session web évolutive est fermée, si la commande [`Session`](API/SessionClass.md#session) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide
@@ -77,7 +77,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 Des privilèges peuvent être associés aux sessions. Sur le serveur web, vous pouvez fournir un accès spécifique ou des fonctionnalités en fonction des privilèges de la session.
 
-You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Vous assignez des privilèges en utilisant la fonction [`.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **guest** (la fonction [`isGuest()`](API/SessionClass.md#isguest) retourne true).
 
 > Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
 

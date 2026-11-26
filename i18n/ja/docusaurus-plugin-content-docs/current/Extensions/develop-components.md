@@ -260,7 +260,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 [コンポーネント名前空間](#コンポーネント名前空間の宣言) を入力しない場合、シンタックスファイル生成のオプションがチェックされていても、クラスや公開メソッド用のリソースは生成されません。
 
-クラス関数やクラスコンストラクターが[宣言部分の上にあるコメントブロック内にドキュメントが記述されている](../Concepts/classes.md#関数コメント) 場合、シンタックスファイルにはその詳細と引数のコメントが含まれます(`MCP:` の行が含まれることはありません)。ホストプロジェクトはそれらをコード保管の中に平文テキストとして表示し、またコンパイルされたコンポーネントのヘルプにも表示します。例えば、コンポーネントのクラスに以下のような関数があった場合:
+When your class functions and class constructors are documented with a [comment block above their declaration](../Concepts/comments.md#syntax-description), the syntax file also contains their description and parameter comments (`MCP:` lines are never included). ホストプロジェクトはそれらをコード保管の中に平文テキストとして表示し、またコンパイルされたコンポーネントのヘルプにも表示します。例えば、コンポーネントのクラスに以下のような関数があった場合:
 
 ```4d
 // Class: Tools

@@ -7,7 +7,7 @@ title: ルーラー
 
 ![](../assets/en/FormObjects/indicator_ruler.png)
 
-[割り当てられた変数](properties_Object.md#変数あるいは式) の値を入力エリア (フィールドまたは変数) に代入して格納したり、逆にオブジェクトの現在値を設定することもできます。
+[割り当てられた変数](properties_Object.md#variable-or-expression) の値を入力エリア (フィールドまたは変数) に代入して格納したり、逆にオブジェクトの現在値を設定することもできます。
 
 詳細については [インジケーターの使用](progressIndicator.md#インジケーターの使用) を参照ください。
 
@@ -15,7 +15,7 @@ title: ルーラー
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [式の型](properties_Object.md#式の型式タイプ) -
 [CSSクラス](properties_Object.md#cssクラス) -
 [最小](properties_Scale.md#最小) -

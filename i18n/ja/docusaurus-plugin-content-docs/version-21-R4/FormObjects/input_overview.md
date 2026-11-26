@@ -45,7 +45,7 @@ title: 入力
 
 [タイプ](properties_Object.md#タイプ)
 [オブジェクト名](properties_Object.md#オブジェクト名)
-[変数あるいは式](properties_Object.md#変数あるいは式)
+[変数あるいは式](properties_Object.md#variable-or-expression)
 [CSSクラス](properties_Object.md#cssクラス)
 [選択リスト](properties_DataSource.md#選択リスト-静的リスト)
 [左](properties_CoordinatesAndSizing.md#左)

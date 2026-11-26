@@ -51,7 +51,7 @@ title: 4D View Pro エリアの設定
 
 4D View Pro エリアのプロパティリスト内では、以下のフォームイベントが利用可能です。
 
-一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](https://doc.4d.com/4dv19/help/command/ja/page1606.html) コマンドが返すオブジェクトに追加の情報を提供します。以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
+一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](https://doc.4d.com/4dv20/help/command/ja/page1606.html) コマンドが返すオブジェクトに追加の情報を提供します。以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
 
 | 標準の 4Dイベント                                      | 4D View Pro 専用、または追加情報を返すイベント                         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -313,8 +313,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | margin |        | object  | 印刷マージン                             |
 |        | top    | longint | 上部マージン、100分の1インチ単位。デフォルト値 = 75     |
 |        | bottom | longint | 下部マージン、100分の1インチ単位。デフォルト値 = 75     |
-|        | left   | longint | 右マージン、100分の1インチ単位。デフォルト値 = 70      |
-|        | right  | longint | 左マージン、100分の1インチ単位。デフォルト値 = 70      |
+|        | left   | longint | 左マージン、100分の1インチ単位。デフォルト値 = 70      |
+|        | right  | longint | 右マージン、100分の1インチ単位。デフォルト値 = 70      |
 |        | header | longint | ヘッダーのオフセット、100分の1インチ単位。デフォルト値 = 30 |
 |        | footer | longint | フッターのオフセット、100分の1インチ単位。デフォルト値 = 30 |
 
@@ -336,7 +336,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | blackAndWhite   | boolean | 白黒で印刷します。<p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                        |
 | centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
-| firstPageNumber | longint | 最初のページに印刷するページ番号。 デフォルト値 = 1                                                                                                                                                                           |
+| firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                                                            |
 | pageOrder       | longint | ページの印刷順。とりうる値: `vk print page order auto` (デフォルト), `vk print page order down then over`, `vk print page order over then down`.                      |
 | pageRange       | text    | 印刷されるページの範囲                                                                                                                                                                                            |
 | qualityFactor   | longint | 印刷の品質指定 (1 - 8)。高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                                          |

@@ -98,7 +98,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 :::
 
 - la commande [`Last errors`](../commands/last-errors.md) qui renvoie une collection avec la pile courante d'erreurs survenues dans l'application 4D.
-- the [`Call chain`](../commands/call-chain) command that returns a collection of objects describing each step of the method call chain within the current process.
+- la commande [`Call chain`](../commands/call-chain) qui renvoie une collection d'objets décrivant chaque étape de la chaîne d'appels de méthodes au sein du process courant.
 
 #### Exemple
 
@@ -293,6 +293,6 @@ Les exceptions qui interrompent l'exécution du code sont renvoyées par 4D mais
 - un **message**, qui explique pourquoi l'erreur s'est produite
 - un **code**, qui est un numéro arbitraire renvoyé par le composant
 
-La [boîte de dialogue d'erreur 4D](../Debugging/basics.md) affiche le code et le message à l'utilisateur. Click on the **Copy** button to store detailed information related to the error in the pasteboard.
+La [boîte de dialogue d'erreur 4D](../Debugging/basics.md) affiche le code et le message à l'utilisateur. Cliquez sur le bouton **Copier** pour enregistrer les informations détaillées relatives à l'erreur dans le presse-papiers.
 
 Pour obtenir une description complète d'une erreur et surtout de son origine, vous devez appeler la commande [`Last errors`](../commands/last-errors.md). Lorsque vous interceptez et traitez des erreurs à l'aide d'une [méthode de traitement des erreurs](#installing-an-error-handling-method) dans vos applications finales, utilisez [`Last errors`](../commands/last-errors.md) et veillez à enregistrer toutes les propriétés de l'objet *error*, car les codes d'erreur dépendent des composants.

@@ -19,7 +19,7 @@ Esses erros de digitação geralmente causam erros de sintaxe (na imagem acima, 
 
 ### Erros de sintaxe
 
-Alguns erros só podem ser detectados quando o método for executado. Alguns erros só podem ser detectados quando o método for executado. Por exemplo:
+Alguns erros só podem ser detectados quando o método for executado. A [Janela de Erro de Sintaxe](#syntax-error-window) aparece quando um erro ocorre durante a execução do código. Por exemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -45,7 +45,7 @@ Por vezes, a parte do código que apresenta o erro pode ser diferente do código
 
 ### Erros de execução
 
-No modo Aplicação, pode obter erros que não se vêem no modo interpretado. Aqui está um exemplo:
+Em aplicações compiladas, pode obter erros que não se vêem no [modo interpretado](../Concepts/interpreted.md). Aqui está um exemplo:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 

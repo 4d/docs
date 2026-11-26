@@ -44,7 +44,7 @@ The lower part of the editor window is an information bar displaying data corres
 
 #### Information about a table
 
-- Table name and number
+- Nombre y número de la tabla
 - Table triggers:
   - **NEW:** al guardar un nuevo registro
   - **SAVE:** On saving existing record
@@ -52,7 +52,7 @@ The lower part of the editor window is an information bar displaying data corres
 
 #### Information about a field
 
-- Table name and number
+- Nombre y número de la tabla
 - Field name and number
 - Tipo de campo
 - Field attributes:
@@ -86,8 +86,8 @@ The different areas of the palette can be expanded/collapsed. You can click on t
 The following shortcuts can be used:
 
 - **Shift+click** on the title bar of a collapsed panel expands that panel and collapses all the others.
-- **Alt** (Windows) or **Option** (macOS) + **click** on the title bar of a collapsed panel expands all the panels.
-- **Alt** (Windows) or **Option** (macOS) + **click** on the title bar of an expanded panel collapses all the panels.
+- **Alt** (Windows) u **Opción** (macOS) + **clic** en la barra de título de un panel colapsado abre todos los paneles.
+- **Alt** (Windows) u **Opción** (macOS) + **clic** en la barra de título de un panel desplegado permite contraer todos los paneles.
 
 The position of the palette and the expanded/collapsed states of its panels are saved.
 
@@ -105,9 +105,9 @@ Para seleccionar:
 
 You can resize or move the table images in the Structure editor according to your requirements.
 
-**4D Server**: In [development mode](../Desktop/clientServer.md#development-mode), any modification in table images (resize, location...) is propagated to all developers in the Design environment.
+**4D Server**: en [modo desarrollo](../Desktop/clientServer.md#development-mode), cualquier modificación en las imágenes de las tablas (cambio de tamaño, ubicación...) is propagated to all developers in the Design environment.
 
-### Scrolling the field list
+### Desplazarse por la lista de campos
 
 When you add fields to a table or when you reduce the size of a table, there may be more fields in the table than the image can display. When this happens, 4D automatically adds a cursor than you can use to scroll through the list of visible fields:
 
@@ -135,7 +135,7 @@ To apply the **Collapse** command to one or more tables, you can:
 :::note Notas
 
 - A standard double-click on the table name area opens the **Inspector**.
-- **Alt** (Windows) or **Option** (macOS) + double-click opens the trigger method of the table in the **Method editor**.
+- **Alt** (Windows) u **Opción** (macOS) + doble clic abre el método de activación de la tabla en el **Editor de métodos**.
 - **Ctrl** (Windows) o **Comando** (macOS) + doble clic abre el **Explorador** en la página Formulario.
 
 :::
@@ -162,7 +162,7 @@ Specific scrolling functions facilitate navigation among large structures:
 
 ## Zoom
 
-You can modify the display scale of the database structure using the **Zoom** menu in the right side of the information bar. 100% is the default value when opening a database. Zoom action is focused on the selection if there is one.
+You can modify the display scale of the database structure using the **Zoom** menu in the right side of the information bar. 100% es el valor predeterminado al abrir una base de datos. Zoom action is focused on the selection if there is one.
 
 The current zoom setting is specific to each user and is memorized when the window is closed.
 
@@ -178,7 +178,7 @@ The **Display** button in the toolbar of the Structure editor is associated with
 
 ![](../assets/en/Develop/structure-display.png)
 
-By default, all objects are displayed. This feature allows various representations or views — from the simplest to the most complete — and provides an analysis tool for the structure based on the level of information required.
+Por defecto, se muestran todos los objetos. This feature allows various representations or views — from the simplest to the most complete — and provides an analysis tool for the structure based on the level of information required.
 
 The choices are applied to all tables and fields. They are saved per user and memorized when the window is closed. Hiding objects does not change the position of the tables.
 

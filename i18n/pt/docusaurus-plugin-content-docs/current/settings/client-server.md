@@ -39,7 +39,7 @@ Essa opção permite mudar o número da porta TCP na qual o 4D Server publica o 
 A personalização desse valor é necessária quando se deseja usar vários aplicativos 4D na mesma máquina; nesse caso, é necessário especificar um número de porta diferente para cada aplicativo.
 Quando você modifica esse valor no 4D Server ou no 4D, ele é automaticamente transmitido a todas as máquinas 4D conectadas ao banco de dados.
 
-Para actualizar las outras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos puntos) después de la dirección IP del equipo servidor en la pestaña **Personalizado** de la caja de diálogo de conexión  Por exemplo, se o novo número de porta é 19888: Por exemplo, se o novo número de porta é 19888:
+Para actualizar las outras máquinas clientes que no estén conectadas, basta con introducir el nuevo número de puerto (precedido de dos pontos) depois do endereço IP da máquina do servidor na guia **Personalizado** da caixa de diálogo de conexão no momento da próxima conexão. Por exemplo, se o novo número de porta é 19888:
 
 ![](../assets/en/settings/client-server-network.png)
 
@@ -117,7 +117,7 @@ Quando um tempo limite for selecionado, o servidor fechará a conexão de um cli
 
 #### Registrar clientes na inicialização para Execute On Client
 
-Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la sección [Procedimientos almacenados en las máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
+Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à base de dados podem executar os métodos remotamente. Este mecanismo se detalla en la seção [Procedimentos armazenados nas máquinas cliente](../Desktop/clientServer.md#stored-procedures-on-client-machines).
 
 #### Encriptar as comunicações cliente-servidor
 

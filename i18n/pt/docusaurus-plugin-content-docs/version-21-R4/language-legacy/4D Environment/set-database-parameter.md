@@ -250,7 +250,9 @@ Para todo tipo de aplicação 4D interpretada ou compilada (4D todos os modos, 4
 
 -restrição de comandos 4D que são examinados usando Log command list (selector 80), ou
 
--restrição do processo atual com Current process debug log recording (selector 111). Isso vai adicionar a letra "p" e o número de processo ao nome de arquivo: 4DDebugLog\[\_pn\_n\].txt ou 4DDebugLogServer\[\_pn\_n\].txt Para saber mais sobre esse formato e o uso do arquivo 4DDebugLog, veja a seção *Descrição de arquivos de log* **Nota**: Esta opção se oferece unicamente com fins de depuração e deve ser utilizada com cuidado já que pode afetar o rendimento da aplicação.
+-restrição do processo atual com Current process debug log recording (selector 111). Isso vai adicionar a letra "p" e o número de processo ao nome de arquivo: 4DDebugLog\[\_pn\_n\].txt ou 4DDebugLogServer\[\_pn\_n\].txt Para saber mais sobre esse formato e o uso do arquivo 4DDebugLog, veja a seção [*Descrição de arquivos de log*](../../Debugging/debugLogFiles.md).
+
+**Nota**: Esta opção se oferece unicamente com fins de depuração e deve ser utilizada com cuidado já que pode afetar o rendimento da aplicação.
 
 
 
@@ -648,6 +650,12 @@ Passar String type with time zone nesse seltor converte datas 4D em strings ISO 
 
 Este funcionamento pode ser uma fonte de erros se deseja enviar valores de data em JSON a uma pessoa que se encontra em uma zona horária diferente. Este é o caso, por exemplo, ao exportar uma tabela usando [Selection to JSON](../commands/selection-to-json) em França que está destinado a ser importada para os E.U.A com [JSON TO SELECTION](../commands/json-to-selection). Por padrão, as datas retornam a ser interpretadas em cada fuso horário, os valores armazenados na base serão diferentes. Neste caso, pode modificar o modo de conversão de datas para que não se leve em conta o fuso horário ao passar 0 no seletor. A conversão da data 23/08/2013 logo lhe dará "2013-08-23T00:00:00Z" em todos os casos.
 
+:::note
+
+No modo `Date type` (padrão), apenas strings de data JSON em formato curto (por exemplo, "2026-08-23") são importadas como valores de data em objetos 4D. Strings de data JSON em formato datetime (por exemplo, "2026-08-23T00:00:00Z") são importadas como valores string.
+
+:::
+
 
 
 ### Diagnostic log level (86)
@@ -940,7 +948,7 @@ Para mais informação sobre os arquivos 4DPOP3Log\_X.txt, consulte a seção *D
 
 **Valores possíveis**: 0 ou de1 a X (0 = não registrar, 1 a X = número sequencial, adicionado ao nome de arquivos). Como padrão, o valor é 0 (IMAP exchanges não registradas).
 
-**Descrição**: Inicia ou para o registro de trocas entre 4D e o servidor IMAP, quando um objeto transportador for processado através de *IMAP\_transporter.getMail( )* ou *IMAP\_transporter.checkConnection( )*. Como padrão, o valor é 0 (trocas não registradas). Quando esse mecanismo estiver ativado, um arquivo de histórico é criado na pasta Logs do banco de dados. É chamada de 4DIMAPLog\_X.txt, onde X é o número sequencial do histórico. Quando o arquivo 4DIMAPLog alcançar um tamanho de 10MB, ele é fechado e outro arquivo é gerado, com um número incrementado sequencialmente. Se um arquivo do mesmo nome já existir, é substituido diretamente. Pode estabelecer o número inicial da sequência usando o parâmetro valor. Como padrão, todos os arquivos são mantidos, mas pode controlar o número de arquivos para manter usando o parâmetro Circular log limitation. Para saber mais informações sobre 4DIMAPLog\_X.txt, veja a seção *Descrição de arquivos de log*.
+**Descrição**: Inicia ou para o registro de trocas entre 4D e o servidor IMAP, quando um objeto transportador for processado através de *IMAP\_transporter.getMail( )* ou *IMAP\_transporter.checkConnection( )*. Como padrão, o valor é 0 (trocas não registradas). Quando esse mecanismo estiver ativado, um arquivo de histórico é criado na pasta Logs do banco de dados. É chamada de 4DIMAPLog\_X.txt, onde X é o número sequencial do histórico. Quando o arquivo 4DIMAPLog alcançar um tamanho de 10MB, ele é fechado e outro arquivo é gerado, com um número incrementado sequencialmente. Se um arquivo do mesmo nome já existir, é substituido diretamente. Pode estabelecer o número inicial da sequência usando o parâmetro valor. Como padrão, todos os arquivos são mantidos, mas pode controlar o número de arquivos para manter usando o parâmetro Circular log limitation. Para saber mais informações sobre 4DIMAPLog\_X.txt, veja a seção [Descrição de arquivos de log](../../Debugging/debugLogFiles.md).
 
 
 
@@ -1023,20 +1031,6 @@ Esta configuração só pode ser definida no 4D Server e aplica-se a todas as no
 * :O parâmetro *tabela* só é utilizado pelos seletores 31, 46 e 47\. Em todos os demais casos, é ignorado se passado.
 * Se uma configuração não for mantida entre sessões, mas quiser ter certeza que é aplicada, deve executar em ou [On Server Startup database method](../commands/on-server-startup-database-method).
 
-## seletores Thread-seguro 
-
-O comando **SET DATABASE PARAMETER** pode ser usado em processos preemptivos ao chamar os seletores abaixo:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
 
 
 ## Exemplo 1 
@@ -1086,6 +1080,7 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 |  |  |
 | --- | --- |
 | Número do comando | 642 |
-| Thread-seguro | yes (parcialmente) |
+| Thread-seguro | yes (parcialmente). Seletores thread-seguros: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
+
 
 

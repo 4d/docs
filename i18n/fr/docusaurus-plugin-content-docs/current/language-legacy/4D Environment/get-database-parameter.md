@@ -1087,6 +1087,7 @@ Dans la [On Startup database method](../commands/on-startup-database-method), vo
 |  |  |
 | --- | --- |
 | Numéro de commande | 643 |
-| Thread safe | yes (partially) |
+| Thread safe | yes (partially). Thread-safe selectors: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
+
 
 

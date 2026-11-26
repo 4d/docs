@@ -13,6 +13,13 @@ Se estiver acostumado a codificar com **VS Code**, você também pode usar esse 
 
 :::
 
+:::note
+
+O depurador só pode ser chamado quando seu código **é executado interpretado**. Se você quiser depurar algum código em um aplicativo compilado, será necessário reiniciar seu projeto em modo interpretado antes.
+
+:::
+ 
+
 ## Chamando o depurador
 
 Há várias formas de exibir o depurador:

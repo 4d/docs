@@ -53,12 +53,11 @@ En caso de error, el comando genera un código que puede ser interceptado con el
 
 ## Ver también
 
-[SELECT LOG FILE](select-log-file.md)  
-
+[SELECT LOG FILE](select-log-file.md)
 
 ## Propiedades
 
-|  |  |
-| --- | --- |
+|                   |     |
+| ----------------- | --- |
 | Número de comando | 926 |
-| Hilo seguro | yes |
+| Hilo seguro       | sí  |

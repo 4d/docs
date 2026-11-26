@@ -38,7 +38,7 @@ title: サブフォーム
 
 ### バインドされた変数あるいは式の管理
 
-サブフォームコンテナーオブジェクトには、[変数あるいは式](properties_Object.md#変数あるいは式) をバインドすることができます。これは、親フォームとサブフォーム間で値を同期するのに便利です。
+サブフォームコンテナーオブジェクトには、[変数あるいは式](properties_Object.md#variable-or-expression) をバインドすることができます。これは、親フォームとサブフォーム間で値を同期するのに便利です。
 
 デフォルトで、4D はサブフォームコンテナーに [オブジェクト型](properties_Object.md#式の型式タイプ) の変数あるいは式をバインドし、`Form` コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など)の変数や式を使用することもできます。
 
@@ -55,7 +55,7 @@ title: サブフォーム
 
 :::info
 
-時間を静的に表示するには、適切な [データ型](properties_DataSource.md#データタイプ-式の型) を [変数または式](properties_Object.md#変数あるいは式) に使用する必要があります。
+時間を静的に表示するには、適切な [データ型](properties_DataSource.md#データタイプ-式の型) を [変数または式](properties_Object.md#variable-or-expression) に使用する必要があります。
 
 - 変数 (例: `parisTime`) を使用する場合は、`text` または `time` 型である必要があります。
 - 式 (例: `Form.myValue`) を使用する場合は、`text` 値である必要があります。
@@ -210,7 +210,7 @@ End if
 
 ## プロパティ一覧
 
-[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線カラー](./properties_BackgroundAndBorder.md#border-color) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#variable-or-expression) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線カラー](./properties_BackgroundAndBorder.md#border-color) - [境界線スタイル](properties_BackgroundAndBorder.md#border-line-style) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド)
 
 ## サポートされるイベント
 

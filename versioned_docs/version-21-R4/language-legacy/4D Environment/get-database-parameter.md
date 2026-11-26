@@ -61,7 +61,7 @@ The 4D Remote mode timeout selector is only taken into account if you are using 
 
 **Scope**: 4D Server, 4D remote*
 
-* **Kept after restart:** No
+**Kept after restart:** No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name).
 
@@ -349,9 +349,9 @@ SET DATABASE PARAMETER (34;0) // disables file
 For any type of interpreted or compiled 4D application (4D all modes, 4D Server, 4D Volume Desktop), you can avoid having a file record too much information by:
 
 - restricting the 4D commands that are examined by using Log command list (selector 80), or 
-- restricting it to the current process only with Current process debug log recording (selector 111). This will add the letter "p" and the process number to the file name: *4DDebugLog\[\_pn\_n\].txt*  or *4DDebugLogServer\[\_pn\_n\].txt* *
+- restricting it to the current process only with Current process debug log recording (selector 111). This will add the letter "p" and the process number to the file name: *4DDebugLog\[\_pn\_n\].txt*  or *4DDebugLogServer\[\_pn\_n\].txt*   
 
-*For more information about this format and on the use of the *4DDebugLog* file, please refer to the *Description of log files* section..
+For more information about this format and on the use of the *4DDebugLog* file, please refer to the [*Description of log files*](../../Debugging/debugLogFiles.md) section.
 
  This selector is provided solely for the purpose of debugging and should be used with care since it can impact the application performance. 
 
@@ -1470,23 +1470,9 @@ When used with [SET DATABASE PARAMETER](../commands/set-database-parameter), def
 
 
 
-## Thread-safe selectors 
-
-The **Get database parameter** command can be used in preemptive processes when calling the following selectors:
-
-* [4D Server log recording](#4d-server-log-recording-28)
-* [Debug log recording](#debug-log-recording-34)
-* [Diagnostic log recording](#diagnostic-log-recording-79)
-* [Diagnostic log level](#diagnostic-log-level-86)
-* [Circular log limitation](#circular-log-limitation-90)
-* [Cache flush periodicity](#cache-flush-periodicity-95)
-* [SMTP Log](#smtp-log-110)
-* [POP3 Log](#pop3-log-116)
-* [IMAP Log](#imap-log-119)
-* [Pause logging](#pause-logging-121)
 
 
-<h2 data-noindex>Example</h2>
+## Example
 
 You want your application to restart after a first launch. The application is launched with, for example, a command line on Windows:
 
@@ -1510,19 +1496,19 @@ In the [On Startup database method](../commands/on-startup-database-method), you
  End if
 ```
 
-<h2 data-noindex>See also</h2>
+## See also
 
 [DISTINCT VALUES](../commands/distinct-values)  
 [Application info](../commands/application-info)  
 [QUERY SELECTION](../commands/query-selection)  
 [SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
-<h2 data-noindex>Properties</h2>
-
+## Properties
 |  |  |
 | --- | --- |
 | Command number | 643 |
-| Thread safe | yes (partially) |
+| Thread safe | yes (partially). Thread-safe selectors: [4D Server log recording](#4d-server-log-recording-28) - [Debug log recording](#debug-log-recording-34) - [Diagnostic log recording](#diagnostic-log-recording-79) - [Diagnostic log level](#diagnostic-log-level-86) - [Circular log limitation](#circular-log-limitation-90) - [Cache flush periodicity](#cache-flush-periodicity-95) - [SMTP Log](#smtp-log-110) - [POP3 Log](#pop3-log-116) - [IMAP Log](#imap-log-119) - [Pause logging](#pause-logging-121)|
+
 
 
 

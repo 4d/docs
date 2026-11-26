@@ -167,7 +167,7 @@ title: データソース
 
 ## デフォルト値
 
-配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
+配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#variable-or-expression) に代入されます。この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
 
 > このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値) を混同しないようにしてください。
 
@@ -192,7 +192,7 @@ title: データソース
 ## 式
 
 This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes)
-and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
+and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. **[変数あるいは式](properties_Object.md#variable-or-expression)** の章も参照ください。
 
 列に割り当てる 4D式です。以下のものを指定できます:
 

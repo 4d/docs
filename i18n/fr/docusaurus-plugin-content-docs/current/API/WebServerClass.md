@@ -140,7 +140,7 @@ Contient la <!-- REF #WebServerClass.CORSSettings.Summary -->liste d'hôtes et d
   - 192.168.\*
   - 192.168.\*:8081
   - <http://192.168.5.17:8081>
-  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
+  - <http://\*.myDomain.com>
   - <http://myProject.myDomain.com>
   - \*.myDomain.com
   - myProject.myDomain.com
@@ -454,7 +454,7 @@ The `.mcp` object contains the following properties:
 | publicURL                | Text       | ""                                                     | Base URL (scheme and host) of the URLs published by the MCP server, for example "https://sales.example.com". If empty, the base URL is built from the request                                               |
 | oauthDynamicRegistration | Boolean    | True                                                   | True to allow dynamic client registration in [OAuth mode](../WebServer/mcp-server.md#oauth-21-mode)                                                                                                                                                                                            |
 
-You can pass an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. While the web server is running, only `mcp.enabled` can be modified: setting it to **True** or **False** enables or disables the MCP server without restarting the web server. The MCP settings are kept when the web server is restarted.
+The MCP settings are defined in the Settings of the application, or by passing an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. On the `.mcp` object, all properties are read-only except `enabled`: while the web server is running, setting `mcp.enabled` to **True** or **False** enables or disables the MCP server without restarting the web server. This change applies until 4D quits: it is not saved in the settings, and the next start of 4D uses the settings. The MCP settings are kept when the web server is restarted.
 
 #### Exemple 1
 
@@ -731,11 +731,11 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->champ "path" du cookie 
 
 La <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur "SameSite" du cookie de session<!-- END REF -->. Valeurs possibles (avec constantes) :
 
-| Constante           | Valeur   | Description                                                                                                                                                                                            |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                    |
-| Web SameSite Lax    | "Lax"    | Les cookies sont également envoyés aux sous-requêtes intersites mais uniquement lorsque l'internaute navigue vers le site d'origine (i.e.           |
-| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin. |
+| Constante           | Valeur   | Description                                                                                                                                                                                                                                                               |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                                                                                                                       |
+| Web SameSite Lax    | "Lax"    | Cookies are not sent with requests coming from other websites (images, frames, forms, scripts), except when the user navigates to the site from another website with a GET request (following a link, redirection). |
+| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin.                                                                    |
 
 Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-samesite) pour des informations détaillées.
 

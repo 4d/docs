@@ -154,11 +154,11 @@ Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de dé
 
 Vous pouvez attribuer des privilèges de groupe à n'importe quelle [extension](../Extensions/overview.md) installée dans le projet. Cela inclut l'ensemble des plug-ins et composants 4D ainsi que ceux développés par des tiers.
 
-Distributing access to the extensions lets you control the use of the licenses you possess for these extensions. Les utilisateurs qui n'appartiennent pas au groupe d'accès d'une extension ne peuvent pas charger cette extension.
+Distribuer l'accès aux extensions vous permet de contrôler l'utilisation des licences que vous possédez pour ces extensions. Les utilisateurs qui n'appartiennent pas au groupe d'accès d'une extension ne peuvent pas charger cette extension.
 
 > Les licences utilisées demeurent associées aux comptes utilisateurs 4D dans le groupe, durant toute la session 4D.
 
-The “Plug-in” area on the Groups page of the tool box lists all the extensions requiring a license loaded by the 4D application. Pour donner à un groupe l'accès à une extension, il suffit de cocher l'option correspondante.
+La zone "Plug-in' de la page Groupes de la boîte d’outils répertorie toutes les extensions nécessitant une licence chargées par l’application 4D. Pour donner à un groupe l'accès à une extension, il suffit de cocher l'option correspondante.
 
 ![](../assets/en/Users/plugins.png)
 

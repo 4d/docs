@@ -31,21 +31,21 @@ Pour récupérer le nom de la classe associée lors de l'exécution, utilisez la
 
 :::tip Article(s) de blog sur le sujet
 
-[Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
+[Typage plus strict des objets basés sur les classes](https://blog.4d.com/stricter-class-based-typing-for-objects/)
 
 :::
 
-### `4D.Vector` class
+### Classe `4D.Vector`
 
-If you assign `4D.Vector` as the class of an Object type field, you define a **vector field**. Such fields store embessings and can be used to query data using AI features. See the [`4D.Vector` class](../API/VectorClass.md) documentation to see how to query with vectors.
+Si vous assignez la classe `4D.Vector` à un champ de type Objet, vous définissez un **champ vectoriel**. Ces champs stockent des vecteurs (ou *embeddings*) et peuvent être utilisés pour interroger les données à l'aide des fonctionnalités d'IA. Reportez-vous à la documentation de la [classe `4D.Vector`](../API/VectorClass.md) pour savoir comment effectuer des requêtes à l'aide de vecteurs.
 
-Note that the [**4D Embedding Studio** component](https://corner.4d.com/component/4d-embedding-studio) can help you configuring and updating your 4D.Vector fields.
+Notez que le [composant **4D Embedding Studio**](https://corner.4d.com/component/4d-embedding-studio) peut vous aider à configurer et à mettre à jour vos champs 4D.Vector.
 
-When you assign `4D.Vector` as the class of an Object type field, a specific icon is displayed as field type in the Structure editor: ![](../assets/en/Develop/ai-icon.png)
+Lorsque vous assignez la classe `4D.Vector` à un champ de type Objet, une icône spécifique s'affiche pour indiquer le type du champ dans l'éditeur de structure : ![](../assets/en/Develop/ai-icon.png)
 
 :::tip Article(s) de blog sur le sujet
 
-[Vector Indexing in 4D: Faster Similarity Search for 4D.Vector Fields](https://blog.4d.com/vector-indexing-in-4d-faster-similarity-search-for-4d-vector-fields)
+[Indexation vectorielle en 4D : recherche par similarité plus rapide pour les champs vectoriels 4D](https://blog.4d.com/vector-indexing-in-4d-faster-similarity-search-for-4d-vector-fields)
 
 :::
 

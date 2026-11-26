@@ -11,10 +11,10 @@ title: VP SET CELL STYLE
 
 <div class="no-index">
 
-| Paramètres | Type   |    | Description                                                                    |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------ |
-| rangeObj   | Object | -> | Objet plage                                                                    |
-| styleObj   | Object | -> | Le nom de la troisième feuille est "Total premier trimestre" : |
+| Paramètres | Type   |    | Description |
+| ---------- | ------ | -- | ----------- |
+| rangeObj   | Object | -> | Objet plage |
+| styleObj   | Object | -> | Objet style |
 
 </div>
 <!-- END REF -->

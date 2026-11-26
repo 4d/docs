@@ -39,7 +39,7 @@ In *dataObject*, pass the object that contains the cell data, formatting, and fo
 Na opção opcional *options*, você pode especificar o que colar no intervalo de células. Valores possíveis:
 
 |Constant|Description|
-|---|---|---|
+|---|---|
 |`vk clipboard options all`|Pastes all data objects, including values, formatting, and formulas.|
 |`vk clipboard options formatting`|Pastes only the formatting.|
 |`vk clipboard options formulas`|Pastes only the formulas.|

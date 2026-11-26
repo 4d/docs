@@ -27,8 +27,6 @@ title: コンパイル
 
 コンパイルが終了次第、[アプリケーションをコンパイル済みモードで実行](#コンパイル済み実行)し、実行速度がどれだけ向上したのか確認することができます。
 
-When the compilation succeeds, the compiler also generates the `Project/DerivedData/syntaxMCP.json` file, which contains the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata) of the project, whatever the [syntax file setting](../Extensions/develop-components.md#code-completion-for-compiled-components).
-
 エラーが検出されると処理が中止され、"コンパイルに失敗しました" というメッセージが表示されます。ウィンドウの情報エリアに、問題となるメソッド名と行番号が階層リスト形式で表示されます:
 
 ![](../assets/en/Project/compilerWin2.png)
@@ -95,7 +93,7 @@ When the compilation succeeds, the compiler also generates the `Project/DerivedD
 
 コンポーネントが選択されている場合、[コンパイラー設定](../settings/) を編集することはできません(ボタンはグレーアウトされています)。
 
-コンパイルに関してはそれぞれのコンポーネントの[コンパイラー設定](../settings/) が適用されますが、[エラーファイルとSymbol ファイルの生成オプション](#コンパイラー設定) は例外です: これに関してはホストプロジェクトの設定がコンポーネントのオプションを上書きします。これらのオプションが有効化されている場合、それぞれのコンポーネントの[error and warning file](#エラーファイルを生成) および[Symbol ファイル](#symbolファイルを生成) は[ホストプロジェクトの**Logs** フォルダ](../Project/architecture.md#logs) 内の専用のフォルダに保存されます(コンポーネント名がフォルダ名になります)。
+コンパイルに関してはそれぞれのコンポーネントの[コンパイラー設定](../settings/) が適用されますが、[エラーファイルとSymbol ファイルの生成オプション](#コンパイラー設定) は例外です: これに関してはホストプロジェクトの設定がコンポーネントのオプションを上書きします。これらのオプションが有効化されている場合、それぞれのコンポーネントの [error and warning file](#エラーファイル) および [Symbol ファイル](#symbolファイルを生成) は[ホストプロジェクトの **Logs** フォルダー](../Project/architecture.md#logs) 内の専用のフォルダーに保存されます(コンポーネント名がフォルダー名になります)。
 
 コンパイルまたはシンタックスチェックを開始すると、処理されているすべてのプロジェクトがコンパイラーウィンドウに表示されます。エラーまたは警告が検知された場合、これらは対応するプロジェクトの下に階層リストとして表示されます。エラーが含まれるプロジェクトは**太字** で表示されます:
 
@@ -277,23 +275,6 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 特別な警告コメントは、警告タブでの警告表示設定よりも優先されます。
 
 :::
-
-### Warnings on function comments
-
-When a class function or a class constructor has a [comment block above its declaration](../Concepts/classes.md#function-comments), the compiler checks it and reports a warning:
-
-- for each parameter of the signature that is not documented by a `$name:` or `{$name}:` line (variadic parameters are not checked),
-- when the `MCP:` behavior tags contradict each other (`@readOnly`, `@destructive`, and `@additive` used together). In this case, the corresponding hints are omitted from the [MCP tool metadata](../Concepts/classes.md#mcp-tool-metadata).
-
-Functions without a comment block are not checked. For example, the following function generates a warning for the *$factor* parameter and a warning for the `@readOnly` and `@destructive` tags:
-
-```4d
-// Scales a value by a factor
-// MCP: @readOnly @destructive
-// $value: value to scale
-Function scale($value : Real; $factor : Real) : Real
-	return $value*$factor
-```
 
 ## コンパイルツール
 

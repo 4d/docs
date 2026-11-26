@@ -11,7 +11,7 @@ title: タブコントロール
 
 各画面を移動するには、目的のタブをクリックします。
 
-これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/ja/page247.html) コマンドまたは `gotoPage` 標準アクションを使用します。
+これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [`FORM GOTO PAGE`](https://doc.4d.com/4dv20/help/command/ja/page247.html) コマンドまたは `gotoPage` 標準アクションを使用します。
 
 タブコントロールの他の利用法は、サブフォームやリストボックスに表示されるデータを制御することです。たとえば、名刺帳はタブコントロールを用いて実現することができます。タブにはひらがなの各文字を表示し、タブコントロールの動作としてはユーザーがクリックした文字と一致するデータをロードします。
 
@@ -48,7 +48,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 ### オブジェクトの使用
 
-[コレクション](../Concepts/dt_collection.md) をカプセル化した [オブジェクト](../Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#変数あるいは式) として割り当てることができます。このオブジェクトには、次のプロパティが格納されていなくてはなりません:
+[コレクション](../Concepts/dt_collection.md) をカプセル化した [オブジェクト](../Concepts/dt_object.md) をタブコントロールの [データソース](properties_Object.md#variable-or-expression) として割り当てることができます。このオブジェクトには、次のプロパティが格納されていなくてはなりません:
 
 | プロパティ          | 型          | 説明                                                                          |
 | -------------- | ---------- | --------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ macOSの場合、タブコントロールを標準位置 (上) だけでなく�
 
 この初期化コードはユーザーにフォームを表示する前に実行しなければなりません。
 
-次の例では、タブコントロールの [式](properties_Object.md#変数あるいは式) として `Form.tabControl` が定義されています。フォームオブジェクトに [`gotoPage` 標準アクション](#gotopage-標準アクション) を関連付けることができます。
+次の例では、タブコントロールの [式](properties_Object.md#variable-or-expression) として `Form.tabControl` が定義されています。フォームオブジェクトに [`gotoPage` 標準アクション](#gotopage-標準アクション) を関連付けることができます。
 
 ```4d
 Form.tabControl:=New object
@@ -81,13 +81,13 @@ Form.tabControl.index:=2 // ページ3 から開始します
  arrPages{3}:="Notes"  
 ```
 
-> ページの名前を階層リストに保存し、[LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/ja/page288.html) コマンドを使用して値をロードすることも可能です。
+> ページの名前を階層リストに保存し、[LIST TO ARRAY](https://doc.4d.com/4dv20/help/command/ja/page288.html) コマンドを使用して値をロードすることも可能です。
 
 ## Goto page 機能
 
 ### FORM GOTO PAGE コマンド
 
-タブコントロールのメソッドで [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/ja/page247.html) コマンドを使用できます:
+タブコントロールのオブジェクトメソッド内では[`FORM GOTO PAGE`](https://doc.4d.com/4dv20/help/command/ja/page247.html) コマンドを使用することができます:
 
 ```4d
 FORM GOTO PAGE(arrPages)
@@ -118,7 +118,7 @@ FORM GOTO PAGE(arrPages)
 
 [タイプ](properties_Object.md#タイプ) -
 [オブジェクト名](properties_Object.md#オブジェクト名) -
-[変数あるいは式](properties_Object.md#変数あるいは式) -
+[変数あるいは式](properties_Object.md#variable-or-expression) -
 [式の型](properties_Object.md#式の型式タイプ) -
 [値を記憶](properties_Object.md#値を記憶) -
 [CSSクラス](properties_Object.md#cssクラス) -

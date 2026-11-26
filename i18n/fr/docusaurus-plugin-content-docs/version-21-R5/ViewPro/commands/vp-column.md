@@ -17,7 +17,7 @@ title: VP Column
 | column      | Integer | ->                          | Indice de la colonne                                                        |
 | columnCount | Integer | ->                          | Nombre de colonnes                                                          |
 | sheet       | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat    | Object  | <- | Objet plage de toutes les cellules                                          |
+| Résultat    | Object  | <- | Objet plage de cellules                                                     |
 
 </div>
 <!-- END REF -->

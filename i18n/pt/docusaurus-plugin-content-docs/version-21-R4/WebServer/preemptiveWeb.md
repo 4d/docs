@@ -3,7 +3,7 @@ id: preemptiveWeb
 title: Utilizar processos web preemptivos
 ---
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
+The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your applications. You can configure your web-related code, including 4D tags, web database methods or ORDA REST class functions to run simultaneously on as many cores as possible.
 
 Para informações aprofundadas sobre o processo preventivo em 4D, consulte a seção [Processos Preemptivos](../Develop/preemptive.md).
 
@@ -14,8 +14,8 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 | 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado          |
 | --------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------ |
 | Servidor REST         | cooperativo                                                                                 | preemptive                                                   | preemptive         |
-| Servidor Web          | cooperativo                                                                                 | cooperativo                                                  | *configuração web* |
-| Servidor Web Services | cooperativo                                                                                 | cooperativo                                                  | *configuração web* |
+| Servidor Web          | cooperativo                                                                                 | preemptive se sessões escaláveis, senão cooperativo          | *configuração web* |
+| Servidor Web Services | cooperativo                                                                                 | preemptive se sessões escaláveis, senão cooperativo          | *configuração web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado          |
 | ----------------------- | ------------ | ------------------ |
@@ -42,7 +42,7 @@ Todo o código 4D executado pelo servidor deve ser hilo seguro se você quiser q
   - `On REST Authentication`
   - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) e [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
-- El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
+- O método de projeto `compiler_web` (independentemente de sua propriedade real "Execution mode");
 
 - Basicamente, qualquer código processado pelo comando [`PROCESS 4D TAGS`](../commands/process-4d-tags) no contexto Web, por exemplo, por páginas .shtml
 

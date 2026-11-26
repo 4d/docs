@@ -15,8 +15,8 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 | 4D Server             | Interpretado, projeto ([cliente conectado localmente](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, projeto (nenhum cliente ligado localmente) ou binário | Compilado       |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                                                                                   | preemptive                                                          | preemptive      |
-| Servidor Web          | cooperativo                                                                                                                   | cooperativo                                                         | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                                                                                   | cooperativo                                                         | *parâmetro web* |
+| Servidor Web          | cooperativo                                                                                                                   | preemptive se sessões escalonáveis, senão cooperativo               | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                                                                                   | preemptive se sessões escalonáveis, senão cooperativo               | *parâmetro web* |
 | Legado REST           | cooperativo                                                                                                                   | *parâmetro web*                                                     | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |

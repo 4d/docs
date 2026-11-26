@@ -60,7 +60,7 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 | Release | Modifications                                                                                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 21 R6   | Support for the `MCP` keyword. New reserved `mcpAuthenticated()` and `mcpGrant()` DataStore class functions.                     |
+| 21 R6   | Support for the `mcp` keyword. New reserved `mcpAuthenticated()` and `mcpGrant()` DataStore class functions.                     |
 | 21 R3   | Prise en charge du mot clé `server`.                                                                                                             |
 | 19 R4   | Attributs alias dans la classe Entity                                                                                                                            |
 | 19 R3   | Attributs calculés dans la classe Entity                                                                                                                         |
@@ -77,7 +77,11 @@ Une base de données 4D expose sa propre classe DataStore dans le class store `c
 
 Vous pouvez créer des fonctions dans la classe DataStore qui seront disponibles via l'objet `ds`.
 
+#### MCP Server
+
 The `mcpAuthenticated()` and `mcpGrant()` function names are reserved for the [MCP server](../WebServer/mcp-server.md) (see [`Function mcpAuthenticated`](#function-mcpauthenticated) and [`Function mcpGrant`](#function-mcpgrant)).
+
+:::
 
 #### Exemple
 
@@ -942,12 +946,13 @@ $arch.save() //courseName et name sont "Archaeology II"
 
 ## Fonctions exposées et non exposées
 
-Pour des raisons de sécurité, toutes vos fonctions de classe du modèle de données, y compris les [attributs calculés](#computed-attributes-1), les [attributs alias](#alias-attributes-1) et les [fonctions singleton partagées](../Concepts/classes.md#shared-singleton) ne sont **pas exposées** par défaut aux **requêtes distantes** (elles sont donc privées).
+For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) and [MCP functions](#mcp-functions) are **not exposed** (i.e., private) by default to **remote requests**.
 
 Les requêtes distantes incluent :
 
 - Les requêtes envoyées par des applications 4D distantes connectées via `Open datastore`
 - Les requêtes REST, y compris les requêtes provenant de [pages Qodly](https://developer.4d.com/qodly/)
+- Requests sent to the [MCP server](../WebServer/mcp-server.md)
 
 > Les requêtes client/serveur 4D standard ne sont pas impactées. Les fonctions de classe de modèle de données sont toujours disponibles dans cette architecture.
 
@@ -958,6 +963,11 @@ Pour permettre à une fonction de classe du modèle de données d'être appelée
 ```4d
 // déclarer une fonction exposée
 exposed Function <functionName>   
+```
+
+```4d
+// declare an exposed MCP function
+exposed MCP Function <functionName>
 ```
 
 ```4d
@@ -1020,7 +1030,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 ```
 
-## onHTTPGet
+## `onHTTPGet` keyword
 
 Utilisez le mot-clé `onHTTPGet` pour déclarer des fonctions qui peuvent être appelées par des requêtes HTTP utilisant le verbe `GET`. Ces fonctions peuvent renvoyer n'importe quel contenu web, par exemple en utilisant la classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
@@ -1044,7 +1054,9 @@ Le mot-clé `exposed` doit également être ajouté dans ce cas, sinon une erreu
 
 :::caution
 
-Comme ce type d'appel est une action facile d'accès, le développeur doit s'assurer qu'aucune action sensible n'est effectuée dans ces fonctions.
+`onHTTPGet` lets the function also be called with GET, for example by following a link. Depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can then send a request that runs in the session of the user logged in to your application.
+
+Use `onHTTPGet` only for functions that read and return content, such as a file to download, a picture or a report. Do not use `onHTTPGet` for a function that changes anything (i.e. that creates, modifies or deletes data, issues or revokes credentials, sends a message).
 
 :::
 
@@ -1100,35 +1112,37 @@ IP:port/rest/Products/getThumbnail ?$params='["Yellow Pack",200,200]'
 
 The [MCP server](../WebServer/mcp-server.md) of the 4D Web Server publishes data model class functions as tools for AI clients, and calls specific functions of the DataStore class to authenticate the clients.
 
-### `exposed MCP Function`
+### `exposed mcp Function`
 
 #### Syntaxe
 
 ```4d
-exposed MCP Function <functionName>({$parameterName : type; ...}){->$parameterName : type}
+exposed mcp Function <functionName>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-The `MCP` keyword publishes an exposed function as a [custom tool](../WebServer/mcp-server.md#custom-tools) of the MCP server. It is a second opt-in on top of the `exposed` keyword:
+The `mcp` keyword publishes an exposed function as a [custom tool](../WebServer/mcp-server.md#custom-tools) of the MCP server. It is a second opt-in on top of the `exposed` keyword:
 
-- a function declared `exposed` without `MCP` can be called by REST requests but is not an MCP tool,
-- a function declared with `MCP` but without `exposed` is not published at all.
+- a function declared `exposed` without `mcp` can be called by REST requests but is not an MCP tool,
+- a function declared with `mcp` but without `exposed` is not published at all.
 
-The `MCP` keyword is supported in the following classes:
+The `mcp` keyword is supported in the following classes:
 
-- the DataStore class: the tool name is the function name,
-- DataClass classes and Entity classes: the tool name is `ClassName-functionName`,
+- the [DataStore class](#datastore-class): the tool name is the function name,
+- [DataClass classes](#dataclass-class) and [Entity classes](#entity-class): the tool name is `ClassName-functionName`,
 - shared [singleton classes](../Concepts/classes.md#singleton-classes): the tool name is `ClassName-functionName`.
 
 Functions of EntitySelection classes are not published.
 
-The [comment block](../Concepts/classes.md#function-comments) written above the declaration describes the tool and its parameters for the AI client. The client can call the tool if its session has the **execute** permission on the function in the [`roles.json`](privileges.md#rolesjson-file) file, as for a REST request.
+The [comment block](../Concepts/comments.md#syntax-description) written above the declaration describes the tool and its parameters for the AI client. The client can call the tool if its session has the **execute** permission on the function in the [`roles.json`](privileges.md#rolesjson-file) file, as for a REST request.
 
 **Entity class functions**
 
 A tool published from an Entity class function gets a required `key` argument (string or integer): the primary key of the entity on which the function is called. 4D loads this entity as `This`, with the **read** permission of the dataclass and its [restriction filter](entities.md#restricting-entity-selections). If the entity cannot be found or read, the call returns the "Entity not found" error and the function does not run.
 
 An Entity class function that declares a `$key` parameter is not published, and 4D logs a message.
+
+A function with a parameter of type `Pointer` is not published either: in interpreted mode, 4D logs a message, and in compiled mode, the compiler reports a warning.
 
 #### Exemple
 
@@ -1140,7 +1154,7 @@ Class extends Entity
 
 // Returns the amount still due on the invoice
 // MCP: @readOnly
-exposed MCP Function getAmountDue() : Real
+exposed mcp Function getAmountDue() : Real
 	return This.amount-This.payments.sum("amount")
 ```
 
@@ -1158,7 +1172,7 @@ The `mcpAuthenticated()` function of the DataStore class is called by 4D when an
 
 Use it to prepare the session from the information stored with the token, for example to fill [`Session.storage`](../API/SessionClass.md#storage) with the current values of the user, which your [restriction filters](entities.md#restricting-entity-selections) can use.
 
-The *$info* parameter contains:
+The *$info* parameter contains the whole record of the token or of the OAuth grant that opened the session. Its `type` property tells them apart. The object you passed to [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) is in `$info.info`. *$info* contains:
 
 | Propriété  | Type                       | Description                                                                                                                                                                          |
 | ---------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1177,7 +1191,7 @@ The *$info* parameter contains:
 
 Les règles suivantes s'appliquent :
 
-- Only 4D calls this function. A REST request or a remote datastore call to `mcpAuthenticated()` gets an HTTP 403 error, even if the function is declared `exposed` (in this case, 4D also logs a warning).
+- Only 4D calls this function. A REST request or a remote datastore call to `mcpAuthenticated()` never runs it: if the function is not declared `exposed`, the call gets the usual answer for a non-exposed function (HTTP 404 for REST, "not a function" error for a remote datastore); if it is declared `exposed`, the call gets a permission error naming the function (HTTP 403 for REST, error 1561 for a remote datastore), and 4D logs a warning.
 - The function cannot change the privileges of the session: calling [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) or [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) in it raises an error.
 - The function cannot refuse the session. To stop the access of a user, revoke their tokens with [`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken) or [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant).
 - If the function fails, 4D logs an error and the session is still created.
@@ -1227,7 +1241,7 @@ An empty value or *Null* refuses the login. A privilege or role that is not decl
 
 Les règles suivantes s'appliquent :
 
-- Only 4D calls this function. A REST request or a remote datastore call to `mcpGrant()` gets an HTTP 403 error, even if the function is declared `exposed` (in this case, 4D also logs a warning).
+- Only 4D calls this function. A REST request or a remote datastore call to `mcpGrant()` never runs it: if the function is not declared `exposed`, the call gets the usual answer for a non-exposed function (HTTP 404 for REST, "not a function" error for a remote datastore); if it is declared `exposed`, the call gets a permission error naming the function (HTTP 403 for REST, error 1561 for a remote datastore), and 4D logs a warning.
 - The function runs in a session without privileges. It cannot change the privileges of the session: calling [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) or [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) in it raises an error.
 - Never store or compare passwords in clear: use [`Generate password hash`](../commands/generate-password-hash) and [`Verify password hash`](../commands/verify-password-hash).
 

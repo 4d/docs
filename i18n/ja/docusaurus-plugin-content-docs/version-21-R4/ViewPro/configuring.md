@@ -313,8 +313,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | margin |        | object  | 印刷マージン                             |
 |        | top    | longint | 上部マージン、100分の1インチ単位。デフォルト値 = 75     |
 |        | bottom | longint | 下部マージン、100分の1インチ単位。デフォルト値 = 75     |
-|        | left   | longint | 右マージン、100分の1インチ単位。デフォルト値 = 70      |
-|        | right  | longint | 左マージン、100分の1インチ単位。デフォルト値 = 70      |
+|        | left   | longint | 左マージン、100分の1インチ単位。デフォルト値 = 70      |
+|        | right  | longint | 右マージン、100分の1インチ単位。デフォルト値 = 70      |
 |        | header | longint | ヘッダーのオフセット、100分の1インチ単位。デフォルト値 = 30 |
 |        | footer | longint | フッターのオフセット、100分の1インチ単位。デフォルト値 = 30 |
 
@@ -336,7 +336,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | blackAndWhite   | boolean | 白黒で印刷します。<p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                        |
 | centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
-| firstPageNumber | longint | 最初のページに印刷するページ番号。 デフォルト値 = 1                                                                                                                                                                           |
+| firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                                                            |
 | pageOrder       | longint | ページの印刷順。とりうる値: `vk print page order auto` (デフォルト), `vk print page order down then over`, `vk print page order over then down`.                      |
 | pageRange       | text    | 印刷されるページの範囲                                                                                                                                                                                            |
 | qualityFactor   | longint | 印刷の品質指定 (1 - 8)。高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                                          |
@@ -401,7 +401,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 \* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。画像指定に使用するデータ型にかかわらず、4D View Pro エリアには (参照ではなく) 画像そのものが保存され、[VP Get print info](commands/vp-get-print-info.md) によって返されます。
 
-## スタイルオブジェクト {#style-objects} {#style-objects}
+## スタイルオブジェクト{#style-objects}
 
 4D View Pro スタイルオブジェクトとスタイルシートを使用すると、4D View Pro ドキュメントのグラフィカル要素や見た目を管理することができるようになります。
 

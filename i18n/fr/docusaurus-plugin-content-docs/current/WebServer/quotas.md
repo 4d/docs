@@ -12,12 +12,6 @@ Les quotas du serveur Web vous permettent de contrôler l'utilisation des ressou
 
 :::
 
-:::tip Article de blog lié
-
-[Un serveur web 4D qui sait quand dire « non »](https://blog.4d.com/a-4d-web-server-that-knows-when-to-say-no/)
-
-:::
-
 ## Conditions requises
 
 La configuration des quotas nécessite l'activation des [sessions évolutives](./sessions.md#enabling-web-sessions).
@@ -118,6 +112,8 @@ For example, to limit each session, including MCP sessions used by AI agents, to
 var $webServer : 4D.WebServer:=WEB Server
 $webServer.quotas.nbRequestsPerMinPerSession:=30
 ```
+
+MCP sessions cannot get their own quotas: the session default quotas apply to every Web session alike, and [`Session.quotas`](../API/SessionClass.md#quotas) only holds the REST entity-set limits.
 
 ### Réponses de limitation de débit
 

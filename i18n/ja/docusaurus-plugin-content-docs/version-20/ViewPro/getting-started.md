@@ -87,8 +87,7 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 - セルあるいはセルレンジのクリック:
   - **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
   - **ソート**: 列のコンテンツを並べ替えます。
-  - **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:  
-    ![](../assets/en/ViewPro/vpContext2.PNG) コメントが入力されているセルには、小さな赤い三角形が表示されます:  
+  - **コメントの挿入**: ユーザーコメントを入力できます。コメントが入力されているセルには、小さな赤い三角形が表示されます:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## 4D View Pro メソッドの使い方

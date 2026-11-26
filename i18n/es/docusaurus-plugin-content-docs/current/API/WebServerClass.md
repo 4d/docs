@@ -454,7 +454,7 @@ The `.mcp` object contains the following properties:
 | publicURL                | Text       | ""                                                     | Base URL (scheme and host) of the URLs published by the MCP server, for example "https://sales.example.com". If empty, the base URL is built from the request                                               |
 | oauthDynamicRegistration | Boolean    | True                                                   | True to allow dynamic client registration in [OAuth mode](../WebServer/mcp-server.md#oauth-21-mode)                                                                                                                                                                                            |
 
-You can pass an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. While the web server is running, only `mcp.enabled` can be modified: setting it to **True** or **False** enables or disables the MCP server without restarting the web server. The MCP settings are kept when the web server is restarted.
+The MCP settings are defined in the Settings of the application, or by passing an `mcp` object in the *settings* parameter of the [`.start()`](#start) function. On the `.mcp` object, all properties are read-only except `enabled`: while the web server is running, setting `mcp.enabled` to **True** or **False** enables or disables the MCP server without restarting the web server. This change applies until 4D quits: it is not saved in the settings, and the next start of 4D uses the settings. The MCP settings are kept when the web server is restarted.
 
 #### Ejemplo 1
 
@@ -731,11 +731,11 @@ El campo <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" de la cook
 
 El valor de la cookie de sesión <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite"<!-- END REF -->. Valores posibles (utilizando constantes):
 
-| Constante           | Valor    | Descripción                                                                                                                                                                                                   |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *Valor por defecto* - Las cookies sólo se envían en un contexto interno (first-party)                                                                                                      |
-| Web SameSite Lax    | "Lax"    | Las cookies también se envían en las sub-solicitudes entre sitios, pero sólo cuando un usuario está navegando hacia el sitio de origen (es decir, cuando sigue un enlace). |
-| Web SameSite None   | "None"   | Las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado.                                                             |
+| Constante           | Valor    | Descripción                                                                                                                                                                                                                                                               |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *Valor por defecto* - Las cookies sólo se envían en un contexto interno (first-party)                                                                                                                                                                  |
+| Web SameSite Lax    | "Lax"    | Cookies are not sent with requests coming from other websites (images, frames, forms, scripts), except when the user navigates to the site from another website with a GET request (following a link, redirection). |
+| Web SameSite None   | "None"   | Las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado.                                                                                                                         |
 
 Consulta la descripción de [cookies de sesión SameSite](WebServer/webServerConfig.md#session-cookie-samesite) para obtener información detallada.
 

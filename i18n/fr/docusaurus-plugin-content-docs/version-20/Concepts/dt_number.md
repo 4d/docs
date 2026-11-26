@@ -69,7 +69,7 @@ L'opérateur modulo % divise le premier nombre par le second et retourne le rest
 
 :::warning
 
-L'opérateur modulo % retourne des valeurs significatives avec des nombres appartenant à la catégorie des entiers longs (de –2^31 à +2^31 moins 1). Pour calculer le modulo avec des nombres en dehors de cet intervalle, utilisez la commande [Mod](https://doc.4d.com/4dv20/help/command/en/page98.html).
+L'opérateur modulo % retourne des valeurs significatives avec des nombres appartenant à la catégorie des entiers longs (de –2^31 à +2^31 moins 1). Pour calculer le modulo avec des nombres en dehors de cette plage, utilisez la commande [`Mod`](https://doc.4d.com/4dv20/help/command/en/page98.html).
 
 :::
 

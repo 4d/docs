@@ -46,7 +46,7 @@ Sometimes the piece of code that displays the error may be different than the co
 
 ### Runtime Errors
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+In compiled applications, you might obtain errors that you don't see in [interpreted mode](../Concepts/interpreted.md). Here's an example:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 

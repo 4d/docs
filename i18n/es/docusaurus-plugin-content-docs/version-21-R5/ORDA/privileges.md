@@ -67,6 +67,12 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 Los parámetros de permisos requieren ser consistentes, en particular los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita).
 
+:::warning
+
+Cuando una entrada de permiso hace referencia a un [privilegio](#privileges-and-roles) no declarado, 4D registra un error e ignora la entrada. En este caso, el permiso se ignora. Si el [modo restringido por defecto](#restriction-modes) no está habilitado, el recurso es accesible a las sesiones `guest`.
+
+:::
+
 ### Permisos heredados
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
@@ -162,7 +168,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## archivo `roles.json`
+## Archivo `roles.json`
 
 El archivo `roles.json` describe todos los parámetros de seguridad web del proyecto. La sintaxis del archivo `roles.json` es la siguiente:
 

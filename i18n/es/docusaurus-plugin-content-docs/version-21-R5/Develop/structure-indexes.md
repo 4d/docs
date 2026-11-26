@@ -24,64 +24,64 @@ Los campos indexados se muestran en el tipo **negrita** en el editor de estructu
 
 - **Índice estándar:** estos son índices de un solo campo utilizados para acelerar las operaciones estándar de bases de datos (búsquedas y ordenes). 4D le permite elegir la arquitectura interna de este tipo de índice (excepto los campos de objetos): B-Tree o Cluster B-Tree.
 - **Índice compuesto:** este índice almacena los valores combinados de dos o más campos que a menudo se buscan juntos, por ejemplo Apellido+Nombre.
-- **Keyword indexes:** These indexes are only available for Alpha, Text and Picture type fields. They are intended to facilitate fast searching inside text or, in the case of pictures, among the keywords associated with the pictures.
-- **Vector indexes**: These indexes are designed to accelerate AI-based queries on Object fields storing [embeddings](./field-properties.md#4dvector-class).
+- **Índice de palabras clave:** estos índices solo están disponibles para campos de tipo Alfa, Texto e Imagen. Su objetivo es facilitar la búsqueda rápida dentro del texto o, en el caso de las imágenes, entre las palabras clave asociadas a las imágenes.
+- **Índices vectoriales**: estos índices están diseñados para acelerar las consultas IA basadas en los campos objeto almacenando las [representaciones vectoriales](./field-properties.md#4dvector-class).
 
 ### Índices estándar
 
-A standard index is intended to accelerate database operations (a standard index refers to a generic index as opposed to a keyword or composite index). 4D offers two types of architectures for standard indexes: B-Tree and Cluster B-Tree.
+Un índice estándar está destinado a acelerar las operaciones de base de datos (un índice estándar se refiere a un índice genérico frente a una palabra clave o índice compuesto). 4D ofrece dos tipos de arquitecturas para índices estándar: B-Tree y Cluster B-Tree.
 
-- **B-Tree:** Standard B-Tree type index. This multipurpose index type meets most indexing requirements.
-- **Cluster B-Tree:** B-Tree type index using clusters. This architecture is more efficient when the index does not contain a large number of keys, i.e. when the same values occur frequently in the data.
+- **B-Tree:** Índice de tipo B-Tree estándar. Este tipo de índice polivalente satisface la mayoría de los requisitos de indexación.
+- **B-Clúster B-Tree:** índice de tipo B-Tree usando clusters. Esta arquitectura es más eficiente cuando el índice no contiene un gran número de llaves, es decir, cuando los mismos valores ocurren frecuentemente en los datos.
 
 :::note
 
-A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail.
+Un índice B-Tree asociado a un campo de tipo Texto almacena los primeros 1024 caracteres del campo (máximo). Por lo tanto, en este contexto, las búsquedas de cadenas que contengan más de 1024 caracteres fallarán.
 
 :::
 
-When you choose the index architecture, 4D also provides the Automatic option. In this case, 4D automatically selects the architecture according to the type of data concerned.
-The **Automatic** option is the only option available for Object type fields, except if you associated a 4D.Vector class to the field ([see below](#vector-index)). In fact, with the **Automatic** option, all attribute paths are automatically indexed.
+Cuando elige la arquitectura de índice, 4D también ofrece la opción Automática. En este caso, 4D selecciona automáticamente la arquitectura de acuerdo con el tipo de datos en cuestión.
+La opción **Automática** es la única opción disponible para campos de tipo Objeto, excepto si asoció una clase 4D.Vector al campo ([ver abajo](#vector-index)). De hecho, con la opción **Automático**, todas las rutas de atributos se indexan automáticamente.
 
-### Composite indexes
+### Índices compuestos
 
-Composite indexes store the combined values of two or more fields for each entry. The classic example is a composite index based on the FirstName+LastName fields. Searching for “Peter Smith” will therefore be optimized compared with a standard search (searching for “Smith” then searching for “Peter”).
+Los índices compuestos almacenan los valores combinados de dos o más campos para cada entrada. El ejemplo clásico es un índice compuesto basado en los campos FirstName+LastName. La búsqueda de “Peter Smith” se optimizará en comparación con una búsqueda estándar (buscando “Smith” y luego buscando “Peter”).
 
-4D automatically takes advantage of composite indexes during queries and sorts. For example, if a composite index “City+ZipCode” exists, it will be used in the case of a query of the type “lastname=carter and city=new york and zipcode =102@”.
+4D aprovecha automáticamente los índices compuestos durante consultas y ordenaciones. Por ejemplo, si existe un índice compuesto “City+ZipCode”, se utilizará en el caso de una consulta del tipo “lastname=carter and city=new york y zipcode =102@”.
 
-In the structure editor, composite indexes can only be created using the index creation dialog box. For a detailed description of this dialog box, refer to the “Creating an index” section below.
+En el editor de estructuras, los índices compuestos solo se pueden crear usando el cuadro de diálogo de creación de índices. Para una descripción detallada de este cuadro de diálogo, consulte la sección "Crear un índice" a continuación.
 
-### Keywords index
+### Índice de palabras claves
 
-You can use a specific type of index with Alpha, Text and Picture fields: a keyword index.
+Puede utilizar un tipo específico de índice con los campos Alfa, Texto e Imagen: un índice de palabras claves.
 
-- When you associate this type of index with an Alpha or Text field, the text stored in the field will be indexed word by word. All the words will be indexed even if they have only 1 or 2 characters. This type of index will accelerate subsequent keyword searches among text fields in a dramatic manner.  
-  It is possible to associate both a standard index and a keyword index with Alpha and Text fields (when stored in the records). 4D will use the appropriate index depending on the context.
+- Cuando asocia este tipo de índice con un campo Alfa o Texto, el texto almacenado en el campo se indexará palabra por palabra. Todas las palabras serán indexadas incluso si tienen sólo 1 o 2 caracteres. Este tipo de índice acelerará las búsquedas de palabras clave posteriores entre los campos de texto de una manera dramática.  
+  Es posible asociar tanto un índice estándar como un índice de palabras clave con los campos Alfa y Texto (cuando se almacena en los registros). 4D usará el índice apropiado dependiendo del contexto.
 
-- When you associate this type of index with a Picture field, searches among keywords associated with pictures (metadata) are greatly accelerated. Warning: Picture keyword indexes are exclusively based on metadata of the IPTC/Keywords type. These types of metadata are supported in particular by the TIFF and JPEG formats (note that BMP, PNG and GIF do not support them). Other types of metadata are not managed by indexing.  
-  Keyword indexes for pictures are updated automatically by 4D each time the Picture field is saved (when a record is created or modified, when data is imported, and so on). Metadata of the IPTC/Keywords type are indexed automatically by 4D when they are found in the picture (you do not have to call the [`SET PICTURE METADATA`](../commands/set-picture-metadata) command to include them in the index of the Picture field).
+- Cuando asocia este tipo de índice con un campo Imagen, las búsquedas entre las palabras claves asociadas con las imágenes (metadatas) se aceleran considerablemente. Aviso: los índices de palabras claves se basan exclusivamente en metadatos del tipo IPTC/Keywords. Estos tipos de metadatos son soportados en particular por los formatos TIFF y JPEG (tenga en cuenta que BMP, PNG y GIF no los soportan). Otros tipos de metadatos no se gestionan mediante la indexación.  
+  Los índices de palabras clave para las imágenes se actualizan automáticamente por 4D cada vez que se guarda el campo Imagen (cuando se crea o modifica un registro, cuando se importan datos, y así sucesivamente). Los metadatos de tipo IPTC/Keywords son indexados automáticamente por 4D cuando se encuentran en la imagen (no es necesario ejecutar el comando [`SET PICTURE METADATA`](../commands/set-picture-metadata) para incluirlos en el índice del campo Imagen).
 
-You can use the [`DISTINCT VALUES`](../commands/distinct-values) command to get the list of keywords contained in an keywords index.
+Puede utilizar el comando [`DISTINCT VALUES`](../commands/distinct-values) para obtener la lista de palabras claves que contiene un índice de palabras claves.
 
-You use picture or text keyword indexes through the [`%` operator](../Concepts/dt_string.md#keywords): this operator must be placed in the query or sort formulas in order to specifically use an index value. Por ejemplo:
+Para utilizar los índices de palabras claves de imágenes o de texto, se emplea el operador [`%`](../Concepts/dt_string.md#keywords): este operador debe incluirse en las fórmulas de consulta o de ordenación para poder utilizar específicamente un valor de índice. Por ejemplo:
 
 ```4d
 QUERY([PICTURES];[PICTURES]Photos %"cats")
 // busca fotos relacionadas con la palabra clave gatos
 ```
 
-This works the same way for all the query and order by commands: [`QUERY BY FORMULA`](../commands/query-by-formula), [`QUERY SELECTION`](../commands/query-selection), [`ORDER BY`](../commands/order-by), etc.
+Esto funciona de la misma manera para todos los comandos de consulta y ordenación: [`QUERY BY FORMULA`](../commands/query-by-formula), [`QUERY SELECTION`](../commands/query-selection), [`ORDER BY`](../commands/order-by), etc.
 
 ### Vector index
 
-A vector index can be associated to an Object type field that was configured as a `4D.Vector` [class](./field-properties.md#4dvector-class). In this case, the following options are available:
+Un índice vectorial puede asociarse a un campo de tipo Object asociado a una `[clase](./field-properties.md#4dvector-class) `4D.Vector\`. En este caso, están disponibles las siguientes opciones:
 
 ![](../assets/en/Develop/vector-index.png)
 
-- **Cosine**: the vector index is optimized for [cosine similarity](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Dot**: the vector index is optimized for [dot similarity](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Euclidean**: the vector index is optimized for [euclidean distance](../API/VectorClass.md#understanding-the-different-vector-computations) computations.
-- **Automatic**: standard object index type ([see above](#standard-indexes)). You can select this index type to handle null vectors, it will be automatically used in this case.
+- **Coseno**: el índice vectorial está optimizado para cálculos de [similitud coseno](../API/VectorClass.md#understanding-the-different-vector-computations).
+- **Dot**: el índice vectorial está optimizado para cálculos de [similitud dot](../API/VectorClass.md#understanding-the-different-vector-computations).
+- **Euclidiano**: el índice vectorial está optimizado para cálculos de [distancia euclidiana](../API/VectorClass.md#understanding-the-different-vector-computations).
+- **Automático**: tipo de índice de objeto estándar ([ver arriba](#standard-indexes)). You can select this index type to handle null vectors, it will be automatically used in this case.
 
 You can select one or more index types for your vector fields, the appropriate index will be automatically used depending on the actual computation. For optimization reasons, it is recommended to only select necessary index types.
 
@@ -107,7 +107,7 @@ The Index List can be used to view the main properties of the indexes:
 
 - **Tipo:** tipo de índice. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
 - **Description:** Table and field(s) of index. For a composite index, this list contains all the fields of the index.
-- **Name:** Index name. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
+- **Nombre:** nombre del índice. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
 
 The **[+]** button displays the index property dialog box and allows you to edit the selected index or to add a new index when no index was selected.  
 The **[-]** button deletes the selected index (a confirmation dialog box appears).  
@@ -147,7 +147,7 @@ To add a field to the index, click on the **[+]** button. The list of fields of 
 
 - If you want to create a composite index, add each field to be included in the index successively. Once the list is completed, you can reorder the fields using the arrow buttons or using drag and drop.
 - If you create a composite index based on primary key fields, make sure you put the fields in the same order in the primary key and in the index.
-- If you have chosen the “Keyword Index” type, only Alpha or Text fields can be selected. Also in this case, you cannot include only one field in the index.
+- If you have chosen the “Keyword Index” type, only Alpha, Text, or Picture fields can be selected. Also in this case, you can include only one field in the index.
 
 To delete a field from the index, select it in the list and click on the **[-]** button.
 
@@ -165,7 +165,7 @@ To delete a standard index in the Structure editor:
 
 The deletion (and viewing) of a composite index can only be carried out from the List Index window, see above.
 
-## Reindexing a field
+## Reindexación de un campo
 
 You can reindex a field at any time; in other words, rebuild the index table(s) associated with it, in accordance with the data present. This can be useful in the case of application maintenance.
 

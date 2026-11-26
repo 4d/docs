@@ -15,7 +15,7 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 #### Destaques
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.9): lista de todos os erros corrigidos no 4D 20.9 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.9): lista de todos os erros corrigidos no 4D 20.9 LTS.
 
 The version of 4D clients connecting to 4D Server 20.9 and later must be at least 20.9.
 
@@ -26,7 +26,7 @@ The version of 4D clients connecting to 4D Server 20.9 and later must be at leas
 
 - 4D 20.8 LTS is certified on Windows 11 25H2.
 - 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.8): lista de todos os erros corrigidos no 4D 20.8 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.8): lista de todos os erros corrigidos no 4D 20.8 LTS.
 
 
 
@@ -34,7 +34,7 @@ The version of 4D clients connecting to 4D Server 20.9 and later must be at leas
 
 #### Destaques
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.7): lista de todos os erros corrigidos no 4D 20.7 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.7): lista de todos os erros corrigidos no 4D 20.7 LTS.
 
 :::note Minimal client version for 4D Server 20.7 and later
 
@@ -66,7 +66,7 @@ No Windows Server 2025, algumas opções personalizadas na nova caixa de diálog
 :::
 
 - Capacidade de [construir aplicações autônomas sem licenças incorporadas](../Desktop/building.md#licenses).
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.6): lista de todos os erros corrigidos no 4D 20.6 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.6): lista de todos os erros corrigidos no 4D 20.6 LTS.
 
 
 
@@ -83,14 +83,14 @@ No Windows 11 24H2, a geração de PDF usando o driver Microsoft Print to PDF po
 
 :::
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.5): lista de todos os erros corrigidos no 4D 20.5 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.5): lista de todos os erros corrigidos no 4D 20.5 LTS.
 
 
 ## 4D 20.4 LTS
 
 #### Destaques
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.4): lista de todos os erros corrigidos no 4D 20.4 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.4): lista de todos os erros corrigidos no 4D 20.4 LTS.
 
 ## 4D 20.3 LTS
 
@@ -98,7 +98,7 @@ No Windows 11 24H2, a geração de PDF usando o driver Microsoft Print to PDF po
 
 - CEF atualizado para o Chromium 5993
 - SpreadJS atualizado para a versão 16.2.6 (em 4D 20.2 HF1).
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.3): lista de todos os erros corrigidos no 4D 20.3 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.3): lista de todos os erros corrigidos no 4D 20.3 LTS.
 
 #### Mudanças de comportamento
 
@@ -123,7 +123,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 
 :::
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.2): lista de todos os erros corrigidos no 4D 20.2 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.2): lista de todos os erros corrigidos no 4D 20.2 LTS.
 
 #### Mudanças de comportamento
 
@@ -144,7 +144,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 :::
 
 
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.1): lista de todos os erros corrigidos no 4D 20.1 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20.1): lista de todos os erros corrigidos no 4D 20.1 LTS.
 
 ## 4D 20 LTS
 
@@ -180,7 +180,7 @@ Por razões internas, a versão de clientes remotos conectando ao 4D Server 20.2
 - Nova opção `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) que permite controlar a validação automática do certificado.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
-- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20): lista de todos os erros corrigidos no 4D 20 LTS.
+- [**Lista de bugs corrigidos**](https://developer.4d.com/FixedBugsList/versions/20): lista de todos os erros corrigidos no 4D 20 LTS.
 
 
 #### Mudanças de comportamento
@@ -209,7 +209,7 @@ Leia [**O que há de novo no 4D v19 R2**](https://blog.4d.com/en-whats-new-in-4d
     - novo comando [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) em doc.4d.com.
-- [**Lista de erros corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos os bugs que foram corrigidos em 4D 19 R3.
+- [**Lista de erros corrigidos**](https://developer.4d.com/FixedBugsList/versions/19_R8): lista de todos os bugs que foram corrigidos em 4D 19 R3.
 
 
 #### Mudanças de comportamento
@@ -237,7 +237,7 @@ Leia [**O que há de novo em 4D 19 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - Os objetos de área de texto e formulário de entrada agora suportam a propriedade [corner radius](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) em doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) em doc.4d.com.
-- [**Fixa lista de erros**](https://bugs.4d.fr/fixedbugslist?version=19_R7): lista de todos os bugs que foram corrigidos em 4D 19 R7.
+- [**Fixa lista de erros**](https://developer.4d.com/FixedBugsList/versions/19_R7): lista de todos os bugs que foram corrigidos em 4D 19 R7.
 
 
 #### Mudanças de comportamento

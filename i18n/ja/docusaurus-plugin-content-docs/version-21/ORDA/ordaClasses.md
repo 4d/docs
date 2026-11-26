@@ -1015,7 +1015,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## onHTTPGet キーワード
+## `onHTTPGet` キーワード
 
 `onHTTPGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
@@ -1039,7 +1039,9 @@ exposed onHttpGet Function <functionName>(params) : result
 
 :::caution
 
-このタイプの呼び出しは簡単に提供されるアクションであるため、デベロッパーはこのような関数でセンシティブなアクションが行われないようにする必要があります。
+`onHTTPGet` を使用すると、例えばリンクを辿るなどしてGET リクエストでもこの関数が呼び出されるようになります。セッションCookieの[`SameSite` 値](../WebServer/webServerConfig.md#セッションcookie-samesite) に応じて、別のWeb サイト上のリンクは、アプリケーションにログインされているユーザーのセッション内で実行されるリクエストを送信することができます。
+
+`onHTTPGet` は、ダウンロードするファイル、ピクチャーやレポートといったコンテンツを読み込んで返すような関数にのみ使用してください。何かを変更するような関数(データを作成、変更、削除したり、認証情報を発行したり取り消ししたり、メッセージを送信などを行う関数) においては、`onHTTPGet` を使用しないでください。
 
 :::
 

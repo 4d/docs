@@ -6,12 +6,6 @@ title: Serveur Web
 
 4D en mode local et 4D Server incluent un moteur de serveur web (aussi appelé serveur HTTP) qui vous permet de concevoir et de publier de puissantes applications web qui peuvent tirer le meilleur parti de vos bases de données 4D.
 
-:::warning Fonctionnalité obsolète
-
-L'utilisation du serveur web sur un 4D distant (4D client) est **dépréciée** à partir de 4D 21. Il est recommandé de ne plus utiliser cette fonctionnalité.
-
-:::
-
 ## Administration simplifiée
 
 Vous pouvez démarrer ou arrêter la publication de l'application web à tout moment. Pour ce faire, il suffit de sélectionner une commande dans un menu ou d'exécuter une ligne de code.
@@ -67,3 +61,8 @@ Le serveur web 4D offre un accès aux données stockées dans vos applications 4
 
 Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
+:::warning Fonctionnalité obsolète
+
+L'utilisation du serveur web sur un 4D distant (4D client) est **dépréciée** à partir de 4D 21. Il est recommandé de ne plus utiliser cette fonctionnalité.
+
+:::

@@ -348,7 +348,7 @@ Generalmente está asociado con una [imagen de 4 estados](properties_TextAndPict
 		}
 ```
 
-## Supported standard actions
+## Acciones estándar soportadas
 
 Sólo las acciones que pueden representar un estado verdadero/falso (acciones "marcables") son soportadas por este objeto:
 
