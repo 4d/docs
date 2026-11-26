@@ -18,7 +18,7 @@ You read these instances from [ProcessResult](ProcessResult.md)`.errors`, direct
 | `code`                 | Integer | Machine-readable error code — compare against the constants on [ProcessErrorCode](ProcessErrorCode.md).                                      |
 | `ref`                  | Variant | Scope-dependent reference: `"Dataclass.vector"`, an entity primary key, a model alias, or `Null`.                            |
 | `message`              | Text    | Human-readable, localized message.                                                                                                           |
-| `retryable`            | Boolean | `True` when re-running the operation could plausibly succeed. Determinado por `code`.                                        |
+| `retryable`            | Boolean | `True` when re-running the operation could plausibly succeed. Determined by `code`.                                          |
 
 ### scope values
 

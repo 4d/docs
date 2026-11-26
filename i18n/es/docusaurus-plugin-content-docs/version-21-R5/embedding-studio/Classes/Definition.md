@@ -70,7 +70,7 @@ Checked in order:
 | Check                                | `field` value     |
 | ------------------------------------ | ----------------- |
 | `dataclassName` is not empty         | `"dataclassName"` |
-| `vectorName` no está vacío           | `"vectorName"`    |
+| `vectorName` is not empty            | `"vectorName"`    |
 | `modelAlias` is set and recognised   | `"modelAlias"`    |
 | Dataclass exists in `ds`             | `"dataclassName"` |
 | Vector field exists                  | `"vectorName"`    |

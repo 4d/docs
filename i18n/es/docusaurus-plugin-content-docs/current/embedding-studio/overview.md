@@ -19,7 +19,7 @@ If you want to have more control over your embeddings, the component offers an e
 
 - [4D-AIKit](https://github.com/4d/4D-AIKit) (loaded automatically as a dependency).
 - 4D project (21 R5 or later) with the following configuration:
-  - un alias de modelo válido
+  - a valid model alias
   - a dataclass with a `4D.Vector` attribute (object field at the database level).
 
 ## Quick Start
@@ -75,7 +75,7 @@ For example, for a `Product` dataclass with many attributes such as name and cat
 
 ![menu](../assets/en/embedding-studio/studio-interface.png)
 
-### Selección de un modelo
+### Selecting a model
 
 Once you have defined your vector attribute, choose the model to use for generating the embedding. The list of models includes the **model aliases** you defined in the [Project Settings](https://developer.4d.com/docs/settings/ai#model-aliases).
 

@@ -178,7 +178,7 @@ The `.hasInput()` function <!-- REF #MCPContextClass.hasInput().Summary -->retur
 
 If *name* is omitted or empty, `.hasInput()` returns **True** if the current call contains a verified answer of the user for at least one field.
 
-The answer is verified when the client calls the tool again with the answers and a valid `requestState`: signed by 4D for the same token, tool, arguments, and fields, less than 10 minutes ago, since the MCP server was last enabled, and not used yet. A `requestState` is used once: after 4D has run the function with its answers, a new call with the same `requestState` does not carry verified answers, and the input is asked again. Otherwise, `.hasInput()` returns **False**.
+The answer is verified when the client calls the tool again with the answers and a valid `requestState`: signed by 4D for the same token, tool, arguments, and fields, less than 10 minutes ago, and since the MCP server was last enabled. Otherwise, `.hasInput()` returns **False**.
 
 Outside an MCP tool call, `.hasInput()` returns **False**.
 

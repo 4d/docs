@@ -63,7 +63,7 @@ Compute a vector for an arbitrary input, without persisting anywhere.
 
 | Argumento | Tipo                                                                                                | Descripción                                                                                                                               |
 | --------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| *entrada* | Text o 4D.Entity                                                                    | Text → embedded directly. Entity → phrase rendered then embedded.                                         |
+| *entrada* | Text or 4D.Entity                                                                   | Text → embedded directly. Entity → phrase rendered then embedded.                                         |
 | *context* | Text, [Phrase](Phrase.md), [Definition](Definition.md), Text template, plain object stub, or `Null` | Provides phrase and/or model depending on *input*. Object stub → see [stub resolution](#stub-resolution). |
 | *model*   | Text                                                                                                | Optional explicit model name. Used when *context* does not carry one.                                     |
 | Resultado | [EmbedderResult](EmbedderResult.md)                                                                 | The embedding result (use `.vector` to get the 4D.Vector).                             |

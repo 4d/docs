@@ -320,7 +320,7 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 |settings|Object|&#8594;|Objeto com uma propriedade "privileges" e/ou "roles"|
 |name|Text|&#8594;|Nome do token|
 |expiry|Date|&#8594;|Data de expiração do token|
-|info|Object|&#8594;|Informações armazenadas com o token e passadas para `ds.mcpAuthenticated()` em `$info.info`|
+|info|Object|&#8594;|Informações armazenadas com o token e passadas para `ds.mcpAuthenticated()`|
 |Result|Object|&#8592;|`{id; token}`|
 </div>
 <!-- END REF -->
@@ -341,7 +341,7 @@ Em *name*, passe um nome que identifica o token, por exemplo o usuário e o clie
 
 Em *expiry*, passe a data de expiração do token. Deve ser posterior à data atual e no máximo 366 dias à frente. Se *expiry* for omitido, um erro será gerado.
 
-Em *info*, você pode passar um objeto que o 4D armazena com o token como está, e passa para a função [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated), na propriedade `info` do parâmetro *$info*, quando uma sessão MCP é aberta com o token. Como não pode ser modificado depois, armazene identificadores estáveis (como um ID de usuário) e leia os valores atuais em `ds.mcpAuthenticated()`. Construa *info* a partir da sessão autenticada, nunca de valores enviados pelo cliente.
+Em *info*, você pode passar um objeto que o 4D armazena com o token como está, e passa para a função [`ds.mcpAuthenticated()`](../ORDA/ordaClasses.md#function-mcpauthenticated) quando uma sessão MCP é aberta com o token. Como não pode ser modificado depois, armazene identificadores estáveis (como um ID de usuário) e leia os valores atuais em `ds.mcpAuthenticated()`. Construa *info* a partir da sessão autenticada, nunca de valores enviados pelo cliente.
 
 A função só pode ser chamada em contexto web, ou seja, a partir de código executado para uma requisição web ou REST (por exemplo, uma função exposta chamada após o usuário ser autenticado). Todo privilégio do token deve ser detido pela sessão atual ([`Session.getPrivileges()`](SessionClass.md#getprivileges), incluindo roles, excluindo privilégios promovidos). Caso contrário, um erro é gerado.
 

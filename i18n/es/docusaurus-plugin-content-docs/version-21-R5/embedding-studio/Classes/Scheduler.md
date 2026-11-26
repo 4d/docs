@@ -281,7 +281,7 @@ No-op convenience: the configuration is re-read automatically on each loop cycle
 | --------- | ------ | ----------------------------------------------------- |
 | resultado | Object | The current [status](#status) object. |
 
-## Conmoneda y registro
+## Concurrency & logging
 
 - **Single batch** — at any time, at most one recalculation batch runs. A trigger (scheduled or forced) fired while a batch is running is **skipped**, not queued.
 - **Skip traceability** — skipped triggers are logged with their timestamp in the execution history (`Logs/embeddingHistory.json`).
