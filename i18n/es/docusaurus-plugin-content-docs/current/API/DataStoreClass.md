@@ -354,7 +354,7 @@ If an error is raised, no token is created.
 
 | Propiedad | Tipo | Descripción                                                                                                                                                                          |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id        | Text | Identifier of the token. It is not secret: use it to [revoke](#revokefinegrainedtoken) the token                                                     |
+| id        | Text | Identificador del token. It is not secret: use it to [revoke](#revokefinegrainedtoken) the token                                                     |
 | token     | Text | The token, starting with "4dfgt_". It is returned only once: 4D only stores its hash, in the `fgt.json` file of the data folder |
 
 #### Ejemplo
@@ -807,7 +807,7 @@ Cada objeto de la colección devuelta contiene las siguientes propiedades:
 | clientId   | Text                      | Identifier of the MCP client                                                                                                                      |
 | clientName | Text                      | Name of the MCP client                                                                                                                            |
 | privileges | Text, Collection u Object | Privileges and roles returned by `ds.mcpGrant()`                                                                                                  |
-| createdAt  | Text                      | Date and time of the login                                                                                                                        |
+| createdAt  | Text                      | Fecha y hora del inicio de sesión                                                                                                                 |
 | lastUsedAt | Text                      | Date and time of the last use of the grant                                                                                                        |
 | expiresAt  | Text                      | Expiration date and time of the grant                                                                                                             |
 
@@ -1008,7 +1008,7 @@ Si no se proporciona *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelv
 
 The `.revokeFineGrainedToken()` function <!-- REF #DataStoreClass.revokeFineGrainedToken().Summary -->revokes a Fine-Grained Token of the MCP server<!-- END REF -->.
 
-You designate the token:
+Usted designa el token:
 
 - in the *id* parameter, with its identifier (returned by [`.generateFineGrainedToken()`](#generatefinegrainedtoken) and [`.listFineGrainedTokens()`](#listfinegrainedtokens)),
 - or in the *tokenObj* parameter, with an object whose `token` property contains the token itself (`"4dfgt_..."`), for example to let the holder of a token revoke it.

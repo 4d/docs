@@ -31,9 +31,9 @@ Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul 
 
 ---
 
-## Display formula source as symbol
+## Afficher la formule source avec un symbole
 
-Displays source text of formulas as symbols when expressions are shown as references.
+Affiche le texte source des formules sous forme de symboles lorsque les expressions sont affichées comme références.
 
 #### Grammaire JSON
 
@@ -133,7 +133,7 @@ Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par d�
 
 ---
 
-## Show background and anchored elements
+## Montrer le fond les éléments ancrés
 
 Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
@@ -149,9 +149,9 @@ Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
 ---
 
-## Show empty or unsupported images
+## Montrer les images vides ou non prises en charge
 
-Displays/hides a black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format).
+Affiche/masque un rectangle noir pour les images qui ne peuvent pas être chargées ou générées (images vides ou images dans un format non pris en charge).
 
 #### Grammaire JSON
 

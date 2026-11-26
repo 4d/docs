@@ -131,7 +131,7 @@ You can display:
 
 When a function is published as an **MCP tool**, its comments are used to provide [MCP tool code description](../WebServer/mcp-server.md#describing-the-tools), including MCP behavior tags.
 
-### Code navigation markers
+### Marcadores de navegación en el código
 
 Code navigation markers such as `MARK:`, `TODO:`, and `FIXME:` are inserted through comments. See [Manual tagging](../code-editor/write-class-method.md#manual-tagging).
 

@@ -276,7 +276,7 @@ Cuando crea una llave primaria en una tabla que ya contiene registros (usando un
 
 > **Note:** The column(s) belonging to the primary key do not accept NULL values.
 
-#### Removing primary keys
+#### Eliminación de llaves primarias
 
 To remove a primary key from a table:
 
@@ -288,7 +288,7 @@ To remove a primary key from a table:
 Every new table created in the database contains a primary key by default. This field, named **"ID"** by default, is of the Longint type, and has, in particular, the following attributes:
 
 - Unique,
-- Reject NULL value input,
+- Rechazar la introducción de valores NULL,
 - Autoincrement,
 - Automatic index.
 

@@ -15,7 +15,7 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 - time
 - boolean
 
-4D provides stamps for generating default values for a date, a time, and a sequence number. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
+4D fournit des balises pour générer des valeurs par défaut pour la date, l'heure et le numéro de séquence. La date et l'heure proviennent de la date et de l'heure du système. 4D génère automatiquement les numéros de séquence nécessaires. Le tableau ci-dessous indique la balise à utiliser pour générer automatiquement des valeurs par défaut :
 
 | Stamp | Description        |
 | ----- | ------------------ |
@@ -29,9 +29,9 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 #### Grammaire JSON
 
-| Nom          | Type de données | Valeurs possibles                                                                                                                       |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultValue | string          | Any value and/or a stamp as a string: "#D", "#H", "#N", "42", "true"... |
+| Nom          | Type de données | Valeurs possibles                                                                                                                                                                     |
+| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | string          | N'importe quelle valeur et/ou une balise sous la forme d'une chaîne de caractères : "#D", "#H", "#N", "42", "true"... |
 
 #### Objets pris en charge
 

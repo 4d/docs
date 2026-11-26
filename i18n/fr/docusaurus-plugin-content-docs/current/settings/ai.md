@@ -1,6 +1,6 @@
 ---
 id: ai
-title: AI page
+title: Page IA
 ---
 
 La page IA vous permet d'ajouter, de supprimer ou de consulter la liste de tous vos fournisseurs d'IA et des alias de modèles associés, qu'ils proviennent de sources locales ou de services en ligne. Les fournisseurs et les alias de modèle peuvent ensuite être utilisés dans votre code tout au long de votre application 4D, en particulier avec le [**composant 4D-AIKit**](../aikit/overview.md) en utilisant la fonctionnalité [**alias de modèle**](../aikit/provider-model-aliases.md).
@@ -95,7 +95,7 @@ Lors de l'utilisation de 4D en mode client/serveur, il est **fortement recommand
 
 ## Alias de modèles
 
-La page Alias de modèles vous permet de lister les modèles des fournisseurs enregistrés que vous voulez utiliser dans votre code et de les nommer avec des *alias*. Grâce aux alias de modèles, vous évitez de coder en dur les noms de modèles, vous pouvez changer de modèle sans modifier votre code et vous garantissez la cohérence entre les différents environnements. Model aliases are also fully supported by the [4D Embedding Studio](../embedding-studio/overview.md) component.
+La page Alias de modèles vous permet de lister les modèles des fournisseurs enregistrés que vous voulez utiliser dans votre code et de les nommer avec des *alias*. Grâce aux alias de modèles, vous évitez de coder en dur les noms de modèles, vous pouvez changer de modèle sans modifier votre code et vous garantissez la cohérence entre les différents environnements. Les alias de modèles sont également entièrement pris en charge par le composant [4D Embedding Studio](../embedding-studio/overview.md).
 
 Lorsque vous utilisez un alias de modèle :
 
@@ -133,7 +133,7 @@ Pour modifier ou supprimer un alias :
 
 Vous pouvez utiliser directement le nom d'alias du modèle partout où un nom de modèle est requis (à condition que les alias de modèles soient pris en charge). Exemples :
 
-- in 4D-AIKit, you can reference a model with the syntax: *{model:"ModelName"}*, where *ModelName* is a valid model defined in the Model Aliases tab:
+- dans 4D-AIKit, vous pouvez faire référence à un modèle à l'aide de la syntaxe suivante : *{model:"ModelName"}*, où *ModelName* correspond à un modèle valide défini dans l'onglet Alias de modèles :
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new()
@@ -141,7 +141,7 @@ var $result := $client.chat.completions.create($messages; \
     {model: "Chat Model"})
 ```
 
-- in 4D Embedding Studio, the [list of models](../embedding-studio/overview.md#selecting-a-model) available for generating embeddings includes the model aliases.
+- dans 4D Embedding Studio, la [liste des modèles](../embedding-studio/overview.md#selecting-a-model) disponibles pour la génération d'embeddings inclut les alias des modèles.
 
 ### Voir également
 

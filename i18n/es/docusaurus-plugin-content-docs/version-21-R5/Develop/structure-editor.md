@@ -44,7 +44,7 @@ The lower part of the editor window is an information bar displaying data corres
 
 #### Information about a table
 
-- Table name and number
+- Nombre y número de la tabla
 - Table triggers:
   - **NEW:** al guardar un nuevo registro
   - **SAVE:** On saving existing record
@@ -52,7 +52,7 @@ The lower part of the editor window is an information bar displaying data corres
 
 #### Information about a field
 
-- Table name and number
+- Nombre y número de la tabla
 - Field name and number
 - Tipo de campo
 - Field attributes:
@@ -107,7 +107,7 @@ You can resize or move the table images in the Structure editor according to you
 
 **4D Server**: en [modo desarrollo](../Desktop/clientServer.md#development-mode), cualquier modificación en las imágenes de las tablas (cambio de tamaño, ubicación...) is propagated to all developers in the Design environment.
 
-### Scrolling the field list
+### Desplazarse por la lista de campos
 
 When you add fields to a table or when you reduce the size of a table, there may be more fields in the table than the image can display. When this happens, 4D automatically adds a cursor than you can use to scroll through the list of visible fields:
 

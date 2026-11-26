@@ -15,7 +15,7 @@ Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utilis
 
 :::note
 
-The debugger can only be called when your code **runs interpreted**. If you want to debug some code in a compiled application, you need to restart your project in interpreted mode beforhand.
+Le débogueur ne peut être utilisé que lorsque votre code **s'exécute en mode interprété**. Si vous souhaitez déboguer le code d'une application compilée, vous devez au préalable redémarrer votre projet en mode interprété.
 
 :::
 
@@ -504,7 +504,7 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 #### Toutes les fenêtres
 
 - **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. La taille de la police modifiée s'applique également à l'Editeur de code et est stockée dans les Préférences.
-- **Ctrl+***(Windows) ou **Commande+*** (macOS) force la réactualisation de la Fenêtre d'expression.
+- **Ctrl + \*** (Windows) ou **Commande + \*** (macOS) force la réactualisation de la Fenêtre d'expression.
 - Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 - Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.
 - Lorsque vous êtes en train d’éditer un élément, utilisez les touches directionnelles pour déplacer le curseur. Utilisez Ctrl+A/X/C/V (Windows) ou Commande+A/X/C/V (macOS) en raccourci des commandes du menu Edition : Tout Sélectionner/Couper/Copier/Coller.

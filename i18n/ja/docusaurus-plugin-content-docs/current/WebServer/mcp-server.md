@@ -1,6 +1,6 @@
 ---
 id: mcp-server
-title: MCP Server
+title: MCPサーバー
 ---
 
 <details><summary>履歴</summary>
@@ -378,7 +378,7 @@ The following tags are supported for the MCP tools:
 | `// <text>`                                                                  | Standard description of function (see [Comments](../Concepts/comments.md)). Several description lines are combined in order, with their line breaks. Empty `//` lines at the start or at the end of the block are ignored. |
 | `// $name: <text>`                                                           | Description of the *$name* parameter.                                                                                                                                                                                                                                         |
 | `// {$name}: <text>`                                                         | Description of the *$name* parameter, marked as optional for MCP.                                                                                                                                                                                                             |
-| `// ...: <text>`                                                             | Description of the [variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters) (`... : 型`).                                                                                                                                             |
+| `// ...: <text>`                                                             | Description of the [variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters) (`... : Type`)。                                                                                                                                                          |
 | `// param: $name <text>`, `// param: {$name} <text>`, `// param: ... <text>` | Same as `$name:`, `{$name}:`, and `...:` lines.                                                                                                                                                                                                                               |
 | `// MCP: <text>`                                                             | Description of the function for MCP only. Several `MCP:` description lines are combined in order.                                                                                                                                                             |
 | `// MCP: @tag {@tag}` or `// @tag {@tag}`                                    | MCP behavior tags (see [MCP tool metadata](../WebServer/mcp-server.md#mcp-tool-metadata)). The line must contain only supported tags, otherwise it is a description line.                                                                  |
@@ -472,7 +472,7 @@ Only functions of the following classes are listed:
 
 - the DataStore class,
 - DataClass and Entity classes,
-- シングルトンクラス.
+- シングルトンクラス。
 
 Functions of EntitySelection classes and of other classes, as well as functions that are not declared `exposed MCP Function`, are not listed, even if their comment block contains `MCP:` lines.
 

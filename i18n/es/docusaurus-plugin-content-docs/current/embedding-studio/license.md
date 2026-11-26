@@ -74,13 +74,13 @@ The Licensee is authorized to use the Software, without any limitation as to its
 - loading, displaying, running, or storing the Software on any or all medium.
 - entitlement to observe, study or test its operation.
 
-### 5.2 RIGHT OF MODIFICATION
+### 5.2 DERECHO DE MODIFICACIÓN
 
 The right of modification means the right to adapt, arrange, or make any or all modifications to the Software; being understood that such modifications of the Software shall results in a change of its functionalities and/or in an addition of functionalities to the Initial Software.
 
 Consequently to distribute a Modified Software according to the provision of section 5.3.2, the Licensee shall make exclusively significant modification as described above to the Software provided that it includes an explicit notice that it is the author of said modification and indicates the date of the creation thereof.
 
-### 5.3 RIGHT OF DISTRIBUTION
+### 5.3 DERECHO DE DISTRIBUCIÓN
 
 In particular, the right of distribution includes the right to publish, transmit and communicate the Modified Software to the general public on any or all medium, and by any or all means, and the right to market, either in consideration of a fee, or
 
@@ -132,7 +132,7 @@ THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW
 
 TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO LICENSEE ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS AGREEMENT OR USE OF THE SOFTWARE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES.
 
-## Article 10 – TERMINATION
+## Artículo 10 – TERMINACIÓN
 
 ### 10.1
 

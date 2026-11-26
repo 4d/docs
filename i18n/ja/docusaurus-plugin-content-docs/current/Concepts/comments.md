@@ -53,7 +53,7 @@ For ($vCounter;1;100)
 End for
 ```
 
-## Comments for syntax description
+## シンタックス詳細のコメント
 
 Comments can describe the syntax of your methods, class functions, or constructors.
 

@@ -14,8 +14,8 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 | 4D Server           | Interprété ([associé au débogueur](../Debugging/debugging-remote.md)) | Interprété (non associé au débogueur) | Compilé          |
 | ------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
 | Serveur REST        | coopératif                                                                               | préemptif                                                | préemptif        |
-| Serveur Web         | coopératif                                                                               | coopératif                                               | *paramètres web* |
-| Server Web Services | coopératif                                                                               | coopératif                                               | *paramètres web* |
+| Serveur Web         | coopératif                                                                               | préemptif si sessions évolutives, sinon coopératif       | *paramètres web* |
+| Server Web Services | coopératif                                                                               | préemptif si sessions évolutives, sinon coopératif       | *paramètres web* |
 
 | 4D distant/monoposte | Interprété | Compilé          |
 | -------------------- | ---------- | ---------------- |

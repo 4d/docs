@@ -333,12 +333,12 @@ The Custom button style accepts a personalized background picture and allows man
                 }
 ```
 
-## Supported standard actions
+## Acciones estándar soportadas
 
 The following standard actions can be assigned to buttons.
 The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves the button's behavior to its method. See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects) for comparisons with other objects.
 
-#### Records and forms
+#### Registros y formularios
 
 [accept](../Desktop-legacy/standard-actions.md#accept) - [cancel](../Desktop-legacy/standard-actions.md#cancel) - [deleteRecord](../Desktop-legacy/standard-actions.md#deleterecord) - [addSubrecord](../Desktop-legacy/standard-actions.md#addsubrecord) - [deleteSubrecord](../Desktop-legacy/standard-actions.md#deletesubrecord) - [displaySubrecord](../Desktop-legacy/standard-actions.md#displaysubrecord) - [editSubrecord](../Desktop-legacy/standard-actions.md#editsubrecord) - [firstRecord](../Desktop-legacy/standard-actions.md#firstrecord) - [lastRecord](../Desktop-legacy/standard-actions.md#lastrecord) - [nextRecord](../Desktop-legacy/standard-actions.md#nextrecord) - [previousRecord](../Desktop-legacy/standard-actions.md#previousrecord)
 
@@ -358,7 +358,7 @@ The [empty action](../Desktop-legacy/standard-actions.md#-empty-string) leaves t
 
 [spell/autoCorrectionEnabled](../Desktop-legacy/standard-actions.md#spellautocorrectionenabled) - [spell/autoDashSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautodashsubstitutionsenabled) - [spell/autoLanguageEnabled](../Desktop-legacy/standard-actions.md#spellautolanguageenabled) - [spell/autoQuoteSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautoquotesubstitutionsenabled) - [spell/autoSubstitutionsEnabled](../Desktop-legacy/standard-actions.md#spellautosubstitutionsenabled) - [spell/enabled](../Desktop-legacy/standard-actions.md#spellenabled) - [spell/forgetIgnore](../Desktop-legacy/standard-actions.md#spellforgetignore) - [spell/grammarEnabled](../Desktop-legacy/standard-actions.md#spellgrammarenabled) - [spell/ignore](../Desktop-legacy/standard-actions.md#spellignore) - [spell/learn](../Desktop-legacy/standard-actions.md#spelllearn) - [spell/removeSubstitution](../Desktop-legacy/standard-actions.md#spellremovesubstitution) - [spell/showDialog](../Desktop-legacy/standard-actions.md#spellshowdialog) - [spell/suggestion?index=\<1-number\<=10\>](../Desktop-legacy/standard-actions.md#spellsuggestionindex1-number10) - [spell/unLearn](../Desktop-legacy/standard-actions.md#spellunlearn) - [spell/visibleSubstitutions](../Desktop-legacy/standard-actions.md#spellvisiblesubstitutions)
 
-#### Web-area controls
+#### Controles de área web
 
 [openBackURL](../Desktop-legacy/standard-actions.md#openbackurl) - [openForwardURL](../Desktop-legacy/standard-actions.md#openforwardurl) - [refreshCurrentURL](../Desktop-legacy/standard-actions.md#refreshcurrenturl) - [stopLoadingURL](../Desktop-legacy/standard-actions.md#stoploadingurl)
 

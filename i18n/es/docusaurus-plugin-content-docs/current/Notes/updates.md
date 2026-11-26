@@ -45,7 +45,7 @@ Lea [**Las novedades en 4D 21 R5**](https://blog.4d.com/whats-new-in-4d-21-r5/),
 
 - For consistency, the **corner radius** property has been moved from the ["Coordinates & Sizing"](../FormObjects/properties_CoordinatesAndSizing.md) to the ["Background and Border"](../FormObjects/properties_BackgroundAndBorder.md#corner-radius) section of the Property List.
 
-:::warning Default vector precision
+:::warning Precisión por defecto de los vectores
 
 In 4D 21 R5 and higher, vectors are created with a [32-bit precision by default](../API/VectorClass.md#4dvectornew). In previous releases, only 64-bit precision was available. If you reopen a project containing vectors created in 4D 21 R5 or later using default precision (or explicitly set to 32-bit) with an ealier version, those vectors will be empty and their values will be lost.
 

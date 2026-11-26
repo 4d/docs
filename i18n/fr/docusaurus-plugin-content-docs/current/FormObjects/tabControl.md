@@ -114,11 +114,11 @@ Lorsque vous associez l’[action standard](properties_Action.md#standard-action
 
 Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 du formulaire courant (si elle existe).
 
-## Supported standard actions
+## Actions standard prises en charge
 
 - [gotoPage](../Desktop-legacy/standard-actions.md#gotopage): Uses the selected tab number as described in [Goto Page action](#goto-page-action).
 
-See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+Voir le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

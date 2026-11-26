@@ -22,9 +22,9 @@ Pour plus d'informations, reportez-vous à la section [Glisser-Déposer](../Desk
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                                                                                         |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dragging | text            | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
+| Nom      | Type de données | Valeurs possibles                                                                                                                                                                       |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dragging | text            | "none" (par défaut), "custom" (à l'exclusion de la zone des plug-ins), "automatic" (à l'exclusion des boutons et des list box) |
 
 #### Objets pris en charge
 
@@ -54,9 +54,9 @@ Pour plus d'informations, reportez-vous à la section [Glisser-Déposer](../Desk
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                                                                                         |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dropping | text            | "none" (default), "custom" (excluding plug-in area), "automatic" (excluding button and list box) |
+| Nom      | Type de données | Valeurs possibles                                                                                                                                                                       |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dropping | text            | "none" (par défaut), "custom" (à l'exclusion de la zone des plug-ins), "automatic" (à l'exclusion des boutons et des list box) |
 
 #### Objets pris en charge
 

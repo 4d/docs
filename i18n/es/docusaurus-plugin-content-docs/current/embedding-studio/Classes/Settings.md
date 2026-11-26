@@ -9,13 +9,13 @@ The `Settings` class is the persisted configuration for the embedding pipeline. 
 
 ## Propiedades
 
-| Nombre de la propiedad | Tipo                                                     | Descripción                                                                                                                                                            |
-| ---------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `definitions`          | Collection of [Definition](Definition.md)                | The configured definitions.                                                                                                                            |
-| `batchSize`            | Integer                                                  | Chunk size used by [Process.processEntitySelection](Process.md#processentityselection). Default: `50`. |
-| `phrase`               | Object                                                   | Phrase-validation options (see below).                                                                                              |
-| `embedder`             | Object                                                   | Optional embedder configuration (see below).                                                                                        |
-| `file`                 | 4D.File *(read-only)* | The backing file the settings are loaded from and saved to.                                                                                            |
+| Nombre de la propiedad | Tipo                                                        | Descripción                                                                                                                                                            |
+| ---------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `definitions`          | Collection of [Definition](Definition.md)                   | The configured definitions.                                                                                                                            |
+| `batchSize`            | Integer                                                     | Chunk size used by [Process.processEntitySelection](Process.md#processentityselection). Default: `50`. |
+| `phrase`               | Object                                                      | Phrase-validation options (see below).                                                                                              |
+| `embedder`             | Object                                                      | Optional embedder configuration (see below).                                                                                        |
+| `file`                 | 4D.File *(solo lectura)* | The backing file the settings are loaded from and saved to.                                                                                            |
 
 ### phrase options
 

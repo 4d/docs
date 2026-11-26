@@ -164,7 +164,7 @@ Puede crear automáticamente una lista desplegable utilizando una acción están
 
 > Esta funcionalidad no puede utilizarse con una lista desplegable jerárquica.
 
-## Supported standard actions
+## Acciones estándar soportadas
 
 The following actions are available in the drop-down list standard-action selector. See [Standard actions](../Desktop-legacy/standard-actions.md) and [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) for action descriptions and requirements.
 
@@ -178,7 +178,7 @@ Actions assigned to individual choice-list items are separate from the action as
 
 :::
 
-See the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+Ver la [tabla de compatibilidad de acciones estándar](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propiedades soportadas
 

@@ -13,7 +13,7 @@ The `MCPContext` class provides information about the current call of a tool of 
 
 </details>
 
-### MCPContext Object
+### Objeto MCPContext
 
 `MCPContext` objects are returned by the [`MCP`](../commands/mcp) command.
 

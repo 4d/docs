@@ -107,7 +107,7 @@ The Index List can be used to view the main properties of the indexes:
 
 - **Tipo:** tipo de índice. Each type of index (B-tree, Cluster B-tree, Keyword, Euclidean, Cosine, Dot) is depicted with a different icon.
 - **Description:** Table and field(s) of index. For a composite index, this list contains all the fields of the index.
-- **Name:** Index name. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
+- **Nombre:** nombre del índice. This property is used in particular by the language commands. You can change or add an index name by double-clicking in this column.
 
 The **[+]** button displays the index property dialog box and allows you to edit the selected index or to add a new index when no index was selected.  
 The **[-]** button deletes the selected index (a confirmation dialog box appears).  
@@ -165,7 +165,7 @@ To delete a standard index in the Structure editor:
 
 The deletion (and viewing) of a composite index can only be carried out from the List Index window, see above.
 
-## Reindexing a field
+## Reindexación de un campo
 
 You can reindex a field at any time; in other words, rebuild the index table(s) associated with it, in accordance with the data present. This can be useful in the case of application maintenance.
 

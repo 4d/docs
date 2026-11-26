@@ -135,28 +135,28 @@ Las acciones disponibles dependen del recurso:
 ### Reglas de permisos
 
 - **update** y **drop** requieren **read** sobre el recurso; **create** no lo requiere.
-- Una función puede ser **promoted** con múltiples privilegios. During execution, it receives the combined permissions of all those privileges; there is no priority order.
-- An [alias attribute](./ordaClasses.md#alias-attributes-1) can be read if the session has permission to read the alias, even if it cannot read the attributes the alias resolves to.
-- A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if its underlying attributes have no permissions.
-- In REST [force login mode](../REST/authUsers.md#force-login-mode), guest users can always execute [`authentify()`](../REST/authUsers.md#function-authentify), regardless of the permissions configuration.
+- Una función puede ser **promoted** con múltiples privilegios. Durante la ejecución, recibe los permisos combinados de todos esos privilegios; no existe un orden de prioridad.
+- Un [atributo alias](./ordaClasses.md#alias-attributes-1) se puede leer si la sesión tiene permiso para leer el alias, aunque no pueda leer los atributos a los que resuelve el alias.
+- Se puede acceder a un [atributo calculado](./ordaClasses.md#computed-attributes-1) incluso si sus atributos subyacentes no tienen permisos.
+- En [modo de inicio de sesión forzado](../REST/authUsers.md#force-login-mode) de REST, los usuarios invitados siempre pueden ejecutar [`authentify()`](../REST/authUsers.md#function-authentify), independientemente de la configuración de permisos.
 
 ### Permisos heredados
 
-Permission actions are inherited according to the following rules:
+Las acciones de permisos se heredan según las siguientes reglas:
 
-1. Permissions descend **datastore → dataclass → attribute / function**, and **datastore → singleton → singleton function**.
-2. Resolution is **per action**. Defining `read` on a dataclass does not change how `create`, `update`, `drop` or `execute` are resolved for it.
-3. **Dataclass replaces datastore**. A permission defined on a dataclass for an action replaces the datastore permission for that action. Privileges granted the action only on the datastore lose it on that dataclass.
-4. **Function replaces dataclass**. An `execute` permission defined on a function replaces the dataclass (and datastore) `execute` permission for that function. Entity and entity selection functions follow the same rule as dataclass functions.
-5. **Singleton replaces datastore**, **singleton function replaces singleton**.
-6. **Datastore function replaces datastore**.
-7. **A function inherits what it does not set**. At every level, an action that a function permission does not list is inherited from its dataclass or singleton, then from the datastore. For example, a singleton function permission that only defines `promote` keeps the `execute` permission of its singleton. A `promote` permission never grants `execute`: to let a privilege call a promoted function, list it in the function's `execute` permission.
+1. Permisos descienden **datastore → dataclass → atributo / función** y **datastore → singleton → función singleton**.
+2. La resolución es **por acción**. Definir `read` en un dataclass no cambia cómo `create`, `update`, `drop` o `execute` son resueltos para ella.
+3. **La dataclass sustituye al datastore**. Un permiso definido en un dataclass para una acción reemplaza la autorización del datastore para esa acción. Los privilegios concedidos a la acción únicamente en el datastore se pierden en esa dataclass.
+4. **La función reemplaza la dataclass**. Un permiso `execute` definido en una función reemplaza el permiso `execute` para esta función en la dataclass (y el datastore). Las funciones de entidad y de selección de entidades siguen la misma regla que las funciones de dataclass.
+5. **El singleton reeemplaza al datastore**, **la función singleton reeemplaza al singleton**.
+6. **La función Datastore reemplaza al datastore**.
+7. **Una función hereda lo que no define**. En todos los niveles, una acción que el permiso de una función no muestra es heredada de su dataclass o singleton, luego del datastore. Por ejemplo, un permiso de función singleton que solo define a `promote` mantiene el permiso `execute` de su singleton. A `promote` permission never grants `execute`: to let a privilege call a promoted function, list it in the function's `execute` permission.
 8. **Attribute adds to its parent**. To act on an attribute that has its own permission, a session needs a privilege granted by the attribute permission **and** a privilege granted the action on the dataclass (directly or through the datastore).
 9. An action granted to **no privilege** (for example, `"read": []`) is "not set", so the permission at the level above applies. It does not mean "nobody". To deny the action, use [restricted mode](#restriction-modes) without defining that permission, or grant it to a privilege that no session receives.
 
 Permissions only grant access; there is no explicit deny. A dataclass or function permission can therefore narrow a broader datastore permission by replacing it. An attribute permission is additive: it grants access to that attribute only when the session also has the action on its dataclass.
 
-:::tip Recommended practice
+:::tip Práctica recomendada
 
 - Assign access to sessions through **roles** with `Session.setPrivileges({roles: [...]})`. Define roles around business profiles; privileges are the reusable building blocks. [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/roles/overview) displays effective permissions by role.
 - If an administration role needs full access, include every privilege in it except a lock privilege, if used. Add each new privilege to that role: a dataclass-level permission can replace a broader datastore permission.
@@ -174,7 +174,7 @@ Privileges can be granted permission on multiple action-resource combinations, a
 
 Define privileges and roles in [`roles.json`](#rolesjson-file), then grant roles to sessions with `Session.setPrivileges()`.
 
-### Including privileges
+### Privilegios incluidos
 
 A privilege can include other privileges using the `includes` property in `roles.json`. Inclusion is transitive and one-way: if A includes B, and B includes C, A receives the permissions of B and C.
 
@@ -206,7 +206,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-## `guest` privilege
+## Privilegio `guest`
 
 `guest` is built in; declaring a privilege named `Guest` is an error ("privilege already defined"). Sessions without privileges (`Session.isGuest() = True`) receive the permissions granted to `guest`.
 
@@ -248,15 +248,15 @@ Cuando una entrada de permiso hace referencia a un [privilegio](#privileges-and-
 
 :::
 
-### Default location and content
+### Ubicación y contenido por defecto
 
-New projects generate `roles.json` at:
+Los nuevos proyectos generan el archivo `roles.json` en:
 
 ```
 <project folder>/Project/Sources/ 
 ```
 
-See the [Architecture](../Project/architecture.md#sources) section for details.
+Vea la sección [Architecture](../Project/architecture.md#sources) para más detalles.
 
 Contenido predeterminado:
 
@@ -288,7 +288,7 @@ Contenido predeterminado:
 
 :::note Compatibilidad
 
-In releases before 4D 20 R6, `roles.json` was not created by default. In 4D 20 R6 and later, opening an existing project without a `roles.json` file or `"forceLogin": true` setting makes the **Activate REST authentication through ds.authentify() function** button available on the [Web Features page of the Settings dialog box](../settings/web.md#access). This button upgrades the security settings; you may need to modify your code. Ver [esta entrada del blog](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
+En las versiones anteriores a la 4D 20 R6, el archivo `roles.json` no se creaba de forma predeterminada. In 4D 20 R6 and later, opening an existing project without a `roles.json` file or `"forceLogin": true` setting makes the **Activate REST authentication through ds.authentify() function** button available on the [Web Features page of the Settings dialog box](../settings/web.md#access). This button upgrades the security settings; you may need to modify your code. Ver [esta entrada del blog](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 :::
 
@@ -312,13 +312,13 @@ En Qodly Studio for 4D, el modo de conexión se puede definir utilizando la opci
 
 :::
 
-### Restriction strategies
+### Estrategias de restricción
 
 #### Lock everything and open gradually
 
 Choose either restricted mode or a lock privilege to close access by default:
 
-|                              | Restricted mode                                                                                                                                                                                                                                                                                                                                            | Lock privilege                                                                                                                                     |
+|                              | Modo restringido                                                                                                                                                                                                                                                                                                                                           | Lock privilege                                                                                                                                     |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Setting                      | `"restrictedByDefault": true` (Qodly Studio: **Restrict Access By Default**)                                                                                                                                                                                                                                            | `"restrictedByDefault": false`, with every action on `ds` granted to a privilege that no session receives (for example, `none`) |
 | What is closed               | Every resource without a permission                                                                                                                                                                                                                                                                                                                        | Every resource that inherits datastore permissions                                                                                                 |
@@ -341,7 +341,7 @@ Use these settings as a starting point:
 - **Development**: Set both properties to `false` for easier access while developing and debugging. Apply restrictions gradually as needed.
 - **Production**: Set `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to `true` so that users must authenticate and resource access must be explicitly granted.
 
-## Permission errors
+## Errores de permisos
 
 ### Archivo `Roles_Errors.json`
 
@@ -360,12 +360,12 @@ Else // you can prevent the project to open
 End if
 ```
 
-Permission errors are returned as follows:
+Los errores de permisos se muestran de la siguiente manera:
 
-| Ruta                                  | read / create / update / drop refused                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | execute refused                                                                                                                               |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| REST                                  | HTTP 401 with message                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | **HTTP 500** with message (singleton: "Bad permission...") |
-| Code (web session) | Read: error 1557 (dataclass) or 1607 (attribute). Create: error 1608 when assigning an attribute to a new entity if create is restricted by a permission; in restricted mode without permission, `save()` returns `success: false` and `statusText: "Permission Error"`. Update/drop: error 1557 when loading the entity (both require read). | Error 1561                                                                                                                                    |
+| Ruta                                   | read / create / update / drop refused                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | execute refused                                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| REST                                   | HTTP 401 with message                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | **HTTP 500** with message (singleton: "Bad permission...") |
+| Código (sesión web) | Read: error 1557 (dataclass) or 1607 (attribute). Create: error 1608 when assigning an attribute to a new entity if create is restricted by a permission; in restricted mode without permission, `save()` returns `success: false` and `statusText: "Permission Error"`. Update/drop: error 1557 when loading the entity (both require read). | Error 1561                                                                                                                                    |
 
 ## Ejemplo
 

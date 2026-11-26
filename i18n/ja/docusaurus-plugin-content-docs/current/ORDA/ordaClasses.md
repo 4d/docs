@@ -58,13 +58,13 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                                                        |
-| ----- | --------------------------------------------------------------------------------------------------------- |
-| 21 R6 | Support for the `mcp` keyword. 新しい予約された`mcpAuthenticated()` および `mcpGrant()` データストアクラス関数。 |
-| 21 R3 | `server` キーワードのサポート。                                                                                      |
-| 19 R4 | Entity クラスのエイリアス属性                                                                                        |
-| 19 R3 | Entity クラスの計算属性                                                                                           |
-| 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。新しい `exposed` および `local` キーワード。                                       |
+| リリース  | 内容                                                                          |
+| ----- | --------------------------------------------------------------------------- |
+| 21 R6 | `mcp` キーワードのサポート。新しい予約された`mcpAuthenticated()` および `mcpGrant()` データストアクラス関数。 |
+| 21 R3 | `server` キーワードのサポート。                                                        |
+| 19 R4 | Entity クラスのエイリアス属性                                                          |
+| 19 R3 | Entity クラスの計算属性                                                             |
+| 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。新しい `exposed` および `local` キーワード。         |
 
 </details>
 
@@ -77,7 +77,7 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 DataStore クラス内には、`ds` オブジェクトを介して使用する関数を作成することができます。
 
-#### MCP Server
+#### MCPサーバー
 
 `mcpAuthenticated()` および `mcpGrant()` 関数名は[MCP サーバー](../WebServer/mcp-server.md) ([`Function mcpAuthenticated`](#function-mcpauthenticated) および [`Function mcpGrant`](#function-mcpgrant) 参照) のために予約されています。
 
@@ -952,13 +952,13 @@ $arch.save() //courseName と name は "Archaeology II" に変更されます
 
 ## 公開vs非公開関数
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) and [MCP functions](#mcp-functions) are **not exposed** (i.e., private) by default to **remote requests**.
+セキュリティ上の理由から、[計算属性](#計算属性-1) と [エイリアス属性](#エイリアス属性-1) と[共有シングルトン関数](../Concepts/classes.md#共有シングルトン) と、[MCP 関数](#mcp関数) を含めたデータモデルクラス関数は**リモートリクエスト** に対してはデフォルトでは**公開されていません** (つまり非公開です)。
 
 リモートリクエストとは以下のものを指します:
 
 - `Open datastore` によって接続されたリモートの 4Dアプリケーションが送信するリクエスト
 - REST リクエスト、[Qodly ページ](https://developer.4d.com/qodly/) からのリクエストも含める
-- Requests sent to the [MCP server](../WebServer/mcp-server.md)
+- [MCP サーバー](../WebServer/mcp-server.md) に送信されたリクエスト
 
 > 通常の 4Dクライアント/サーバーリクエストは影響されません。このアーキテクチャーにおいては、データモデルクラス関数は常に利用可能です。
 
@@ -973,7 +973,7 @@ exposed Function <functionName>
 ```
 
 ```4d
-// declare an exposed MCP function
+// 公開されたMCP 関数の宣言
 exposed MCP Function <functionName>
 ```
 
@@ -1038,7 +1038,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## `onHTTPGet` keyword
+## `onHTTPGet` キーワード
 
 `onHTTPGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
@@ -1062,9 +1062,9 @@ exposed onHttpGet Function <functionName>(params) : result
 
 :::caution
 
-`onHTTPGet` lets the function also be called with GET, for example by following a link. Depending on the session cookie's [`SameSite` value](../WebServer/webServerConfig.md#session-cookie-samesite), a link on another website can then send a request that runs in the session of the user logged in to your application.
+`onHTTPGet` を使用すると、例えばリンクを辿るなどしてGET リクエストでもこの関数が呼び出されるようになります。セッションCookieの[`SameSite` 値](../WebServer/webServerConfig.md#セッションcookie-samesite) に応じて、別のWeb サイト上のリンクは、アプリケーションにログインされているユーザーのセッション内で実行されるリクエストを送信することができます。
 
-Use `onHTTPGet` only for functions that read and return content, such as a file to download, a picture or a report. Do not use `onHTTPGet` for a function that changes anything (i.e. that creates, modifies or deletes data, issues or revokes credentials, sends a message).
+`onHTTPGet` は、ダウンロードするファイル、ピクチャーやレポートといったコンテンツを読み込んで返すような関数にのみ使用してください。何かを変更するような関数(データを作成、変更、削除したり、認証情報を発行したり取り消ししたり、メッセージを送信などを行う関数) においては、`onHTTPGet` を使用しないでください。
 
 :::
 
@@ -1126,23 +1126,23 @@ IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 
 ```4d
 exposed mcp Function <functionName>({$parameterName : type; ...}){->$parameterName : type}
-// code
+// コード
 ```
 
-The `mcp` keyword publishes an exposed function as a [custom tool](../WebServer/mcp-server.md#custom-tools) of the MCP server. これは`exposed` キーワードを使用した上でさらに明示的に指定する必要があるオプトインです:
+`mcp` キーワードを使用すると、公開された関数をMCP サーバーの[カスタムツール](../WebServer/mcp-server.md#カスタムツール) として公開します。これは`exposed` キーワードを使用した上でさらに明示的に指定する必要があるオプトインです:
 
-- a function declared `exposed` without `mcp` can be called by REST requests but is not an MCP tool,
-- a function declared with `mcp` but without `exposed` is not published at all.
+- `exposed` と宣言されている関数で`mcp` と宣言されていないものはREST リクエストで呼び出し可能ですがMCP ツールではありません
+- `mcp` で宣言されている関数で`exposed` の宣言がないものは、どのような意味でも公開されていません。
 
-The `mcp` keyword is supported in the following classes:
+`mcp` キーワードは以下のクラスにおいてサポートされています:
 
-- the [DataStore class](#datastore-class): the tool name is the function name,
-- [DataClass classes](#dataclass-class) and [Entity classes](#entity-class): the tool name is `ClassName-functionName`,
+- [データストアクラス](#datastore-クラス): ツール名は関数名です
+- [データクラスクラス](#dataclass-クラス) および [エンティティクラス](#entity-クラス): ツール名は`ClassName-functionName` です
 - 共有[シングルトンクラス](../Concepts/classes.md#singleton-classes): ツール名は`ClassName-functionName` です。
 
 エンティティセレクションクラスの関数は公開されません。
 
-The [comment block](../Concepts/comments.md#syntax-description) written above the declaration describes the tool and its parameters for the AI client. クライアントは、そのセッションがREST リクエストに対して[`roles.json`](privileges.md#rolesjson-file) ファイル内において関数の**execute** 許可を持っていた場合にはそのツールを呼び出すことができます。
+宣言文の上に書かれた[コメントブロック](../Concepts/comments.md#シンタックス詳細のコメント) はAI クライアント用のツールとその引数を記述します。クライアントは、そのセッションがREST リクエストに対して[`roles.json`](privileges.md#rolesjson-file) ファイル内において関数の**execute** 許可を持っていた場合にはそのツールを呼び出すことができます。
 
 **エンティティクラス関数**
 
@@ -1150,17 +1150,17 @@ The [comment block](../Concepts/comments.md#syntax-description) written above th
 
 `$key` 引数を宣言するエンティティクラス関数は公開されず、4D はメッセージをログに記録します。
 
-A function with a parameter of type `Pointer` is not published either: in interpreted mode, 4D logs a message, and in compiled mode, the compiler reports a warning.
+引数の型が`Pointer` である関数も公開されません: インタープリタモードでは4D はメッセージをログに記録し、コンパイルモードでは警告を報告します。
 
 #### 例題
 
 エンティティクラス関数を公開する場合を考えます。クライアントは請求書のプライマリーキーを`key` 引数に渡してツールを呼び出します:
 
 ```4d
-// cs.InvoiceEntity class
+// cs.InvoiceEntity クラス
 Class extends Entity
 
-// Returns the amount still due on the invoice
+// 請求書で支払いが済んでいない金額を返す
 // MCP: @readOnly
 exposed mcp Function getAmountDue() : Real
 	return This.amount-This.payments.sum("amount")
@@ -1180,7 +1180,7 @@ Function mcpAuthenticated($info : Object)
 
 これはトークンとともに保存されている情報からセッションを準備するときに使用します。例えば[`Session.storage`](../API/SessionClass.md#storage) にユーザーのカレントの値を入れ、それを[制限フィルター](entities.md#restricting-entity-selections) で使用する、などです。
 
-The *$info* parameter contains the whole record of the token or of the OAuth grant that opened the session. Its `type` property tells them apart. The object you passed to [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) is in `$info.info`. *$info* contains:
+*$info* 引数には、セッションを開いたトークンまたはOAuth グラントのレコード全体が格納されています。この`type` プロパティによってそれらを区別することができます。 [`ds.generateFineGrainedToken()`](../API/DataStoreClass.md#generatefinegrainedtoken) に渡したオブジェクトは、`$info.info` 内に入っています。 *$info* には以下のプロパティが格納されています:
 
 | プロパティ      | 型                          | 説明                                                                                                                                                                       |
 | ---------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1199,7 +1199,7 @@ The *$info* parameter contains the whole record of the token or of the OAuth gra
 
 次のルールが適用されます:
 
-- この関数を呼び出すのは4D だけです。 A REST request or a remote datastore call to `mcpAuthenticated()` never runs it: if the function is not declared `exposed`, the call gets the usual answer for a non-exposed function (HTTP 404 for REST, "not a function" error for a remote datastore); if it is declared `exposed`, the call gets a permission error naming the function (HTTP 403 for REST, error 1561 for a remote datastore), and 4D logs a warning.
+- この関数を呼び出すのは4D だけです。 REST リクエストまたは`mcpAuthenticated()` へのリモートデータストアの呼び出しは、これを実行することはありません: 関数が`exposed` と宣言されていなければ、呼び出しは、非公開の関数の一般的な応答(REST に対してはHTTP 404 が、リモートデータストアに対しては"関数ではありません" エラー)が返されます。関数が`exposed` と宣言されていれば、呼び出しはその関数の名前をつけたパーミッションエラー(REST に対してはHTTP 403 が、リモートデータストアに対してはエラー1561)が返され、4D は警告をログに記録します。
 - この関数はセッションの権限を変えることはできません: [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) あるいは [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) を呼び出した場合にはエラーが発生します。
 - この関数はセッションを拒否することはできません。ユーザーのアクセスと停止するためには、[`ds.revokeFineGrainedToken()`](../API/DataStoreClass.md#revokefinegrainedtoken) あるいは [`ds.revokeOAuthGrant()`](../API/DataStoreClass.md#revokeoauthgrant) を使用してトークンを取り消します。
 - 関数が失敗した場合、4D はエラーをログに記録しますが、それでもセッションは作成されます。
@@ -1249,7 +1249,7 @@ Function mcpGrant($user : Text; $password : Text; $clientId : Text) : Variant
 
 次のルールが適用されます:
 
-- この関数を呼び出すのは4D だけです。 A REST request or a remote datastore call to `mcpGrant()` never runs it: if the function is not declared `exposed`, the call gets the usual answer for a non-exposed function (HTTP 404 for REST, "not a function" error for a remote datastore); if it is declared `exposed`, the call gets a permission error naming the function (HTTP 403 for REST, error 1561 for a remote datastore), and 4D logs a warning.
+- この関数を呼び出すのは4D だけです。 REST リクエストまたは`mcpGrant()` へのリモートデータストアの呼び出しは、これを実行することはありません: 関数が`exposed` と宣言されていなければ、呼び出しは、非公開の関数の一般的な応答(REST に対してはHTTP 404 が、リモートデータストアに対しては"関数ではありません" エラー)が返されます。関数が`exposed` と宣言されていれば、呼び出しはその関数の名前をつけたパーミッションエラー(REST に対してはHTTP 403 が、リモートデータストアに対してはエラー1561)が返され、4D は警告をログに記録します。
 - この関数はセッション内で権限なしで実行されます。これはセッションの権限を変えることはできません: [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) あるいは [`Session.clearPrivileges()`](../API/SessionClass.md#clearprivileges) を呼び出した場合にはエラーが発生します。
 - パスワードは絶対に平文で保存あるいは比較しないで下さい: [`Generate password hash`](../commands/generate-password-hash) および [`Verify password hash`](../commands/verify-password-hash) を使用してください。
 

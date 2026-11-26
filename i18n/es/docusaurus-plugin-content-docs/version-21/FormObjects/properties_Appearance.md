@@ -355,7 +355,7 @@ Con la propiedad Mostrar referencias activada, se muestra la referencia:
 
 ---
 
-## Show table borders
+## Mostrar bordes de la tabla
 
 Displays internal and external table borders as dotted lines when these borders are partially or totally invisible. Esto facilita el diseño de la página (mayor accesibilidad y un ajuste de tamaño más intuitivo) y la introducción de datos (lo cual resulta muy práctico, por ejemplo, en el caso de las celdas fusionadas).
 

@@ -348,7 +348,7 @@ Il est généralement associé à une [image à 4 états](properties_TextAndPict
 		}
 ```
 
-## Supported standard actions
+## Actions standard prises en charge
 
 Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coche") sont prises en charge par cet objet :
 
@@ -385,7 +385,7 @@ Seules les actions qui peuvent représenter un statut vrai/faux (actions "à coc
 
 Pour plus d'informations sur ces actions, veuillez vous reporter à la section [Actions standard](properties_Action.md#standard-action).
 
-See also the [standard action compatibility table](../Desktop-legacy/standard-actions.md#supported-form-objects).
+Voir également le [tableau de compatibilité des actions standard](../Desktop-legacy/standard-actions.md#supported-form-objects).
 
 ## Propriétés prises en charge
 

@@ -3190,7 +3190,7 @@ retourne un objet contenant toutes les options du workbook dans *vpAreaName*<!--
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-L'objet retourné contient toutes les options du classeur (par défaut et modifiées) dans le classeur.
+L'objet retourné contient toutes les options de classeur (par défaut et modifiées) dans le classeur.
 
 La liste des options du workbook est référencée dans la description de [`VP SET WORKBOOK OPTIONS`](#vp-set-workbook-options).
 

@@ -562,7 +562,7 @@ Notez que quelle que soit la valeur de l'option de renvoi à la ligne automatiqu
 
 #### Automatique pour l'input (option par défaut)
 
-`Grammaire JSON : "automatique"`
+`Grammaire JSON : "automatic"`
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
 - Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques.
@@ -571,9 +571,9 @@ Notez que quelle que soit la valeur de l'option de renvoi à la ligne automatiqu
 
 #### Grammaire JSON
 
-| Nom      | Type de données | Valeurs possibles                                                                       |
-| -------- | --------------- | --------------------------------------------------------------------------------------- |
-| wordwrap | string          | "automatic" (excluding list box column and footer), "normal", "none" |
+| Nom      | Type de données | Valeurs possibles                                                                     |
+| -------- | --------------- | ------------------------------------------------------------------------------------- |
+| wordwrap | string          | "automatic" (hormis colonne et pied de list box), "normal", "none" |
 
 #### Objets pris en charge
 

@@ -100,8 +100,8 @@ Pour créer un vecteur avec une précision à virgule flottante double :
 
 ```4d
 var $col: Collection
-  //$col is filled by AI provider
-var $vector := 4D.Vector.new($col; mk double precision) 
+  //$col est remplie par le fournisseur d'IA
+var $vector := 4D.Vector.new($col; double précision) 
 ```
 
 ## .cosineSimilarity()
@@ -337,7 +337,7 @@ La propriété `.length` contient <!-- REF #VectorClass.length.Summary -->le nom
 
 #### Description
 
-The `.precision` property contains <!-- REF #VectorClass.precision.Summary -->the precision value used to build the vector<!-- END REF -->: 32 (`mk single precision`, default) or 64 (`mk double precision`).
+La propriété `.precision` contient <!-- REF #VectorClass.precision.Summary -->la valeur de précision utilisée pour construire le vecteur<!-- END REF -->: 32 (`mk single precision`, par défaut) ou 64 (`mk double precision`).
 
 ## .toCollection()
 

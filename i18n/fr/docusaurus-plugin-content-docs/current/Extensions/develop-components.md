@@ -104,7 +104,7 @@ Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il es
 - Méthodes formulaire projet
 - Commandes et constantes
 - Plug-ins
-- Trash
+- Corbeille
 
 ![tab-component](../assets/en/Project/tab-component.gif)
 

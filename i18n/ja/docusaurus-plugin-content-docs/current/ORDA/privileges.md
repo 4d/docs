@@ -29,7 +29,7 @@ ORDA セキュリティアーキテクチャーはWeb およびREST セッショ
 
 ## スコープ
 
-Permissions apply to **web and REST sessions**: [REST requests](../REST/gettingStarted.md), including [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview), [`Open datastore`](../commands/open-datastore) sessions, [MCP sessions](../WebServer/mcp-server.md) and **4D code executed in a web process**. これには[公開された関数](./ordaClasses.md)、[HTTP リクエストハンドラ](../WebServer/http-request-handler.md)、[On Web Connection データベースメソッド](../commands/on-web-connection-database-method)、 およびそれらが呼び出すあらゆるコードが含まれます。例えば、関数がデータクラスを読み出すがセッションに読み出しのパーミッション(許可)がない場合には、許可された関数の呼び出しも失敗します。
+パーミッションは**Web および REST セッション** に対して適用されます: これには[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) を含めた[REST リクエスト](../REST/gettingStarted.md)、[`Open datastore`](../commands/open-datastore) セッション、[MCP セッション](../WebServer/mcp-server.md) および **Web プロセス内で実行された4D コード** が含まれます。これには[公開された関数](./ordaClasses.md)、[HTTP リクエストハンドラ](../WebServer/http-request-handler.md)、[On Web Connection データベースメソッド](../commands/on-web-connection-database-method)、 およびそれらが呼び出すあらゆるコードが含まれます。例えば、関数がデータクラスを読み出すがセッションに読み出しのパーミッション(許可)がない場合には、許可された関数の呼び出しも失敗します。
 
 :::info 例外
 
@@ -150,7 +150,7 @@ Class extends Entity
 4. **関数はデータクラスを置き換えます**。関数に対して定義された`execute` パーミッションは、その関数に対するデータクラス(およびデータストア) の`execute` パーミッションを置き換えます。エンティティとエンティティセレクションの関数はデータクラス関数と同じルールに従います。
 5. **シングルトンはデータストアを置き換え**、**シングルトン関数はシングルトンを置き換えます**。
 6. **データストア関数はデータストアを置き換えます**。
-7. **A function inherits what it does not set**. At every level, an action that a function permission does not list is inherited from its dataclass or singleton, then from the datastore. For example, a singleton function permission that only defines `promote` keeps the `execute` permission of its singleton. A `promote` permission never grants `execute`: to let a privilege call a promoted function, list it in the function's `execute` permission.
+7. **関数は、それが設定しないものを継承します**。どのレベルにおいても、関数のパーミッションに含まれていないアクションは、そのデータクラスまたはシングルトンから継承され、次にデータストアから継承されます。例えば、`promote` しか定義されていないシングルトン関数のパーミッションは、そのシングルトンが持つ`execute` パーミッションを受け取ります。 `promote` パーミッションは決して`execute` を付与することはありません: 昇格された関数を、権限が呼び出せるようにするためには、その権限を関数の`execute` パーミッション内で指定してください。
 8. **属性はその親に対して追加されます**。独自のパーミッションを持つ属性に対してアクションを行うには、セッションは属性パーミッションから付与された権限 **に加えて** データクラス上でのアクションを許可する権限も(直接、あるいはデータクラスを通して)必要になります。
 9. **権限が与えられていないアクション** (例えば、`"read": []` など) は"未設定"とみなされ、一つ上のレベルのパーミッションが適用されます。これは"誰も実行できない"ということを意味しません。アクションを拒否するためには、パーミッションを定義しないで[制限モード](#制限モード) を使用するか、どのセッションにも付与されない権限に付与します。
 
@@ -216,27 +216,27 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 プロジェクトのWeb セキュリティ設定は`roles.json` 内で定義されています:
 
-| プロパティ                           | 型                                | 必須 | 説明                                                                                                                                               |
-| ------------------------------- | -------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `privileges`                    | 権限オブジェクトのコレクション                  | ◯  | 定義された権限。それぞれのオブジェクトは`privilege` 名を持ち、また権限名のコレクションである`includes` を持ちます。                                                                            |
-| `roles`                         | ロールオブジェクトのコレクション                 | ×  | 定義されたロール。それぞれのオブジェクトは`role` 名を持ち、権限名の`privileges` コレクションであるを持ちます。                                                                                |
-| `permissions.allowed`           | Collection of permission objects | ◯  | Permissions assigned to resources.                                                                                               |
-| `permissions.allowed[].applyTo` | Text                             | ◯  | Target [resource](#resources) name.                                                                                              |
-| `permissions.allowed[].type`    | Text                             | ◯  | [Resource](#resources) type: `datastore`, `dataclass`, `attribute`, `method`, `singletonMethod`, or `singleton`. |
-| `permissions.allowed[].read`    | String の Collection              | ×  | Privileges granted read access.                                                                                                  |
-| `permissions.allowed[].create`  | String の Collection              | ×  | Privileges granted create access.                                                                                                |
-| `permissions.allowed[].update`  | String の Collection              | ×  | Privileges granted update access.                                                                                                |
-| `permissions.allowed[].drop`    | String の Collection              | ×  | Privileges granted delete access.                                                                                                |
-| `permissions.allowed[].execute` | String の Collection              | ×  | Privileges granted execute access.                                                                                               |
-| `permissions.allowed[].promote` | String の Collection              | ×  | Privileges temporarily granted during function execution.                                                                        |
-| `restrictedByDefault`           | Boolean                          | ×  | If `true`, access to resources without explicit permissions is denied.                                                           |
-| `forceLogin`                    | Boolean                          | ×  | If `true`, enables [force login mode](../REST/authUsers.md#force-login-mode).                                                    |
+| プロパティ                           | 型                    | 必須 | 説明                                                                                                                      |
+| ------------------------------- | -------------------- | -- | ----------------------------------------------------------------------------------------------------------------------- |
+| `privileges`                    | 権限オブジェクトのコレクション      | ◯  | 定義された権限。それぞれのオブジェクトは`privilege` 名を持ち、また権限名のコレクションである`includes` を持ちます。                                                   |
+| `roles`                         | ロールオブジェクトのコレクション     | ×  | 定義されたロール。それぞれのオブジェクトは`role` 名を持ち、権限名の`privileges` コレクションであるを持ちます。                                                       |
+| `permissions.allowed`           | パーミッションオブジェクトのコレクション | ◯  | リソースに割り当てられたパーミッション。                                                                                                    |
+| `permissions.allowed[].applyTo` | Text                 | ◯  | 対象の[リソース](#リソース) 名。                                                                                                     |
+| `permissions.allowed[].type`    | Text                 | ◯  | [リソース](#リソース) タイプ: `datastore`, `dataclass`, `attribute`, `method`, `singletonMethod`, あるいは`singleton`。 |
+| `permissions.allowed[].read`    | String の Collection  | ×  | 読み出しアクセスが付与された権限。                                                                                                       |
+| `permissions.allowed[].create`  | String の Collection  | ×  | 作成アクセスが付与された権限。                                                                                                         |
+| `permissions.allowed[].update`  | String の Collection  | ×  | 更新アクセスが付与された権限。                                                                                                         |
+| `permissions.allowed[].drop`    | String の Collection  | ×  | 削除アクセスが付与された権限。                                                                                                         |
+| `permissions.allowed[].execute` | String の Collection  | ×  | 実行アクセスが付与された権限。                                                                                                         |
+| `permissions.allowed[].promote` | String の Collection  | ×  | 関数の実行中に一時的に付与された権限。                                                                                                     |
+| `restrictedByDefault`           | Boolean              | ×  | `true` であれば、明示的なパーミッションがないリソースへのアクセスは拒否されます。                                                                            |
+| `forceLogin`                    | Boolean              | ×  | `true` であれば、[強制ログインモード](../REST/authUsers.md#強制ログインモード) が有効化されます。                                                       |
 
 :::note 注記
 
-- The `WebAdmin` privilege name is reserved for the application; do not use it for custom privileges.
-- Privileges および roles の名称においては文字の大小が区別されません。 Unknown names passed to [`.setPrivileges()`](../API/SessionClass.md#setprivileges) are ignored.
-- Qodly Studio can add an optional `id` property to privileges and roles to preserve references when they are renamed.
+- `WebAdmin` 権限名はアプリケーションのために予約されています。カスタムの権限のために使用しないでください。
+- Privileges および roles の名称においては文字の大小が区別されません。 [`.setPrivileges()`](../API/SessionClass.md#setprivileges) に渡された不明な名前は無視されます。
+- Qodly Studio の場合は、権限とロールに対してオプションの`id` プロパティを追加することで、名称変更された場合でもその参照関係を維持することができます。
 - Multiple entries with the same `applyTo` are not merged: the last entry wins without an error. Define only one entry per resource.
 - A resource entry that grants no actions has no effect.
 
